@@ -1,0 +1,828 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+    <!-- ====================================================================== -->
+    <!-- GENERATED FILE, DO NOT EDIT, EDIT THE XML FILE IN xdocs INSTEAD! -->
+    <!-- ====================================================================== -->
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+            <style type="text/css">@import "stylesheets/base.css";</style>
+                                          <meta name="author" value="
+			UIMA Team
+		">
+  <meta name="email" value="uima-dev@incubator.apache.org">
+                        
+            
+                        
+                        <title>Apache UIMA - Getting Started: Writing My First UIMA Annotator</title>
+        </head>
+
+        <body>
+          <div class="topLogos">        
+            <table border="0" width="100%" cellspacing="0">
+                <!-- TOP IMAGE -->
+                <tr>
+                    <td align='LEFT'>
+                                <a href="http://incubator.apache.org/">
+        <img src="./images/apache-incubator-logo.png" alt="Apache UIMA" border="0"/>
+      </a>
+                          </td>
+                    <td align='CENTER'>
+                          <div class="pageBanner">Getting Started: Writing My First UIMA Annotator</div>
+                    </td>
+                    <td align='RIGHT'>
+                      <a href="index.html">
+                                <img style="border: 1px solid black;" src="./images/UIMA_banner2.png" alt="UIMA project logo" border="0"/>
+                          </a>
+                    </td>
+                </tr>
+            </table>
+            <hr noshade="" size="1"/>
+            </div>
+            <table border="0" width="100%" cellspacing="4">
+              <tr>
+                <td align='RIGHT' colspan="2">
+                  <form method="get" action="http://www.google.com/search">
+                    Search the site
+                    <input type="text"   name="q" size="25" maxlength="255" value="" />
+                    <input type="hidden" name="sitesearch" value="http://incubator.apache.org/uima" />
+                    <input name="Search" value="Search Site" type="submit"/>
+                  </form>
+                </td>
+              </tr>
+              <tr> <!-- LEFT SIDE NAVIGATION -->
+                <td width="20%" valign="top">
+
+
+
+
+
+
+                   <!-- regular menu -->
+                      <div class="navBar">
+                  <br/>
+            <div class="navBarItem">      <div class="navPartHeading">General</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./index.html">Home</a>
+                </div>
+                          <div class="navBarItem">      <a href="./downloads.cgi">Downloads</a>
+                </div>
+                          <div class="navBarItem">      <a href="./documentation.html">Documentation</a>
+                </div>
+                          <div class="navBarItem">      <a href="./news.html">News</a>
+                </div>
+                    <br style="line-height: .5em"/>
+                          <div class="navBarItem">      <a href="./mail-lists.html">Mailing Lists</a>
+                </div>
+                          <div class="navBarItem">      <a href="./mail-lists.html#Apache_UIMA_Forums">Forums</a>
+                    <a href="http://news.gmane.org/gmane.comp.apache.uima.general" target="_blank"><em> Users</em> <img src="images/offsitelink.png" /></a>
+                  <a href="http://news.gmane.org/gmane.comp.apache.uima.devel" target="_blank"><em>Dev</em> <img src="images/offsitelink.png" /></a>
+              </div>
+                    <br style="line-height: .5em"/>
+                          <div class="navBarItem">      <a href="http://issues.apache.org/jira/browse/uima" target="_blank">Issue tracker <img src="images/offsitelink.png"</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://cwiki.apache.org/UIMA/" target="_blank">Wiki <img src="images/offsitelink.png"</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Components & Tools</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./annotators.html">Annotators</a>
+                </div>
+                          <div class="navBarItem">      <a href="./toolsServers.html">Tools & Servers</a>
+                </div>
+                          <div class="navBarItem">      <a href="./sandbox.html">Sandbox</a>
+                </div>
+                          <div class="navBarItem">      <a href="./external-resources.html">External Resources</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Community</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./get-involved.html">Get Involved</a>
+                </div>
+                          <div class="navBarItem">      <a href="./contribution-policy.html">Contribution Policies</a>
+                </div>
+                          <div class="navBarItem">      <a href="./faq.html">FAQ</a>
+                </div>
+                          <div class="navBarItem">      <a href="./project-guidelines.html">Project Guidelines</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Development</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./svn.html">Source Code</a>
+                </div>
+                          <div class="navBarItem">      <a href="./distribution.html">Creating a Distribution</a>
+                </div>
+                          <div class="navBarItem">      <a href="./release.html">Doing a UIMA release</a>
+                </div>
+                          <div class="navBarItem">      <a href="./codeConventions.html">Code Conventions</a>
+                </div>
+                          <div class="navBarItem">      <a href="./uima-specification.html">UIMA Specification (OASIS)</a>
+                </div>
+                          <div class="navBarItem">      <a href="./team-list.html">Project Team</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Events and Conferences</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./iks09.html">IKS 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gscl09.html">GSCL 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./lsm09.html">LSM 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./lrec08.html">LREC 2008</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gldv07.html">GLDV 2007</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">ASF</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./license.html">License</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://apache.org/foundataion/thanks.html" target="_blank">ASF Sponsors <img src="images/offsitelink.png"</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://www.apache.org/foundation/sponsorship.html" target="_blank">ASF Sponsorship <img src="images/offsitelink.png"</a>
+                </div>
+            </div>
+        </div>
+                </td>
+                <td width="80%" align="left" valign="top">
+                                                          <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Getting Started: Writing My First UIMA Annotator"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Getting Started: Writing My First UIMA Annotator</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>
+				The "Getting Started: Writing My First UIMA Annotator"
+				guide should help you to write your first UIMA annotator component.
+				UIMA annotators are the analysis
+				components that can be plugged into the UIMA framework to 
+        analyze unstructured information; for example an annotator could
+        detect named entities in text. 
+			</p>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Prerequisites">
+            <h2>Prerequisites
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+					To work with this guide you need a working Eclipse installation with 
+					installed UIMA Eclipse plugins. If you haven't already installed Eclipse with
+					the UIMA plugins, please refer to the UIMA documentation  
+					<a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/overview_and_setup/overview_and_setup.html#ugr.ovv.eclipse_setup">
+					Setting up the Eclipse IDE to work with UIMA</a> 
+					to install and set up your UIMA Eclipse environment. Please also install the UIMA examples
+					into your Eclipse workspace since we refer to some of these in this guide; this
+          is explained in the same chapter at section
+					<a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/overview_and_setup/overview_and_setup.html#ugr.ovv.eclipse_setup.example_code">
+					Setting up Eclipse to view Example Code</a>.
+					
+				</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Introduction">
+            <h2>Introduction
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+					The annotator we will create in this guide is very simple. It uses a simple 
+					regular expression to detect room numbers in text documents (it is the
+					same example as used in the UIMA documentation in the 
+					<a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae">
+					Annotator and Analysis Engine Developer's Guide</a>).
+					Although the task is very simple, it is sufficient to demonstrate
+					how to write an UIMA annotator.	For more detailed information about the annotator 
+					development, refer to the <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae">
+					Annotator and Analysis Engine Developer's Guide</a>
+				</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Creating and configuring an Eclipse project for UIMA annotator development">
+            <h2>Creating and configuring an Eclipse project for UIMA annotator development
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+				   We first start with setting up an new Eclipse project to contain our annotator. 
+				   First, we create an Eclipse project as shown here:
+					<ol>
+						<li>
+							<p>
+							   Create a new Java project in your Eclipse workspace called RoomNumberAnnotator.
+							   To do this select "File -&gt; New -&gt; Java Project" and use RoomNumberAnnotator as
+							   the project name.  Also, in the Project Layout section, make sure the
+                button to "Create separate folders for sources and class files" is checked. 
+							</p>
+						</li>
+						<li>
+							<p>
+								Add the UIMA nature to the project by right-clicking on the 
+								"RoomNumberAnnotator" project and choose "Add UIMA Nature". Confirm the upcoming dialogues 
+								with "Yes" to add the UIMA nature, pressing "OK", next, to confirm the status message dialog.
+								This will create a default directory layout of folders useful for annotator component 
+								development.
+							</p>
+							<p>
+							  <img src="./images/getting-started/uima_nature.gif" alt="Add UIMA nature" border="0" />
+							</p>
+						</li>
+						<!--li>
+						    <p>
+							    If your default Eclipse settings did not already create a "src" folder in your RoomNumberAnnotator
+								project, you have to create one manually.
+							<ul>
+							  <li>Right-click the project, and choose "Properties".</li>
+							  <li>Select "Java Build Path" on the left side, and choose the "Source" tab on the right.</li>
+							  <li>Click the "Add Folder..." button, and mark the "src" folder of your project in the upcoming window.</li>
+							  <li>Close the window with the "OK" button.</li>
+							  <li>Leave the properties window of your RoomNumberAnnotator project with "OK".</li>
+							</ul>
+						    </p>
+						</li-->
+						<li>
+						    <p>
+						    In the last step we add to your project the UIMA core libraries that  
+						    we need to develop and run the annotator.
+						    <ul>
+							  <li>Right-click to the RoomNumberAnnotator project and choose Build Path -&gt; 
+                  Configure Build Path.</li>
+							  <!--li>Select "Java Build Path" on the left side, and choose the "Libraries" tab on the right.</li-->
+							  <li>Click the "Add Variable..." button, and select the "UIMA_HOME" variable.
+                    This variable should have been declared and set as part of your Eclipse
+                    setup, above.  If it isn't, just add it now, using the Configure Variables,
+                    setting it to the home directory where you have UIMA installed.</li>
+							  <li>Click the "Extend..." button and chose the <code>uima-core.jar</code> in "lib" directory.
+                    You could add other jars from the UIMA lib, but the uima-core.jar is the only
+                    one needed for this project.</li>
+							  <li>Finalize all dialogues with the "OK" button.</li>
+							</ul>
+						    </p>
+						    <p>
+							  <img src="./images/getting-started/classpath-settings.gif" alt="Project classpath settings" border="0" />
+							</p>
+						    
+						</li>
+					</ol>
+				</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Defining annotator types">
+            <h2>Defining annotator types
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+				  Before we can start implementing the annotator we have to create some meta data for the 
+				  annotator - the analysis engine descriptor. The analysis engine descriptor  
+				  contains information about the annotator that is accessible without
+				  having access to the source code. It contains information like configuration parameters, 
+				  data structures, annotator input and output data types and the 
+				  resources that the annotator uses. The descriptor is also used by the UIMA framework 
+				  to load the annotator. Details about creating XML descriptors can also be found in the
+				  UIMA documentation at
+				  <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae.creating_xml_descriptor">
+				  Creating the XML Descriptor</a>.
+				</p>
+                                                <p>
+				  To create a new analysis engine descriptor:
+				  <ol>
+				    <li>
+				      <p>Right-click on the "desc" folder of your project and choose "New -&gt; Other".</p>
+				    </li>
+				    <li>
+				      <p>Select "Analysis Engine Descriptor" from the "UIMA" folder and press "Next".</p>
+				    </li>
+				    <li>
+				      <p>Enter "RoomNumberAnnotatorDescriptor.xml" as file name, and press "Finish".</p>
+				    </li>
+				    <li>
+				      <p>This creates a new skeleton descriptor file and opens it in the UIMA Component Descriptor Editor plugin.
+				         For now, we just add the Java class name we will use later to implement the 
+				         annotator. Use "org.apache.uima.tutorial.ex1.RoomNumberAnnotator" as Java class name.
+                Select "File -&gt; Save" or push "CTRL-S" to save this descriptor.  A warning/error message
+                will appear saying that the classname you entered isn't found - that's true because
+                we haven't defined it yet, so just say OK and proceed.  The Component Descriptor Editor
+                has many checks like this and will alert you if it finds things wrong, but it always
+                will let you save your work, anyway.
+					  </p>
+					  <p>
+						  <img src="./images/getting-started/cde.gif" alt="Component Descriptor Editor" border="0" />
+					  </p>					  
+				    </li>
+				  </ol>
+				</p>
+                                                <p>
+				  Next, we will define the output types that
+				  the annotator produces. We have to do this before we start implementing the 
+				  annotator code since we will use the definitions later in our implementation.
+				</p>
+                                                <p>
+				  All the data that is produced by annotators or exchanged between annotator 
+				  components is defined in the UIMA type system. The UIMA type system is part of
+				  the analysis engine descriptor file so that each user or application 
+				  knows the types the annotator deals with. This is one of the main advantages of UIMA - 
+				  the data structures are declaratively specified and are stored inside the
+				  UIMA framework. This increases the interoperability between components and allows including
+				  components developed using different programming languages. 
+				</p>
+                                                <p>
+				  To make the definition of types easier, the UIMA framework has some pre-defined types. One of 
+				  them is <code>uima.tcas.Annotation</code>. Annotations are spans of text with a defined begin
+				  and end position. Many text annotators inherit their own types from this base type. Another 
+				  pre-defined type is the <code>uima.tcas.DocumentAnnotation</code> that is used to store document
+				  meta information like, for example, the document language. Some more details about the UIMA
+				  type system and about the type system we will create for the RoomNumberAnnotator is available
+				  in the UIMA documentation in the chapter
+				   <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae.defining_types">
+				   Defining Types</a>.
+				</p>
+                                                <p>
+				  After this brief UIMA type system instruction, let's start and model the type system that we
+				  will use for the RoomNumberAnnotator. The annotator will detect room numbers, so we will create 
+				  an annotation type called <code>org.apache.uima.tutorial.RoomNumber</code> that is inherited from
+				  <code>uima.tcas.Annotation</code>. Additionally we want to store some meta information 
+				  about the room we detected; therefore we will add a feature to the annotation 
+				  called <code>building</code> that will contain some additional building information about the 
+				  detected room.
+				</p>
+                                                <p>
+          You might be wondering about the prefix, "org.apache.uima.tutorial" in front of "RoomNumber".
+          This is the "namespace" - something you would choose to help insure that your use of the
+          name RoomNumber doesn't collide accidently with someone else use of that name.  These
+          namespaces work like Java namespaces.
+        </p>
+                                                <p>
+				  Let's go ahead and create this type system in the recently created analysis engine 
+				  descriptor. To add a new type to the descriptor:
+				  <ol>
+				    <li>
+				      <p>
+				        Open the descriptor using the UIMA Component Descriptor Editor (CDE) by right-click to 
+				        the "RoomNumberAnnotatorDescriptor.xml" file and choose "Open With -&gt; Component Descriptor Editor"
+				      </p>   
+				      <p>
+						  <img src="./images/getting-started/call-cde.gif" alt="Call Component Descriptor Editor" border="0" />
+					  </p> 
+				    </li>
+				    <li>
+				      <p>Select the "TypeSystem" tab at the bottom to show the type system definition page.</p>
+				    </li>
+				    <li>
+				      <p>Press the "Add Type" button to add the new type. Use "org.apache.uima.tutorial.RoomNumber" 
+				         as type name and finish with "OK". The supertype "uima.tcas.Annotation" is correct.</p>
+				    </li>
+				  </ol>
+				  We just added the first type to our RoomNumberAnnotator type system. Now we want to add an additional 
+				  feature to the created type to store the annotation meta information. 
+				  <ol>
+				    <li>
+				      <p>Select the "org.apache.uima.tutorial.RoomNumber" type by clicking it.</p>
+				    </li>
+				    <li>
+				      <p>Click the "Add..." button to add a feature to the type and specify "building" 
+				         as feature name and "uima.cas.String" as range type.  
+				         This means that the "building" feature is a String based feature.</p> 
+				         
+              <p>You can use Eclipse
+                 "auto-complete" function for the super-type.  For example, you may type an
+                 "s" (the first letter of "String", even in lower case), and then press
+                 the "CTRL-SPACE" key combination and see a list of suitable candidates - at
+                 which point you can pick one with the mouse.</p>
+              <p>Finish the dialog by clicking "OK".</p>
+				    </li>
+				    <li>
+				      <p>Save the descriptor file</p>
+				      <p>
+						  <img src="./images/getting-started/cde-typedef.gif" alt="Type System definition" border="0" />
+					  </p> 
+				    </li>
+				  </ol>
+				  That's all - we defined the UIMA type system for the RoomNumberAnnotator that we use later when we 
+				  implement the annotator code.</p>
+                                                <p>By default, the UIMA Component Descriptor Editor generates
+          the corresponding JCas classes for each type you define.  Defaults may be changed by clicking on the
+            UIMA menu item, or using Eclipse's Windows -&gt; Preferences -&gt; UIMA menu.</p>
+                                                <p>  You can also choose to manually
+          generate the JCas classes by following the steps below:
+				  <ol>
+				    <li>
+				      <p>Open the descriptor file in the Component Descriptor Editor and select the "Type System" tab.</p>
+				    </li>
+				    <li>
+				      <p>Press the "JCasGen" button that will trigger the Java class generation. The generated classes
+				      	 will be added to the "src" folder of your project in a separate package.</p>
+				      <p>
+						  <img src="./images/getting-started/cde-typedef-files.gif" alt="Type System definition" border="0" />
+					  </p> 
+				      
+				    </li>
+				  </ol> 
+				  Now all pre-work is done and you can start implementing the annotator source code.
+				</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Writing the annotator code">
+            <h2>Writing the annotator code
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+					In this section we will create the RoomNumberAnnotator source code. For more detailed 
+					information about this topic please refer to the UIMA documentation at chapter
+					<a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae.developing_annotator_code">
+					Developing Your Annotator Code</a>
+				</p>
+                                                <p>
+				   We start with creating a new Java class. Follow the steps below to create the RoomNumberAnnotator java class.
+					<ol>
+						<li>
+							<p>
+								Right-click on the "src" folder and select "New -&gt; Class".
+							</p>
+						</li>
+						<li>
+							<p>
+								A wizard dialog appears where you can specify the Java class information shown below. 
+								We will create a Java class called <code>RoomNumberAnnotator</code> that inherits 
+								from the base class called	<code>org.apache.uima.analysis_component.JCasAnnotator_ImplBase</code>. 
+								This is the base for all UIMA annotator implementations.
+							</p>
+							<p>
+							Java class information:
+							<ul>
+							  <li> Package: <code>org.apache.uima.tutorial.ex1</code> </li>
+							  <li> Name: <code>RoomNumberAnnotator</code> </li>
+							  <li> Superclass: <code>org.apache.uima.analysis_component.JCasAnnotator_ImplBase</code> </li> 
+							</ul>  	   
+							</p>
+							<p>
+						  		<img src="./images/getting-started/create-class.gif" alt="Class generation wizard" border="0" />
+					  		</p> 
+						</li>
+						<li>
+						  <p>  
+						    Press the "OK" button to create the class and to finish the wizard.
+						  </p>
+						</li>
+					</ol>
+					The created Java class has a pre-defined method stub for the annotator <code>process()</code> method. 
+					This method is used to implement the annotator logic. <code>process()</code> is called 
+					by the UIMA framework for each document that should be processed by
+					this annotator.
+				</p>
+                                                <p>
+				   The logic for the implementation of the RoomNumberAnnotator is shown below. Check the
+				   source code comments for some additional information.
+				   <table cellpadding="15"><tr><td bgcolor="lightgrey">
+				   <pre>package org.apache.uima.tutorial.ex1;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.tutorial.RoomNumber;
+
+public class RoomNumberAnnotator extends JCasAnnotator_ImplBase {
+  // create regular expression pattern for Yorktown room number
+  private Pattern mYorktownPattern = 
+        Pattern.compile("\\b[0-4]\\d-[0-2]\\d\\d\\b");
+
+  // create regular expression pattern for Hawthorne room number
+  private Pattern mHawthornePattern = 
+        Pattern.compile("\\b[G1-4][NS]-[A-Z]\\d\\d\\b");
+
+  public void process(JCas aJCas) {
+    
+    // The JCas object is the data object inside UIMA where all the 
+    // information is stored. It contains all annotations created by 
+    // previous annotators, and the document text to be analyzed.
+    
+    // get document text from JCas
+    String docText = aJCas.getDocumentText();
+    
+    // search for Yorktown room numbers
+    Matcher matcher = mYorktownPattern.matcher(docText);
+    int pos = 0;
+    while (matcher.find(pos)) {
+      // match found - create the match as annotation in 
+      // the JCas with some additional meta information
+      RoomNumber annotation = new RoomNumber(aJCas);
+      annotation.setBegin(matcher.start());
+      annotation.setEnd(matcher.end());
+      annotation.setBuilding("Yorktown");
+      annotation.addToIndexes();
+      pos = matcher.end();
+    }
+  
+    // search for Hawthorne room numbers
+    matcher = mHawthornePattern.matcher(docText);
+    pos = 0;
+    while (matcher.find(pos)) {
+      // match found - create the match as annotation in 
+      // the JCas with some additional meta information
+      RoomNumber annotation = new RoomNumber(aJCas);
+      annotation.setBegin(matcher.start());
+      annotation.setEnd(matcher.end());
+      annotation.setBuilding("Hawthorne");
+      annotation.addToIndexes();
+      pos = matcher.end();
+    }
+  }
+}</pre></td></tr></table>
+				</p>
+                                                <p>
+				In the current implementation we don't use the method <code>initialize()</code>. Typically
+				the <code>initialize()</code> method is used to get annotator configuration parameters that can be
+				configured by the user, and to do one-time initialization, such as loading data tables that
+          the implementation might need. In our case, we could have a parameter that 
+          specifies the regular expressions used 
+				to detect the room numbers.	For more details about configuration parameters, please refer to the
+				UIMA documentation at chapter  
+				<a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae.configuration_parameters">
+				Configuration Parameters</a>.
+				</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Testing the annotator">
+            <h2>Testing the annotator
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+				  After we have finished the annotator development we have to test if the annotator
+				  code that we have written works as expected. To do this, we use one of the tools 
+				  provided by the UIMA SDK - the Cas Visual Debugger (CVD). The CVD is already available in
+				  your Eclipse installation since it was installed with the UIMA Eclipse plugins and with
+				  the UIMA example code. 
+				</p>
+                                                <p>
+				  To start the CVD and to configure the classpath do:
+				    <ol>
+						<li>
+							<p>
+							  Open the Eclipse "Run dialog" 
+							</p>
+							<p>
+							 <img src="./images/getting-started/eclipse-run-dialog.gif" alt="Eclipse run dialog" border="0" />
+							</p>
+						</li>
+						<li>
+							<p>Expand "Java Application" in the left window and choose "UIMA CAS Visual Debugger".
+							   Now select the "Classpath" tab on the right.
+							   <img src="./images/getting-started/eclipse-run-cvd.gif" alt="Eclipse CVD run dialog" border="0" />
+							</p>
+						</li>
+						<li>
+							<p>Select the "User Entries" in the classpath tab and press the "Add Projects..." button.</p>
+						</li>
+						<li>
+							<p>Mark the "RoomNumberAnnotator" project in the upcoming dialog and finish with "OK".
+							</p>
+							<p>
+							<img src="./images/getting-started/project-selection.gif" alt="RoomNumberAnnotator project selection" border="0" /></p>
+							<p>
+							  Now we have added the RoomNumberAnnotator classes to the CVD classpath.
+							</p> 
+						</li>
+						<li>
+							<p>Run the CVD by selecting "Run".</p>
+						</li>
+					</ol>
+				</p>
+                                                <p>
+				  Note: The classpath settings must only we configured once; after that, Eclipse will remember them 
+          in this "launch configuration" and
+           you can start the CVD directly from 
+				  the Eclipse "Run dialog" using this saved "launch configuration".
+				</p>
+                                                <p>
+					To test the RoomNumberAnnotator in the CVD we have to load the created RoomNumberAnnotator 
+					analysis engine descriptor.
+					<ol>
+					  <li>
+					    <p>
+					      Choose "Run -&gt; Load AE" and select the <code>RoomNumberAnnotatorDescriptor.xml</code> file
+					      in the <code>desc</code> folder of your Eclipse project.
+					    </p>
+					  </li>
+					  <li>
+					    <p>
+					      Copy and past the text below for testing to the text section of the CVD. 
+					      This text content in passed to the annotator when running the component.
+					    </p>
+					    <p>
+					      <table cellpadding="15"><tr><td bgcolor="lightgrey"><pre>
+Upcoming UIMA Seminars
+
+April 7, 2004 Distillery Lunch Seminar
+UIMA and its Metadata
+12:00PM-1:00PM in HAW GN-K35 
+
+April 16, 2004 KM &amp; I Department Tea 
+Title: An Eclipse-based TAE Configurator Tool
+3:00PM-4:30PM in HAW GN-K35
+
+May 11, 2004 UIMA Tutorial 
+9:00AM-5:00PM in HAW GN-K35
+					      </pre></td></tr></table>
+					    </p>
+					  </li>
+					  <li>
+					    <p>
+					      To run the annotator on the specified text, choose "Run -&gt; RunRoomNumberAnnotatorDescriptor".
+					      <img src="./images/getting-started/cvd-annotator.gif" alt="RoomNumberAnnotator in CVD" border="0" />
+					    </p>
+					    <p>
+					      To view the analysis result produced by the annotator, click "Annotation Index" on the left and
+					      choose one of the "org.apache.uima.tutorial.RoomNumber" annotations shown below. When 
+					      selecting one of the annotations you get the text highlighted on the right that is covered by
+					      this annotation. If there are no annotations available - the annotator is not working correctly.
+					      Check the log file for possible errors "Tools -&gt; View Log File". 
+					    </p>
+					  </li>
+					</ol>   
+				</p>
+                                                <p>
+				  For more details about the CAS Visual Debugger, please refer to the UIMA documentation 
+				  <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/tools/tools.html#ugr.tools.cvd">
+				CAS Visual Debugger</a>.
+				</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Packaging the annotator">
+            <h2>Packaging the annotator
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+				  After we have successfully implemented and tested our annotator we are ready 
+				  to package the annotator to deploy it in another application where we 
+				  want to use it. The annotator packaging format in UIMA is called PEAR 
+				  (Processing Engine ARchive) and contains all necessary information to run
+				  the wrapped annotator component. For details about the PEAR packaging 
+				  format please refer to the UIMA documentation chapter
+				  <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear">
+				  PEAR Reference</a>.
+				</p>
+                                                <p>
+				  To package the annotator we use another UIMA tooling called
+				  PEAR packager. To start the PEAR packager and to create
+				  the RoomNumberAnnotator PEAR package do:
+				  <ol>
+				  	<li>
+				  	  <p> 
+				  	    Right-click on the RoomNumberAnnotator project and call "Generate PEAR file".
+				  	  </p>
+				  	</li>
+				  	<li>
+				  	  <p> 
+				  	    Once the wizard is started with the first page, you have to specify 
+				  	    an annotator component ID and the annotator descriptor file that is used to run the
+				  	    annotator component. The componentID is pre-filled and can be used as is.
+				  	    For the annotator descriptor file, use "Browse" and select the 
+				  	    <code>RoomNumberAnnotatorDescriptor.xml</code> file in the 
+				  	    <code>desc</code> folder of your project. 
+				  	  </p>
+				  	  <p>
+				  	    <img src="./images/getting-started/pear-wizard-1.gif" alt="PEAR wizard" border="0" />
+				  	  </p>				  	 
+				  	</li>
+				  	<li>
+				  	  <p> 
+				  	    After adding these values, go to the next wizard page with the "Next" button.
+				  	    This page shows the classpath and environment configuration for the annotator. The
+				  	    default settings are sufficient in our case.
+				  	  </p>
+				  	  <p>
+				  	    <img src="./images/getting-started/pear-wizard-2.gif" alt="PEAR wizard" border="0" />				  	    
+				  	  </p>
+				  	</li>
+				  	<li>
+				  	  <p> 
+				  	    Choose "Next" to get to the last wizard page.
+				  	  </p>
+				  	  <p>
+				  	    <img src="./images/getting-started/pear-wizard-3.gif" alt="PEAR wizard" border="0" />	
+				  	  </p>
+				  	  <p>
+				  	    This page specifies the content of the PEAR package. By default all the Eclipse
+				  	    project content is added to the PEAR. This is correct in our case and we just have to specify 
+				  	    the PEAR file name and location in the "To pear file" input field.
+				  	  </p>
+				  	</li>
+				  	<li>
+				  	  <p> 
+				  	    Run the PEAR package generation process by pressing the "Finish" button.
+				  	    Once the packaging is done, a message dialog comes up with a success message. 
+				  	    The created PEAR package is available at the specified location.
+				  	  </p>
+				  	</li>
+				  </ol>
+				</p>
+                                                <p>
+				  At this point we are done with the annotator development. We created an annotator PEAR package
+				  that allows us to use the annotator component easily in different applications. 
+				  How we handle and use PEAR packages and how we install it in other applications is not part 
+				  of this guide; please refer to the UIMA documentation at the 
+				  <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/tools/tools.html#ugr.tools.pear.installer">
+				  PEAR Installer User's Guide</a> for additional information about this topic. 
+				</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                  </td>
+                </tr>
+                <!-- FOOTER -->
+                <tr><td colspan="2">
+                  <hr noshade="" size="1"/>
+                </td></tr>
+                <tr><td colspan="2"> 
+                  <table class="pageFooter">
+                    <tr>
+                      <td><a href="index.html">Home</a></td>
+                      <td><a href="privacy-policy.html">Privacy Policy</a></td>
+                      <td>
+                Copyright &#169; 2006-2009, The Apache Software Foundation
+                      </td>
+                      <td><a href="mailto:uima-dev@incubator.apache.org">Contact us</a></td>
+                    </tr>
+                  </table>                    
+                </td></tr>
+            </table>
+        </body>
+    </html>
+

@@ -1,0 +1,1 @@
+C:\p\j\ibm5_10\jre\..\bin\javadoc.exe -J-Xmx512m @options

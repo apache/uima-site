@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<document>
+
+<properties>
+<title>UIMA Annotators</title>
+<author email="uima-dev@incubator.apache.org">
+ UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+<section name="UIMA Annotators">
+
+<p>
+Annotators do the real work of extracting structured information from unstructured data.  You can write your
+own annotators, use the annotators available here, or find UIMA annotators on the web, often
+at various repositories.
+</p>
+
+<p>Several annotators are available as part of Apache UIMA; they are packaged up into one 
+  <a href="downloads.cgi">downloadable package</a>.
+  You can access the source for the annotators in the SVN repository at 
+  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/">
+     http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>. 
+</p>
+
+<p>The annotators available here are:</p>
+
+      <ul>
+		<li><a href="sandbox.html#whitespace.tokenizer">Whitespace Tokenizer Annotator</a>
+      </li>
+		<li><a href="sandbox.html#snowball.annotator">Snowball Annotator</a></li>
+		<li><a href="sandbox.html#regex.annotator">Regular Expression Annotator</a></li>
+        <li><a href="sandbox.html#tagger.annotator">Hidden Markov Model Tagger Annotator</a></li>
+        <li><a href="sandbox.html#bsf.annotator">BSF Annotator</a>.  BSF stands for
+          the Java Bean Scripting Framework; this annotator allows you to write
+          annotators using scripting languages supported by that framework.</li>
+        <li><a href="sandbox.html#dict.annotator">Dictionary Annotator</a></li>
+        <li><a href="sandbox.html#opencalais.annotator">OpenCalais Annotator</a> - an 
+          experimental annotator that uses the 
+          <a href="http://www.opencalais.com/">OpenCalais service</a> to 
+          do the annotations.</li>
+        <li><a href="sandbox.html#lucas.consumer">Lucene CAS indexer (Lucas)</a></li>
+        <li><a href="sandbox.html#concept.mapper.annotator">Concept Mapper Annotator</a></li>
+        <li><a href="sandbox.html#configurable.feature.extractor.annotator">Configurable Feature Extractor (CFE)</a></li>
+      </ul>
+
+</section>
+
+</body>
+</document>
+

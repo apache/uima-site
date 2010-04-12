@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>Apache UIMA Contribution Policy</title>
+    <author email="uima-dev@incubator.apache.org"> UIMA Documentation
+      Team</author>
+</properties>
+
+<body>
+
+<section name="Apache UIMA Contribution Policy">
+
+        <h3 align="center"><font color="#FF0000"><b>Note: This is a working draft document.</b>
+        </font></h3>
+      <p align="center">Discussion of this document is occuring on the uima-dev mailing list.</p><br />
+<p>
+The Apache UIMA Contribution Policy is summarized below: 
+</p>
+
+<ul>
+<li>
+  We are working to ensure that we have broad participation from the community, 
+  at all experience levels and interests, but at the same time we are working to 
+  minimize any risks to the ASF, the project and our community due to 
+  inappropriate contributions of the intellectual property of others.
+</li>
+<li>
+   We adhere to the standard Apache process and contribution agreements.
+</li>
+<li>
+  We require every contributor to fill out the standard Apache
+  <a href="http://www.apache.org/licenses/#clas">Individual 
+    Contributors License Agreement</a>.
+  <ul><li><p><b>Exception</b> - very small contributions such as fixing spelling errors, where the content
+  is small enough to not be considered intellectual property, can be submitted by a contributor
+  as a patch, without an ICLA on file for that contributor.  The contributor must check the the 
+  box on the patch submission form granting the ASF rights to the contribution under the Apache 2.0
+  license.</p>
+  <p>The purpose of this exception is to lower the barrier for new contributors to make contributions.</p></li></ul>
+</li>
+</ul>
+
+<subsection name="Strict Limits on Committer Contributions">
+
+<p>
+Committers can commit contributions to the repositories 
+that they personally created <i>specifically for contribution to Apache UIMA.</i>
+This is the standard stream of fresh original work, small enhancements 
+and patches that are the normal flow of project life.
+</p>
+  
+  <p>Committers can commit contributions to the repositories that
+  were created by another contributor that do not have commit access,
+  and were created <i>specifically for contribution to Apache UIMA</i>,
+    provided: </p>
+  <ul>
+    <li>the contributor has a signed Contributors License Agreement
+    listed with Apache
+    
+</li>
+    <li>the contribution is made as an attachement to a UIMA Jira issue</li>
+    <li>the attachment is marked as "ASF Granted License", indicating that
+    the contributer has granted a license for the attachment sufficient to enable
+    the UIMA Project to incorporate the attachement and distribute the result 
+    under the Apache 2.0 license</li>
+   
+  </ul>
+  
+  <!--  
+  <p>Committers can commit bulk code if they 
+  adhere to these rules:
+  </p>
+  
+  <ul>
+    <li>All contributed code must be the original work of the contributor, or
+      if the contributed code contains third party code not the original work of the
+      contributor, it must be first discussed on the uima-dev discussion list and
+      the IP Clearance process described in 
+      <a href="http://incubator.apache.org/ip-clearance/index.html">
+        Intellectual property clearance</a>
+      must be done and documented.  A special subdirectory of the UIMA project is
+    kept for storing the results of these clearances.</li>
+      
+    <li>The contributor must have an Apache Individual Contributor License Agreement
+    recorded and acknowledged by the ASF.</li>
+  </ul>
+    -->
+
+<p>
+The purpose of 
+this rule is to explicitly prohibit re-purposed "bulk" code 
+<!-- that the contributor believes is their original work--> from being
+added to the codebase without explicit oversight and acceptance. 
+We can still accept contributions like that, but will track them explicitly
+as Bulk Contributions.
+</p>
+
+
+</subsection>
+
+
+<subsection name="Policy for Committers">
+
+<p>
+Each committer is required to complete a standard 
+<a href="http://www.apache.org/licenses/#clas">Apache Individual Contributor License Agreement</a>.
+This document asserts that the contributor is licensing their 
+material to the ASF under the Apache license and is their original work (there's some other details).
+This document is maintained and managed by the Secretary of the Apache Software Foundation.
+</p>
+
+<p>
+We encourage every committer, if appropriate, to have their employer execute a 
+<a href="http://www.apache.org/licenses/">Apache Corporate Contributor License Agreement</a>.
+Note that this is recommended, but not required.
+</p>
+
+</subsection>
+
+<subsection name="Policy for Bulk Contributions">
+
+<p>
+Any software or other contribution that was not created explicitly for 
+Apache UIMA <i>in</i> the Apache UIMA project is considered to
+be a 'Bulk Contribution'.  This status is independent of the purpose
+or author of said contribution.  For example:
+</p>
+
+<ul>
+<li> Personal utilities that a committer always uses on projects</li>
+<li> Code from other open source projects that have a compatible license</li>
+<li> Code from proprietary projects for which the donor has clear title</li>
+<li> Larger pieces of Code being committed on behalf of other contributors, typically using a Software Grant</li>
+</ul>
+
+<p>
+Any Bulk Contribution:
+</p>
+
+<ol>
+<li> Will be donated via the project bug tracking system (JIRA) as a contribution under the Apache License.</li>
+<li> Will be accompanied by a Software Grant (for large contributions) or ICLA (small contributions) 
+  which will be registered with the Apache Incubator</li>
+<li> done using a Software Grant will be registered in the Apache UIMA Bulk Contribution Repository
+      via a <a href="bulk-contribution-checklist.html">Bulk Contribution Checklist</a></li>
+</ol>
+
+<p>
+The Bulk Contribution Repository is a separate place in our administrative SVN in which records
+  the Bulk Contribution Checklist and other checklist information, for each contribution.
+We do this to
+ensure that we have a clear and unambiguous record of any repurposed software that was contributed or
+brought into the project source tree. 
+</p>
+
+<p>
+We strongly urge any potential contributor to carefully examine their candidate for contribution (for instance,
+  run code scans to insure the contributed code doesn't accidentally contain things that could
+  cause licensing difficulties) 
+before offering to the project.  To that end, we have started collecting information on tools and
+other aids to help in this process, and it can be found on this page about 
+  <a href="code-scan-tools.html">code scan tools</a>.
+</p>
+
+ 
+</subsection>
+
+
+</section>
+</body>
+</document>

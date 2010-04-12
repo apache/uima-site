@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+	Licensed to the Apache Software Foundation (ASF) under one
+	or more contributor license agreements.  See the NOTICE file
+	distributed with this work for additional information
+	regarding copyright ownership.  The ASF licenses this file
+	to you under the Apache License, Version 2.0 (the
+	"License"); you may not use this file except in compliance
+	with the License.  You may obtain a copy of the License at
+	
+	http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing,
+	software distributed under the License is distributed on an
+	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	KIND, either express or implied.  See the License for the
+	specific language governing permissions and limitations
+	under the License.
+-->
+
+<document>
+
+	<properties>
+		<title>Getting Started: Java UIMA Framework and SDK</title>
+		<author email="uima-dev@incubator.apache.org">
+			UIMA Documentation Team
+		</author>
+	</properties>
+
+	<body>
+		<section
+			name="Getting Started: Installing the Java UIMA Framework and SDK, and Running Examples">
+			<p>
+				This
+				guide helps you install the Java UIMA SDK release
+				package and shows you how run the UIMA analysis example
+				using some of the UIMA tooling.
+			</p>
+
+			<subsection name="Install UIMA SDK">
+				<p>
+					To get started with UIMA, you first have to install
+					the Apache UIMA Java SDK release package. The packages are
+					available at the UIMA
+					<a href="downloads.cgi">download page</a>
+					in different data formats for different platforms.
+					Choose for example the .zip packages when you work
+					on Windows or the .tar.gz packages when you work on
+					Linux. Further we have two different package types,
+					the binary distribution that contains the complied
+					sources with script files to run the tooling and the
+					source distribution that only contains the sources
+					of the release.
+				</p>
+        
+        <p>The package you want to download and install is the
+          core Java SDK pacakge.  (Other packages include additional
+          annotators and tools, and an Asynchronous Scaleout
+          package enabling deployment of UIMA configurations using
+          clusters of machines, for higher performance.)</p>
+				<p>
+					To install the core UIMA SDK you have to:
+					<ol>
+
+						<li>
+							Download the perferred binary distribution
+							package. To verify the download you can use the
+							signature files provided for each file. For details on
+							how to verify the download please refer to
+							"<a href="downloads.cgi#VerifyDownload">Verifying a Release Download</a>"
+						</li>
+						<li>
+							Unzip the downloaded release package to a target directory of your
+							choice.
+						</li>
+						<li>
+							Create an UIMA_HOME environment variable
+							that points to the target directory where
+							you have unzipped the downloaded release package.
+						</li>
+						<li>
+							If you haven't already set a JAVA_HOME
+							variable, create a JAVA_HOME environment
+							variable that points to a JDK (Java
+							Development Kit) of your choice. UIMA
+							requires at least a Java level 1.5 to run.
+							For more details about the supported Java
+							versions, please refer to the README
+							document of the release package.
+						</li>
+						<br></br>
+						<li>
+							Optional: If you want to have the UIMA
+							script files in the PATH environment
+							variable of your system you additionally
+							have to add $UIMA_HOME/bin (or for Windows
+							%UIMA_HOME%\bin) to your PATH settings.
+						</li>
+						<li>
+							Optional: To use the provided examples you
+							have to adjust the examples to your UIMA
+							installation directory. To do that, just run
+							the
+							<code>adjustExamplePaths.sh</code>
+							(or for Windows .bat) script in the
+							<code>bin</code>
+							subdirectory of your UIMA installation.
+						</li>
+					</ol>
+				</p>
+				<p>
+					Now the installation of UIMA is finished and all the
+					tooling and the examples should work properly.
+				</p>
+			</subsection>
+
+			<subsection name="Running The UIMA Analysis Example">
+				<p>
+					UIMA comes with many examples for the different UIMA
+					components and artifacts that can be created. All
+					these examples are explained and used in the UIMA
+					documentation when the specific components or
+					artifacts are introduced. The UIMA analysis example
+					that we want to use now is a combination of some of
+					these example components that shows a basic document
+					analysis using UIMA.
+				</p>
+				<p>
+					To run the UIMA analysis example, we use the UIMA
+					DocumentAnalyzer tooling that comes with the UIMA
+					SDK. The tool can run UIMA analysis components (also
+					know as annotators) on a given set of text documents
+					and shows the result of the analysis run at the end.
+				</p>
+				<p>
+					To start the UIMA DocumentAnalyzer, start the
+					<code>documentAnalyzer.sh</code>
+					(or for Windows .bat) file located in the
+					<code>bin</code>
+					subdirectory of your UIMA installation. The
+					DocumentAnalyzer window pops up where the following
+					values must be set to run the UIMA analysis example:
+				</p>
+				<p>
+					Input Directory:
+					<code>&lt;UIMA_HOME>/examples/data</code>
+					<br></br>
+					Output Directory:
+					<code>&lt;UIMA_HOME>/examples/data/processed</code>
+					<br></br>
+					AE XML Descriptor:
+					<code>
+						&lt;UIMA_HOME>/examples/descriptors/analysis_engine/UIMA_Analysis_Example.xml
+					</code>
+					<br></br>
+				</p>
+				<p>
+					Replace &lt;UIMA_HOME> above with the path of your
+					Apache UIMA installation directory. In the sample
+					screenshot below, the Apache UIMA installation
+					directory was "C:\programme\apache-uima".
+				</p>
+				<p>
+					<table width="100%">
+						<tr>
+							<td align="center" valign="middle">
+								<img
+									src="./images/getting-started/run_config.jpg"
+									alt="DocumentAnalyzer run configuration" border="0" />
+							</td>
+						</tr>
+					</table>
+				</p>
+				<p>
+					To analyze the doccuments, click the "Run" button,
+					which should, after a brief pause, pop up an
+					"Analyzed Results" window.
+				</p>
+				<p>
+					<table width="100%">
+						<tr>
+							<td align="center" valign="middle">
+								<img
+									src="./images/getting-started/analyzed_docs.jpg"
+									alt="Analyzed Documents view" border="0" />
+							</td>
+						</tr>
+					</table>
+				</p>
+				<p>
+					To display the analysis results for one of the
+					documents, just double-click the desired document.
+					The important one for the UIMA analysis example is
+					the Apache_UIMA.xmi file. When you open this
+					document from the result list, you will see
+					different kind of annotations such as:
+				</p>
+				<p>
+					<ul>
+						<li>EmailAddress annotations</li>
+						<li>Name annotations</li>
+						<li>PersonTitle annotations</li>
+						<li>Sentence annotations</li>
+						<li>Token annotations</li>
+					</ul>
+				</p>
+				<p>
+					When selecting the check-box for those annotations
+					the highlighting in the text for those annotations
+					can be turned on or off.
+				</p>
+				<p>
+					<table width="100%">
+						<tr>
+							<td align="center" valign="middle">
+								<img
+									src="./images/getting-started/annotations.jpg"
+									alt="DocumentAnalyzer annotation view" border="0" />
+							</td>
+						</tr>
+					</table>
+				</p>
+				<p>
+					This concludes the exercise. You may wish to
+					experiment by submitting text of your own for
+					analysis. To do that you can use the
+					DocumentAnalyzer in the interactive mode. Just click
+					the "Interactive" button instead of the "Run" button
+					when you have entered the settings for the analysis
+					example as seen in the screenshot above.
+				</p>
+				<p>
+					After clicking the "Interactive" button to following
+					screen is displayed where you can enter your text.
+				</p>
+				<p>
+					<table width="100%">
+						<tr>
+							<td align="center" valign="middle">
+								<img
+									src="./images/getting-started/interactive.jpg"
+									alt="DocumentAnalyzer interactive mode" border="0" />
+							</td>
+						</tr>
+					</table>
+				</p>
+				<p>
+					When clicking the "Analyze" button your text will be
+					analyzed and you will see the analysis results in
+					the annotation view in the same way as for the
+					example above.
+				</p>
+			</subsection>
+		</section>
+
+
+
+	</body>
+
+</document>
+

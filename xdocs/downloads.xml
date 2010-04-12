@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+--><document>
+
+<properties>
+<title>Downloads</title>
+<author email="uima-dev@incubator.apache.org">
+ UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+<section name="Downloading Apache UIMA">
+  
+  <p>
+    Go directly to the <a href="[location]#Latest Official Releases">Latest Official Releases</a>.
+  </p>
+  <p>Use the links below to download Apache UIMA from
+one of our mirrors.  It is good practice to
+<a href="[location]#VerifyDownload">verify the integrity</a>
+of the distribution files, using the signatures and checksums listed below in square brackets as asc, md5, or sha1.
+</p>
+
+<p>Only current recommended releases are available on the main
+distribution site and its mirrors.  Older releases are available from
+the <a href="http://archive.apache.org/dist/incubator/uima/">archive download
+site.</a></p>
+  
+<p>Apache UIMA is distributed as source and binary (ready-to-use) packages.
+  These are available in
+  <code>zip</code>, <code>tar.gz</code> and
+<code>tar.bz2</code> archive formats.  Please
+note that the <code>tar.*</code> archives contain file names longer
+than 100 characters and have been created using GNU tar extensions.
+Thus they must be untarred with a GNU compatible version of
+<code>tar</code>.</p>  
+  
+<subsection name="Eclipse Update Site">
+
+<p>You can install the UIMA Eclipse tooling via our Eclipse update site: 
+<a href="http://www.apache.org/dist/incubator/uima/eclipse-update-site/">http://www.apache.org/dist/incubator/uima/eclipse-update-site/</a>.
+Don't forget to install EMF before/with the UIMA tooling.  If you're doing this for the first time,
+you may wish to consult the much more verbose instructions in the <a href="documentation.html">SDK 
+documentation</a>.
+</p>
+
+</subsection>
+
+<subsection name="Maven Repository">
+
+<p>If you're using Maven to build your projects, you can use the UIMA Maven artifacts that are
+deployed on the Apache Incubator repository: 
+<a href="http://people.apache.org/repo/m2-incubating-repository/">
+http://people.apache.org/repo/m2-incubating-repository/</a>.  See some of the sandbox POMs for
+examples on how to reference the UIMA jars in Maven.
+</p>
+
+</subsection>
+  
+<subsection name="Mirror">
+
+<p>You are currently using <b>[preferred]</b>.  If you encounter a
+problem with this mirror, please select another mirror.  If all
+mirrors are failing, there are <i>backup</i> mirrors (at the end of
+the mirrors list) that should be available.</p>
+
+<form action="[location]" method="get" id="SelectMirror">
+Other mirrors: <select name="Preferred">
+[if-any http]
+  [for http]<option value="[http]">[http]</option>[end]
+[end]
+[if-any ftp]
+  [for ftp]<option value="[ftp]">[ftp]</option>[end]
+[end]
+[if-any backup]
+  [for backup]<option value="[backup]">[backup] (backup)</option>[end]
+[end]
+</select>
+<input type="submit" value="Change" />
+</form>
+</subsection>
+</section>
+
+
+<!-- do not enter download info here, instead enter it in the project.xml file--> 
+<section name="Latest Official Releases">  
+  <p>Note: As of release 2.3.0, the CAS Editor and the Pear packaging maven plugin are now part of the UIMA Java framework and SDK.</p>
+  <subsection name="Apache UIMA Version 2.3.0-incubating - Release Date: 26-Jan-2010">
+    <insertDownloads version="2.3.0-incubating"/>
+  </subsection>
+
+	<subsection name="Apache UIMA Version 2.2.2-incubating">
+    <insertDownloads version="2.2.2-incubating"/>
+  </subsection>
+
+	<subsection name="Apache UIMA Version 2.2.1-incubating - Release Date: 21-Dec-2007">
+    <insertDownloads version="2.2.1-incubating"/>
+  </subsection>
+  
+</section>
+  
+<section name="Archived Releases">
+  
+  <p>Older releases of Apache UIMA can be found 
+    <a href="http://archive.apache.org/dist/incubator/uima">here</a>.  We highly
+    recommend to not use those releases but upgrade to UIMA's <a
+    href="[location]#Latest Official Releases">latest</a> release.</p>
+
+</section>
+
+<section name="Verifying a Release Download" id="VerifyDownload">
+
+<subsection name="Signature Files">
+  <p>
+  You may be wondering what those <code>.asc</code>, <code>.md5</code> and <code>.sha1</code> files
+  on the download pages are good for.  They are signature files that let you verify the integrity
+  and origin of the distribution artifacts (zip files, compressed archives) that you have downloaded.
+  The signatures come in two varieties.  The <code>.md5</code> and <code>.sha1</code> files contain
+  MD5 and SHA1 checksums, respectively.  The main purpose of those files is to let you verify the
+  integrity of your release artifact.  You can use a tool to generate the same kind of checksum and
+  check that it's the same checksum as the one you downloaded.  If the checksums agree, you can be sure
+  that your archive did not get corrupted during transmission.
+  </p>
+  
+  <p>
+  The <code>.asc</code> files are so-called detached, ASCII-armored PGP signatures.  They let you do
+  the same thing as the MD5 and SHA1 signatures, but they let you do something in addition: you can
+  use these signatures to verify that the release artifacts were signed by a certain, trusted source. 
+  The <code>.asc</code> files contain checksums that were encrypted with the private PGP key of the
+  release manager responsible for the release.  This is useful if you received the release files from
+  some arbitrary source, and you would like to be sure that what you have there is really a UIMA
+  release (and not something containing a virus, for example).  You can then download the corresponding
+  public key from a trusted source, and use it to verify not only the integrity of the file, but that
+  it is actually the file the release manager signed in the first place.  Anybody can tamper with
+  a released file and create a new checksum, but they can't fake the <code>.asc</code> file so it
+  will work with the public key of the release manager.
+  </p>
+  
+  <p>
+  If you would like to verify your UIMA distribution or not is up to you, but unless you do it, you cannot
+    be sure that you have an uncorrupted copy.  The next section will
+  tell you how can use each type of signature file.
+  </p>
+  
+</subsection>
+
+<subsection name="Using GnuPG to Verify Release Files">
+
+  <p>
+  Start by downloading and installing <a href="http://www.gnupg.org/download/">GnuPG</a>, an 
+  implementation of <a href="http://openpgp.org/">OpenPGP</a>.  There are many tools for verifying
+  MD5 and SHA1 checksums, here's the GnuPG way for MD5:
+  </p>
+  <blockquote> <code>gpg --print-md MD5 &lt;ReleaseFile></code> </blockquote>
+  <p>and for SHA1:</p>
+  <blockquote> <code>gpg --print-md MD5 &lt;ReleaseFile></code> </blockquote>
+  <p>You can simply compare the resulting checksum to the one contained in the <code>&lt;ReleaseFile>.md5</code>
+  or <code>&lt;ReleaseFile>.sha1</code> checksum file.  Use diff or your eyes, the signatures are short.
+  </p>
+  
+  <p>A better way of verifying a distribution file is to use the PGP signature provided in the
+  <code>.asc</code> files.  To be able to use the PGP signature files, you need to obtain the UIMA
+  developers' public keys from a trusted source.  The keys do come with the distribution as well,
+  but obviously using those is not a good way to ascertain the pedigree of a distribution.  Instead,
+  get the keys from the main Apache distribution site (not a mirror), or 
+  directly out of the UIMA SVN repository.
+  </p>
+    <dl><dt /><dd>(Right click the following links, and select save link/target as ...)</dd></dl>
+    <ul>
+      <li><a href="http://www.apache.org/dist/incubator/uima/KEYS">KEYS from Apache main distribution site</a></li>
+      <li><a href="https://svn.apache.org/repos/asf/incubator/uima/uimaj/trunk/uimaj-distr/src/main/readme/KEYS">
+        KEYS from the main UIMA SVN repository using https security</a>
+      </li>
+    </ul>
+    
+  
+  <p>Depending how sure you want to be that those
+  keys are really the ones you can trust, you may think of even safer ways to obtain them (for example,
+  go to ApacheCon and get them personally).
+  </p>
+
+  <p>
+  Once you have downloaded the <code>KEYS</code> file, you can import it into your GnuPG key registry
+  with <blockquote> <code>gpg --import KEYS</code> </blockquote>
+  Check what your key registry contains with 
+  <blockquote> <code>gpg --list-keys</code> </blockquote>
+  </p>
+  
+  <p>
+  To verify a release file, <code>cd</code> to the directory with the release and run
+  <blockquote> <code>gpg --verify &lt;fileName>.asc</code> </blockquote>
+  for each file you would like to verify.  The output should contain something like this:
+  <blockquote> <code>gpg: Good signature from "Thilo Goetz (CODE SIGNING KEY) &lt;twgoetz@apache.org>"</code> </blockquote>
+  </p>
+</subsection>
+
+  <subsection name="Verifying MD5 checksums">
+    <p>To verify an MD5 checksum, after downloading an artificat, use a command to generate the md5 checksum of the downloaded artifact.
+      On Linux or using Cygwin on Windows, this can be done using the command "md5sum" followed by the path to the artifact.  There are also 
+      programs you can download from the web to do this computation.</p>
+      
+      <p>Once you have the sum, go to this page at Apache: <a href="http://people.apache.org/~henkp/cgi-bin/md5.cgi">http://people.apache.org/~henkp/cgi-bin/md5.cgi</a>
+        and copy / paste the generated checksum into the box.  The script on this page will then look up that
+        checksum in a table it keeps for all artifacts from Apache distributions, and verify the checksum is valid.</p>
+  </subsection>
+
+  <subsection name="More details on Release Signing">
+  <p>Further information on how all this works can be found at
+  <a href="http://www.apache.org/dev/release-signing.html">
+    http://www.apache.org/dev/release-signing.html</a></p>
+  </subsection>
+ </section>
+
+</body>
+</document>
+

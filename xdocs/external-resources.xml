@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>UIMA Resources on the Web</title>
+<author email="uima-dev@incubator.apache.org">
+ UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+<section name="UIMA Components">
+
+<p>
+Here are some links to UIMA components available from other places.  If you find other links that
+you think should be listed here, please drop us a line on on uima-dev or uima-user.  Similarly,
+if any of the content is out of date or inappropriate, please let us know.
+</p>
+
+<subsection name="UIMA Component Repository at CMU">
+
+<p> The <a href="http://uima.lti.cs.cmu.edu/">UIMA Component Repository at CMU</a> lists
+a large number of UIMA components, some of which can be freely downloaded.
+</p>
+</subsection>
+
+<subsection name="JULIE Lab NLP Toolsuite">
+<p>The <a href="http://www.julielab.de/content/view/117/174/">JULIE Lab NLP Toolsuite</a>
+consists of a collection of NLP components, some of which are provided as freely available
+UIMA components.  There is also a useful <a href="http://www.julielab.de/content/view/120/176/">
+type system</a> you can use as basis for your own NLP applications.
+</p>
+</subsection>
+
+<subsection name="u-compare.org">
+  <p>
+    <a href="http://u-compare.org/"><b>u-compare.org</b></a> provides 
+    a web-based integrated platform for the purpose of       
+    sharing and comparing UIMA components and tools, including visualizers and
+utilities, and includes a large set of type-system-compatible UIMA components.
+
+The site is jointly run by three organizations; each of these organizations also
+supports various UIMA components.  The organizations and links to their
+repositories are:
+  </p>
+<ul>
+  <li>the <a href="http://www-tsujii.is.s.u-tokyo.ac.jp/">
+  Tsujii Laboratory</a> at the University of Tokyo; <a href="http://www-tsujii.is.s.u-tokyo.ac.jp/uima/">repository</a>.
+  </li>
+  <li>
+    the <a href="http://compbio.uchsc.edu/Hunter_lab/">
+  Center for Computational Pharmacology</a> at the University of Colorado School of
+Medicine; <a href="http://bionlp-uima.sourceforge.net/">repository</a> (see BioNLP entry,
+which describes this in more detail).
+  </li>
+  <li>
+    the <a href="http://www.nactem.ac.uk/">
+  National Centre for Text Mining (NaCTeM)</a> at the University
+of Manchester; <a href="http://www.nactem.ac.uk/uima_work/">repository</a>.
+  </li>
+</ul>
+
+</subsection>
+  
+<subsection name="BioNLP Wrappers">
+  <p>The Center for Computational Pharmacology at the University of Colorodo
+  has wrapped a number of popular bio-informatic annotators as UIMA components, and
+  added some supporting additional code and components.  More information is available 
+  at <a href="http://bionlp-uima.sourceforge.net">http://bionlp-uima.sourceforge.net</a>.</p>
+</subsection>
+
+<subsection name="RASP4UIMA">
+<p><a href="http://www.digitalpebble.com/rasp4uima/index.html">RASP4UIMA</a> is a UIMA wrapper around
+the <a href="http://www.informatics.susx.ac.uk/research/groups/nlp/rasp/index.html">RASP</a>
+system, a parsing system for English.  RASP is free for research and education.  Download RASP4UIMA
+from <a href="http://www.digitalpebble.com/resources.html">the resource page</a> at 
+<a href="http://www.digitalpebble.com/">digitalpebble.com</a>
+</p>
+</subsection>
+
+</section>
+
+<section name="UIMA Applications">
+
+<subsection name="IBM Semantic Search Package">
+<p>IBM provides a freely available <a href="http://www.alphaworks.ibm.com/tech/uima/download">
+Semantic Search for Apache UIMA</a>.
+</p>
+</subsection>
+
+</section>
+
+</body>
+</document>

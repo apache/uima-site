@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+	Licensed to the Apache Software Foundation (ASF) under one
+	or more contributor license agreements.  See the NOTICE file
+	distributed with this work for additional information
+	regarding copyright ownership.  The ASF licenses this file
+	to you under the Apache License, Version 2.0 (the
+	"License"); you may not use this file except in compliance
+	with the License.  You may obtain a copy of the License at
+	
+	http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing,
+	software distributed under the License is distributed on an
+	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	KIND, either express or implied.  See the License for the
+	specific language governing permissions and limitations
+	under the License.
+-->
+<document>
+
+	<properties>
+		<title>Apache UIMA</title>
+		<author email="uima-dev@incubator.apache.org">
+			UIMA Documentation Team 
+		</author>
+	</properties>
+
+	<body>
+
+		<section name="Welcome to Apache UIMA">
+
+			<p>
+				Welcome to Apache UIMA. Our goal is to support a thriving community of users and
+				developers of UIMA frameworks, tools, and annotators,        
+        facilitating the analysis of unstructured content such as text, audio and
+				video.
+			</p>
+
+			<h2>What is UIMA?</h2>
+      
+       <p>
+        Unstructured Information Management applications are
+        software systems that analyze large volumes of
+        unstructured information in order to discover knowledge
+        that is relevant to an end user. An example UIM
+        application might ingest plain text and identify
+        entities, such as persons, places, organizations; or
+        relations, such as works-for or located-at.
+      </p>
+
+      <img style="float: right;" src="./images/UimaIs.png" alt="UIMA is made of many things"/>     
+
+      <p>UIMA enables applications to be decomposed into components,
+        for example "language identification" =&gt; "language
+        specific segmentation" =&gt; "sentence boundary
+        detection" =&gt; "entity detection (person/place names
+        etc.)".  Each component implements interfaces defined
+        by the framework and provides self-describing
+        metadata via XML descriptor files. The framework manages
+        these components and the data flow between them.
+        Components are written in Java or C++; the data that
+        flows between components is designed for efficient
+        mapping between these languages.
+      </p>
+      
+      <p>UIMA additionally
+        provides capabilities to wrap components as network
+        services, and can scale to very large volumes by
+        replicating processing pipelines over a cluster of
+        networked nodes.
+      </p>
+
+      <p>
+        Apache UIMA is an Apache-licensed open source
+        implementation of the 
+        UIMA specification <a href="http://www.oasis-open.org/committees/download.php/28492/uima-spec-wd-05.pdf">[pdf]</a>
+        <a href="http://www.oasis-open.org/committees/download.php/28491/uima-spec-wd-05.doc">[doc]</a> (that
+        specification is, in turn, being developed concurrently
+        by a technical committee within
+        <a href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=uima">OASIS</a>
+        , a standards organization). We invite and encourage you
+        to participate in both the implementation and
+        specification efforts.
+      </p>
+      
+      <p class="nobottomspace">Here you can find:</p>
+      <ul class="noverticalspace">
+        <li>Frameworks</li>
+        <li>Components, and</li>
+        <li>Infrastructure,</li>
+      </ul>
+      <p class="notopspace">all licensed under the Apache license.  The dashed-line boxes
+        above are placeholders for possible future additions.
+      </p>
+      
+      <p>
+        The <a href="doc-uima-why.html">Frameworks</a> run the components, and are available for both Java and
+        C++.  The 
+        <a href="doc-uima-examples.html">Java Framework</a> supports running both Java and non-Java
+        components (using the C++ framework).  The 
+        <a href="doc-uimacpp-huh.html">C++ framework</a>, besides
+        supporting annotators written in C/C++, also supports Perl, Python, and 
+        TCL annotators.  The 
+        <a href="doc-uimaas-what.html">UIMA-AS Scaleout Framework</a> is an add-on to the
+        base Java framework, supporting a very flexible scaleout capability
+        based on JMS (Java Messaging Services) and ActiveMQ.
+      </p>
+        
+      <p>The frameworks support configuring and running pipelines of
+        Annotator components.  These components do the actual work
+        of analyzing the unstructured information.  Users can <a href="doc-uima-annotator.html">write
+        their own annotators</a>, or configure and use pre-existing 
+        annotators.  Some annotators are <a href="annotators.html">available as part of this project</a>;
+        others are contained in <a href="external-resources.html">various repositories</a> on the internet.
+      </p>
+        
+      <p>
+        Additional infrastructure support components include a <a href="sandbox.html#simple-server">simple
+        server</a> that can receive REST requests and return annotation results,
+        for use by other web services.
+      </p>
+      
+      <p>The <a href="sandbox.html">sandbox</a> is a place where new ideas
+        are developed for potential incorporation into the project.
+      </p>
+      
+		</section>
+
+		<section name="UIMA News">
+
+			<p>
+				<ul>
+          <li>
+            <a href="news.html#18 March 2010">18 March 2010: <strong>Apache UIMA graduates from the incubator</strong></a>
+          </li>
+          <li>
+            <a href="news.html#26 January 2010">26 January 2010: <strong>UIMA 2.3.0-incubating released</strong></a>
+          </li>
+          <li>
+            <a href="news.html#19 March 2009">19 March 2009: <strong>UIMA approved as an OASIS Standard</strong></a>
+          </li>
+          <li>
+            <a href="news.html#29 December 2008">29 December 2008: <strong>UIMA C++ Framework Released</strong></a>
+          </li>
+					<li>
+						<a href="news.html#12 August 2008">12 August 2008: <strong>UIMA Cas Editor Released</strong></a>
+					</li>
+				
+					<li>
+						<a href="news.html#24 July 2008">24 July 2008: <strong>UIMA Asynchronous Scaleout Released</strong></a>
+					</li>
+					
+					<li>
+						<a href="news.html#16 July 2008">16 July 2008: <strong>Hotfix-1 for UIMA core 2.2.2-incubating Released</strong></a>
+					</li>
+					
+					<li>
+						<a href="news.html#07 May 2008">07 May 2008: <strong>Version 2.2.2-incubating Released</strong></a>
+					</li>
+
+					<li>
+						<a href="news.html#19 December 2007">19 December 2007: <strong>Version 2.2.1-incubating Released</strong></a>
+					</li>
+					
+					<li>
+						<a href="news.html#23 August 2007">23 August 2007: <strong>Version 2.2.0-incubating Released</strong></a>
+					</li>
+          <li>
+            <a href="news.html#7 April 2007">7 April 2007: <strong>Hotfix-1 for 2.1.0 Component Description Editor (CDE) Released</strong></a>
+          </li>
+					<li>
+						<a href="news.html#14 March 2007">14 March 2007: <strong>Version 2.1.0-incubating Released</strong></a>
+					</li>
+         	<li>
+						<a href="news.html#20 December 2006">20 December 2006: <strong>GLDV conference workshop (Germany)</strong></a>
+					</li>
+					<li>
+						<a href="news.html#13 December 2006">13 December 2006: <strong>ApacheCon 2007 Europe coming up</strong></a>
+					</li>
+					<li>
+						<a href="news.html#07 December 2006">07 December 2006: <strong>establish UIMA sandbox</strong></a>
+					</li>
+					<li>
+						<a href="news.html#05 October 2006">05 October 2006: <strong>UIMA has been accepted by the Incubator PMC</strong></a>
+					</li>
+				</ul>
+			</p>
+      
+      <br />
+       
+      <p>The status reports as reported to the Apache board are found on
+         the Apache <a href="http://wiki.apache.org/incubator">Incubator Wiki</a>, in section
+         4 - Board Reports, for the months January, April, July, and October.  
+      </p>
+		
+		<!--subsection name="Incubator Notice and Disclaimer">
+			<p>
+				Apache UIMA is an effort undergoing incubation at the
+				Apache Software Foundation (ASF). Incubation is required
+				of all newly accepted projects until a further review
+				indicates that the infrastructure, communications, and
+				decision making process have stabilized in a manner
+				consistent with other successful ASF projects. While
+				incubation status is not necessarily a reflection of the
+				completeness or stability of the code, it does indicate
+				that the project has yet to be fully endorsed by the
+				ASF.
+			</p>
+
+		</subsection-->
+    </section>
+		<!--  
+			<section name="UIMA News">
+			
+			<p>
+			<strong>UIMA has been accepted into the Apache Incubator.</strong>
+			</p>
+			
+			</section>
+			
+			<section name="UIMA Community">
+			<p>
+			<strong>Users!</strong>
+			<blockquote>
+			We'd love to have you involved. Check out the <a href="http://cwiki.apache.org/UIMA/">Wiki</a>.
+			</blockquote>
+			</p>
+			
+			</section>
+		-->
+	</body>
+</document>
+
+
+
+
+

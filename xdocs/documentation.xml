@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+-->
+
+<document>
+
+ <properties>
+  <title>Apache UIMA Documentation</title>
+  <author email="uima-dev@incubator.apache.org">
+   UIMA Documentation Team
+  </author>
+ </properties>
+
+ <body>
+  
+  <section name="Documentation">
+    <p>Here you will find 
+      <a href="#manuals_and_guides">UIMA Manuals and Guides</a> (Overview and Setup, Tutorials and Users&apos; Guides, Tools, and References), 
+      the 
+      <a href="#javadocs">Javadocs</a> for the
+    public APIs of UIMA, and 
+      <a href="#getting_started">Getting Started Guides</a>.
+        
+    <ul><li>Note: The UIMA manuals/guides and Javadocs are also distributed 
+      as part of the binary distribution.</li></ul>
+    </p>
+  
+  <subsection name="UIMA Manuals and Guides" id="manuals_and_guides">
+       
+   <p>
+     The current UIMA documentation version 2.3.0-incubating is available in two formats (HTML and PDF):
+   </p>
+   <ul>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/html/index.html">HTML online version - UIMA Java SDK</a></li>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs-uima-as/html/uima_async_scaleout/uima_async_scaleout.html">HTML online version - UIMA Asynchronous Scaleout</a></li>       
+   </ul>
+   <p>PDF version for printing:</p> 
+   <ul>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/overview_and_setup.pdf">Overview and Setup</a></li>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/tools.pdf">Tools</a></li>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/references.pdf">References</a></li>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs-uima-as/pdf/uima_async_scaleout.pdf">UIMA Asynchronous Scaleout</a></li>
+   </ul>
+
+   <p>Previous releases (HTML only)</p>
+     <ul>
+       <li><a href="downloads/releaseDocs/2.2.2-incubating/docs/html/index.html">Version 2.2.2-incubating</a></li> 
+       <li><a href="downloads/releaseDocs/2.2.1-incubating/docs/html/index.html">Version 2.2.1-incubating</a></li> 
+       <li><a href="downloads/releaseDocs/2.2.0-incubating/docs/html/index.html">Version 2.2.0-incubating</a></li>
+       <li><a href="downloads/releaseDocs/2.1.0-incubating/docs/html/index.html">Version 2.1.0-incubating</a></li>
+    </ul>
+  </subsection>
+
+  <subsection name="Javadoc (current version only)" id="javadocs">
+
+   <p>
+     Apache UIMA Javadoc is supplied with the binary distribution, or can be built from the
+     source distribution.  We also make it available directly from this website.
+    
+   <ul>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/api/index.html">Javadoc online - UIMA Java SDK</a></li>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs-uima-as/api/index.html">Javadoc online - UIMA-AS</a></li>
+   </ul>
+   </p>
+  </subsection>
+  
+  <subsection name="Annotators, Web Servers, Tooling, and more" id="sandbox">
+    <p>Many of the additional components found in the sandbox have individual documentation files, which 
+      you can access from the <a href="sandbox.html">sandbox</a> page</p>
+  </subsection>  
+  <subsection name="Getting Started" id="getting_started">
+   <p>
+    The UIMA "Getting Started" guides are intended to offer a quick overview of UIMA and how it works. 
+    They are designed to address different audiences that want to work with UIMA.
+   </p>
+   <p>   
+	The section below lists all currently available "getting started" guides with their links. 
+	For more advanced documentation about these topics, please refer to the Apache UIMA release documentation.
+	<ul>
+	
+	<li><a href="doc-uima-why.html">Getting Started: Why UIMA</a><br></br>
+		For first time UIMA users who want to know what UIMA is and how it can be used for.</li>
+	<br></br>
+	<li><a href="doc-uima-examples.html">Getting Started: Install UIMA And Run Examples</a><br></br>
+		For first time UIMA users who want to know how UIMA is installed and how they can run 
+		the UIMA analysis examples that are provided with the release package.</li>
+	<br></br>
+	<li><a href="doc-uima-annotator.html">Getting Started: Writing My First UIMA Annotator</a><br></br>
+		For UIMA beginners that want to develop their first UIMA analysis component using eclipse.
+		</li>
+	<br></br>
+	<li><a href="doc-uima-pears.html">Getting Started: Working With PEARs</a><br></br>
+		For UIMA users who want to know what a UIMA PEAR package is, how to generate them 
+		and how to use them within UIMA applications.</li>
+	<br></br>
+	<li><a href="doc-uimaas-what.html">Getting Started: UIMA Asynchronous Scaleout</a><br></br>
+		For UIMA users who need to scale out their UIMA analytics to achieve higher throughput, get
+                faster response time, and to develop applications utilizing UIMA Flow Controllers,
+                CAS Multipliers and advanced error handling capability.</li>
+	<br></br>
+	<li><a href="doc-uimacpp-huh.html">Getting Started: UIMA C++ Framework</a><br></br>
+		For UIMA users who want to create UIMA compliant Analysis Engines from programs written in C++,
+                Perl, Python or Tcl.</li>
+	</ul>
+   </p>
+  </subsection>
+  </section>
+ </body>
+
+</document>
+

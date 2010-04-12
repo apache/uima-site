@@ -1,0 +1,16 @@
+<mirrors>
+<mirror url="[preferred]/incubator/uima/eclipse-update-site/"
+label="Recommended mirror: [preferred]"/>
+[if-any http]
+  [for http]
+    <mirror url="[http]/incubator/uima/eclipse-update-site/"
+      label="[http]"/>
+  [end]
+[end]
+[if-any backup]
+  [for backup]
+    <mirror url="[backup]/incubator/uima/eclipse-update-site/"
+      label="Backup mirror: [backup]"/>
+  [end]
+[end]
+</mirrors>

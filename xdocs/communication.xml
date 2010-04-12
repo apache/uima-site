@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+-->
+<document>
+
+ <properties>
+  <title>Apache UIMA Project Guidelines</title>
+  <author email="uima-dev@incubator.apache.org">
+   UIMA Documentation Team
+  </author>
+ </properties>
+
+ <body>
+
+  <section name="Communication">
+
+   <h3 align="center">
+    <font color="#FF0000">
+     <b>Note: This is a working draft document.</b>
+    </font>
+   </h3>
+   <p align="center">
+    Discussion of this document is occuring on the uima-dev mailing
+    list.
+   </p>
+   <br />
+   <p>
+    The Project obtains its strength from the communication of its
+    members. In order for members to easily communicate with each other,
+    the Project has a variety of mailing lists. These lists, with the
+    exception of the announcement lists, are not moderated and anybody
+    is more than welcome to join them. However, you must be subscribed
+    to post to a list.
+   </p>
+
+   <p>
+    To reduce the bandwidth demands on everyone, mail should not contain
+    attachments. It is recommended that you place interesting material
+    either within the body of the message or provide a URL for
+    retrieval. Patches are best done as attachments to a JIRA issue.
+   </p>
+
+   <p>
+    To join the mailing lists, see our
+    <a href="mail-lists.html">Mailing List</a>
+    page.
+   </p>
+  </section>
+
+ </body>
+</document>

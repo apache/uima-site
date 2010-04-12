@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+  
+  <properties>
+    <title>Status reports for the Apache Board</title>
+    <author email="uima-dev@incubator.apache.org"> UIMA Documentation Team</author>
+  </properties>
+  
+  <body>
+    <section name="Apache UIMA Status Reports">
+      <br />
+            <subsection name="January, 2007">
+        <!-- required: one-line summary (see http://incubator.apache.org/guides/ppmc.html)-->
+        <p>UIMA is a component framework for the analysis of unstructured content such as
+          text, audio and video.</p>
+        <!-- required: date of entry into the incubator (see http://incubator.apache.org/guides/ppmc.html)-->
+        <p>UIMA was accepted for incubation on October 10, 2006</p>
+        <!-- required: top 3 items to resolve before graduation (see http://incubator.apache.org/guides/ppmc.html)-->
+        <p>Top 3 things to resolve before graduation</p>
+        <ol>
+          <li>Complete code transition to Apache, do a release with all IP issues cleared</li>
+          <li>Attract diverse, active committers</li>
+          <li>Do a migration tool to enable migration to the Apache version</li>
+        </ol>
+    
+            
+        <!--
+    *  Is there anything that the Incubator PMC or ASF Board specifically needs to address?
+    * Are there any legal, infrastructure, cross-project or personal issues that need to be addressed?  
+    *   (Are there any stumbling blocks that impede the podling?)
+    * Check that the project's Incubation Status file up to date. (Also provide the URL.) 
+    * What has been done (releases, milestones, etc.) since the last report?
+    * What are the plans and expectations for the next period?
+    * Are there any recommendations for how incubation could run more smoothly for you?
+    * etc. (your own thoughts on what is important would be helpful!)
+
+          -->
+        
+        <p>UIMA's incubation status file is here: <a href="http://incubator.apache.org/projects/uima.html">
+        http://incubator.apache.org/projects/uima.html</a></p>
+
+        <p>Some recent activity:</p>
+        
+        <ul>
+          <li>The UIMA Sandbox has been populated with some example annotators</li>
+          <li>A person new to the project, Jörn Kottmann, has written an Eclipse plugin
+            he wants to contribute - we're going through the steps to bring this into the
+            UIMA Sandbox.  He has submitted a software grant, and we're awaiting it's acknowledgement
+            (as of Wednesday, Jan 10)</li>
+        </ul>
+ 
+        <p>We expect to do a release next month, and have been working to get all the little details needed
+        for this completed.</p>       
+        
+        <p>We expect that we will need some assistance in doing our first release, 
+          to verify we're following the rules properly.  We will 
+        start by using our mentors, and then ask the incubator PMC to review the proposed release.</p>
+
+      </subsection>
+      
+      <subsection name="December, 2006">
+        <p>UIMA is a component framework for the analysis of unstructured content such as
+          text, audio and video.</p>
+        
+        <p>Things are proceeding well, there is a lot of activity on the dev list, a lot of
+          coding activity. We're pretty much settled in with the Apache infrastructure,
+          have figured out how we want to use Jira in conjunction with SVN etc.</p>
+        
+        <p>Some recent activity:</p>
+        
+        <ul>
+          <li>Infrastructure setup complete, barring some minor JIRA admin issues</li>
+          <li>Website in good shape now, using Anakia</li>
+          <li>Settled on Confluence for Wiki</li>
+          <li>M2 build done</li>
+          <li>Documentation has been converted to DocBook, although there are still some
+            formatting issues to address</li>
+          <li>Sample code has been updated</li>
+          <li>Moving known issues from previous issue tracking systems to Jira</li>
+          <li>Created sandbox as a place to contribute UIMA analysis components,
+            tooling</li>
+          <li> We've posted messages at the previous UIMA download locations notifying our
+            user base that development has moved to the ASF incubator</li>
+        </ul>
+        
+        <p>Our priorities for the coming weeks:</p>
+        
+        <ul>
+          <li>We are hoping to be able to do our first Apache incubator release early next
+            year. There is a lot of work to be done to make that happen, and we're still in the
+            process of figuring out what that work is exactly ;-)</li>
+          <li>Get the sandbox off to a running start</li>
+          <li>Discuss ways to attract new committers</li>
+        </ul>
+      </subsection>
+      
+      <subsection name="November, 2006">
+        
+        <p>Accepted into the Incubator 10/06.</p>
+        
+        <p>UIMA is a component framework for the analysis of unstructured content such as
+          text, audio and video.</p>
+        
+        <p>There was some discussion on incubator-general about changing the name of the
+          project to something that's not an acronym and does not have a history outside of
+          Apache. The final consensus though was that the arguments for keeping the name
+          outweighed the ones for changing, so we're sticking with it.</p>
+        
+        <p>After the naming discussion was settled, we started getting the infrastructure
+          set up:</p>
+        
+        <ul>
+          <li>Mailing lists set up</li>
+          <li>SVN repository created</li>
+          <li>Apache, SVN, Jira accounts for committers (mostly done)</li>
+          <li>Initial code drop checked in after receipt of software grant, Apache license
+            headers inserted</li>
+          <li>Initial version of website created</li>
+        </ul>
+        
+        <p>Our priorities for the next few weeks:</p>
+        
+        <ul>
+          <li>Finish infrastructure set up, get settled in with Apache</li>
+          <li>Work on our (maven2) build</li>
+          <li>Work on our website, document our build etc.</li>
+          <li>Start directing our existing user base to Apache to attract some early
+            adopters</li>
+          <li>Discuss ways to attract new committers</li>
+        </ul>
+      </subsection>
+
+      
+   </section>
+  </body>
+</document>

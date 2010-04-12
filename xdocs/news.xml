@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+	Licensed to the Apache Software Foundation (ASF) under one
+	or more contributor license agreements.  See the NOTICE file
+	distributed with this work for additional information
+	regarding copyright ownership.  The ASF licenses this file
+	to you under the Apache License, Version 2.0 (the
+	"License"); you may not use this file except in compliance
+	with the License.  You may obtain a copy of the License at
+	
+	http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing,
+	software distributed under the License is distributed on an
+	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	KIND, either express or implied.  See the License for the
+	specific language governing permissions and limitations
+	under the License.
+-->
+
+<document>
+
+	<properties>
+		<title>News</title>
+		<author email="uima-dev@incubator.apache.org">
+			UIMA Documentation Team
+		</author>
+	</properties>
+
+	<body>
+
+		<section name="News">
+      <subsectionToc/>
+ 
+      <subsection name="18 March 2010" date="18 March 2010" title="Apache UIMA graduates from the incubator">
+        <p>
+          At the ASF board meeting held on 17 March 2010, the Board unanimously approved the proposed resolution to 
+          establish the Apache UIMA Project as a top level Apache project.  This signals the successful completion 
+          of the incubation process and the beginning of the next phase of Apache UIMA existence.    
+        </p>
+        <p>
+          Becoming a top level project entails setting up some new infrastructure, and moving things. 
+          It will take some time to accomplish this move; in the meanwhile, we'll be keeping this website up to date.
+        </p>
+      </subsection>
+      
+      <subsection name='26 January 2010' date="26 January 2010" title="UIMA 2.3.0-incubating Released">
+        <p>
+          This release includes all 4 major components: 
+          the UIMA Java SDK, UIMACPP, UIMA-AS (Asynchronous Scalout capability), 
+          and a growing set of UIMA Addons.  It is backwards compatable with previous releases, except
+          that Java 5 is now the minimum Java level required.</p>
+          
+          <p>
+          The add-ons package contains many new components and annotators.  
+          The UIMA-AS (Asynchronous Scaleout)
+          framework is extensively enhanced with much more support for error/failure recovery, driven by feedback
+          from actual use in several large scale deployments.  The base framework now supports Java 5 generics, and
+          is enhanced to make it even more
+          light-weight and efficient; for example, it now supports a new network serialization format  
+          for communicating with remote
+          annotators using a "delta-CAS" - limiting the response sent to just those items which have changed.
+          </p>
+          <p>
+          Please see the release notes on the <a href="downloads.cgi">downloads</a> page, for a more complete summary
+          and a complete list of changes.
+        </p>       
+      </subsection>     
+      
+      <subsection name='19 March 2009' date="19 March 2009" title="UIMA approved as an OASIS Standard">
+        <p>       
+          OASIS (<a href="http://www.oasis-open.org" target="_blank">http://www.oasis-open.org</a>)
+          members have approved the 
+          Unstructured Information Management Architecture (UIMA) version 1.0 
+          as an OASIS Standard, a status that signifies the highest level of ratification. 
+        </p>
+        <p>See <a href="http://www.oasis-open.org/news/oasis-news-2009-03-19.php" target="_blank">http://www.oasis-open.org/news/oasis-news-2009-03-19.php</a></p>
+      </subsection>     
+
+			<subsection name='29 December 2008' date="29 December 2008" title="UIMA C++ Framework Released">
+				<p>				
+					The UIMA C++ Framework enables creation of UIMA compliant Analysis Engines 
+					from programs written in C++, Perl, Python and Tcl. These components can be
+                                        developed and tested without any Java programming.
+                                        See a short introduction on <a href="doc-uimacpp-huh.html">Getting Started: UIMA C++ Framework</a>.
+				</p>
+			</subsection>
+
+			<subsection name='12 August 2008' date="12 August 2008" title="UIMA CAS Editor Released">
+				<p>
+					UIMA Cas Editor is an annotation tool which supports manual and automatic 
+					                    annotation (via running UIMA annotators) of CAS files. 
+										Downloads of the project can be found on
+										<a href="downloads.cgi">
+											our download page.
+										</a>
+				</p>
+			</subsection>
+			
+			<subsection name='24 July 2008' date="24 July 2008" title="UIMA Asynchronous Scaleout (UIMA-AS) Released">
+				<p>  
+					UIMA AS is the next generation scalability replacement for the Collection Processing Manager (CPM).
+                                        UIMA AS provides more flexible and powerful scaleout capability, and extends support
+                                        to the UIMA components not supported by the CPM,
+                                        the flow controller and CAS multiplier. UIMA components can be run within UIMA AS
+                                        with no code or component descriptor changes.
+                                        See more on the documentation page <a href="doc-uimaas-what.html">Getting Started: UIMA Asynchronous Scaleout</a>.
+				</p>
+			</subsection>
+
+			<subsection name='16 July 2008' date='16 July 2008' title='Hotfix-1 for UIMA core 2.2.2-incubating Released'>
+				<p>
+					This fixes memory issues with the UIMA CAS noted in 
+					<a href="http://issues.apache.org/jira/browse/UIMA-1067">Jira issue 1067</a> and
+					<a href="http://issues.apache.org/jira/browse/UIMA-1068">Jira issue 1068</a>.
+          			The hotfix consists of one zip file, which contains a replacement for the 
+          			uima-core.jar and a README with some install and usage instructions.
+				</p>
+			</subsection>
+
+			<subsection name='07 May 2008' date='07 May 2008' title='Version 2.2.2-incubating Released'>
+				<p>
+					The Apache UIMA version 2.2.2-incubating has been released!
+					For a list of all fixed issues, please refer to the 
+					<a href="http://www.apache.org/dist/incubator/uima/RELEASE_NOTES-uimaj-2.2.2-incubating.html">Release Notes</a>.
+					Downloads of the bugfix release can be found on
+					<a href="downloads.cgi">our download page.</a>
+				</p>
+			</subsection>
+
+			<subsection name='19 December 2007' date='19 December 2007' title='Version 2.2.1-incubating Released'>
+				<p>
+					The Apache UIMA version 2.2.1-incubating has been released!
+					Downloads of the bugfix release can be found on
+					<a href="downloads.cgi">
+						our download page.
+					</a>
+				</p>
+			</subsection>
+
+			<subsection name='23 August 2007' date='23 August 2007' title='Version 2.2.0-incubating Released'>
+				<p>
+					Version 2.2.0-incubating has been released!
+					Downloads of the project can be found on
+					<a href="downloads.cgi">
+						our download page.
+					</a>
+				</p>
+			</subsection>
+
+			<subsection name='7 April 2007' date='7 April 2007' title='Hotfix-1 for 2.1.0 Component Description Editor (CDE) Released'>
+        <p>
+          A "hotfix" for the Component Descriptor Editor, an Eclipse plugin used when editing UIMA descriptors,
+          has been released.  This fixes functionality problems noted in 
+          <a href="http://issues.apache.org/jira/browse/UIMA-364">Jira issue 364</a>.
+          This hotfix consists of one zip file, which, when unzipped, constitutes a replacement for the Eclipse 
+          plugin.  It includes a README-HOTFIX-1 file describing how to install it.
+        </p>
+      </subsection>
+      
+ 			<subsection name='14 March 2007' date='14 March 2007' title='Version 2.1.0-incubating Released'>
+				<p>
+          Version 2.1.0-incubating has been released!
+          Downloads of the project can be found at 
+          <a href="downloads.cgi">http://incubator.apache.org/uima/downloads.cgi</a>
+				</p>
+			</subsection>
+      
+			<subsection name='20 December 2006' date='20 December 2006' title='GLDV conference workshop (Germany)'>
+				<p>We are pleased announce a UIMA workshop at the <a href="http://www.sfb441.uni-tuebingen.de/gldv2007/index.en.html">GLDV 2007 spring conference</a>
+				in beautiful <a href="http://www.tuebingen.de/en/1559.html">Tübingen</a>, Germany.  
+				Please see the <a href="gldv07.html">full announcement</a>
+				for further details.
+				</p>
+			</subsection>
+			
+			<subsection name='13 December 2006' date='13 December 2006' title='ApacheCon 2007 Europe coming up'>
+				<p><a href="http://apachecon.com/2007/EU/index.html/e=MjAwNy9FVQ">ApacheCon 2007 Europe</a>
+				is coming up.  We are hoping to have some UIMA attendance
+				there, although we have no concrete plans as of now.  Watch this space.  If you would
+				like to meet with
+				UIMA folks there, drop us a line on uima-dev!
+				</p>
+			</subsection>
+			
+			<subsection name='07 December 2006' date='7 December 2006' title='UIMA Sandbox established'>
+				<p> 
+				  The UIMA sandbox is a workspace that is open to all UIMA committers and developers who would 
+				  like to contribute code and join the UIMA developer community on Apache. Details about the 
+				  sandbox can be found <a href="sandbox.html">here</a>.
+				</p>
+			</subsection>
+			
+			<subsection name='05 October 2006' date='5 October 2006' title='UIMA enters Apache Incubator'>
+				<p>
+				  UIMA has been accepted into the Apache Incubator by the Apache Inbubator PMC. Work begins on 
+				  converting the previous code base to Apache standards.
+				</p>
+			</subsection>
+
+		</section>
+
+	</body>
+</document>
+

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+  
+  <properties>
+    <title>Apache UIMA Project Guidelines</title>
+    <author email="uima-dev@incubator.apache.org"> UIMA Documentation
+      Team</author>
+  </properties>
+  
+  <body>
+    
+    <section name="Apache UIMA Roles and Responsibilities">
+      
+      <h3 align="center"><font color="#FF0000"><b>Note: This is a working draft
+        document.</b></font></h3>
+      <p align="center">Discussion of this document is occuring on the uima-dev mailing list.</p><br />
+      
+      <p> The roles and responsibilities that people can assume in the project are based on
+        merit. Everybody can help no matter what their role. Those who have been long term or
+        valuable contributors to the project obtain the right to vote and commit directly to
+        the source repository.
+      </p>
+      
+      <subsection name="Users">
+        
+        <p> Users are the people who use the software of the Project. People in this role aren't
+          contributing code, but they are using the software, reporting bugs, making
+          feature requests, helping other users, extending the online documentation on the
+          Wiki, and such. This is by far the most important category of people as, without
+          users, there is no reason for the Project.
+        </p>
+        
+        <p> When a user starts to contribute code or documentation patches, they become a
+          Contributor.
+        </p>
+      </subsection>
+      
+      <subsection name="Contributors">
+        
+        <p> Contributors are the people who write code or documentation patches or
+          contribute positively to the project in other ways. A volunteer's contribution is
+          always recognized. In source code, we have adopted a policy of keeping the author's
+          names out of the individual source code files; attributions are now put into the
+          project's NOTICES file. All volunteers who contribute to a source file may add a
+          section with their name and contributions to the NOTICES file.
+        </p>
+      </subsection>
+      
+      <subsection name="Committers">
+        
+        <p> Contributors who give frequent and valuable contributions to the Project or a
+          subproject of the Project can have their status changed to that of a &quot;
+          <em>Committer</em>&quot; for the Project or for that subproject. A Committer has
+          write access to the source code repository and gains voting rights allowing them to
+          affect the future of the project/subproject.
+        </p>
+        
+        <p> In order for a Contributor to become a Committer, another Committer can nominate
+          that Contributor or the Contributor can ask for it.
+        </p>
+        
+        <p> Once a Contributor is nominated, all of the Committers for a subproject will vote.
+          If there are at least 3 positive votes and no negative votes, the Contributor is
+          converted into a Committer and given write access to the source code repository for
+          that subproject. This is an example offer letter that should be sent to the
+          volunteer after 3 positive votes have been received:
+        </p>
+        
+        <source>
+          <![CDATA[
+        Dear Contributor,
+
+        The Apache UIMA project would like to offer you commit privileges.
+        We have been impressed with your contributions up till now, and
+        believe that your involvement will improve the quality of the
+        libraries we produce.
+
+        It is important that you realize that these commit privileges give
+        you access to the specific Apache UIMA project repository for which you
+        are involved with. They do not provide commit access to any other
+        Apache based project. Those projects will have to grant you commit
+        privileges themselves.
+
+        If you are interested in having commit privileges, please just let us
+        know, and we will setup an account on apache.org. It would expedite
+        the process if you could provide your preferred account name. 
+        This process could take a few days once
+        we get this information.
+
+        We all hope that you accept this invitation.
+
+        The Apache UIMA Project Management Committee.
+        ]]></source>
+        
+        <p> Once there are 3 positive votes and the response to the above letter has been
+          received, someone from the project community who already has commit access should
+          send email to:
+          <strong>root at apache.org</strong> that the account should be created. The
+          following information must be included in the email:
+        </p>
+        
+        <ul>
+          <li> The name and email address of the new user. (ie: John Smith
+            &lt;john.smith@foo.com&gt;)
+          </li>
+          <li> Suggested account userid. This is optional. (ie: jmsith)
+          </li>
+          <li> The project that the user should be given access to. (ie: UIMA)
+          </li>
+          <li> The results of the votes. In other words, the names and email addresses of the
+            committers who approved the addition.
+          </li>
+        </ul>
+        
+        <p> The new committer should also send an email to
+          <strong>asf at jaguNET.com</strong> with the following information (please cut
+          and paste to return format):
+        </p>
+        
+        <blockquote> Name: {your name}
+          <br/> Email: {your email address on the ASF lists}
+          <br/> Projects: {comma separated list of ASF projects to which you have commit
+          access}
+          <br/> Key: {a blank line followed by your public key}
+        </blockquote>
+        
+        <p>For example:</p>
+        
+        <blockquote> Name: Joe Foobar
+          <br/> Email: joe@byteme.com
+          <br/> Projects: Tomcat, httpd
+          <br/> Key:
+          <br/> adklajdAL()@ N*@U)U@()@@ @)U@
+        </blockquote>
+        
+        <p> Finally, a new committer should also submit a signed copy of the Contributor
+          License Agreement to the ASF. See the
+          <a href="http://www.apache.org/licenses/#clas">
+            <strong>Licenses page</strong></a> for details.
+        </p>
+        
+        <p> Note 1: If a committer already has an account on the apache.org server and the
+          committer needs commit access to additional projects, then all that needs to be
+          done is to have the user notify general@incubator.apache.org with the results of
+          the voting (as documented above) and the user will be given access. In other words,
+          the root email address should only be used on the basis of new account creation.
+        </p>
+        
+        <p> Note 2: All committers will be given write access to uima/site SVN on request. In
+          other words, committers should be able to update the main website.
+        </p>
+        
+        <p> At times, Committers may go inactive for a variety of reasons. A Committer that has
+          been inactive for 6 months or more may lose their status as a Committer. Getting
+          access back is as simple as re-requesting it on the project's Developer mailing
+          list.
+        </p>
+        
+        <p> A list of our current Committers can be found in our
+          <a href="team-list.html">Project Credits</a>.
+        </p>
+      </subsection>
+      
+      <subsection name="Project Management Committee (PMC)">
+        <p> (Note: this section is written for when UIMA graduates from the incubator. Until
+          then, the committers are members of the podling PMC.) Committers who frequently
+          participate with valuable contributions may have their status changed to that of
+          a &quot;
+          <em>Project Management Committee Member</em>&quot;. This committee is the
+          official managing body of the UIMA Project and is responsible for setting overall
+          project direction.
+        </p>
+        
+        <p> To view the Project Management Committee bylaws,
+          <a href="management.html"> click here</a>.
+        </p>
+        
+        <p> A list of our current PMC Members can be found in our
+          <a href="team-list.html">Project Credits</a>.
+        </p>
+      </subsection>
+    </section>
+    
+  </body>
+</document>

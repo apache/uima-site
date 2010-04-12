@@ -1,0 +1,390 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+    <!-- ====================================================================== -->
+    <!-- GENERATED FILE, DO NOT EDIT, EDIT THE XML FILE IN xdocs INSTEAD! -->
+    <!-- ====================================================================== -->
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+            <style type="text/css">@import "stylesheets/base.css";</style>
+                                          <meta name="author" value=" UIMA Documentation
+      Team">
+  <meta name="email" value="uima-dev@incubator.apache.org">
+                        
+            
+                        
+                        <title>Apache UIMA - Apache UIMA Project Guidelines</title>
+        </head>
+
+        <body>
+          <div class="topLogos">        
+            <table border="0" width="100%" cellspacing="0">
+                <!-- TOP IMAGE -->
+                <tr>
+                    <td align='LEFT'>
+                                <a href="http://incubator.apache.org/">
+        <img src="./images/apache-incubator-logo.png" alt="Apache UIMA" border="0"/>
+      </a>
+                          </td>
+                    <td align='CENTER'>
+                          <div class="pageBanner">Apache UIMA Project Guidelines</div>
+                    </td>
+                    <td align='RIGHT'>
+                      <a href="index.html">
+                                <img style="border: 1px solid black;" src="./images/UIMA_banner2.png" alt="UIMA project logo" border="0"/>
+                          </a>
+                    </td>
+                </tr>
+            </table>
+            <hr noshade="" size="1"/>
+            </div>
+            <table border="0" width="100%" cellspacing="4">
+              <tr>
+                <td align='RIGHT' colspan="2">
+                  <form method="get" action="http://www.google.com/search">
+                    Search the site
+                    <input type="text"   name="q" size="25" maxlength="255" value="" />
+                    <input type="hidden" name="sitesearch" value="http://incubator.apache.org/uima" />
+                    <input name="Search" value="Search Site" type="submit"/>
+                  </form>
+                </td>
+              </tr>
+              <tr> <!-- LEFT SIDE NAVIGATION -->
+                <td width="20%" valign="top">
+
+
+
+
+
+
+                   <!-- regular menu -->
+                      <div class="navBar">
+                  <br/>
+            <div class="navBarItem">      <div class="navPartHeading">General</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./index.html">Home</a>
+                </div>
+                          <div class="navBarItem">      <a href="./downloads.cgi">Downloads</a>
+                </div>
+                          <div class="navBarItem">      <a href="./documentation.html">Documentation</a>
+                </div>
+                          <div class="navBarItem">      <a href="./news.html">News</a>
+                </div>
+                    <br style="line-height: .5em"/>
+                          <div class="navBarItem">      <a href="./mail-lists.html">Mailing Lists</a>
+                </div>
+                          <div class="navBarItem">      <a href="./mail-lists.html#Apache_UIMA_Forums">Forums</a>
+                    <a href="http://news.gmane.org/gmane.comp.apache.uima.general" target="_blank"><em> Users</em> <img src="images/offsitelink.png" /></a>
+                  <a href="http://news.gmane.org/gmane.comp.apache.uima.devel" target="_blank"><em>Dev</em> <img src="images/offsitelink.png" /></a>
+              </div>
+                    <br style="line-height: .5em"/>
+                          <div class="navBarItem">      <a href="http://issues.apache.org/jira/browse/uima" target="_blank">Issue tracker <img src="images/offsitelink.png"</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://cwiki.apache.org/UIMA/" target="_blank">Wiki <img src="images/offsitelink.png"</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Components & Tools</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./annotators.html">Annotators</a>
+                </div>
+                          <div class="navBarItem">      <a href="./toolsServers.html">Tools & Servers</a>
+                </div>
+                          <div class="navBarItem">      <a href="./sandbox.html">Sandbox</a>
+                </div>
+                          <div class="navBarItem">      <a href="./external-resources.html">External Resources</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Community</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./get-involved.html">Get Involved</a>
+                </div>
+                          <div class="navBarItem">      <a href="./contribution-policy.html">Contribution Policies</a>
+                </div>
+                          <div class="navBarItem">      <a href="./faq.html">FAQ</a>
+                </div>
+                          <div class="navBarItem">      <a href="./project-guidelines.html">Project Guidelines</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Development</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./svn.html">Source Code</a>
+                </div>
+                          <div class="navBarItem">      <a href="./distribution.html">Creating a Distribution</a>
+                </div>
+                          <div class="navBarItem">      <a href="./release.html">Doing a UIMA release</a>
+                </div>
+                          <div class="navBarItem">      <a href="./codeConventions.html">Code Conventions</a>
+                </div>
+                          <div class="navBarItem">      <a href="./uima-specification.html">UIMA Specification (OASIS)</a>
+                </div>
+                          <div class="navBarItem">      <a href="./team-list.html">Project Team</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Events and Conferences</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./iks09.html">IKS 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gscl09.html">GSCL 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./lsm09.html">LSM 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./lrec08.html">LREC 2008</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gldv07.html">GLDV 2007</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">ASF</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./license.html">License</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://apache.org/foundataion/thanks.html" target="_blank">ASF Sponsors <img src="images/offsitelink.png"</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://www.apache.org/foundation/sponsorship.html" target="_blank">ASF Sponsorship <img src="images/offsitelink.png"</a>
+                </div>
+            </div>
+        </div>
+                </td>
+                <td width="80%" align="left" valign="top">
+                                                          <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Apache UIMA Roles and Responsibilities"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Apache UIMA Roles and Responsibilities</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <h3 align="center"><font color="#FF0000"><b>Note: This is a working draft
+        document.</b></font></h3>
+                                                <p align="center">Discussion of this document is occuring on the uima-dev mailing list.</p>
+                                                <br />
+                                                <p> The roles and responsibilities that people can assume in the project are based on
+        merit. Everybody can help no matter what their role. Those who have been long term or
+        valuable contributors to the project obtain the right to vote and commit directly to
+        the source repository.
+      </p>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Users">
+            <h2>Users
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p> Users are the people who use the software of the Project. People in this role aren't
+          contributing code, but they are using the software, reporting bugs, making
+          feature requests, helping other users, extending the online documentation on the
+          Wiki, and such. This is by far the most important category of people as, without
+          users, there is no reason for the Project.
+        </p>
+                                                <p> When a user starts to contribute code or documentation patches, they become a
+          Contributor.
+        </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Contributors">
+            <h2>Contributors
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p> Contributors are the people who write code or documentation patches or
+          contribute positively to the project in other ways. A volunteer's contribution is
+          always recognized. In source code, we have adopted a policy of keeping the author's
+          names out of the individual source code files; attributions are now put into the
+          project's NOTICES file. All volunteers who contribute to a source file may add a
+          section with their name and contributions to the NOTICES file.
+        </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Committers">
+            <h2>Committers
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p> Contributors who give frequent and valuable contributions to the Project or a
+          subproject of the Project can have their status changed to that of a "
+          <em>Committer</em>" for the Project or for that subproject. A Committer has
+          write access to the source code repository and gains voting rights allowing them to
+          affect the future of the project/subproject.
+        </p>
+                                                <p> In order for a Contributor to become a Committer, another Committer can nominate
+          that Contributor or the Contributor can ask for it.
+        </p>
+                                                <p> Once a Contributor is nominated, all of the Committers for a subproject will vote.
+          If there are at least 3 positive votes and no negative votes, the Contributor is
+          converted into a Committer and given write access to the source code repository for
+          that subproject. This is an example offer letter that should be sent to the
+          volunteer after 3 positive votes have been received:
+        </p>
+                                                  <pre class="source">
+    
+          
+        Dear Contributor,
+
+        The Apache UIMA project would like to offer you commit privileges.
+        We have been impressed with your contributions up till now, and
+        believe that your involvement will improve the quality of the
+        libraries we produce.
+
+        It is important that you realize that these commit privileges give
+        you access to the specific Apache UIMA project repository for which you
+        are involved with. They do not provide commit access to any other
+        Apache based project. Those projects will have to grant you commit
+        privileges themselves.
+
+        If you are interested in having commit privileges, please just let us
+        know, and we will setup an account on apache.org. It would expedite
+        the process if you could provide your preferred account name. 
+        This process could take a few days once
+        we get this information.
+
+        We all hope that you accept this invitation.
+
+        The Apache UIMA Project Management Committee.
+        
+  </pre>
+                                                <p> Once there are 3 positive votes and the response to the above letter has been
+          received, someone from the project community who already has commit access should
+          send email to:
+          <strong>root at apache.org</strong> that the account should be created. The
+          following information must be included in the email:
+        </p>
+                                                <ul>
+          <li> The name and email address of the new user. (ie: John Smith
+            &lt;john.smith@foo.com&gt;)
+          </li>
+          <li> Suggested account userid. This is optional. (ie: jmsith)
+          </li>
+          <li> The project that the user should be given access to. (ie: UIMA)
+          </li>
+          <li> The results of the votes. In other words, the names and email addresses of the
+            committers who approved the addition.
+          </li>
+        </ul>
+                                                <p> The new committer should also send an email to
+          <strong>asf at jaguNET.com</strong> with the following information (please cut
+          and paste to return format):
+        </p>
+                                                <blockquote> Name: {your name}
+          <br /> Email: {your email address on the ASF lists}
+          <br /> Projects: {comma separated list of ASF projects to which you have commit
+          access}
+          <br /> Key: {a blank line followed by your public key}
+        </blockquote>
+                                                <p>For example:</p>
+                                                <blockquote> Name: Joe Foobar
+          <br /> Email: joe@byteme.com
+          <br /> Projects: Tomcat, httpd
+          <br /> Key:
+          <br /> adklajdAL()@ N*@U)U@()@@ @)U@
+        </blockquote>
+                                                <p> Finally, a new committer should also submit a signed copy of the Contributor
+          License Agreement to the ASF. See the
+          <a href="http://www.apache.org/licenses/#clas">
+            <strong>Licenses page</strong></a> for details.
+        </p>
+                                                <p> Note 1: If a committer already has an account on the apache.org server and the
+          committer needs commit access to additional projects, then all that needs to be
+          done is to have the user notify general@incubator.apache.org with the results of
+          the voting (as documented above) and the user will be given access. In other words,
+          the root email address should only be used on the basis of new account creation.
+        </p>
+                                                <p> Note 2: All committers will be given write access to uima/site SVN on request. In
+          other words, committers should be able to update the main website.
+        </p>
+                                                <p> At times, Committers may go inactive for a variety of reasons. A Committer that has
+          been inactive for 6 months or more may lose their status as a Committer. Getting
+          access back is as simple as re-requesting it on the project's Developer mailing
+          list.
+        </p>
+                                                <p> A list of our current Committers can be found in our
+          <a href="team-list.html">Project Credits</a>.
+        </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Project Management Committee (PMC)">
+            <h2>Project Management Committee (PMC)
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p> (Note: this section is written for when UIMA graduates from the incubator. Until
+          then, the committers are members of the podling PMC.) Committers who frequently
+          participate with valuable contributions may have their status changed to that of
+          a "
+          <em>Project Management Committee Member</em>". This committee is the
+          official managing body of the UIMA Project and is responsible for setting overall
+          project direction.
+        </p>
+                                                <p> To view the Project Management Committee bylaws,
+          <a href="management.html"> click here</a>.
+        </p>
+                                                <p> A list of our current PMC Members can be found in our
+          <a href="team-list.html">Project Credits</a>.
+        </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                  </td>
+                </tr>
+                <!-- FOOTER -->
+                <tr><td colspan="2">
+                  <hr noshade="" size="1"/>
+                </td></tr>
+                <tr><td colspan="2"> 
+                  <table class="pageFooter">
+                    <tr>
+                      <td><a href="index.html">Home</a></td>
+                      <td><a href="privacy-policy.html">Privacy Policy</a></td>
+                      <td>
+                Copyright &#169; 2006-2009, The Apache Software Foundation
+                      </td>
+                      <td><a href="mailto:uima-dev@incubator.apache.org">Contact us</a></td>
+                    </tr>
+                  </table>                    
+                </td></tr>
+            </table>
+        </body>
+    </html>
+

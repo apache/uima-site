@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE anakia [
+<!ENTITY nbsp "&#160;">
+]>
+
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+-->
+
+<document>
+
+ <properties>
+  <title>Mailing Lists</title>
+  <author email="uima-dev@incubator.apache.org">
+   UIMA Documentation Team
+  </author>
+ </properties>
+
+ <body>
+  <section name="Apache UIMA Mailing Lists">
+
+   <p>
+    There are currently three publicly available mailing lists for UIMA:
+   
+   
+
+   <strong>User Lists</strong> --
+      for users of software to converse about such things
+     as configuration and operating of the software of the Project;
+   <strong>Developer Lists</strong> --
+     for the developers of the project (On these
+     lists suggestions and comments for code changes are discussed and
+     action items are raised and voted on. For the developer community,
+     these lists are the very center of the project where all the
+     &quot;action&quot; is.); and 
+
+     <strong>Commit Lists</strong> -- 
+     where all SVN code commit messages are sent (
+     all committers are required to subscribe to this list so that they
+     can stay aware of changes to the repository).
+    </p>
+
+   <p>
+    You subscribe and unsubscribe by sending an empty email message to
+    the list name suffixed with -subscribe or -unsubscribe. The buttons
+    in the table below will create the correct email for you in your
+    mail system; just push send.
+   </p>
+
+   <table class="downloads">
+
+    <tr>
+     <th>List</th>
+     <th>
+      List email
+     </th>
+     <th>
+      Subscribe
+     </th>
+     <th>
+      Unsubscribe
+     </th>
+     <th>
+      Archive
+     </th>
+    </tr>
+
+
+
+    <tr>
+     <td>
+      <p>Users</p>
+     </td>
+     <td>
+      <p>
+       <a href="mailto:uima-user@incubator.apache.org">
+        uima-user
+         @incubator.apache.org
+       </a>
+      </p>
+     </td>
+     <td>
+      <p>
+       <a class="external" rel="nofollow"
+        href="mailto:uima-user-subscribe@incubator.apache.org">
+        uima-user-subscribe
+         @incubator.apache.org
+       </a>
+      </p>
+     </td>
+     <td>
+      <p>
+       <a class="external" rel="nofollow"
+        href="mailto:uima-user-unsubscribe@incubator.apache.org">
+        uima-user-unsubscribe
+         @incubator.apache.org
+       </a>
+      </p>
+     </td>
+     <td>
+      <p>
+       <a
+        href="http://mail-archives.apache.org/mod_mbox/incubator-uima-user/">
+        Archive at Apache
+       </a>
+       </p> 
+       <p>
+       Also archived at 
+        <a href="http://dir.gmane.org/gmane.comp.apache.uima.general">
+          GMane
+        </a> and
+        <a href="http://uima.markmail.org">uima.markmail.org</a>
+      </p>
+     </td>
+    </tr>
+
+
+    <tr>
+     <td>
+      <p>Developers</p>
+     </td>
+     <td>
+      <p>
+       <a href="mailto:uima-dev@incubator.apache.org">
+        uima-dev
+         @incubator.apache.org
+       </a>
+      </p>
+     </td>
+     <td>
+      <p>
+       <a class="external" rel="nofollow"
+        href="mailto:uima-dev-subscribe@incubator.apache.org">
+        uima-dev-subscribe
+         @incubator.apache.org
+       </a>
+      </p>
+     </td>
+     <td>
+      <p>
+       <a class="external" rel="nofollow"
+        href="mailto:uima-dev-unsubscribe@incubator.apache.org">
+        uima-dev-unsubscribe
+         @incubator.apache.org
+       </a>
+      </p>
+     </td>
+     <td>
+      <p>
+       <a
+        href="http://mail-archives.apache.org/mod_mbox/incubator-uima-dev">
+        Archive at Apache
+       </a>
+      </p>
+      <p>
+        Also archived at
+        <a href="http://dir.gmane.org/gmane.comp.apache.uima.devel">
+          GMane
+        </a> and
+        <a href="http://uima.markmail.org">uima.markmail.org</a>
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      <p>Commits</p>
+     </td>
+     <td>
+      <p>
+       <a href="mailto:uima-commits@incubator.apache.org">
+        uima-commits
+         @incubator.apache.org
+       </a>
+      </p>
+     </td>
+     <td>
+      <p>
+       <a class="external" rel="nofollow"
+        href="mailto:uima-commits-subscribe@incubator.apache.org">
+        uima-commits-subscribe
+         @incubator.apache.org
+       </a>
+      </p>
+     </td>
+     <td>
+      <p>
+       <a class="external" rel="nofollow"
+        href="mailto:uima-commits-unsubscribe@incubator.apache.org">
+        uima-commits-unsubscribe
+         @incubator.apache.org
+       </a>
+      </p>
+     </td>
+     <td>
+      <p>
+       <a
+        href="http://mail-archives.apache.org/mod_mbox/incubator-uima-commits/">
+        Archive at Apache
+       </a> and also at
+        <a href="http://uima.markmail.org">uima.markmail.org</a>
+      </p>
+     </td>
+    </tr>
+   </table>
+
+    <p>The archive at <a href="http://uima.markmail.org">uima.markmail.org</a> has good faclities for
+    searching the messages on the list, and can display the hits in a threaded view.</p>
+    <p>The archive at
+        <a href="http://dir.gmane.org/gmane.comp.apache.uima.devel">
+          GMane
+        </a> allows interacting with the mailing lists as if they were a forum with topics; the topics
+      correspond to threads in the email list.  You can also post from this interface
+    just like you can from a forum.</p>
+   <p>You may want to review some general information about 
+   <a href="http://www.apache.org/foundation/mailinglists.html">Apache mailing lists</a>.  In
+   particular, please note that all UIMA mailing lists are public and that 
+   <a href="http://www.apache.org/foundation/public-archives.html">public archives</a> contain
+   all posts to those mailing lists.  Please do not send confidential information to those lists.
+   </p>
+
+  </section>
+  
+  <section name="Apache UIMA Forums" id="Apache_UIMA_Forums">
+    <p>
+      The contents of two of the mailing lists can be viewed as a forum in several styles, 
+      thanks to technology from <a href="http://news.gmane.org/">Gmane</a>.  
+      You may also use this interface to post responses.
+    </p>
+    <table class="downloads">
+      <tr>
+        <th>Forum</th>
+        <th>View as<br/>threaded list</th>
+        <th>View as<br/>a Blog</th>
+        <th>NNTP<br/>newsreader<br/>feed</th>
+        <th>RSS feeds</th>
+      </tr>
+      <tr>
+        <td>UIMA Users</td>
+        <td><a href="http://news.gmane.org/gmane.comp.apache.uima.general">threaded</a></td>
+        <td><a href="http://blog.gmane.org/gmane.comp.apache.uima.general">blog</a></td>
+        <td><a href="nntp://news.gmane.org/gmane.comp.apache.uima.general">news reader</a></td>
+        <td><a href="http://rss.gmane.org/messages/excerpts/gmane.comp.apache.uima.general">Messages -- excerpted text</a>
+          <br/><a href="http://rss.gmane.org/topics/excerpts/gmane.comp.apache.uima.general">Topics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- excerpted text</a>
+          <br/><a href="http://rss.gmane.org/messages/complete/gmane.comp.apache.uima.general">Messages -- complete text</a>
+          <br/><a href="http://rss.gmane.org/topics/complete/gmane.comp.apache.uima.general">Topics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- complete text</a>
+        </td>
+      </tr>
+      <tr>
+        <td>UIMA Development</td>
+        <td><a href="http://news.gmane.org/gmane.comp.apache.uima.devel">threaded</a></td>
+        <td><a href="http://blog.gmane.org/gmane.comp.apache.uima.devel">blog</a></td>
+        <td><a href="nntp://news.gmane.org/gmane.comp.apache.uima.devel">news reader</a></td>
+        <td><a href="http://rss.gmane.org/messages/excerpts/gmane.comp.apache.uima.devel">Messages -- excerpted text</a>
+          <br/><a href="http://rss.gmane.org/topics/excerpts/gmane.comp.apache.uima.devel">Topics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- excerpted text</a>
+          <br/><a href="http://rss.gmane.org/messages/complete/gmane.comp.apache.uima.devel">Messages -- complete text</a>
+          <br/><a href="http://rss.gmane.org/topics/complete/gmane.comp.apache.uima.devel">Topics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- complete text</a>
+        </td>
+      </tr>
+    </table>
+    
+    <p>The left-hand navigation bar has two quick links following the forum link, 
+      which take you directly to the threaded views of the forums.</p>
+  </section>  
+  
+ </body>
+</document>
+

@@ -1,0 +1,686 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+    <!-- ====================================================================== -->
+    <!-- GENERATED FILE, DO NOT EDIT, EDIT THE XML FILE IN xdocs INSTEAD! -->
+    <!-- ====================================================================== -->
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+            <style type="text/css">@import "stylesheets/base.css";</style>
+                                          <meta name="author" value="
+ UIMA Documentation Team">
+  <meta name="email" value="uima-dev@incubator.apache.org">
+                        
+            
+                        
+                        <title>Apache UIMA - UIMA Sandbox</title>
+        </head>
+
+        <body>
+          <div class="topLogos">        
+            <table border="0" width="100%" cellspacing="0">
+                <!-- TOP IMAGE -->
+                <tr>
+                    <td align='LEFT'>
+                                <a href="http://incubator.apache.org/">
+        <img src="./images/apache-incubator-logo.png" alt="Apache UIMA" border="0"/>
+      </a>
+                          </td>
+                    <td align='CENTER'>
+                          <div class="pageBanner">UIMA Sandbox</div>
+                    </td>
+                    <td align='RIGHT'>
+                      <a href="index.html">
+                                <img style="border: 1px solid black;" src="./images/UIMA_banner2.png" alt="UIMA project logo" border="0"/>
+                          </a>
+                    </td>
+                </tr>
+            </table>
+            <hr noshade="" size="1"/>
+            </div>
+            <table border="0" width="100%" cellspacing="4">
+              <tr>
+                <td align='RIGHT' colspan="2">
+                  <form method="get" action="http://www.google.com/search">
+                    Search the site
+                    <input type="text"   name="q" size="25" maxlength="255" value="" />
+                    <input type="hidden" name="sitesearch" value="http://incubator.apache.org/uima" />
+                    <input name="Search" value="Search Site" type="submit"/>
+                  </form>
+                </td>
+              </tr>
+              <tr> <!-- LEFT SIDE NAVIGATION -->
+                <td width="20%" valign="top">
+
+
+
+
+
+
+                   <!-- regular menu -->
+                      <div class="navBar">
+                  <br/>
+            <div class="navBarItem">      <div class="navPartHeading">General</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./index.html">Home</a>
+                </div>
+                          <div class="navBarItem">      <a href="./downloads.cgi">Downloads</a>
+                </div>
+                          <div class="navBarItem">      <a href="./documentation.html">Documentation</a>
+                </div>
+                          <div class="navBarItem">      <a href="./news.html">News</a>
+                </div>
+                    <br style="line-height: .5em"/>
+                          <div class="navBarItem">      <a href="./mail-lists.html">Mailing Lists</a>
+                </div>
+                          <div class="navBarItem">      <a href="./mail-lists.html#Apache_UIMA_Forums">Forums</a>
+                    <a href="http://news.gmane.org/gmane.comp.apache.uima.general" target="_blank"><em> Users</em> <img src="images/offsitelink.png" /></a>
+                  <a href="http://news.gmane.org/gmane.comp.apache.uima.devel" target="_blank"><em>Dev</em> <img src="images/offsitelink.png" /></a>
+              </div>
+                    <br style="line-height: .5em"/>
+                          <div class="navBarItem">      <a href="http://issues.apache.org/jira/browse/uima" target="_blank">Issue tracker <img src="images/offsitelink.png"</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://cwiki.apache.org/UIMA/" target="_blank">Wiki <img src="images/offsitelink.png"</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Components & Tools</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./annotators.html">Annotators</a>
+                </div>
+                          <div class="navBarItem">      <a href="./toolsServers.html">Tools & Servers</a>
+                </div>
+                          <div class="navBarItem">      <a href="./sandbox.html">Sandbox</a>
+                </div>
+                          <div class="navBarItem">      <a href="./external-resources.html">External Resources</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Community</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./get-involved.html">Get Involved</a>
+                </div>
+                          <div class="navBarItem">      <a href="./contribution-policy.html">Contribution Policies</a>
+                </div>
+                          <div class="navBarItem">      <a href="./faq.html">FAQ</a>
+                </div>
+                          <div class="navBarItem">      <a href="./project-guidelines.html">Project Guidelines</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Development</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./svn.html">Source Code</a>
+                </div>
+                          <div class="navBarItem">      <a href="./distribution.html">Creating a Distribution</a>
+                </div>
+                          <div class="navBarItem">      <a href="./release.html">Doing a UIMA release</a>
+                </div>
+                          <div class="navBarItem">      <a href="./codeConventions.html">Code Conventions</a>
+                </div>
+                          <div class="navBarItem">      <a href="./uima-specification.html">UIMA Specification (OASIS)</a>
+                </div>
+                          <div class="navBarItem">      <a href="./team-list.html">Project Team</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Events and Conferences</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./iks09.html">IKS 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gscl09.html">GSCL 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./lsm09.html">LSM 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./lrec08.html">LREC 2008</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gldv07.html">GLDV 2007</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">ASF</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./license.html">License</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://apache.org/foundataion/thanks.html" target="_blank">ASF Sponsors <img src="images/offsitelink.png"</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://www.apache.org/foundation/sponsorship.html" target="_blank">ASF Sponsorship <img src="images/offsitelink.png"</a>
+                </div>
+            </div>
+        </div>
+                </td>
+                <td width="80%" align="left" valign="top">
+                                                          <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="UIMA Sandbox"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;UIMA Sandbox</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>
+The UIMA sandbox is a workspace that is open to all UIMA committers and developers who would like to 
+contribute code and join the UIMA developer community.  The sandbox hosts analysis components 
+and tooling around UIMA.  All the components are free to use and licensed under the 
+<a href="license.html">Apache Software License</a>.
+</p>
+                                                <p>Components often migrate from here to other parts of the site, over time, as part of the 
+  process of integration by the Apache community.  
+</p>
+                                                <p>
+A list of proposed analysis components and tooling for UIMA is available at the 
+<a href="http://cwiki.apache.org/UIMA/uima-sandbox-components.html">UIMA wiki</a> and can be discussed there. 
+</p>
+                                                <p>
+You can access the UIMA sandbox in the SVN repository at 
+<a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/">
+http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>. 
+</p>
+                                                <p>
+ The list below shows the currently available components of the UIMA sandbox.
+ Many of these components are annotators, and are released - see the 
+ <a href="downloads.cgi">download</a> page.
+</p>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="UIMA sandbox components"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;UIMA sandbox components</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <h4>Annotators and Consumers</h4>
+                                                <ul>
+		  <li><a href="#whitespace.tokenizer">Whitespace Tokenizer Annotator</a></li>
+		  <li><a href="#snowball.annotator">Snowball Annotator</a></li>
+		  <li><a href="#regex.annotator">Regular Expression Annotator</a></li>
+      <li><a href="#dict.annotator">Dictionary Annotator</a></li>
+      <li><a href="#tagger.annotator">Hidden Markov Model Tagger Annotator</a></li>
+      <li><a href="#bsf.annotator">BSF Annotator</a></li>
+      <li><a href="#opencalais.annotator">OpenCalais Annotator</a></li>
+      <li><a href="#concept.mapper.annotator">Concept Mapper Annotator</a></li>
+      <li><a href="#configurable.feature.extractor.annotator">Configurable Feature Extractor Annotator</a></li>      <li><a href="#tika.annotator">Tika Annotator</a></li>
+      <li><a href="#lucas.consumer">Lucene CAS indexer (Lucas)</a></li>
+    </ul>
+                                                <h4>Servers</h4>
+                                                <ul>
+      <li><a href="#simple-server">Simple Server (UIMA REST service)</a></li>
+    </ul>
+                                                <h4>Packaging tools</h4>
+                                                <ul>
+      <li><a href="#pear.package.task">PEAR Packaging ANT Task</a></li>
+      <li><a href="#pear.maven.task">PEAR Packaging Maven Plugin</a></li>
+    </ul>
+                                                <h4>Miscellaneous</h4>
+                                                <ul>
+      <li><a href="#fs.variables">Feature Structure Variables</a></li>
+    </ul>
+                                                <p>These are described in more detail below.</p>
+                                                <br />
+                                                      <table class="subsectionTable" id='whitespace.tokenizer'>
+        <tr><td>
+       
+       
+       
+          <a name="Whitespace Tokenizer Annotator">
+            <h2>Whitespace Tokenizer Annotator
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+		  The Whitespace tokenizer annotator component provides an UIMA annotator implementation that tokenizes 
+		  text documents using a simple whitespace segmentation. During the tokenization, the annotator creates
+		  token and sentence annotations as result. The Java source of the annotator
+		  can be accessed in the SVN repository at 
+		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/WhitespaceTokenizer">
+		  http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/WhitespaceTokenizer</a>.
+		</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='snowball.annotator'>
+        <tr><td>
+       
+       
+       
+          <a name="Snowball Annotator">
+            <h2>Snowball Annotator
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+		  The Snowball annotator is an UIMA annotator component that wraps the Snowball stemming algorithm. The annotator
+		  iterates over the available token annotations in the CAS and creates for each token a feature 
+		  containing the stem.
+		  The stemming algorithm is avaialble for several languages. For details about Snowball please see 
+		  <a class="external" href="http://snowball.tartarus.org/">http://snowball.tartarus.org/</a>.
+		  The Java source of the annotator can be accessed in the SVN repository at 
+		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/SnowballAnnotator">
+		  http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/SnowballAnnotator</a>. 
+		</p>
+                                                <p>
+		  Note: the used implementation of the Snowball stemming algorithm is licensed under the BSD license.
+		</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='regex.annotator'>
+        <tr><td>
+       
+       
+       
+          <a name="Regular Expression Annotator">
+            <h2>Regular Expression Annotator
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+		  The Regular Expression Annotator (RegexAnnotator) is an Apache UIMA analysis engine that 
+		  detects entities like email addresses, URLs, phone numbers, zip codes or any other entity 
+		  based on regular expressions and concepts. For each entity that was detected an annotation
+		  can be created or an already existing annotation can be updated with feature values.
+		   <a href="downloads/sandbox/RegexAnnotatorUserGuide/RegexAnnotatorUserGuide.html">
+		  Click here to access the user documentation</a>.
+		  The Java source of the annotator can be accessed in the SVN repository at 
+		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/RegularExpressionAnnotator">
+		  http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/RegularExpressionAnnotator</a>.
+		</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='pear.package.task'>
+        <tr><td>
+       
+       
+       
+          <a name="PEAR Packaging ANT Task">
+            <h2>PEAR Packaging ANT Task
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+		  The PEAR packaging ANT task component is a project to create UIMA PEAR packages automatically 
+		  during a component build using a custom 
+		  <a class="external" href="http://ant.apache.org/">Apache ANT</a> task. With this task, 
+		  users are able to build their components from the source and then package them 
+		  automatically as UIMA PEAR package. 
+      <a href="downloads/sandbox/PearPackagingAntTaskUserGuide/PearPackagingAntTaskUserGuide.html">
+		  Click here to access the user documentation</a>.
+		  The Java source of the PEAR packaging task can be accessed in the SVN repository at 
+		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/PearPackagingAntTask">
+		  http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/PearPackagingAntTask</a>. 
+		</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='pear.maven.task'>
+        <tr><td>
+       
+       
+       
+          <a name="PEAR Packaging Maven Plugin">
+            <h2>PEAR Packaging Maven Plugin
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>Note: The PEAR Packaging Maven Plugin has been moved to the main UIMA Java Framework and SDK package.</p>
+                                                <p>
+		  The PEAR packaging Maven plugin component is a project to create UIMA PEAR packages automatically 
+		  during a component build using a custom Maven plugin.
+		  With this plugin, users are able to build their components from the source and then package them 
+		  automatically as UIMA PEAR package. 
+		  <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/tools/tools.html#ugr.tools.pear">
+		  Click here to access the user documentation</a>.
+		  The Java source of the PEAR packaging Maven plugin can be accessed in the SVN repository at 
+		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/uimaj/trunk/PearPackagingMavenPlugin">
+		  http://svn.apache.org/repos/asf/incubator/uima/uimaj/trunk/PearPackagingMavenPlugin</a>. 
+		</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='dict.annotator'>
+        <tr><td>
+       
+       
+       
+          <a name="Dictionary Annotator">
+            <h2>Dictionary Annotator
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+		  The Dictionary Annotator is an Apache UIMA analysis engine that creates annotations based on word lists 
+		  that are compiled to simple dictionaries. The output annotation type for the annotations that are created
+		  and the input annotation type where the dictionary lookup is executed on, can be specified individually.
+		   <a href="downloads/sandbox/DictionaryAnnotatorUserGuide/DictionaryAnnotatorUserGuide.html">
+		  Click here to access the user documentation</a>.
+		  The Java source of the annotator can be accessed in the SVN repository at 
+		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/DictionaryAnnotator">
+		  http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/DictionaryAnnotator</a>.
+		</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='fs.variables'>
+        <tr><td>
+       
+       
+       
+          <a name="Feature Structure Variables">
+            <h2>Feature Structure Variables
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+		  The Feature Structure variables project allows you to create named feature structure instances.
+		  It further allows you to refer to individual feature structures or annotations across annotators, 
+		  without creating a special index.
+      <a href="downloads/sandbox/FsVariablesUserGuide/FsVariablesUserGuide.html">
+      Click here to access the user documentation</a>.
+		  The Java source of the project can be accessed in the SVN repository at 
+		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/FsVariables">
+		  http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/FsVariables</a>.
+		</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='tagger.annotator'>
+        <tr><td>
+       
+       
+       
+          <a name="Hidden Markov Model Tagger Annotator">
+            <h2>Hidden Markov Model Tagger Annotator
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+		  The Tagger Annotator component implements a Hidden Markov Model (HMM) tagger. The tagger assumes that 
+		  sentences and tokens have already been annotated in the CAS with sentence and token annotations. 
+          It iterates then in turn over sentences and tokens to accumulate a list of words, and then invokes the
+          tagger on this list. The HMM tagger employs the Viterbi algorithm to calculate the most probable tag sequence. 
+          For each Token it updates the posTag field with the part of speech tag. 
+          Model training is happening outside of UIMA, the tagger just receives statistical information from 
+          a model file which is passed to the tagger along with some further parameters through a properties file.
+          <a href="downloads/sandbox/hmmTaggerUsersGuide/hmmTaggerUsersGuide.html">
+      Click here to access the user documentation</a>. 
+          The Java source of the annotator can be accessed in the SVN repository at 
+          <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/Tagger">
+          http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/Tagger</a>.
+		</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='bsf.annotator'>
+        <tr><td>
+       
+       
+       
+          <a name="BSF Annotator">
+            <h2>BSF Annotator
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+		  The Bean Scripting Framework (BSF) Annotator is an Apache UIMA analysis engine that provides 
+		  a link between the UIMA framework and the scripting languages that are supported by
+		  Apache BSF (<a class="external" href="http://jakarta.apache.org/bsf">http://jakarta.apache.org/bsf</a>).
+		  The current implementation comes with examples in Beanshell 
+		  (<a class="external" href="http://www.beanshell.org">http://www.beanshell.org</a>) and Rhino Javascript
+		  (<a class="external" href="http://www.mozilla.org/rhino">http://www.mozilla.org/rhino</a>).
+		  Simple tests have also been conducted successfully with Jython
+		  (<a class="external" href="http://jython.sourceforge.net/Project/index.html">http://jython.sourceforge.net/Project/index.html</a>)
+		  and JRuby (<a class="external" href="http://jruby.codehaus.org">http://jruby.codehaus.org</a>).
+          The annotator takes as parameter the source file containing the script.
+		  The script is supposed to implement the initialize and process functions of the analysis engine.
+		  Using a scripting language can be very handy to do quick prototyping, pre/post processing, CAS cleaning tasks or 
+		  typeystem conversion/adaptation.
+		  The Java source of the annotator can be accessed from the SVN repository at
+		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/BSFAnnotator">
+          http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/BSFAnnotator</a>.
+		</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='tika.annotator'>
+        <tr><td>
+       
+       
+       
+          <a name="Tika Annotator">
+            <h2>Tika Annotator
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+            Apache Tika is a toolkit for detecting and extracting metadata and
+            structured text content from various documents using existing parser
+            libraries. The TikaAnnotator uses
+            <a href="http://lucene.apache.org/tika/" target="_blank">Tika</a>
+            to generate annotations representing
+            the original markup of a document, extract its text and metadata. It
+            consists of three resources:
+        </p>
+                                                <dl>
+	<dt>FileSystemCollectionReader</dt>
+	<dd>similar to the one in UIMA examples but uses
+TIKA to extract the text from binary documents and generates annotations to
+represent the markup</dd>
+
+	<dt>MarkupAnnotator</dt>
+	<dd>takes the original content from a view and generates a
+new view containing the extracted text with markup annotations</dd>
+
+<dt>TikaWrapper</dt>
+<dd>utility class which allows to populate a CAS from a binary
+document; used by the FileSystemCollectionReader</dd>
+</dl>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='lucas.consumer'>
+        <tr><td>
+       
+       
+       
+          <a name="Lucene CAS indexer (Lucas)">
+            <h2>Lucene CAS indexer (Lucas)
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+            The Lucene CAS indexer (Lucas) is a UIMA CAS consumer that stores CAS
+            data in a <a href="http://lucene.apache.org">Lucene</a> index. The consumer
+            transforms annotation objects of a CAS into Lucene token streams
+            which are stored in a Lucene document. Token streams can further be processed
+            by token filters. Lucas comes with a set of its own token filters and
+            integrations for some Lucene token filters. Furthermore, you can
+            deploy your own token filters. The mapping between UIMA annotations and Lucene
+            tokens and token filtering is configured by a xml mapping file.</p>
+                                                <p><a href="downloads/sandbox/LuceneCASConsumerUserGuide/LuceneCASConsumerUserGuide.html">
+      Click here to access the user documentation</a>.
+          The Java source of the consumer can be accessed in the 
+            <a href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/Lucas">
+            SVN repository</a>.
+        </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='simple-server'>
+        <tr><td>
+       
+       
+       
+          <a name="Simple Server (UIMA REST Service)">
+            <h2>Simple Server (UIMA REST Service)
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+			The UIMA Simple Server makes results of UIMA processing
+			available in a simple, XML-based format. The intended use of
+			the the Simple Server is to provide UIMA analysis as a REST
+			service. The Simple Server is implemented as a Java Servlet,
+			and can be deployed into any Servlet container (such as
+			Apache Tomcat or Jetty).</p>
+                                                <p><a href="downloads/sandbox/simpleServerUserGuide/simpleServerUserGuide.html">
+      Click here to access the user documentation</a>.
+			The Java source of the annotator can be accessed from the
+			SVN repository at
+			<a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/SimpleServer">
+				http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/SimpleServer
+			</a>.
+		</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='opencalais.annotator'>
+        <tr><td>
+       
+       
+       
+          <a name="OpenCalais Annotator">
+            <h2>OpenCalais Annotator
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>	  
+		  The OpenCalais Annotator component wraps the 
+		  <a class="external" href="http://www.opencalais.com/Overview">OpenCalais</a>
+		  web service and makes the OpenCalais analysis results available in UIMA. OpenCalais can detect a large variety
+		  of entities, facts and events like for example Persons, Companies, Acquisitions, Mergers, etc.
+		  For details about the OpenCalais analytics and the license to use the service, please refer to the
+		  to the <a class="external" href="http://www.opencalais.com/Overview">OpenCalais</a> website.
+          The Java source of the annotator can be accessed in the SVN repository at 
+          <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/OpenCalaisAnnotator">
+          http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/OpenCalaisAnnotator</a>.
+       </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='concept.mapper.annotator'>
+        <tr><td>
+       
+       
+       
+          <a name="Concept Mapper Annotator">
+            <h2>Concept Mapper Annotator
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+      ConceptMapper is a powerful, highly configurable dictionary UIMA-based annotator.
+      </p>
+                                                <p>
+      Numerous parameters can be used to specify various aspects of the lookup algorithm, input processing and output options. 
+      The dictionary structure is flexible, allowing any number synonyms to be associated with an entry, 
+      and any number of attributes to be associated with entries or synonyms. 
+    </p>
+                                                <p>
+	  Lookup and matching against dictionary entries can be performed against 
+	  contiguous or non-contiguous blocks of text, and token order independent 
+	  lookup is also allowed (for example, the tokens "A" "B" would be considered 
+	  a match against dictionary entry "B" "A").	
+    </p>
+                                                <p>
+	  Additionally, ConceptMapper can be configured to use any tokenizer annotator, 
+      enabling tokenization of the dictionary identically with the input text.
+    </p>
+                                                <p><a href="downloads/sandbox/ConceptMapperAnnotatorUserGuide/ConceptMapperAnnotatorUserGuide.html">
+      Click here to access the user documentation</a>.</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='configurable.feature.extractor.annotator'>
+        <tr><td>
+       
+       
+       
+          <a name="Configurable Feature Extractor Annotator">
+            <h2>Configurable Feature Extractor Annotator
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+      The Configurable Feature Extractor (CFE) Annotator is a multipurpose tool 
+      that enables feature extraction from a UIMA CAS in a very generalized and 
+      application independent way. </p>
+                                                <p>The extraction process is performed according to rules expressed using the 
+      <bold>Feature Extraction Specification Language (FESL)</bold> that are stored 
+      in configuration files.</p>
+                                                <p>Using CFE eliminates the need for creating customized CAS consumers and 
+      writing Java code for every application. Instead, by using FESL rules in XML format, 
+      users can customize the information extraction process to suit their application. 
+      FESL's rule semantics allow the precise identification of the information that 
+      is required to be extracted by specifying precise multi-parameter criteria. 
+    </p>
+                                                <p><a href="downloads/sandbox/CFE_UG/CFE_UG.html">
+      Click here to access the user documentation</a>.</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                  </td>
+                </tr>
+                <!-- FOOTER -->
+                <tr><td colspan="2">
+                  <hr noshade="" size="1"/>
+                </td></tr>
+                <tr><td colspan="2"> 
+                  <table class="pageFooter">
+                    <tr>
+                      <td><a href="index.html">Home</a></td>
+                      <td><a href="privacy-policy.html">Privacy Policy</a></td>
+                      <td>
+                Copyright &#169; 2006-2009, The Apache Software Foundation
+                      </td>
+                      <td><a href="mailto:uima-dev@incubator.apache.org">Contact us</a></td>
+                    </tr>
+                  </table>                    
+                </td></tr>
+            </table>
+        </body>
+    </html>
+

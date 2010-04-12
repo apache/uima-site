@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--
+		Licensed to the Apache Software Foundation (ASF) under one or more
+		contributor license agreements. See the NOTICE file distributed with
+		this work for additional information regarding copyright ownership.
+		The ASF licenses this file to you under the Apache License, Version
+		2.0 (the "License"); you may not use this file except in compliance
+		with the License. You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License.
+	-->
+
+<document>
+<!-- öäüÖÄÜ -->
+	<properties>
+		<title>IKS "Semantic Search - Fact and Fiction" Workshop in Rome/Italy
+		</title>
+		<author email="uima-dev@apache.org">
+			UIMA dev team</author>
+	</properties>
+
+	<body>
+
+		<section
+			name="IKS Semantic Search - Fact and Fiction Workshop in Rome/Italy">
+
+			<p>
+				IKS European project [
+				<a href="#1">1</a>
+				] had its second IKS Workshop. They have
+				been
+				meeting in
+				Rome on
+				November 12th and 13th, 2009. The purpose for
+				this
+				workshop
+				was to
+				define "semantic search", and to get a handle on
+				what
+				people want from
+				it.
+			</p>
+
+			<p>
+				During the IKS workshop there has been a speech/demo about UIMA and
+				Semantic Search.
+				<br />
+				We got good feedback about UIMA in general from the
+				people at the
+				workshop; Bertrand Delacretaz, who is part of IKS as
+				Day Software
+				employee and also member of ASF, had a good feeling
+				about UIMA for
+				semantic search to include inside IKS stack [
+				<a href="#2">2</a>
+				].
+				<br />
+				Moreover the Nuxeo open source ECM [
+				<a href="#3">3</a>
+				]
+				is developing its semantic search module
+				on the top of UIMA (see
+				Oliver Grisel's wrap up on their website [
+				<a href="#4">4</a>
+				]).
+				<br />
+				Slides
+				about the UIMA and Semantic Search talk are available at [
+				<a href="#5">5</a>
+				].
+				<br />
+				Demos were
+				about a real estate market analysis tool which
+				uses
+				UIMA
+				for
+				metadata extraction and a sample of integration
+				between UIMA and
+				AlchemyAPI.
+				<br />
+				See some photos here [
+				<a href="#6">6</a>
+				] and the complete list of talks here
+				<a href="#7">[7]</a>
+
+			</p>
+			<p>
+				[1] :
+				<a name="1" href="http://www.iks-project.eu" target="_blank">http://www.iks-project.eu
+				</a>
+				<br />
+				[2] :
+				<a name="2"
+					href="http://dev.day.com/microsling/content/blogs/main/iks-pragmatic-view-update.html"
+					target="_blank">
+					http://dev.day.com/microsling/content/blogs/main/iks-pragmatic-view-update.html
+				</a>
+				<br />
+				[3] :
+				<a name="3" href="http://www.nuxeo.com/en" target="_blank">http://www.nuxeo.com/en
+				</a>
+				<br />
+				[4] :
+				<a name="4"
+					href="http://blogs.nuxeo.com/dev/2009/11/iks-semantic-search-workshop-wrapup.html"
+					target="_blank">http://blogs.nuxeo.com/dev/2009/11/iks-semantic-search-workshop-wrapup.html
+				</a>
+				<br />
+				[5] :
+				<a name="5"
+					href="http://www.slideshare.net/teofili/apache-uima-and-semantic-search"
+					target="_blank">http://www.slideshare.net/teofili/apache-uima-and-semantic-search
+				</a>
+				<br />
+				[6] :
+				<a name="6"
+					href="http://homepages.uni-paderborn.de/fabianc/iks-gam-rome09/"
+					target="_blank">http://homepages.uni-paderborn.de/fabianc/iks-gam-rome09/
+				</a>
+				<br />
+				[7] :
+				<a name="7"
+					href="http://www.iks-project.eu/semantic-search-challenge-workshop-report"
+					target="_blank">http://www.iks-project.eu/semantic-search-challenge-workshop-report
+				</a>
+			</p>
+		</section>
+
+	</body>
+</document>
+

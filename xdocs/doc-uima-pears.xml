@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+	Licensed to the Apache Software Foundation (ASF) under one
+	or more contributor license agreements.  See the NOTICE file
+	distributed with this work for additional information
+	regarding copyright ownership.  The ASF licenses this file
+	to you under the Apache License, Version 2.0 (the
+	"License"); you may not use this file except in compliance
+	with the License.  You may obtain a copy of the License at
+	
+	http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing,
+	software distributed under the License is distributed on an
+	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	KIND, either express or implied.  See the License for the
+	specific language governing permissions and limitations
+	under the License.
+-->
+
+<document>
+
+	<properties>
+		<title>Getting Started: Working With PEARs</title>
+		<author email="uima-dev@incubator.apache.org">
+			UIMA Team
+		</author>
+	</properties>
+
+	<body>
+		<section
+			name="Getting Started: Working With PEARs">
+			<p>
+				The "Getting Started: Working With PEARs"
+				guide should help you to understand what a PEAR package is, 
+				how to generate them and how to use them within UIMA applications. 
+			</p>
+
+			<subsection name="What are UIMA PEAR files">
+				<p>
+				   A PEAR (Processing Engine ARchive) file is the UIMA standard packaging format for UIMA components like
+				   analysis engines (annotators) or CAS consumers. The PEAR package can be used to distribute 
+				   and reuse components within UIMA applications. The UIMA framework also provides
+				   APIs and methods to automatically deploy, verify and run PEAR packages. When having a valid 
+				   packaged PEAR, the application doesn't need any additional information or any manually deployed settings 
+				   like classpath settings to run the packaged component.
+				</p>
+				<p>
+				   To guarantee these characteristics, each PEAR package has the same internal 
+				   structure as shown in the picture below.
+				   <table cellpadding="5">
+				   	<tr>
+				   		<td>
+				   		  <img src="./images/getting-started/pear-structure.jpg" alt="PEAR file structure" border="0" />
+				   		</td>
+				   		<td valign="top">
+				   		  <ul>
+				   		  	<li>
+				   		  	  <p>
+				   		  	    <b>metadata</b> - The metadata folder contains the PEAR package installation descriptor 
+				   		  	    (<code>install.xml</code>) that hosts all the necessary information about the PEAR package.
+				   		  	  </p>
+				   		  	</li>
+				   		  	<li>
+				   		  	  <p>
+				   		  	    <b>desc</b> - The desc folder contains the component descriptor files e.g. analysis engine 
+				   		  	    descriptor files or aggregate analysis engine descriptor files.
+				   		  	  </p>
+				   		  	</li>
+				   		  	<li>
+				   		  	  <p>
+				   		  	    <b>src</b> - The src folder contains the component source (if it is packaged).
+				   		  	  </p>
+				   		  	</li>
+				   		  	<li>
+				   		  	  <p>
+				   		  	    <b>bin</b> - The bin folder contains the compiled classes and script files.
+				   		  	  </p>
+				   		  	</li>
+				   		  	<li>
+				   		  	  <p>
+				   		  	    <b>lib</b> - The lib folder contains dependent jar files and libraries.
+				   		  	  </p>
+				   		  	</li>
+				   		  	<li>
+				   		  	  <p>
+				   		  	    <b>doc</b> - The doc folder contains the component documentation materials.
+				   		  	  </p>
+				   		  	</li>
+				   		  	<li>
+				   		  	  <p>
+				   		  	    <b>data</b> - The data folder contains some test or example data files.
+				   		  	  </p>
+				   		  	</li>
+				   		  	<li>
+				   		  	  <p>
+				   		  	    <b>conf</b> - The conf folder contains some component configuration files.
+				   		  	  </p>
+				   		  	</li>
+				   		  	<li>
+				   		  	  <p>
+				   		  	    <b>resources</b> - The resources folder contains the component resources and dependencies.
+				   		  	  </p>
+				   		  	</li>
+				   		  </ul>
+				   		</td>
+				   	</tr>
+				   </table>
+				</p>
+				<p>
+				  The most important file in a PEAR package is the installation descriptor (<code>metadata/install.xml</code>) 
+				  that contains all the necessary information about the PEAR package. It it used to install and run the PEAR 
+				  package and defines all dependencies and settings. These are for example the ID/name of the PEAR package, 
+				  Java classpath settings, UIMA datapath settings or the descriptor file that should be used to 
+				  run the PEAR package component. For more details about the installation descriptor,
+				  please refer to the UIMA documentation at 
+				  <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear.installation_descriptor">
+				  Documented template for the installation descriptor</a>.
+				</p>					  
+			</subsection>
+			<subsection name="Generating PEAR files">
+				<p>
+				  In this section we will discuss how to generate a PEAR package. The UIMA framework distribution provides 
+				  different possibilities to create PEAR packages which are discussed below.  
+				</p>
+				<p>
+				  Independent of how PEAR packages are generated, PEAR macros or PEAR variables should be recognized and used. 
+				  The PEAR architecture defines various macros, but the most  
+				  important one is the <code>$main_root</code> macro. When using this macro in the installation descriptor 
+				  or within a UIMA descriptor, it will be substituted with the real PEAR package installation 
+				  path to the main component root directory after the PEAR package is installed on the target system. 
+				  For example, this macro can be used to specify the classpath settings for a PEAR component
+				  as shown in some of the examples below. This guarantees that in each scenario the classpath settings 
+				  are interpreted correctly since an absolute path to the jar file is used. For more details about PEAR macros, 
+				  please refer to the UIMA documentation at  
+				  <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear.installation_descriptor">
+				  Documented template for the installation descriptor</a>.  
+ 				</p>
+				
+				<p>
+				  <ul>
+				    <li>
+				        <h4>PearPackaging Eclipse plugin</h4>
+				        <p>
+						  The PearPackaging Eclipse plugin is automatically installed in your Eclipse environment if you have
+						  installed the <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/overview_and_setup/overview_and_setup.html#ugr.ovv.eclipse_setup.install_uima_eclipse_plugins">
+						  UIMA Eclipse plugins</a>. The PearPackaging plugin allows you to package a PEAR based on the content of 
+						  an eclipse project that has the UIMA nature. This plugin can for example be used in an analysis engine 
+						  development environment. I will not give more details here since this 
+						  is already explained in the <a href="http://incubator.apache.org/uima/doc-uima-annotator.html#Packaging the annotator">
+						  Getting Started: Writing My First UIMA Annotator</a> guide.
+						</p>		        
+				    </li>
+				    <li>
+				        <h4>PearPackaging Ant task</h4>
+				       	<p>
+				  		  The PEAR packaging Ant task can be used in an Ant build environment to create PEAR packages for UIMA
+				  		  components. The PEAR package content as well as the PEAR package settings can be specified within the build. 
+				  		  An example how this can look like is shown below:
+						</p>
+						<p>
+				  			<table cellpadding="10"><tr><td bgcolor="lightgrey">
+				   			<pre>&lt;!-- PEAR packaging Ant task --&gt;
+&lt;packagePear
+   componentID="SampleAnnotator"
+   mainComponentDesc="desc/mainComponentDesc.xml"
+   classpath="$main_root/pearClasspahtEntry;$main_root/anotherPearClasspahtEntry"
+   datapath="$main_root/resources"
+   mainComponentDir="/home/user/workspace/SampeAnntotator"
+   targetDir="/home/user/pearArchive"&gt;
+
+   &lt;envVar name="ENV_VAR_NO1" value="value1"/&gt;
+   &lt;envVar name="ENV_VAR_NO2" value="value2"/&gt;
+
+&lt;/packagePear&gt;</pre>
+				   			</td></tr></table>
+				 		</p>
+						<p>
+						  For additional information on how to integrate the PEAR packaging Ant task, please refer to the 
+						  <a href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/PearPackagingAntTask/doc/pdf/PearPackagingAntTaskUserGuide.pdf">
+						  PEAR packaging Ant task documentation</a>.
+						</p>
+				        
+				    </li>
+				    <li>
+					  <h4>PearPackaging Maven plugin</h4>
+					  <p>
+						  The PEAR packaging Maven plugin can be used in a Maven build environment to create PEAR
+						  packages for UIMA components. The PEAR package content as well as the PEAR package settings
+						  can be specified in the POM (Project Object Model). An example how this can look like is shown below:
+					</p>
+					<p>	  
+				  		<table cellpadding="10"><tr><td bgcolor="lightgrey">
+				   		<pre>&lt;!-- PEAR packaging Maven plugin --&gt;
+&lt;build&gt;
+ &lt;plugins&gt;
+  ...
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
+    &lt;artifactId&gt;PearPackagingMavenPlugin&lt;/artifactId&gt;
+    &lt;extensions&gt;true&lt;/extensions&gt;
+    &lt;executions&gt;
+      &lt;execution&gt;
+        &lt;phase&gt;package&lt;/phase&gt;
+        &lt;configuration&gt;
+           &lt;classpath&gt;$main_root/lib/sample.jar&lt;/classpath&gt;
+           &lt;mainComponentDesc&gt;desc/${artifactId}.xml&lt;/mainComponentDesc&gt;
+           &lt;componentId&gt;${artifactId}&lt;/componentId&gt;
+           &lt;datapath&gt;$main_root/resources&lt;/datapath&gt;
+        &lt;/configuration&gt;
+        &lt;goals&gt;
+          &lt;goal&gt;package&lt;/goal&gt;
+        &lt;/goals&gt;
+      &lt;/execution&gt;
+    &lt;/executions&gt;
+  &lt;/plugin&gt;
+  ...
+ &lt;/plugins&gt;
+&lt;/build&gt;</pre>
+				   		</td></tr></table>
+						</p>
+						<p>
+						   For additional information how to integrate the PEAR packaging Maven plugin, please refer to the 
+						   <a href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/PearPackagingMavenPlugin/doc/pdf/PearPackagingMavenPluginUserGuide.pdf">
+						   PEAR packaging Maven plugin documentation</a>.
+						</p>				        
+				    </li>
+				    <li>
+				        <h4>PearPackaging command line</h4>
+				        <p>	  
+						  The PearPackaging command line can be used if scripting should be used to create PEAR packages.
+						  Details about how to use the PearPackaging command line is available in the UIMA documentation at
+						  <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/tools/tools.html#ugr.tools.pear.packager.using_command_line">
+						  Using the PEAR command line packager</a>. 
+						</p>  
+				    </li>
+				    <li>
+				        <h4>PEAR packaging API</h4>
+						<p>
+						  If there is a need to create PEAR packages out of Java source code, the PEAR packaging
+						  API can be used. With that API it is either possible to create complete PEAR packages or to create the PEAR
+						  packages step by step - first create the installation descriptor and later package the PEAR. Detailed
+						  information about the PEAR packaging API is available in the UIMA documentation at
+						  <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear.packaging_into_1_file">
+						   Packaging the PEAR structure into one file</a> and in the 
+						   <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/api/index.html?org/apache/uima/pear/tools/PackageCreator.html">
+						   PEAR packaging API JavaDocs</a>.
+						</p>				        
+				    </li>
+				  </ul>
+				</p>				
+			</subsection>
+			<subsection name="Installing PEAR files">
+				<p>
+				   Before a component that is packaged as PEAR can be used in a UIMA application, the PEAR package 
+				   must be installed on the target system. During the installation, the package content is extracted 
+				   and the internal PEAR settings (PEAR macros) are updated with the actual install information. 
+				   This also means that an installed PEAR package cannot be moved to 
+				   another directory without internal changes. By default the PEAR packages are not installed directly 
+				   to the specified installation directory. For each PEAR a subdirectory with the name of the PEAR's ID 
+				   is created where the PEAR package is installed. If the PEAR installation directory already exists, 
+				   the old content is automatically deleted before the new content is installed.
+				</p>
+				<p>
+				   During installation, a <code>setenv.txt</code> file containing the PEAR settings is generated in the 
+				   <code>metadata</code> subdirectory of the install directory.
+				   Go there too check the most important PEAR settings (classpath, datapath, ...), or to read in
+				   the settings programmatically. 
+				</p>
+				<p>
+				   After the PEAR file is installed, the installed package is automatically verified using a separate
+				   verification step. The verification checks if the installed PEAR package is runnable inside UIMA.
+				</p>
+				<p>
+				   Another imported point during the PEAR installation is the generation of the PEAR package descriptor. The 
+				   PEAR package descriptor is a special UIMA descriptor that can be used to run installed PEAR packages in every
+				   UIMA application out of the box. For details about the PEAR descriptor, please refer to the 
+				   UIMA documentation at
+				   <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear.specifier">
+				   PEAR package descriptor</a>.
+				</p>
+				<p>
+				   To install a PEAR package you have two options:
+				</p>
+				<p>
+				  <ul>
+				  	<li>
+				  	  <h4>PEAR Installer UI</h4>
+				  	  <p>
+				  	     The PEAR Installer UI is a standalone Swing application to install PEAR packages. 
+				  	     After the PEAR package and the install directory is selected, the installation is 
+				  	     performed and the installation and verification results are displayed. Out of the tool
+				  	     it is directly possible to test the installed PEAR package using the Cas Visual Debugger (CVD).
+				  	     For more details about the PEAR Installer, please refer to the UIMA documentation at
+				  	     <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/tools/tools.html#ugr.tools.pear.installer">
+				  	     PEAR Installer User's Guide</a>. 
+				  	  </p>
+				  	  <p>
+				  	    <img src="./images/getting-started/pear-installer.jpg" alt="PEAR installer" border="0" />
+				  	  </p>
+				  	</li>
+				  	<li>
+				  	  <h4>PEAR API</h4>
+				  	  <p>
+				  	     The PEAR API should be used if you want to integrate the PEAR installation 
+				  	     with a custom application. With the PEAR API it is possible to install PEAR packages 
+				  	     to a given installation directory and to optionally verify the installed packages.
+				  	     Details about the PEAR API are available in the UIMA documentation at 
+				  		 <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear.installing_pear_using_API">
+				  		 Installing a PEAR file using the PEAR APIs</a>.
+				  	  </p>
+				  	</li>
+				  </ul>
+				</p>
+			</subsection>
+			<subsection name="Running installed PEAR files">
+			  <p>
+			    The UIMA framework has an integrated PEAR runtime to run installed PEAR packages out of the box.
+			    For this, the PEAR runtime makes use of the PEAR's installation descriptor settings. 
+			    To use the PEAR runtime, the generated 
+			    <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear.specifier">
+				PEAR package descriptor</a> must be used to integrate or run PEAR components. The PEAR package descriptor	
+				is generated in the main component root directory of the installed PEAR package during the PEAR installation.
+			    As PEAR package descriptor name of <code>&lt;componentID&gt;_pear.xml</code> is used. 
+			  </p>
+			  <p>
+			    The PEAR package descriptor can be used like an analysis engine descriptor. It can be added 
+			    at any place where an analysis engine descriptor or cas consumer descriptor can be used. So for example
+			    to run an installed PEAR package in the CAS Visual Debugger or in the Document Analyzer just use 
+			    the PEAR package descriptor as analysis engine - you don't have to take care about classpath 
+			    and datapath settings.
+			  </p>
+			  <p>
+			     <table align="center"><tr><td>
+   	   		       <img src="./images/getting-started/cvd-load-pear.jpg" alt="CVD load PEAR" border="0" />
+   	   		     </td></tr></table>
+			  </p>
+			  <p>
+			    The PEAR package descriptor can also be added to an aggregate analysis engine descriptor as one of the 
+			    delegates. Therefore, a PEAR can easily be integrated into an analysis chain. But note, the integrated PEAR
+			    is treated as a black box and the aggregate analysis engine cannot override any PEAR specific parameters or 
+			    settings since the PEAR is executed in its own environment with a separate classloader. This also means that resources
+			    cannot be shared easily between PEARs. An advantage of this concept is that for example the PEAR specific 
+			    JCAS classes do not affect the application in case of minor feature differences. 
+			  </p>
+			  <p>	  
+			  	<table cellpadding="10" align="center"><tr><td bgcolor="lightgrey">
+					<pre>&lt;analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier"&gt;
+    &lt;frameworkImplementation&gt;org.apache.uima.java&lt;/frameworkImplementation&gt;
+    &lt;primitive&gt;false&lt;/primitive&gt;
+    &lt;delegateAnalysisEngineSpecifiers&gt;
+      &lt;delegateAnalysisEngine key="AE"&gt;
+          &lt;import location="./AnalysisEngine/AnalysisEngine1.xml"/&gt;
+      &lt;/delegateAnalysisEngine&gt;
+      &lt;delegateAnalysisEngine key="PEAR"&gt;
+            &lt;import location="./RegExAnnotator/RegExAnnotator_pear.xml"/&gt;
+        &lt;/delegateAnalysisEngine&gt;
+    &lt;/delegateAnalysisEngineSpecifiers&gt;
+    &lt;analysisEngineMetaData&gt;
+        &lt;name&gt;PEAR aggregate&lt;/name&gt;
+        &lt;description&gt;combines tow PEARs&lt;/description&gt;
+        &lt;version&gt;1.0&lt;/version&gt;
+        &lt;configurationParameters/&gt;
+        &lt;configurationParameterSettings/&gt;
+        &lt;flowConstraints&gt;
+            &lt;fixedFlow&gt;
+              &lt;node&gt;AE&lt;/node&gt;
+              &lt;node&gt;PEAR&lt;/node&gt;
+            &lt;/fixedFlow&gt;
+        &lt;/flowConstraints&gt;
+...</pre>
+			    </td></tr></table>
+			  </p>
+			  <p>
+			    There's a complete example of how to install a PEAR package
+                and how to run it using the UIMA framework API
+			    <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear.installing_pear_using_API">
+			    in the UIMA documentation</a> .
+			  </p>	
+			</subsection>
+		</section>
+	</body>
+
+</document>
+

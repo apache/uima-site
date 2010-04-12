@@ -1,0 +1,3 @@
+org.apache.uima.aae.client
+org.apache.uima.aae.error
+org.apache.uima.aae.jmx.monitor

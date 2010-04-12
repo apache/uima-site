@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+  
+  <properties>
+    <title>Apache UIMA Project Guidelines</title>
+    <author email="uima-dev@incubator.apache.org"> UIMA Documentation
+      Team</author>
+  </properties>
+  
+  <body>
+    
+    <section name="Apache UIMA Project Guidelines">
+      
+      <h3 align="center"><font color="#FF0000"><b>Note: This is a working draft document.</b>
+        </font></h3>
+      <p align="center">Discussion of this document is occuring on the uima-dev mailing list.</p><br />
+      
+      <p>This document defines the guidelines of the Apache UIMA Project. It includes
+        definitions of the various categories of membership, who is able to vote, how
+        conflicts are resolved by voting, and the procedures to follow for proposing and
+        making changes to the codebase of the Project.</p>
+      
+      <p>This project's purpose is to develop Apache-licensed implementations of the UIMA
+      standard being developed by the UIMA Technical Committee at 
+      <a href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=uima">
+        http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=uima
+      </a>.  As such, we will not incorporate changes into the project which are not compliant with 
+      the standard, and will evolve implementations here to be compliant with the evolving changes
+      in the standard.</p>
+      
+      <ul>
+        <li>
+          <a href="./roles.html">Roles and Responsibilities</a>
+          <br/> Defines the recognized roles in the project.
+        </li>
+        
+        <li>
+          <a href="./communication.html">Communication</a>
+          <br/> Defines how users and developers communicate.
+        </li>
+        
+        <li>
+          <a href="./decisions.html">Decision Making</a>
+          <br/> Defines how action items are proposed and voted on.
+        </li>
+        
+        <li>
+          <a href="svn.html">Source Repositories</a>
+          <br/> Defines how the Project's source code is organized and developed.
+        </li>
+        
+        <!--
+        <li>
+        <a href="./management.html">Project Management</a>
+        <br/>
+        Defines the roles and responsibilities of the
+        Podling Project Management Committee (PPMC).
+        </li>
+        -->
+        <!--
+        <li>
+        <a href="./newproject.html">New Subproject Proposals</a>
+        <br/>
+        Defines the methodology for proposing new top level
+        UIMA Subprojects.
+        </li> -->
+      </ul>
+      
+      <p> This is a living document. Changes can be made by the Podling Project Management
+        Committee. Suggestions for changes should be discussed on the
+        uima-dev@incubator.apache.org
+        <a href="mail-lists.html">mailing list</a>
+      </p>
+      
+    </section>
+    
+  </body>
+</document>

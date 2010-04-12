@@ -1,0 +1,378 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+    <!-- ====================================================================== -->
+    <!-- GENERATED FILE, DO NOT EDIT, EDIT THE XML FILE IN xdocs INSTEAD! -->
+    <!-- ====================================================================== -->
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+            <style type="text/css">@import "stylesheets/base.css";</style>
+                                          <meta name="author" value="
+   UIMA Documentation Team
+  ">
+  <meta name="email" value="uima-dev@incubator.apache.org">
+                        
+            
+                        
+                        <title>Apache UIMA - Getting Started: UIMA Asynchronous Scaleout</title>
+        </head>
+
+        <body>
+          <div class="topLogos">        
+            <table border="0" width="100%" cellspacing="0">
+                <!-- TOP IMAGE -->
+                <tr>
+                    <td align='LEFT'>
+                                <a href="http://incubator.apache.org/">
+        <img src="./images/apache-incubator-logo.png" alt="Apache UIMA" border="0"/>
+      </a>
+                          </td>
+                    <td align='CENTER'>
+                          <div class="pageBanner">Getting Started: UIMA Asynchronous Scaleout</div>
+                    </td>
+                    <td align='RIGHT'>
+                      <a href="index.html">
+                                <img style="border: 1px solid black;" src="./images/UIMA_banner2.png" alt="UIMA project logo" border="0"/>
+                          </a>
+                    </td>
+                </tr>
+            </table>
+            <hr noshade="" size="1"/>
+            </div>
+            <table border="0" width="100%" cellspacing="4">
+              <tr>
+                <td align='RIGHT' colspan="2">
+                  <form method="get" action="http://www.google.com/search">
+                    Search the site
+                    <input type="text"   name="q" size="25" maxlength="255" value="" />
+                    <input type="hidden" name="sitesearch" value="http://incubator.apache.org/uima" />
+                    <input name="Search" value="Search Site" type="submit"/>
+                  </form>
+                </td>
+              </tr>
+              <tr> <!-- LEFT SIDE NAVIGATION -->
+                <td width="20%" valign="top">
+
+
+
+
+
+
+                   <!-- regular menu -->
+                      <div class="navBar">
+                  <br/>
+            <div class="navBarItem">      <div class="navPartHeading">General</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./index.html">Home</a>
+                </div>
+                          <div class="navBarItem">      <a href="./downloads.cgi">Downloads</a>
+                </div>
+                          <div class="navBarItem">      <a href="./documentation.html">Documentation</a>
+                </div>
+                          <div class="navBarItem">      <a href="./news.html">News</a>
+                </div>
+                    <br style="line-height: .5em"/>
+                          <div class="navBarItem">      <a href="./mail-lists.html">Mailing Lists</a>
+                </div>
+                          <div class="navBarItem">      <a href="./mail-lists.html#Apache_UIMA_Forums">Forums</a>
+                    <a href="http://news.gmane.org/gmane.comp.apache.uima.general" target="_blank"><em> Users</em> <img src="images/offsitelink.png" /></a>
+                  <a href="http://news.gmane.org/gmane.comp.apache.uima.devel" target="_blank"><em>Dev</em> <img src="images/offsitelink.png" /></a>
+              </div>
+                    <br style="line-height: .5em"/>
+                          <div class="navBarItem">      <a href="http://issues.apache.org/jira/browse/uima" target="_blank">Issue tracker <img src="images/offsitelink.png"</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://cwiki.apache.org/UIMA/" target="_blank">Wiki <img src="images/offsitelink.png"</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Components & Tools</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./annotators.html">Annotators</a>
+                </div>
+                          <div class="navBarItem">      <a href="./toolsServers.html">Tools & Servers</a>
+                </div>
+                          <div class="navBarItem">      <a href="./sandbox.html">Sandbox</a>
+                </div>
+                          <div class="navBarItem">      <a href="./external-resources.html">External Resources</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Community</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./get-involved.html">Get Involved</a>
+                </div>
+                          <div class="navBarItem">      <a href="./contribution-policy.html">Contribution Policies</a>
+                </div>
+                          <div class="navBarItem">      <a href="./faq.html">FAQ</a>
+                </div>
+                          <div class="navBarItem">      <a href="./project-guidelines.html">Project Guidelines</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Development</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./svn.html">Source Code</a>
+                </div>
+                          <div class="navBarItem">      <a href="./distribution.html">Creating a Distribution</a>
+                </div>
+                          <div class="navBarItem">      <a href="./release.html">Doing a UIMA release</a>
+                </div>
+                          <div class="navBarItem">      <a href="./codeConventions.html">Code Conventions</a>
+                </div>
+                          <div class="navBarItem">      <a href="./uima-specification.html">UIMA Specification (OASIS)</a>
+                </div>
+                          <div class="navBarItem">      <a href="./team-list.html">Project Team</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Events and Conferences</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./iks09.html">IKS 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gscl09.html">GSCL 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./lsm09.html">LSM 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./lrec08.html">LREC 2008</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gldv07.html">GLDV 2007</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">ASF</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./license.html">License</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://apache.org/foundataion/thanks.html" target="_blank">ASF Sponsors <img src="images/offsitelink.png"</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://www.apache.org/foundation/sponsorship.html" target="_blank">ASF Sponsorship <img src="images/offsitelink.png"</a>
+                </div>
+            </div>
+        </div>
+                </td>
+                <td width="80%" align="left" valign="top">
+                                                          <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Getting Started: UIMA Asynchronous Scaleout"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Getting Started: UIMA Asynchronous Scaleout</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>
+     The "Getting Started: UIMA Asynchronous Scaleout " guide should help you to understand UIMA AS: how it relates to the core UIMA framework, what are the main concepts of UIMA AS, and an example application scenario.
+   </p>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="UIMA AS Relationship to UIMA">
+            <h2>UIMA AS Relationship to UIMA
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+    UIMA AS is the next generation scalability replacement for the Collection Processing Manager (CPM). UIMA AS provides more flexible and powerful scaleout capability, and extends support to the UIMA components not supported by the CPM, the flow controller and CAS multiplier. UIMA components can be run within UIMA AS with no code or component descriptor changes. 
+   </p>
+                                                <p>
+    UIMA AS introduces a new XML descriptor, the Deployment Descriptor. Unlike the CPM descriptor which specifies component aggregation, error handling and scalability, the UIMA AS Deployment Descriptor only specifies error handling and scalability options; component aggregation is done using the standard aggregate descriptor. The UIMA Component Descriptor Editor (CDE) has been enhanced to support the UIMA AS Deployment Descriptor.
+   </p>
+                                                <p>
+    As of release 2.3.0, the UIMA AS binary package is an add-on to the base UIMA download.  So - to install this, you need to 
+    first get the base UIMA package, and then get the UIMA AS package, and unzip it over the base (that is,
+    into the same directory).  The UIMA AS package includes the Apache ActiveMQ implementation of JMS 
+    which is used to provide connectivity between UIMA AS clients and services.
+   </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="UIMA AS Client - Service Architecture">
+            <h2>UIMA AS Client - Service Architecture
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+    Like UIMA Vinci services, UIMA AS provides a service wrapper that creates a shared UIMA service from a UIMA analysis engine. UIMA services enable UIMA clients to utilize UIMA analysis engines running in separate processes on the same or different machines. There are a number of advantages with UIMA AS services:
+    <ol>
+     <li>
+      UIMA AS services are asynchronous. A client can send multiple requests before receiving any responses. This can increase processing throughput over Vinci services which, being synchronous, prevent the client or service from doing work during request/reply transmission.
+     </li>
+     <li>
+      Load balancing for UIMA AS services is excellent, because available services pull requests from a shared queue. Service instances can be dynamically added or removed at runtime
+     </li>
+     <li>
+      Because of Apache ActiveMQ, connectivity to UIMA AS services is much more flexible than Vinci. A maximum of one port needs to be opened to expose one or more services thru a firewall. The HTTP protocol can be used for robust wide-area network connectivity.
+     </li>
+     <li>
+      The UIMA AS design is based on JMS, a widely adopted standard. One goal for UIMA AS is that it can run with different JMS implementations, so that it can be integrated into popular middleware platforms.
+     </li>
+     <li>
+      UIMA AS exposes numerous performance parameters via JMX, extending in a consistent manner the JMX parameters already exposed by core UIMA. Custom UIMA AS monitoring tools based on these JMX parameters are being developed to help identify bottlenecks in complex deployments.
+     </li>
+    </ol>
+   </p>
+                                                <p>
+    The shared queue in front of each UIMA AS service is implemented using an Apache ActiveMQ broker. A separate reply queue is created for each client, and every request contains the address of the client's unique reply queue.
+   </p>
+                                                <p>
+    UIMA AS services are compatible with core UIMA applications such as the Document Analyzer. However, the base UIMA interface to services is synchronous and non-thread safe. There is a new UIMA AS application API that exposes synchronous and asynchronous thread-safe interfaces to UIMA AS services. 
+   </p>
+                                                <p>
+     <table width="100%"><tr><td align="center" valign="middle">
+       <img src="./images/getting-started/uima-as-arch.png" alt="UIMA AS architecture" border="0" />
+       <br>Figure 1 - UIMA AS Client-Server Architecture</br></td>
+      </tr></table>
+   </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="UIMA Aggregates vs. UIMA AS Aggregates">
+            <h2>UIMA Aggregates vs. UIMA AS Aggregates
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+    A UIMA aggregate analysis engine is implemented as a synchronous, single-threaded object. That is, when the aggregate AE's process method is called, only one delegate can be working on that CAS at a time. 
+   </p>
+                                                <p>
+    For a UIMA AS aggregate, each delegate has its own input queue, and the aggregate controller sends requests to the delegates via their queues. By default a delegate is assumed to be collocated with the aggregate controller, but the Deployment Descriptor allows a delegate to be "remote", i.e. mapped to the input queue for another UIMA AS service. For collocated delegates, the Deployment Descriptor can specify how many instances of the delegate should be instantiated; each instance will have a listener thread to receive requests and execute user code.
+   </p>
+                                                <p>
+    When calling "remote" delegates, the CAS is serialized into CasXmi format for transfer. Colocated delegates share the in-process CAS object and have no serialization overhead. Remote delegates with no dependency on each others results can be called in parallel on the same CAS, providing opportunities for reducing latency in real-time applications.
+   </p>
+                                                <p>
+    UIMA AS aggregates optionally provide extensive error handling for service calls, including retry, ignore, delegate disable, service termination, and more. When combined with the UIMA flow controller, users can implement complex application flow/error handling logic.
+   </p>
+                                                <p>
+     <table width="100%"><tr><td align="center" valign="middle">
+       <img src="./images/getting-started/async-aggregate.png" alt="UIMA AS asynchronous aggregate" border="0" />
+       <br>Figure 2 - UIMA AS Aggregate</br></td>
+     </tr></table>
+   </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="UIMA AS - Example Application Scenarios">
+            <h2>UIMA AS - Example Application Scenarios
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+    One problem that has been raised on the UIMA mailing lists is how to "push" documents into a UIMA processing pipeline. The simple answer with UIMA AS is to implement the processing pipeline as a UIMA AS service, and push requests from a custom application. Multiple instances of the processing pipeline service could be instantiated to increase throughput.
+   </p>
+                                                <p>
+    Included with UIMA AS is a sample application, RunRemoteAsyncAE. This application demonstrates most of the features of the new UIMA asynchronous API, including the ability to use a UIMA Collection Reader to push documents to a specified service.
+   </p>
+                                                <p>
+     <table width="100%"><tr><td align="center" valign="middle">
+       <img src="./images/getting-started/runremoteasyncae.png" alt="RunRemoteAsyncAE application" border="0" />
+       <br>Figure 3 - Using RunRemoteAsyncAE to push documents into a UIMA AS service</br></td>
+     </tr></table>
+   </p>
+                                                <br />
+                                                <br />
+                                                <p>
+    A scaleout that corresponds to that provided by the Collection Processing Manager (CPM) is to have a single instance of collection reader and Cas Consumer(s) and scale out the other analysis components. Scaleout here is limited by the collection reader / Cas consumer bottleneck and the deserialization work required on the central driver. Scaleout efficiency is determined by the ratio of the processing done by the scaled out analysis engines to the serialization overhead in the services.
+   </p>
+                                                <p>
+     <table width="100%"><tr><td align="center" valign="middle">
+       <img src="./images/getting-started/singlecrscaleout.png" alt="Single Collection Reader Scaleout" border="0" />
+       <br>Figure 4 - Scaleout using a single set of Collection Reader and Cas Consumers</br></td>
+     </tr></table>
+   </p>
+                                                <br />
+                                                <br />
+                                                <p>
+    For very large scalability using UIMA AS, multiple copies of the collection reader and Cas consumers are needed. A central driver would distribute [references to] subsets of the input collection to the scaled out processing pipelines, where each pipeline contains a collection reader and the Cas consumers.
+   </p>
+                                                <p>
+    Scalout limitations in this scenario could be in several places, examples being a common source of input documents or a shared writable resource used by Cas consumers.
+   </p>
+                                                <p>
+     <table width="100%"><tr><td align="center" valign="middle">
+       <img src="./images/getting-started/multiplecrscaleout.png" alt="Very large Scaleout" border="0" />
+       <br>Figure 5 - Scaleout using multiple Collection Readers and Cas Consumers.</br></td>
+     </tr></table>
+   </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="UIMA AS - What next?">
+            <h2>UIMA AS - What next?
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+    A reference manual for UIMA-AS is viewable on the <a href="documentation.html">documentation</a> page.
+    Go to the <a href="http://incubator.apache.org/uima/downloads.cgi">UIMA Download Page</a> 
+    and get the "UIMA AS Asynchronous Scaleout" package in zip or tar format. 
+    Unpack on top of the base UIMA framework you already downloaded. 
+    See the README file in the top level directory 
+    for instructions on deploying and testing standard UIMA example annotators as UIMA AS services.
+   </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                  </td>
+                </tr>
+                <!-- FOOTER -->
+                <tr><td colspan="2">
+                  <hr noshade="" size="1"/>
+                </td></tr>
+                <tr><td colspan="2"> 
+                  <table class="pageFooter">
+                    <tr>
+                      <td><a href="index.html">Home</a></td>
+                      <td><a href="privacy-policy.html">Privacy Policy</a></td>
+                      <td>
+                Copyright &#169; 2006-2009, The Apache Software Foundation
+                      </td>
+                      <td><a href="mailto:uima-dev@incubator.apache.org">Contact us</a></td>
+                    </tr>
+                  </table>                    
+                </td></tr>
+            </table>
+        </body>
+    </html>
+

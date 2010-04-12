@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<document>
+<!-- öäüÖÄÜ -->
+<properties>
+<title>UIMA Workshop at the GLDV 2007 in Tübingen/Germany</title>
+<author email="twgoetz@gmx.de">
+ UIMA Workshop organizers</author>
+</properties>
+
+<body>
+
+<section name="UIMA Workshop">
+  
+<p>
+  The workshop took place at the <a href="http://www.sfb441.uni-tuebingen.de/gldv2007/index.en.html">GLDV 2007 spring conference</a>
+  in Tübingen/Germany, April 11-13, 2007.  It was the first workshop of its kind and drew a large and
+  diverse audience from across Europe.  Thanks to all speakers and participants!
+</p>
+
+<p> 
+ Please find below the workshop programme.  For most talks, you can download the abstract and/or
+ the slides.
+</p>
+
+<subsection name="Workshop programme">
+
+<ul>
+<li><strong>Workshop kick-off [<a href="./downloads/gldv/slides/gldv07-uima-goetz-slides.pdf">slides</a>]</strong> 
+  (<a href="http://people.apache.org/~twgoetz">Thilo Goetz</a>) 
+  </li>
+<li><strong>Darmstadt Knowledge Processing Repository Based on UIMA
+  [<a href="./downloads/gldv/gldv07-uima-gurevych1.pdf">abstract</a>, 
+  <a href="./downloads/gldv/slides/gldv07-uima-gurevych-etal-slides.pdf">slides</a>]</strong> 
+  (<a href="http://www.ukp.tu-darmstadt.de/people/gurevych">Iryna Gurevych</a>,
+  <a href="http://www.tk.informatik.tu-darmstadt.de/Mitarbeiter/max">Max Mühlhäuser</a>,
+  <a href="http://www.ukp.tu-darmstadt.de/people/mueller">Christof Müller</a>,
+  <a href="http://www.ukp.tu-darmstadt.de/people/steimle">Jürgen Steimle</a>, 
+  <a href="http://www.ukp.tu-darmstadt.de/people/weimer">Markus Weimer</a> and 
+  <a href="http://www.ukp.tu-darmstadt.de/people/zesch">Torsten Zesch</a>)
+  </li>
+<li><strong>Processing dialogue-based data in the UIMA framework
+  [<a href="./downloads/gldv/gldv07-uima-gnjatovic.pdf">abstract</a>, 
+  <a href="./downloads/gldv/slides/gldv07-uima-gnjatovic-kunze-roesner-slides.pdf">slides</a>]</strong>
+  (<a href="http://wwwai.cs.uni-magdeburg.de/Members/gnjatovic/">Milan Gnjatovic</a>,
+  <a href="http://wwwai.cs.uni-magdeburg.de/~makunze/">Manuela Kunze</a> and
+  <a href="http://wwwai.cs.uni-magdeburg.de/~roesner/">Dietmar Rösner</a>) 
+  </li>
+<li><strong>An UIMA-Based Tool Suite for Semantic Text Processing
+  [<a href="./downloads/gldv/gldv07-uima-tomanek.pdf">abstract</a>, <a href="./downloads/gldv/slides/gldv07-uima-tomanek-buyko-hahn.pdf">slides</a>]</strong>
+  (<a href="http://www.julielab.de/component/option,com_contact/task,view/contact_id,15/Itemid,36/">Katrin Tomanek</a>,
+  <a href="http://www.julielab.de/component/option,com_contact/task,view/contact_id,12/Itemid,36/">Ekaterina Buyko</a> and
+  <a href="http://www.julielab.de/component/option,com_contact/task,view/contact_id,1/Itemid,36/">Udo Hahn</a>)
+  </li>
+<li><strong>An UIMA Annotation Type System for a Generic Text Mining Architecture
+  [<a href="./downloads/gldv/gldv07-uima-hahn.pdf">abstract</a>, <a href="./downloads/gldv/slides/gldv07-uima-hahn-etal.pdf">slides</a>]</strong>
+  (<a href="http://www.julielab.de/component/option,com_contact/task,view/contact_id,1/Itemid,36/">Udo Hahn</a>,
+  <a href="http://www.julielab.de/component/option,com_contact/task,view/contact_id,12/Itemid,36/">Ekaterina Buyko</a>,
+  <a href="http://www.julielab.de/component/option,com_contact/task,view/contact_id,15/Itemid,36/">Katrin Tomanek</a>,
+  <a href="http://www.ling.lancs.ac.uk/staff/piao/index.htm">Scott Piao</a>, 
+  <a href="http://personalpages.manchester.ac.uk/staff/Yoshimasa.Tsuruoka/">Yoshimasa Tsuruoka</a>, 
+  <a href="http://personalpages.manchester.ac.uk/staff/jock.mcnaught/">John McNaught</a> and
+  <a href="http://personalpages.manchester.ac.uk/staff/sophia.ananiadou/">Sophia Ananiadou</a>)
+  </li>
+<li><strong>Kookurenzberechnungen mit UIMA und Medusa </strong>
+  (<a href="http://wortschatz.informatik.uni-leipzig.de/asv/mitarbeiter/heyer/">Gerhard Heyer</a> and 
+  <a href="http://www.asv.informatik.uni-leipzig.de/index.php?view=,10,17&amp;mySession=1fce7d277e08afc9634557801b850805">Marco Buechler</a>)
+  </li>
+<li><strong>Iterative Learning of Relation Patterns for Market Analysis with UIMA
+  [<a href="./downloads/gldv/gldv07-uima-blohm.pdf">abstract</a>, <a href="./downloads/gldv/slides/gldv07-uima-blohm-slides.pdf">slides</a>]</strong>
+  (<a href="http://www.aifb.uni-karlsruhe.de/Personen/viewPersonenglish?id_db=2131">Sebastian Blohm</a>,
+  <a href="http://www.aifb.uni-karlsruhe.de/Personen/viewPersonenglish?id_db=2167">Jürgen Umbrich</a>, 
+  <a href="http://www.aifb.uni-karlsruhe.de/Personen/viewPersonenglish?id_db=98">Philipp Cimiano</a> and 
+  <a href="http://www.aifb.uni-karlsruhe.de/Personen/viewPersonenglish?id_db=20">York Sure</a>)
+  </li>
+<li><strong>GATE and UIMA in Language Technology Teaching
+  [<a href="./downloads/gldv/gldv07-uima-wilcock.pdf">abstract</a>, <a href="./downloads/gldv/slides/gldv07-uima-wilcock-slides.pdf">slides</a>]</strong>
+  (<a href="http://www.ling.helsinki.fi/~gwilcock/">Graham Wilcock</a>)
+  </li>
+<li><strong>Teaching "Unstructured Information Management: Theory and Applications" to Computational Linguistics Students
+  [<a href="./downloads/gldv/gldv07-uima-gurevych2.pdf">abstract</a>, 
+  <a href="./downloads/gldv/slides/gldv07-uima-gurevych-mueller-zesch-slides.pdf">slides</a>]</strong>
+  (<a href="http://www.ukp.tu-darmstadt.de/people/gurevych">Iryna Gurevych</a>,
+  <a href="http://www.ukp.tu-darmstadt.de/people/mueller">Christof Müller</a> and 
+  <a href="http://www.ukp.tu-darmstadt.de/people/zesch">Torsten Zesch</a>) 
+  </li>
+<li><strong>A new UIMA Annotator: the Textkernel Information Extraction Engine</strong>
+  (<a href="http://www.textkernel.com">Alexander Kaiser</a> and 
+  <a href="http://www.textkernel.com">Jakub Zavrel</a>)
+  </li>
+<li><strong>ICE - Intelligent Content Engineering 
+  [<a href="./downloads/gldv/gldv07-uima-netter.pdf">abstract</a>,
+  <a href="./downloads/gldv/slides/gldv07-uima-netter-meyer-slides.pdf">slides</a>]</strong>
+  (<a href="http://www.dn-c.de">Klaus Netter</a> and <a href="http://www.rc.ag">Hannes Meyer</a>)
+  </li>
+</ul>
+
+</subsection>
+
+
+<subsection name="Programme committee">
+<p><ul>
+<li><a href="http://wwwai.cs.uni-magdeburg.de/~roesner/">Dietmar Rösner</a>, University of Magdeburg</li>
+<li><a href="http://wwwai.cs.uni-magdeburg.de/~makunze/">Manuela Kunze</a>, University of Magdeburg</li>
+<li><a href="http://www.julielab.de/component/option,com_contact/task,view/contact_id,1/Itemid,36/">Udo Hahn</a>, University of Jena</li>
+<li><a href="http://people.apache.org/~twgoetz">Thilo Goetz</a>, Apache UIMA</li>
+</ul>
+</p>
+</subsection>
+
+</section>
+
+</body>
+</document>
+

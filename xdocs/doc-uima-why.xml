@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+-->
+
+<document>
+
+ <properties>
+  <title>Getting Started: Why UIMA</title>
+  <author email="uima-dev@incubator.apache.org">
+   UIMA Documentation Team
+  </author>
+ </properties>
+
+ <body>
+  <section name="Getting Started: Why UIMA">
+   <p>
+	 The "Getting Started: Why UIMA" guide should help you to understand what UIMA is, 
+	 what it can be used for, and how you can use it.
+   </p>
+
+  <subsection name="What Is UIMA">
+
+   <p>
+    UIMA stands for Unstructured Information Management Architecture and is a component 
+    architecture and software framework implementation for the analysis of unstructured 
+    content like text, video and audio data. Unstructured information represents the largest, 
+    most current and fastest growing source of information available to businesses and governments.
+   </p>
+   <p>
+	The motivation to develop such a framework was to build a common platform for unstructured analytics, 
+	to foster reuse of analysis components and to reduce duplication of analysis development. 
+	The pluggable architecture of UIMA allows to easily plug-in your own analysis components and 
+	combine them together with others. A full analysis task of a solution using unstructured analytics 
+	like search or government intelligence applications is often not a 
+	monolithic thing but a multi-stage process where different modules need to build on each other 
+	to get a powerful analysis chain. In some cases also annotators from different specialized vendors 
+	may need to work together to produce the results needed. 
+    The UIMA application interested in such analysis results does not need to know the details of how annotators 
+    work together to create the results. The UIMA framework take care of the integration and orchestration 
+    of multiple annotators.
+   </p>
+   <p>
+	So the major goal of UIMA is to transform unstructured information to structured 
+	information by orchestrating analysis engines to detect entities or relations and thus to build the 
+	bridge between the unstructured and the structured world.
+   </p>
+   <p>
+     <table width="100%"><tr><td align="center" valign="middle">
+       <img src="./images/getting-started/analytics-world.jpg" alt="analytics world" border="0"/>
+     </td></tr></table>
+   </p>
+   <p>
+	The Apache UIMA incubator project provides two Apache licensed UIMA framework implementations, 
+	one for Java and one for C++, and an extension to support Asynchronous Scaleout, called UIMA-AS.
+   </p>
+
+	</subsection>
+  
+   <subsection name="What Can UIMA Be Used For">
+   <p>
+	 UIMA is, by itself, an empty framework. Its purpose is to enable a world-wide, diverse community to develop
+	 inter-operable, often complex analytic components, and allow them to be combined and run together, with
+	 framework supplied scaled-out and remoting as needed. Some of the major external UIMA resources are linked
+	 on the Apache UIMA website "<a href="external-resources.html">UIMA Resources on the Web</a>".
+	 You can also check the <a href="sandbox.html">UIMA Sandbox</a> for components that can be used and combined 
+	 to build your own application.
+   </p>
+   <p>
+	 There are lots of use cases where UIMA may be applicable. One of the major ones are search applications. 
+	 Within search applications, the unstructured content that is available mainly as text in various kinds 
+	 must be processed and analyzed to be searchable. To obtain a powerful search application, the text 
+	 content must be analyzed to get the document language followed by language dependent linguistic 
+	 processing such as tokenization, lemmatization and part of speech detection. After these steps a 
+	 more sophisticated analysis like entity detection and relation detection between entities can be done. 
+	 For all these analysis steps UIMA and UIMA components can be used.
+   </p>
+   <p>
+     Another important use case is business or government intelligence. For example, UIMA analysis is used 
+     to extract structured information from car repair reports.  This data is then used for quality feed-back 
+     and problem early warning systems.
+   </p>
+   <p>
+     Other possible solutions where UIMA can be used for are the analsyis of call center notes to detect product 
+     problems and customer issues or a public image monitoring solution to find out how others for example in internet
+     forums or press releases think about my product or company.
+   </p>
+  </subsection>
+ 
+  </section>
+ 
+  
+
+ </body>
+
+</document>
+

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>Project Team</title>
+<author email="uima-dev@incubator.apache.org">
+ UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+<section name="Apache UIMA Project Team">
+
+  
+<subsection name="Committers">
+
+  <p>The current committers on the Apache UIMA project are
+  <table>
+<!-- <tr><th>Name</th></tr> -->
+<tr><td>Michael Baessler</td></tr>
+<tr><td>Jaroslaw Cwiklik</td></tr>
+<tr><td>Edward Epstein</td></tr>
+<tr><td>Tong Fin</td></tr>
+<tr><td><a href="http://people.apache.org/~twgoetz">Thilo Goetz</a></td></tr>
+<tr><td>Joern Kottmann</td></tr>
+<tr><td>Adam Lally</td></tr>
+<tr><td>Marshall Schor</td></tr>
+<tr><td>Burn Lewis</td></tr>
+<tr><td>Tommaso Teofili</td></tr>
+</table></p>
+</subsection>
+
+<subsection name="Contributors">
+<p>
+<table>
+<!-- <tr><th>Name</th></tr> -->
+<tr><td>Olivier Terrier</td></tr>
+</table>
+</p>
+</subsection>
+
+
+<subsection name="Mentors">
+<p>
+<table>
+<!-- <tr><th>Name</th></tr> -->
+<tr><td>Ken Coar</td></tr>
+<tr><td>Sam Ruby</td></tr>
+<tr><td>Jukka Zitting</td></tr>
+</table>
+</p>
+</subsection>
+    
+<subsection name="Becoming part of the team">
+
+<p>
+If you would like to contribute to UIMA, please browse our 
+<a href="http://issues.apache.org/jira/browse/uima">JIRA</a> or 	
+see the <a href="http://cwiki.apache.org/UIMA/">wiki</a> 
+to find areas where you can contribute.
+If there is nothing in there that suits your interest, but you still have
+ideas, please feel free to suggest them on the uima-dev mailing list.
+</p>
+<p>
+If you would like to become a committer, please see
+<a href="get-involved.html">Get Involved</a>.
+    
+</p>
+</subsection>
+<!--
+<table>
+<tr><th>Name</th><th>Organization</th></tr>
+<tr><th>tbd</th><th>tbd</th></tr>
+</table>
+  -->
+</section>
+
+</body>
+</document>

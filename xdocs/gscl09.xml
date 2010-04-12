@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<document>
+<!-- öäüÖÄÜ -->
+<properties>
+<title>UIMA Workshop at GSCL 2009 in Potsdam/Germany</title>
+<author email="uima-dev@apache.org">
+ UIMA dev team</author>
+</properties>
+
+<body>
+
+<section name="UIMA Workshop at GSCL 2009 in Potsdam/Germany">
+  
+<p>
+  There will be a <a href="http://docs.google.com/View?id=dft23bqs_3c7qnzg6x">workshop 
+  dedicated to UIMA</a> at <a href="http://www.ling.uni-potsdam.de/acl-lab/gscl09/index.en.html">GSCL 2009</a>,
+  the bi-annual conference of the German Society for Computational Linguistics and Language Technology.  
+  Please find the CFP below.
+</p>
+
+
+<p> 
+<pre>
+================================================================================
+
+Second Call for Papers
+Unstructured Information Management Architecture (UIMA)
+2nd UIMA@GSCL Workshop
+
+September 30, 2009
+Potsdam, Germany
+
+http://www.ling.uni-potsdam.de/acl-lab/gscl09/workshops.de.html
+
+================================================================================
+
+** NEWS: a one-hour beginners tutorial on UIMA will be held prior to the workshop at the same day **
+
+
+For many decades, NLP has suffered from low software engineering standards
+causing a limited degree of re-usability of code and interoperability of different
+modules within larger NLP systems. While this did not really hamper success
+in limited task areas (such as implementing a parser), it caused serious
+problems for the emerging field of language technology where the focus is on
+building complex integrated software systems, e.g., for information extraction
+or machine translation. This lack of integration has led to duplicated software
+development, work-arounds for programs written in different (versions of)
+programming languages, and ad-hoc tweaking of interfaces between modules
+developed at different sites.
+
+In recent years, the Unstructured Information Management Architecture (UIMA)
+framework has been proposed as a middleware platform which offers integration by
+design through common type systems and standardized communication methods for
+components analysing streams of unstructured information, such as natural
+language. The UIMA framework offers a solid processing infrastructure that
+allows developers to concentrate on the implementation of the actual analytics
+components. An increasing number of members of the NLP community thus have
+adopted UIMA as a platform facilitating the creation of reusable NLP components
+that can be assembled to address different NLP tasks depending on their order,
+combination and configuration.
+
+This workshop aims at bringing together members of the NLP community that are
+users, developers or providers of either UIMA components or UIMA-related tools
+in order to explore and discuss the opportunities and challenges in using UIMA
+as a platform for modern, well-engineered NLP. In the context of an emerging
+NLP-oriented UIMA community, the challenge to create not only reusable, but also
+interoperable components raises particular interest. From a methodological
+perspective, interoperability relies largely on UIMA type systems. Technically,
+it includes issues related to the packaging and distribution of UIMA components.
+Also, tools are important, for example to assemble complex processing work
+flows, to manage the bodies of data that are to be analysed and to visualize,
+explore, and further deploy the analysis results. Finally, interoperability is
+also affected by legal issues, such as potentially incompatible licenses of
+components and tools.
+
+The availability of ready-to-use components plays a major role in choosing UIMA
+over other alternatives. To accentuate this, the workshop puts a focus on
+UIMA-based components and tools that are freely available for research.
+
+======
+Topics
+======
+
+Participants are invited to present applications realized using UIMA, general
+experiences using UIMA as a platform for natural language processing, as well as
+technical papers on particular aspects of the UIMA framework. Alternatives to
+and comparisons of other frameworks with UIMA are of interest, too. More
+specifically, workshop topics include, but are not limited to:
+
+    * UIMA components with a special focus on genericity and type-system
+      independence
+    * repositories of ready-to-use UIMA-based components
+    * (generic) type systems for UIMA
+    * distribution of UIMA components: documentation, licensing and packaging
+    * sophisticated tools to build and manage complex processing pipelines
+    * experience reports combining UIMA-based components from different sources,
+      as well as solutions to interoperability issues
+    * processing of very large data collections: scale-out, parallelization, and
+      performance optimization
+    * analysis of results: exploration, evaluation, visualization, and
+      statistical analysis
+    * developing for UIMA: simplified APIs, debugging, unit testing, and
+      limitations of UIMA
+
+===========
+Submissions
+===========
+
+We invite submissions of full papers, limited to 8 pages of text, and position
+papers or papers describing ongoing work as short papers, limited to 4 pages.
+Both kinds of papers will be orally presented. Double submissions (whether
+verbatim or in essence) should indicate this fact and name the workshop or
+conference event also addressed. Reviewing will not be anonymous but authors
+wishing to keep their anonymity may hide their identity on demand.
+
+All submissions must be in English and follow the Springer LNCS style [1] and
+should be created using LaTeX. Submissions must be sent in PDF format to
+uima.gscl2009@googlemail.com no later than July, 6th.
+
+Accepted submissions will appear in the GSCL conference proceedings.
+
+[1] http://www.springer.com/computer/lncs?SGWID=0-164-7-72376-0
+
+===============
+Important Dates
+===============
+
+July, 6 : Submission deadline
+July, 20: Notification of acceptance
+July, 28: Camera-ready copies due
+Sept, 30: Workshop held in Potsdam in conjunction with GSCL
+
+======================
+Organizers and Contact
+======================
+
+    * JULIE Lab, Friedrich-Schiller-Universität Jena
+       * Udo Hahn
+       * Katrin Tomanek
+    * UKP Lab, Technische Universität Darmstadt
+       * Iryna Gurevych
+       * Richard Eckart de Castilho
+
+Please address any inquiries regarding the workshop to:
+uima.gscl2009@googlemail.com
+
+=================
+Program Committee
+=================
+
+    * Anni R. Coden, IBM T.J. Watson Research Center, USA
+    * Branimir K. Boguraev, IBM T.J. Watson Research Center, USA
+    * Graham Wilcock, University of Helsinki, Finland
+    * Dietmar Rösner, University of Magdeburg, Germany
+    * Iryna Gurevych, Technische Universität Darmstadt, Germany
+    * Katrin Tomanek, Friedrich-Schiller-Universität Jena, Germany
+    * Leo Ferres, University of Concepcion, Chile
+    * Michael Tanenblatt, IBM T.J. Watson Research Center, USA
+    * Nicolas Hernandez, Université de Nantes, France
+    * Philipp Cimiano, Delft University of Technology, Netherlands
+    * Richard Eckart de Castilho, Technische Universität Darmstadt, Germany
+    * Sophia Ananiadou, University of Manchester, Great Britain
+    * Stefan Geißler, TEMIS GmbH, Germany
+    * Udo Hahn, Friedrich-Schiller-Universität Jena, Germany
+
+=====
+Links
+=====
+
+    * http://www.ling.uni-potsdam.de/acl-lab/gscl09/
+    * http://incubator.apache.org/uima
+    * http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=uima
+    * http://www.julielab.de/
+    * http://www.ukp.tu-darmstadt.de/
+    * http://u-compare.org/ 
+</pre>
+
+</p>
+
+</section>
+
+</body>
+</document>
+

@@ -1,0 +1,83 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>UIMA Simple Server User Guide</title><link rel="stylesheet" href="css/stylesheet-html.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.72.0"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="book" lang="en" id="d0e2"><div class="titlepage"><div><div><h1 class="title"><a name="d0e2"></a>
+		UIMA Simple Server User Guide
+	</h1></div><div><div class="authorgroup"><h3 class="corpauthor">Authors: The Apache UIMA Development Community</h3></div></div><div><p class="releaseinfo">Version 2.3</p></div><div><p class="copyright">Copyright &copy; 2007 The Apache Software Foundation</p></div><div><div class="legalnotice"><a name="d0e15"></a><p> </p><p><b>Incubation Notice and Disclaimer.&nbsp;</b>Apache UIMA is an effort undergoing incubation at the Apache Software Foundation (ASF). 
+          Incubation is required of all newly accepted projects until a further review indicates that 
+          the infrastructure, communications, and decision making process have stabilized in a manner 
+          consistent with other successful ASF projects. While incubation status is not necessarily 
+          a reflection of the completeness or stability of the code, 
+          it does indicate that the project has yet to be fully endorsed by the ASF.</p><p> </p><p> </p><p><b>License and Disclaimer.&nbsp;</b>The ASF licenses this documentation
+           to you under the Apache License, Version 2.0 (the
+           "License"); you may not use this documentation except in compliance
+           with the License.  You may obtain a copy of the License at
+         
+         </p><div class="blockquote"><blockquote class="blockquote"><p>
+             <a xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.apache.org/licenses/LICENSE-2.0" target="_top">http://www.apache.org/licenses/LICENSE-2.0</a>
+           </p></blockquote></div><p>
+         
+           Unless required by applicable law or agreed to in writing,
+           this documentation and its contents are distributed under the License 
+           on an 
+           "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+           KIND, either express or implied.  See the License for the
+           specific language governing permissions and limitations
+           under the License.
+         </p><p> </p><p> </p><p><b>Trademarks.&nbsp;</b>All terms mentioned in the text that are known to be trademarks or 
+        service marks have been appropriately capitalized.  Use of such terms
+        in this book should not be regarded as affecting the validity of the
+        the trademark or service mark.
+        </p></div></div><div><p class="pubdate">December, 2007</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#sandbox.simpleServer">1. Introduction</a></span></dt><dd><dl><dt><span class="section"><a href="#d0e76">1.1. Quick start for the impatient</a></span></dt><dd><dl><dt><span class="section"><a href="#d0e97">1.1.1. Install the SimpleServer code</a></span></dt><dt><span class="section"><a href="#d0e134">1.1.2. Build the WhitespaceTokenizer</a></span></dt><dt><span class="section"><a href="#d0e144">1.1.3. Create a UIMA webapp</a></span></dt><dt><span class="section"><a href="#d0e183">1.1.4. Trying it out</a></span></dt></dl></dd></dl></dd></dl></div><div class="chapter" lang="en" id="sandbox.simpleServer"><div class="titlepage"><div><div><h2 class="title"><a name="sandbox.simpleServer"></a>Chapter&nbsp;1.&nbsp;Introduction</h2></div></div></div><p>The UIMA Simple Server makes results of UIMA processing available in a simple, XML-based
+  format.  The intended use of the the Simple Server is to provide UIMA analysis as a REST service.
+  The Simple Server is implemented as a Java Servlet, and can be deployed into any Servlet container
+  (such as Apache Tomcat or Jetty).</p><p>Once you have installed the Simple Server into a Servlet container of your choice, you can
+  make your UIMA analysis available as follows:
+  </p><div class="itemizedlist"><ul type="disc"><li><p>Package you analysis as a UIMA PEAR file</p></li><li><p>Create a mapping file that tells the server what analysis results to show in which format</p></li><li><p>Deploy the PEAR file and the mapping file into the server.</p></li></ul></div><p>In the following, we will explain how to perform each of these steps.  We will also show
+  you how to accomplish all of this in a concrete Servlet container, namely Apache Tomcat.  Finally,
+  we will describe how to use another Servlet container, Jetty, to test your application 
+  <span class="emphasis"><em>without</em></span> deployment.</p><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d0e76"></a>1.1.&nbsp;Quick start for the impatient</h2></div></div></div><p>If you're familiar with UIMA and servlets, you can start right here and get your first
+  simple service running in a few minutes.  If not, not to worry.  We'll go over this in much more
+  detail later on.  To follow the quick start guide, you will need to have:</p><div class="itemizedlist"><ul type="disc"><li><p>Tomcat or some other servlet container installed.  Installing Tomcat is a breeze, see 
+  <a xmlns:xlink="http://www.w3.org/1999/xlink" href="http://tomcat.apache.org/" target="_top">http://tomcat.apache.org/</a>. </p></li><li><p>The UIMA development environment set up (with Maven and all the other good stuff).  For
+  information on how to do that, see <a xmlns:xlink="http://www.w3.org/1999/xlink" href="http://incubator.apache.org/uima/svn.html" target="_top">http://incubator.apache.org/uima/svn.html</a>.
+   </p></li><li><p>Doing all this from Eclipse is convenient, but not required.  If you work with Eclipse, the
+  Sysdeo Tomcat plugin is useful: <a xmlns:xlink="http://www.w3.org/1999/xlink" href="http://www.eclipsetotale.com/tomcatPlugin.html" target="_top">http://www.eclipsetotale.com/tomcatPlugin.html</a>.
+  It lets you start and stop Tomcat from Eclipse, and allows you to debug your web apps in the
+  Eclipse debugger.</p></li></ul></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="d0e97"></a>1.1.1.&nbsp;Install the SimpleServer code</h3></div></div></div><p>If you haven't done so already, start by extracting the SimpleServer sandbox project from
+  Subversion, and build it with "mvn install".  Copy the following files to the <code class="code">shared/lib</code>
+  directory of your servlet container (i.e., Tomcat most likely; if the directory doesn't exist,
+  you can create it):
+  </p><div class="itemizedlist"><ul type="disc"><li><p><code class="code">SimpleServer/lib/config-xml.jar</code>
+  </p></li><li><p><code class="code">SimpleServer/lib/jsr173_1.0_api.jar</code>
+  </p></li><li><p><code class="code">SimpleServer/lib/xbean.jar</code>
+  </p></li><li><p><code class="code">SimpleServer/target/uimaj-simple-server.jar</code>
+  </p></li></ul></div><p>
+  One more file you need to copy there is <code class="code">uima-core.jar</code>.  You can either build it from
+  source, or grab it from the <code class="code">lib</code> directory of an Apache UIMA distribution.  Note: the
+  SimpleServer requires at least version 2.2.1 of UIMA.
+  </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="d0e134"></a>1.1.2.&nbsp;Build the WhitespaceTokenizer</h3></div></div></div><p>Extract the WhitespaceTokenizer sandbox project from Subversion and build it with "mvn install".
+  Note that the WhitespaceTokenizer depends on the PearPackagingMavenPlugin sandbox project, so you
+  will need to extract and build that one as well.
+  </p><p>When you have successfully built the WhitespaceTokenizer, you'll end up with a pear file in
+  <code class="code">WhitespaceTokenizer/target/WhitespaceTokenizer.pear</code>.  You'll need this file in the
+  next step.
+  </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="d0e144"></a>1.1.3.&nbsp;Create a UIMA webapp</h3></div></div></div><p>Create a subdirectory <code class="code">webapps/uima</code> in your Tomcat directory.  This is where all
+  your simple services will live.  Now create further subdirectories <code class="code">webapps/uima/resources</code>
+  and <code class="code">webapps/uima/WEB-INF</code> (webapp metadata) and <code class="code">webapps/uima/resources</code>
+  (UIMA analysis).
+  </p><p>Copy the whitespace tokenizer pear file from your workspace
+  (<code class="code">WhitespaceTokenizer/target/WhitespaceTokenizer.pear</code>) to <code class="code">webapps/uima/resources</code>
+  in your Tomcat directory.  Copy a corresponding SimpleServer output mapping file 
+  <code class="code">SimpleServer/src/main/resources/samples/WhitespaceTokenizer.xml</code> also to 
+  <code class="code">webapps/uima/resources</code>.
+  </p><p>Finally, copy <code class="code">SimpleServer/src/main/resources/samples/web.xml</code> to
+  <code class="code">webapps/uima/WEB-INF</code>.
+  </p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="d0e183"></a>1.1.4.&nbsp;Trying it out</h3></div></div></div><p>This is it, your first simple service should be ready to run.  Start (or restart) Tomcat and
+  direct your browser to the following URL: <a xmlns:xlink="http://www.w3.org/1999/xlink" href="http://127.0.0.1:8080/uima/ws-tokenizer?mode=form" target="_top">http://127.0.0.1:8080/uima/ws-tokenizer?mode=form</a>.
+  Type in some text, check the "inline XML" radio button, and hit "Submit Query".  You should see
+  your text split up into sentences and tokens.
+  </p></div>
+
+	To be continued...
+
+  </div></div></div></body></html>

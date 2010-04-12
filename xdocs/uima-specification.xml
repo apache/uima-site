@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<document>
+  
+  <properties>
+    <title>UIMA Specification</title>
+    <author email="uima-dev@incubator.apache.org"> UIMA Documentation Team</author>
+  </properties>
+  
+  <body>
+    <section name="UIMA Specification Links">
+      
+      <p>Apache UIMA is an Apache-licensed open source implementation of the
+        <i>UIMA specification</i> being developed concurrently by a technical committee (TC) within
+        <a href="http://www.oasis-open.org" target="_blank">OASIS</a>, a standards organization. We encourage UIMA
+        developers to become familiar with the UIMA specification by visiting the following links.</p>
+        
+      <p> In March, 2009, OASIS 
+          members approved the 
+          Unstructured Information Management Architecture (UIMA) version 1.0 specification
+          as an OASIS Standard, a status that signifies the highest level of ratification. 
+       See <a href="http://www.oasis-open.org/news/oasis-news-2009-03-19.php" target="_blank">
+        http://www.oasis-open.org/news/oasis-news-2009-03-19.php</a> for details.
+      </p>
+      
+      <p>
+        <ul>
+          <li><a href="http://www.oasis-open.org/committees/uima">
+            OASIS UIMA TC Homepage</a></li>
+          
+          <li><a href="http://domino.research.ibm.com/library/cyberdig.nsf/papers/1898F3F640FEF47E8525723C00551250/$File/rc24122.pdf">
+          White Paper describing the proposed UIMA Specification</a></li>          
+        </ul>
+      </p>     
+    </section>
+  </body>
+</document>

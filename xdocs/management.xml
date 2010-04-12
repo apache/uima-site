@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>Apache UIMA Project Guidelines</title>
+<author email="uima-dev@incubator.apache.org">
+ UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+    <section name="Project Management Committee Bylaws">
+      <p>
+        The Project Management Committee (PMC) has not yet been formed.
+        It will be formed when and if the project graduates from the
+        Incubator.   </p>
+        <!-- was formed by the Apache Board
+        on 17 July 2002.  The bylaws were last amended on 6 October 2004.
+        There is no preset number of seats on the PMC.  The PMC will strive to
+        add every committer within DB that, in the opinion of the PMC as 
+        determined by a vote, displays the capability and desire to help guide 
+        the DB project. The PMC will nominate a chairperson from amongst their 
+        ranks for presentation to the Board. The list of current members can be found in our
+        <a href="./whoweare.html"> Project Credits</a>.
+      </p>
+
+      <subsection name="Roles">
+        <p>
+          The PMC is responsible for the strategic direction
+          and success of the DB Project. This governing body is expected to
+          ensure the project's welfare and guide its overall direction. The PMC
+          may not necessarily participate in the day-to-day coding but is
+          involved in the overall development plans, the alleviation of any
+          bottlenecks, the resolution of conflicts, and the overall technical
+          success of the project.
+        </p>
+
+        <p>
+          The PMC is answerable to the Apache Board with its Chairman serving as
+          primary liaison.
+        </p>
+      </subsection>
+
+      <subsection name="Meetings">
+        <p>The PMC discusses issues and determines strategic direction via mail
+           list.  All binding votes happen on the PMC list.
+        </p>
+      </subsection>
+
+      <subsection name="Membership">
+        <p>
+          PMC members may resign at any time. A committer will remain on the DB 
+          PMC until removed by desire of the committer, action of the board, or
+          vote by the PMC.  The Chairman may resign as Chairman at any time 
+          without resigning membership to the PMC. The chairperson will serve 
+          until voluntary resignation, action of the board, or vote by the PMC.
+          The Chairman or any member may be removed from the PMC by a 3/4
+          vote of the PMC.
+        </p>
+
+        <p>
+          In order to be elected to the PMC, a person must have served as a
+          <a href="roles.html">Committer</a> and be
+          nominated by a PMC Member. The nominee must receive 3/4 positive vote
+          with a minimum of 3 positive votes.  Abstaining PMC voters do not 
+          affect the result.
+        </p>
+      </subsection>
+
+      <subsection name="Creation of Subprojects">
+        <p>
+          PMC members may propose the creation of new subprojects. Creation of 
+          a new subproject requires approval by 3/4 positve vote with a minimum
+          of 3 positive votes of the PMC.  Abstaining PMC voters do not 
+          affect the result.  New code enters the DB project in accordance with
+          ASF policy.
+        </p>
+      </subsection>
+
+      <subsection name="Voting">
+        <p>The call for a vote on issues not detailed here may specify 
+        requirements for passage. The minimum and default requirement for a 
+        passing vote is simple majority of PMC members casting ballots.
+        The default voting period is 10 days and the minimum is 7 days unless
+        the success or failure is arithmetically known.
+        </p>
+      </subsection>
+
+-->
+    </section>
+
+  </body>
+</document>
