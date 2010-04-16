@@ -81,10 +81,10 @@ versions of the book covering 1.0 and 1.1).
 <p>
   The code for UIMA is stored in several sections:</p>
   <ol>
-    <li>http://svn.apache.org/repos/asf/incubator/uima/uimaj - the Java code for base UIMA</li>
-    <li>http://svn.apache.org/repos/asf/incubator/uima/uima-as - the Asynchronous Scaleout add-on for base UIMA</li>
-    <li>http://svn.apache.org/repos/asf/incubator/uima/sandbox - a collection of add-ons for UIMA including annotators</li>
-    <li>http://svn.apache.org/repos/asf/incubator/uima/uimacpp - the C++ framework supporting Annotators written in C++</li>
+    <li>http://svn.apache.org/repos/asf/uima/uimaj - the Java code for base UIMA</li>
+    <li>http://svn.apache.org/repos/asf/uima/uima-as - the Asynchronous Scaleout add-on for base UIMA</li>
+    <li>http://svn.apache.org/repos/asf/uima/sandbox - a collection of add-ons for UIMA including annotators</li>
+    <li>http://svn.apache.org/repos/asf/uima/uimacpp - the C++ framework supporting Annotators written in C++</li>
   </ol>
 <p>  
   Each of these have subdirectories: trunk - for the latest, tags - for preserved copies of releases, 
@@ -93,17 +93,17 @@ versions of the book covering 1.0 and 1.1).
 
 <p>
 To receive notice of commits to the repository subscribe to 
-<a  href="mailto:uima-commits@incubator.apache.org">
-uima-commits@incubator.apache.org</a> by sending email to 
-<a  href="mailto:uima-commits-subscribe@incubator.apache.org">
-uima-commits-subscribe@incubator.apache.org</a>. 
+<a  href="mailto:commits@uima.apache.org">
+commits@uima.apache.org</a> by sending email to 
+<a  href="mailto:commits-subscribe@uima.apache.org">
+commits-subscribe@uima.apache.org</a>. 
 </p>
 
 <subsection name="Web Access to Subversion" id="source.code.repository.web.access">
 <p>
 If you just want to browse the source code, you can use the
 <a class="external" rel="nofollow" 
-href="http://svn.apache.org/viewcvs/incubator/uima">
+href="http://svn.apache.org/viewcvs/uima">
 ViewCVS web interface</a> to Subversion.  This is current at all times.
 </p>
 </subsection>
@@ -121,7 +121,7 @@ below for more information.
 
 <subsection name="Anonymous check out from Subversion" id="anonymous.checkout">
 <p>Use a command like:</p>
-  <longquote>% svn checkout http://svn.apache.org/repos/asf/incubator/uima/uimaj/trunk<code></code></longquote>
+  <longquote><code>% svn checkout http://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
 <p>Once you have Apache UIMA checked out you can update your working copy
   of the checked-out sources, to pick up any changes committed since you
   checked things out, 
@@ -134,7 +134,7 @@ below for more information.
 blocking http access to the Subversion repository, you can try to access it 
 via HTTPS: </p>
 <longquote><code>% svn checkout \<br/>
-  https://svn.apache.org/repos/asf/incubator/uima/uimaj/trunk</code></longquote>
+  https://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
 </subsection>
 <subsection name="Access through a proxy" id="access.proxy">
 
@@ -165,7 +165,7 @@ Apache UIMA Committers must checkout the Subversion repository
 via HTTPS, in order to be able to check in changes. 
 </p>
 <longquote><code>% svn checkout \<br/>
-  https://svn.apache.org/repos/asf/incubator/uima/uimaj/trunk</code></longquote>
+  https://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
 </subsection>
 		
 <subsection name="Checking Out Code using Eclipse" id="checkout.using.eclipse">
@@ -178,7 +178,7 @@ You can then check out code as follows:
 <ol>
 	<li>Bring up the "SVN Repositories" View (from Window -> Show View -> Other)</li>
 	<li>Right click in the SVN Repositories View and select New -> Repository Location.</li>
-	<li>Enter the URL <code>http://svn.apache.org/repos/asf/incubator/uima/uimaj/trunk</code> (or <code>https://</code>...)</li>
+	<li>Enter the URL <code>http://svn.apache.org/repos/asf/uima/uimaj/trunk</code> (or <code>https://</code>...)</li>
 	<li>Shift-click to select all of the projects, right click and choose "Checkout..."</li>
 	<li>Select "Check out into the workspace as projects" and click "Finish"</li>	
 </ol>	
