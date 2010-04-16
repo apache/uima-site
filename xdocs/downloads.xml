@@ -39,7 +39,7 @@ of the distribution files, using the signatures and checksums listed below in sq
 
 <p>Only current recommended releases are available on the main
 distribution site and its mirrors.  Older releases are available from
-the <a href="http://archive.apache.org/dist/incubator/uima/">archive download
+the <a href="http://archive.apache.org/dist/uima/">archive download
 site.</a></p>
   
 <p>Apache UIMA is distributed as source and binary (ready-to-use) packages.
@@ -54,7 +54,7 @@ Thus they must be untarred with a GNU compatible version of
 <subsection name="Eclipse Update Site">
 
 <p>You can install the UIMA Eclipse tooling via our Eclipse update site: 
-<a href="http://www.apache.org/dist/incubator/uima/eclipse-update-site/">http://www.apache.org/dist/incubator/uima/eclipse-update-site/</a>.
+<a href="http://www.apache.org/dist/uima/eclipse-update-site/">http://www.apache.org/dist/uima/eclipse-update-site/</a>.
 Don't forget to install EMF before/with the UIMA tooling.  If you're doing this for the first time,
 you may wish to consult the much more verbose instructions in the <a href="documentation.html">SDK 
 documentation</a>.
@@ -118,7 +118,7 @@ Other mirrors: <select name="Preferred">
 <section name="Archived Releases">
   
   <p>Older releases of Apache UIMA can be found 
-    <a href="http://archive.apache.org/dist/incubator/uima">here</a>.  We highly
+    <a href="http://archive.apache.org/dist/uima">here</a>.  We highly
     recommend to not use those releases but upgrade to UIMA's <a
     href="[location]#Latest Official Releases">latest</a> release.</p>
 
@@ -183,8 +183,8 @@ Other mirrors: <select name="Preferred">
   </p>
     <dl><dt /><dd>(Right click the following links, and select save link/target as ...)</dd></dl>
     <ul>
-      <li><a href="http://www.apache.org/dist/incubator/uima/KEYS">KEYS from Apache main distribution site</a></li>
-      <li><a href="https://svn.apache.org/repos/asf/incubator/uima/uimaj/trunk/uimaj-distr/src/main/readme/KEYS">
+      <li><a href="http://www.apache.org/dist/uima/KEYS">KEYS from Apache main distribution site</a></li>
+      <li><a href="https://svn.apache.org/repos/asf/uima/uimaj/trunk/uimaj-distr/src/main/readme/KEYS">
         KEYS from the main UIMA SVN repository using https security</a>
       </li>
     </ul>

@@ -123,7 +123,7 @@
 				<p>
 					The Apache UIMA version 2.2.2-incubating has been released!
 					For a list of all fixed issues, please refer to the 
-					<a href="http://www.apache.org/dist/incubator/uima/RELEASE_NOTES-uimaj-2.2.2-incubating.html">Release Notes</a>.
+					<a href="http://www.apache.org/dist/uima/RELEASE_NOTES-uimaj-2.2.2-incubating.html">Release Notes</a>.
 					Downloads of the bugfix release can be found on
 					<a href="downloads.cgi">our download page.</a>
 				</p>
@@ -163,7 +163,7 @@
 				<p>
           Version 2.1.0-incubating has been released!
           Downloads of the project can be found at 
-          <a href="downloads.cgi">http://incubator.apache.org/uima/downloads.cgi</a>
+          <a href="downloads.cgi">http://uima.apache.org/downloads.cgi</a>
 				</p>
 			</subsection>
       

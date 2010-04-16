@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="Apache UIMA Project" 
-         href="http://incubator.apache.org/uima/">
+         href="http://uima.apache.org/">
         
   <incubator name="Apache Incubator" href="http://incubator.apache.org/"/>
   <title>Apache UIMA</title>    
@@ -108,7 +108,7 @@
       <releasenotes filename="README-uimaj-2.2.2-incubating-Hotfix1" title="Readme"> <f>txt</f> </releasenotes>
       <binary filename="uima-2.2.2-fp1-incubating"> <f>zip</f> </binary>
       <source>Sources are available<br/>in the SVN 
-        <a href="http://svn.apache.org/repos/asf/incubator/uima/uimaj/tags/uimaj-2.2.2/uimaj-2.2.2-fp1-02">here</a>
+        <a href="http://svn.apache.org/repos/asf/uima/uimaj/tags/uimaj-2.2.2/uimaj-2.2.2-fp1-02">here</a>
       </source>
     </download>
     

@@ -20,8 +20,8 @@
       <p>
         The contributed code is in the "sandbox" area of the UIMA SVN:
         <a
-          href="http://svn.apache.org/viewvc/incubator/uima/sandbox/trunk/AlchemyAPIAnnotator/">
-          http://svn.apache.org/viewvc/incubator/uima/sandbox/trunk/AlchemyAPIAnnotator/
+          href="http://svn.apache.org/viewvc/uima/sandbox/trunk/AlchemyAPIAnnotator/">
+          http://svn.apache.org/viewvc/uima/sandbox/trunk/AlchemyAPIAnnotator/
         </a>
         . The original donation is in a zip file attached to a JIRA
         issue:

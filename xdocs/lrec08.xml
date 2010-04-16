@@ -59,7 +59,7 @@ open-platform middleware structure for dealing with unstructured
 information (text, speech, audio, video data), originally launched by 
 IBM. In the meantime, the Apache Software Foundation has established an 
 incubator project for developing UIMA-based software 
-(<a href="http://incubator.apache.org/uima/">http://incubator.apache.org/uima/</a>).  The Organization for the 
+(<a href="http://uima.apache.org/">http://uima.apache.org/</a>).  The Organization for the 
 Advancement of Structured Information Standards (OASIS) has established 
 a Technical Committee to standardize the UIMA specification. 
 Accordingly, an increasing number of NLP research institutes as well as 

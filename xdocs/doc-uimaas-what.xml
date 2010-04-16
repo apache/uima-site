@@ -147,7 +147,7 @@
    <subsection name="UIMA AS - What next?">
    <p>
     A reference manual for UIMA-AS is viewable on the <a href="documentation.html">documentation</a> page.
-    Go to the <a href="http://incubator.apache.org/uima/downloads.cgi">UIMA Download Page</a> 
+    Go to the <a href="http://uima.apache.org/downloads.cgi">UIMA Download Page</a> 
     and get the "UIMA AS Asynchronous Scaleout" package in zip or tar format. 
     Unpack on top of the base UIMA framework you already downloaded. 
     See the README file in the top level directory 

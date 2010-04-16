@@ -40,8 +40,8 @@ at various repositories.
 <p>Several annotators are available as part of Apache UIMA; they are packaged up into one 
   <a href="downloads.cgi">downloadable package</a>.
   You can access the source for the annotators in the SVN repository at 
-  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/">
-     http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>. 
+  <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/">
+     http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>. 
 </p>
 
 <p>The annotators available here are:</p>

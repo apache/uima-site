@@ -131,7 +131,7 @@ href="http://apache.org/dev/version-control.html">Committer Subversion Access
 </p>
 </li>
 <li><p> Check out the UIMA sources and test your svn account: 
-<a  href="http://svn.apache.org/viewcvs.cgi/incubator/uima">
+<a  href="http://svn.apache.org/viewcvs.cgi/uima">
 SubversionRepository</a>. 
 </p>
 

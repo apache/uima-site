@@ -18,8 +18,8 @@
         of the dictionary identically with the input text.</p>
             <p>
         The contributed code is in the "sandbox" area of the UIMA SVN:
-        <a href="http://svn.apache.org/viewvc/incubator/uima/sandbox/trunk/ConceptMapper/">
-          http://svn.apache.org/viewvc/incubator/uima/sandbox/trunk/ConceptMapper/
+        <a href="http://svn.apache.org/viewvc/uima/sandbox/trunk/ConceptMapper/">
+          http://svn.apache.org/viewvc/uima/sandbox/trunk/ConceptMapper/
         </a>.  The original donation is in a zip file attached to a JIRA issue:
         <a href="http://issues.apache.org/jira/browse/UIMA-1033">
           http://issues.apache.org/jira/browse/UIMA-1033

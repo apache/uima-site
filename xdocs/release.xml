@@ -246,7 +246,7 @@ under the License.
       </li>
       
 		<li><p>Upload the release artifacts to the distribution server (via uploading to people.apache.org
-      in the directory: <code>/www/www.apache.org/dist/incubator/uima</code>, including the 
+      in the directory: <code>/www/www.apache.org/dist/uima</code>, including the 
 			release artifacts and the Eclipse update site data.  Be sure to include the gpg/md5/sha1 signatures.
       Make sure the KEYS file in that uploaded directory is current. Additionally it is necessary to update
       the download page of the UIMA website to make the new release artifacts available. </p>
@@ -316,7 +316,7 @@ under the License.
     </p>
 	    <ul>
 	      <li>announce@apache.org</li>
-	      <li>uima-user@incubator.apache.org</li>
+	      <li>user@uima.apache.org</li>
 	    </ul>
     <p>
 	    and describe the major changes of the release. The email should contain the

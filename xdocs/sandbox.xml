@@ -49,8 +49,8 @@ A list of proposed analysis components and tooling for UIMA is available at the
 
 <p>
 You can access the UIMA sandbox in the SVN repository at 
-<a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/">
-http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>. 
+<a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/">
+http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>. 
 </p>
 
 <p>
@@ -99,8 +99,8 @@ http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>.
 		  text documents using a simple whitespace segmentation. During the tokenization, the annotator creates
 		  token and sentence annotations as result. The Java source of the annotator
 		  can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/WhitespaceTokenizer">
-		  http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/WhitespaceTokenizer</a>.
+		  <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/WhitespaceTokenizer">
+		  http://svn.apache.org/repos/asf/uima/sandbox/trunk/WhitespaceTokenizer</a>.
 		</p>	
 	</subsection>
 
@@ -112,8 +112,8 @@ http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>.
 		  The stemming algorithm is avaialble for several languages. For details about Snowball please see 
 		  <a class="external" href="http://snowball.tartarus.org/">http://snowball.tartarus.org/</a>.
 		  The Java source of the annotator can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/SnowballAnnotator">
-		  http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/SnowballAnnotator</a>. 
+		  <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/SnowballAnnotator">
+		  http://svn.apache.org/repos/asf/uima/sandbox/trunk/SnowballAnnotator</a>. 
 		</p>
 		<p>
 		  Note: the used implementation of the Snowball stemming algorithm is licensed under the BSD license.
@@ -129,8 +129,8 @@ http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>.
 		   <a href="downloads/sandbox/RegexAnnotatorUserGuide/RegexAnnotatorUserGuide.html">
 		  Click here to access the user documentation</a>.
 		  The Java source of the annotator can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/RegularExpressionAnnotator">
-		  http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/RegularExpressionAnnotator</a>.
+		  <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/RegularExpressionAnnotator">
+		  http://svn.apache.org/repos/asf/uima/sandbox/trunk/RegularExpressionAnnotator</a>.
 		</p>	
 	</subsection>
 
@@ -144,8 +144,8 @@ http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>.
       <a href="downloads/sandbox/PearPackagingAntTaskUserGuide/PearPackagingAntTaskUserGuide.html">
 		  Click here to access the user documentation</a>.
 		  The Java source of the PEAR packaging task can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/PearPackagingAntTask">
-		  http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/PearPackagingAntTask</a>. 
+		  <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/PearPackagingAntTask">
+		  http://svn.apache.org/repos/asf/uima/sandbox/trunk/PearPackagingAntTask</a>. 
 		</p>
 	</subsection>
 
@@ -156,11 +156,11 @@ http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>.
 		  during a component build using a custom Maven plugin.
 		  With this plugin, users are able to build their components from the source and then package them 
 		  automatically as UIMA PEAR package. 
-		  <a href="http://incubator.apache.org/uima/downloads/releaseDocs/2.2.2-incubating/docs/html/tools/tools.html#ugr.tools.pear">
+		  <a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tools/tools.html#ugr.tools.pear">
 		  Click here to access the user documentation</a>.
 		  The Java source of the PEAR packaging Maven plugin can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/uimaj/trunk/PearPackagingMavenPlugin">
-		  http://svn.apache.org/repos/asf/incubator/uima/uimaj/trunk/PearPackagingMavenPlugin</a>. 
+		  <a class="external" href="http://svn.apache.org/repos/asf/uima/uimaj/trunk/PearPackagingMavenPlugin">
+		  http://svn.apache.org/repos/asf/uima/uimaj/trunk/PearPackagingMavenPlugin</a>. 
 		</p>
 	</subsection>
 
@@ -172,8 +172,8 @@ http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>.
 		   <a href="downloads/sandbox/DictionaryAnnotatorUserGuide/DictionaryAnnotatorUserGuide.html">
 		  Click here to access the user documentation</a>.
 		  The Java source of the annotator can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/DictionaryAnnotator">
-		  http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/DictionaryAnnotator</a>.
+		  <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/DictionaryAnnotator">
+		  http://svn.apache.org/repos/asf/uima/sandbox/trunk/DictionaryAnnotator</a>.
 		</p>	
 	</subsection>
 
@@ -185,8 +185,8 @@ http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>.
       <a href="downloads/sandbox/FsVariablesUserGuide/FsVariablesUserGuide.html">
       Click here to access the user documentation</a>.
 		  The Java source of the project can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/FsVariables">
-		  http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/FsVariables</a>.
+		  <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/FsVariables">
+		  http://svn.apache.org/repos/asf/uima/sandbox/trunk/FsVariables</a>.
 		</p>	
 	</subsection>
 
@@ -202,8 +202,8 @@ http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>.
           <a href="downloads/sandbox/hmmTaggerUsersGuide/hmmTaggerUsersGuide.html">
       Click here to access the user documentation</a>. 
           The Java source of the annotator can be accessed in the SVN repository at 
-          <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/Tagger">
-          http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/Tagger</a>.
+          <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/Tagger">
+          http://svn.apache.org/repos/asf/uima/sandbox/trunk/Tagger</a>.
 		</p>	
 	</subsection>
 
@@ -223,8 +223,8 @@ http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/</a>.
 		  Using a scripting language can be very handy to do quick prototyping, pre/post processing, CAS cleaning tasks or 
 		  typeystem conversion/adaptation.
 		  The Java source of the annotator can be accessed from the SVN repository at
-		  <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/BSFAnnotator">
-          http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/BSFAnnotator</a>.
+		  <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/BSFAnnotator">
+          http://svn.apache.org/repos/asf/uima/sandbox/trunk/BSFAnnotator</a>.
 		</p>	
 	</subsection>
 
@@ -270,7 +270,7 @@ document; used by the FileSystemCollectionReader</dd>
         <p><a href="downloads/sandbox/LuceneCASConsumerUserGuide/LuceneCASConsumerUserGuide.html">
       Click here to access the user documentation</a>.
           The Java source of the consumer can be accessed in the 
-            <a href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/Lucas">
+            <a href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/Lucas">
             SVN repository</a>.
         </p>
     </subsection>
@@ -289,8 +289,8 @@ document; used by the FileSystemCollectionReader</dd>
 			The Java source of the annotator can be accessed from the
 			SVN repository at
 			<a class="external"
-				href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/SimpleServer">
-				http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/SimpleServer
+				href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/SimpleServer">
+				http://svn.apache.org/repos/asf/uima/sandbox/trunk/SimpleServer
 			</a>.
 		</p> 
 	</subsection>
@@ -304,8 +304,8 @@ document; used by the FileSystemCollectionReader</dd>
 		  For details about the OpenCalais analytics and the license to use the service, please refer to the
 		  to the <a class="external" href="http://www.opencalais.com/Overview">OpenCalais</a> website.
           The Java source of the annotator can be accessed in the SVN repository at 
-          <a class="external" href="http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/OpenCalaisAnnotator">
-          http://svn.apache.org/repos/asf/incubator/uima/sandbox/trunk/OpenCalaisAnnotator</a>.
+          <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/OpenCalaisAnnotator">
+          http://svn.apache.org/repos/asf/uima/sandbox/trunk/OpenCalaisAnnotator</a>.
        </p>
 	</subsection>
   

@@ -67,7 +67,7 @@
      </td></tr></table>
    </p>
    <p>
-	The Apache UIMA incubator project provides two Apache licensed UIMA framework implementations, 
+	The Apache UIMA project provides two Apache licensed UIMA framework implementations, 
 	one for Java and one for C++, and an extension to support Asynchronous Scaleout, called UIMA-AS.
    </p>
 
