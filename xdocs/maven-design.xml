@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>How we use Maven for building</title>
+<author email="dev@uima.apache.org">
+ UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+<p>This is developer information, mostly.  It documents how we are using Maven for
+building the various parts of UIMA.</p>
+
+<p>We are currently using the Apache common parent POM which supports deployment to
+the Apache Nexus repository, for staging and release. You can see that POM 
+<a href="http://repo1.maven.org/maven2/org/apache/apache/7/apache-7.pom" target="_blank">
+  here</a></p>
+
+<section name="POM Conventions">
+  <p>We follow the conventions regarding the layout of the POM as specified 
+    <a target="_blank" 
+      href="http://maven.apache.org/developers/conventions/code.html#POM_Code_Convention">
+      here</a>.</p> 
+</section>
+
+<section name="Our POM hierarchy">
+
+<p>POMs have two kinds of hierarchy. The main one is used for factoring out common 
+things and arranges POMs in a parent-child hierarchy, by having the child 
+identify the parent POM.  The other kind is aggregation - POMs which specify sub-modules
+for purposes of building multi-module things, and releasing them all at once.  For clarity,
+we keep these two uses in separate POMs:  parent POMs do not do aggregation, 
+and aggregation POMs do not do common factoring.</p>
+
+<p>Our parent poms are kept in a folder, under a top level SCM node called "build", which holds things
+  needed for building, but which are not part of normal aggregate distributions.
+  Aggregation POMs are kept with the SCM node focused on those modules being aggregated.</p>
+</section>    
+
+<section name="POM style">
+  <p>When writing a new POM, it is best to start with an existing POM for a similar
+    kind of project, and derive the new POM from that.  Some points:
+    <ul>
+      <li>POMs contain a &lt;url> element.  If they don't, they will inherit from their parent
+        following an assumption that the url is the parent url value followed by "/" and
+        this POMs artifactId.  This may or may not be how our website is set up, so 
+        it is best to just code the url that is correct for the new project.</li>
+      <li>The SCM connection is needed for releasing - and needs to be accurate for this
+        component.</li>
+      <li>The POM's "version" is stated literally, not via a "property", etc.  Maven 3 
+        will complain if you use properties here, and the release mechanism for maven
+        manipulates these values (removing SNAPSHOT, incrementing things, etc.)</li>
+      <li>The POM's groupId is usually omitted - in which case, it inherits from the
+        parent.  Doing this is a recommended best practice.</li>      
+    </ul>
+    </p>
+</section>
+</body>
+</document>
