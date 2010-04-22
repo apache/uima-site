@@ -1,0 +1,55 @@
+--------------------------------------------------------
+Attachment AA: Status report for the Apache UIMA Project
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Moving to TLP
+-------------
+Apache UIMA graduated from the incubator last month; this is its first
+report to the Board.  The top level project infrastructure was set up on
+April 9th, and SVN was moved on April 13.  Our web-site has been moved
+to the TLP position.  Nexus support is now initialized, and we are
+working to update our build process to follow more conventional Apache /
+Maven ways, including inheriting from the Apache common POM.
+
+We have more work to do to complete the move to a TLP, including
+removing the incubation notices and making a first release as a TLP.
+
+Releases
+--------
+none yet (as a TLP)
+
+2010-1-26 2.3.0 (Incubator - last release) release of Java SDK, Annotator 
+                add-on package, UIMA-AS (Async scaleout), and UIMA-CPP 
+                (C++ enablement)
+
+Development
+-----------
+It was relatively quiet during the first part of the month, as we were 
+awaiting our move from the incubator to become a TLP.  Subsequently, 
+there has been lots of activity to complete TLP migration, and 
+realign our maven build process to use NEXUS and the standard Apache 
+parent POM.
+
+The AlchemyAPI Annotator component in the sandbox is making significant 
+progress.
+
+An ongoing effort to make individual annotators available as OSGi
+bundles is underway; we are trying to do things the same way that
+Apache Felix-Commons does this.  There are some questions remaining
+to figure out about this approach though, which are being discussed
+on the development list.
+
+A significant number of issues remain in Jira, postponed from the
+last release.  There has been some progress on these, and 
+a few new ones have been raised.
+
+Community
+---------
+No changes
+
+Issues
+------
+No Board level issues at this time
