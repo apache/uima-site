@@ -73,6 +73,13 @@ and aggregation POMs do not do common factoring.</p>
         parent.  Doing this is a recommended best practice.</li>      
     </ul>
     </p>
+  <p>Maven 3 has more requirements on POMs
+    <p>A transition to Maven 3 is occuring in 2010.  The Eclipse plugin, m2eclipse, "embeds" 
+      Maven 3 already.</p>
+    <ul>
+      <li>Property names have to include their path from project, etc.   For instance, you cannot use
+        ${version}, you have to use ${project.version}.</li>
+    </ul></p>
 </section>
 </body>
 </document>
