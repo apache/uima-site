@@ -205,8 +205,8 @@
         &lt;phase&gt;package&lt;/phase&gt;
         &lt;configuration&gt;
            &lt;classpath&gt;$main_root/lib/sample.jar&lt;/classpath&gt;
-           &lt;mainComponentDesc&gt;desc/${artifactId}.xml&lt;/mainComponentDesc&gt;
-           &lt;componentId&gt;${artifactId}&lt;/componentId&gt;
+           &lt;mainComponentDesc&gt;desc/${project.artifactId}.xml&lt;/mainComponentDesc&gt;
+           &lt;componentId&gt;${project.artifactId}&lt;/componentId&gt;
            &lt;datapath&gt;$main_root/resources&lt;/datapath&gt;
         &lt;/configuration&gt;
         &lt;goals&gt;
