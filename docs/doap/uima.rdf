@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+  
+  http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns="http://usefulinc.com/ns/doap#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:labs="http://labs.apache.org/doap-ext/1.0#"
+  xmlns:projects="http://projects.apache.org/ns/asfext#">
+  
+  <Project rdf:about="http://uima.apache.org">
+    <name>Apache UIMA</name>
+    <shortname>UIMA</shortname>
+    
+    <shortdesc xml:lang="en">Annotator components and a
+    scalable integration and deployment framework for 
+    Unstructured Information analysis</shortdesc>
+    
+    <description xml:lang="en">The Apache UIMA project supports 
+    the community working on the analysis of unstructured information 
+    with a unifying Java and C++ framework, tooling, 
+    and analysis components, guided by the OASIS UIMA standard.
+    It includes support for very large scaleout using networked 
+    clusters of compute nodes.</description>
+    
+    <homepage rdf:resource="http://uima.apache.org/"/>
+    <license rdf:resource="http://usefulinc.com/doap/licenses/asl20"/>
+    <mailing-list rdf:resource="http://uima.apache.org/mail-lists.html" />
+    <download-page rdf:resource="http://uima.apache.org/downloads.cgi" />
+    <created>2010-04-30</created>
+    <labs:status>active</labs:status>
+    
+    <maintainer>
+      <foaf:Person rdf:about="http://people.apache.org/~thorsten/#me">
+        <foaf:name>Marshall Schor</foaf:name>
+        <foaf:homepage rdf:resource="http://people.apache.org/~schor/"/>
+      </foaf:Person>
+    </maintainer>
+    <repository>
+      <SVNRepository>
+        <location rdf:resource="http://svn.apache.org/repos/asf/uima/"/>
+        <browse rdf:resource="http://svn.apache.org/viewcvs/uima/"/>
+      </SVNRepository>
+    </repository>
+    <programming-language>Java</programming-language>
+    <programming-language>C++</programming-language>
+  </Project>
+</rdf:RDF>
