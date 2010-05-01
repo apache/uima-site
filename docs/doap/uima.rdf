@@ -9,8 +9,7 @@
 
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns="http://usefulinc.com/ns/doap#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
-  xmlns:labs="http://labs.apache.org/doap-ext/1.0#"
-  xmlns:projects="http://projects.apache.org/ns/asfext#">
+  xmlns:asfext="http://projects.apache.org/ns/asfext#">
   
   <Project rdf:about="http://uima.apache.org">
     <name>Apache UIMA</name>
@@ -36,10 +35,9 @@
     <mailing-list rdf:resource="http://uima.apache.org/mail-lists.html" />
     <download-page rdf:resource="http://uima.apache.org/downloads.cgi" />
     <created>2010-04-30</created>
-    <labs:status>active</labs:status>
     
     <maintainer>
-      <foaf:Person rdf:about="http://people.apache.org/~thorsten/#me">
+      <foaf:Person rdf:about="http://people.apache.org/~schor">
         <foaf:name>Marshall Schor</foaf:name>
       </foaf:Person>
     </maintainer>
