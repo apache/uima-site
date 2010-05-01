@@ -197,11 +197,11 @@ under the License.
   #if ($project.getChild("logo"))
     #set ( $logoString = $project.getChild("logo").getAttributeValue("href") )
     #if ( $logoString.startsWith("/") )
-      <a href="$project.getChild("incubator").getAttributeValue("href")">
+      <a href="http://www.apache.org">
         <img src="$relativePath$logoString" alt="$project.getChild("logo").getText()" border="0"/>
       </a>
     #else
-      <a href="$project.getChild("incubator").getAttributeValue("href")">
+      <a href="http://www.apache.org">
         <img src="$relativePath/$logoString" alt="$project.getChild("logo").getText()" border="0"/>
       </a>
     #end
@@ -267,15 +267,15 @@ under the License.
                 <!-- TOP IMAGE -->
                 <tr>
                     <td align='LEFT'>
-                    #getApacheImage()
+                      <a href="index.html">
+                        #getProjectImage()
+                      </a>
                     </td>
                     <td align='CENTER'>
                     #getBannerTitle()
                     </td>
                     <td align='RIGHT'>
-                      <a href="index.html">
-                    #getProjectImage()
-                    </a>
+                      #getApacheImage()
                     </td>
                 </tr>
             </table>
