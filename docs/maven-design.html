@@ -187,6 +187,8 @@ and aggregation POMs do not do common factoring.</p>
                                                 <p>Our parent poms are kept in a folder, under a top level SCM node called "build", which holds things
   needed for building, but which are not part of normal aggregate distributions.
   Aggregation POMs are kept with the SCM node focused on those modules being aggregated.</p>
+                                                <p class="note">A recent change in Maven 3 now requires that POMs whose parent poms are not in the
+    parent directory, have an empty &lt;relativePath/&gt; element.</p>
                             </blockquote>
         </p>
       </td></tr>
@@ -232,51 +234,25 @@ and aggregation POMs do not do common factoring.</p>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>For each Java source artifact, the Apache standard parent POM builds and attaches a source zip and a Javadocs zip
+                                    <p>Kinds of documentation:</p>
+                                                <ul>
+    <li>Javadoc</li>
+    <li>The source itself</li>
+    <li>Docbook</li>
+    <li>UIMA Website (Anakia)</li>
+    </ul>
+                                                <p>For each Java source artifact, the Apache standard parent POM builds and attaches 
+    a <ul><li>source zip, and a</li><li>Javadocs zip</li></ul>
   to the main Jar artifact.  It doesn't do any standard actions for other documentation (e.g., docbook style).</p>
-                                                <p>We use Docbook style for much of our other documentation, the main exception being our website, which uses Anakia.
-    Documentation is typically built using a different lifecycle in maven, called the "site" lifecycle.
-    Maven supports site deployment via additional &lt;site&gt; element in the &lt;distributionManagement&gt; POM element;
-    this is used to direct deployment to the website staging area.</p>
+                                                <p>We use Docbook style for much of our other documentation, 
+    the main exception being our website, which uses Anakia.
+    See <a href="dev-docbook.html">the development docbook page</a> for details.</p>
                                                 <p>Normally, all website content is kept in SVN in the uima/site/trunk/uima-website/docs directory; this directory is
-    checked out into the right spot on people.apache.org.  For large generated documents, we have the option to
-    generate them from sources in svn, and deploy them directly to the right spot on people.apache.org.  This avoids
+    checked out into the right spot on people.apache.org.  For large generated documents, 
+    we have the option to generate them from sources in svn, and deploy them directly to the right spot on people.apache.org.  This avoids
     using SVN for large generated files.  This satisfies the 
-    <a href="http://apache.org/dev/project-site.html" target="_blank">requirements</a> for Apache websites.</p>
-                                                <h2>Docbook Support</h2>
-                                                <p>Most user-level documentation guides are written using 
-      <a href="http://www.docbook.org/" target="_blank">Docbook</a>.  
-    All docbooks are drafted using a one-docbook-per-project approach.  If you need more than one, just create
-    multiple projects.  This is required because of the way maven supports inheritance.  The 
-    main UIMA documentation is contained in several projects, because it consists of multiple "books".
-    </p>
-                                                <p style="padding-left: 2em">Docbooks are usually included in projects that produce other artifacts, e.g., Jars.  Or,
-      they can be in projects which only produce a docbook (in which case, the maven packaging type
-      should be set to "pom").</p>
-                                                <p>Docbooks can hyperlink to each other.  This linking includes the ability to reference details 
-      about the other link, for instance, what "page" (for PDF rendering formats) the link is on.
-      To make this work, the docbook tool pipeline needs to keep a central database for all docbooks
-      that want to provide this information.  When a docbook is processed, this information is updated,
-      and is then available when other docbooks are processed.
-      </p>
-                                                <p>In our implementation, projects make their olink information available by having that file
-      (which is produced or updated as a side effect of running the docbkx maven plugin) "attached"
-      to the results produced by maven for this project. 
-      Other docbooks which have links to resolve copy those artifacts into a specific place in their
-      build directory, using the maven dependency plugin using the dependency:unpack goal.  
-    </p>
-                                                <p>Given that docbooks are often a part of other projects, which have normal Maven install
-      phases, and that docbook processing can take a long time, the docbook processing is not normally
-      done with the install phase; it is normally bound to the pre-site phase.  
-      It can be forced to be done when using the install phase by using "docbook" profile (
-      specify -Pdocbook as a parameter on the "mvn" command line; multiple profiles are allowed 
-      using the syntax -Pdocbook,otherProfile).
-      </p>
-                                                <p>Docbook processing is normally done in the pre-site phase; this processing includes 
-      attaching the zipped up results (html, pdf, and olink database)
-       to the set of artifacts so they can be installed or deployed.  Future assembly runs 
-       use these artifacts as components within the assemblies.
-    </p>
+    <a href="http://apache.org/dev/project-site.html" target="_blank">requirements</a>
+    for Apache websites.</p>
                             </blockquote>
         </p>
       </td></tr>
@@ -292,13 +268,37 @@ and aggregation POMs do not do common factoring.</p>
     when built produces maven artifacts in repositories (your local repository, or perhaps uploaded 
     to a snapshot or staging repository).</p>
                                                 <p>When releases are done, additional artifacts are constructed using the distribution assemblies.
-    The input to these are the already built artifacts in the local repository.</p>
+     </p>
                                                 <h2>Distribution Pom - Clean phase</h2>
                                                 <p>The clean phase
-    of the distribution POMs includes running the dependency plugin to purge the local repository of
-    dependencies, and then the aggregation pom so they will be rebuilt, with current checked-out levels.
-    This is done with the "docbook" profile, so any docbooks will be rebuilt.
+    of the distribution POMs includes running the dependency:purge-local-repository plugin 
+    to purge the local repository of dependencies.    
   </p>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Parent Pom Hierarchy"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Parent Pom Hierarchy</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>Parent pom names start with parent-pom-:</p>
+                                                <pre>
+  top
+  
+    docbook
+    
+      uimaj
+      
+        uimaj-eclipse-plugins
+        
+          uimaj-eclipse-plugins-ibm-notice
+          
+        uimaj-ibm-notice         
+  </pre>
                             </blockquote>
         </p>
       </td></tr>
