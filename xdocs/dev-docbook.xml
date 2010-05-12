@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>Using Docbook for documentation</title>
+<author email="dev@uima.apache.org">
+ UIMA Documentation Team</author>
+</properties>
+
+<body>
+  <p>This page is for developers, and describes how we use 
+     <a href="http://www.docbook.org/" target="_blank">Docbook</a> for 
+     technical documentation.  
+      Docbook files can be incorporated with projects and processed as part of the
+      Maven build.</p>   
+    
+    <p style="padding-left: 2em">Docbooks are usually included in projects that 
+      produce other artifacts, e.g., Jars.  They can also be 
+      in projects which only produce a docbook (in which case, the maven packaging type
+      should be set to "pom").
+      The current implementation allows 0 or 1 "book" to be produced, per project.
+    </p>
+    
+    <p>Docbooks can hyperlink to each other.  This linking includes the ability to reference details 
+      about the other link, for instance, what "page" (for PDF rendering formats) the link is on.
+      To make this work, the docbook tool pipeline keeps a central database, 
+      called the Olink Database, for all docbooks
+      that want to provide this information.  When a docbook is processed, this information is updated,
+      and is then available when other docbooks are processed.
+      </p>
+
+    <p>Docbook processing is activated by default for all projects that have 
+      docbook source in the normal folder position in the project (src/docbook). 
+      Docbook processing is
+      bound to the prepare-package and package phases.  It can be skipped from the 
+      command line by specify the negation of the profile "processDocbook" using the
+      Maven command line option <code>-P !processDocbook</code>.
+      </p>
+           
+  <section name="UIMA Docbook Bookshelf">
+    <p>To facilitate cross referencing among UIMA docbooks, we ask users
+      when downloading these books to place the downloaded files in a common
+      directory, which we refer to as the UIMA bookshelf.</p>
+      
+    <p>When this is done, the user will be able to follow cross reference
+      linkages within the downloaded books, without needing an internet 
+      connection.</p>    
+  </section>
+     
+  <section name="Docbook Conventions used">    
+    
+    <p>The build tooling expects the following conventions to 
+    be followed:</p>
+    
+    <ul>
+      <li>Docbook source(s) should be put in the directory src/docbook/.  The 
+        existance of this directory is what causes the normal parent pom chain
+        to notice that docbook processing is needed during the build.</li>
+      <li>Currently, the docbooks are written to the 4.4 version of Docbook;
+        begin your files with the standard boilerplate (best to copy from another
+        docbook in the "set".</li>
+      <li>There is one designated file specified in project's POM as the property
+        "&lt;bookNameRoot>" which must have as its value the name of the docbook
+        source file to process, minus the ".xml".  This supports breaking large
+        docbooks into multiple parts, perhaps one per "chapter"; you have one
+        top-level docbook which xincludes the other parts.  See the file
+        uima-docbook-overview-and-setup/src/docbook/overview-and-setup.xml for
+        an example of using this technique.
+        <p>The bookNameRoot name serves also as the book "name" 
+          and must be unique among all the docbooks in the UIMA bookshelf.</p>
+      </li>
+      <li>The first part of the top docbook source must include the line:
+        <pre>&lt;xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+  href="../../target/docbook-shared/common_book_info.xml"/></pre>
+        This allows it to pick up the standard license, disclaimers, and copyright notices.
+        Please set the POM element &lt;inceptionYear>; this is used in the copyright notice.
+      </li>
+      <li>Xinclude support is automatically provided by the docbkx toolchain; you do not have to set 
+        XML entities for this at the top of your file.</li>
+      <li>Images to be included are by convention expected be located in a folder named 
+        "images/[bookNameRoot]", which is located in the same parent directory as
+        the top docbook source file.  The [bookNameRoot] is the name of the top docbook source
+        file, less the ".xml".  The "extra" directory under "images" is used to separate
+        images from the different docbooks in the uima bookshelf.</li>
+      <li>Standard entities may be included, using the form:
+        <pre>&lt;!ENTITY imgroot
+  "images/insert-booknameroot-here/optional-sub-dir/">
+&lt;!ENTITY % uimaents SYSTEM 
+  "../../target/docbook-shared/entities.ent">  
+%uimaents;</pre>
+        <p>The docbook-shared/entities... are common shared entities you can use; please
+          see the source for the list, located here:
+          <a href="http://svn.apache.org/repos/asf/uima/build/trunk/uima-docbook-resource-bundle/src/main/resources/docbook-shared/entities.ent"
+             target="_blank">here</a>.</p></li>
+    </ul>
+  </section>
+  
+  <section name="Cross Referencing among UIMA Docbooks">
+    <p>Docbooks support an enhanced cross-referencing among
+      docbook collections, using a link style called "olink".
+      Olinks allow cross-referencing and
+      hyperlinking among documents, using extra saved information about the
+      target document (being linked to, as contrasted with plain href style
+      links, which only have the link url). For instance, in PDFs, there's
+      extra info enabling the referring doc to say "page 123 in document abc".
+      For PDF and HTML, olinks allow the referring text to include a hyperlink
+      which includes target document's element title, and maybe a number (if it
+      has numbered items - such as our chapter / section numbers in the main
+      UIMA documentation). So you can get a link that looks like this:
+      <ul><li>see Section 1.5.1, ?Annotator Methods?</li></ul>
+      where the 1.5.1 was generated by docbook processing, and the "Annotator
+      Methods" was the title of that section.</p>
+    
+    <p>
+      To make olinks work, each time a docbook is processed, an extra database
+      of info for that docbook is created, containing just the things needed for
+      this. This database, together with some other data about how the
+      multiple interlinking docbooks are arranged, is then
+      used when processing a docbook.      
+    </p>
+     
+    <p>
+      Olink data for all UIMA docbooks is stored in one additional project,
+      uima-docbook-olink, that has an attached artifact: a zip file of all 
+      olink data. 
+    </p>
+      
+    <p>
+      This project is at the level 1-SNAPSHOT, and will stay there.  
+      Because it's a snapshot, it is updated whenever it is "deployed".
+      Each docbook processing run updates that docbook's olink data.
+      Committers should deploy the snapshot to share updates of olink
+      data with others.
+    </p>                               
+    
+  </section>
+  
+  <section name="Creating a new Docbook">
+    <p>
+      <ul>
+        <li>Add a src/docbook directory, and put an images directory there 
+          for new images (if you have images), and one or more XML files containing docbook source.</li>
+        <li>Put the name of the top docbook xml file in the project's docbookNameRoot property</li>
+        <li>Add this docbook to the UIMA bookshelf - modifying the uima-docbook-olink project's 
+          src/main/docbook-olink/{html, htmlsingle, and pdf}/site.xml files.
+          <ul><li>Add a stanza to the site-map, and</li>
+            <li>add an entity for the docbookNameRoot at the top of the site file.</li>
+            </ul>
+          </li>
+      </ul>
+    </p>
+  </section>
+</body>
+</document>

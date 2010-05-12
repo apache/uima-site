@@ -182,13 +182,11 @@
 things and arranges POMs in a parent-child hierarchy, by having the child 
 identify the parent POM.  The other kind is aggregation - POMs which specify sub-modules
 for purposes of building multi-module things, and releasing them all at once.  For clarity,
-we keep these two uses in separate POMs:  parent POMs do not do aggregation, 
+we mostly keep these two uses in separate POMs:  parent POMs do not do aggregation, 
 and aggregation POMs do not do common factoring.</p>
                                                 <p>Our parent poms are kept in a folder, under a top level SCM node called "build", which holds things
   needed for building, but which are not part of normal aggregate distributions.
   Aggregation POMs are kept with the SCM node focused on those modules being aggregated.</p>
-                                                <p class="note">A recent change in Maven 3 now requires that POMs whose parent poms are not in the
-    parent directory, have an empty &lt;relativePath/&gt; element.</p>
                             </blockquote>
         </p>
       </td></tr>
@@ -205,22 +203,27 @@ and aggregation POMs do not do common factoring.</p>
     <ul>
       <li>POMs contain a &lt;url&gt; element.  If they don't, they will inherit from their parent
         following an assumption that the url is the parent url value followed by "/" and
-        this POMs artifactId.  This may or may not be how our website is set up, so 
-        it is best to just code the url that is correct for the new project.</li>
+        this POMs artifactId.  If this does not correspond to how the website is set up,
+        please specify the url that is correct for the new project.
+        In the Maven spirit of convention over configuration, 
+        web pages for specific projects (such as the
+        individual annotators) will be set up this way, so the &lt;url&gt; element can be
+        omitted.</li>
       <li>The SCM connection is needed for releasing - and needs to be accurate for this
         component.</li>
       <li>The POM's "version" is stated literally, not via a "property", etc.  Maven 3 
         will complain if you use properties here, and the release mechanism for maven
         manipulates these values (removing SNAPSHOT, incrementing things, etc.)</li>
-      <li>The POM's groupId is usually omitted - in which case, it inherits from the
-        parent.  Doing this is a recommended best practice.</li>      
+      <li>The POM's groupId is omitted if it is the same as the parent pom's; it inherits from the
+        parent.</li>
+      <li>The packaging is omitted if it is "jar".</li>      
     </ul>
     </p>
                                                 <p>Maven 3 has more requirements on POMs
     <p>A transition to Maven 3 is occuring in 2010.  The Eclipse plugin, m2eclipse, "embeds" 
       Maven 3 already.</p>
     <ul>
-      <li>Property names have to include their path from project, etc.   For instance, you cannot use
+      <li>Build variable names have to include their path from project, etc.   For instance, you cannot use
         ${version}, you have to use ${project.version}.</li>
     </ul></p>
                             </blockquote>
@@ -241,18 +244,112 @@ and aggregation POMs do not do common factoring.</p>
     <li>Docbook</li>
     <li>UIMA Website (Anakia)</li>
     </ul>
-                                                <p>For each Java source artifact, the Apache standard parent POM builds and attaches 
-    a <ul><li>source zip, and a</li><li>Javadocs zip</li></ul>
-  to the main Jar artifact.  It doesn't do any standard actions for other documentation (e.g., docbook style).</p>
                                                 <p>We use Docbook style for much of our other documentation, 
     the main exception being our website, which uses Anakia.
     See <a href="dev-docbook.html">the development docbook page</a> for details.</p>
-                                                <p>Normally, all website content is kept in SVN in the uima/site/trunk/uima-website/docs directory; this directory is
+                                                <p>For each Java source artifact, when the apache-release profile is specified (usually during the
+    release process), the Apache standard parent POM builds and attaches 
+    a <ul><li>source zip, and a</li><li>Javadocs zip</li></ul>
+  to the main Jar artifact.  It doesn't do any standard actions for other documentation (e.g., docbook style).
+    Docbooks are built during the normal lifecycle.</p>
+                                                <p>Normally, all website-ready content is kept in SVN in the uima/site/trunk/uima-website/docs directory; this directory is
     checked out into the right spot on people.apache.org.  For large generated documents, 
-    we have the option to generate them from sources in svn, and deploy them directly to the right spot on people.apache.org.  This avoids
-    using SVN for large generated files.  This satisfies the 
+    we have the option to generate them from sources in svn, and deploy them directly to the right spot on people.apache.org.  
+    This avoids using SVN for large generated files.  This satisfies the 
     <a href="http://apache.org/dev/project-site.html" target="_blank">requirements</a>
     for Apache websites.</p>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Packaging Individual Projects"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Packaging Individual Projects</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>
+    The UIMA Project, in addition to the main frameworks, has Annotators and other components and tools 
+    (such as the SimpleServer) that it releases.  These in the past have been released as a big
+    assembly we called the Sandbox, but now are are being supported as individual items.
+  </p>
+                                                <p>
+    There are two kinds of packaging for these supported, by using one of the following parent-poms:
+    <ul><li>parent-pom-annotator - this packages things as a PEAR</li>
+      <li>parent-pom-single-project - this packages things as a tar / zip file having a lib/ directory
+        with the generated Jar and dependencies, plus other files (see below).</li></ul>
+  </p>
+                                                <p>
+    The individual Annotators are mostly packaged as a 
+    <a href="http://uima.apache.org/downloads/releaseDocs/2.3.0-incubating/docs/html/references/references.html#ugr.ref.pear">
+      PEAR</a> file, which is the UIMA standard for annotator component packaging and distribution.
+    The Pear is generated using the PearPackagingMavenPlugin, which generates automatically a
+    conventional Pear Installation Descriptor, from the information in the project.    
+    The PEAR artifact is generated in addition to Jar of the code, and includes
+    other items such as the generated documentation, data, and a lib/ directory with other Jars
+    needed for the PEAR to operate.  This PEAR is the packaged equivalent of a binary distribution
+    artifact produced for the main framework, and comes with a license and notice that
+    covers any included libraries.  Generated PEARs are included in the artifacts that are managed by
+    Maven, and are available in the Maven repository system.
+  </p>
+                                                <p class="note">
+    The PEAR internal folder "src" is not used by components here; the source is instead available 
+    via the standard Maven source packaging.
+  </p>
+                                                <p>
+    Projects indicate they want PEAR packaging by making the parent pom be parent-pom-annotator.
+  </p>
+                                                <p>
+    PEARs must have a "main" descriptor, which is the one normally used to configure and run 
+    the annotator.  When using the parent-pom-annotator to indicate PEAR packaging, you must include a property called
+    &lt;pearMainDescriptor&gt; in the Annotator's POM, whose value is the path from the project base directory
+    identifying the main descriptor.  For example, if the folder "desc" was at the root of your project, the 
+    value might be something like "desc/my-main-descriptor.xml".
+  </p>
+                                                <p>If an annotator isn't suitable for PEAR packaging, perhaps because it is inappropriate to have 
+    one pre-done main descriptor, then the annotator can be packaged as a single-project, instead, by 
+    making the POM's parent parent-pom-single-project.</p>
+                                                <h2>Conventions for structuring individually releaseable projects</h2>
+                                                <p>Use these conventions to get your annotator properly packaged when you use the parent-pom-annotator or 
+    the parent-pom-single-project as your parent pom:
+    <ul>
+      <li>Use &lt;package&gt;jar&lt;/package&gt; (which is the default, so it should be omitted), if there
+        is a Jar that should be built (as is usually the case).  This will cause the main
+       annotator Jar to be built, including any resources (plus the top-level desc folder, if it exists), as normal.</li>
+      <li>Create the required License, Notice, and optional Readme, and Release Notes files 
+        in the project directory at the top level; these will be included in the
+        PEAR or simple project binary assembly at the top level.  
+        The License and Notice files should be for the entire project, including
+        all third-party Jars etc. being distributed.
+        <p style="margin-left: 2em">The generated Jar, which only has Apache-developed code, includes
+          the normal Apache License and Notice files.</p></li>
+      <li>Dependencies: those marked with scope "compile" (the default) or "runtime"
+        are copied to the PEAR or single-project's lib/ directory.  To keep a dependency needed for compiling
+        from being included in the lib/, give it a scope of "provided".</li>
+      <li>Using the following folders at the top level of your project (which is the "conventional" PEAR layout, 
+        will cause the contents of these folders to be added to the corresponding files in the PEAR or binary zip/tar:
+        <ul>
+          <li>desc - for descriptiors, including the main descriptor</li>
+          <li>bin - (optional) for extra executables</li>
+          <li>lib - (optional) for libraries (not being included via the Maven dependencies mechanism)</li>
+          <li>doc - (optional) not normally used, but can have additional user-ready documentation</li>
+          <li>data - (optional) for arbitrary data</li>
+          <li>resources - (optional) not normally used, but can have additional data which should be on the classpath</li>
+          <li>conf - (optional) for extra configuration files</li>
+          <li>src - not-used</li> 
+        </ul>
+        <p>The following Maven conventional information will be added to the above:
+        <ul>
+          <li>lib - dependencies with scope "compile" or "runtime" are resolved from maven repositories and added to the lib/</li>
+          <li>doc - docbook sources under src/docbook are processed and the html and pdf forms are added</li>
+          <li>Maven resources - (not the top level resources directory described above) 
+            are by convention included in the Jar, and are not included in this folder</li>
+        </ul>
+        </p>  
+      </li>
+    </ul>
+  </p>
                             </blockquote>
         </p>
       </td></tr>
@@ -268,12 +365,48 @@ and aggregation POMs do not do common factoring.</p>
     when built produces maven artifacts in repositories (your local repository, or perhaps uploaded 
     to a snapshot or staging repository).</p>
                                                 <p>When releases are done, additional artifacts are constructed using the distribution assemblies.
-     </p>
-                                                <h2>Distribution Pom - Clean phase</h2>
-                                                <p>The clean phase
-    of the distribution POMs includes running the dependency:purge-local-repository plugin 
-    to purge the local repository of dependencies.    
+    We have these for
+    <ul>
+      <li>UIMA - the base Java framework</li>
+      <li>UIMA-AS - the asynchronous scaleout add-on</li>
+      <li>UIMA Add-ons - not decided yet, but it's likely we'll just release these as individual projects.  
+        So there is no add-ons-distr project (yet).</li>
+      <!--li>UIMA Add-ons - annotators and other add-on components such as the SimpleServer</li-->
+      <li>UIMACPP - the C++ framework</li>
+    </ul>
   </p>
+                                                <h2>Distribution Pom - Clean phase</h2>
+                                                <p>The clean phase of the distribution POMs includes running the dependency:purge-local-repository plugin 
+    to purge the local repository of dependencies, when activated by the apache-release profiles.    
+  </p>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Build resources"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Build resources</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>During the build process, several resources are used, and are built into Maven Artifact Jars with
+    Maven coordinates:
+    <ul>
+      <li>uima-jar-resource-bundle - this is the standard License Notice and Dependencies from the 
+        Apache common parent pom, except it allows adding post-Notice text.  We use this when 
+        we need to include the IBM Copyright notice, moved here from donated code from IBM.</li>
+      <li>uima-docbook-olink - this is the shared olink data.  This project's source contains the 
+        information about the UIMA Bookshelf - the set of books that can cross-reference each other,
+        and how they're laid out (current layout - they all are subitems of one common directory).
+      </li>
+      <li>uima-docbook-resource-bundle - holds common information needed by docbook builds, including
+        the specification for the titlepage.</li>
+      <li>uima-assembly-single-project - holds the binary assembly descriptor for single-projects.</li>
+    </ul></p>
+                                                <p>There is also one custom Maven plugin (uima-build-helper-maven-plugin) - to get the build month and build year into properties.
+      This is used, for instance, in the common docbook frontmatter - to indicate when the book was
+      built.</p>
                             </blockquote>
         </p>
       </td></tr>
@@ -287,18 +420,20 @@ and aggregation POMs do not do common factoring.</p>
         <blockquote class="sectionBody">
                                     <p>Parent pom names start with parent-pom-:</p>
                                                 <pre>
-  top
+  parent-pom-top
   
-    docbook
+    parent-pom-docbook
+
+      parent-pom-ibm-notice         
     
-      uimaj
-      
-        uimaj-eclipse-plugins
+      parent-pom-eclipse-plugins
         
-          uimaj-eclipse-plugins-ibm-notice
-          
-        uimaj-ibm-notice         
-  </pre>
+         parent-pom-eclipse-plugins-ibm-notice
+      
+      parent-pom-annotator
+      
+      parent-pom-single-project          
+</pre>
                             </blockquote>
         </p>
       </td></tr>

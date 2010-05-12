@@ -1,0 +1,46 @@
+--------------------------------------------------------
+Attachment AK: Status report for the Apache UIMA Project
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Moving to TLP
+-------------
+In the last month, we completed our move to a TLP, and are almost finished
+with the updates needed for making use of a major redesign of how we use Maven 
+to do our builds and releases that uses the standard Apache Maven Parent POM 
+and the Apache Nexus repository installation.  
+
+The website was updated to remove "incubator" things, including some graphics.
+
+Releases
+--------
+none yet (as a TLP), we hope to do one in the next month or 2.
+
+2010-1-26 2.3.0 (Incubator - last release) release of Java SDK, Annotator 
+                add-on package, UIMA-AS (Async scaleout), and UIMA-CPP 
+                (C++ enablement)
+
+Development
+-----------
+Lots of work in devising a new way to use Maven that is much more aligned
+with the conventional way of doing things.  
+
+We still have a significant number of issues remain in Jira, postponed from the
+last release.  More progress should get made on these after our Maven re-alignment
+work is finished.
+
+Some issues regarding large scale use of UIMA-AS were reported and fixed.  
+
+PR
+--
+Sally Khudairi included a bit about Apache UIMA in her PR blog, etc. this past month (Thanks!).
+
+Community
+---------
+No changes
+
+Issues
+------
+No Board level issues at this time

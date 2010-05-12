@@ -212,12 +212,10 @@
       <tr><td>
         <blockquote class="sectionBody">
                                     <p>Apache UIMA uses 
-<a class="external" rel="nofollow" href="http://subversion.tigris.org">
+<a class="external" rel="nofollow" target="_blank" href="http://subversion.tigris.org">
 Subversion</a> to manage its source code.
 If you're new to Subversion, you can check out the
-<a href="http://svnbook.red-bean.com/">online book</a> about Subversion.
-Note that we are currently using Subversion 1.1.x (there are separate
-versions of the book covering 1.0 and 1.1).
+<a href="http://svnbook.red-bean.com/" target="_blank">online book</a> about Subversion.
 </p>
                                                 <p>
   The code for UIMA is stored in several sections:</p>
@@ -226,6 +224,7 @@ versions of the book covering 1.0 and 1.1).
     <li>http://svn.apache.org/repos/asf/uima/uima-as - the Asynchronous Scaleout add-on for base UIMA</li>
     <li>http://svn.apache.org/repos/asf/uima/sandbox - a collection of add-ons for UIMA including annotators</li>
     <li>http://svn.apache.org/repos/asf/uima/uimacpp - the C++ framework supporting Annotators written in C++</li>
+    <li>http://svn.apache.org/repos/asf/uima/build - Build information and configurations used in building from sources</li>
   </ol>
                                                 <p>  
   Each of these have subdirectories: trunk - for the latest, tags - for preserved copies of releases, 
@@ -383,24 +382,42 @@ via HTTPS, in order to be able to check in changes.
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>To access the SVN repository from Eclipse, you will need to install the Subclipse plugin from the update site
-<a class="external" rel="nofollow" href="http://subclipse.tigris.org/update_1.0.x">
+                                    <p>To access the SVN repository from Eclipse, please use Maven's m2eclipse plugin
+  from <a class="external" rel="nofollow" target="_blank" href="http://m2eclipse.sonatype.org/sites/m2e">
+    http://m2eclipse.sonatype.org/sites/m2e</a>, and
+  the Subclispe plugin from  
+<a class="external" rel="nofollow" target="_blank" href="http://subclipse.tigris.org/update_1.0.x">
 http://subclipse.tigris.org/update_1.0.x</a>.
-
-You can then check out code as follows:
+</p>
+                                                <p class="note">Note that m2eclipse comes with a bundled version of maven 3 included.  If that version is &lt; 3.0.0-beta-1, 
+  please obtain the latest maven 3 build, install it, and then use the preferences for Eclipse Maven to tell
+  it to use the later maven 3 build for running builds.</p>
+                                                <p>The individual projects can be checked out without worrying about relative path 
+  dependencies, except for a few projects that refer to other projects using relative addresses.
+  Currently, the projects which do that are 
+  <ul>
+    <li>the aggregator projects - those special maven projects
+  that only serve to aggregate build operations for a set of other projects, and</li>
+    <li>the "distribution" projects - those that build entire distributions.</li>
+  </ul></p>
+                                                <p>The recommended way to check out many projects at once is to use the command line (non-Eclipse) svn checkout
+  command.  Use this to check out entire sets of projects under one of the trunks, for instance.
+  Once they are checked out, you can import them into an Eclipse workspace using the 
+  File -&gt; Import -&gt; Maven -&gt; Existing Maven Projects. 
+</p>
+                                                <p>You can also check out individual projects using 
 <ol>
 	<li>Bring up the "SVN Repositories" View (from Window -&gt; Show View -&gt; Other)</li>
 	<li>Right click in the SVN Repositories View and select New -&gt; Repository Location.</li>
 	<li>Enter the URL <code>http://svn.apache.org/repos/asf/uima/uimaj/trunk</code> (or <code>https://</code>...)</li>
-	<li>Shift-click to select all of the projects, right click and choose "Checkout..."</li>
+	<li>Shift-click to multi-select the projects you want, right click and choose "Checkout as Maven Projects"</li>
 	<li>Select "Check out into the workspace as projects" and click "Finish"</li>	
-</ol>	
-			
-This will check out all of the code, but as "plain" (that is, not Java) projects.
-To convert the projects to Java projects, you need to do <code>mvn install eclipse:eclipse</code>
-in the uimaj project directory, the uimaj-as project directory, and the SandboxDistr project directory,
-for the base UIMA, UIMA-AS, and the Sandbox Distribution, depending on which ones you checked out. 
-See below for more details on these steps.
+</ol>				
+</p>
+                                                <p class="note">
+  If you check out projects individually, m2eclipse may put them into individual subfolders, causing the 
+  distribution and aggregation projects to no longer have the right relative directory specifications.
+  If this happens, the best thing to do is to re-checkout the entire set of related items in one go.
 </p>
                             </blockquote>
         </td></tr>
@@ -521,21 +538,15 @@ http://jira.atlassian.com/browse/SVN-37</a>.
       <tr><td>
         <blockquote class="sectionBody">
                                     <p>
-Apache UIMA uses Maven 2 to do builds.  Release 2.2.x of Maven, or later, is required.  
-Download Maven from <a class="external" rel="nofollow" href="http://maven.apache.org">
+Apache UIMA uses Maven 2 or 3 to do builds.  Release 2.2.x of Maven, or later, is required.  
+Download Maven from <a class="external" rel="nofollow" target="_blank" href="http://maven.apache.org">
 http://maven.apache.org</a> and add &lt;maven-home&gt;/bin to your path.
 </p>
                                                 <p>
-  The source can be obtain in two ways:
+  The source can be obtained in two ways:
   <ol><li>You can checkout the source from SVN, from trunk, or a particular tagged release, or</li>
     <li>you can use the source version of the release artifact you download from the download
       page.</li></ol>
-</p>
-                                                <p>
-  If you want to build the DocBooks from the Docbook sources, 
-  you need to set up your DocBook tooling by obtaining the needed parts, either from the UIMA SVN
-  or from other places on the web (see below).  Note that the PDF files only build correctly on a 
-  Windows platform (due to font issues).
 </p>
                                                       <table class="subsectionTable" id='building.command.line'>
         <tr><td>
@@ -550,29 +561,27 @@ http://maven.apache.org</a> and add &lt;maven-home&gt;/bin to your path.
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>
-  To build base UIMA from the command line, 
+  These instructions apply to the release 2.3.1 and onwards version. To build base UIMA from the command line, 
 <longquote><pre>
-$&gt; cd uimaj
+$&gt; cd aggregate-uimaj
 $&gt; mvn install
 </pre></longquote>
 </p>
-                                                <p>Builds for uima-as and the sandbox projects work similarly, however the build process requires that
-  base UIMA be in the same containing directory.  If you check out these other projects from SVN,
-  you will need to copy the projects from these checkouts into the same base directory as 
-  base UIMA, so all the projects are siblings within that directory.  The same is true for building
-  from the source distribution.
+                                                <p>Builds for uima-as and the sandbox projects work similarly.  
   </p>
                                                 <p>Once the directory is set up, do: 
 <longquote><pre>
-$&gt; cd uimaj-as
+$&gt; cd aggregate-uima-as
 $&gt; mvn install
       or 
-$&gt; cd Sandbox
+$&gt; cd aggregate-addons
 $&gt; mvn install
 </pre></longquote>
 </p>
                                                 <p>
-This should build all of the jars and run the unit tests.  Each jar will be located under the <code>target</code> subdirectory of its project, for example <code>uimaj-core/target/uima-core.jar</code>.
+This should build all of the jars, any docbooks, and run the unit tests. 
+The output artifacts (Jars, html and pdf documents, etc.) are placed in each project's "target" directory, and 
+also are put into your local Maven repository. 
 </p>
                                                 <p>If you want to build just one of the "projects", and not the whole thing, cd to the project you want to build, and run
 mvn install there.</p>
@@ -591,44 +600,12 @@ mvn install there.</p>
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>
-    <ol>
-      <li><p>First, follow all the steps under "Building from the command line, above."  You 
-        will only need to do this once.</p></li>      
-      <li><p>(Optional) If you want a new workspace for the maven work, start Eclipse and create a new workspace. </p></li>
-      <li><p>In a command window, execute
-        <blockquote>
-        <pre>
-mvn -Declipse.workspace=&lt;eclipse workspace dir&gt; \
-    eclipse:add-maven-repo</pre>
-        </blockquote> 
-        This adds a maven repository to your machine (On Windows, under documents &amp; settings / .m2 /
-        repository), and sets up an Eclipse Java Build Path variable to reference it.</p></li>
-      <li><p>Use Eclipse's SVN Repository explorer to checkout all the projects under uimaj/trunk. 
-        Tell it to create new Java projects for these.</p></li>
-      <li><p>
-        <code>cd uimaj</code> to switch to the Eclipse workspace project for <code>uimaj</code> (it has the top level
-        POM), and run the command:
-        <blockquote><code>mvn eclipse:eclipse</code></blockquote>
-        </p><p>
-        If you haven't run the "install" using maven (because you forgot to follow all the steps under
-        "Building from the command line, above"), you should do the command 
-        <code>mvn install eclipse:eclipse</code>. The "install" argument builds UIMA using maven, 
-        before the eclipse:eclipse goal is run.  This 
-        is needed for the Eclipse Plugins that are part of UIMA - these projects have their
-        "MANIFEST.MF" file built by maven from the information in the maven POMs.  This step
-        may take a few minutes  because the "install" lifecycle includes running the unit tests.
-        </p></li>
-      <li><p>Return to Eclipse, and if needed, select all the projects and push F5 to "refresh" them (because the
-        previous command changed the .project and .classpath files). You can set your workspace to automatically
-        refresh - in which case skip this step.</p></li>
-      <li><p>The projects should now compile without errors, and have build paths which reference copies of things in
-        your local maven repository.</p></li>
-      <li><p>You can run the unit tests in Eclipse by right-clicking on a folder (for example
-        <code>uimaj-core/src/test/java</code>) and selecting Run As -&gt; JUnit Test. This will run all tests
-        under that folder.</p></li>
-    </ol>
+                                    <p>With m2eclipse plugin, you can right-click any maven project, and select Run -&gt; maven commands to do maven runs.  Furthermore, you can
+    save run configurations you build using Run -&gt; Run As ... -&gt; Maven build ...; these become launchable using the standard Eclipse run menus.
   </p>
+                                                <p>Within a project, you can run the unit tests in Eclipse by right-clicking on a folder (for example
+        <code>uimaj-core/src/test/java</code>) and selecting Run As -&gt; JUnit Test. This will run all tests
+        under that folder.</p>
                             </blockquote>
         </td></tr>
     </table>
@@ -677,7 +654,7 @@ If not using Eclipse, you can use <code>grep</code> to accomplish the same thing
     Please refer to this page: <a href="distribution.html">Building a distribution</a> for
     details on how to do this.</p>
                                                 <p>
-To build a distribution, first do a build as described in "Building from the command line".  
+    To build a distribution, first do a build as described in "Building from the command line".  
     Then (assuming you set up the Eclipse path using one of the first 2 methods, execute the following:
 <longquote><pre>
 cd ../uimaj-distr
@@ -685,8 +662,7 @@ mvn install
 </pre></longquote>
 </p>
                                                 <p>
-This will build the javadocs and the manual (using docbooks, as described below), will create the
-    Eclipse update site for the Eclipse plugins, and will create
+This will build the javadocs, and will create
 .zip and .tar.gz archives of the full UIMA distribution in the <code>uimaj-distr/target</code> 
 directory.
 
@@ -698,17 +674,14 @@ cd ..\uima-as-distr
 mvn install
 </pre></longquote>
 </p>
-                                                <p>Similarly, for building the sandbox distribution, first be sure you've built 
-  the projects themselves (see above) and then do:
-<longquote><pre>
+                                                <p>Sandbox projects are build for distribution individually, by cd-ing to the individual
+  sandbox project and running "mvn install".  Note that this may not work on projects that
+  are not advanced to the point where they are released - not all projects in the Sandbox are
+  in a state where they are buildable.
+<!--longquote><pre>
 cd annotator-package
 mvn install
-</pre></longquote>
-</p>
-                                                <p>
-  This maven command will create the assemblies in the <code>target</code> directory,
-  and will also run the Release Audit Tool (RAT) on the result.
-  <ul><li>To skip running RAT, use the command <code>mvn package</code>.</li></ul>
+</pre></longquote-->
 </p>
                             </blockquote>
         </td></tr>
@@ -725,50 +698,11 @@ mvn install
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>
-    The UIMA Source distribution includes the uima-docbook-tool project, which is the tooling needed
-    to build the Docbooks; the actual Docbook sources are in the uima-docbooks project, in the src
-    directory.  The DocBook tooling requires several components that are not included in the source
-    distribution, but instead are automatically downloaded from the internet
-    the first time you run the tools; you will be asked to accept the licenses for these components.
-    Please read the README.FIRST and README files in the uima-docbook directory
-    for important information about setting up the tooling.  In particular, in order 
-    to get the images to be rendered in the PDF output, you must obtain the
-  "Java Advanced Imaging" library from Sun.
-  </p>
-                                                <p>Note that the uima-docbooks project is not built using Maven; it is built by an ant script.  If you
-want to build the documentation without building the entire UIMA distribution, 
-cd to the uima-docbooks directory, and run <code>ant</code>.  This will build all 4 books into the 
-uima-docbooks/target directory.</p>
-                                                <p>Note that each book is actually built twice - the first build only runs the transforms to get the
-  links established and setup of cross reference database table.  The second outputs the html and pdf files,
-  using the cross reference database table just created.</p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable" id='building.docbooks.a4'>
-        <tr><td>
-       
-       
-       
-          <a name="Creating A4-size PDF documentation">
-            <h2>Creating A4-size PDF documentation
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>If you don't live in the US, you may wish to create your PDF documentation in a different
-  format, e.g., A4.  To do this, edit the file 
-  <code>uima-docbook-tool/properties/default.docbook.properties</code>.  It contains a line
-  </p>
-                                                <p>
-  <code>paper.type = Letter</code>
-  </p>
-                                                <p>Change this setting to <code>A4</code> and rebuild the documentation.  Note: if you've previously
-  built the documentation, you need to run <code>ant clean</code> first, as the build doesn't pick
-  up on this change automatically.
-  </p>
+                                    <p>Docbook processing is done normally as a part of regular maven building of projects
+    which have Docbooks.
+    The base uimaj projects have 4 docbooks, and there is an aggregate project which builds
+    all 4 of these: aggregate-uimaj-docbooks.
+    Docbooks are built by the normal maven lifecycle, in the prepare-package phase.</p>
                             </blockquote>
         </td></tr>
     </table>
