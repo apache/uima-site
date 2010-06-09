@@ -28,74 +28,53 @@ under the License.
 
 <body>
 
-<!--section name="Testing Builds">
-<p>
-  <ul>
-		<li><a href="#source.code.repository">Source Code Repository</a>
-			<ul>
-				<li><a href="#source.code.repository.web.access">Web Access to Subversion</a></li>
-			</ul>
-		<br></br>
-		</li>
-		<li><a href="#checkout.code">Checking Out Code Using Subversion</a>
-			<ul>
-				<li><a href="#anonymous.checkout">Anonymous check out from Subversion</a></li>
-				<li><a href="#access.firewall">Access from behind a firewall</a></li>
-				<li><a href="#access.proxy">Access through a proxy</a></li>
-				<li><a href="#committer.access">Committer access</a></li>
-				<li><a href="#checkout.using.eclipse">Checking Out Code using Eclipse</a></li>
-			</ul>
-		<br></br>	
-		</li>
-		<li><a href="#submit.code.changes">Submitting Code Changes</a>
-			<ul>
-				<li><a href="#submitting.patch">Submitting a patch</a></li>
-				<li><a href="#committing.changes">Committing changes to subversion</a></li>
-			</ul>
-		<br></br>
-		</li>
-        <li><a href="#building.with.maven">Building UIMA from Source</a>
-			<ul>
-				<li><a href="#building.command.line">Building from the command line</a></li>
-				<li><a href="#building.eclipse">Building from Eclipse</a></li>
-				<li><a href="#test.failure">What to do if the tests fail</a></li>
-				<li><a href="#build.distribution">How to build the full Apache UIMA distribution</a></li>
-				<li><a href="#building.docbooks">Building uima-docbooks</a></li>
-			</ul>
-    </li>
-  </ul>
-</p>
-</section-->
-
-<section name="Testing the parent-pom-top build">
-
+<section name="Setup (one time) for building">
 <ol>
   <li>Set up Eclipse (optional):
     <ol><li>add m2Eclipse and the patch (see svn.html) and subversion</li></ol>
   </li>
   <li>Set up your maven "settings.xml" file (located in the directory containing your local repository;
     in windows, this is in c:Documents and Settings\<your-userid>\.m2</your-userid>. Here's a sample:
-<pre><![CDATA[
-<settings xmlns="http://maven.apache.org/POM/4.0.0"
+<pre>
+&lt;settings xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-  <profiles>
-    <profile>
-      <id>staged-release</id>
-      <repositories>
-        <repository>
-          <id>staged-release</id>
-          <url>https://repository.apache.org/content/repositories/orgapacheuima-042/</url>
-        </repository>
-      </repositories>
-    </profile>
-  </profiles>
+  &lt;profiles>
+    &lt;profile>
+      &lt;id>staged-release&lt;/id>
+      &lt;repositories>
+        &lt;repository>
+          &lt;id>staged-release&lt;/id>
+          &lt;url>https://repository.apache.org/content/repositories/orgapacheuima-042/&lt;/url>
+        &lt;/repository>
+      &lt;/repositories>
+    &lt;/profile>
+  &lt;/profiles>
 
-</settings>
-]]></pre>   
+&lt;/settings>
+</pre>   
   </li>
+  
+  <li>Fix the docbkx code: There's a one line fix needed, which hasn't been released (see 
+    <a class="external" rel="nofollow" target="_blank"
+      href="http://code.google.com/p/docbkx-tools/issues/detail?id=52">http://code.google.com/p/docbkx-tools/issues/detail?id=52</a>.
+    <p>To fix, do the following:
+      <ol><li>use m2Eclipse to checkout 
+        http://docbkx-tools.googlecode.com/svn/tags/docbkx-2.0.10/docbkx-maven-base project</li>
+        <li>Edit line 472, where it says ...getResources("/catalog.xml") and remove the / in front of "catalog.xml".</li>
+        <li>do a "mvn install" to your local repo.</li>
+      </ol>
+        
+      </p>  
+    </li>
+</ol>  
+</section>
+
+<section name="Testing the parent-pom-top build">
+
+<ol>
   <li>Check out the build directory:
     <pre>svn checkout http://svn.apache.org/repos/asf/uima/build/trunk some-checkout-local-dir</pre>
   </li>

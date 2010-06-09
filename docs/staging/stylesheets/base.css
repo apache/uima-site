@@ -1,0 +1,263 @@
+/*
+ use these classes in your xml markup:
+ 
+ downloads - for downloads tables
+*/
+body, div, dl, dt, dd, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+fieldset, img, abbr, acronym {
+  border: 0 none;
+}
+address, caption, cite, code, dfn, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+caption, th {
+  text-align: left;
+}
+body {
+  font: 15px Myriad,Helvetica,Tahoma,Arial,clean,sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+    /* 93% makes text same height as in firefox for 15 px */
+  *font-size: 93%;  /* star (*) hack - line only visible to IE6/7 because 15px doesn't work for IE */ 
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #ac2c00;
+  font-family: Times-New-Roman, times, serif;
+  font-weight: normal;
+}
+h1 {
+  font-size: 2.1em;
+  line-height: 1em;
+  margin-top: .5em;
+  margin-bottom: 0;
+  border-top: medium solid #888888;
+  padding-top: .8em;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.286em;
+  margin-top: .5em;
+  margin-bottom: 0em;
+  border-top: thin solid #888888;
+  padding-top: .8em;
+  padding-bottom: 0em;
+}
+
+h3.downloadartifact {
+  margin: .1em;
+  border-top: none;
+  padding: .1em;
+}
+
+h3 {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
+
+h4, h5, h6 {
+  font-size: 1.2em;
+  line-height: 1.1em;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 1em;
+  margin-top: 1.4em;
+  margin-bottom: 1.1em;
+  line-height: 1.3em;
+}
+blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em; 
+}
+.noverticalspace {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.nobottomspace {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.notopspace {
+  margin-top: 0;
+  padding-top: 0;
+}
+ol, ul, dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ol li, ul li, dl dt, dl dd {
+  font-size: 1em;
+  line-height: 1.3em;
+  margin: .2em;
+}
+dl dt {
+  margin-left: 2em;
+}
+dl dd {
+  margin-left: 6em;
+}
+pre, code {
+  font-size: 115%;
+  *font-size: 100%;
+  font-family: Courier, "Courier New";
+}
+pre {
+  border-width: 1px 0;
+  padding: 0.5em;
+  background-color: #f0f0ef;
+  border: 1px solid #ccc;
+}
+
+pre.source {
+  border-width: 1px;
+  border-color: black;
+  padding: 0.5em;
+}
+
+p.note {
+  border-width: 1px 0;
+  padding: 0.5em;
+  background-color: #fef5ef;
+  border: 1px solid #ccc;
+}
+
+.pageFooter {
+  text-align: center;
+  color: #424D66;
+  font-size: 0.9em;
+  font-style: italic;
+  width: 100%;
+}
+blockquote.sectionBody, blockquote.subsectionBody {
+  border: none;
+  font-size: 1em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  line-height: 1em;
+  padding-left: 1.636em; 
+  padding-top: 0em;
+  padding-bottom: 0em;
+}
+
+table.sectionTable, table.subsectionTable {
+  border: none;
+  border-collapse: separate;
+  border-spacing: 2px;
+  width: 100%;
+}
+
+div.pageBanner {
+  width: 80%;
+  text-align: center;
+  vertical-align: bottom;
+  line-height: 1em;
+  /* color: #625972;   */ /* text color */
+  font-size: 2.1em;
+  font-family: arial, helvetica, sanserif; 
+  font-weight: bold;
+  color: #ac2c00;
+  /* font-family: Times-New-Roman, times, serif; */
+}
+
+
+div.navBar {
+  margin-left: 1em;
+  font-size: .93em;
+}
+
+div.navBarItem {
+  font-size: 1em;
+  padding-bottom: .35em;
+}
+
+div.navPartHeading {
+  font-size: 1.2em;
+  color: #ac2c00;
+  line-height: 1em;
+}
+
+div.htmltxt {
+  line-height: 1.2em;
+}
+.center {
+  text-align: center;
+  }
+
+a {
+ color: #004b00;
+}
+a:visited {
+ color: #359b25;
+}
+
+.topLogos {
+  background-color: #e9ffcc;   /*d9ffb3*/
+}
+table.subsectionToc {
+  border: none;
+  border-collapse: separate;
+  border-spacing: .5em;
+  width: 100%;
+} 
+
+table.downloads {
+  border: 2px solid black;
+  border-collapse: collapse;
+  background-color: #f6ffed;   /* very light green */  
+}
+
+table.downloads > tbody > tr > td, table.downloads > tbody > tr > th {
+  border: 1px solid black;
+  padding: .5em;
+}
+table.downloads > tbody > tr > th {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #e9ffcc; 
+  margins: 0;
+  padding: .3em;
+  line-height: 1.1em;
+}
+
+td.downloadtitle {
+  text-align: center;
+  vertical-align: middle;
+}
+
+td.downloadtitle a {
+   color: #ac2c00;
+   text-decoration: none; 
+}
+
+td > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+td > p + p {
+  margin-top: 1em;
+}
+
+table.downloadentries td {
+  padding: .1em;
+}
+
+table.downloadentries td:first-child {
+  width: 3em;
+}
+
+/* dark red ac2c00
+   light green background 217 255 179
+*/

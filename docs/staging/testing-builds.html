@@ -160,7 +160,7 @@
                                                           <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Testing the parent-pom-top build"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Testing the parent-pom-top build</h1></a>
+        <a name="Setup (one time) for building"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Setup (one time) for building</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
@@ -170,27 +170,52 @@
   </li>
   <li>Set up your maven "settings.xml" file (located in the directory containing your local repository;
     in windows, this is in c:Documents and Settings\<your-userid>\.m2</your-userid>. Here's a sample:
-<pre><![CDATA[
-<settings xmlns="http://maven.apache.org/POM/4.0.0"
+<pre>
+&lt;settings xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
 
-  <profiles>
-    <profile>
-      <id>staged-release</id>
-      <repositories>
-        <repository>
-          <id>staged-release</id>
-          <url>https://repository.apache.org/content/repositories/orgapacheuima-042/</url>
-        </repository>
-      </repositories>
-    </profile>
-  </profiles>
+  &lt;profiles&gt;
+    &lt;profile&gt;
+      &lt;id&gt;staged-release&lt;/id&gt;
+      &lt;repositories&gt;
+        &lt;repository&gt;
+          &lt;id&gt;staged-release&lt;/id&gt;
+          &lt;url&gt;https://repository.apache.org/content/repositories/orgapacheuima-042/&lt;/url&gt;
+        &lt;/repository&gt;
+      &lt;/repositories&gt;
+    &lt;/profile&gt;
+  &lt;/profiles&gt;
 
-</settings>
-]]></pre>   
+&lt;/settings&gt;
+</pre>   
   </li>
+  
+  <li>Fix the docbkx code: There's a one line fix needed, which hasn't been released (see 
+    <a class="external" rel="nofollow" target="_blank" href="http://code.google.com/p/docbkx-tools/issues/detail?id=52">http://code.google.com/p/docbkx-tools/issues/detail?id=52</a>.
+    <p>To fix, do the following:
+      <ol><li>use m2Eclipse to checkout 
+        http://docbkx-tools.googlecode.com/svn/tags/docbkx-2.0.10/docbkx-maven-base project</li>
+        <li>Edit line 472, where it says ...getResources("/catalog.xml") and remove the / in front of "catalog.xml".</li>
+        <li>do a "mvn install" to your local repo.</li>
+      </ol>
+        
+      </p>  
+    </li>
+</ol>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Testing the parent-pom-top build"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Testing the parent-pom-top build</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <ol>
   <li>Check out the build directory:
     <pre>svn checkout http://svn.apache.org/repos/asf/uima/build/trunk some-checkout-local-dir</pre>
   </li>
