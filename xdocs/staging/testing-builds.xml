@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>Testing Builds</title>
+<author email="dev@uima.apache.org">
+ UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+<!--section name="Testing Builds">
+<p>
+  <ul>
+		<li><a href="#source.code.repository">Source Code Repository</a>
+			<ul>
+				<li><a href="#source.code.repository.web.access">Web Access to Subversion</a></li>
+			</ul>
+		<br></br>
+		</li>
+		<li><a href="#checkout.code">Checking Out Code Using Subversion</a>
+			<ul>
+				<li><a href="#anonymous.checkout">Anonymous check out from Subversion</a></li>
+				<li><a href="#access.firewall">Access from behind a firewall</a></li>
+				<li><a href="#access.proxy">Access through a proxy</a></li>
+				<li><a href="#committer.access">Committer access</a></li>
+				<li><a href="#checkout.using.eclipse">Checking Out Code using Eclipse</a></li>
+			</ul>
+		<br></br>	
+		</li>
+		<li><a href="#submit.code.changes">Submitting Code Changes</a>
+			<ul>
+				<li><a href="#submitting.patch">Submitting a patch</a></li>
+				<li><a href="#committing.changes">Committing changes to subversion</a></li>
+			</ul>
+		<br></br>
+		</li>
+        <li><a href="#building.with.maven">Building UIMA from Source</a>
+			<ul>
+				<li><a href="#building.command.line">Building from the command line</a></li>
+				<li><a href="#building.eclipse">Building from Eclipse</a></li>
+				<li><a href="#test.failure">What to do if the tests fail</a></li>
+				<li><a href="#build.distribution">How to build the full Apache UIMA distribution</a></li>
+				<li><a href="#building.docbooks">Building uima-docbooks</a></li>
+			</ul>
+    </li>
+  </ul>
+</p>
+</section-->
+
+<section name="Testing the parent-pom-top build">
+
+<ol>
+  <li>Set up Eclipse (optional):
+    <ol><li>add m2Eclipse and the patch (see svn.html) and subversion</li></ol>
+  </li>
+  <li>Set up your maven "settings.xml" file (located in the directory containing your local repository;
+    in windows, this is in c:Documents and Settings\<your-userid>\.m2</your-userid>. Here's a sample:
+<pre><![CDATA[
+<settings xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <profiles>
+    <profile>
+      <id>staged-release</id>
+      <repositories>
+        <repository>
+          <id>staged-release</id>
+          <url>https://repository.apache.org/content/repositories/orgapacheuima-042/</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+
+</settings>
+]]></pre>   
+  </li>
+  <li>Check out the build directory:
+    <pre>svn checkout http://svn.apache.org/repos/asf/uima/build/trunk some-checkout-local-dir</pre>
+  </li>
+  <li>Checkout something to build (to verify that the parent-pom-top works:
+    <pre>svn checkout http://svn.apache.org/repos/asf/uima/uimaj/trunk  some-checkout-local-dir</pre>
+  </li>
+  
+  <li>If you want, using m2Eclipse, import existing projects as maven projects, and select the build
+    directories, and import the build projects.  Repeat for the uimaj projects.</li>
+  <li>Using your favorite find/replace tools, find all instances of where the parent-pom-top is used
+    which specifies a version of 1-SNAPSHOT, and change those to just 1 (that's what is being tested).
+  </li>
+  
+  <li>Build the build tooling:
+    <pre>
+  cd to the build checkout dir / parent-poms
+  mvn -Pstaged-release install
+  
+  cd to uimaj checkout dir / aggregate-uimaj
+  mvn -Pstaged-release install 
+</pre></li>  
+</ol>
+
+<p>If no errors, then conclude that the parent-pom-top is "good" and vote +1 :-) .</p>
+
+<p class="note">Afterwards, go to your local repo and remove the org/apache/uima/parent-pom-top/1 directory,
+  to prevent it from accidentally being used, until it passes official release.</p>
+
+</section>
+</body>
+</document>
