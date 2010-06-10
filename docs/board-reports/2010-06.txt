@@ -1,0 +1,46 @@
+Status report for the Apache UIMA Project
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Releases:
+
+none yet (as a TLP), we hope to do one in the next month or 2.
+
+2010-1-26 2.3.0 (Incubator - last release) release of Java SDK, Annotator
+                add-on package, UIMA-AS (Async scaleout), and UIMA-CPP
+                (C++ enablement)
+
+Development:
+
+Work continues in standardizing our build processes with Maven
+conventions. Builds now generally work with the new maven alignement, 
+and we're starting to attempt releases with this new structure.
+
+We still have a significant number of issues remain in Jira, postponed
+from the last release.  More progress should get made on these after
+our Maven re-alignment work is finished.
+
+Issues regarding large scale use of UIMA-AS continue to be reported
+and fixed; these often have to do with corner cases involving very
+large scaleouts and error situations.
+
+The project-wide POM used as a parent pom is the first artifact to be
+released; it is currently in the staging area, and a vote is underway. 
+This represents the first time the project has used the maven "release"
+plugin and Nexus repository for releasing.
+
+A new user is proposing some feature enhancements to two of the
+annotators, and this is being looked at.
+
+The main committer on the CAS Editor tool is proposing some future
+directions for this tooling that aims at providing a more componentized
+approach for additional capabilities.
+
+We are planning to gradually move documentation updates to make more
+use of maven's "site" capabilities.
+
+Community: No changes
+
+Issues: No Board level issues at this time
