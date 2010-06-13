@@ -102,7 +102,7 @@ under the License.
     A patch is needed to get get the Docbkx plugin to work with Maven 3:
     <ol><li>use m2Eclipse to checkout 
         http://docbkx-tools.googlecode.com/svn/tags/docbkx-2.0.10/docbkx-maven-base project</li>
-        <li>Edit line 472 of , where it says <code>...getResources("/catalog.xml")</code> and 
+        <li>Edit line 472 of <code>AbstractTransformerMojo.java</code>, where it says <code>...getResources("/catalog.xml")</code> and 
           remove the <code>/</code> in front of <code>catalog.xml</code>.</li>
         <li>do a<code> mvn install </code> in the docbkx-maven-base directory, to install the fix to your local repo.</li>
       </ol>
