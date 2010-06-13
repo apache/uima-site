@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>Testing Builds</title>
+<author email="dev@uima.apache.org">
+ UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+<section name="Testing Builds">
+  <p>
+    This page gathers information useful in testing builds.
+  </p>
+</section>
+
+<section name="Setup for testing - adding the Staging repository">  
+  <p>
+    Prepare for testing by going to 
+    <a href="building-uima.html">building-uima</a>
+    and doing the one-time setup, if you haven't done this already.  This includes installing Maven 3.
+  </p><p>
+    In addition, do the following one-time setup for accessing the staging-repository:
+    <ol>
+        <li>Set up your maven "settings.xml" file (located in the directory containing your local repository;
+    in windows, this is c:Documents and Settings\&lt;your-userid>\.m2\settings.xml. The idea is to add 
+    a repository spec called "staged-release" that points to the staging repository of interest (this 
+    may change from release to release - the right url will be provided in the test vote email). 
+    Here's a sample settings file, with just this profile element in it:
+<pre>
+&lt;settings xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  &lt;profiles>
+    &lt;profile>
+      &lt;id>staged-release&lt;/id>
+      &lt;repositories>
+        &lt;repository>
+          &lt;id>staged-release&lt;/id>
+          &lt;url>https://repository.apache.org/content/repositories/orgapacheuima-042/&lt;/url>
+        &lt;/repository>
+      &lt;/repositories>
+    &lt;/profile>
+  &lt;/profiles>
+
+&lt;/settings>
+</pre>   
+  </li>
+    </ol>
+  </p>
+</section>
+
+</body>
+</document>
