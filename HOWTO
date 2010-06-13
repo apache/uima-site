@@ -47,7 +47,7 @@ How do I deploy site to the internet?
 1) Once all changes are committed to subversion, ssh into 
    people.apache.org
 
-2) cd /www/incubator.apache.org/uima
+2) cd /www/uima.apache.org
 
 3) $ svn update
 
