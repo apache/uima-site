@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document [
+<!ENTITY rarr "->" >
+<!ENTITY larr "<-" >
+]>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>Building UIMA</title>
+<author email="dev@uima.apache.org">
+ UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+<section name="Building UIMA from sources">
+
+<p>
+  We use <a class="external" rel="nofollow" target="_blank" 
+    href="http://maven.apache.org/">Maven</a>, release 3.0 or later, for building.
+  
+  Most of us use <a class="external" rel="nofollow" target="_blank"
+    href="">Eclipse</a> as the IDE for working with Java.  Maven has a plugin for Eclipse,
+  <a class="external" rel="nofollow" target="_blank"
+    href="http://m2eclipse.sonatype.org/">m2eclipse</a>, that is useful in working with Maven from
+    within Eclipse.
+</p>
+
+<subsection name="One time initial setup">
+  <ul>
+    <li>
+      <a href="one-time-setup.html#svn-setup">SVN: Click here to see the one-time SVN setup</a>.
+    </li>
+    <li>
+      <a href="one-time-setup.html#maven-setup">Maven: Click here to see the one-time Maven 3.0 setup</a>. 
+    </li>
+    <li>
+      <a href="one-time-setup.html#eclipse-setup">Eclipse: Click here to see the one-time Eclipse setup</a>. This includes
+      setting up m2eclipse plugin (including a patch), and is only needed if you are using Eclipse as your IDE.
+    </li>
+    <li>
+      <a href="one-time-setup.html#docbkx-setup">Docbkx: Click here to see the one-time Docbkx setup</a>.  This involves
+      applying a 1-line patch (required).
+    </li>
+  </ul>
+</subsection>
+
+<subsection name="Building one project - using the command line">
+  <ol>
+    <li><p>
+      Check out one project from SVN: for example, (Windows)<br/>
+        <code>  svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk/uimaj-core c:/myWorkingDir/uimaj-core</code></p>
+      <p>If you have <a class="external" rel="nofollow" target="_blank" 
+    href="http://tortoisesvn.tigris.org/">tortoiseSVN</a> windows shell extensions installed, 
+    you can use the <code>repo-browser</code> right-click menu option to do this.</p>
+    </li>
+    <li><p>
+      <code>cd to that directory</code> where you checked out the project.</p>
+    </li>
+    <li><p><code>mvn install</code></p>
+      <p>This will build that one project and install it to your local Maven repository.</p>
+    </li>  
+  </ol>
+</subsection>  
+
+<subsection name="Building all the projects for a major component - using command line">
+  <p>For convenience, the build, uimaj, uima-as, and add-ons major components define "aggregate"
+    projects which use Maven's &lt;modules> element to specify groups of individual projects
+    that can be then built in one operation.</p>
+  <ol>
+    <li><p>
+      Check out a set of projects from SVN: for example, (Windows):<br/>
+      <code>  svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk c:/myWorkingDir/uimaj</code>, or <br/>
+      <code>  svn checkout https://svn.apache.org/repos/asf/uima/build/trunk c:/myWorkingDir/build</code>, or <br/>
+      <code>  svn checkout https://svn.apache.org/repos/asf/uima/uima-as/trunk c:/myWorkingDir/uima-as</code>, etc.
+      </p>
+    </li>
+    <li><p>
+      <code>cd to that directory</code> where you checked out the projects
+      </p>
+    </li><li><p>
+      <code>cd to the aggregate</code>, e.g., aggregate-uimaj or aggregate-build, or aggregate-uima-as, etc.
+      </p>
+    </li><li><p>
+      <code>mvn install</code></p>
+      <p>This will build that all the projects in that aggregate and install them to your local Maven repository.</p>
+    </li>
+  </ol>
+</subsection>  
+
+<subsection name="Building using Eclipse, with the m2eclipse plugin">
+  <ol>
+    <li>Checkout one or many projects, as above, into some location.  Then use 
+      Eclipse menu: File &#x02192; import &#x02192; Maven &#x02192; Existing Maven projects
+      to import those projects into the Eclipse workspace and set them up for
+      Maven building.</li>
+    <li>To run maven commands on a project, select the project, right click, and pick <code>Run as</code>
+      and then select mvn install (or other choice as you wish).</li>
+  </ol>
+</subsection>
+
+</section>
+</body>
+</document>

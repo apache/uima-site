@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>One time setup</title>
+<author email="dev@uima.apache.org">
+ UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+<section name="One time setup instructions for working with Apache UIMA source code">
+  <p>
+    Here you will find information on how to set up various tools used in working with UIMA source code, including:
+    <ul>
+      <li><a href="#svn-setup">SVN</a></li>
+      <li><a href="#maven-setup">Maven</a></li>
+      <li><a href="#eclipse-setup">Eclipse</a></li>
+      <li><a href="#docbkx-setup">Docbkx</a> - a Maven plugin for processing Docbook files</li>
+    </ul>
+  </p>
+</section>
+
+<section name="One time setup for SVN" id="svn-setup">
+  <p>Install an svn client (not server) to use for command line invocation of SVN from 
+    <a class="external" rel="nofollow" target="_blank" 
+      href="http://subversion.apache.org/packages.html">http://subversion.apache.org/packages.html</a>.
+    Use the 1.6.x or later version.
+    For Windows platform, you may find it convenient to also install a windows shell extension for this, such 
+    as the one from Tigris.org.</p>
+    
+  <p>If you are using an IDE, you should obtain the SVN client for that IDE.</p>
+</section>
+
+<section name="One time setup for Maven" id="maven-setup">
+  <ol><li>Download Maven 3.0 beta-1 or later from
+    <a class="external" rel="nofollow" target="_blank"
+      href="http://maven.apache.org/download.html">http://maven.apache.org/download.html</a>.</li>
+      <li>Set up your path to use this version.</li>
+      <li>Add the following environment variable for Maven: <br/>
+        <pre>  Variable name: <code>MAVEN_OPTS</code><br/>
+  Value: <code>-Xmx800m  -XX:MaxPermSize=256m</code></pre></li>
+   </ol>
+</section>
+
+<section name="One time setup for Eclipse" id="eclipse-setup">
+  <p>Install a current Eclipse (these instructions tested with Eclipse 3.5.2).  Then:
+    <ol>
+      <li><p>Install the SVN support plugin <code>Subclipse</code> from
+        <a class="external" rel="nofollow" target="_blank"
+          href="http://subclipse.tigris.org/">http://subclipse.tigris.org/</a>.
+        Be sure to pick the version for 1.6.x SVN client.        
+        </p></li>
+      <li><p>Install m2Eclipse 0.10.0 or later from 
+        <a class="external" rel="nofollow" target="_blank"
+          href="http://m2eclipse.sonatype.org/">http://m2eclipse.sonatype.org/</a>.
+        </p>
+        <p>Version 0.10.0 has a bug which prevents projects which use XMLBeans from compiling. 
+          Until this is fixed, install this "update" after installing the base:
+           <ol><li>Download <a class="external" rel="nofollow" target="_blank"
+            href="
+          https://cit-server.cit.tu-berlin.de/~battre/org.maven.ide.eclipse.site-0.10.1-SNAPSHOT-site.zip">
+          https://cit-server.cit.tu-berlin.de/~battre/org.maven.ide.eclipse.site-0.10.1-SNAPSHOT-site.zip</a>
+          </li><li> 
+          unzip it locally
+          </li><li>add the directory as a local "Software Site" in "Help -> Install New Software"</li>
+          <li>update the m2eclipse with "Help -> Check for Updates"</li>
+          </ol>
+        </p>
+        <p>For more details about this bug, see 
+          <a class="external" rel="nofollow" target="_blank"
+          href="https://issues.sonatype.org/browse/MNGECLIPSE-1694">https://issues.sonatype.org/browse/MNGECLIPSE-1694</a>.
+        </p>
+      </li>
+      <li>Use Eclipse<code> Preferences -> Maven -> Installations </code> to add the Maven 3.0-beta-1 installation as the
+        default to use.</li>
+    </ol>
+  </p>
+</section>
+
+<section name="One time setup for using the Docbkx Maven plugin" id="docbkx-setup">
+  <p>
+    A patch is needed to get get the Docbkx plugin to work with Maven 3:
+    <ol><li>use m2Eclipse to checkout 
+        http://docbkx-tools.googlecode.com/svn/tags/docbkx-2.0.10/docbkx-maven-base project</li>
+        <li>Edit line 472 of , where it says <code>...getResources("/catalog.xml")</code> and 
+          remove the <code>/</code> in front of <code>catalog.xml</code>.</li>
+        <li>do a<code> mvn install </code> in the docbkx-maven-base directory, to install the fix to your local repo.</li>
+      </ol>
+      <p>
+      If you're interested in knowing more about this bug, see 
+    <a class="external" rel="nofollow" target="_blank"
+      href="http://code.google.com/p/docbkx-tools/issues/detail?id=52">http://code.google.com/p/docbkx-tools/issues/detail?id=52</a>.
+      </p>
+  </p>
+
+</section>
+</body>
+</document>
