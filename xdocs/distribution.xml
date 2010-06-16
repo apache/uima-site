@@ -52,6 +52,9 @@ under the License.
 
 <section name="Building the Apache UIMA base distribution">
 
+  <p class="note">These instructions are for the 2.3.0 release; the 
+    build process is being revised for 2.3.1, and these pages will be updated as that is 
+    completed.</p>
   <p>
   Start by extracting and building the code manually as described on the 
     <a href="./svn.html">source code page</a>.
