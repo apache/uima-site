@@ -242,7 +242,7 @@
           <a class="external" rel="nofollow" target="_blank" href="https://issues.sonatype.org/browse/MNGECLIPSE-1694">https://issues.sonatype.org/browse/MNGECLIPSE-1694</a>.
         </p>
       </li>
-      <li>Use Eclipse<code> Preferences -&gt; Maven -&gt; Installations </code> to add the Maven 3.0-beta-1 installation as the
+      <li>Use Eclipse<code> Preferences -&gt; Maven -&gt; Installations </code> to add the Maven 3.0-beta-1 (or later) installation as the
         default to use.</li>
     </ol>
   </p>
@@ -258,7 +258,7 @@
       <tr><td>
         <blockquote class="sectionBody">
                                     <p>
-    A patch is needed to get get the Docbkx plugin to work with Maven 3:
+    A patch is needed to get get the Maven Docbkx plugin to work with Maven 3:
     <ol><li>use m2Eclipse to checkout 
         http://docbkx-tools.googlecode.com/svn/tags/docbkx-2.0.10/docbkx-maven-base project</li>
         <li>Edit line 472 of <code>AbstractTransformerMojo.java</code>, where it says <code>...getResources("/catalog.xml")</code> and 

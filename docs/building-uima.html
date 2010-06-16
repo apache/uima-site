@@ -185,24 +185,24 @@
         <blockquote class="subsectionBody">
                                     <ul>
     <li>
-      <a href="one-time-setup.html#svn-setup">SVN: Click here to see the one-time SVN setup</a>.
+      <a href="one-time-setup.html#svn-setup">SVN: Click here for the one-time SVN setup</a>.
     </li>
     <li>
-      <a href="one-time-setup.html#maven-setup">Maven: Click here to see the one-time Maven 3.0 setup</a>. 
+      <a href="one-time-setup.html#maven-setup">Maven: Click here for the one-time Maven 3.0 setup</a>. 
     </li>
     <li>
-      <a href="one-time-setup.html#eclipse-setup">Eclipse: Click here to see the one-time Eclipse setup</a>. This includes
+      <a href="one-time-setup.html#eclipse-setup">Eclipse: Click here for the one-time Eclipse setup</a>. This includes
       setting up m2eclipse plugin (including a patch), and is only needed if you are using Eclipse as your IDE.
     </li>
     <li>
-      <a href="one-time-setup.html#docbkx-setup">Docbkx: Click here to see the one-time Docbkx setup</a>.  This involves
+      <a href="one-time-setup.html#docbkx-setup">Docbkx: Click here for the one-time Docbkx setup</a>.  This involves
       applying a 1-line patch (required).
     </li>
   </ul>
                             </blockquote>
         </td></tr>
     </table>
-                                                      <table class="subsectionTable">
+                                                      <table class="subsectionTable" id='building.command.line.one'>
         <tr><td>
        
        
@@ -228,10 +228,15 @@
       <p>This will build that one project and install it to your local Maven repository.</p>
     </li>  
   </ol>
+                                                <p>
+    This should build all of the jars, any docbooks, and run the unit tests. 
+The output artifacts (Jars, html and pdf documents, etc.) are placed in each project's "target" directory, and 
+also are put into your local Maven repository.  Docbook output is placed in the target/site/d directory.
+  </p>
                             </blockquote>
         </td></tr>
     </table>
-                                                      <table class="subsectionTable">
+                                                      <table class="subsectionTable" id='building.command.line.group'>
         <tr><td>
        
        
@@ -268,7 +273,7 @@
                             </blockquote>
         </td></tr>
     </table>
-                                                      <table class="subsectionTable">
+                                                      <table class="subsectionTable" id='building-from-eclipse'>
         <tr><td>
        
        
@@ -282,12 +287,61 @@
         <blockquote class="subsectionBody">
                                     <ol>
     <li>Checkout one or many projects, as above, into some location.  Then use 
-      Eclipse menu: File ? import ? Maven ? Existing Maven projects
+      Eclipse menu: <code>File -&gt; Import -&gt; Maven -&gt; Existing Maven projects</code>
       to import those projects into the Eclipse workspace and set them up for
       Maven building.</li>
     <li>To run maven commands on a project, select the project, right click, and pick <code>Run as</code>
       and then select mvn install (or other choice as you wish).</li>
   </ol>
+                                                <p>If your Maven build generates sources (e.g., you have some XMLBeans defined), 
+    then after the initial import and project build, you'll need to use the m2eclipse command 
+    <code>Update Project Configuration</code> found on the <code>Maven</code> context menu obtained by right-clicking the project folder.</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='checkout.using.eclipse'>
+        <tr><td>
+       
+       
+       
+          <a name="Checking Out Code using Eclipse">
+            <h2>Checking Out Code using Eclipse
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>To access the SVN repository from Eclipse, use Maven's m2eclipse plugin
+  and the Subclipse plugin.  
+</p>
+                                                <p>The individual projects can be checked out without worrying about relative path 
+  dependencies, except for a few projects that refer to other projects using relative addresses.
+  Currently, the projects which do that are 
+  <ul>
+    <li>the aggregator projects - those special maven projects
+  that only serve to aggregate build operations for a set of other projects, and</li>
+    <li>the "distribution" projects - those that build entire distributions.</li>
+  </ul></p>
+                                                <p>The recommended way to check out many projects at once is to use the command line 
+  (non-Eclipse) svn checkout
+  command.  Use this to check out entire sets of projects under one of the trunks, for instance.
+  Once they are checked out, you can import them into an Eclipse workspace using the 
+  <code>File -&gt; Import -&gt; Maven -&gt; Existing Maven Projects</code>. 
+</p>
+                                                <p>You can also check out individual projects using 
+<ol>
+  <li>Bring up the "SVN Repositories" View (from <code>Window -&gt; Show View -&gt; Other</code>)</li>
+  <li>Right click in the SVN Repositories View and select <code>New -&gt; Repository Location</code>.</li>
+  <li>Enter the URL <code>http://svn.apache.org/repos/asf/uima/uimaj/trunk</code> (or <code>https://</code>...)</li>
+  <li>Shift-click to multi-select the projects you want, right click and choose "Checkout as Maven Projects"</li>
+  <li>Select "Check out into the workspace as projects" and click "Finish"</li> 
+</ol>       
+</p>
+                                                <p class="note">
+  If you check out projects individually, m2eclipse may put them into individual subfolders, causing the 
+  distribution and aggregation projects to no longer have the right relative directory specifications.
+  If this happens, the best thing to do is to re-checkout the entire set of related items in one go.
+</p>
                             </blockquote>
         </td></tr>
     </table>

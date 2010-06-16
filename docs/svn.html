@@ -217,6 +217,7 @@ Subversion</a> to manage its source code.
 If you're new to Subversion, you can check out the
 <a href="http://svnbook.red-bean.com/" target="_blank">online book</a> about Subversion.
 </p>
+                                                <p>See <a href="one-time-setup.html#svn-setup">SVN setup</a> for details on how to setup SVN.</p>
                                                 <p>
   The code for UIMA is stored in several sections:</p>
                                                 <ol>
@@ -382,43 +383,7 @@ via HTTPS, in order to be able to check in changes.
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>To access the SVN repository from Eclipse, please use Maven's m2eclipse plugin
-  from <a class="external" rel="nofollow" target="_blank" href="http://m2eclipse.sonatype.org/sites/m2e">
-    http://m2eclipse.sonatype.org/sites/m2e</a>, and
-  the Subclispe plugin from  
-<a class="external" rel="nofollow" target="_blank" href="http://subclipse.tigris.org/update_1.0.x">
-http://subclipse.tigris.org/update_1.0.x</a>.
-</p>
-                                                <p class="note">Note that m2eclipse comes with a bundled version of maven 3 included.  If that version is &lt; 3.0.0-beta-1, 
-  please obtain the latest maven 3 build, install it, and then use the preferences for Eclipse Maven to tell
-  it to use the later maven 3 build for running builds.</p>
-                                                <p>The individual projects can be checked out without worrying about relative path 
-  dependencies, except for a few projects that refer to other projects using relative addresses.
-  Currently, the projects which do that are 
-  <ul>
-    <li>the aggregator projects - those special maven projects
-  that only serve to aggregate build operations for a set of other projects, and</li>
-    <li>the "distribution" projects - those that build entire distributions.</li>
-  </ul></p>
-                                                <p>The recommended way to check out many projects at once is to use the command line (non-Eclipse) svn checkout
-  command.  Use this to check out entire sets of projects under one of the trunks, for instance.
-  Once they are checked out, you can import them into an Eclipse workspace using the 
-  File -&gt; Import -&gt; Maven -&gt; Existing Maven Projects. 
-</p>
-                                                <p>You can also check out individual projects using 
-<ol>
-	<li>Bring up the "SVN Repositories" View (from Window -&gt; Show View -&gt; Other)</li>
-	<li>Right click in the SVN Repositories View and select New -&gt; Repository Location.</li>
-	<li>Enter the URL <code>http://svn.apache.org/repos/asf/uima/uimaj/trunk</code> (or <code>https://</code>...)</li>
-	<li>Shift-click to multi-select the projects you want, right click and choose "Checkout as Maven Projects"</li>
-	<li>Select "Check out into the workspace as projects" and click "Finish"</li>	
-</ol>				
-</p>
-                                                <p class="note">
-  If you check out projects individually, m2eclipse may put them into individual subfolders, causing the 
-  distribution and aggregation projects to no longer have the right relative directory specifications.
-  If this happens, the best thing to do is to re-checkout the entire set of related items in one go.
-</p>
+                                    <p>See <a href="building-uima.html#checkout.using.eclipse">Building UIMA - checkout using Eclipse</a>.</p>
                             </blockquote>
         </td></tr>
     </table>
@@ -451,7 +416,7 @@ with the developer community. If there is agreement,
 create a patch and attach it to the JIRA issue.
 </p>
                                                 <p>
-To create a patch, use the Eclipse Team -&gt; Create Patch command 
+To create a patch, use the Eclipse Team <code>-&gt;</code> Create Patch command 
 select the project in the Package Explorer, right click it to find 
 the Team menu in the context menu).  Or, use the command line and
 execute the svn diff command. This creates a patch that
@@ -487,7 +452,7 @@ password once you become a committer.
 </p>
                                                 <p>
 Once your password is set, you can commit from Eclipse using the 
-Team -&gt; commit context menu.  You can do this on an individual file,
+<code>Team -&gt; commit</code> context menu.  You can do this on an individual file,
 a set of files or directories (multi-select), or on whole project(s).
 You can also commit from the command line like this:
 </p>
@@ -531,16 +496,26 @@ http://jira.atlassian.com/browse/SVN-37</a>.
       </td></tr>
     </table>
                                         <div class="sectionTable">
-      <table class="sectionTable" id='building.with.maven'>
+      <table class="sectionTable">
         <tr><td>
-        <a name="Building UIMA from Source"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Building UIMA from Source</h1></a>
+        <a name="Building UIMA"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Building UIMA</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
+                                          <table class="subsectionTable" id='building.with.maven'>
+        <tr><td>
+       
+       
+       
+          <a name="Building UIMA from Source">
+            <h2>Building UIMA from Source
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
                                     <p>
-Apache UIMA uses Maven 2 or 3 to do builds.  Release 2.2.x of Maven, or later, is required.  
-Download Maven from <a class="external" rel="nofollow" target="_blank" href="http://maven.apache.org">
-http://maven.apache.org</a> and add &lt;maven-home&gt;/bin to your path.
+  See <a href="building-uima.html">Building UIMA</a>.
 </p>
                                                 <p>
   The source can be obtained in two ways:
@@ -548,43 +523,25 @@ http://maven.apache.org</a> and add &lt;maven-home&gt;/bin to your path.
     <li>you can use the source version of the release artifact you download from the download
       page.</li></ol>
 </p>
+                            </blockquote>
+        </td></tr>
+    </table>
                                                       <table class="subsectionTable" id='building.command.line'>
         <tr><td>
        
        
        
-          <a name="Building from the command line">
-            <h2>Building from the command line
+          <a name="Building from the Command Line">
+            <h2>Building from the Command Line
                         </h2>
           </a>
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>
-  These instructions apply to the release 2.3.1 and onwards version. To build base UIMA from the command line, 
-<longquote><pre>
-$&gt; cd aggregate-uimaj
-$&gt; mvn install
-</pre></longquote>
-</p>
-                                                <p>Builds for uima-as and the sandbox projects work similarly.  
+  See <a href="building-uima.html#building.command.line.one">Building one project from the command line</a>, and 
+  <a href="building-uima.html#building.command.line.group">Building all the projects for a major component from the command line</a>.
   </p>
-                                                <p>Once the directory is set up, do: 
-<longquote><pre>
-$&gt; cd aggregate-uima-as
-$&gt; mvn install
-      or 
-$&gt; cd aggregate-addons
-$&gt; mvn install
-</pre></longquote>
-</p>
-                                                <p>
-This should build all of the jars, any docbooks, and run the unit tests. 
-The output artifacts (Jars, html and pdf documents, etc.) are placed in each project's "target" directory, and 
-also are put into your local Maven repository. 
-</p>
-                                                <p>If you want to build just one of the "projects", and not the whole thing, cd to the project you want to build, and run
-mvn install there.</p>
                             </blockquote>
         </td></tr>
     </table>
@@ -600,11 +557,11 @@ mvn install there.</p>
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>With m2eclipse plugin, you can right-click any maven project, and select Run -&gt; maven commands to do maven runs.  Furthermore, you can
-    save run configurations you build using Run -&gt; Run As ... -&gt; Maven build ...; these become launchable using the standard Eclipse run menus.
+                                    <p>With m2eclipse plugin, you can right-click any maven project, and select <code>Run -&gt; maven commands</code> to do maven runs.  Furthermore, you can
+    save run configurations you build using <code>Run -&gt; Run As ... -&gt; Maven build ...</code>; these become launchable using the standard Eclipse run menus.
   </p>
                                                 <p>Within a project, you can run the unit tests in Eclipse by right-clicking on a folder (for example
-        <code>uimaj-core/src/test/java</code>) and selecting Run As -&gt; JUnit Test. This will run all tests
+        <code>uimaj-core/src/test/java</code>) and selecting <code>Run As -&gt; JUnit Test</code>. This will run all tests
         under that folder.</p>
                             </blockquote>
         </td></tr>
@@ -651,7 +608,7 @@ If not using Eclipse, you can use <code>grep</code> to accomplish the same thing
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>Distributions include zip/tar packages of source or binaries.
-    Please refer to this page: <a href="distribution.html">Building a distribution</a> for
+    Please refer to <a href="distribution.html">Building a distribution</a> for
     details on how to do this.</p>
                                                 <p>
     To build a distribution, first do a build as described in "Building from the command line".  
