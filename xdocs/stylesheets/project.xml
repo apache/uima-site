@@ -43,7 +43,9 @@
       </item>
 
       <item name="Development">
+        <item name="One-time setups"        href="/one-time-setup.html"/>
         <item name="Source Code"            href="/svn.html"/>
+        <item name="Building from Source"   href="/building-uima.html"/>
         <item name="Creating a Distribution"  href="/distribution.html"/>
         <item name="Doing a UIMA release"   href="/release.html"/>
         <item name="Code Conventions"       href="/codeConventions.html"/>
