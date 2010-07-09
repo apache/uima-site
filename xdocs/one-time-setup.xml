@@ -63,17 +63,23 @@ under the License.
 </section>
 
 <section name="One time setup for Eclipse" id="eclipse-setup">
-  <p>Install a current Eclipse (these instructions tested with Eclipse 3.5.2).  Then:
+  <p>Install Eclipse version 3.5.x  
+    (these instructions tested with Eclipse 3.5.2).</p>
+  <p class="note">Eclipse version 3.6.x has issues with the m2eclipse plugin 0.10.0, which
+    currently must be the version of m2eclipse used (see below).</p>
+  <p>Then:
     <ol>
       <li><p>Install the SVN support plugin <code>Subclipse</code> from
         <a class="external" rel="nofollow" target="_blank"
           href="http://subclipse.tigris.org/">http://subclipse.tigris.org/</a>.
         Be sure to pick the version for 1.6.x SVN client.        
         </p></li>
-      <li><p>Install m2Eclipse 0.10.0 or later from 
+      <li><p>Install m2Eclipse 0.10.0 (not 0.10.2) from 
         <a class="external" rel="nofollow" target="_blank"
           href="http://m2eclipse.sonatype.org/">http://m2eclipse.sonatype.org/</a>.
         </p>
+        <p class="note">Version 0.10.2 doesn't support the bug fix (below) as of July 2010,
+          so be sure to install version 0.10.0.</p>
         <p>Version 0.10.0 has a bug which prevents projects which use XMLBeans from compiling. 
           Until this is fixed, install this "update" after installing the base:
            <ol><li>Download <a class="external" rel="nofollow" target="_blank"
