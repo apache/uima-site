@@ -177,10 +177,49 @@
                                                 <p>First, be sure you've done the general
     <a href="one-time-setup.html">one-time-setup</a>.    
   </p>
-                                                <p>Rest: TBD,
-    including setting up GPG,
-    setting up settings.xml,
-    setting up security for that.</p>
+                                                <p>The rest of the setup is taken from various other sources around Apache
+    (links below).</p>
+                                                <ul>
+    <li>
+      <b><code>Settings.xml</code></b> file:
+      <p>Create and/or update your Maven settings.xml file (located where your local repo is).
+        Follow <a target="_blank" href="http://maven.apache.org/developers/committer-settings.html">these instructions</a> (but
+          ignore the last line about needing to be a member of group <code>apcvs</code> and <code>maven</code>).
+        Use Maven's <a target="_blank" href="http://maven.apache.org/guides/mini/guide-encryption.html">
+          password encryption capabilities</a> to encrypt your LDAP password, used to log on to
+          the server for uploading things to the Apache Nexus Repositories (both SNAPSHOTs and Staging).
+      </p>
+      <p>Your settings file should <b>not</b> contain your GPG passphrase.  It should have lines
+        like these:
+<pre>
+  &lt;gpg.useagent&gt;true&lt;/gpg.useagent&gt;
+  &lt;!--gpg.passphrase&gt;&lt;/gpg.passphrase--&gt;  &lt;!-- don't put passphrase in file --&gt;
+</pre>        
+        </p>
+    </li>
+    <li>
+      Create (if you haven't already) your GPG keys; see 
+        <a target="_blank" href="http://maven.apache.org/developers/release/pmc-gpg-keys.html">Making GPG Keys</a>.  
+    </li>
+    <li>You need to have a recent GPG client installed.  See 
+      <a target="_blank" href="http://www.gnupg.org/">http://www.gnupg.org/</a>.
+      The recent ones support the agents needed to have the capability of popping up 
+      (via an installed service) a window when
+      the passphrase is needed - so you never need to put the passphrase into a file.
+      I've found <a target="_blank" href="http://www.gpg4win.org/">http://www.gpg4win.org/</a>
+      has the agent support, for Windows XP.
+    </li>
+    <li>
+      You need a current version of the SVN client, Subversion (1.6) installed and on your shell's path. 
+    See <a target="_blank" href="http://subversion.apache.org/">http://subversion.apache.org/</a>
+    At least one person has had success using the client from <a target="_blank" href="http://www.collab.net/downloads/subversion/">Collabnet</a> on Windows.
+    </li>
+    <li>You need Java 1.5.  (Our builds should be done with 1.5 to catch any accidental use of 1.6-only 
+      methods).</li>
+    <li>Set the environmental variable <code>MAVEN_OPTS</code> to "-Xmx800m -XX:MaxPermSize=256m" 
+    (these may be too large, but they currently work).</li>
+    <li>Download and install Maven 3.0-beta-1 (or later), and set it up to be on the PATH.</li>
+  </ul>
                             </blockquote>
         </p>
       </td></tr>

@@ -100,6 +100,8 @@ ol li, ul li, dl dt, dl dd {
   font-size: 1em;
   line-height: 1.3em;
   margin: .2em;
+  margin-top: .3em;
+  margin-bottom: .4em;
 }
 dl dt {
   margin-left: 2em;
