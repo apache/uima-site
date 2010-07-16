@@ -118,6 +118,8 @@
                 </div>
                           <div class="navBarItem">      <a href="./svn.html">Source Code</a>
                 </div>
+                          <div class="navBarItem">      <a href="./maven-design.html">Maven Use</a>
+                </div>
                           <div class="navBarItem">      <a href="./building-uima.html">Building from Source</a>
                 </div>
                           <div class="navBarItem">      <a href="./distribution.html">Creating a Distribution</a>
@@ -200,6 +202,14 @@
     after all things that are being included in this release are present.</li>
   <li>Send [VOTE] message to dev list</li>
   <li>Post RESULT message, promote the release</li>
+  <li>After release appears on central,
+    <ol><li>update projects that used to depend on old (perhaps snapshot)
+    versions of the released artifact(s) to depend on the released versions</li>
+    <li>build/test these</li>
+    <li>commit</li>
+    <li>mvn deploy (the snapshots for the changed projects)</li>
+    </ol>
+    </li>
   <li>Update Jira version info to reflect the release status and date</li>
   <li>Post an announce letter</li>
   <li>Add release to next Board report</li>
