@@ -31,6 +31,12 @@ under the License.
 <p>This is developer information, mostly.  It documents how we are using Maven for
 building the various parts of UIMA.</p>
 
+<p>We follow Apache conventions for releasing Maven based projects 
+  (all of ours except the 
+  UIMA C++ enablement layer), using Nexus, as documented
+  <a target="_blank" 
+  href="http://www.apache.org/dev/publishing-maven-artifacts.html">here</a>.</p>
+
 <p>It covers how we use Maven for building Version: 2.3.1 and onwards.</p>
   <p>A transition to Maven 3 is occuring in 2010.  Maven 3 corrects many issues, including
     one we need regarding inheriting of profiles, so we pre-req Maven 3.0-beta-1 (or later).
@@ -86,21 +92,28 @@ and aggregation POMs do not do common factoring.</p>
   <subsection name="Parent Pom Hierarchy">
   <p>Parent pom names start with parent-pom-:</p>
 <pre>
-  parent-pom-top
+parent-pom-top
   
-    parent-pom-docbook - enables docbook processing (if docbook source is present)
+  parent-pom-docbook 
+    - enables docbook processing (if docbook source is present)
 
-      parent-pom-ibm-notice - same as top but adds IBM notice        
+    parent-pom-ibm-notice 
+      - same as top but adds IBM notice        
     
-      parent-pom-eclipse-plugins 
+    parent-pom-eclipse-plugins 
         
-         parent-pom-eclipse-plugins-ibm-notice - same as above but adds IBM notice
+       parent-pom-eclipse-plugins-ibm-notice 
+         - same as above but adds IBM notice
       
-      parent-pom-annotator - used to build PEAR packaged single-project annotators
+    parent-pom-annotator 
+      - used to build PEAR packaged single-project annotators
       
-      parent-pom-single-project - used to build non-PEAR packaged single-project annotators
+    parent-pom-single-project 
+      - used to build non-PEAR packaged single-project annotators
       
-      parent-pom-distr - used to build Binary Aggregate distributions (UIMA SDK and UIMA-AS)         
+    parent-pom-distr 
+      - used to build Binary Aggregate distributions 
+        (UIMA SDK and UIMA-AS)         
 </pre>
 </subsection>
 </section>    
