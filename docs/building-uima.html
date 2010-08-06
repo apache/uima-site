@@ -299,9 +299,11 @@ also are put into your local Maven repository.  Docbook output is placed in the 
     <li>To run maven commands on a project, select the project, right click, and pick <code>Run as</code>
       and then select mvn install (or other choice as you wish).</li>
   </ol>
-                                                <p>If your Maven build generates sources (e.g., you have some XMLBeans defined), 
+                                                <p class="note"><big><b>Help! I'm getting compile errors (class not found) in Eclipse!</b></big>  
+    If your Maven build generates sources (e.g., you have some XMLBeans defined), 
     then after the initial import and project build, you'll need to use the m2eclipse command 
-    <code>Update Project Configuration</code> found on the <code>Maven</code> context menu obtained by right-clicking the project folder.</p>
+    <code>Update Project Configuration</code> found on the <code>Maven</code> context menu 
+    obtained by right-clicking the project folder.  This will add the generated classes to Eclipse's classpath.</p>
                             </blockquote>
         </td></tr>
     </table>
