@@ -28,10 +28,10 @@ under the License.
 
 <section name="Checklist: Release">
   
-<p>Do <a href="one-time-release-setup.html">one-time setup</a> required for releasing.</p>
 <ol>
+  <li>Do <a href="one-time-release-setup.html">one-time setup</a> required for releasing.</li>
   <li>Finish up any changes, close Jiras, assign Jiras to proper release(s).</li>
-  <li>(If remerging a branch:  Note- best to do these if possible at the root of aggregations, 
+  <!--li>(If remerging a branch:  Note- best to do these if possible at the root of aggregations, 
     outside of Eclipse, so svn "batching" can work - will be quite a bit fraster)
     <ol><li>update branch working copy to head</li>
       <li>merge trunk head -> working copy (fully recursive)</li>
@@ -41,36 +41,45 @@ under the License.
       <li>commit</li>
       <li>(cleanup at end- delete the old branch)</li>
     </ol>
-  </li>
+  </li-->
   <p>More details on next steps are 
     <a href="http://maven.apache.org/developers/release/apache-release.html">here</a></p>
-  <li>Scan poms to be sure there are <b>no</b> unintentional -SNAPSHOTs</li>
-  <li>Do next steps in top release aggregate.
-    <ol>
-      <li><code>mvn release:prepare -DdryRun=true</code> and diff the resulting poms
-        to verify nothing unintentional is dropped</li>
-      <li><code>mvn release:clean</code> to restore projects</li>
-      <li><code>mvn deploy</code> to deploy snapshot</li>
-      <li><code>mvn release:clean release:prepare</code></li>
-      <li><code>mvn release:perform</code></li>      
-    </ol>
-  </li>
-  <li>Repeat above steps for all things being released in one go (not already in an aggregate).</li>
-  <li>login to <a href="https://repository.apache.org">https://repository.apache.org</a>
-    using your Apache LDAP credentials, find the staging artifact, and right click - "close" it
-    after all things that are being included in this release are present.</li>
-  <li>Send [VOTE] message to dev list</li>
-  <li>Post RESULT message, promote the release</li>
-  <li>After release appears on central,
-    <ol><li>update projects that used to depend on old (perhaps snapshot)
-    versions of the released artifact(s) to depend on the released versions</li>
-    <li>build/test these</li>
-    <li>commit</li>
-    <li>mvn deploy (the snapshots for the changed projects)</li>
-    </ol>
+  <ol>
+    <p>Release one or more artifacts into the Apache Nexus staging repository.
+      You can do multiple release:prepare/perform steps, with subsequent steps
+      depending on the previous artifacts in their "release" version.</p>
+    <li>Do next steps in top release artifact (simple module, or xxx-distr).
+      <ol>
+        <p>Release one or more artifacts into the staging repo, where the artifacts don't depend
+          on the released version of each other.</p>     
+        <li>Scan poms to be sure there are <b>no</b> unintentional -SNAPSHOTs</li>    
+        <li><code>mvn release:prepare -DdryRun=true</code> and diff the resulting poms
+          to verify nothing unintentional is dropped or updated incorrectly</li>
+        <li><code>mvn release:clean</code> to restore projects</li>
+        <li><code>mvn deploy</code> to deploy snapshot</li>
+        <li><code>mvn release:prepare</code>. Try to accept the default suggestions for names.</li>
+        <li><code>mvn release:perform</code></li>      
+      </ol>
     </li>
+    <li>Repeat above steps for all things being released in one go (not already in an aggregate).</li>
+    <li>login to <a href="https://repository.apache.org">https://repository.apache.org</a>
+      using your Apache LDAP credentials, find the staging artifact, and right click - "close" it
+      after all things that are being included in this release are present.</li>
+    <li>Update the trunk: for all references that should now refer to the staged release version
+    </li>
+    <li>build/test these</li>
+    <li>commit trunk</li>  
+  </ol>
+  <!--li>
+    Repeat above steps for all sets of dependent things where you need to update the dependencies to
+    depend on the release version of previous steps.  When you're done, you will have 1 or more
+    "closed" staging repositories, each having a unique URL.
+  </li-->
+  <li>Send [VOTE] message to dev list.  List the staging repository that testers
+    will need to add to their <code>settings.xml</code> files.</li>
+  <li>Post RESULT message, promote the release(s) from the staging repositories</li>
   <li>Update Jira version info to reflect the release status and date</li>
-  <li>Post an announce letter</li>
+  <li>After release appears on maven central, post an appropriate announce letter</li>
   <li>Add release to next Board report</li>
   <li>Celebrate :-)</li>
 </ol>

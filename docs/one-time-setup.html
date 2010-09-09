@@ -176,7 +176,6 @@
       <li><a href="#svn-setup">SVN</a></li>
       <li><a href="#maven-setup">Maven</a></li>
       <li><a href="#eclipse-setup">Eclipse</a></li>
-      <li><a href="#docbkx-setup">Docbkx</a> - a Maven plugin for processing Docbook files</li>
     </ul>
   </p>
                             </blockquote>
@@ -225,7 +224,8 @@
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>Install Eclipse version 3.5.x  
+                                    <p class="note"><b>Note: </b>See below for an alternative one-time setup for Eclipse that works with Eclipse 3.6</p>
+                                                <p>Install Eclipse version 3.5.x  
     (these instructions tested with Eclipse 3.5.2).</p>
                                                 <p class="note"><big><b>Don't use Eclipse version 3.6.x (Helios);</b></big> 
     it has issues with the m2eclipse plugin 0.10.0, which
@@ -275,33 +275,21 @@
       </td></tr>
     </table>
                                         <div class="sectionTable">
-      <table class="sectionTable" id='docbkx-setup'>
+      <table class="sectionTable">
         <tr><td>
-        <a name="One time setup for using the Docbkx Maven plugin"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;One time setup for using the Docbkx Maven plugin</h1></a>
+        <a name="Alternate one-time-setup for Eclipse"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Alternate one-time-setup for Eclipse</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
                                     <p>
-    A patch is needed to get get the Maven Docbkx plugin to work with Maven 3:
-    <ol><li>use m2Eclipse to checkout the <code>docbkx-maven-base</code> project from
-        <code>http://docbkx-tools.googlecode.com/svn/tags/docbkx-2.0.10</code></li>
-        <p>To do this, 
-        add an svn repository pointing to <code>http://docbkx-tools.googlecode.com/svn/tags/docbkx-2.0.10</code>, and 
-        then open this link and navigate to the <code>docbkx-maven-base</code> project.  Right click it and
-        do Check-out-as-Maven-project.
-        <p class="note">If you don't have the m2eclipse/SCM integration "extras" installed (see above) you won't have 
-          the menu pick to Check-out-as-Maven-project.  In this case, just check it out normally, 
-          then delete it from the workspace
-          (but not from the disk), and then import the disk copy as a Maven project using the Import - as-Maven-project menu.</p>
-        </p>
-        <li>Edit line 472 of <code>AbstractTransformerMojo.java</code>, where it says <code>...getResources("/catalog.xml")</code> and 
-          remove the <code>/</code> in front of <code>catalog.xml</code>.</li>
-        <li>do a<code> mvn install </code> in the docbkx-maven-base directory, to install the fix to your local repo.</li>
-      </ol>
-      <p>
-      If you're interested in knowing more about this bug, see 
-    <a class="external" rel="nofollow" target="_blank" href="http://code.google.com/p/docbkx-tools/issues/detail?id=52">http://code.google.com/p/docbkx-tools/issues/detail?id=52</a>.
-      </p>
+    This setup installs a later (SNAPSHOT) version of the m2eclipse plugin which fixes the errors mentioned above, and works with 
+    the 3.6 version of Eclipse (Helios).
+  </p>
+                                                <p>
+    Proceed as above, except for the install of the m2eclipse main plugin.  For that, use a snapshot version, for instance, from 
+    <a href="https://repository.sonatype.org/content/sites/forge-sites/m2e/0.11.1/N/">
+      https://repository.sonatype.org/content/sites/forge-sites/m2e/0.11.1/N/
+    </a> - these are the "Nightly builds" I think.  I've tried and had luck with 0.11.1.201009041932, for instance.
   </p>
                             </blockquote>
         </p>

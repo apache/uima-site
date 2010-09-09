@@ -1,0 +1,43 @@
+Status report for the Apache UIMA Project
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Releases:
+
+Maven Build tooling artifacts (e.g., parent POMs, maven helper plugins 
+and resources) that we will be using for our actual releases have 
+been released.  This was our first use of the Apache Nexus repository 
+and staging mechanism.  We expect a release of UIMA itself, shortly,
+using this new tooling.
+
+2010-1-26 2.3.0 (Incubator - last release) release of Java SDK, Annotator
+                add-on package, UIMA-AS (Async scaleout), and UIMA-CPP
+                (C++ enablement)
+
+Development:
+
+Some users complained about the difficulty in getting through the 
+one-time-setups needed to build.  Some of this is because we're a bit on
+the bleeding edge for maven build tooling; some of the difficulties are
+going away as bugs are fixed in the underlying build tooling.
+
+A small annoyance in how UIMA's "ResultSpecification" worked led to
+a careful examination of a multitude of "corner cases", and eventually,
+to a complete redo of this part of the code.
+
+Jira issues continue to come in and get worked on at a moderate rate, 
+including several in the UIMA-AS (Asynchronous Scaleout) area related
+to various error recovery scenarios, mostly.
+
+A Maven-Central-upload event on Sept. 7 that placed many partial entries 
+for Eclipse 3.6 artifacts (missing POMs and JARs) ended up breaking 
+our builds; this was reported to the maven-dev list, and it is being 
+looked into.  We worked around this issue by adding dependencies to 
+our already version-locked-down Eclipse artifacts, to lock down the 
+transitively depended-on Eclipse artifacts.
+
+Community: No changes
+
+Issues: No Board level issues at this time

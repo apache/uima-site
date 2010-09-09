@@ -30,9 +30,7 @@ under the License.
 
 <section name="Setup (one time) for building">
 <ol>
-  <li>Set up Eclipse (optional):
-    <ol><li>add m2Eclipse and the patch (see svn.html) and subversion</li></ol>
-  </li>
+  <li>Do the normal <a href="one-time-setup.html">one-time-setup</a> if you haven't already done this.</li>
   <li>Set up your maven "settings.xml" file (located in the directory containing your local repository;
     in windows, this is in c:Documents and Settings\<your-userid>\.m2</your-userid>. Here's a sample:
 <pre>
@@ -54,21 +52,12 @@ under the License.
   &lt;/profiles>
 
 &lt;/settings>
-</pre>   
+</pre>
+
+    <p class="note">
+      <b>Note:</b> The url element above is just a sample; each release will have its own unique staging repository name.
+    </p>   
   </li>
-  
-  <li>Fix the docbkx code: There's a one line fix needed, which hasn't been released (see 
-    <a class="external" rel="nofollow" target="_blank"
-      href="http://code.google.com/p/docbkx-tools/issues/detail?id=52">http://code.google.com/p/docbkx-tools/issues/detail?id=52</a>.
-    <p>To fix, do the following:
-      <ol><li>use m2Eclipse to checkout 
-        http://docbkx-tools.googlecode.com/svn/tags/docbkx-2.0.10/docbkx-maven-base project</li>
-        <li>Edit line 472, where it says ...getResources("/catalog.xml") and remove the / in front of "catalog.xml".</li>
-        <li>do a "mvn install" to your local repo.</li>
-      </ol>
-        
-      </p>  
-    </li>
 </ol>  
 </section>
 
@@ -98,10 +87,10 @@ under the License.
 </pre></li>  
 </ol>
 
-<p>If no errors, then conclude that the parent-pom-top is "good" and vote +1 :-) .</p>
-
 <p class="note">Afterwards, go to your local repo and remove the org/apache/uima/parent-pom-top/1 directory,
-  to prevent it from accidentally being used, until it passes official release.</p>
+  to prevent it from accidentally being used, until it passes official release, unless this component
+  is needed (depended upon) by further artifacts in the group being released.
+</p>
 
 </section>
 </body>
