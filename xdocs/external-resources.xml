@@ -29,11 +29,27 @@ under the License.
 
 <section name="UIMA Components">
 
+
+
 <p>
+
 Here are some links to UIMA components available from other places.  If you find other links that
+
 you think should be listed here, please drop us a line on on uima-dev or uima-user.  Similarly,
+
 if any of the content is out of date or inappropriate, please let us know.
 </p>
+
+<subsection name="OpenNLP Project">
+
+<p>The <a href="http://www.opennlp.org">OpenNLP Project</a> provides the
+official UIMA integration for the OpenNLP Sentence Detector, Tokenizer, POS Tagger,
+Name Finder, Document Categorizer, Chunker and Parser. 
+The opennlp.uima distribution can be downloaded from the projects
+<a href="https://sourceforge.net/projects/opennlp/files/OpenNLP%20Tools/">download page</a> 
+and includes a sample PEAR which can easily be tested with the Cas Visual Debugger.
+</p>
+</subsection>
 
 <subsection name="UIMA Component Repository at CMU">
 
@@ -70,13 +86,17 @@ repositories are:
   Center for Computational Pharmacology</a> at the University of Colorado School of
 Medicine; <a href="http://bionlp-uima.sourceforge.net/">repository</a> (see BioNLP entry,
 which describes this in more detail).
+
   </li>
   <li>
     the <a href="http://www.nactem.ac.uk/">
   National Centre for Text Mining (NaCTeM)</a> at the University
 of Manchester; <a href="http://www.nactem.ac.uk/uima_work/">repository</a>.
+
   </li>
 </ul>
+
+
 
 </subsection>
   
@@ -87,13 +107,22 @@ of Manchester; <a href="http://www.nactem.ac.uk/uima_work/">repository</a>.
   at <a href="http://bionlp-uima.sourceforge.net">http://bionlp-uima.sourceforge.net</a>.</p>
 </subsection>
 
+
+
 <subsection name="RASP4UIMA">
+
 <p><a href="http://www.digitalpebble.com/rasp4uima/index.html">RASP4UIMA</a> is a UIMA wrapper around
+
 the <a href="http://www.informatics.susx.ac.uk/research/groups/nlp/rasp/index.html">RASP</a>
+
 system, a parsing system for English.  RASP is free for research and education.  Download RASP4UIMA
+
 from <a href="http://www.digitalpebble.com/resources.html">the resource page</a> at 
+
 <a href="http://www.digitalpebble.com/">digitalpebble.com</a>
+
 </p>
+
 </subsection>
 
 </section>
