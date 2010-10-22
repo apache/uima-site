@@ -386,6 +386,19 @@ mvn install
     Docbooks are built by the normal maven lifecycle, in the prepare-package phase.</p>   
 </subsection>
 
+  <subsection name="Creating A4-size PDF documentation" id="building.docbooks.a4">
+  <p>The PDF docbook generation defaults to a paper type of USletter.  You may override this
+  by specifying the maven property "pdfPaperType".  You may specify this on the command line
+  as follows:
+  <code>mvn -DpdfPaperType=A4 package</code>
+  </p>
+  <p>The allowed values for paper type in Docbook can be seen on this page:
+  <a class="external" target="_blank" rel="nofollow" 
+  href="http://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html">
+  http://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html</a>.
+  </p>
+  
+  </subsection>
   <!-- This next section needs rewriting to work with the new docbook system 
   <subsection name="Creating A4-size PDF documentation" id="building.docbooks.a4">
   <p>If you don't live in the US, you may wish to create your PDF documentation in a different

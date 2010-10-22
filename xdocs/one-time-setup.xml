@@ -51,13 +51,43 @@ under the License.
 </section>
 
 <section name="One time setup for Maven" id="maven-setup">
-  <ol><li>Download Maven 3.0 beta-1 or later from
+  <ol><li>Download Maven 3.0 or later from
     <a class="external" rel="nofollow" target="_blank"
       href="http://maven.apache.org/download.html">http://maven.apache.org/download.html</a>.</li>
       <li>Set up your path to use this version.</li>
       <li>Add the following environment variable for Maven: <br/>
         <pre>  Variable name: <code>MAVEN_OPTS</code><br/>
   Value: <code>-Xmx800m  -XX:MaxPermSize=256m</code></pre></li>
+      <li>If you plan to build from "trunk" which contains unreleased as-of-yet artifacts, you'll need
+      to set up your Maven settings.xml file to reference the Apache snapshot repository; see <a class="external" rel="nofollow" target="_blank"
+      href="http://maven.apache.org/settings.html">http://maven.apache.org/settings.html</a> and
+      <a class="external" rel="nofollow" target="_blank"
+      href="http://maven.apache.org/ref/3.0/maven-settings/settings.html">
+      http://maven.apache.org/ref/3.0/maven-settings/settings.html</a>.
+      <p>To do this, create a settings.xml file in the right location (usually ~/.m2/) and 
+      add a setting for the repository.apache.org NEXUS snapshot repository. 
+      There's an existing settings.xml you can use as a template, in the conf/ directory of the maven install.
+      Here's an example of how that could be done:
+      <pre><code>&lt;profile>
+  &lt;id>local-build-configuration&lt;/id>
+  &lt;repositories>
+    &lt;repository>
+      &lt;id>apache-nexus-snapshot&lt;/id>
+      &lt;url>https://repository.apache.org/content/groups/snapshots-group/&lt;/url>
+    &lt;/repository>
+  &lt;/repositories>
+  &lt;pluginRepositories>
+    &lt;pluginRepository>
+      &lt;id>apache-nexus-snapshot&lt;/id>
+      &lt;url>https://repository.apache.org/content/groups/snapshots-group/&lt;/url>
+    &lt;/pluginRepository>
+  &lt;/pluginRepositories>
+&lt;/profile>
+
+&lt;activeProfiles>
+  &lt;activeProfile>local-build-configuration&lt;/activeProfile>
+&lt;/activeProfiles>
+</code></pre></p></li>
    </ol>
 </section>
 
@@ -112,8 +142,12 @@ under the License.
         </p>
         
       </li>
-      <li>Use Eclipse<code> Preferences -> Maven -> Installations </code> to add the Maven 3.0-beta-1 (or later) installation as the
+      <li>Use Eclipse<code> Preferences -> Maven -> Installations </code> to add the Maven 3.0 (or later) installation as the
         default to use.</li>
+      <li>(Optional - if you are using m2eclipse plugin to run maven 
+          build commands.) Use Eclipse <code>Preferences -> Java -> Installed JREs</code>
+          and select the JRE you will be using as the default, and click
+          "Edit" and add the default VM arguments from MAVEN_OPTS above.</li>
     </ol>
   </p>
 </section>

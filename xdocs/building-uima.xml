@@ -53,10 +53,6 @@ under the License.
       <a href="one-time-setup.html#eclipse-setup">Eclipse: Click here for the one-time Eclipse setup</a>. This includes
       setting up m2eclipse plugin (including a patch), and is only needed if you are using Eclipse as your IDE.
     </li>
-    <li>
-      <a href="one-time-setup.html#docbkx-setup">Docbkx: Click here for the one-time Docbkx setup</a>.  This involves
-      applying a 1-line patch (required).
-    </li>
   </ul>
 </subsection>
 
