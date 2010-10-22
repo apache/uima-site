@@ -55,16 +55,24 @@ under the License.
     <a class="external" rel="nofollow" target="_blank"
       href="http://maven.apache.org/download.html">http://maven.apache.org/download.html</a>.</li>
       <li>Set up your path to use this version.</li>
-      <li>Add the following environment variable for Maven: <br/>
+      <li>(Optional, but is needed for some JVM/platforms, to give the JVM enough room to build things). 
+      Add the following environment variable for Maven: <br/>
         <pre>  Variable name: <code>MAVEN_OPTS</code><br/>
   Value: <code>-Xmx800m  -XX:MaxPermSize=256m</code></pre></li>
+  
       <li>If you plan to build from "trunk" which contains unreleased as-of-yet artifacts, you'll need
-      to set up your Maven settings.xml file to reference the Apache snapshot repository; see <a class="external" rel="nofollow" target="_blank"
+      to have the build get access to UIMA's build tooling.  This can be done in 2 ways:
+      <ol><li>Checkout the build tooling from svn (http://svn.apache.org/repos/asf/uima/build/trunk) and 
+      build and install it into your local maven repository.  To do the build and install,  
+      go into the parent-poms/parent-pom-top directory, and do the "mvn install" command.</li>
+      <li>Change your maven settings.xml file to include the Apache snapshot repository in the set of repositories it
+      searches for artifacts.  For general information on maven settings files, 
+      see <a class="external" rel="nofollow" target="_blank"
       href="http://maven.apache.org/settings.html">http://maven.apache.org/settings.html</a> and
       <a class="external" rel="nofollow" target="_blank"
       href="http://maven.apache.org/ref/3.0/maven-settings/settings.html">
       http://maven.apache.org/ref/3.0/maven-settings/settings.html</a>.
-      <p>To do this, create a settings.xml file in the right location (usually ~/.m2/) and 
+      <p>To follow this approach, create a settings.xml file in the right location (usually ~/.m2/) and 
       add a setting for the repository.apache.org NEXUS snapshot repository. 
       There's an existing settings.xml you can use as a template, in the conf/ directory of the maven install.
       Here's an example of how that could be done:
@@ -87,7 +95,7 @@ under the License.
 &lt;activeProfiles>
   &lt;activeProfile>local-build-configuration&lt;/activeProfile>
 &lt;/activeProfiles>
-</code></pre></p></li>
+</code></pre></p></li></ol></li>
    </ol>
 </section>
 
