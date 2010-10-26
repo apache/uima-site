@@ -38,8 +38,8 @@ building the various parts of UIMA.</p>
   href="http://www.apache.org/dev/publishing-maven-artifacts.html">here</a>.</p>
 
 <p>It covers how we use Maven for building Version: 2.3.1 and onwards.</p>
-  <p>A transition to Maven 3 is occuring in 2010.  Maven 3 corrects many issues, including
-    one we need regarding inheriting of profiles, so we pre-req Maven 3.0-beta-1 (or later).
+  <p>A transition to Maven 3 is occurring in 2010.  Maven 3 corrects many issues, including
+    one we rely on, regarding inheriting of profiles, so we pre-req Maven 3.0.
   </p>
 
 <subsection name="Nexus">
@@ -83,6 +83,13 @@ for purposes of building multi-module things, and releasing them all at once.
   For clarity,
 we mostly keep these two uses in separate POMs:  parent POMs do not do aggregation, 
 and aggregation POMs do not do common factoring.</p>
+<p>An exception to this is the 
+parent-poms hierarchy; here, each parent-pom has a %lt;modules> section which 
+lists the poms which in turn, have this pom as their parent.  This allows the
+release plugin to support releasing a pom, together with all of the build parent poms that are
+its children (recursively), together.  This is needed because the poms must all have their
+version numbers adjusted for the release (dropping the -SNAPSHOT, etc.) which
+the release plugin does.</p>
 
 <p>Our parent poms are kept in a folder, "parent-poms", under a top level SCM node called "build", which holds things
   needed for building, but which are not part of normal uima release distributions.
@@ -151,13 +158,13 @@ parent-pom-top
 <section name="Release artifacts">
   <p>We follow the standard release process for Maven-based artifacts at Apache,
     documented <a target="_blank" 
-      href="http://maven.apache.org/developers/release/apache-release.html">here.</a></p>
+      href="http://www.apache.org/dev/publishing-maven-artifacts.html">here.</a></p>
   <p>For each artifact, the release process builds additional artifacts, and
      attaches them to the main one, so they will "go along with" the main artifact during 
     Maven deployment to repositories.
     <ul>
       <li>
-        sources.jar - holds the source files
+        sources.jar - holds the source files - this is for IDEs that want to refer to the source
       </li>
       <li>
         javadoc.jar - (For Java sourced artifacts, only)
@@ -170,7 +177,177 @@ parent-pom-top
         should be "buildable" by doing "mvn install", etc. in the unzipped directory.
       </li>
     </ul>  
+    The release process happens when the command <code>mvn release:prepare</code> or 
+    <code>mvn release:perform</code> is executed.  The release plugin is set up by the common
+    Apache super-Pom to specify the <code>apache-release</code> profile.  It is this profile
+    being selected that causes (among many other things) the sources.jar, javadoc.jar and 
+    source-release.zip artifacts to be built.
   </p>
+  
+  <subsection name="Standard Artifacts">
+  
+  <p>The release process includes standard artifacts in standard places.  The Maven remote-resources-plugin
+     is used to get these resources from a special a UIMA build artifact (uima-jar-resource-bundle), 
+     customizing them for the particular project:
+     <ul><li>The DEPENDENCIES file is generated from the transitive closure of the dependencies in the POM.</li>
+         <li>The NOTICES file is augmented with additional text (we use this to add the IBM Copyright formerly
+         in the files, per the Apache practice for moving these to the NOTICE file). 
+         </li></ul>    
+  </p>
+  
+  <p>These (partially) generated resources are placed in the project's target/maven-shared-archive-resources/META-INF/
+     directory.  Later steps in the build use this directory for two purposes:
+     <ul><li>adding this information to any JAR that might be built</li>
+         <li>adding this information as part of generated assemblies - these files are copied to the top
+             level (above any project).</li>
+     </ul>
+   </p>
+   
+   <p><b><u>Overriding on a per-project basis:</u></b> Files that the remote-resources-plugin obtains and places
+      in the target/maven-shared-archive-resources/META-INF/ directory can be overridden
+      by including identically named files at the top level of the project.
+      This is commonly used for add-on projects having a different LICENSE or NOTICE file.</p>
+      
+   <p>Note that there are sometimes two sets of LICENSE / NOTICE files - one for the source distribution,
+      and one for the binary distribution.  This is because the source distribution rarely needs other
+      than the standard LICENSE/NOTICE files, for example, because it is only distributing source; while the
+      binary distribution often distributes additional components that are licensed under other
+      licenses, with additional NOTICE requirements - in which case, the LICENSE and NOTICE files 
+      contains all of the required licenses and notices for everything
+      being distributed.</p>
+     
+   <p style="margin-left: 3em">
+   For <i>binary</i> distributions, the LICENSE and NOTICE files are taken from src/main/readme/ directory.
+   </p>
+   <br/><br/>
+   <p>This next table summarizes the packaging artifacts and how and where they are 
+      located and added during the build process.</p>
+  
+   <table class="downloads">
+
+    <tr>
+     <th>Artifacts</th>
+     <th>Variants</th>
+     <th>Sources</th>
+     <th>Targets</th>
+     <th>Methods</th>
+    </tr>
+
+    <tr>
+     <td><p>LICENSE, NOTICE, DEPENDENCIES.</p>
+     <p>Note that DEPENDENCIES are not (currently) in 
+         our "binary" assembly distributions.</p></td>
+     <td><p>Standard, for source distribution</p>
+         <p>Alternate: has extra Notice element used for copyrights moved to Notice file.</p>
+         <p>Alternate2: for binary assemblies, these are customized for each binary assembly.</p>
+         </td>
+     <td><p>uima-jar-resource-bundle (in the build tooling).</p> 
+         <p>Additional text for NOTICE (if needed) comes from a property in the build POM,
+            (currently inherited from the build poms with the name ending in -ibm-notice).</p>  
+         <p>For binary assemblies, comes from either
+           <ul><li>src/main/readme/, or</li>
+               <li>top level (for Addons)</li>
+           </ul>
+         </p>
+     </td>
+      <!-- Targets -->     
+     <td><p>Jars: goes into the MANIFEST.MF. 
+         <p>Source-Release Assemblies:</p> 
+         goes into the zip as top level files.</p>
+         <p>Custom Binary assemblies: goes into the zip / tar as top level files.</p>
+     </td>
+     <!-- Method -->
+     <td><p>parent-pom-top configures remote-resources plugin to copy these into
+            target/maven-shared-archive-resources/META-INF/
+            directory.  This info is then included in any Jars that are built.</p>
+         <p>During release (only) (apache-release profile activated)
+            the information in target/maven-shared-archive-resources/META-INF/
+            is copied to the top level of the source-release archive.
+            Any versions of these files at the project's top level
+            will subsequently override these, at the top level of the archive.</p>
+         <p>For binary distributions, done with -distr projects, 
+            these files come from src/main/readme/.  For binary distributions,
+            done using single-project parent (add-ons, typically), these files
+            are copied from the top level of the project into the archive.</p></td>
+    </tr>
+    <tr>
+      <td>README.txt</td>
+      <td>source-release.zips and binary distribution releases (not in Jars)</td>
+      <td><p>For -distr poms, for source distributions, these come from 
+           same-named files at the top level of the -distr project.
+           For binary distributions, the custom assembly specifies where these
+           files come from (typically src/main/readme).
+           </p>
+          <p>For Addon projects, if there is a README at the top level, this 
+             is copied into both the source and binary distributions, at the top level of the archive.</p>
+      </td>
+      <td>Goes at the top level of archive</td>
+      <td>
+        <p>For source release building, during release (only) (apache-release profile activated)
+            parent-pom-top configures the assembly plugin for source assemblies to use
+            the multimodule-source-release in uima-jar-resource-bundle.  This copies 
+            the README file from the top level into the top level of the archive.
+            </p>
+         <p>For binary distributions, the distribution projects inherit from either
+            parent-pom-distr (whose assembly copies the README from src/main/readme/) 
+            or parent-pom-single-project
+            (whose assembly copies the README from the top level in the project).</p>
+      </td>
+    </tr>
+
+    <tr>
+      <!-- artifact -->
+      <td><p>RELEASE_NOTES.html</p> 
+      <p>Each release can include release notes 
+      describing the main changes for the release.</p></td>
+      <!-- variants -->
+      <td>source-release.zips for some projects and binary distribution releases (not in Jars)</td>
+      <!-- Sources -->
+      <td><p>For -distr poms, source for these was in src/main/readme/, but is now
+             at the top level (to reduce configuration by following more conventions)</p>
+          <p>For (some) Addons, there is a RELEASE_NOTES at the top level, which
+             is copied into the source and binary distributions to the top level of the archive.</p>
+      </td>
+      <!-- Targets -->
+      <td>Goes at the top level of archive</td>
+      <!-- Method -->
+      <td>
+        <p>During release builds the assembly is configured to copy these from the top
+           level of the project to the top level of the archive.
+        </p>
+      </td>
+    </tr>
+    
+    <tr>
+      <!-- artifact -->
+      <td><p>issuesFixed</p>
+      <p>Each release can include a top-level directory called issuesFixed, 
+        which has a file jira-report.html</p>
+        <p>This is generated
+        by the release manager using a top level command when a release is being
+        contemplated.</p>
+        <p>It contains the set of fixed/resolved Jiras that correspond to this release.  
+        </p></td>
+      <!-- variants -->
+      <td>none</td>
+      <!-- Sources -->
+      <td>This is a computed resource, computed when the top level command is run.</td>
+      <!-- Targets -->
+      <td>The directory goes at the top level of archive</td>
+      <!-- Method -->
+      <td>
+        <p>A special command is run by the release manager to create or update this.
+           The command is</p>
+           <p><code>mvn -N -DjiraVersion=xxxxxx changes:jira-report</code></p>
+           <p>
+           run in the top level directory being released.  xxxxxx is the <b>internal</b>
+           version id used by Jira for the particular version being released - see
+           <a href="release.html">release.html</a> for how to obtain this.
+        </p>
+      </td>
+    </tr>
+   </table>
+ </subsection>
 </section>
 
 <section name="Handling Documentation">

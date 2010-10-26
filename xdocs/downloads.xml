@@ -44,7 +44,7 @@ site.</a></p>
   
 <p>Apache UIMA is distributed as source and binary (ready-to-use) packages.
   These are available in
-  <code>zip</code>, <code>tar.gz</code> and
+  <code>zip</code>, <code>tar.gz</code> and sometimes,
 <code>tar.bz2</code> archive formats.  Please
 note that the <code>tar.*</code> archives contain file names longer
 than 100 characters and have been created using GNU tar extensions.
@@ -69,7 +69,9 @@ documentation</a>.
 <p>If you're using Maven to build your projects, you can use the UIMA Maven artifacts that are
 deployed on the Apache Incubator repository: 
 <a href="http://people.apache.org/repo/m2-incubating-repository/">
-http://people.apache.org/repo/m2-incubating-repository/</a>.  See some of the sandbox POMs for
+http://people.apache.org/repo/m2-incubating-repository/</a>.  
+After release 2.3.1, these will be deployed to Maven central, instead.
+See some of the sandbox POMs for
 examples on how to reference the UIMA jars in Maven.
 </p>
 

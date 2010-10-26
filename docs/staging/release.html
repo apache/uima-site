@@ -318,16 +318,30 @@
           and release numbers.
 		    </li>
 		    <li>
-		      Update both versions (text and HTML) of the release notes for the release. JIRA can provide a list of 
+		      Update both versions (text and HTML) of the release notes for the release.
+		       JIRA can provide a list of 
 		      issues for a certain release when using the 'ReleaseNotes' function, 
           after you've closed the Jira issues to be released with this version.
 		    </li>
+		    <li>Generate the report of issues fixed in this release, by going to top level project
+		        being released (e.g., uimaj-distr) and issuing the maven command:
+		        <pre>mvn changes:jira-report -N -DjiraVersion=xxxxxx</pre>
+		        where
+             xxxxxx is the jira internal version number which you can get 
+             from the Jira url (see parameter fixfor=xxxxxx or fixforversion=xxxxxx) 
+             by going to https://issues.apache.org/jira/browse/UIMA 
+             and selecting "Releases" or "Versions" and then going to the 
+             particular version and looking in the url for
+             that version.
+		         <p>Each time you run this, an updated report will be created in the
+		            top level of this project.  It doesn't need to be checked into SVN,
+		            but will be copied into the distribution archives (source and binary)
+		            for this release.</p>
+		        </li>
         <li>
           Do a trial build of the release candidate:
-            cd **directory for building the components**  e.g. aggregate-uimaj
-            mvn install
-            cd **directory for creating the distribution** e.g. uimaj-distr
-            mvn install
+          <pre>cd **directory for creating the distribution** e.g. uimaj-distr
+mvn install</pre>
         </li>
 		  </ul>
 		</p>
