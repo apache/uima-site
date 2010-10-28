@@ -41,6 +41,7 @@ under the License.
 		<li><a href="#Release Discussions - Release Plan">Release Discussions - Release Plan</a></li>
     <li><a href="#Preparing Jira for the Release">Preparing Jira for the Release</a></li>
 		<li><a href="#Preparing The Sourcecode For The Release">Preparing The Sourcecode For The Release</a></li>
+		<li><a href="#Including updates to the Build tooling">Including updates to the Build tooling</a></li>
 		<li><a href="#Building The Release Candidate">Building The Release Candidate</a></li>
 		<li><a href="#Doing The Release Vote">Doing The Release Vote</a></li>
     <li><a href="#Ask Incubator PMC To Release">Ask Incubator PMC To Release</a></li>
@@ -166,6 +167,24 @@ mvn install</pre>
 		</p>
 	</subsection>
 	
+	<subsection name="Including updates to the Build tooling">
+	<p>This step is skipped, unless the build tooling is being updated.</p>
+	<p>There are two projects in the build tooling, each having as a parent, the common Apache Parent POM
+	<b>uima-build-resources</b> and <b>parent-pom</b>.
+	  The following special procedure is used to release updates to these.
+	</p>
+	<p>
+	  The parent-pom has the uima-build-resources's version number encoded as the 
+	  "property" <pre>&lt;uimaBuildResourcesVersion>XXXXXX&lt;/uimaBuildResourcesVersion></pre>
+	  This value will normally be set to the last released version number of the uima-build-resources artifact.
+	</p>
+	<p>If that artifact is changing, during development, this will be set to the XX-SNAPSHOT value corresponding to 
+	   the development version.  When releasing, first do a release (to the Nexus Staging repository, as usual) of
+	   the uima-build-resources artifact, which will create a version without the -SNAPSHOT.  Then change the
+	   &lt;uimaBuildResourcesVersion> value to correspond to the non-SNAPSHOT version number of this, before
+	   proceeding to release the parent-pom artifact.</p>	
+	</subsection>
+	
 	<subsection name='Building The Release'>
     <p class="note">Prior to releasing, you must do the 
       <a href="one-time-release-setup.html">one-time setup</a>
@@ -217,9 +236,10 @@ mvn install</pre>
 	
   <subsection name='Removing -SNAPSHOT dependencies'>
     <p>
-      The release artifacts can refer to other artifacts in several ways, for example via the &lt;parent-pom>
-      element, or via a &lt;dependency> element.  Except for the docbook olink artifact, which is not released,
-      these dependencies should refer to non-snapshot versions of things.
+      POMs can refer to other artifacts in several ways, for example via the &lt;parent-pom>
+      element, or via a &lt;dependency> element.  References in these two elements are automatically updated
+      during the release process, from xx-SNAPSHOT to xx for the tag, and then to the next development level,
+      for the trunk.  So, no manual maintenance of these is needed; let the release plugin do this work. 
     </p>
   </subsection>
   
@@ -235,14 +255,6 @@ mvn install</pre>
 		</p>
 	</subsection>
   
-  <subsection name='Releasing build tooling'>
-    <p>
-      Build tooling is released, project by project - each component in the build has its
-      own release version number, numbered sequentially starting with 1, as is the convention
-      in other Apache projects for build tooling.
-    </p>    
-  </subsection>
-
 	<subsection name='Releasing'>
 		<p>
 		  After a successful release vote for the release on the dev mailing list log on to the 
