@@ -143,20 +143,35 @@ under the License.
 		      issues for a certain release when using the 'ReleaseNotes' function, 
           after you've closed the Jira issues to be released with this version.
 		    </li>
-		    <li>Generate the report of issues fixed in this release, by going to top level project
+		    <li>Edit the POM of the top level thing being released, to add the property:
+		    <pre>&lt;jiraVersion>123456&lt;/jiraVersion></pre>
+		    replacing the 123456 with the actual Jira internal version number 
+		        (or numbers, separated by a comma) for the Jira release(s) being
+		        done.  This value is used during release processing to automatically 
+		        generate a report of the list of Jira issues that are included in this release.
+		        Change "123456" to be the actual jira internal version number, which you can get 
+            from the Jira url (see parameter fixfor=xxxxxx or fixforversion=xxxxxx) 
+            by going to https://issues.apache.org/jira/browse/UIMA 
+            and selecting "Releases" or "Versions" and then going to the 
+            particular version and looking in the url for
+            that version.
+          <p>
+		        You can also generate this report manually (for instance, if you want to
+		        have a look at what it will produce) by going to top level project
 		        being released (e.g., uimaj-distr) and issuing the maven command:
-		        <pre>mvn changes:jira-report -N -DjiraVersion=xxxxxx</pre>
-		        where
-             xxxxxx is the jira internal version number which you can get 
-             from the Jira url (see parameter fixfor=xxxxxx or fixforversion=xxxxxx) 
-             by going to https://issues.apache.org/jira/browse/UIMA 
-             and selecting "Releases" or "Versions" and then going to the 
-             particular version and looking in the url for
-             that version.
-		         <p>Each time you run this, an updated report will be created in the
-		            top level of this project.  It doesn't need to be checked into SVN,
-		            but will be copied into the distribution archives (source and binary)
-		            for this release.</p>
+		        <pre>mvn changes:jira-report -N </pre></p>
+		        
+		         <p>Each time this plugin is run, it creates an updated report in the
+		            top level of this project.  This report doesn't need to be checked into SVN.
+		            It will be copied into the distribution archives (source and binary)
+		            for this release.  The RELEASE_NOTES.html files have been updated to
+		            refer to this generated report.</p>
+		         <p>Running the mvn release... command will cause this report to be generated or
+		            updated, every time the command is run.  So it is important that the POM 
+		            is updated to include the internal Jira version number, so the 
+		            right report is generated.</p>
+		         <p>If you know the report is already generated, and want to skip the part of the
+		            release which generates it, include -Dmaven.jiraReport.skip in your commandline.</p>
 		        </li>
         <li>
           Do a trial build of the release candidate:
