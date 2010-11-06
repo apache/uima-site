@@ -51,7 +51,8 @@ under the License.
           password encryption capabilities</a> to encrypt your LDAP password, used to log on to
           the server for uploading things to the Apache Nexus Repositories (both SNAPSHOTs and Staging).
       </p>
-      <p>Your settings file should <b>not</b> contain your GPG passphrase.  It should have lines
+      <p>Your settings file should <b>not</b> contain your GPG passphrase, to avoid the security
+         risk inherent in having this in a file stored on your machine.  Instead, it should have lines
         like these:
 <pre>
   &lt;gpg.useagent>true&lt;/gpg.useagent>
