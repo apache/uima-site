@@ -43,8 +43,10 @@ under the License.
 		<li><a href="#Preparing The Sourcecode For The Release">Preparing The Sourcecode For The Release</a></li>
 		<li><a href="#Including updates to the Build tooling">Including updates to the Build tooling</a></li>
 		<li><a href="#Building The Release Candidate">Building The Release Candidate</a></li>
+    <li><a href="#Tips for the Release Manager">Tips for the Release Manager</a></li>
+    <li><a href="#Removing -SNAPSHOT dependencies">Removing -SNAPSHOT dependencies</a></li>
 		<li><a href="#Doing The Release Vote">Doing The Release Vote</a></li>
-    <li><a href="#Ask Incubator PMC To Release">Ask Incubator PMC To Release</a></li>
+    <li><a href="#Releasing">Releasing</a></li>
     <li><a href="#Publish The Release">Publish The Release</a></li>
     <li><a href="#Announce The Release">Announce The Release</a></li>     
       </ul>
@@ -201,7 +203,7 @@ mvn install -Papache-release</pre>
 	   proceeding to release the parent-pom artifact.</p>	
 	</subsection>
 	
-	<subsection name='Building The Release'>
+	<subsection name='Building The Release Candidate'>
     <p class="note">Prior to releasing, you must do the 
       <a href="one-time-release-setup.html">one-time setup</a>
       required for releasing
@@ -249,6 +251,54 @@ mvn install -Papache-release</pre>
         </p>
         
 	</subsection>
+  
+  <subsection name='Tips for the Release Manager'>
+    <p>
+      The release is done using the commands <code>mvn release:prepare</code> and <code>mvn release:perform</code>.
+    </p>
+    <p><b><u>Having all submodules at the same version:</u></b> 
+      When releasing a multi-module project where all the submodules have the same release version as the 
+      root project (e.g., uimaj-distr), you can have the release plugin set the version for all the submodules
+      the same value as the root, automatically, just use this form of the release:prepare:
+      <pre>mvn release:prepare -DautoVersionSubmodules</pre>
+    </p>
+    <p>
+      <b><u>Trying out the release build:</u></b> You can build the artifacts that the release would build by using:
+      <pre>mvn package -Papache-release</pre>
+    </p>
+    <p>
+      <b><u>Release Candidates:</u></b> The <code>mvn release:prepare</code> asks what the SVN tag name should be
+      and defaults to [root artifact]-[release-version].  It is convenient to append to this, <code>-RC1, -RC2, etc</code>,
+      indicating the release candidate try.  After one of this is voted out of the incubator, you can tag it
+      (copy it) under a name without the -RCn indicating that's the actual release.
+    </p>
+    <p>
+      <b><u>Re-doing release candidates:</u></b> There are two ways to reset things back so you can do
+      another release candidate; depending on how far through the release process you've progressed.
+    </p>
+    <p style="margin-left:3em"><code>[mvn release:prepare]</code> If you've just done release:prepare,
+    you can reset things back to as they were before (almost) that command by issuing
+    <code>mvn release:rollback</code>.  The "almost": you have to manually svn delete the tag for the
+    release candidate (or name the next try as another release candidate).
+    </p>
+    <p style="margin-left:3em"><code>[mvn release:perform]</code> If you've done a release:perform, to
+    reset the source, you have to change the &lt;version>x.y.z-SNAPSHOT> back to their previous value.
+    You can use Eclipse's search/replace to do this, or the mvn versions plugin.  If you've 
+    "closed" the Nexus repo - you have to drop it.  If you haven't, you can just re-run the 
+    release:perform when you're ready, and that will overwrite the staging repo data in Nexus.  But see
+    the next tip.
+    </p>
+    <p>
+      <b><u>Nexus staging repositories and your source computer</u></b> The staging repo that 
+      receives the output of <code>mvn release:perform</code> has as part of its name, the
+      IP address where the deploy comes from.  If you have a laptop, and do part of the release
+      at "work", and then another part at "home", the IP address will be different, and 
+      multiple staging repositories will be created. This is not a problem, usually, unless
+      you are <i>updating</i> a release by redoing it, and are expecting the previous version
+      to be overwritten.  In case it isn't, you can just use the Nexus command line interface
+      to delete the old version from the "other" staging repo.
+    </p>
+  </subsection>
 	
   <subsection name='Removing -SNAPSHOT dependencies'>
     <p>
