@@ -1,16 +1,22 @@
 <mirrors>
 <mirror url="[preferred]/incubator/uima/eclipse-update-site/"
 label="Recommended mirror: [preferred]"/>
+<mirror url="[preferred]/uima/eclipse-update-site/"
+label="Recommended mirror for 2.3.1 or later: [preferred]"/>
 [if-any http]
   [for http]
     <mirror url="[http]/incubator/uima/eclipse-update-site/"
       label="[http]"/>
+    <mirror url="[http]/uima/eclipse-update-site/"
+      label="[http] for 2.3.1 or later"/>
   [end]
 [end]
 [if-any backup]
   [for backup]
     <mirror url="[backup]/incubator/uima/eclipse-update-site/"
       label="Backup mirror: [backup]"/>
+    <mirror url="[backup]/uima/eclipse-update-site/"
+      label="Backup mirror for 2.3.1 or later: [backup]"/>
   [end]
 [end]
 </mirrors>
