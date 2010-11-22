@@ -115,13 +115,13 @@
             <div class="navBarItem">      <div class="navPartHeading">Development</div>
                 </div>
                 <div class="navBar">
-                  <div class="navBarItem">      <a href="./one-time-setup.html">One-time setups</a>
-                </div>
-                          <div class="navBarItem">      <a href="./svn.html">Source Code</a>
-                </div>
-                          <div class="navBarItem">      <a href="./maven-design.html">Maven Use</a>
+                  <div class="navBarItem">      <a href="./dev-quick.html">Quick Start: building</a>
                 </div>
                           <div class="navBarItem">      <a href="./building-uima.html">Building from Source</a>
+                </div>
+                          <div class="navBarItem">      <a href="./one-time-setup.html">One-time setups</a>
+                </div>
+                          <div class="navBarItem">      <a href="./svn.html">Source Code</a>
                 </div>
                           <div class="navBarItem">      <a href="./distribution.html">Creating a Distribution</a>
                 </div>
@@ -132,6 +132,8 @@
                           <div class="navBarItem">      <a href="./uima-specification.html">UIMA Specification (OASIS)</a>
                 </div>
                           <div class="navBarItem">      <a href="./team-list.html">Project Team</a>
+                </div>
+                          <div class="navBarItem">      <a href="./maven-design.html">Maven Use</a>
                 </div>
             </div>
                       <br/>
@@ -195,6 +197,7 @@
 			</ul>
 		<br />
 		</li>
+     <!-- 
         <li><a href="#building.with.maven">Building UIMA from Source</a>
 			<ul>
 				<li><a href="#building.command.line">Building from the command line</a></li>
@@ -204,6 +207,7 @@
 				<li><a href="#building.docbooks">Building uima-docbooks</a></li>
 			</ul>
         </li>
+       -->
       </ul>
 </p>
                             </blockquote>
@@ -319,8 +323,7 @@ below for more information.
                                     <p>For those users who are behind a corporate firewall which is 
 blocking http access to the Subversion repository, you can try to access it 
 via HTTPS: </p>
-                                                <longquote><code>% svn checkout \<br />
-  https://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
+                                                <longquote><code>% svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
                             </blockquote>
         </td></tr>
     </table>
@@ -338,7 +341,7 @@ via HTTPS: </p>
         <blockquote class="subsectionBody">
                                     <p>The Subversion client can go through a proxy, if you configure it 
 to do so. First, edit your "servers" configuration file to indicate which 
-proxy to use. The files location depends on your operating system. 
+proxy to use. The location of this configuration file depends on your operating system. 
 On Linux or Unix it is located in the directory "~/.subversion". 
 On Windows it is in "%APPDATA%\Subversion". (Try "echo %APPDATA%", 
 note this is a hidden directory.) </p>
@@ -370,26 +373,9 @@ http-proxy-port = 3128
         <blockquote class="subsectionBody">
                                     <p>Everyone can access the Apache UIMA Subversion repository via HTTPS. 
 Apache UIMA Committers must checkout the Subversion repository 
-via HTTPS, in order to be able to check in changes. 
+via HTTPS (not HTTP), in order to be able to check in changes. 
 </p>
-                                                <longquote><code>% svn checkout \<br />
-  https://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable" id='checkout.using.eclipse'>
-        <tr><td>
-       
-       
-       
-          <a name="Checking Out Code using Eclipse">
-            <h2>Checking Out Code using Eclipse
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>See <a href="building-uima.html#checkout.using.eclipse">Building UIMA - checkout using Eclipse</a>.</p>
+                                                <longquote><code>% svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
                             </blockquote>
         </td></tr>
     </table>
@@ -494,202 +480,6 @@ changes automatically. Only specifying the issue link does not work correctly, f
 please see the JIRA issue <a class="external" rel="nofollow" href="http://jira.atlassian.com/browse/SVN-37">
 http://jira.atlassian.com/browse/SVN-37</a>.
 </p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                            </blockquote>
-        </p>
-      </td></tr>
-    </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
-        <tr><td>
-        <a name="Building UIMA"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Building UIMA</h1></a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="sectionBody">
-                                          <table class="subsectionTable" id='building.with.maven'>
-        <tr><td>
-       
-       
-       
-          <a name="Building UIMA from Source">
-            <h2>Building UIMA from Source
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>
-  See <a href="building-uima.html">Building UIMA</a>.
-</p>
-                                                <p>
-  The source can be obtained in two ways:
-  <ol><li>You can checkout the source from SVN, from trunk, or a particular tagged release, or</li>
-    <li>you can use the source version of the release artifact you download from the download
-      page.</li></ol>
-</p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable" id='building.command.line'>
-        <tr><td>
-       
-       
-       
-          <a name="Building from the Command Line">
-            <h2>Building from the Command Line
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>
-  See <a href="building-uima.html#building.command.line.one">Building one project from the command line</a>, and 
-  <a href="building-uima.html#building.command.line.group">Building all the projects for a major component from the command line</a>.
-  </p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable" id='building.eclipse'>
-        <tr><td>
-       
-       
-       
-          <a name="Building from Eclipse">
-            <h2>Building from Eclipse
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>With m2eclipse plugin, you can right-click any maven project, and select <code>Run -&gt; maven commands</code> to do maven runs.  Furthermore, you can
-    save run configurations you build using <code>Run -&gt; Run As ... -&gt; Maven build ...</code>; these become launchable using the standard Eclipse run menus.
-  </p>
-                                                <p>Within a project, you can run the unit tests in Eclipse by right-clicking on a folder (for example
-        <code>uimaj-core/src/test/java</code>) and selecting <code>Run As -&gt; JUnit Test</code>. This will run all tests
-        under that folder.</p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable" id='test.failure'>
-        <tr><td>
-       
-       
-       
-          <a name="What to do if the tests fail">
-            <h2>What to do if the tests fail
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>
-(Note: this kludgy procedure needs improvement)
-</p>
-                                                <p>
-If you get a failure messsage, the details of the failures are logged in a file 
-for each project which has a failue, in the folder target/surefire-reports.  
-In Eclipse, you can use the Search facility to search Files in the workspace of type "*.txt" 
-for the string "&lt;&lt;&lt; FAILURE!" to locate all the failure messages.
-</p>
-                                                <p>
-If not using Eclipse, you can use <code>grep</code> to accomplish the same thing.
-</p>
-                                                <p>You can bypass the tests by doing mvn -Dmaven.test.skip install.  But please do this only
-  after you've run without it and have verified the tests results.</p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable" id='build.distribution'>
-        <tr><td>
-       
-       
-       
-          <a name="How to build the full Apache UIMA distribution">
-            <h2>How to build the full Apache UIMA distribution
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>Distributions include zip/tar packages of source or binaries.
-    Please refer to <a href="distribution.html">Building a distribution</a> for
-    details on how to do this.</p>
-                                                <p>
-    To build a distribution, first do a build as described in "Building from the command line".  
-    Then (assuming you set up the Eclipse path using one of the first 2 methods, execute the following:
-<longquote><pre>
-cd ../uimaj-distr
-mvn install
-</pre></longquote>
-</p>
-                                                <p>
-This will build the javadocs, and will create
-.zip and .tar.gz archives of the full UIMA distribution in the <code>uimaj-distr/target</code> 
-directory.
-
-</p>
-                                                <p>Similarly, for building the uima-as add-on distribution, first be sure you've built 
-  the projects themselves (see above) and then do:
-<longquote><pre>
-cd ..\uima-as-distr
-mvn install
-</pre></longquote>
-</p>
-                                                <p>Sandbox projects are build for distribution individually, by cd-ing to the individual
-  sandbox project and running "mvn install".  Note that this may not work on projects that
-  are not advanced to the point where they are released - not all projects in the Sandbox are
-  in a state where they are buildable.
-<!--longquote><pre>
-cd annotator-package
-mvn install
-</pre></longquote-->
-</p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable" id='building.docbooks'>
-        <tr><td>
-       
-       
-       
-          <a name="Building uima-docbooks">
-            <h2>Building uima-docbooks
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>Docbook processing is done normally as a part of regular maven building of projects
-    which have Docbooks.
-    The base uimaj projects have 4 docbooks, and there is an aggregate project which builds
-    all 4 of these: aggregate-uimaj-docbooks.
-    Docbooks are built by the normal maven lifecycle, in the prepare-package phase.</p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable" id='building.docbooks.a4'>
-        <tr><td>
-       
-       
-       
-          <a name="Creating A4-size PDF documentation">
-            <h2>Creating A4-size PDF documentation
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>The PDF docbook generation defaults to a paper type of USletter.  You may override this
-  by specifying the maven property "pdfPaperType".  You may specify this on the command line
-  as follows:
-  <code>mvn -DpdfPaperType=A4 package</code>
-  </p>
-                                                <p>The allowed values for paper type in Docbook can be seen on this page:
-  <a class="external" target="_blank" rel="nofollow" href="http://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html">
-  http://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html</a>.
-  </p>
                             </blockquote>
         </td></tr>
     </table>

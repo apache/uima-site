@@ -48,6 +48,8 @@ under the License.
     as the one from Tigris.org.</p>
     
   <p>If you are using an IDE, you should obtain the SVN client for that IDE.</p>
+  <p>See <a href="svn.html">svn.html</a> for further details about accessing the source, 
+  including accomodating firewalls.</p>
 </section>
 
 <section name="One time setup for Maven" id="maven-setup">

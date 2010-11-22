@@ -55,6 +55,7 @@ under the License.
 			</ul>
 		<br></br>
 		</li>
+     <!-- 
         <li><a href="#building.with.maven">Building UIMA from Source</a>
 			<ul>
 				<li><a href="#building.command.line">Building from the command line</a></li>
@@ -64,6 +65,7 @@ under the License.
 				<li><a href="#building.docbooks">Building uima-docbooks</a></li>
 			</ul>
         </li>
+       -->
       </ul>
 </p>
 </section>
@@ -135,14 +137,13 @@ below for more information.
 <p>For those users who are behind a corporate firewall which is 
 blocking http access to the Subversion repository, you can try to access it 
 via HTTPS: </p>
-<longquote><code>% svn checkout \<br/>
-  https://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
+<longquote><code>% svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
 </subsection>
 <subsection name="Access through a proxy" id="access.proxy">
 
 <p>The Subversion client can go through a proxy, if you configure it 
 to do so. First, edit your "servers" configuration file to indicate which 
-proxy to use. The files location depends on your operating system. 
+proxy to use. The location of this configuration file depends on your operating system. 
 On Linux or Unix it is located in the directory "~/.subversion". 
 On Windows it is in "%APPDATA%\Subversion". (Try "echo %APPDATA%", 
 note this is a hidden directory.) </p>
@@ -164,15 +165,11 @@ http-proxy-port = 3128
 
 <p>Everyone can access the Apache UIMA Subversion repository via HTTPS. 
 Apache UIMA Committers must checkout the Subversion repository 
-via HTTPS, in order to be able to check in changes. 
+via HTTPS (not HTTP), in order to be able to check in changes. 
 </p>
-<longquote><code>% svn checkout \<br/>
-  https://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
+<longquote><code>% svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
 </subsection>
 	
-<subsection name="Checking Out Code using Eclipse" id="checkout.using.eclipse">
-<p>See <a href="building-uima.html#checkout.using.eclipse">Building UIMA - checkout using Eclipse</a>.</p>	
-</subsection>	
 </section>
 
 <section name="Submitting Code Changes" id="submit.code.changes">
@@ -248,6 +245,7 @@ http://jira.atlassian.com/browse/SVN-37</a>.
 </subsection>
 </section>
 
+<!-- 
 <section name="Building UIMA">
 <subsection name="Building UIMA from Source" id="building.with.maven">
 <p>
@@ -261,81 +259,7 @@ http://jira.atlassian.com/browse/SVN-37</a>.
       page.</li></ol>
 </p>
    
-</subsection>
-
-<subsection name="Building from the Command Line" id="building.command.line">
-  <p>
-  See <a href="building-uima.html#building.command.line.one">Building one project from the command line</a>, and 
-  <a href="building-uima.html#building.command.line.group">Building all the projects for a major component from the command line</a>.
-  </p>
-</subsection>
-	
-<subsection name="Building from Eclipse" id="building.eclipse">
-  <p>With m2eclipse plugin, you can right-click any maven project, and select <code>Run -> maven commands</code> to do maven runs.  Furthermore, you can
-    save run configurations you build using <code>Run -> Run As ... -> Maven build ...</code>; these become launchable using the standard Eclipse run menus.
-  </p>
-  
-  <p>Within a project, you can run the unit tests in Eclipse by right-clicking on a folder (for example
-        <code>uimaj-core/src/test/java</code>) and selecting <code>Run As -> JUnit Test</code>. This will run all tests
-        under that folder.</p>
-    <!--
-    <ol>
-      <li><p>First, follow all the steps under "Building from the command line, above."  You 
-        will only need to do this once.</p></li>      
-      <li><p>(Optional) If you want a new workspace for the maven work, start Eclipse and create a new workspace. </p></li>
-      <li><p>In a command window, execute
-        <blockquote>
-        <pre>
-mvn -Declipse.workspace=&lt;eclipse workspace dir> \
-    eclipse:add-maven-repo</pre>
-        </blockquote> 
-        This adds a maven repository to your machine (On Windows, under documents &amp; settings / .m2 /
-        repository), and sets up an Eclipse Java Build Path variable to reference it.</p></li>
-      <li><p>Use Eclipse's SVN Repository explorer to checkout all the projects under uimaj/trunk. 
-        Tell it to create new Java projects for these.</p></li>
-      <li><p>
-        <code>cd uimaj</code> to switch to the Eclipse workspace project for <code>uimaj</code> (it has the top level
-        POM), and run the command:
-        <blockquote><code>mvn eclipse:eclipse</code></blockquote>
-        </p><p>
-        If you haven't run the "install" using maven (because you forgot to follow all the steps under
-        "Building from the command line, above"), you should do the command 
-        <code>mvn install eclipse:eclipse</code>. The "install" argument builds UIMA using maven, 
-        before the eclipse:eclipse goal is run.  This 
-        is needed for the Eclipse Plugins that are part of UIMA - these projects have their
-        "MANIFEST.MF" file built by maven from the information in the maven POMs.  This step
-        may take a few minutes  because the "install" lifecycle includes running the unit tests.
-        </p></li>
-      <li><p>Return to Eclipse, and if needed, select all the projects and push F5 to "refresh" them (because the
-        previous command changed the .project and .classpath files). You can set your workspace to automatically
-        refresh - in which case skip this step.</p></li>
-      <li><p>The projects should now compile without errors, and have build paths which reference copies of things in
-        your local maven repository.</p></li>
-      <li><p>You can run the unit tests in Eclipse by right-clicking on a folder (for example
-        <code>uimaj-core/src/test/java</code>) and selecting Run As <code>-></code> JUnit Test. This will run all tests
-        under that folder.</p></li>
-    </ol>
-  </p>
-  -->
-</subsection>
-	
-<subsection name="What to do if the tests fail" id="test.failure">
-<p>
-(Note: this kludgy procedure needs improvement)
-</p>
-<p>
-If you get a failure messsage, the details of the failures are logged in a file 
-for each project which has a failue, in the folder target/surefire-reports.  
-In Eclipse, you can use the Search facility to search Files in the workspace of type "*.txt" 
-for the string "&lt;&lt;&lt; FAILURE!" to locate all the failure messages.
-</p>
-<p>
-If not using Eclipse, you can use <code>grep</code> to accomplish the same thing.
-</p>
-  
-<p>You can bypass the tests by doing mvn -Dmaven.test.skip install.  But please do this only
-  after you've run without it and have verified the tests results.</p>
-</subsection>
+</subsection>	
 
 <subsection name="How to build the full Apache UIMA distribution" id="build.distribution">
   
@@ -366,57 +290,17 @@ mvn install
 </pre></longquote>
 </p>
 
+
 <p>Sandbox projects are build for distribution individually, by cd-ing to the individual
   sandbox project and running "mvn install".  Note that this may not work on projects that
   are not advanced to the point where they are released - not all projects in the Sandbox are
   in a state where they are buildable.
-<!--longquote><pre>
-cd annotator-package
-mvn install
-</pre></longquote-->
 </p>
 
 </subsection>
 
-<subsection name="Building uima-docbooks" id="building.docbooks">
-  <p>Docbook processing is done normally as a part of regular maven building of projects
-    which have Docbooks.
-    The base uimaj projects have 4 docbooks, and there is an aggregate project which builds
-    all 4 of these: aggregate-uimaj-docbooks.
-    Docbooks are built by the normal maven lifecycle, in the prepare-package phase.</p>   
-</subsection>
-
-  <subsection name="Creating A4-size PDF documentation" id="building.docbooks.a4">
-  <p>The PDF docbook generation defaults to a paper type of USletter.  You may override this
-  by specifying the maven property "pdfPaperType".  You may specify this on the command line
-  as follows:
-  <code>mvn -DpdfPaperType=A4 package</code>
-  </p>
-  <p>The allowed values for paper type in Docbook can be seen on this page:
-  <a class="external" target="_blank" rel="nofollow" 
-  href="http://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html">
-  http://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html</a>.
-  </p>
-  
-  </subsection>
-  <!-- This next section needs rewriting to work with the new docbook system 
-  <subsection name="Creating A4-size PDF documentation" id="building.docbooks.a4">
-  <p>If you don't live in the US, you may wish to create your PDF documentation in a different
-  format, e.g., A4.  To do this, edit the file 
-  <code>uima-docbook-tool/properties/default.docbook.properties</code>.  It contains a line
-  </p>
-  <p>
-  <code>paper.type = Letter</code>
-  </p>
-  <p>Change this setting to <code>A4</code> and rebuild the documentation.  Note: if you've previously
-  built the documentation, you need to run <code>ant clean</code> first, as the build doesn't pick
-  up on this change automatically.
-  </p>
-  
-  </subsection>
-  -->
-
 </section>
+  -->
 
   <!--
 <section name="Using Subversion on Windows with cygwin">

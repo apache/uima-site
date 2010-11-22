@@ -9,13 +9,12 @@
             <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
             <style type="text/css">@import "stylesheets/base.css";</style>
                                           <meta name="author" value="
-			UIMA dev team">
-  <meta name="email" value="uima-dev@apache.org">
+ UIMA Documentation Team">
+  <meta name="email" value="dev@uima.apache.org">
                         
             
                         
-                        <title>Apache UIMA - IKS "Semantic Search - Fact and Fiction" Workshop in Rome/Italy
-		</title>
+                        <title>Apache UIMA - Quick Start for working with Source Code</title>
         </head>
 
         <body>
@@ -29,8 +28,7 @@
                             </a>
                     </td>
                     <td align='CENTER'>
-                          <div class="pageBanner">IKS "Semantic Search - Fact and Fiction" Workshop in Rome/Italy
-		</div>
+                          <div class="pageBanner">Quick Start for working with Source Code</div>
                     </td>
                     <td align='RIGHT'>
                                   <a href="http://www.apache.org">
@@ -170,99 +168,63 @@
                                                           <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="IKS Semantic Search - Fact and Fiction Workshop in Rome/Italy"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;IKS Semantic Search - Fact and Fiction Workshop in Rome/Italy</h1></a>
+        <a name="Do the one-time-setup"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Do the one-time-setup</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>
-				IKS European project [
-				<a href="#1">1</a>
-				] had its second IKS Workshop. They have
-				been
-				meeting in
-				Rome on
-				November 12th and 13th, 2009. The purpose for
-				this
-				workshop
-				was to
-				define "semantic search", and to get a handle on
-				what
-				people want from
-				it.
-			</p>
-                                                <p>
-				During the IKS workshop there has been a speech/demo about UIMA and
-				Semantic Search.
-				<br />
-				We got good feedback about UIMA in general from the
-				people at the
-				workshop; Bertrand Delacretaz, who is part of IKS as
-				Day Software
-				employee and also member of ASF, had a good feeling
-				about UIMA for
-				semantic search to include inside IKS stack [
-				<a href="#2">2</a>
-				].
-				<br />
-				Moreover the Nuxeo open source ECM [
-				<a href="#3">3</a>
-				]
-				is developing its semantic search module
-				on the top of UIMA (see
-				Oliver Grisel's wrap up on their website [
-				<a href="#4">4</a>
-				]).
-				<br />
-				Slides
-				about the UIMA and Semantic Search talk are available at [
-				<a href="#5">5</a>
-				].
-				<br />
-				Demos were
-				about a real estate market analysis tool which
-				uses
-				UIMA
-				for
-				metadata extraction and a sample of integration
-				between UIMA and
-				AlchemyAPI.
-				<br />
-				See some photos here [
-				<a href="#6">6</a>
-				] and the complete list of talks here
-				<a href="#7">[7]</a>
-
-			</p>
-                                                <p>
-				[1] :
-				<a name="1" href="http://www.iks-project.eu" target="_blank">http://www.iks-project.eu
-				</a>
-				<br />
-				[2] :
-				<a name="2" href="http://dev.day.com/microsling/content/blogs/main/iks-pragmatic-view-update.html" target="_blank">
-					http://dev.day.com/microsling/content/blogs/main/iks-pragmatic-view-update.html
-				</a>
-				<br />
-				[3] :
-				<a name="3" href="http://www.nuxeo.com/en" target="_blank">http://www.nuxeo.com/en
-				</a>
-				<br />
-				[4] :
-				<a name="4" href="http://blogs.nuxeo.com/dev/2009/11/iks-semantic-search-workshop-wrapup.html" target="_blank">http://blogs.nuxeo.com/dev/2009/11/iks-semantic-search-workshop-wrapup.html
-				</a>
-				<br />
-				[5] :
-				<a name="5" href="http://www.slideshare.net/teofili/apache-uima-and-semantic-search" target="_blank">http://www.slideshare.net/teofili/apache-uima-and-semantic-search
-				</a>
-				<br />
-				[6] :
-				<a name="6" href="http://homepages.uni-paderborn.de/fabianc/iks-gam-rome09/" target="_blank">http://homepages.uni-paderborn.de/fabianc/iks-gam-rome09/
-				</a>
-				<br />
-				[7] :
-				<a name="7" href="http://www.iks-project.eu/semantic-search-challenge-workshop-report" target="_blank">http://www.iks-project.eu/semantic-search-challenge-workshop-report
-				</a>
-			</p>
+                                    <p>To work with the source code, start by doing the 
+<a href="one-time-setup.html">one-time setups</a>.
+</p>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Checkout and Build UIMA SDK"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Checkout and Build UIMA SDK</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <title>Checkout and Build UIMA SDK</title>
+                                                <p>To build all of the Apache UIMA Java SDK
+(including the docbooks and the binary assembly) and install these artifacts 
+to your local maven repository, do the following:
+<ul>
+<li><code>svn checkout https://svn.apache.org/repos/uima/uimaj/trunk /myWorkingCopy</code></li>
+<li><code>cd /myWorkingCopy/uimaj</code></li>
+<li><code>mvn install</code></li>
+</ul>
+</p>
+                                                <p>If you're looking for the lib containing all the built Jars, <code>cd ../uimaj-distr/target</code>
+and unzip/untar the binary distribution artifact, named something like
+<code>uimaj-[version]-bin.zip or uimaj-[version]-bin.tar.gz</code>.
+Then, look inside the unpacked result for a lib directory - it will have the Jars that were built.
+</p>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Checkout and Build UIMA-AS"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Checkout and Build UIMA-AS</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>Coming soon...</p>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Checkout and Build a Sandbox project"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Checkout and Build a Sandbox project</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>Coming soon...</p>
                             </blockquote>
         </p>
       </td></tr>

@@ -2,7 +2,6 @@
 <project name="Apache UIMA Project" 
          href="http://uima.apache.org/">
         
-  <incubator name="Apache Incubator" href="http://incubator.apache.org/"/>
   <title>Apache UIMA</title>    
   <logo href="/images/asf-logo-on-white-small.png">Apache UIMA</logo>
   <projectLogo href="/images/UIMA_banner2tlp.png">UIMA project logo</projectLogo>
@@ -43,15 +42,16 @@
       </item>
 
       <item name="Development">
+        <item name="Quick Start: building"  href="/dev-quick.html"/>
+        <item name="Building from Source"   href="/building-uima.html"/>
         <item name="One-time setups"        href="/one-time-setup.html"/>
         <item name="Source Code"            href="/svn.html"/>
-        <item name="Maven Use"              href="/maven-design.html"/>
-        <item name="Building from Source"   href="/building-uima.html"/>
         <item name="Creating a Distribution"  href="/distribution.html"/>
         <item name="Doing a UIMA release"   href="/release.html"/>
         <item name="Code Conventions"       href="/codeConventions.html"/>
         <item name="UIMA Specification (OASIS)"     href="/uima-specification.html"/>  
         <item name="Project Team"           href="/team-list.html"/>
+        <item name="Maven Use"              href="/maven-design.html"/>
       </item>
       
       <item name="Events and Conferences"                                  >

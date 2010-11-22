@@ -50,68 +50,78 @@ under the License.
       <a href="one-time-setup.html#maven-setup">Maven: Click here for the one-time Maven 3.0 setup</a>. 
     </li>
     <li>
-      <a href="one-time-setup.html#eclipse-setup">Eclipse: Click here for the one-time Eclipse setup</a>. This includes
-      setting up m2eclipse plugin (including a patch), and is only needed if you are using Eclipse as your IDE.
+      <a href="one-time-setup.html#eclipse-setup">Eclipse: Click here for the one-time Eclipse setup</a>. 
+       This is only needed if you are using Eclipse as your IDE.
     </li>
   </ul>
 </subsection>
 
-<subsection name="Building one project - using the command line" id="building.command.line.one">
+<subsection name="Building UIMA - using the command line" id="building.command.line">
   <ol>
-    <li><p>
-      Check out one project from SVN: for example, (Windows)<br/>
-        <code>  svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk/uimaj-core c:/myWorkingDir/uimaj-core</code></p>
+    <li><p><b>SVN Checkout:</b>
+      If the project is a module of a multi-module project (e.g., uimaj or uima-as), 
+      check out the SVN directory containing all of the modules for the multi-module project.
+      </p>
+      <p>For example, (Windows - UIMA-SDK):<br/>
+        <code>  svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk c:\myWorkingDirectoryForUimaj</code>
+      </p>
+      <p>For UIMA-AS:<br/>
+        <code>  svn checkout https://svn.apache.org/repos/asf/uima/uima-as/trunk c:\myWorkingDirectoryForUima-as</code>
+      </p>
       <p>If you have <a class="external" rel="nofollow" target="_blank" 
     href="http://tortoisesvn.tigris.org/">tortoiseSVN</a> windows shell extensions installed, 
     you can use the <code>repo-browser</code> right-click menu option to do this.</p>
     </li>
     <li><p>
-      <code>cd to that directory</code> where you checked out the project.</p>
+      <code>cd to c:\myWorkingDirectoryForUimaj\uimaj</code> or <br/>
+      <code>cd to c:\myWorkingDirectoryForUima-as\uima-as</code>.</p>
+      <p class="note">The uima-as build is currently (Nov 2010) being migrated to a new approach, and may not be
+      working, but will be soon.</p>
     </li>
     <li><p><code>mvn install</code></p>
-      <p>This will build that one project and install it to your local Maven repository.</p>
+      <p>This will build the project and install it to your local Maven repository. 
+      For multi-module projects, it will build all the submodules.</p>
     </li>  
   </ol>
   
   <p>
-    This should build all of the jars, any docbooks, and run the unit tests. 
-The output artifacts (Jars, html and pdf documents, etc.) are placed in each project's "target" directory, and 
-also are put into your local Maven repository.  Docbook output is placed in the target/site/d directory.
+    The build process builds all of the jars, any docbooks, runs the unit tests and other
+    validity checks, and may build a multi-module binary assembly (varies according to each project). 
+    The output artifacts (Jars, html and pdf documents, etc.) are found in 
+    each module's "target" directory, and 
+    also are put into your local Maven repository.  
+    Docbook output is placed in each project's target/site/d directory.
+  </p>
+  <p>For multi-module projects (e.g. uimaj and uima-as), there is a module named
+     uimaj-distr or uima-as-distr, which contains the binary distribution build result.
+     You may want to retrieve the "lib" directory containing the built Jars; to do this,
+     go to the xxx-distr/target directory and unzip/untar the binary artifact - in that
+     you will find the lib directory.
   </p>
 </subsection>  
 
-<subsection name="Building all the projects for a major component - using command line" id="building.command.line.group">
-  <p>For convenience, the build, uimaj, uima-as, and add-ons major components define "aggregate"
-    projects which use Maven's &lt;modules> element to specify groups of individual projects
-    that can be then built in one operation.</p>
+<!--subsection name="Building just one module for a multi-module project" id="building.command.line.one">
+  <p>Check out all of the modules, as above (because single modules may have dependencies 
+         on other artifacts in the checkout).
+  </p>
   <ol>
     <li><p>
-      Check out a set of projects from SVN: for example, (Windows):<br/>
-      <code>  svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk c:/myWorkingDir/uimaj</code>, or <br/>
-      <code>  svn checkout https://svn.apache.org/repos/asf/uima/build/trunk c:/myWorkingDir/build</code>, or <br/>
-      <code>  svn checkout https://svn.apache.org/repos/asf/uima/uima-as/trunk c:/myWorkingDir/uima-as</code>, etc.
+      <code>cd to the sub directory of the particular module you want to build</code>.
       </p>
-    </li>
-    <li><p>
-      <code>cd to that directory</code> where you checked out the projects
-      </p>
-    </li><li><p>
-      <code>cd to the aggregate</code>, e.g., aggregate-uimaj or aggregate-build, or aggregate-uima-as, etc.
-      </p>
-    </li><li><p>
+    </li><li><p>Issue the command:
       <code>mvn install</code></p>
-      <p>This will build that all the projects in that aggregate and install them to your local Maven repository.</p>
+      <p>This will build just that module and install it to your local Maven repository.</p>
     </li>
   </ol>
-</subsection>  
+</subsection-->  
 
 <subsection name="Building using Eclipse, with the m2eclipse plugin" id="building-from-eclipse">
   <ol>
-    <li>Checkout one or many projects, as above, into some location.  Then use 
+    <li>Checkout from SVN exactly as above, into some location.  Then use 
       Eclipse menu: <code>File -> Import -> Maven -> Existing Maven projects</code>
-      to import those projects into the Eclipse workspace and set them up for
-      Maven building.</li>
-    <li>To run maven commands on a project, select the project, right click, and pick <code>Run as</code>
+      to import the project or projects (for multi-module projects) into an Eclipse workspace 
+      and set them up for Maven building.</li>
+    <li>To run maven commands on a project from within Eclipse, select the project, right click, and pick <code>Run as</code>
       and then select mvn install (or other choice as you wish).</li>
   </ol>
   
@@ -119,10 +129,40 @@ also are put into your local Maven repository.  Docbook output is placed in the 
     If your Maven build generates sources (e.g., you have some XMLBeans defined), 
     then after the initial import and project build, you'll need to use the m2eclipse command 
     <code>Update Project Configuration</code> found on the <code>Maven</code> context menu 
-    obtained by right-clicking the project folder.  This will add the generated classes to Eclipse's classpath.</p>
- </subsection>
+    obtained by right-clicking the project folder.  
+    This will add the generated classes to Eclipse's classpath.</p>
     
-<subsection name="Checking Out Code using Eclipse" id="checkout.using.eclipse">
+  <p>Within a project, you can run the unit tests in Eclipse by right-clicking on a folder (for example
+        <code>uimaj-core/src/test/java</code>) and selecting <code>Run As -> JUnit Test</code>. This will run all tests
+        under that folder.</p>
+    
+ </subsection>
+ 
+ <subsection name="Building uima-docbooks" id="building.docbooks">
+  <p>Docbook processing is done normally as a part of regular maven building of projects
+    which have Docbooks.
+    The base uimaj projects have 4 docbooks, and there is an aggregate project which builds
+    all 4 of these: aggregate-uimaj-docbooks.
+    Docbooks are built by the normal maven lifecycle, in the prepare-package phase.</p>   
+</subsection>
+
+  <subsection name="Creating A4-size PDF documentation" id="building.docbooks.a4">
+  <p>The PDF docbook generation defaults to a paper type of USletter.  You may override this
+  by specifying the maven property "pdfPaperType".  You may specify this on the command line
+  as follows:
+  <code>mvn -DpdfPaperType=A4 package</code>
+  </p>
+  <p>The allowed values for paper type in Docbook can be seen on this page:
+  <a class="external" target="_blank" rel="nofollow" 
+  href="http://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html">
+  http://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html</a>.
+  </p>
+  
+  </subsection>
+ 
+    
+<!--  not supported by 0.12 release of m2eclipse -->
+<!--subsection name="Checking Out Code using Eclipse" id="checkout.using.eclipse">
 
 <p>To access the SVN repository from Eclipse, use Maven's m2eclipse plugin
   and the Subclipse plugin.  
@@ -159,8 +199,29 @@ also are put into your local Maven repository.  Docbook output is placed in the 
   distribution and aggregation projects to no longer have the right relative directory specifications.
   If this happens, the best thing to do is to re-checkout the entire set of related items in one go.
 </p>
-</subsection> 
+</subsection--> 
+
+
+<subsection name="What to do if the tests fail" id="test.failure">
+<p>
+(Note: this kludgy procedure needs improvement)
+</p>
+<p>
+If you get a failure messsage, the details of the failures are logged in a file 
+for each project which has a failue, in the folder target/surefire-reports.  
+In Eclipse, you can use the Search facility to search Files in the workspace of type "*.txt" 
+for the string "&lt;&lt;&lt; FAILURE!" to locate all the failure messages.
+</p>
+<p>
+If not using Eclipse, you can use <code>grep</code> to accomplish the same thing.
+</p>
+  
+<p>You can bypass the tests by doing mvn -Dmaven.test.skip install.  But please do this only
+  after you've run without it and have verified the tests results.</p>
+</subsection>
 
 </section>
+
+
 </body>
 </document>
