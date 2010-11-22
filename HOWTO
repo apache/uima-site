@@ -1,6 +1,4 @@
 ################################################################################
-#    Copyright 2006 The Apache Software Foundation
-#
 #    Licensed under the Apache License, Version 2.0 (the "License");
 #    you may not use this file except in compliance with the License.
 #    You may obtain a copy of the License at
@@ -14,8 +12,8 @@
 #    limitations under the License.
 ################################################################################
 
-HOWTO for Podling Site
-======================
+HOWTO build and publish the Site
+================================
 
 How do I change the site content and generate ?
 ---------------------------------------------
@@ -27,7 +25,7 @@ How do I change the site content and generate ?
   **      left nav bar
   **      add downloads information
   
-1.1) Do not put entries for downloads in xdocs/;
+1.1) Do not put externally generated artifacts, like javadocs in xdocs/;
      put these directly in docs/
   
 2) Run the default ant target to generate new html
@@ -44,15 +42,9 @@ How do I change the site content and generate ?
 How do I deploy site to the internet?
 -------------------------------------
 
-1) Once all changes are committed to subversion, ssh into 
-   people.apache.org
+Deployment is done as soon as the SVN commit happens, because
+the site is setup to use svnpubsub.
 
-2) cd /www/uima.apache.org
-
-3) $ svn update
-
-That should bring all the changed content from SVN.  You must then 
-wait for up to 4 hours for the sync to take place to the real website.
 
 How do I handle images?
 -----------------------
