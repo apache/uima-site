@@ -59,8 +59,10 @@ under the License.
       Add the following environment variable for Maven: <br/>
         <pre>  Variable name: <code>MAVEN_OPTS</code><br/>
   Value: <code>-Xmx800m  -XX:MaxPermSize=256m</code></pre></li>
-  
-      <li>If you plan to build from "trunk" which contains unreleased as-of-yet artifacts, you'll need
+      <!-- no longer needed because
+           snapshot repo now by design is specified when needed; that is, it is in the
+           common subproject parent pom -->
+      <!--li>If you plan to build from "trunk" which contains unreleased as-of-yet artifacts, you'll need
       to have the build get access to UIMA's build tooling.  This can be done in 2 ways:
       <ol><li>Checkout the build tooling from svn (http://svn.apache.org/repos/asf/uima/build/trunk) and 
       build and install it into your local maven repository.  To do the build and install,  
@@ -95,50 +97,28 @@ under the License.
 &lt;activeProfiles>
   &lt;activeProfile>local-build-configuration&lt;/activeProfile>
 &lt;/activeProfiles>
-</code></pre></p></li></ol></li>
+</code></pre></p></li></ol></li-->
    </ol>
 </section>
 
 <section name="One time setup for Eclipse" id="eclipse-setup">
-  
-  <p class="note"><b>Note: </b>See below for an alternative one-time setup for Eclipse that works with Eclipse 3.6</p>
-  
-  <p>Install Eclipse version 3.5.x  
-    (these instructions tested with Eclipse 3.5.2).</p>
-  <p class="note"><big><b>Don't use Eclipse version 3.6.x (Helios);</b></big> 
-    it has issues with the m2eclipse plugin 0.10.0, which
-    currently must be the version of m2eclipse used (see below). Eclipse Galileo SR2 - version 3.5.2 is recommended, instead.</p>
+   
+  <p>Install Eclipse version 3.5.x or later
+    (these instructions tested with Eclipse 3.6.1).</p>
   <p>Then:
     <ol>
       <li><p>Install the SVN support plugin <code>Subclipse</code> from
         <a class="external" rel="nofollow" target="_blank"
           href="http://subclipse.tigris.org/">http://subclipse.tigris.org/</a>.
-        Be sure to pick the version for 1.6.x SVN client.        
+        Be sure to pick the version for 1.6.x SVN client, needed to work with Apache SVN.        
         </p></li>
-      <li><p>Install m2Eclipse 0.10.0 (not 0.10.2) from the Eclipse update site: 
+      <li><p>Install m2Eclipse 0.12.0 from the Eclipse update site: 
         <a class="external" rel="nofollow" target="_blank"
           href="http://m2eclipse.sonatype.org/sites/m2e/">http://m2eclipse.sonatype.org/sites/m2e/</a>.
-        </p>
-        <p class="note">Version 0.10.2 doesn't support the bug fix (below) as of July 2010,
-          so be sure to install version 0.10.0.  To do this, be sure in Eclipse to
-          <b>uncheck Show only latest versions</b> in order to see this release.</p>
-        <p>Version 0.10.0 has a bug which prevents projects which use XMLBeans from compiling. 
-          Until this is fixed, install this "update" after installing the base:
-           <ol><li>Download <a class="external" rel="nofollow" target="_blank"
-            href="
-          https://cit-server.cit.tu-berlin.de/~battre/org.maven.ide.eclipse.site-0.10.1-SNAPSHOT-site.zip">
-          https://cit-server.cit.tu-berlin.de/~battre/org.maven.ide.eclipse.site-0.10.1-SNAPSHOT-site.zip</a>
-          </li>
-          <li>Add the zip file as a local "Software Site" in "Help -> Install New Software".
-            Eclipse should give a message to the effect that the install will be changed to an update
-            operation, and then it will update the 0.10.0 base to the 0.10.1 level.
-            <p>For more details about this bug, see 
-          <a class="external" rel="nofollow" target="_blank"
-          href="https://issues.sonatype.org/browse/MNGECLIPSE-1694">https://issues.sonatype.org/browse/MNGECLIPSE-1694</a>.
-        </p></li>
-          <li>You probably also want the m2eclipse SCM integration - this adds menus to SCM such as
-            <code>Checkout as Maven project</code>.  To get this, add the Eclipse update site:  
-            <a class="external" rel="nofollow" target="_blank"
+        </p> </li>
+      <!--li>You probably also want the m2eclipse SCM integration - this adds menus to SCM such as
+        <code>Checkout as Maven project</code>.  To get this, add the Eclipse update site:  
+        <a class="external" rel="nofollow" target="_blank"
               href="http://m2eclipse.sonatype.org/sites/m2e-extras">
                     http://m2eclipse.sonatype.org/sites/m2e-extras</a>
               and then select 
@@ -149,7 +129,7 @@ under the License.
           </ol>
         </p>
         
-      </li>
+      </li-->
       <li>Use Eclipse<code> Preferences -> Maven -> Installations </code> to add the Maven 3.0 (or later) installation as the
         default to use.</li>
       <li>(Optional - if you are using m2eclipse plugin to run maven 
@@ -160,18 +140,5 @@ under the License.
   </p>
 </section>
 
-<section name="Alternate one-time-setup for Eclipse">
-  <p>
-    This setup installs a later (SNAPSHOT) version of the m2eclipse plugin which fixes the errors mentioned above, and works with 
-    the 3.6 version of Eclipse (Helios).
-  </p>
-  
-  <p>
-    Proceed as above, except for the install of the m2eclipse main plugin.  For that, use a snapshot version, for instance, from 
-    <a href="https://repository.sonatype.org/content/sites/forge-sites/m2e/0.11.1/N/">
-      https://repository.sonatype.org/content/sites/forge-sites/m2e/0.11.1/N/
-    </a> - these are the "Nightly builds" I think.  I've tried and had luck with 0.11.1.201009041932, for instance.
-  </p>
-</section>
 </body>
 </document>
