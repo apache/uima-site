@@ -186,8 +186,7 @@
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <title>Checkout and Build UIMA SDK</title>
-                                                <p>To build all of the Apache UIMA Java SDK
+                                    <p>To build all of the Apache UIMA Java SDK
 (including the docbooks and the binary assembly) and install these artifacts 
 to your local maven repository, do the following:
 <ul>
@@ -212,7 +211,18 @@ Then, look inside the unpacked result for a lib directory - it will have the Jar
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>Coming soon...</p>
+                                    <p>The build for UIMA-AS depends on the UIMA SDK, so build that first,
+following the directions above.
+</p>
+                                                <p>Then, to build UIMA-AS
+(including the docbooks and the binary assembly) and install these artifacts 
+to your local maven repository, do the following:
+<ul>
+<li><code>svn checkout https://svn.apache.org/repos/uima/uima-as/trunk /myWorkingCopyAS</code></li>
+<li><code>cd /myWorkingCopyAS/uima-as</code></li>
+<li><code>mvn install</code></li>
+</ul>
+</p>
                             </blockquote>
         </p>
       </td></tr>

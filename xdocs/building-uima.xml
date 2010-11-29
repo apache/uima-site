@@ -75,13 +75,14 @@ under the License.
     <li><p>
       <code>cd to c:\myWorkingDirectoryForUimaj\uimaj</code> or <br/>
       <code>cd to c:\myWorkingDirectoryForUima-as\uima-as</code>.</p>
-      <p class="note">The uima-as build is currently (Nov 2010) being migrated to a new approach, and may not be
-      working, but will be soon.</p>
     </li>
     <li><p><code>mvn install</code></p>
       <p>This will build the project and install it to your local Maven repository. 
       For multi-module projects, it will build all the submodules.</p>
-    </li>  
+    </li>
+    <p class="note">
+      Note: UIMA-AS depends on the UIMA SDK (called uimaj above), so before building UIMA-AS, please checkout and build uimaj first. 
+    </p>  
   </ol>
   
   <p>
