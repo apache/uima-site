@@ -37,11 +37,13 @@ under the License.
 (including the docbooks and the binary assembly) and install these artifacts 
 to your local maven repository, do the following:
 <ul>
-<li><code>svn checkout https://svn.apache.org/repos/uima/uimaj/trunk /myWorkingCopy</code></li>
+<li><code>svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk /myWorkingCopy</code></li>
 <li><code>cd /myWorkingCopy/uimaj</code></li>
 <li><code>mvn install</code></li>
 </ul>
 </p>
+<p class="note">Note: if you're using windows, 
+change the directory separator to backslash (but keep it forward for the url).</p>
 
 <p>If you're looking for the lib containing all the built Jars, <code>cd ../uimaj-distr/target</code>
 and unzip/untar the binary distribution artifact, named something like
@@ -58,7 +60,7 @@ following the directions above.
 (including the docbooks and the binary assembly) and install these artifacts 
 to your local maven repository, do the following:
 <ul>
-<li><code>svn checkout https://svn.apache.org/repos/uima/uima-as/trunk /myWorkingCopyAS</code></li>
+<li><code>svn checkout https://svn.apache.org/repos/asf/uima/uima-as/trunk /myWorkingCopyAS</code></li>
 <li><code>cd /myWorkingCopyAS/uima-as</code></li>
 <li><code>mvn install</code></li>
 </ul>
