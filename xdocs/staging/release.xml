@@ -175,7 +175,7 @@ under the License.
 		        </li>
         <li>
           Do a trial build of the release candidate:
-          <pre>cd **directory for creating the distribution** e.g. uimaj-distr
+          <pre>cd **directory for doing the release** e.g. uimaj
 mvn install -Papache-release</pre>
           <p>The <code>-Papache-release</code> can be used to have the build mimic the 
              build actions that would be taken when the release plugin is running
@@ -221,9 +221,13 @@ mvn install -Papache-release</pre>
       
     <p>During this process, the release plugin asks what the next levels should be and what the tag name 
         should be, and unless there's a good reason, we take the defaults (by just hitting enter).
+        The exception to this is in naming the SVN TAG - normally we have "release candidates".
+        The recommended convention is to take the suggested name and add "-rc1" for release candidate 1,
+        etc.
     </p>
     <p>The release plugin automatically signs everything that needs signing using gpg.  It also
-      builds the sources.jar, and the source-release.zip file, which can be later obtained and 
+      builds the sources.jar, and one overall (for multi-module projects) source-release.zip file, 
+      which can be later obtained and 
       should be a copy of the SVN tag for that artifact, and once unzipped, should be buildable,
       using <code>mvn install</code>.
     </p> 
@@ -248,6 +252,7 @@ mvn install -Papache-release</pre>
         <p>
           If you forget something and close the staging repository too soon, just continue as if you hadn't.
           Subsequent release artifacts will go into another newly created staging spot on Nexus.
+          The downside of this is that you'll have to tell the "voters" about multiple staging repos.
         </p>
         
 	</subsection>
@@ -268,7 +273,7 @@ mvn install -Papache-release</pre>
     </p>
     <p>
       <b><u>Release Candidates:</u></b> The <code>mvn release:prepare</code> asks what the SVN tag name should be
-      and defaults to [root artifact]-[release-version].  It is convenient to append to this, <code>-RC1, -RC2, etc</code>,
+      and defaults to [root artifact]-[release-version].  It is convenient to append to this, <code>-rc1, -rc2, etc</code>,
       indicating the release candidate try.  After one of this is voted out of the incubator, you can tag it
       (copy it) under a name without the -RCn indicating that's the actual release.
     </p>

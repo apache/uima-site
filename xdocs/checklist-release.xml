@@ -48,27 +48,30 @@ under the License.
     <p>Release one or more artifacts into the Apache Nexus staging repository.
       You can do multiple release:prepare/perform steps, with subsequent steps
       depending on the previous artifacts in their "release" version.</p>
-    <li>Do next steps in top release artifact (simple module, or xxx-distr).
+    <li>Do next steps in top release artifact (single module, or mult-module top project).
       <ol>
-        <p>Release one or more artifacts into the staging repo, where the artifacts don't depend
-          on the released version of each other.</p>     
-        <li>Scan poms to be sure there are <b>no</b> unintentional -SNAPSHOTs</li>    
-        <li><code>mvn release:prepare -DdryRun=true</code> and diff the resulting poms
+        <p>Release one or more artifacts into the staging repo.</p>     
+        <li>Scan poms to be sure there are <b>no</b> unintentional -SNAPSHOTs</li>.   
+        <li><code>mvn release:prepare -DdryRun</code> and diff the resulting poms
           to verify nothing unintentional is dropped or updated incorrectly</li>
+          For multi-module projects, where all the submodules have the same version, use: <br/>
+          <code>mvn release:prepare -DdryRun -DautoVersionSubmodules</code>.
         <li><code>mvn release:clean</code> to restore projects</li>
         <li><code>mvn deploy</code> to deploy snapshot</li>
-        <li><code>mvn release:prepare</code>. Try to accept the default suggestions for names.</li>
+        <li><code>mvn release:prepare [-DautoVersionSubmodules]</code>. 
+        Try to accept the default suggestions for names; you might change the SVN tag to include a "-rc1"
+        suffix indicating a release candidate number.</li>
         <li><code>mvn release:perform</code></li>      
       </ol>
     </li>
     <li>Repeat above steps for all things being released in one go (not already in an aggregate).</li>
     <li>login to <a href="https://repository.apache.org">https://repository.apache.org</a>
       using your Apache LDAP credentials, find the staging artifact, and right click - "close" it
-      after all things that are being included in this release are present.</li>
-    <li>Update the trunk: for all references that should now refer to the staged release version
+      after all things that are being included in this release are present.</li> 
+    <!--li>Update the trunk: for all references that should now refer to the staged release version
     </li>
     <li>build/test these</li>
-    <li>commit trunk</li>  
+    <li>commit trunk</li-->  
   </ol>
   <!--li>
     Repeat above steps for all sets of dependent things where you need to update the dependencies to
