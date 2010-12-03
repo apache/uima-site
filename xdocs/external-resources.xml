@@ -49,6 +49,9 @@ The opennlp.uima distribution can be downloaded from the projects
 <a href="https://sourceforge.net/projects/opennlp/files/OpenNLP%20Tools/">download page</a> 
 and includes a sample PEAR which can easily be tested with the Cas Visual Debugger.
 </p>
+
+  <p>OpenNLP has recently moved to the Apache Software Foundation, and can be found
+  in the Apache Incubator, <a href="http://incubator.apache.org/projects/opennlp.html">here</a>.</p>
 </subsection>
 
 <subsection name="UIMA Component Repository at CMU">
@@ -105,6 +108,7 @@ of Manchester; <a href="http://www.nactem.ac.uk/uima_work/">repository</a>.
   has wrapped a number of popular bio-informatic annotators as UIMA components, and
   added some supporting additional code and components.  More information is available 
   at <a href="http://bionlp-uima.sourceforge.net">http://bionlp-uima.sourceforge.net</a>.</p>
+  
 </subsection>
 
 <subsection name="Behemoth">
@@ -114,7 +118,8 @@ within Hadoop.
 </p>
 </subsection>
 
-<subsection name="RASP4UIMA">
+<!-- removed 12/2010 at request of Digitalpebble (Julian Nioche) - says they're not supporting 
+subsection name="RASP4UIMA">
 
 <p><a href="http://www.digitalpebble.com/rasp4uima/index.html">RASP4UIMA</a> is a UIMA wrapper around
 
@@ -128,7 +133,7 @@ from <a href="http://www.digitalpebble.com/resources.html">the resource page</a>
 
 </p>
 
-</subsection>
+</subsection-->
 
 </section>
 
