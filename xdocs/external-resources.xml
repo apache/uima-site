@@ -107,7 +107,12 @@ of Manchester; <a href="http://www.nactem.ac.uk/uima_work/">repository</a>.
   at <a href="http://bionlp-uima.sourceforge.net">http://bionlp-uima.sourceforge.net</a>.</p>
 </subsection>
 
-
+<subsection name="Behemoth">
+<p><a href="https://github.com/jnioche/behemoth">Behemoth</a> is an Apache Licensed open source 
+platform for large scale document processing which allows deploying UIMA applications
+within Hadoop.
+</p>
+</subsection>
 
 <subsection name="RASP4UIMA">
 

@@ -248,7 +248,7 @@ mQGiBEWszKIRBACRscWnk1F408lWIZEgqx6OffiMtgApEVdl9UXXF2+DeS5WrHj0<br/>
     There are two places this output needs to go: the UIMA KEYS file, and a public key server.
     <ol>
       <li>
-      Append your key (delimiting lines and all) to <code>uimaj-distr/src/main/readme/KEYS</code>.
+      Append your key (delimiting lines and all) to <code>uima-website/docs/KEYS</code>.
       You can optionally place your name above the key, but that is for documentation purposes only.
       Don't forget to commit the KEYS file to SVN.
       </li>
