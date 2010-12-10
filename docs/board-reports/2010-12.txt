@@ -1,0 +1,53 @@
+Status report for the Apache UIMA Project
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Releases:
+
+2010-Dec-10 Apache UIMA Java SDK version 2.3.1 released (just now!). 
+  This is the first release of the base UIMA infrastructure,
+  done as a top level project.  Some loose ends remain in getting
+  our website updated and in sync with this release, and the
+  announcement will be sent when that is complete.
+
+  We will be working on releasing the other 3 major components
+  (UIMA-AS, UIMA-CPP, and the Add-ons package).
+ 
+2010-1-26 2.3.0 (Incubator - last release) release of Java SDK, Annotator
+                add-on package, UIMA-AS (Async scaleout), and UIMA-CPP
+                (C++ enablement)
+
+Development:
+
+One-time setups needed to build UIMA have been simplified considerably,
+as we continue to move closer toward the conventional Maven way
+of doing things.
+
+Jira issues continue to come in and get worked on at a moderate rate,
+including several in the UIMA-AS (Asynchronous Scaleout) area related
+to various error recovery scenarios.
+
+The CAS Editor had many user-requested improvements,
+which made it into this release.
+
+Community:
+ 
+No changes, however, several new projects that incorporate
+UIMA have entered the incubator, including OpenNLP and Stanbol.
+
+A patch to enrich documents indexed in Solr with UIMA pipelines has been
+provided (https://issues.apache.org/jira/browse/SOLR-2129),
+and a new component to consume UIMA annotations inside a
+Solr instance has been proposed for inclusion in the sandbox.
+
+Stanbol is planning to use UIMA inside two of its modules: FISE for semantic
+content enrichment (http://wiki.iks-project.eu/index.php/FISE)
+and Rick an infrastructure to handle content and
+knowledge (http://wiki.iks-project.eu/index.php/RICK)
+
+Issues: No Board level issues at this time
+
+Trademarks/Branding: We've entered a Jira issue for this
+but haven't yet done any work on this.
