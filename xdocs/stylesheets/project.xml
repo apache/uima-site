@@ -73,8 +73,41 @@
         <item name="Dependencies"           href="/dependencies.html"/>
         --> 
   </menus>
+
+  <downloads version="2.3.1" title="Apache UIMA Version 2.3.1">
+      
+    <download name="UIMA Java framework &amp; SDK" subdirectory="">
+      <releasenotes filename="uimaj-2.3.1/RELEASE_NOTES">           <f>html</f>                </releasenotes>
+      <binary       filename="uimaj-2.3.1-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
+      <source       filename="uimaj-2.3.1-src">                     <f>zip</f>  </source>
+    </download>
+    
+    <!--   
+    <download name="UIMA AS Asynchronous Scaleout" subdirectory="uima-as-2.3.0-incubating">
+      <releasenotes filename="RELEASE_NOTES-uima-as-2.3.0-incubating">         <f>html</f>                              </releasenotes> 
+      <binary       filename="uima-as-2.3.0-incubating-bin">                   <f>zip</f>  <f>tar.gz</f>                </binary>   
+      <source       filename="uima-as-2.3.0-incubating-src">                   <f>zip</f>  <f>tar.gz</f>                </source>
+    </download>
+      
+    <download name="UIMA C++ Framework"            subdirectory="uimacpp-2.3.0-incubating">
+      <releasenotes filename="RELEASE_NOTES-uimacpp-2.3.0-incubating">         <f>html</f>                              </releasenotes>
+      <binary       filename="uimacpp-2.3.0-incubating-bin">                   <f platform="Windows 32-bit"  >zip</f>  
+                                                                               <f platform="Linux x86 32-bit">tgz</f>
+                                                                               <f platform="Linux x86 64-bit">tgz</f>   </binary>   
+      <source       filename="uimacpp-2.3.0-incubating-src">                   <f platform="Windows"  >zip</f>  
+                                                                               <f platform="Linux x86">tgz</f>                   </source>
+    </download>
+    
+    <download name="UIMA Annotator Addons &amp; Simple Server &amp; Pear packaging tools"         subdirectory="uimaj-annotator-addons-2.3.0-incubating">
+      <releasenotes filename="RELEASE_NOTES-uimaj-annotator-2.3.0-incubating"> <f>html</f>               </releasenotes>
+      <binary       filename="uimaj-annotator-addons-2.3.0-incubating-bin">    <f>zip</f>  <f>tar.gz</f> </binary>    
+      <source       filename="uimaj-annotator-addons-2.3.0-incubating-src">    <f>zip</f>  <f>tar.gz</f> </source>
+    </download>
+    -->
+  </downloads>
   
-    <downloads version="2.3.0-incubating" title="Apache UIMA Version 2.3.0-incubating">
+
+  <downloads version="2.3.0-incubating" title="Apache UIMA Version 2.3.0-incubating" incubator="true">
       
     <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-2.3.0-incubating">
       <releasenotes filename="RELEASE_NOTES-uimaj-2.3.0-incubating">           <f>html</f>                </releasenotes>
@@ -105,7 +138,7 @@
     
   </downloads>
   
-  <downloads version="2.2.2-incubating" title="Apache UIMA Version 2.2.2-incubating">
+  <downloads version="2.2.2-incubating" title="Apache UIMA Version 2.2.2-incubating" incubator="true">
   
     <download name="UIMA core hotfix 1"            subdirectory="uimaj-2.2.2-incubating">
       <releasenotes filename="README-uimaj-2.2.2-incubating-Hotfix1" title="Readme"> <f>txt</f> </releasenotes>
@@ -151,7 +184,7 @@
     
   </downloads>
   
-  <downloads version="2.2.1-incubating" title="Apache UIMA Version 2.2.1-incubating - Release Date: 21-Dec-2007">
+  <downloads version="2.2.1-incubating" title="Apache UIMA Version 2.2.1-incubating - Release Date: 21-Dec-2007" incubator="true">
   
     <download name="UIMA Java framework &amp; SDK"  subdirectory="uimaj-2.2.1-incubating">
       <releasenotes filename="RELEASE_NOTES-uimaj-2.2.1-incubating">           <f>html</f> <f>txt</f>                   </releasenotes>

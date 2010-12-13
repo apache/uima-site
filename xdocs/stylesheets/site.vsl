@@ -369,8 +369,15 @@ under the License.
 #end
 ##
 #macro (insertDownload2 $downloads)
-  #set ( $drmirror = "[preferred]/incubator/uima")
-  #set ( $dr =  "http://www.apache.org/dist/incubator/uima")
+  #if ($downloads.getAttributeValue("incubator"))
+    #set ( $drmirror = "[preferred]/incubator/uima")
+    #set ( $dr = "http://www.apache.org/dist/incubator/uima")
+    #set ( $rn = "http://www.apache.org/dist/incubator/uima")
+  #else
+    #set ( $drmirror = "[preferred]/uima")
+    #set ( $dr = "http://www.apache.org/dist/uima")
+    #set ( $rn = "../d")
+  #end
   <table class="downloads">
     <tr>
       <th>Artifact</th>
@@ -391,34 +398,42 @@ under the License.
       <tr>
         <td class="downloadtitle"><h3 class="downloadartifact">
           #if ($releasenotes.getChild("f"))
-            <a href="$dr/$releasenotes.getAttributeValue("filename").$releasenotes.getChild("f").getText()">
+            <a href="$rn/$releasenotes.getAttributeValue("filename").$releasenotes.getChild("f").getText()">
               $download.getAttributeValue("name")</a></h3></td>
           #else
-            <a href="$dr/$releasenotes.getAttributeValue("filename")">
+            <a href="$rn/$releasenotes.getAttributeValue("filename")">
               $download.getAttributeValue("name")</a></h3></td>         
           #end
 ##        
         <td>
           #if ($releasenotes.getChild("f"))
             #foreach ($suffix in $releasenotes.getChildren("f"))
-              <div class="htmltxt"><a href='$dr/$releasenotes.getAttributeValue("filename").$suffix.getText()'>$suffix.getText()</a></div>
+              <div class="htmltxt"><a href='$rn/$releasenotes.getAttributeValue("filename").$suffix.getText()'>$suffix.getText()</a></div>
             #end
           #else
             #if ($releasenotestitle.equals('no title'))
               #set ($releasenotestitle = "Release Notes")
             #end
-            <a href='$dr/$releasenotes.getAttributeValue("filename")'>$releasenotestitle</a>
+            <a href='$rn/$releasenotes.getAttributeValue("filename")'>$releasenotestitle</a>
           #end    
         </td>
         <td>
         #foreach ($binary in $download.getChildren("binary"))
-          #suffixes ('binaries' $binary $subdirectory)
+          #if ($downloads.getAttributeValue("incubator"))
+            #suffixes ('binaries' $binary $subdirectory)
+          #else
+            #suffixes ('' $binary $subdirectory)
+          #end
         #end
         </td>
         #set ($source = $download.getChild("source"))
         <td>
         #if ($source.getChild("f"))
-          #suffixes ('source' $source $subdirectory)
+          #if ($downloads.getAttributeValue("incubator"))
+            #suffixes ('source' $source $subdirectory)
+          #else
+            #suffixes ('' $source $subdirectory)
+          #end
         #else
           $source
         #end

@@ -223,9 +223,26 @@
   </li-->
   <li>Send [VOTE] message to dev list.  List the staging repository that testers
     will need to add to their <code>settings.xml</code> files.</li>
-  <li>Post RESULT message, promote the release(s) from the staging repositories</li>
+  <li>Post RESULT message</li>
+  <li>Collect all the artifacts to be uploaded together with their checksums and signatures, from the 
+      staging repo.</li>
+  <li>Delete any artifacts from the staging repo that aren't supposed to go to Maven Central
+      (currently only the bin.tar artifacts - the bin.zip is used for building uima-as)</li>
+  <li>Promote the release(s) from the staging repositories</li>
+  <li>Copy released artifacts to targets: bin, src, p.a.o/www/www.apache.org/dist/uima, 
+      new features / plugins from Eclipse update site target/eclipse-update-site to .../dist/uima/eclipse-update-site
+      (add to what's already there).</li>
+  <li>Copy RELEASE_NOTES and issuesFixed
+      from uimaj/target/checkout (where
+      the mvn release:perform was done from) to the p.a.o/ww/uima.apache.org/d/[project-version].</li>
+  <li>After .../dist is updated, update the downloads page of the web site</li>
   <li>Update Jira version info to reflect the release status and date</li>
+  <li>Add a SVN tag for the release candidate, without the -rcXX to indicate the release.</li>
   <li>After release appears on maven central, post an appropriate announce letter</li>
+  <li>Update the website: PDFs, HTML versions of docbooks plus the index.html all go on the
+      website under the uima.apache.org/d/ (non-SVN source) directory.  Update the index.html
+      as needed for the version.</li>
+  <li>Add a news item for the release</li>
   <li>Add release to next Board report</li>
   <li>Celebrate :-)</li>
 </ol>

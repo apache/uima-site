@@ -33,6 +33,22 @@
 		<section name="News">
       <subsectionToc/>
  
+      <subsection name="10 December 2010" date = "10 December 2010" title="UIMA Java SDK 2.3.1 released">
+          <p>This release only has the UIMA Java SDK, and does not yet have the other
+          components.  It is backwards compatible with previous releases, except
+          that Java 5 is now the minimum Java level required.</p>
+          
+        <p>
+          This is the first release as a top level project.  
+          Not many changes are in this release; included are 
+          some fixes for edge cases involving Results Specification,
+          a performance fix for the Component Descriptor Editor editing things having
+          remote components, and several improvements to the CAS editor. 
+          Please see the release notes on the <a href="downloads.cgi">downloads</a> page, for a more complete summary
+          and a complete list of changes.
+        </p>       
+      </subsection>
+      
       <subsection name="18 March 2010" date="18 March 2010" title="Apache UIMA graduates from the incubator">
         <p>
           At the ASF board meeting held on 17 March 2010, the Board unanimously approved the proposed resolution to 

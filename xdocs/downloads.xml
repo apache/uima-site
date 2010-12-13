@@ -54,10 +54,8 @@ Thus they must be untarred with a GNU compatible version of
 <subsection name="Eclipse Update Site">
 
 <p>You can install the UIMA Eclipse tooling via our Eclipse update site: 
-<a href="http://www.apache.org/dist/incubator/uima/eclipse-update-site/">http://www.apache.org/dist/incubator/uima/eclipse-update-site/</a>.
-This still points to the incubator distribution site, and will be updated after our
-first release as a top level apache project.
-Don't forget to install EMF before/with the UIMA tooling.  If you're doing this for the first time,
+<a href="http://www.apache.org/dist/uima/eclipse-update-site/">http://www.apache.org/dist/uima/eclipse-update-site/</a>.
+If you're doing this for the first time,
 you may wish to consult the much more verbose instructions in the <a href="documentation.html">SDK 
 documentation</a>.
 </p>
@@ -67,10 +65,11 @@ documentation</a>.
 <subsection name="Maven Repository">
 
 <p>If you're using Maven to build your projects, you can use the UIMA Maven artifacts that are
+deployed to the Maven central repository.  Until we get all components released as a top level project,
+you may find the "incubating" level components
 deployed on the Apache Incubator repository: 
 <a href="http://people.apache.org/repo/m2-incubating-repository/">
 http://people.apache.org/repo/m2-incubating-repository/</a>.  
-After release 2.3.1, these will be deployed to Maven central, instead.
 See some of the sandbox POMs for
 examples on how to reference the UIMA jars in Maven.
 </p>
@@ -105,6 +104,13 @@ Other mirrors: <select name="Preferred">
 <!-- do not enter download info here, instead enter it in the project.xml file--> 
 <section name="Latest Official Releases">  
   <p>Note: As of release 2.3.0, the CAS Editor and the Pear packaging maven plugin are now part of the UIMA Java framework and SDK.</p>
+
+  <p>Note: So far only the base UIMA Java SDK has been released at the 2.3.1 level.  As other components
+  are released that go with this level, we'll add them here.</p>
+  <subsection name="Apache UIMA Version 2.3.1 - Release Date: 10-Dec-2010">
+    <insertDownloads version="2.3.1"/>
+  </subsection>
+
   <subsection name="Apache UIMA Version 2.3.0-incubating - Release Date: 26-Jan-2010">
     <insertDownloads version="2.3.0-incubating"/>
   </subsection>

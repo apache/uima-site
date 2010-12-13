@@ -27,21 +27,28 @@ under the License.
 <body>
 
 <section name="Doing a UIMA Release">
+  
+<p class="note">These instructions are for the 2.3.1 and later releases, as a top level project.
+A previous version of this page, with the methods we used while in the incubator, is
+<a href="release-before-2.3.1.html">here</a>.
+</p>  
 
-<p class="note">These instructions are mostly for the 2.3.0 release.  They are changing for the 2.3.1 release, and
-  this page will be updated soon to reflect that.</p>
+<p>Once you've done it a few times, you may find the shorter
+  <a href="checklist-release.html">release checklist</a> more convenient.
+</p>
   
 <p>
-      <ul>
+  <ul>
+    <li><a href="#Overview">Overview of releasing</a></li>
 		<li><a href="#Release Discussions - Release Plan">Release Discussions - Release Plan</a></li>
     <li><a href="#Preparing Jira for the Release">Preparing Jira for the Release</a></li>
 		<li><a href="#Preparing The Sourcecode For The Release">Preparing The Sourcecode For The Release</a></li>
+		<li><a href="#Including updates to the Build tooling">Including updates to the Build tooling</a></li>
 		<li><a href="#Building The Release Candidate">Building The Release Candidate</a></li>
-		<li><a href="#Tagging Releases">Tagging Releases</a></li>
-		<li><a href="#Auditing The Release And Create A RAT report">Auditing The Release And Create A RAT report</a></li>
-    <li><a href="#Putting release candidates on people.apache.org">Putting release candidates on people.apache.org</a></li>
+    <li><a href="#Tips for the Release Manager">Tips for the Release Manager</a></li>
+    <li><a href="#Removing -SNAPSHOT dependencies">Removing -SNAPSHOT dependencies</a></li>
 		<li><a href="#Doing The Release Vote">Doing The Release Vote</a></li>
-    <li><a href="#Ask Incubator PMC To Release">Ask Incubator PMC To Release</a></li>
+    <li><a href="#Releasing">Releasing</a></li>
     <li><a href="#Publish The Release">Publish The Release</a></li>
     <li><a href="#Announce The Release">Announce The Release</a></li>     
       </ul>
@@ -49,11 +56,29 @@ under the License.
 
 <br></br>
 
+  <subsection name="Release Overview">
+    <p>
+    The UIMA project mainly releases:
+    <ul><li>The UIMA SDK</li>
+      <li>UIMA-AS add-on</li>
+      <li>Individual Annotators, tooling, and other useful components (like the Simple Server)</li></ul>
+    In addition, it releases some Maven build tooling components that 
+    need to be in the Maven repositories to support our Maven processes.
+    </p>
+    
+    <p>
+      Releases show up in the Maven central repository and/or 
+      as downloadable artifacts listed on our downloads pages.
+    </p>
+    
+  </subsection>
+
 	<subsection name='Release Discussions - Release Plan'>
 		<p>
 		  At the beginning of the "UIMA Release Process" there must be consensus in the developer community 
 		  about the JIRA issues that should be part of the next release and the time frame for the release. 
-		  The result of this discussion should be published in a release plan to the UIMA wiki. 
+		  The result of this discussion should be published in a release plan to the UIMA wiki, if it is
+      complex. 
 		  This release plan should be kept up-to-date any time so that everybody can have a look at the target dates 
 		  to calculate personal ToDos.
 		</p>
@@ -65,9 +90,9 @@ under the License.
 	
   <subsection name='Preparing the Jira for the Release'>
     <p>
-      In a following step, you will extract from Jira the set of issues fixed in this release.
-      To make that work, go through the Jiras and insure the ones you are including in the release
-      are closed, and that the "Fixed in release xxx" is set for each Jira issue that is part of the
+      The build includes a generated set of Jira issues fixed (closed or resolved) in this release.
+      To make this accurate, go through the Jiras and ensure the ones you are including in the release
+      are closed/resolved, and that the "Fixed in release xxx" is set for each Jira issue that is part of the
       release.
     </p>
     
@@ -77,6 +102,7 @@ under the License.
       and do "bulk Jira changes" to update multiples of these in parallel, if that makes sense.
     </p>
   </subsection>
+  
 	<subsection name='Preparing The Sourcecode For The Release'>
 		<p>
 		  Before the source code can be tagged for the release check the points in the list below:
@@ -90,6 +116,8 @@ under the License.
           Use this information to update to later versions, if appropriate.</li>
 		    <li>
 		      Make sure that each release artifact that should be released has the correct version number.
+          These are normally updated automatically when the previous release is done.
+          <!--
           There is an ant build script you can run here: <code>uimaj-distr/src/main/build/changeVersion.xml</code>.
           To run it, first edit the file versions.properties in the same ... / build directory, setting 
           the "previous" version (the current version info in the source), and the "new" version that it 
@@ -107,128 +135,197 @@ under the License.
 			  </ul>
           Some of these things it doesn't update (if the update is complicated); in these case, 
           it will instead, issue a reminder message to you
-          to update things manually.
+          to update things manually. -->
 		    </li>
 		    <li>
-		      Make sure that the README files has been updated with the latest release information and release numbers.
+		      Make sure that any README files have been updated with the latest release information 
+          and release numbers.
 		    </li>
 		    <li>
-		      Update both versions (text and HTML) of the release notes for the release. JIRA can provide a list of 
-		      issues for a certain release when using the 'ReleaseNotes' function.
+		      Update the release notes for the release.
+		       <!-- JIRA can provide a list of 
+		      issues for a certain release when using the 'ReleaseNotes' function, 
+          after you've closed the Jira issues to be released with this version. -->
 		    </li>
+		    <li>Edit the POM of the top level thing being released, to add the property:
+		    <pre>&lt;jiraVersion>123456&lt;/jiraVersion></pre>
+		    replacing the 123456 with the actual Jira internal version number 
+		        (or numbers, separated by a comma) for the Jira release(s) being
+		        done.  This value is used during release processing to automatically 
+		        generate a report of the list of Jira issues that are included in this release.
+		        Change "123456" to be the actual jira internal version number, which you can get 
+            from the Jira url (see parameter fixfor=xxxxxx or fixforversion=xxxxxx) 
+            by going to https://issues.apache.org/jira/browse/UIMA 
+            and selecting "Releases" or "Versions" and then going to the 
+            particular version and looking in the url for
+            that version.
+          <p>
+		        You can also generate this report manually (for instance, if you want to
+		        have a look at what it will produce) by going to top level project
+		        being released (e.g., uimaj-distr) and issuing the maven command:
+		        <pre>mvn changes:jira-report -N </pre></p>
+		        
+		         <p>Each time this plugin is run, it creates an updated report in the
+		            top level of this project.  This report doesn't need to be checked into SVN.
+		            It will be regenerated and copied into the distribution archives (source and binary)
+		            during a release.  The RELEASE_NOTES.html files have been updated to
+		            refer to this generated report.</p>
+		         <p>Running the mvn release... command will cause this report to be generated or
+		            updated, every time the command is run.  So it is important that the POM 
+		            is updated to include the internal Jira version number, so the 
+		            right report is generated.</p>
+		        </li>
         <li>
           Do a trial build of the release candidate:
-            cd **directory for building the components**
-            mv install
-            cd **directory for creating the distribution**
-            mv install
+          <pre>cd **directory for doing the release** e.g. uimaj
+mvn install -Papache-release</pre>
+          <p>The <code>-Papache-release</code> is used to have the build mimic the 
+             build actions that would be taken when the release plugin is running
+             the release build.</p>
         </li>
 		  </ul>
 		</p>
 	</subsection>
 	
-	<subsection name='Building The Release Candidate'>
-		<p>
-		  All the preparation to build the release candidate is done. In the next step we have to tag
-		  the release source code in SVN. Most of time the first release tag isn't the release candidate that is
-		  shipped later so we established a simple tag structure where all tags for a release are stored
-		  until the final release candidate is found. When looking at the SVN you will find a structure like
-		  <br></br><br></br>
-		    <code>uimaj/tags/uimaj-&lt;release version>/uima-&lt;release version>-&lt;tag counter>.</code><br></br>
-		    <code>uimaj/tags/uimaj-2.2.1/uima-2.2.1-01.</code>
-		  <br></br>
-      See <a href="#Tagging Releases">Tagging Releases</a> for more info on tagging a release.
-		</p>
-		<p>
-		  After tagging the release the release candidate can be built using the provided build scripts.
-      The release build needs to be built from the tagged version; this avoids getting into the build any
-      changes that might occur subsequent to the tagging event.
-		  Further details about how to create the release distribution and how to sign them can be found 
-		  <a href="distribution.html">here</a>.
-      Be sure to sign the release.
-		</p>
+	<subsection name="Including updates to the Build tooling">
+	<p>This step is skipped, unless the build tooling is being updated.</p>
+	<p>There are two projects in the build tooling, each having as a parent, the common Apache Parent POM
+	<b>uima-build-resources</b> and <b>parent-pom</b>.
+	  The following special procedure is used to release updates to these.
+	</p>
+	<p>
+	  The parent-pom has the uima-build-resources's version number encoded as the 
+	  "property" <pre>&lt;uimaBuildResourcesVersion>XXXXXX&lt;/uimaBuildResourcesVersion></pre>
+	  This value will normally be set to the last released version number of the uima-build-resources artifact.
+	</p>
+	<p>If that artifact is changing, during development, this will be set to the XX-SNAPSHOT value corresponding to 
+	   the development version.  When releasing, first do a release (to the Nexus Staging repository, as usual) of
+	   the uima-build-resources artifact, which will create a version without the -SNAPSHOT.  Then change the
+	   &lt;uimaBuildResourcesVersion> value to correspond to the non-SNAPSHOT version number of this, before
+	   proceeding to release the parent-pom artifact.</p>	
 	</subsection>
 	
-	<subsection name='Tagging Releases'>
+	<subsection name='Building The Release Candidate'>
+    <p class="note">Prior to releasing, you must do the 
+      <a href="one-time-release-setup.html">one-time setup</a>
+      required for releasing
+    </p>
+		<p>
+      We use the maven-release-plugin to do the releasing.  In the prepare phase, it updates the
+      trunk artifacts to remove the -SNAPSHOT suffix, commits it to trunk, and then does an
+      SVN copy of the trunk to create the tag.  Then it updates the trunk artifacts to the next
+      version-SNAPSHOT, and commits that.
+    </p>
+      
+    <p>The release:perform checks out the tag and builds/tests/installs and deploys it to the 
+      NEXUS staging repository.
+    </p>
+      
+    <p>During this process, the release plugin asks what the next levels should be and what the tag name 
+        should be, and unless there's a good reason, we take the defaults (by just hitting enter).
+        The exception to this is in naming the SVN TAG - normally we have "release candidates".
+        The recommended convention is to take the suggested name and add "-rc1" for release candidate 1,
+        etc.
+    </p>
+    <p>The release plugin automatically signs everything that needs signing using gpg.  It also
+      builds the sources.jar, and one overall (for multi-module projects) source-release.zip file, 
+      which can be later obtained and 
+      should be a copy of the SVN tag for that artifact, and once unzipped, should be buildable,
+      using <code>mvn install</code>.
+    </p> 
+      
+    <p>You can upload to the Nexus Staging repository several independent artifacts; they will
+        all get added to the same unique temporary staging repository Nexus creates.  Once all the
+        artifacts are in place, you log into 
+        <a target="_blank" 
+          href="https://repository.apache.org">https://repository.apache.org</a> using your 
+          LDAP credentials, go to your staging repository, and "close" the repository.  After that,
+          nothing more can be added.  If you deploy another artifact, it will create a new 
+          staging repository.</p>
+          
+    <p>If you have several artifacts to release, and you want subsequent artifacts to 
+        depend on the released versions of earlier ones, you can do this, by releasing the 
+        first one, then releasing subsequent ones that depend on that, etc.  This works because
+        the first one you release will get built with the release version and installed to your
+        local repository, as well as the Nexus staging repository.  So subsequent ones that depend on
+        the release version of previous ones, will find that in your local repository.  
+        </p>  
+        
+        <p>
+          If you forget something and close the staging repository too soon, just continue as if you hadn't.
+          Subsequent release artifacts will go into another newly created staging spot on Nexus.
+          The downside of this is that you'll have to tell the "voters" about multiple staging repos.
+        </p>
+        
+	</subsection>
+  
+  <subsection name='Tips for the Release Manager'>
     <p>
-      The UIMA base framework is tagged by using the svn "copy" command to copy the HEAD revision of
-      ..uima/uimaj/trunk to ..uima/uimaj/tags/uimaj-[version-number such as 2.2.2]/[release candidate]
+      The release is done using the commands <code>mvn release:prepare</code> and <code>mvn release:perform</code>.
+    </p>
+    <p><b><u>Having all submodules at the same version:</u></b> 
+      When releasing a multi-module project where all the submodules have the same release version as the 
+      root project (e.g., uimaj-distr), you can have the release plugin set the version for all the submodules
+      the same value as the root, automatically, just use this form of the release:prepare:
+      <pre>mvn release:prepare -DautoVersionSubmodules</pre>
     </p>
     <p>
-      Sub-projects, such as uima-as, are done in a similar manner, but with additional copies as needed
-      if these sub-projects also depend on base UIMA source files.  
-      The uima-as sub-project can be tagged by running the tag script in the uima-as-distr/src/main/build directory. 
+      <b><u>Trying out the release build:</u></b> You can build the artifacts that the release would build by using:
+      <pre>mvn package -Papache-release</pre>
+    </p>
+    <p>
+      <b><u>Re-doing release candidates:</u></b> There are two ways to reset things back so you can do
+      another release candidate; depending on how far through the release process you've progressed.
+    </p>
+    <p style="margin-left:3em"><code>[mvn release:prepare]</code> If you've just done release:prepare,
+    you can reset things back to as they were before (almost) that command by issuing
+    <code>mvn release:rollback</code>.  The "almost": you have to manually svn delete the tag for the
+    release candidate (or name the next try as another release candidate).
+    </p>
+    <p style="margin-left:3em"><code>[mvn release:perform]</code> If you've done a release:perform, to
+    reset the source, you have to change the &lt;version>x.y.z-SNAPSHOT> back to their previous value.
+    You can use Eclipse's search/replace to do this, or the mvn versions plugin.  If you've 
+    "closed" the Nexus repo - you have to drop it.  If you haven't, you can just re-run the 
+    release:perform when you're ready, and that will overwrite the staging repo data in Nexus.  But see
+    the next tip.
+    </p>
+    <p>
+      <b><u>Nexus staging repositories and your source computer</u></b> The staging repo that 
+      receives the output of <code>mvn release:perform</code> has as part of its name, the
+      IP address where the deploy comes from.  If you have a laptop, and do part of the release
+      at "work", and then another part at "home", the IP address will be different, and 
+      multiple staging repositories will be created. This is not a problem, usually, unless
+      you are <i>updating</i> a release by redoing it, and are expecting the previous version
+      to be overwritten.  In case it isn't, you can just use the Nexus command line interface
+      to delete the old version from the "other" staging repo.
+    </p>
+  </subsection>
+	
+  <subsection name='Removing -SNAPSHOT dependencies'>
+    <p>
+      POMs can refer to other artifacts in several ways, for example via the &lt;parent-pom>
+      element, or via a &lt;dependency> element.  Often, a release will involve releasing together
+      multiple modules (all at -SNAPSHOT levels) that refer to one another using these elements.
+      When that happens, the references in these two elements are automatically updated
+      during the release process, from xx-SNAPSHOT to xx for the tag, and then to the next development level,
+      for the trunk.  
     </p>
     
+    <p>Exception to this: -SNAPSHOT suffixes are not updated for references within plugins.</p>
   </subsection>
-	
-	<subsection name='Auditing The Release And Create A RAT report'>
-		<p>
-      Releases are now automatically checked using the RAT tool.  Any exceptions are recorded
-      in the distribution POM, as part of the configuration for the maven RAT plugin.
-      
-    </p>
-    <p>There is one exception: the uimacpp release is still separately audited.
-		  To audit a uiamcpp the <a href="http://incubator.apache.org/rat/">RAT</a> (Release Audit Tool)
-		  should be used. Check out the latest version from the website and run the tool on the unpacked release
-		  artifacts (binary and source distribution). The command line looks like:<br /><br />
-		  <code>java -jar apache-rat-0.6.jar &lt;release-artifact-directory> > report.txt</code><br /><br />
-		  The RAT tool generates the audit report and writes it to the report.txt file. 
-      Check this file for all
-		  lines that start with <code>!?????</code> and add a comment to them saying why 
-      they do not have a license header, or fix them so they pass the RAT tests. 
-		</p>
-		<p>
-		 <code>
-		 </code>
-		</p>
-	</subsection>
 
-  <subsection name='Putting release candidates on people.apache.org'>
-    <p>
-      The uima-dev community is invited to test the release candidate, and review the RAT reports.
-      To enable them to do this, post the release on your people.apache.org account and notify 
-      the uima-dev community via the mailing list where you posted it.  Most people post it in
-      ~/public-html/uima-release-candidates/[project-name]/[id-of-release] 
-      (e.g. ~/public-html/uima-release-candidates/uima-as/05) so that others can easily 
-      download it from the web.
-    </p>
-  </subsection>
-	<subsection name='Doing The Release Vote'>
-		<p>
-		  When all issues are fixed, all test cases are executed successfully and the documentation is up-to-date maybe 
-		  the release level is found and the release manager can start a release vote on the uima-dev mailing list. 
-		  With this vote the release manager checks if all committers agree to ship the release level. 
-		  The vote must be aligned with the <a href="http://www.apache.org/foundation/voting.html">Apache vote process</a>. 
-		</p>
-	</subsection>
-
-	<subsection name='Ask Incubator PMC To Release'>
-		<p>
-		  After a successful release vote for the release on the uima-dev mailing list the release is ready for
-		  publishing. But before that, the Incubator PMC must approve the release and vote on it. This is necessary since UIMA 
-		  is still in the Apache Incubator. For details about this approval look at the 
-		  <a href="http://incubator.apache.org/incubation/Incubation_Policy.html#Podling+Constraints">Incubation Podling Constraints</a>.
-		  The vote for the Incubator PMC must be started on the incubator mailing list. The vote mail must contain links
-		  to the release artifacts as they will be published, the commented RAT report for the source and binary distribution and 
-		  a link to the passed uima-dev mailing list release vote.
-		</p>
-	</subsection>
-
-	<subsection name='Publish The Release'>
-    <p>
-    After the release is approved, we will have the last tagged release candidate which will correspond to the
-    official release.  This should not be updated after this.
-    </p>
-		<ul>
-      <li>Build the Eclipse update site:
+  <subsection name="Stage the (partial) eclipse-update-site">
       <ul>
-        <li>Edit the site.xml to include any new features.</li>
+      <li>Build the Eclipse update site, after the corresponding jars have been staged 
+      with their final release numbers to the staging repo:
+      <ul>
+        <li>Edit the site.xml to include any new features, with the final release numbers.</li>
         
-        <li>Copy from the approved release candidate any new feature Jars to the <code>features</code> directory.</li>
-        
+        <!--li>Copy from the approved release candidate any new feature Jars to the <code>features</code> directory.</li>
+        (Note this step and the next are automatically done by the build 
         <li>Copy from the approved release candidate any new plugin Jars to the <code>plugins</code> directory, after
         first deleting any Jars that might be there from previous releases.</li>
+        -->
         
         <li>run the ant build script to pack the new plugin Jars, and generate the new site digest containing
         the new features.</li>
@@ -240,79 +337,85 @@ under the License.
         <li>Test the result: try using the new site (as a local site) in various versions of Eclipse, and verify it installs OK.
         If there are errors, correct these and rebuild.</li>
         
-        <li>SVN commit any changes you did to the trunk.  In particular, the uimaj-eclipse-update-site project's <code>features</code>
-        directory, containing any new Feature Jars, is committed, so future site builds have access to this information.
-        The <code>plugins</code> directory content is <b>not</b> committed, because the site build process does not 
+        <li>SVN commit any changes you did to the trunk.  
+        In particular, the uimaj-eclipse-update-site project's <code>features</code>
+        directory, containing any new Feature Jars, is committed, 
+        so future site builds have access to this information.
+        The <code>plugins</code> directory content is <b>not</b> committed, 
+        because the site build process does not 
         require the plugin information.</li>
         
       </ul>
       </li>
+      </ul>
+  </subsection>  
+	
+  <subsection name='Doing The Release Vote'>
+		<p>
+      After things are staged, you write a note to the dev list, asking for an approval vote.
+      You need to provide the url(s) of the closed staging repository in the note so the approvers
+      can find the code to check.  The [VOTE] email should be based on similar previous votes, and
+      include instructions to testers on how to set up their maven settings.xml file to specify
+      the particular staging repository (or repositories, if more than one is being used).
+      For an example, see <a href="http://markmail.org/message/4ae7zb4ucmivlkaa">this dev-list post</a>.
       
-		<li><p>Upload the release artifacts to the distribution server (via uploading to people.apache.org
+		</p>
+	</subsection>
+  
+	<subsection name='Releasing'>
+		<p>
+		  After a successful release vote for the release on the dev mailing list:
+      <ol>
+        <li>Collect all the artifacts to be uploaded together with their checksums and signatures, from the 
+            staging repo.</li>
+        <li>Delete any artifacts from the staging repo that aren't supposed to go to Maven Central
+            (currently only the bin.tar artifacts - the bin.zip is used for building uima-as)</li>
+        <li>Promote the release(s) from the staging repositories: 
+            log on to the staging repository again, and release the staged artifacts.  
+            This will make the artifacts available in the Maven Central repository.</li>
+        <li><p>Upload the release artifacts to the distribution server 
+      (via uploading to people.apache.org
       in the directory: <code>/www/www.apache.org/dist/uima</code>, including the 
-			release artifacts and the Eclipse update site data.  Be sure to include the gpg/md5/sha1 signatures.
-      Make sure the KEYS file in that uploaded directory is current. Additionally it is necessary to update
+      release artifacts and the Eclipse update site data.  Be sure to include the asc/md5/sha1 signatures.
+      Make sure the KEYS file in that uploaded directory is current (master located in 
+      SVN uima/site/trunk/uima-website/docs/KEYS). Additionally it is necessary to update
       the download page of the UIMA website to make the new release artifacts available. </p>
+      </li>
+      <li>Things not needed to be mirrored go into our website:
+        on p.a.o, in directory www/uima.apache.org/downloads
+        Currently, this includes the RELEASE_NOTES (plus issuesFixed) for the release,
+        the new docbooks, and the Javadocs. 
+        This currently needs to get there via being put into SVN (due to svnpubsub setup I think).
+        <ul>
+        <li></li></ul>
+        Copy released artifacts to targets: bin, src, to p.a.o/www/www.apache.org/dist/uima, 
+      new features / plugins from Eclipse update site target/eclipse-update-site to .../dist/uima/eclipse-update-site
+      (add to what's already there).    
       <ul>
         <li>The Eclipse update site on w.a.o/dist/uima will have previous versions of the jars for the
         features and plugins.  The generated site in 
           <code>uimaj-eclipse-update-site/target/eclipse-update-site</code> has the new version plugin(s)
           and feature jars.  These should be added to the w.a.o/dist/uima update site - leave the others
-          that are already there in place.  The other non-jar files should be updated from the generated site.
+          that are already there in place.  
+          Update the Eclipse site and digest as needed.
         </li>
       </ul>
-    </li>
+      <li>Copy RELEASE_NOTES and issuesFixed
+      from uimaj/target/checkout (where
+      the mvn release:perform was done from) to the p.a.o/ww/uima.apache.org/d/[project-version].</li>
+      </li>
       
-		<li><p>Update the documentation page with the new data on the UIMA website.  The mirroring stuff is
-    embedded in the markup - just substitute within that markup the name of the new release
-    (assuming you followed the previous release's nameing conventions for the higher-level
-    directories).</p></li>
-      
-		<li><p>Upload the release artifacts to the Maven Incubator repository. To upload, first start up
-      the Pagent server (see below) so that the signon to people.apache.org can proceed.  Then go to the project 
-      where you built the release candidate, cd to uimaj, and do:
-			<br /><br/>
-			<code>mvn -DsignArtifacts=true process-resources source:jar deploy</code><br/><br/>
-		    Before the upload is started, make sure that the <a href="http://maven.apache.org/settings.html">Maven settings.xml</a> 
-		    file is configured properly. It must contain a section like:
-		    <pre>&lt;servers>
-  &lt;server>
-    &lt;id>staging-repository&lt;/id> 
-    &lt;username>YOUR_USER_NAME&lt;/username>
-    &lt;!-- either use password or privateKey authentication --&gt;
-    &lt;password>YOUR_PASSWORD&lt;/password>
-    &lt;privateKey>PATH_TO_YOUR_PRIVATE_KEY_FILE&lt;/privateKey>
-    &lt;configuration>
-      &lt;!-- specify ssh and scp executables (here Putty executables are used) --&gt;
-      &lt;sshExecutable>plink&lt;/sshExecutable> &lt;!-- use full path to this if not on the path --&gt;
-      &lt;scpExecutable>pscp&lt;/scpExecutable>  &lt;!-- use full path to this if not on the path --&gt;
-    &lt;/configuration>
-  &lt;/server>
-&lt;/servers></pre></p>
-      
-      <p>The above configuration assumes you are using PuTTY.  PuTTY comes with an executable
-      called PAGENT that 
-      you can start prior to running this.  When started, it puts up a small icon in your
-      windows icon tray.  Right click it, and 
-        follow the menu prompts to
-        add your PuTTY key for authenticating while logging into people.apache.org; 
-        it will prompt you for your passphrase.  
-      Then, when Maven executes the PuTTY commands, PAGENT will automatically provide the
-      passphrase for the key. 
-      </p>
-      
-      <p>This worked as of 2.3.0 release.  In the future try without 
-        including the "process-resources" goal, because
-        when done this way, you've already processed the resources as part of building the release
-        candidate.  Invoking process-resources will cause rebuilding of the jars.  
-        Also, the source:jar 
-        will probably not be needed, once the release-build process is fixed 
-        to build these automatically.</p>
-		</li>
-      
- 	</ul>
+      <li>After .../dist is updated, update the downloads page of the web site</li>
+  <li>Update Jira version info to reflect the release status and date</li>
+  <li>Add a SVN tag for the release candidate, without the -rcXX to indicate the release.</li>
+  <li>After release appears on maven central, post an appropriate announce letter</li>
+  <li>Add release to next Board report</li>
+  </ol>    
+		</p>
+    
+    
 	</subsection>
-	
+
 	<subsection name='Announce The Release'>
 	  <p>
 	    To announce the published release send and email to
@@ -322,8 +425,7 @@ under the License.
 	      <li>user@uima.apache.org</li>
 	    </ul>
     <p>
-	    and describe the major changes of the release. The email should contain the
-	    Apache Incubation disclaimer as long as Apache UIMA is in the incubation phase. 
+	    and describe the major changes of the release. 
 	    Announcements should be posted from the release manager's <code>apache.org</code> address,
       and signed by the release manager using the same code-signing key as was used to sign the release.
 	    For more details please refer to <a href="http://incubator.apache.org/guides/releasemanagement.html#announcements">
