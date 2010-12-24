@@ -291,7 +291,7 @@ mvn install
 </p>
 
 
-<p>Sandbox projects are build for distribution individually, by cd-ing to the individual
+<p>Sandbox projects are built for distribution individually, by cd-ing to the individual
   sandbox project and running "mvn install".  Note that this may not work on projects that
   are not advanced to the point where they are released - not all projects in the Sandbox are
   in a state where they are buildable.
