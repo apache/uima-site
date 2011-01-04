@@ -21,6 +21,8 @@
             <a href="http://news.gmane.org/gmane.comp.apache.uima.devel"
                target="_blank"><em>Dev</em> <img src="images/offsitelink.png"/></a>
         </item>
+        
+        <item name="Powered By UIMA" href="http://cwiki.apache.org/confluence/display/UIMA/Powered+by+Apache+UIMA" target="_blank" />
 
         <item spacer="true"/>
         <item name="Issue tracker" href="http://issues.apache.org/jira/browse/uima" />
