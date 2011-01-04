@@ -179,7 +179,7 @@ Other mirrors: <select name="Preferred">
   </p>
   <blockquote> <code>gpg --print-md MD5 &lt;ReleaseFile></code> </blockquote>
   <p>and for SHA1:</p>
-  <blockquote> <code>gpg --print-md MD5 &lt;ReleaseFile></code> </blockquote>
+  <blockquote> <code>gpg --print-md SHA1 &lt;ReleaseFile></code> </blockquote>
   <p>You can simply compare the resulting checksum to the one contained in the <code>&lt;ReleaseFile>.md5</code>
   or <code>&lt;ReleaseFile>.sha1</code> checksum file.  Use diff or your eyes, the signatures are short.
   </p>
