@@ -68,10 +68,10 @@
    </ul>
    <p>PDF version for printing:</p> 
    <ul>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/overview_and_setup.pdf">Overview and Setup</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/tools.pdf">Tools</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/references.pdf">References</a></li>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/overview_and_setup.pdf">Overview and Setup</a></li>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/tools.pdf">Tools</a></li>
+     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/references.pdf">References</a></li>
      <li><a href="downloads/releaseDocs/2.3.0-incubating/docs-uima-as/pdf/uima_async_scaleout.pdf">UIMA Asynchronous Scaleout</a></li>
    </ul>
 
