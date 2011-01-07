@@ -260,6 +260,43 @@ our svn tree, in a top level directory named "build".</p>
                                         <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
+        <a name="Selecting build alternatives based on the project"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Selecting build alternatives based on the project</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>The shared UIMA-wide common parent POM supports many different
+     kinds of builds.  For instance, some projects use Docbook, 
+     some projects are "distribution" projects that serve to build
+     our binary distribution, some projects build PEAR artifacts 
+     (e.g., many of our sandbox projects), etc.</p>
+                                                <p>Common support for each of these kinds of project builds is
+      kept in the common parent POM, but in a profile, which is 
+      only activated for that kind of project.  The activation
+      is actually done by detecting the presence of a file, named
+      by convention <code>marker-file-identifying-xxxxxxxx</code>,
+      where the xxxxxxxx is a particular name.  These are 0-length
+      files put at the top level of projects that need a particular
+      profile activation in the common Parent pom.
+   </p>
+                                                <p style="margin-left=3em">An exception to this is the profile
+   for processing Docbooks, which instead is activated by the 
+   existence of the directory <code>src/docbook</code> in the project.</p>
+                                                <p>These are the current marker-file kinds:
+     <ul>
+       <li>marker-file-identifying-standard-pear</li>
+       <li>marker-file-identifying-single-project</li>
+       <li>marker-file-identifying-parent-pom</li>
+       <li>marker-file-identifying-eclipse-plugin</li>
+       <li>marker-file-identifying-eclipse-feature</li>
+     </ul>
+   </p>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
         <a name="POM style"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;POM style</h1></a>
       </td></tr>
       <tr><td>
@@ -305,14 +342,15 @@ our svn tree, in a top level directory named "build".</p>
     documented <a target="_blank" href="http://www.apache.org/dev/publishing-maven-artifacts.html">here.</a></p>
                                                 <p>For each artifact, the release process builds additional artifacts, and
      attaches them to the main one, so they will "go along with" the main artifact during 
-    Maven deployment to repositories.</p>
+     Maven deployment to repositories.</p>
                                                 <ul>
       <li>
         sources.jar - holds the source files - this is for IDEs that want to refer to the source
       </li>
       
       <li>
-        source-release.zip - this is the same as the sources, but includes all other files 
+        source-release.zip - only for the top-most project in an aggregate build - 
+        this is the same as the sources, but includes all other files 
         (such as the pom.xml) not under the /src
         directory, needed for building.  
         The intent is that this is the same as the SVN checked-in files, and once unzipped, this
@@ -325,6 +363,8 @@ our svn tree, in a top level directory named "build".</p>
     Apache parent Pom to specify the <code>apache-release</code> profile.  It is this profile
     being selected that causes (among many other things) the sources.jar and 
     source-release.zip artifacts to be built.
+    You can debug this process without doing a release, by adding the parameter 
+    <code>-Papache-release</code> to the non-release Maven build commands.
   </p>
                                                       <table class="subsectionTable">
         <tr><td>
@@ -349,7 +389,8 @@ our svn tree, in a top level directory named "build".</p>
          in the files, per the Apache practice for moving these to the NOTICE file). 
          </li></ul>    
   </p>
-                                                <p>These (partially) generated resources are placed in the project's target/maven-shared-archive-resources/META-INF/
+                                                <p>These resources after customization are placed in the project's 
+     target/maven-shared-archive-resources/META-INF/
      directory.  Later steps in the build use this directory for two purposes:
      <ul><li>adding this information to any JAR that might be built</li>
          <li>adding this information as part of generated assemblies - these files are copied to the top
@@ -363,20 +404,21 @@ our svn tree, in a top level directory named "build".</p>
       This is commonly used for add-on projects having a different LICENSE or NOTICE file.</p>
                                                 <p>Note that there are sometimes two sets of LICENSE / NOTICE files - one for the source distribution,
       and one for the binary distribution.  This is because the source distribution rarely needs other
-      than the standard LICENSE/NOTICE files, for example, because it is only distributing source; while the
+      than the standard LICENSE/NOTICE files, for example, because it is 
+      (usually) only distributing source; while the
       binary distribution often distributes additional components that are licensed under other
       licenses, with additional NOTICE requirements - in which case, the LICENSE and NOTICE files 
       contains all of the required licenses and notices for everything
       being distributed.</p>
                                                 <p style="margin-left: 3em">
-   For <i>binary</i> distributions, the LICENSE and NOTICE files are taken from src/main/readme/ directory.
+     For <i>binary</i> distributions, the LICENSE and NOTICE files 
+     are taken from src/main/readme/ directory.
    </p>
                                                 <br />
                                                 <br />
                                                 <p>This next table summarizes the packaging artifacts and how and where they are 
       located and added during the build process.</p>
-                                                <p class="note">This table is out of date and needs updating (Nov 2010).</p>
-                                                <table class="downloads">
+                                                <table class="downloads"> <!-- class is just to format the table like our downloads tables -->
 
     <tr>
      <th>Artifacts</th>
@@ -388,15 +430,20 @@ our svn tree, in a top level directory named "build".</p>
 
     <tr>
      <td><p>LICENSE, NOTICE, DEPENDENCIES.</p>
-     <p>Note that DEPENDENCIES are not (currently) in 
-         our "binary" assembly distributions.</p></td>
+     <!--p>Note that DEPENDENCIES are not (currently) in 
+         our "binary" assembly distributions.</p--></td>
+     <!-- variants -->
      <td><p>Standard, for source distribution</p>
          <p>Alternate: has extra Notice element used for copyrights moved to Notice file.</p>
-         <p>Alternate2: for binary assemblies, these are customized for each binary assembly.</p>
-         </td>
-     <td><p>uima-jar-resource-bundle (in the build tooling).</p> 
-         <p>Additional text for NOTICE (if needed) comes from a property in the build POM,
-            (currently inherited from the build poms with the name ending in -ibm-notice).</p>  
+         <p>Alternate2: for binary assemblies, the LICENSE and NOTICE 
+            are customized for each binary assembly.</p>
+     </td>
+     <td><p>uima-build-resources (in the build tooling).</p> 
+         <p>Additional text for NOTICE (if needed) comes from 
+            the property <code>&lt;postNoticeText&gt;</code>in the build POM.
+            For many cases, the additional copyright notice is for 
+            IBM contributed code, which can be included using
+            <code>&lt;postNoticeText&gt;${ibmNoticeText}&lt;/postNoticeText&gt;</code>.</p>  
          <p>For binary assemblies, comes from either
            <ul><li>src/main/readme/, or</li>
                <li>top level (for Addons)</li>
@@ -406,11 +453,12 @@ our svn tree, in a top level directory named "build".</p>
       <!-- Targets -->     
      <td><p>Jars: goes into the MANIFEST.MF. 
          <p>Source-Release Assemblies:</p> 
-         goes into the zip as top level files.</p>
+            goes into the zip as top level files.</p>
          <p>Custom Binary assemblies: goes into the zip / tar as top level files.</p>
      </td>
      <!-- Method -->
-     <td><p>parent-pom-top configures remote-resources plugin to copy these into
+     <td><p>org.apache.uima:parent-pom configures the remote-resources plugin 
+            to copy these into
             target/maven-shared-archive-resources/META-INF/
             directory.  This info is then included in any Jars that are built.</p>
          <p>During release (only) (apache-release profile activated)
@@ -418,6 +466,11 @@ our svn tree, in a top level directory named "build".</p>
             is copied to the top level of the source-release archive.
             Any versions of these files at the project's top level
             will subsequently override these, at the top level of the archive.</p>
+            <p style="margin-left=3em">The common parent-pom configures the property
+            <code>sourceReleaseAssemblyDescriptor</code> to "multimodule-source-release",
+            this property value is used by the common Apache POM to pick the 
+            source assembly descriptor from the
+            uima-build-resources.</p>
          <p>For binary distributions, done with -distr projects, 
             these files come from src/main/readme/.  For binary distributions,
             done using single-project parent (add-ons, typically), these files
@@ -425,7 +478,8 @@ our svn tree, in a top level directory named "build".</p>
     </tr>
     <tr>
       <td>README.txt</td>
-      <td>source-release.zips and binary distribution releases (not in Jars)</td>
+      <!-- variants -->
+      <td />      
       <td><p>For -distr poms, for source distributions, these come from 
            same-named files at the top level of the -distr project.
            For binary distributions, the custom assembly specifies where these
@@ -434,17 +488,17 @@ our svn tree, in a top level directory named "build".</p>
           <p>For Addon projects, if there is a README at the top level, this 
              is copied into both the source and binary distributions, at the top level of the archive.</p>
       </td>
-      <td>Goes at the top level of archive</td>
+      <td>source-release.zips and binary distribution releases (not in Jars).
+          Goes at the top level of archive.
+      </td>
       <td>
         <p>For source release building, during release (only) (apache-release profile activated)
             parent-pom-top configures the assembly plugin for source assemblies to use
-            the multimodule-source-release in uima-jar-resource-bundle.  This copies 
+            the multimodule-source-release in uima-build-resources.  This copies 
             the README file from the top level into the top level of the archive.
             </p>
-         <p>For binary distributions, the distribution projects inherit from either
-            parent-pom-distr (whose assembly copies the README from src/main/readme/) 
-            or parent-pom-single-project
-            (whose assembly copies the README from the top level in the project).</p>
+         <p>For binary distributions, the assembly copies the README from src/main/readme/ 
+            or from the top level in the project.</p>
       </td>
     </tr>
 
@@ -454,7 +508,7 @@ our svn tree, in a top level directory named "build".</p>
       <p>Each release can include release notes 
       describing the main changes for the release.</p></td>
       <!-- variants -->
-      <td>source-release.zips for some projects and binary distribution releases (not in Jars)</td>
+      <td />
       <!-- Sources -->
       <td><p>For -distr poms, source for these was in src/main/readme/, but is now
              at the top level (to reduce configuration by following more conventions)</p>
@@ -462,7 +516,8 @@ our svn tree, in a top level directory named "build".</p>
              is copied into the source and binary distributions to the top level of the archive.</p>
       </td>
       <!-- Targets -->
-      <td>Goes at the top level of archive</td>
+      <td>source-release.zips for some projects and binary distribution releases (not in Jars).
+          Goes at the top level of archive.</td>
       <!-- Method -->
       <td>
         <p>During release builds the assembly is configured to copy these from the top
@@ -485,7 +540,8 @@ our svn tree, in a top level directory named "build".</p>
       <!-- Sources -->
       <td>This is a computed resource.</td>
       <!-- Targets -->
-      <td>The directory goes at the top level of archive</td>
+      <td>This is generated into the top level of the project, and then goes
+          into any archives that are produced, at the top level.</td>
       <!-- Method -->
       <td>
         <p>The build process runs the maven changes:jira-report plugin to generate this.
@@ -533,9 +589,9 @@ our svn tree, in a top level directory named "build".</p>
     is kept in SVN in the <code>uima/site/trunk/uima-website/docs</code> directory; 
     this directory is manually checked out into the right spot on <code>people.apache.org</code>, the sources
     are updated.  
-    For large generated documents, 
-    we have the option to generate them from sources in svn, 
-    and deploy them directly to the right spot on <code>people.apache.org</code>.  
+    Large generated documents are put directly onto people.apache.org in the directory
+    /www/uima.apache.org/d/, and not checked into SVN.  The files kept here include 
+    the javadocs and the generated docbook html and pdf files.
     This avoids using SVN for large generated files.  This satisfies the 
     <a href="http://apache.org/dev/project-site.html" target="_blank">requirements</a>
     for Apache websites.</p>
@@ -700,6 +756,23 @@ our svn tree, in a top level directory named "build".</p>
       which is used to get the build month and build year into properties.
       This is used, for instance, in the common docbook frontmatter to indicate when the book was
       built.</p>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Using the Release Audit Tool (RAT)"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Using the Release Audit Tool (RAT)</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>From parent-pom version 2 and onwards, 
+    RAT is run automatically, but only when the Maven profile "apache-release" is activated.
+    Projects that override the default RAT exclusions must include all things that need to be excluded,
+    and put this configuration into their POM in the "pluginManagement" section; see the project uimaj-core
+    for an example.
+    </p>
                             </blockquote>
         </p>
       </td></tr>
