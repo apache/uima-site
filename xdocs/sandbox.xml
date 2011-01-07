@@ -75,6 +75,9 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
       <li><a href="#concept.mapper.annotator">Concept Mapper Annotator</a></li>
       <li><a href="#configurable.feature.extractor.annotator">Configurable Feature Extractor Annotator</a></li>      <li><a href="#tika.annotator">Tika Annotator</a></li>
       <li><a href="#lucas.consumer">Lucene CAS indexer (Lucas)</a></li>
+      <li><a href="#alchemy.annotator">AlchemyAPI Annotator</a></li>
+      <li><a href="#rdfcas.consumer">RDF CAS Consumer</a></li>      
+      <li><a href="#solrcas.consumer">Solr CAS Consumer (Solrcas)</a></li>
     </ul>
   <h4>Servers</h4>
     <ul>
@@ -348,6 +351,33 @@ document; used by the FileSystemCollectionReader</dd>
     <p><a href="downloads/sandbox/CFE_UG/CFE_UG.html">
       Click here to access the user documentation</a>.</p>
     
+  </subsection>
+  <subsection name="AlchemyAPI Annotator" id="alchemy.annotator">
+    <p>The AlchemyAPI Annotator is a wrapper for the AlchemyAPI webservices which
+    provide text enrichment facilities like categorization, entity extraction,
+    language identification, keyword extraction, concept tagging etc.
+    </p>
+    <p><a href="downloads/sandbox/AAA_UG/AlchemyAPIAnnotatorUserGuide.html">
+      Click here to access the user documentation</a>.</p>
+  </subsection>
+  
+  <subsection name="RDF CAS Consumer" id="rdfcas.consumer">
+    <p>The RDF CAS Consumer is responsible of taking a CAS view and
+    write it to a file in a RDF format; this is usefult to plug UIMA
+    pipelines with RDF backed systems (using ontologies, reasoners, etc.).
+    </p>
+    <p><a href="downloads/sandbox/RDF_CC/RDFCASConsumerUserGuide.html">
+      Click here to access the user documentation</a>.</p>
+  </subsection>
+  
+  <subsection name="Solr CAS Consumer (Solrcas)" id="solrcas.consumer">
+    <p> The Solr CAS Consumer (Solrcas) consumes CAS objects transforming
+    them into Solr documents to write to a remote or local Solr instance 
+    in order to provide serach capabilities on top of UIMA pipelines with
+    the Apache Solr search server.
+    </p>
+    <p><a href="downloads/sandbox/Solrcas/SolrcasUserGuide.html">
+      Click here to access the user documentation</a>.</p>
   </subsection>
 </section>
 
