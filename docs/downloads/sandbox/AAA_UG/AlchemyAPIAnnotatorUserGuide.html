@@ -1,0 +1,522 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Apache UIMA AlchemyAPI Annotator Documentation</title><link rel="stylesheet" href="css/stylesheet-html.css" type="text/css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.75.2"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="Apache UIMA AlchemyAPI Annotator Documentation" id="d4e1"><div xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h1 class="title">
+    Apache UIMA AlchemyAPI Annotator Documentation
+  </h1></div><div><div class="authorgroup">
+      <h3 class="corpauthor">Written and maintained by the Apache UIMA Development Community</h3>
+    </div></div><div><p class="releaseinfo">Version 2.3.1-SNAPSHOT</p></div><div><p class="copyright">Copyright &copy; 2006, 2011 The Apache Software Foundation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d4e8"></a>
+      <p> </p>
+      <p title="License and Disclaimer">
+        <b>License and Disclaimer.&nbsp;</b>
+
+        The ASF licenses this documentation
+           to you under the Apache License, Version 2.0 (the
+           "License"); you may not use this documentation except in compliance
+           with the License.  You may obtain a copy of the License at
+         
+         </p><div class="blockquote"><blockquote class="blockquote">
+           <a class="ulink" href="http://www.apache.org/licenses/LICENSE-2.0" target="_top">http://www.apache.org/licenses/LICENSE-2.0</a>
+         </blockquote></div><p title="License and Disclaimer">
+         
+           Unless required by applicable law or agreed to in writing,
+           this documentation and its contents are distributed under the License 
+           on an 
+           "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+           KIND, either express or implied.  See the License for the
+           specific language governing permissions and limitations
+           under the License.
+         
+      </p>
+      <p> </p>
+      <p> </p>
+      <p title="Trademarks">
+        <b>Trademarks.&nbsp;</b>
+        All terms mentioned in the text that are known to be trademarks or 
+        service marks have been appropriately capitalized.  Use of such terms
+        in this book should not be regarded as affecting the validity of the
+        the trademark or service mark.
+        
+      </p>
+    </div></div><div><p class="pubdate">gennaio, 2011</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="preface"><a href="#d4e25">Introduction</a></span></dt><dt><span class="chapter"><a href="#sandbox.alchemyapi.services">1. Wrapped services</a></span></dt><dd><dl><dt><span class="section"><a href="#sandbox.alchemyapi.categorization">1.1. Categorization</a></span></dt><dt><span class="section"><a href="#sandbox.alchemyapi.keywordExtraction">1.2. Keyword Extraction</a></span></dt><dt><span class="section"><a href="#sandbox.alchemyapi.languageDetection">1.3. Language Detection</a></span></dt><dt><span class="section"><a href="#sandbox.alchemyapi.rankedEntitiesExtraction">1.4. Ranked Entities Extraction</a></span></dt><dt><span class="section"><a href="#sandbox.alchemyapi.microformatsExtraction">1.5. Microformats Extraction</a></span></dt><dt><span class="section"><a href="#sandbox.alchemyapi.annotatedEntitiesExtraction">1.6. Annotated Entities Extraction</a></span></dt></dl></dd><dt><span class="chapter"><a href="#sandbox.alchemyapi.parametersConfiguration">2. Configuring parameters</a></span></dt><dd><dl><dt><span class="section"><a href="#Common+Parameters">2.1. Common Parameters</a></span></dt><dt><span class="section"><a href="#Specific+Parameters">2.2. Service Specific Parameters</a></span></dt></dl></dd></dl></div>
+
+  
+
+  
+
+  <div class="preface" title="Introduction" id="d4e25"><div class="titlepage"><div><div><h2 class="title">Introduction</h2></div></div></div>
+    
+    <p>
+      The AlchemyAPI Annotator is a set of annotators that wrap the
+      AlchemyAPI
+      ( <a class="ulink" href="http://www.alchemyapi.com" target="_top">http://www.alchemyapi.com</a>)
+      services provided by
+      Orchestr8 ( <a class="ulink" href="http://www.orchestr8.net" target="_top">http://www.orchestr8.net</a> ).
+    </p>
+    <p>
+      To use AlchemyAPI Annotator, choose which service you want to
+      put
+      inside your UIMA pipeline,
+      then find the corresponding AE
+      descriptor, put your API Key as value of the 'apikey' parameter,
+      eventually modify the parameters' defaults and you're done. 
+    </p>
+  </div>
+
+  <div class="chapter" title="Chapter&nbsp;1.&nbsp;Wrapped services" id="sandbox.alchemyapi.services"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;1.&nbsp;Wrapped services</h2></div></div></div>
+    
+    <p>
+      This chapter describes the AlchemyAPI services wrapped inside
+      AlchemyAPI Annotator.
+    </p>
+    <div class="section" title="1.1.&nbsp;Categorization"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="sandbox.alchemyapi.categorization">1.1.&nbsp;Categorization</h2></div></div></div>
+      
+      <p>
+        AlchemyAPI's Categorization service can be used to categorize
+        text, HTML, or
+        web-based
+        content, assigning the
+        most likely topic
+        category
+        (news,
+        sports,
+        business, etc.)
+        </p><table id="d4e37">
+          <caption>Table&nbsp;1.1.&nbsp;Category Types</caption>
+          <tbody>
+            <tr>
+              <td>Arts and Entertainment</td>
+              <td>Arts (Drawing, Sculpting, etc.) and Entertainment
+                (Movies, Music, etc.) News and Discussion. </td>
+            </tr>
+            <tr>
+              <td>Business</td>
+              <td>Business and Finance News, SEC filings, etc. </td>
+            </tr>
+            <tr>
+              <td>Computers and Internet</td>
+              <td>Information Technology (Computers, Internet, Mobile
+                Phones, etc.) News and Discussion. </td>
+            </tr>
+            <tr>
+              <td>Culture and Politics</td>
+              <td>Political News and Discussion, and Culture /
+                Society-related issues. </td>
+            </tr>
+            <tr>
+              <td>Gaming</td>
+              <td>Gaming (Computer Games, Video Games, Board Games)
+                News
+                and Discussion.</td>
+            </tr>
+            <tr>
+              <td>Health</td>
+              <td>Health (Medications, Treatments, Diseases, etc.)
+                News.
+              </td>
+            </tr>
+            <tr>
+              <td>Law and Crime</td>
+              <td>Legal and Crime-related News and Discussion. </td>
+            </tr>
+            <tr>
+              <td>Religion</td>
+              <td>Religious News and Discussion.</td>
+            </tr>
+            <tr>
+              <td>Recreation</td>
+              <td>Recreational Activities (Boating, etc.) </td>
+            </tr>
+            <tr>
+              <td>Science and Technology</td>
+              <td>Science (Physics, Astronomy, etc.) News and
+                Discussion.</td>
+            </tr>
+            <tr>
+              <td>Sports</td>
+              <td>Sports News and Commentary.</td>
+            </tr>
+            <tr>
+              <td>Weather</td>
+              <td>Weather News and Discussion.</td>
+            </tr>
+          </tbody>
+        </table><p>
+        Supported languages are:
+        <span class="emphasis"><em>English, French, German, Italian, Portuguese, Russian,
+          Spanish, Swedish</em></span>
+        .
+      </p>
+      <p>
+        The information extracted on the category of (for example)
+        the passed text document is stored inside a FeatureStructure of
+        type org.apache.uima.alchemy.ts.categorization.Category, with
+        text and score.
+      </p>
+    </div>
+    <div class="section" title="1.2.&nbsp;Keyword Extraction"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="sandbox.alchemyapi.keywordExtraction">1.2.&nbsp;Keyword Extraction</h2></div></div></div>
+      
+      <p>
+        AlchemyAPI's Keyword Extraction service can be used to extract
+        topic keywords
+        from
+        HTML, text, or web-based contents.
+        Supported
+        languages are:
+        <span class="emphasis"><em>English, French, German, Italian, Portuguese, Russian,
+          Spanish, Swedish</em></span>
+      </p>
+      <p>
+        Each keyword is put inside a
+        org.apache.uima.alchemy.ts.keywords.KeywordFS Feature Structure
+        with the extracted keyword as text feature.
+      </p>
+    </div>
+    <div class="section" title="1.3.&nbsp;Language Detection"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="sandbox.alchemyapi.languageDetection">1.3.&nbsp;Language Detection</h2></div></div></div>
+      
+      <p>
+        AlchemyAPI's Language Detection service can be used to extract
+        language from a text,
+        HTML, or
+        web-based content. AlchemyAPI
+        identifies more of 95
+        languages.
+        Supported languages:
+        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+            <p>Afrikaans ISO-639-3: afr</p>
+          </li><li class="listitem">
+            <p>Albanian ISO-639-3: sqi</p>
+          </li><li class="listitem">
+            <p>Amharic ISO-639-3: amh</p>
+          </li><li class="listitem">
+            <p>Amuzgo Guerrero ISO-639-3: amu</p>
+          </li><li class="listitem">
+            <p>Arabic ISO-639-3: ara</p>
+          </li><li class="listitem">
+            <p>Armenian ISO-639-3: hye</p>
+          </li><li class="listitem">
+            <p>Azerbaijani ISO-639-3: aze</p>
+          </li><li class="listitem">
+            <p>Basque ISO-639-3: eus</p>
+          </li><li class="listitem">
+            <p>Breton ISO-639-3: bre</p>
+          </li><li class="listitem">
+            <p>Bulgarian ISO-639-3: bul</p>
+          </li><li class="listitem">
+            <p>Catalan ISO-639-3: cat</p>
+          </li><li class="listitem">
+            <p>Cebuano ISO-639-3: ceb</p>
+          </li><li class="listitem">
+            <p>Central K'iche' ISO-639-3: qut</p>
+          </li><li class="listitem">
+            <p>Central Mam ISO-639-3: mvc</p>
+          </li><li class="listitem">
+            <p>Chamorro ISO-639-3: cha</p>
+          </li><li class="listitem">
+            <p>Cherokee ISO-639-3: chr</p>
+          </li><li class="listitem">
+            <p>Chinese ISO-639-3: zho</p>
+          </li><li class="listitem">
+            <p>Comaltepec Chinantec ISO-639-3: cco</p>
+          </li><li class="listitem">
+            <p>Comaltepec Chinantec ISO-639-3: cco</p>
+          </li><li class="listitem">
+            <p>Croatian ISO-639-3: hrv</p>
+          </li><li class="listitem">
+            <p>Cubulco Achi' ISO-639-3: acc</p>
+          </li><li class="listitem">
+            <p>Czech ISO-639-3: ces</p>
+          </li><li class="listitem">
+            <p>Dakota ISO-639-3: dak</p>
+          </li><li class="listitem">
+            <p>Danish ISO-639-3: dan</p>
+          </li><li class="listitem">
+            <p>Dutch ISO-639-3: nld</p>
+          </li><li class="listitem">
+            <p>English ISO-639-3: eng</p>
+          </li><li class="listitem">
+            <p>Esperanto ISO-639-3: epo</p>
+          </li><li class="listitem">
+            <p>Estonian ISO-639-3: est</p>
+          </li><li class="listitem">
+            <p>Faroese ISO-639-3: fao</p>
+          </li><li class="listitem">
+            <p>Fijian ISO-639-3: fij</p>
+          </li><li class="listitem">
+            <p>Finnish ISO-639-3: fin</p>
+          </li><li class="listitem">
+            <p>French ISO-639-3: fra</p>
+          </li><li class="listitem">
+            <p>Fulfulde Adamawa ISO-639-3: fub</p>
+          </li><li class="listitem">
+            <p>Georgian ISO-639-3: kat</p>
+          </li><li class="listitem">
+            <p>German ISO-639-3: deu</p>
+          </li><li class="listitem">
+            <p>Greek ISO-639-3: ell</p>
+          </li><li class="listitem">
+            <p>Guerrero Nahuatl ISO-639-3: ngu</p>
+          </li><li class="listitem">
+            <p>Gujarti ISO-639-3: guj</p>
+          </li><li class="listitem">
+            <p>Haitian Creole ISO-639-3: hat</p>
+          </li><li class="listitem">
+            <p>Hausa ISO-639-3: hau</p>
+          </li><li class="listitem">
+            <p>Hawaiian ISO-639-3: haw</p>
+          </li><li class="listitem">
+            <p>Hebrew ISO-639-3: heb</p>
+          </li><li class="listitem">
+            <p>Hiligaynon ISO-639-3: hil</p>
+          </li><li class="listitem">
+            <p>Hindi ISO-639-3: hin</p>
+          </li><li class="listitem">
+            <p>Hungarian ISO-639-3: hun</p>
+          </li><li class="listitem">
+            <p>Icelandic ISO-639-3: isl</p>
+          </li><li class="listitem">
+            <p>Indonesian ISO-639-3: ind</p>
+          </li><li class="listitem">
+            <p>Irish ISO-639-3: gle</p>
+          </li><li class="listitem">
+            <p>Italian ISO-639-3: ita</p>
+          </li><li class="listitem">
+            <p>Jacalteco ISO-639-3: jac</p>
+          </li><li class="listitem">
+            <p>Japanese ISO-639-3: jpn</p>
+          </li><li class="listitem">
+            <p>Kabyle ISO-639-3: kab</p>
+          </li><li class="listitem">
+            <p>Kaqchikel ISO-639-3: cak</p>
+          </li><li class="listitem">
+            <p>Kirghiz ISO-639-3: kir</p>
+          </li><li class="listitem">
+            <p>Kisongye ISO-639-3: sop</p>
+          </li><li class="listitem">
+            <p>Korean ISO-639-3: kor</p>
+          </li><li class="listitem">
+            <p>Latin ISO-639-3: lat</p>
+          </li><li class="listitem">
+            <p>Latvian ISO-639-3: lav</p>
+          </li><li class="listitem">
+            <p>Lithuanian ISO-639-3: lit</p>
+          </li><li class="listitem">
+            <p>Low Saxon ISO-639-3: nds</p>
+          </li><li class="listitem">
+            <p>Macedonian ISO-639-3: mkd</p>
+          </li><li class="listitem">
+            <p>Malay ISO-639-3: msa</p>
+          </li><li class="listitem">
+            <p>Maltese ISO-639-3: mlt</p>
+          </li><li class="listitem">
+            <p>Maori ISO-639-3: mri</p>
+          </li><li class="listitem">
+            <p>Micmac ISO-639-3: mic</p>
+          </li><li class="listitem">
+            <p>M&ograve;or&eacute; ISO-639-3: mos</p>
+          </li><li class="listitem">
+            <p>Ndebele ISO-639-3: nde</p>
+          </li><li class="listitem">
+            <p>Nepali ISO-639-3: nep</p>
+          </li><li class="listitem">
+            <p>Norwegian ISO-639-3: nor</p>
+          </li><li class="listitem">
+            <p>Ojibwa ISO-639-3: oji</p>
+          </li><li class="listitem">
+            <p>Pashto ISO-639-3: pus</p>
+          </li><li class="listitem">
+            <p>Persian ISO-639-3: fas</p>
+          </li><li class="listitem">
+            <p>Polish ISO-639-3: pol</p>
+          </li><li class="listitem">
+            <p>Portuguese ISO-639-3: por</p>
+          </li><li class="listitem">
+            <p>Q'eqchi' ISO-639-3: kek</p>
+          </li><li class="listitem">
+            <p>Romanian ISO-639-3: ron</p>
+          </li><li class="listitem">
+            <p>Romani ISO-639-3: rom</p>
+          </li><li class="listitem">
+            <p>Russian ISO-639-3: rus</p>
+          </li><li class="listitem">
+            <p>Serbian ISO-639-3: srp</p>
+          </li><li class="listitem">
+            <p>Shona ISO-639-3: sna</p>
+          </li><li class="listitem">
+            <p>Shuar ISO-639-3: jiv</p>
+          </li><li class="listitem">
+            <p>Slovak ISO-639-3: slk</p>
+          </li><li class="listitem">
+            <p>Slovenian ISO-639-3: slv</p>
+          </li><li class="listitem">
+            <p>Spanish ISO-639-3: spa</p>
+          </li><li class="listitem">
+            <p>Swahili ISO-639-3: swa</p>
+          </li><li class="listitem">
+            <p>Swedish ISO-639-3: swe</p>
+          </li><li class="listitem">
+            <p>Tagalog ISO-639-3: tgl</p>
+          </li><li class="listitem">
+            <p>Thai ISO-639-3: tha</p>
+          </li><li class="listitem">
+            <p>Todos Santos Cuchumatan M&aacute;m ISO-639-3: mvj</p>
+          </li><li class="listitem">
+            <p>Turkish ISO-639-3: tur</p>
+          </li><li class="listitem">
+            <p>Ukrainian ISO-639-3: ukr</p>
+          </li><li class="listitem">
+            <p>Urdu ISO-639-3: urd</p>
+          </li><li class="listitem">
+            <p>Uspanteco ISO-639-3: usp</p>
+          </li><li class="listitem">
+            <p>Vietnamese ISO-639-3: vie</p>
+          </li><li class="listitem">
+            <p>Welsh ISO-639-3: cym</p>
+          </li><li class="listitem">
+            <p>Wolof ISO-639-3: wol</p>
+          </li><li class="listitem">
+            <p>Xhosa ISO-639-3: xho</p>
+          </li><li class="listitem">
+            <p>Zarma ISO-639-3: ssa</p>
+          </li></ul></div><p>
+      </p>
+    </div>
+    <div class="section" title="1.4.&nbsp;Ranked Entities Extraction"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="sandbox.alchemyapi.rankedEntitiesExtraction">1.4.&nbsp;Ranked Entities Extraction</h2></div></div></div>
+      
+      <p>
+        AlchemyAPI's Ranked Entities Extraction service can be
+        exploited
+        for identifying people, companies,
+        organizations,
+        cities,
+        geographic features, and other typed
+        entities within your
+        HTML,
+        text, or web-based content.
+
+        To see the complete list of supported
+        entity types see here:
+        <a class="ulink" href="http://www.alchemyapi.com/api/entity/types.html" target="_top">
+          http://www.alchemyapi.com/api/entity/types.html</a>
+
+        This service also expose 'entity disambiguation' mechanism to
+        resolve detected companies, locations, and people to a unique
+        "instance".
+        Such thing is stored inside the 'disambiguation'
+        feature of all the FeatureStructures inside the package
+        org.apache.uima.alchemy.ts.entity, except for AlchemyAnnotation.
+
+        This service also provides comprehensive support for RDF and
+        Linked Data.
+        This is done filling some features like 'dbpedia',
+        'geonames' and other linked data nodes' information.
+
+        In the end
+        also advanced quotations extraction is integrated into all
+        named
+        entity extraction API calls, enabling the identification
+        of
+        utterances ("quotations") within unstructured text, this will be
+        stored inside 'quotations' feature.
+      </p>
+    </div>
+    <div class="section" title="1.5.&nbsp;Microformats Extraction"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="sandbox.alchemyapi.microformatsExtraction">1.5.&nbsp;Microformats Extraction</h2></div></div></div>
+      
+      <p>
+        This AlchemyAPI's service handles Microformats data
+        standards and is capable of extracting
+        hCard, adr, geo, and rel-*
+        formatted content from web pages.
+
+        The information is stored
+        inside a Feature Structure called
+        MicroformatFS under
+        org.apache.uima.alchemy.ts.microformats
+        package.
+      </p>
+    </div>
+    <div class="section" title="1.6.&nbsp;Annotated Entities Extraction"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="sandbox.alchemyapi.annotatedEntitiesExtraction">1.6.&nbsp;Annotated Entities Extraction</h2></div></div></div>
+      
+      <p>
+        This service is somehow an enhancement of the Ranked
+        Entities
+        Extraction service, with annotation of piece of text
+        relating to
+        extracted entities.
+
+        </p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+          <p>Annotator and descriptor still
+            live but the service
+            underneath is not available for free API
+            keys.</p>
+        </div><p>
+      </p>
+    </div>
+  </div>
+  <div class="chapter" title="Chapter&nbsp;2.&nbsp;Configuring parameters" id="sandbox.alchemyapi.parametersConfiguration"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;2.&nbsp;Configuring parameters</h2></div></div></div>
+    
+    <p>
+      This chapter describes how to configure AlchemyAPI Annotator
+      analysis engines' parameters.
+    </p>
+    <div class="section" title="2.1.&nbsp;Common Parameters"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="Common+Parameters">2.1.&nbsp;Common Parameters</h2></div></div></div>
+      
+      <p>
+        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+            <p>
+              <span class="emphasis"><em>apikey</em></span>
+              : this parameter contains the (free or not) API key string
+              needed to be able to call AlchemyAPI services.
+            </p>
+          </li><li class="listitem">
+            <p>
+              <span class="emphasis"><em>output</em></span>
+              : this parameter contains one of xml,json,rdf,rel-tag
+              respectively to specify the desired output in XML, JSON,
+              RDF
+              or MicroFormat formats.
+              Beware that each AE wrapping an
+              AlchemyAPI service has a set of supported output formats
+              that is a subset of the previous list.
+            </p>
+          </li></ul></div><p>
+      </p>
+    </div>
+    <div class="section" title="2.2.&nbsp;Service Specific Parameters"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="Specific+Parameters">2.2.&nbsp;Service Specific Parameters</h2></div></div></div>
+      
+      <p>
+        <span class="emphasis"><em>Entity Extraction Text</em></span>
+        :
+        see
+        <a class="ulink" href="http://www.alchemyapi.com/api/entity/textc.html" target="_top">here</a>
+      </p>
+
+      <p>
+        <span class="emphasis"><em>Text Categorization</em></span>
+        :
+        see
+        <a class="ulink" href="http://www.alchemyapi.com/api/categ/textc.html" target="_top">here</a>
+      </p>
+
+      <p>
+        <span class="emphasis"><em>Text Keyword/Term Extraction</em></span>
+        :
+        see
+        <a class="ulink" href="http://www.alchemyapi.com/api/keyword/textc.html" target="_top">here</a>
+      </p>
+
+      <p>
+        <span class="emphasis"><em>HTML Micrformats Extraction</em></span>
+        :
+        see
+        <a class="ulink" href="http://www.alchemyapi.com/api/mformat/htmlc.html" target="_top">here</a>
+      </p>
+
+      <p>
+        <span class="emphasis"><em>URL Micrformats Extraction</em></span>
+        :
+        see
+        <a class="ulink" href="http://www.alchemyapi.com/api/mformat/urls.html" target="_top">here</a>
+      </p>
+    </div>
+  </div>
+</div></body></html>
