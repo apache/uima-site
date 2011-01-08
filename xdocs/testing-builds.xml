@@ -30,22 +30,56 @@ under the License.
 
 <section name="Testing Builds">
   <p>
-    This page gathers information useful in testing builds.
+    This page has information for testing builds.
+  </p>
+  <p>
+      Prepare for testing by going to 
+    <a href="building-uima.html">building-uima</a>
+    and doing the one-time setup, if you haven't done this already.  This includes installing Maven 3.
   </p>
 </section>
 
-<section name="Setup for testing - adding the Staging repository">  
+<section name="Testing a source-release">
+
+<ol>
+  <li>Download the ....source-release.zip file from the staging repository, for the
+  top-most released artifact.  (Multimodule releases will have one top-level release artifact).
+  </li>
+  <li>Unzip.</li>
+  <li>cd to the top level release artifact directory.</li>
+  
+  <li>Run
+  <pre>mvn install</pre>
+  to verify it builds from source.</li>
+  
+  <li>Inspect the unzipped source to verify license/notice files are in place.</li>
+  <li>Run whatever further tests might be appropriate for the release.</li>
+  </ol>
+</section>
+
+<section name="Setup for testing - adding the Staging repository for Maven builds">  
   <p>
-    Prepare for testing by going to 
-    <a href="building-uima.html">building-uima</a>
-    and doing the one-time setup, if you haven't done this already.  This includes installing Maven 3.
-  </p><p>
-    In addition, do the following one-time setup for accessing the staging-repository:
-    <ol>
-        <li>Set up your maven "settings.xml" file (located in the directory containing your local repository;
-    in windows, this is c:Documents and Settings\&lt;your-userid>\.m2\settings.xml. The idea is to add 
-    a repository spec called "staged-release" that points to the staging repository of interest (this 
-    may change from release to release - the right url will be provided in the test vote email). 
+    If you want Maven to be able to find the artifacts in the staging repository during
+    its build processing, 
+    follow the next instructions, and then add this additional parameter to your "mvn"
+    commands: <code>-Pstaged-release</code>.
+  </p>
+  <p style="margin-left: 3em">This is sometimes needed to test new build tooling,
+     for example.  The test would be done by (temporarily) updating some code to depend
+     on the new version, and then trying to build it.  In this case, with the 
+     <code>-Pstaged-release</code> added, Maven would be able to find the staged
+     artifacts.
+  </p>
+  <p>
+    To enable Maven to find artifacts in the staging repository location:
+    <ul>
+        <li>Update your Maven "settings.xml" file 
+        located in the directory containing your local Maven repository;
+    in Windows, this is c:\Documents and Settings\&lt;your-userid>\.m2\settings.xml. 
+    The idea is to add 
+    a repository spec called "staged-release" that points to the staging repository 
+    of interest. This 
+    changes for each staged release - the right url will be provided in the [VOTE] email). 
     Here's a sample settings file, with just this profile element in it:
 <pre>
 &lt;settings xmlns="http://maven.apache.org/POM/4.0.0"
@@ -59,18 +93,26 @@ under the License.
       &lt;repositories>
         &lt;repository>
           &lt;id>staged-release&lt;/id>
-          &lt;url>https://repository.apache.org/content/repositories/orgapacheuima-042/&lt;/url>
+          &lt;url>https://repository.apache.org/content/repositories/orgapacheuima-xxxxxx/&lt;/url>
         &lt;/repository>
       &lt;/repositories>
     &lt;/profile>
   &lt;/profiles>
 
 &lt;/settings>
-</pre>   
+</pre>
+    <p class="note">
+      <b>Note:</b> The url element above is just a sample; 
+      each release will have its own unique staging repository name,
+      which is provided in the [VOTE] email.
+        Replace the .../orgapacheuima-xxxxxx with the correct url.      
+    </p>   
+
   </li>
-    </ol>
+    </ul>
   </p>
 </section>
+
 
 </body>
 </document>
