@@ -59,6 +59,13 @@ under the License.
   &lt;!--gpg.passphrase>&lt;/gpg.passphrase-->  &lt;!-- don't put passphrase in file -->
 </pre>        
         </p>
+        <p>These lines go in your settings.xml file, inside a &lt;profile> that is active when the signing is needed 
+        (you can just make it active always, too), inside a &lt;properties> element, like so:
+<pre>&lt;properties>
+  &lt;gpg.useagent>true&lt;/gpg.useagent>
+  ...
+&lt;/properties></pre>
+        </p>
     </li>
     <li>
       Create (if you haven't already) your GPG keys; see 

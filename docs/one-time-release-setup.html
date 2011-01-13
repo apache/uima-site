@@ -201,6 +201,13 @@
   &lt;!--gpg.passphrase&gt;&lt;/gpg.passphrase--&gt;  &lt;!-- don't put passphrase in file --&gt;
 </pre>        
         </p>
+        <p>These lines go in your settings.xml file, inside a &lt;profile&gt; that is active when the signing is needed 
+        (you can just make it active always, too), inside a &lt;properties&gt; element, like so:
+<pre>&lt;properties&gt;
+  &lt;gpg.useagent&gt;true&lt;/gpg.useagent&gt;
+  ...
+&lt;/properties&gt;</pre>
+        </p>
     </li>
     <li>
       Create (if you haven't already) your GPG keys; see 
