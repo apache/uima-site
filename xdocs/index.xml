@@ -22,7 +22,7 @@
 	<properties>
 		<title>Apache UIMA</title>
 		<author email="dev@uima.apache.org">
-			UIMA Documentation Team 
+			Apache UIMA Documentation Team 
 		</author>
 	</properties>
 
@@ -31,7 +31,7 @@
 		<section name="Welcome to Apache UIMA">
 
 			<p>
-				Welcome to Apache UIMA. Our goal is to support a thriving community of users and
+				Welcome to Apache UIMA&#0153;. Our goal is to support a thriving community of users and
 				developers of UIMA frameworks, tools, and annotators,        
         facilitating the analysis of unstructured content such as text, audio and
 				video.

@@ -20,18 +20,18 @@ under the License.
 <document>
 
 <properties>
-<title>UIMA Code Conventions</title>
+<title>Apache UIMA Code Conventions</title>
 <author email="dev@uima.apache.org">
- UIMA Documentation Team</author>
+ Apache UIMA Documentation Team</author>
 </properties>
 
 <body>
 
-<section name="UIMA Code Conventions">
+<section name="Apache UIMA Code Conventions">
 
 <p>
-    To improve the readability and maintainability of the UIMA code, 
-	the UIMA project has adopted the following code conventions.  All UIMA developers
+    To improve the readability and maintainability of the Apache UIMA&#0153; code, 
+	we have adopted the following code conventions.  All UIMA developers
 	should adhere to these guidelines when committing changes or submitting patches.
 </p>
 <p>	

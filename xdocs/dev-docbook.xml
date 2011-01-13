@@ -22,7 +22,7 @@ under the License.
 <properties>
 <title>Using Docbook for documentation</title>
 <author email="dev@uima.apache.org">
- UIMA Documentation Team</author>
+ Apache UIMA Documentation Team</author>
 </properties>
 
 <body>
@@ -55,7 +55,7 @@ under the License.
       Maven command line option <code>-P !processDocbook</code>.
       </p>
            
-  <section name="UIMA Docbook Bookshelf">
+  <section name="Apache UIMA&#0153; Docbook Bookshelf">
     <p>To facilitate cross referencing among UIMA docbooks, we ask users
       when downloading these books to place the downloaded files in a common
       directory, which we refer to as the UIMA bookshelf.</p>

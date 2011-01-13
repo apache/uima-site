@@ -23,12 +23,12 @@ under the License.
 <properties>
 <title>Building UIMA</title>
 <author email="dev@uima.apache.org">
- UIMA Documentation Team</author>
+ Apache UIMA Documentation Team</author>
 </properties>
 
 <body>
 
-<section name="Building UIMA from sources">
+<section name="Building Apache UIMA&#0153; from sources">
 
 <p>
   We use <a class="external" rel="nofollow" target="_blank" 

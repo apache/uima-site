@@ -22,7 +22,7 @@
  <properties>
   <title>Apache UIMA Project Guidelines</title>
   <author email="dev@uima.apache.org">
-   UIMA Documentation Team
+   Apache UIMA Documentation Team
   </author>
  </properties>
 
@@ -36,7 +36,7 @@
     </font>
    </h3>
    <p align="center">
-    Discussion of this document is occuring on the uima-dev mailing
+    Discussion of this document is occurring on the uima-dev mailing
     list.
    </p>
    <br />

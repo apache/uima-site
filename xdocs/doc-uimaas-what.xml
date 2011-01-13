@@ -22,16 +22,16 @@
 <document>
 
  <properties>
-  <title>Getting Started: UIMA Asynchronous Scaleout</title>
+  <title>Getting Started: Apache UIMA Asynchronous Scaleout</title>
   <author email="dev@uima.apache.org">
-   UIMA Documentation Team
+   Apache UIMA Documentation Team
   </author>
  </properties>
 
  <body>
-  <section name="Getting Started: UIMA Asynchronous Scaleout">
+  <section name="Getting Started: Apache UIMA Asynchronous Scaleout">
    <p>
-     The "Getting Started: UIMA Asynchronous Scaleout " guide should help you to understand UIMA AS: how it relates to the core UIMA framework, what are the main concepts of UIMA AS, and an example application scenario.
+     The "Getting Started: Apache UIMA&#0153; Asynchronous Scaleout " guide should help you to understand UIMA AS: how it relates to the core UIMA framework, what are the main concepts of UIMA AS, and an example application scenario.
    </p>
 
   <subsection name="UIMA AS Relationship to UIMA">

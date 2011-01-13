@@ -24,12 +24,12 @@ under the License.
 <properties>
 <title>Source Code</title>
 <author email="dev@uima.apache.org">
- UIMA Documentation Team</author>
+ Apache UIMA Documentation Team</author>
 </properties>
 
 <body>
 
-<section name="Apache UIMA Source Code">
+<section name="Apache UIMA&#0153; Source Code">
 <p>
       <ul>
 		<li><a href="#source.code.repository">Source Code Repository</a>

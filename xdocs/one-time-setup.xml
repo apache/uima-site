@@ -23,14 +23,14 @@ under the License.
 <properties>
 <title>One time setup</title>
 <author email="dev@uima.apache.org">
- UIMA Documentation Team</author>
+ Apache UIMA Documentation Team</author>
 </properties>
 
 <body>
 
 <section name="One time setup instructions for working with Apache UIMA source code">
   <p>
-    Here you will find information on how to set up various tools used in working with UIMA source code, including:
+    Here you will find information on how to set up various tools used in working with Apache UIMA&#0153; source code, including:
     <ul>
       <li><a href="#svn-setup">SVN</a></li>
       <li><a href="#maven-setup">Maven</a></li>

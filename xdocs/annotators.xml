@@ -24,12 +24,12 @@ under the License.
 <properties>
 <title>UIMA Annotators</title>
 <author email="dev@uima.apache.org">
- UIMA Documentation Team</author>
+ Apache UIMA Documentation Team</author>
 </properties>
 
 <body>
 
-<section name="UIMA Annotators">
+<section name="UIMA&#0153; Annotators">
 
 <p>
 Annotators do the real work of extracting structured information from unstructured data.  You can write your

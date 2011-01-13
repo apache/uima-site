@@ -24,7 +24,7 @@
  <properties>
   <title>Apache UIMA Documentation</title>
   <author email="dev@uima.apache.org">
-   UIMA Documentation Team
+   Apache UIMA Documentation Team
   </author>
  </properties>
 
@@ -32,7 +32,7 @@
   
   <section name="Documentation">
     <p>Here you will find 
-      <a href="#manuals_and_guides">UIMA Manuals and Guides</a> (Overview and Setup, Tutorials and Users&apos; Guides, Tools, and References), 
+      <a href="#manuals_and_guides">Apache UIMA&#0153; Manuals and Guides</a> (Overview and Setup, Tutorials and Users&apos; Guides, Tools, and References), 
       the 
       <a href="#javadocs">Javadocs</a> for the
     public APIs of UIMA, and 

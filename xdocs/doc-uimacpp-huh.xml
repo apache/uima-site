@@ -22,16 +22,16 @@
 <document>
 
  <properties>
-  <title>Getting Started: UIMA C++ Framework</title>
+  <title>Getting Started: Apache UIMA C++ Framework</title>
   <author email="dev@uima.apache.org">
-   UIMA Documentation Team
+   Apache UIMA Documentation Team
   </author>
  </properties>
 
  <body>
-  <section name="Getting Started: UIMA C++ Framework">
+  <section name="Getting Started: Apache UIMA C++ Framework">
    <p>
-     The "Getting Started: UIMA C++ Framework" guide should help you to understand how UIMA C++ enables the creation of UIMA compliant Analysis Engines (AE) in C++ and other programming languages, and how these AE interact with UIMA's Java framework.
+     The "Getting Started: Apache UIMA&#0153; C++ Framework" guide should help you to understand how UIMA C++ enables the creation of UIMA compliant Analysis Engines (AE) in C++ and other programming languages, and how these AE interact with UIMA's Java framework.
    </p>
 
   <subsection name="UIMA C++ Overview">

@@ -24,16 +24,16 @@
 	<properties>
 		<title>Getting Started: Java UIMA Framework and SDK</title>
 		<author email="dev@uima.apache.org">
-			UIMA Documentation Team
+			Apache UIMA Documentation Team
 		</author>
 	</properties>
 
 	<body>
 		<section
-			name="Getting Started: Installing the Java UIMA Framework and SDK, and Running Examples">
+			name="Getting Started: Installing the Apache UIMA Java Framework and SDK, and Running Examples">
 			<p>
 				This
-				guide helps you install the Java UIMA SDK release
+				guide helps you install the Apache UIMA&#0153; Java SDK release
 				package and shows you how run the UIMA analysis example
 				using some of the UIMA tooling.
 			</p>

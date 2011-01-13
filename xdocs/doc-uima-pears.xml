@@ -37,7 +37,7 @@
 				how to generate them and how to use them within UIMA applications. 
 			</p>
 
-			<subsection name="What are UIMA PEAR files">
+			<subsection name="What are UIMA&#0153; PEAR files">
 				<p>
 				   A PEAR (Processing Engine ARchive) file is the UIMA standard packaging format for UIMA components like
 				   analysis engines (annotators) or CAS consumers. The PEAR package can be used to distribute 

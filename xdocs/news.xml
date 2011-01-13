@@ -24,17 +24,17 @@
 	<properties>
 		<title>News</title>
 		<author email="dev@uima.apache.org">
-			UIMA Documentation Team
+			Apache UIMA Documentation Team
 		</author>
 	</properties>
 
 	<body>
 
-		<section name="News">
+		<section name="Apache UIMA News">
       <subsectionToc/>
  
-      <subsection name="10 December 2010" date = "10 December 2010" title="UIMA Java SDK 2.3.1 released">
-          <p>This release only has the UIMA Java SDK, and does not yet have the other
+      <subsection name="10 December 2010" date = "10 December 2010" title="Apache UIMA Java SDK 2.3.1 released">
+          <p>This release only has the Apache UIMA&#0153; Java SDK, and does not yet have the other
           components.  It is backwards compatible with previous releases, except
           that Java 5 is now the minimum Java level required.</p>
           

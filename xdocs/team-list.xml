@@ -22,7 +22,7 @@ under the License.
 <properties>
 <title>Project Team</title>
 <author email="dev@uima.apache.org">
- UIMA Documentation Team</author>
+ Apache UIMA Documentation Team</author>
 </properties>
 
 <body>
@@ -32,7 +32,7 @@ under the License.
   
 <subsection name="Committers">
 
-  <p>The current committers on the Apache UIMA project are
+  <p>The current committers on the Apache UIMA&#0153; project are
   <table>
 <!-- <tr><th>Name</th></tr> -->
 <tr><td>Michael Baessler</td></tr>

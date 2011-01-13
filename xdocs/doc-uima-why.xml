@@ -22,16 +22,16 @@
 <document>
 
  <properties>
-  <title>Getting Started: Why UIMA</title>
+  <title>Getting Started: Why Apache UIMA</title>
   <author email="dev@uima.apache.org">
-   UIMA Documentation Team
+   Apache UIMA Documentation Team
   </author>
  </properties>
 
  <body>
   <section name="Getting Started: Why UIMA">
    <p>
-	 The "Getting Started: Why UIMA" guide should help you to understand what UIMA is, 
+	 The "Getting Started: Why UIMA" guide should help you to understand what UIMA&#0153; is, 
 	 what it can be used for, and how you can use it.
    </p>
 

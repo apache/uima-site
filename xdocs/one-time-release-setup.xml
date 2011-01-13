@@ -23,14 +23,14 @@ under the License.
 <properties>
 <title>One time release setup</title>
 <author email="dev@uima.apache.org">
- UIMA Documentation Team</author>
+ Apache UIMA Documentation Team</author>
 </properties>
 
 <body>
 <section name="One time setup instructions for releasing Apache UIMA">
   <p>
     Here you will find information on how to set up various tools 
-    and configurations needed when releasing Apache UIMA artifacts.
+    and configurations needed when releasing Apache UIMA&#0153; artifacts.
   </p>
   
   <p>First, be sure you've done the general
