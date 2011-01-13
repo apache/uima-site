@@ -81,7 +81,6 @@ under the License.
         &lt;uima-maven-build-eclipse-home>C:/p/eclipse/3.5/eclipse&lt;/uima-maven-build-eclipse-home>
         &lt;uimaWebsiteDistributionUrl>file:///c:/a/uimaWebsite/&lt;/uimaWebsiteDistributionUrl>
         &lt;gpg.useagent>true&lt;/gpg.useagent>
-        &lt;!--gpg.passphrase>&lt;/gpg.passphrase-->
       &lt;/properties>
     &lt;/profile>
   
