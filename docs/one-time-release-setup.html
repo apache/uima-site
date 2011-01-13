@@ -243,13 +243,17 @@
       Create (if you haven't already) your GPG keys; see 
         <a target="_blank" href="http://maven.apache.org/developers/release/pmc-gpg-keys.html">Making GPG Keys</a>.  
     </li>
-    <li>You need to have a recent GPG client installed.  See 
-      <a target="_blank" href="http://www.gnupg.org/">http://www.gnupg.org/</a>.
-      The recent ones support the agents needed to have the capability of popping up 
-      (via an installed service) a window when
-      the passphrase is needed - so you never need to put the passphrase into a file.
+    <li>You need to have a recent GPG client installed; 
+      the recent ones support the capability to have a window pop up 
+      when
+      the passphrase is needed - so you never need to put the passphrase into a file. And, 
+      they remember this, so if you're signing a bunch of things, you only need to put in the
+      passphrase once (it forgets/resets after a few minutes). 
       I've found <a target="_blank" href="http://www.gpg4win.org/">http://www.gpg4win.org/</a>
-      has the agent support, for Windows XP.
+      has this kind of support, for Windows XP.
+      See the main gpg site 
+      <a target="_blank" href="http://www.gnupg.org/">http://www.gnupg.org/</a> for references
+      to other implementations.
     </li>
     <li>
       You need a current version of the SVN client, Subversion (1.6) installed and on your shell's path. 
