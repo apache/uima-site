@@ -200,28 +200,30 @@
       <p>Your settings file should <b>not</b> contain your GPG passphrase, to avoid the security
          risk inherent in having this in a file stored on your machine.  Instead, it should have lines
         like these:
-<pre>
+<pre style="font-size:70%">
   &lt;gpg.useagent&gt;true&lt;/gpg.useagent&gt;
   &lt;!--gpg.passphrase&gt;&lt;/gpg.passphrase--&gt;  &lt;!-- don't put passphrase in file --&gt;
 </pre>        
         </p>
         <p>These lines go in your settings.xml file, inside a &lt;profile&gt; that is active when the signing is needed 
         (you can just make it active always, too), inside a &lt;properties&gt; element, like so:
-<pre>&lt;properties&gt;
+<pre style="font-size:70%">&lt;properties&gt;
   &lt;gpg.useagent&gt;true&lt;/gpg.useagent&gt;
   ...
 &lt;/properties&gt;</pre>
         </p>
     <p>Here is a sample settings.xml profile:
-<pre>&lt;settings xmlns="http://maven.apache.org/POM/4.0.0"
+<pre style="font-size:70%">&lt;settings xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
   &lt;profiles&gt;
     &lt;profile&gt;
       &lt;id&gt;local-build-configuration&lt;/id&gt;
-      &lt;!-- Use &lt;activeProfiles&gt;&lt;activeProfile&gt;local-build-configuration&lt;/activeProfile&gt;&lt;/activeProfiles&gt;
-                         outside of the &lt;profile&gt; element. See example at bottom.
+      &lt;!-- Use &lt;activeProfiles&gt;
+                 &lt;activeProfile&gt;local-build-configuration&lt;/activeProfile&gt;
+               &lt;/activeProfiles&gt;
+           outside of the &lt;profile&gt; element. See example at bottom.
             
       &lt;properties&gt;
         &lt;uima-maven-build-eclipse-home&gt;C:/p/eclipse/3.5/eclipse&lt;/uima-maven-build-eclipse-home&gt;
