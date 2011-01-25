@@ -242,6 +242,11 @@ mvn install -Papache-release</pre>
           LDAP credentials, go to your staging repository, and "close" the repository.  After that,
           nothing more can be added.  If you deploy another artifact, it will create a new 
           staging repository.</p>
+    <p class="note"><b>If you forget to close the repo</b>, it will be open when you do your next 
+    release candidate, and then you'll have in the repo both release candidates, (with
+    later files overwriting newer), which if any file names have changed, will <b>create
+    a mess.  So be sure to close any previous repo</b> before starting a release:perform for a new
+    release candidate, so they deploy into a "fresh" empty staging repo.</p>
           
     <p>If you have several artifacts to release, and you want subsequent artifacts to 
         depend on the released versions of earlier ones, you can do this, by releasing the 
