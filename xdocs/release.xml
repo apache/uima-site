@@ -327,7 +327,8 @@ mvn install -Papache-release</pre>
         first deleting any Jars that might be there from previous releases.</li>
         -->
         
-        <li>run the ant build script to pack the new plugin Jars, and generate the new site digest containing
+        <li>run <code>mvn package</code> on the uimaj-eclipse-update-site project
+        to pack the new plugin Jars, and generate the new site digest containing
         the new features.</li>
         
         <li>run the signEclipseUpdateSite.sh script to sign the new Jars and zip files the build script created.

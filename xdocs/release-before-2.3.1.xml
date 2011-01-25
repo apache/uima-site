@@ -28,8 +28,8 @@ under the License.
 
 <section name="Doing an Apache UIMA&#0153; Release">
 
-<p class="note">These instructions are mostly for the 2.3.0 release.  They are changing for the 2.3.1 release, and
-  this page will be updated soon to reflect that.</p>
+<p class="note">These instructions are for the 2.3.0 release.  For the 2.3.1 and later release,
+please see <a href="release.html">this</a> page.</p>
   
 <p>
       <ul>

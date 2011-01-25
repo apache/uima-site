@@ -27,318 +27,96 @@ under the License.
 <body>
 
 <section name="Building Apache UIMA distributions">
-
-<h4>NOTE: Build distributions using the lowest version number of Java supported 
-  (currently Java 5), to insure no methods only available with higher Java levels are referenced.</h4>
-  <p>This is because specifying source and target of, say, Java 1.5, and then accidentally using a
-    Java 6 library method, surprisingly doesn't cause a mvn driven compile failure (if Maven is running under Java 6).</p>
-
-  <p>
-    <ul>
-		<li><a href="#Building the Apache UIMA&#0153; base distribution">Building the Apache UIMA base distribution</a></li>
-    <li><a href="#Building the Apache UIMA-AS distribution">Building the Apache UIMA-AS distribution</a></li>
-		<li><a href="#Building Apache UIMA Sandbox distributions">Building Apache UIMA Sandbox distributions</a></li>
-    <li><a href="#Building the Eclipse Update Site">Building the Eclipse Update Site</a></li>
-		<li><a href="#Signing a distribution">Signing a distribution</a>
-			<ul>
-				<li><a href="#Getting started with release signing">Getting started with release signing</a></li>
-				<li><a href="#Signing a Apache UIMA Release">Signing a Apache UIMA Release</a></li>
-				<li><a href="#Signing Sandbox AnnotatorPackage Release">Signing Sandbox AnnotatorPackage Release</a></li>
-			</ul>
-		</li>
-      </ul>
-</p>
+  <p style="font-size:125%">
+  This page describes how we build distributions for the 2.3.1 and later releases.  
+  See <a href="distribution-before-2.3.1.html">this page</a> for information on 
+  building distributions for the 2.3.0 and prior releases.
+  </p>
+  
+  <p>Normally, distributions are built within the release activity; the documentation for
+  that is <a href="release.html">here</a>, and includes information on how to build and update
+  the Eclipse update site, used for making our Eclipse plugins installable over the web.  
+  This page focuses on building distributions outside of a release.</p>
+         
+  <p>Do the <a href="one-time-setup.html">one-time-setup</a> 
+  and the <a href="one-time-release-setup.html">extra setup for GPG signing</a> 
+  if you haven't already done this.
+  The extra setup page also includes information on setting up for uploading (deploying) to 
+  apache infrastructure - you can skip that if you are not planning on doing that.  It also includes
+  information on setting some properties related to Eclipse - these are only needed for building the
+  Eclipse update site.</p>
 </section>
 
-<section name="Building the Apache UIMA base distribution">
 
-  <p class="note">These instructions are for the 2.3.0 release; the 
-    build process is being revised for 2.3.1, and these pages will be updated as that is 
-    completed.</p>
-  <p>
-  Start by extracting and building the code manually as described on the 
-    <a href="./svn.html">source code page</a>.
-  Once you have all that working, you can build a distribution with the help
-  of the scripts in <code>uimaj-distr/src/main/build</code>.  Start out in an empty directory and
-  run: <blockquote> <code>extractAndBuild.bat</code>
-    from the uimaj-distr/src/main/build directory.</blockquote>
-  This will extract the source code from SVN, compile and run the tests, and finally build the
-  distribution artifacts.  (It will not build the 
-    <a href="#Building the Eclipse Update Site">Eclipse Update Site</a>).
+<section name="Building the Apache UIMA Java SDK distribution">
+  <p> 
+  Get the code for the trunk or tag or branch (which ever one you want) from SVN:
+  <pre>mkdir /builduima  
+cd /builduima
+svn export http://svn.apache.org/repos/asf/uima/uimaj/trunk uimasdk
+</pre>
+  This checks out the trunk into the directory /builduima/uimasdk.  These 
+  directory and folder names are arbitrary, and can be changed. 
   </p>
-  <p>Note: to get the PDFs built, you have to run this on a Windows machine.</p>
-  <p>The build process for base UIMA builds individual Jar files suitable for uploading into a maven repository, 
+  
+  <p>Build the source and binary distributions by doing:
+    <pre style="font-size: 133%">cd uimasdk/uimaj
+mvn package -Papache-release</pre>
+  This Maven command will also sign the release.
+  </p>
+  
+  <p>The build process for base UIMA Java SDK builds individual Jar files suitable for uploading into a Maven repository, 
     and 2 assemblies
     (one for the source and one for the binary distributions).  The
     individual Jar files are in the <code>target</code> directories of the individual projects they
-    belong to.  The assemblies (source and binary) are in the <code>uimaj-distr/target</code> directory.
+    belong to.  The source assembly is in the <code>uimaj/target</code> directory and the binary assembly is
+    in the <code>uimaj-distr/target</code> directory.
   </p>       
 </section>
 
 <section name="Building the Apache UIMA-AS distribution">
     <p>
-    The build process for UIMA-AS is similar.  You can use the extractAndBuild script from the
-    distribution directories: uima-as-distr/src/main/build for UIMA-AS
-  </p> 
+    The build process for UIMA-AS is similar:
+    <pre>mkdir /builduima
+cd /builduima
+svn export http://svn.apache.org/repos/asf/uima/uima-as/trunk uima-as
+</pre>
+  This checks out the trunk into the directory /builduima/uima-as.  
+  </p>
+  <p>The uima-as build is done on top of an existing release of the UIMA Java SDK.  The pom.xml file
+  in the uima-as-parent project has a property: 
+  <code>&lt;uimajDependencyVersion>2.3.1&lt;/uimajDependencyVersion></code>, which is used
+  to specify the corresponding base uima level, which must exist in some Maven repository, or in the user's
+  local .m2 repository.  During the build of the binary assembly for uima-as, the base uima Java SDK binary
+  assembly is unzipped and the uima-as components are added to it, and then the whole thing is re-packaged up.</p>
   
-</section>
-<section name="Building Apache UIMA Sandbox distributions">
-
-
-	  <p>
-  		To build the Sandbox AnnotatorPackage distribution, you need a working Maven development 
-  		environment as for example set up for UIMA core. With the help of 
-  		the scripts in <code>SandboxDistr/annotator-package/build</code> you can create your own distribution. 
-  		Start out in an empty directory and run: </p>
-        <blockquote> <code>extractAndBuild.bat &lt;tag name></code> </blockquote>
-  		<p>This will extract the source code with the specified tag name from the SVN, compile and run the tests, 
-  		and finally build the distribution artifacts.
-      </p>
-</section>
-
-<section name="Building the Eclipse Update Site">
-    
-    <p>
-      The Eclipse update site build is somewhat unusual, because it accumulates releases over time
-      from various UIMA distributions.  This is because we have just one update site (at the moment) 
-      for all releases, for all components that want this service, 
-      such as the core UIMA and UIMA-AS.
-    </p>
-    
-    <p>
-      The Eclipse plugs are organized into Features.  These each have a project, using the naming 
-      convention of uimaj-eclipse-feature-xxxx.  Currently we have 3 features:
-      <ul>
-        <li>uimaj-eclipse-feature-deployeditor (for the UIMA-AS editor for deployment descriptors)</li>
-        <li>uimaj-eclipse-feature-runtime (for other plugins, and for building RCP applications)</li>
-        <li>uimaj-eclipse-feature-tools (holds most of the UIMA Eclipse tooling</li>
-      </ul>
-    </p>
-    <p>Prior to building the update site, the feature sites need to be updated to reflect the
-      set of features for the current release.  The build will create Jar files tagged with the
-      release number, for each updated feature.</p>
-    <p>
-      The Eclipse update site is built in 2 phases.
-      <ol>
-        <li>
-          <p>The first phase occurs during the normal maven
-             builds of the project - this phase builds the Jars that constitute the plugins.</p>
-        </li>
-        <li>
-          <p>
-            The second consists of several parts.
-          </p>  
-          <p>The set of feature projects, uimaj-eclipse-feature-xxxxx, must all be updated for
-            the current release.  Generally, only the <code>pom.xml</code> and <code>feature.xml</code> files will 
-            need updating.</p>
-          <p>Update the uimaj-eclipse-update-site project for the release: the files <code>pom.xml</code>
-            and <code>site.xml</code>.  Then execute the maven command 
-              <code>mvn install</code> on the uimaj-eclipse-update-site project.
-            The POM for this is an aggregator POM and will recursively invoke <code>install</code> on the uimaj-eclipse-feature-xxxxx
-            projects, to build their Jars.</p>
-          
-          <p>The result of running <code>mvn install</code> will be a partial, but working Eclipse update site, located
-            in the project's target/eclipse-update-site directory.  It is partial, because the real update site keeps
-            back level versions of the feature and plugin jars, while this site will only have jars for the current release.
-            When uploading to the distribution point after the release is approved, be sure to merge in those jars.
-            The feature Jars (in the uimaj-eclipse-update-site/features directory) for the new update site are checked into SVN,
-            for use by future builds.</p>                   
-        </li>
-      </ol> 
-    </p>
-    <p>
-  Building the Eclipse Update Site requires some additional maven setup: you have to have Eclipse 
-  version 3.3 or later installed, and you have to indicate to maven where it is installed. 
-  In the examples below, this is shown as c:/your/path/to/eclipse.
-  Note that you can type the slashes '/' as backslashes '\' in Windows -- it doesn't matter 
-  (both work).  The path should be to an directory (which, by default is
-  often named "eclipse" but can be named anything) containing the eclipse
-  executable, and the subdirectory folders for Eclipse such as "plugins"
-  and "features".
- </p>
-  <p>
-  You can do this in one of 3 ways.
- </p>
-  <p>The first way is to create a maven "settings.xml" file, and store it  
- in your local maven repository, (for instance, 
-  on Windows, in the directory: Documents and Settings/[user-login]/.m2).  This file is 
-    useful for other things as well, such as specifying upload servers.  The file contents that
-    you need to specify the Eclipse location looks like this:
-</p>
-<pre>
-&lt;settings xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation=
-     "http://maven.apache.org/POM/4.0.0
-      http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
-  &lt;profiles&gt;
-    &lt;profile&gt;
-      &lt;id&gt;local-build-configuration&lt;/id&gt;
-      &lt;activation&gt;
-        &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
-      &lt;/activation&gt;
-      &lt;properties&gt;
-        &lt;uima-maven-build-eclipse-home&gt;
-          c:/your/path/to/eclipse
-        &lt;/uima-maven-build-eclipse-home&gt;
-      &lt;/properties&gt;
-    &lt;/profile&gt;
-  &lt;/profiles&gt;
-  &lt;activeProfiles&gt;
-    &lt;activeProfile&gt;
-      local-build-configuration
-    &lt;/activeProfile&gt;
-  &lt;/activeProfiles&gt;
-&lt;/settings&gt;
-  </pre>
-  
-  <p>The second way to do this is to set an environment variable.  Here's an example in Windows:</p>
-  <longquote><code>set ECLIPSE_HOME=c:/your/path/to/eclipse</code></longquote>
-  
-  <p>The third way is to pass a command line argument to the maven command below, which looks like this:</p>
-  <longquote><code>-Duima-maven-build-eclipse-home=c:/your/path/to/eclipse</code></longquote>.
-  
-         
-</section>
-
-<section name="Signing a distribution">
-
-  <p>
-  If you're not set up for creating PGP signatures, the first section tells you where to get the
-  necessary software, how to create a personal key and how to upload it to a key server.  If you're
-  already set up with GnuPG or equivalent software, you can skip right to the next section.
+  <p>Build the source and binary distributions by doing:
+    <pre>cd uima-as/uima-as
+mvn package -Papache-release</pre>
+  This Maven command will also sign the release.
   </p>
   
-  <subsection name="Getting started with release signing">
-
-    <p>
-    Although you can follow the steps described here mechanically, it is preferable to have at least
-    a basic understanding of what it actually is you are doing.  Here is a <a href="http://www.pgpi.org/doc/pgpintro/">
-    good introduction to PGP</a> and digital certificates.  We recommend reading this document front-to-back.
-    There is also more general information on <a href="http://www.apache.org/dev/release-signing.html">
-    signing Apache releases</a>.  More information is also available <a href="http://wiki.apache.org/incubator/SigningReleases">
-    on the wiki</a>.  Some of that information is outdated, though, so take with a grain of salt.
-    The UIMA release signing script is based on the code from the wiki page.
-    </p>
-
-    <p>
-    Start by <a href="http://www.gnupg.org/download/">downloading GnuPG</a>.  For the purposes of
-    release signing, it is sufficient to install the command line tools.  After installing GnuPG,
-    create a public/private key pair with <blockquote><code>gpg --gen-key</code></blockquote>  
-    This is pretty self-explanatory,
-    some more information is <a href="http://www.apache.org/dev/release-signing.html#generate">in the
-    release signing FAQ</a>.  It is vital that you remember the passphrase you choose when creating the key;
-    you will need it later for using your private key to sign the release.  
-    </p>
-
-    <p>
-    You can now list your public key with the following command:
-    <blockquote><code>gpg --armor --export</code></blockquote>
-    The output will look like this:<blockquote>
-    <code>
------BEGIN PGP PUBLIC KEY BLOCK-----<br/>
-Version: GnuPG v1.4.6 (MingW32)<br/>
-<br/>
-mQGiBEWszKIRBACRscWnk1F408lWIZEgqx6OffiMtgApEVdl9UXXF2+DeS5WrHj0<br/>
-1KDm9Q5Ir/o3f1qw7Il16Z496nDqmZHFKcrIgZvXcp5oCRE8sPMwdoy6X9kqVKug<br/>
-...<br></br>
------END PGP PUBLIC KEY BLOCK----- 
-    </code>
-    </blockquote>
-    There are two places this output needs to go: the UIMA KEYS file, and a public key server.
-    <ol>
-      <li>
-      Append your key (delimiting lines and all) to <code>uima-website/docs/KEYS</code>.
-      You can optionally place your name above the key, but that is for documentation purposes only.
-      Don't forget to commit the KEYS file to SVN.
-      </li>
-      <li>
-      Upload your public key to <a href="http://pgp.mit.edu/">the MIT public key server</a> and any 
-      other key server you think is appropriate (follow instructions on website).
-      </li>
-    </ol>
-    Your public key can later be used by our users to verify releases that you signed.
-    </p>
-    
-    <p>
-    You're now set up to do the actual release signing, and we'll tell you how in the next section.
-    </p>
-
-  </subsection>
-  
-  <subsection name="Signing a Apache UIMA Release">
-  
-  <p>
-  You can use the script <code>uimaj-distr/src/main/build/signRelease.sh</code> to do the actual
-  release signing.  The script generates a PGP ASCII-armored detached signature file for each release
-  artifact. This is a hash/message digest encrypted by your
-    private key.  The user can later use your public key to decrypt the message digest, which in
-    turn is used to verify that the corresponding release artifact has not been altered.  Sounds
-    complicated, but is simple in practice.  </p>
-    
-    <p>To use the signRelease script, <code>cd</code> to <code>uimaj-distr</code> project, and
-      issue the command:
-      <blockquote><code>src/main/build/signRelease.sh &lt;version> &lt;passphrase></code></blockquote>
-      For example: <code>src/main/build/signRelease.sh uimaj-2.3.0-incubating "Your passphrase in quotes"</code>
-    Note that the passphrase needs quotes if it contains blanks or special characters. 
-        </p>
-    <p>This script will sign the binary and source release artifacts, as well as the Jars and pack.gz 
-    (packed Jar format) that are generated for the Eclipse update site.</p>
-   <!--      The command line for generating the signature file is
-    <blockquote><code>gpg - -passphrase "Your passphrase" - -output &lt;artifact>.asc - -detach-sig - -armored &lt;artifact></code></blockquote>
-    --> 
-      
-  <!--ol>
-    <li>
-    A PGP ASCII-armored detached signature file.  This is a hash/message digest encrypted by your
-    private key.  The user can later use your public key to decrypt the message digest, which in
-    turn is used to verify that the corresponding release artifact has not been altered.  Sounds
-    complicated, but is simple in practice.  The command line for generating the signature file is
-    <blockquote><code>gpg - -passphrase "Your passphrase" - -output &lt;artifact>.asc - -detach-sig - -armored &lt;artifact></code></blockquote>
-    </li>
-    <li>
-    A MD5 message digest.  This is a checksum a user can use to check the integrity of the
-    download.  There are various tools to create MD5 checksums.  Since we're using gpg anyway, here's
-    the gpg way: <blockquote><code>gpg - -print-md MD5 &lt;artifact>.md5</code></blockquote>
-    </li>
-    <li>
-    A SHA1 message digest.  This is a checksum a user can use to check the integrity of the
-    download.  Here's how to create a SHA1 checksum with gpg: <blockquote><code>gpg - -print-md SHA1 &lt;artifact>.sha1</code></blockquote>
-    </li>
-  </ol-->
-
-  
-  <!--p>
-  To use the signing script mentioned above, <code>cd</code> to the directory with your release
-  artifacts and run: <blockquote> <code>signRelease.sh &lt;release> &lt;passphrase></code> </blockquote>
-  So for example: <blockquote> <code>signRelease.sh uimaj-2.1.0 "Your passphrase in quotes"</code> </blockquote>
-  </p-->
-  </subsection>
-  <subsection name="Signing a Sandbox AnnotatorPackage Release">
-  
-  <p>
-  You can use the script <code>SandboxDistr/annotator-package/build/signRelease.sh</code> to do the actual
-  release signing.  The script generates a PGP ASCII-armored detached signature file for each release
-  artifact. This is a hash/message digest encrypted by your
-    private key.  The user can later use your public key to decrypt the message digest, which in
-    turn is used to verify that the corresponding release artifact has not been altered.  Sounds
-    complicated, but is simple in practice.  </p>
-    
-    <p>To use the signRelease script, <code>cd</code> to <code>SandboxDistr/annotator-package</code> folder, and
-      issue the command:
-      <blockquote><code>build/signRelease.sh &lt;version> &lt;passphrase></code></blockquote>
-      For example: <code>build/signRelease.sh uimaj-annotator-addons-2.2.2-incubating "passphrase in quotes"</code>
-      <br></br>
-      Note that the passphrase needs quotes if it contains blanks or special characters. 
-        </p>
-    <p>This script will sign the binary and source release artifacts.</p>
-  </subsection>
-  
-  <subsection name="Signing an Eclipse update site">
-    <p>This is one step in the Release process for the Eclipse update site, and is described on the
-    <a href="release.html#Publish The Release">Doing a Release</a> page.</p>
-  </subsection>
 </section>
+<section name="Building Apache UIMA Addons distributions">
+    <p>
+    The build process for Addons is similar:
+    <pre>mkdir /builduima
+cd /builduima
+svn export http://svn.apache.org/repos/asf/uima/sandbox/trunk addons
+</pre>
+  This checks out the trunk into the directory /builduima/addons.  
+  </p>
+  
+  <p>Build the source and binary distributions by doing:
+    <pre>cd addons/addons
+mvn package -Papache-release</pre>
+  This Maven command will also sign the release.
+  </p>
+  <p>The uimaj-addons project contains in the target directory
+  the generated source-release.zip archive, and the binary archives.</p>
 
+
+
+</section>
 </body>
 </document>
