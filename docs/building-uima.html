@@ -245,6 +245,11 @@
     <li><p><code>mvn install</code></p>
       <p>This will build the project and install it to your local Maven repository. 
       For multi-module projects, it will build all the submodules.</p>
+      <p>However, it <b>won't build the ...-source-release.zip</b> of all 
+      the sources.  To build this along with the rest of the build, include the
+      parameter -Papache-release, like so:<br />
+      <code>mvn install -Papache-release</code>
+      </p>
     </li>
     <p class="note">
       Note: UIMA-AS depends on the UIMA SDK (called uimaj above), so before building UIMA-AS, please checkout and build uimaj first. 
