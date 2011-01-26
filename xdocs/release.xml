@@ -232,7 +232,12 @@ mvn install -Papache-release</pre>
       which can be later obtained and 
       should be a copy of the SVN tag for that artifact, and once unzipped, should be buildable,
       using <code>mvn install</code>.
-    </p> 
+    </p>
+    
+    <p>Normally, everything built is uploaded to the Nexus Staging repository.  However, for the 
+    (large) distribution objects, such as the source and binary distributions for UIMA Java SDK etc.,
+    the "deploy" step is skipped.  These artifacts, instead of being "distributed" using the
+    Maven central repository, are distributed using the Apache Mirroring System.</p>
       
     <p>You can upload to the Nexus Staging repository several independent artifacts; they will
         all get added to the same unique temporary staging repository Nexus creates.  Once all the
@@ -357,10 +362,24 @@ mvn install -Papache-release</pre>
   </subsection>  
 	
   <subsection name='Doing The Release Vote'>
+    <p>The release candidate typically consists of 
+      <ul><li>assembly source and binary distributions,</li>
+          <li>the associated SVN tag, and</li>
+          <li>the individual Maven module artifacts.</li>
+      </ul>
+      The source and binary distributions are manually copied by the 
+      release manager to the release manager's people.apache.com
+      account, to make them available for review.  The Maven module artifacts
+      are found in the Nexus staging repository, and are available once 
+      the release manager "closes" the repository.
+    </p>
 		<p>
       After things are staged, you write a note to the dev list, asking for an approval vote.
       You need to provide the url(s) of the closed staging repository in the note so the approvers
-      can find the code to check.  The [VOTE] email should be based on similar previous votes, and
+      can find the code to check, the SVN tag corresponding to the release, and
+      if needed, the place on people.apache.org where the source and binary
+      distributions being proposed are found.  
+      The [VOTE] email should be based on similar previous votes, and
       include instructions to testers on how to set up their maven settings.xml file to specify
       the particular staging repository (or repositories, if more than one is being used).
       For an example, see <a href="http://markmail.org/message/4ae7zb4ucmivlkaa">this dev-list post</a>.
@@ -372,23 +391,22 @@ mvn install -Papache-release</pre>
 		<p>
 		  After a successful release vote for the release on the dev mailing list:
       <ol>
-        <li>Collect all the artifacts to be uploaded together with their checksums and signatures, from the 
-            staging repo.</li>
-        <li>Delete any artifacts from the staging repo that aren't supposed to go to Maven Central
-            (currently only the bin.tar artifacts - the bin.zip is used for building uima-as)</li>
+        
         <li>Promote the release(s) from the staging repositories: 
             log on to the staging repository again, and release the staged artifacts.  
             This will make the artifacts available in the Maven Central repository.</li>
-        <li><p>Upload the release artifacts to the distribution server 
-      (via uploading to people.apache.org
-      in the directory: <code>/www/www.apache.org/dist/uima</code>, including the 
-      release artifacts and the Eclipse update site data.  Be sure to include the asc/md5/sha1 signatures.
+        <li><p>Upload the release artifacts from people.apache.org to the distribution server 
+      (via copying on people.apache.org
+      to the directory: <code>/www/www.apache.org/dist/uima</code>, including the 
+      release artifacts and the Eclipse update site data (which are merged with
+      the existing previous plugin releases already on the update site).  
+      Be sure to include the asc/md5/sha1 signatures.
       Make sure the KEYS file in that uploaded directory is current (master located in 
       SVN uima/site/trunk/uima-website/docs/KEYS). Additionally it is necessary to update
       the download page of the UIMA website to make the new release artifacts available. </p>
       </li>
       <li>Things not needed to be mirrored go into our website:
-        on p.a.o, in directory www/uima.apache.org/downloads
+        on p.a.o, in directory www/uima.apache.org/d/
         Currently, this includes the RELEASE_NOTES (plus issuesFixed) for the release,
         the new docbooks, and the Javadocs. 
         This currently needs to get there via being put into SVN (due to svnpubsub setup I think).
@@ -407,13 +425,16 @@ mvn install -Papache-release</pre>
         </li>
       </ul>
       <li>Copy RELEASE_NOTES and issuesFixed
-      from uimaj/target/checkout (where
-      the mvn release:perform was done from) to the p.a.o/ww/uima.apache.org/d/[project-version].</li>
+      from the top level project (where
+      the mvn release:perform was done from) in the directory
+      target/checkout/ ...  to the p.a.o/www/uima.apache.org/d/[project-version].</li>
       </li>
       
-      <li>After .../dist is updated, update the downloads page of the web site</li>
+      <li>After the distribution directory on people.apache.org/www/www.apache.org/dist/uima is updated, 
+      update the downloads page of the web site</li>
   <li>Update Jira version info to reflect the release status and date</li>
-  <li>Add a SVN tag for the release candidate, without the -rcXX to indicate the release.</li>
+  <li>Rename the SVN tag for the release candidate if it ends in -rcXXX, without the -rcXXX to 
+      indicate the release.</li>
   <li>After release appears on maven central, post an appropriate announce letter</li>
   <li>Add release to next Board report</li>
   </ol>    
