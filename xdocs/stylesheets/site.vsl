@@ -165,7 +165,7 @@ under the License.
   #if (!$href)
     <div class="navPartHeading">$name</div>
   #elseif ($href.startsWith("http://"))
-    <a href="$href" target="_blank">$name <img src="images/offsitelink.png"</a>
+    <a href="$href" target="_blank">$name <img src="images/offsitelink.png"/></a>
   #else
     <a href="$relativePath$href">$name</a>
   #end
