@@ -91,6 +91,7 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
   <h4>Miscellaneous</h4>
     <ul>
       <li><a href="#fs.variables">Feature Structure Variables</a></li>
+      <li><a href="#gale.multimodal.example">GALE Multi-Modal Example</a></li>
     </ul>
   <p>These are described in more detail below.</p>      
 
@@ -379,6 +380,25 @@ document; used by the FileSystemCollectionReader</dd>
     <p><a href="downloads/sandbox/Solrcas/SolrcasUserGuide.html">
       Click here to access the user documentation</a>.</p>
   </subsection>
+
+  <subsection name="GALE Multi-Modal Example" id="gale.multimodal.example">
+   <p> The GALE Multi-Modal Example contains a type-system and sample code based on a 
+    rich multimodal application developed under the Darpa GALE project to demonstrate how to combine
+    analytics from multiple sources and modalities. The GALE Type System (GTS) has been designed
+    for applications that combine analytics from multiple sources and modalities, such as speech
+    recognition, language translation, entity detection, topic detection, speech synthesis, etc.   
+    The sample code will illustrate how to wrap NLP analytics as UIMA annotators using 
+    appropriate GTS types, as well as data-reorganization components that convert the output of each
+    analytic into a form suitable for the following analytics, and add
+    cross-reference links back to the original data.
+   </p>
+	 <p> The type system descriptors can be accessed from the SVN repository at
+			<a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/GaleMultiModalExample">
+				http://svn.apache.org/repos/asf/uima/sandbox/trunk/GaleMultiModalExample
+			</a>.
+   </p>
+  </subsection>
+
 </section>
 
 </body>
