@@ -386,7 +386,9 @@ document; used by the FileSystemCollectionReader</dd>
     rich multimodal application developed under the Darpa GALE project to demonstrate how to combine
     analytics from multiple sources and modalities. The GALE Type System (GTS) has been designed
     for applications that combine analytics from multiple sources and modalities, such as speech
-    recognition, language translation, entity detection, topic detection, speech synthesis, etc.Â   
+    recognition, language translation, entity detection, topic detection, speech synthesis, etc.
+   </p> 
+   <p>   
     The sample code will illustrate how to wrap NLP analytics as UIMA annotators using 
     appropriate GTS types, as well as data-reorganization components that convert the output of each
     analytic into a form suitable for the following analytics, and add
