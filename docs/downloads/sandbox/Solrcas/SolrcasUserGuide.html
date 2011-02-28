@@ -37,7 +37,7 @@
         the trademark or service mark.
         
       </p>
-    </div></div><div><p class="pubdate">gennaio, 2011</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="preface"><a href="#d4e25">Introduction</a></span></dt><dt><span class="chapter"><a href="#sandbox.solrcas.conf">1. Configuration</a></span></dt><dt><span class="chapter"><a href="#sandbox.solrcas.mapping">2. The mapping file</a></span></dt></dl></div>
+    </div></div><div><p class="pubdate">febbraio, 2011</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="preface"><a href="#d4e25">Introduction</a></span></dt><dt><span class="chapter"><a href="#sandbox.solrcas.conf">1. Configuration</a></span></dt><dt><span class="chapter"><a href="#sandbox.solrcas.mapping">2. The mapping file</a></span></dt></dl></div>
 
   
 
@@ -65,14 +65,11 @@
           </p>
         </li><li class="listitem">
           <p>
-            solrInstanceType : this has to be one of http (for remote Solr instance) or embedded (for local Solr
-            instances.
+            solrInstanceType : this has to be  http.
           </p>
         </li><li class="listitem">
           <p>
-            solrPath : If the solrInstance value is 'http' this represents the URL to the remote Solr instance
-            otherwise if solrInstance value is 'embedded' this parameter represents the Solr home
-            directory.
+            solrPath : If the solrInstance value is 'http' this represents the URL to the remote Solr instance.
           </p>
         </li></ul></div><p>
     </p>
@@ -88,11 +85,10 @@
       </p><pre class="programlisting">
       
       &lt;solrMapping&gt;
-        &lt;cas&gt;id&lt;/cas&gt;
         &lt;documentText&gt;text&lt;/documentText&gt;
         &lt;documentLanguage&gt;language&lt;/documentLanguage&gt;
         &lt;fsMapping&gt;
-          &lt;type name="org.apache.uima.jcas.tcas.Annotation"&gt;
+          &lt;type name="uima.jcas.tcas.Annotation"&gt;
             &lt;map feature="coveredText" field="annotation"/&gt;
           &lt;/type&gt;
         &lt;/fsMapping&gt;
@@ -101,15 +97,11 @@
       </pre><p>
     </p>
     <p>
-      The <span class="emphasis"><em>cas</em></span> element holds information about which Solr field will be used to
-      store the JCas.toString() value.
-    </p>
-    <p>
-      The <span class="emphasis"><em>documentText</em></span> element holds the field name in which the JCas.getDocumentText()
+      The <span class="emphasis"><em>documentText</em></span> element holds the field name in which the Cas.getDocumentText()
       value will be indexed.
     </p>
     <p>
-      The <span class="emphasis"><em>documentLanguage</em></span> element holds the field name in which the JCas.getDocumentLanguage()
+      The <span class="emphasis"><em>documentLanguage</em></span> element holds the field name in which the Cas.getDocumentLanguage()
       value will be indexed.
     </p>
     <p>
@@ -120,13 +112,12 @@
       feature).
     </p>
     <p>
-      In the sample above the JCas.toString() will be written in the id field, the JCas.getDocumentText() will
-      be written inside the text field, the JCas.getDocumentLanguage() will be written inside the language
-      field and the Annotation.getCoveredText() of each org.apache.uima.jcas.tcas.Annotation object will be
-      written inside an annotation field in Solr.
+      In the sample above the Cas.getDocumentText() will be written inside the text field, the Cas.getDocumentLanguage() 
+      will be written inside the language field and the Annotation.getCoveredText() of each uima.jcas.tcas.Annotation object
+      will be written inside an annotation field in Solr.
     </p>
     <p>
-      Note that cas, documentText, documentLanguage are all optional.                     
+      Note that documentText and documentLanguage are all optional.
     </p>
 
   </div>
