@@ -1,0 +1,35 @@
+Board report for Apache UIMA, for March 2011.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+PR:
+Sally K did a Press Release with around UIMA's use in the
+IBM Watson machine that played against Jeopardy!
+
+Releases:
+Since last report, we've almost released UIMA-AS (we're on RC6).
+
+Development:
+Got Continuous Integration going for UIMAJ and UIMA-AS using Hudson.
+Got Sonar reporting going for UIMAJ.
+
+Jira issues continue to come in and get worked on at a moderate rate,
+including several in the UIMA-AS (Asynchronous Scaleout) area related
+to various error recovery scenarios.
+
+Work continues on Solrcas, a CAS Consumer which maps UIMA FeatureStructures to Solr
+fields.  AlchemyAPI has been extended with a new annotator which wraps the
+sentiment analysis web-service.
+
+Community:
+No changes. One user has now released a toolkit built on
+top of UIMA: DKPro Core 1.1.0
+ 
+Issues: No Board level issues at this time
+
+Trademarks/Branding: A first pass on improving conformance to
+trademark standards was completed; now all of our web pages have
+the right footers.  Still have a bit more to do (e.g., adding
+a small TM to our logo images).
