@@ -111,7 +111,8 @@
   
 
   <downloads version="2.3.0-incubating" title="Apache UIMA Version 2.3.0-incubating" incubator="true">
-      
+  
+   <!-- archive     
     <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-2.3.0-incubating">
       <releasenotes filename="RELEASE_NOTES-uimaj-2.3.0-incubating">           <f>html</f>                </releasenotes>
       <binary       filename="uimaj-2.3.0-incubating-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
@@ -123,7 +124,7 @@
       <binary       filename="uima-as-2.3.0-incubating-bin">                   <f>zip</f>  <f>tar.gz</f>                </binary>   
       <source       filename="uima-as-2.3.0-incubating-src">                   <f>zip</f>  <f>tar.gz</f>                </source>
     </download>
-      
+   -->
     <download name="UIMA C++ Framework"            subdirectory="uimacpp-2.3.0-incubating">
       <releasenotes filename="RELEASE_NOTES-uimacpp-2.3.0-incubating">         <f>html</f>                              </releasenotes>
       <binary       filename="uimacpp-2.3.0-incubating-bin">                   <f platform="Windows 32-bit"  >zip</f>  
@@ -140,7 +141,8 @@
     </download>
     
   </downloads>
-  
+
+  <!-- archive   
   <downloads version="2.2.2-incubating" title="Apache UIMA Version 2.2.2-incubating" incubator="true">
   
     <download name="UIMA core hotfix 1"            subdirectory="uimaj-2.2.2-incubating">
@@ -196,4 +198,5 @@
     </download>
   
   </downloads>
+  -->
 </project>
