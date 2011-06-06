@@ -196,7 +196,6 @@ A previous version of this page, with the methods we used while in the incubator
     <li><a href="#Removing -SNAPSHOT dependencies">Removing -SNAPSHOT dependencies</a></li>
 		<li><a href="#Doing The Release Vote">Doing The Release Vote</a></li>
     <li><a href="#Releasing">Releasing</a></li>
-    <li><a href="#Publish The Release">Publish The Release</a></li>
     <li><a href="#Announce The Release">Announce The Release</a></li>     
       </ul>
 </p>
@@ -669,14 +668,22 @@ mvn install -Papache-release</pre>
       Be sure to include the asc/md5/sha1 signatures.
       Make sure the KEYS file in that uploaded directory is current (master located in 
       SVN uima/site/trunk/uima-website/docs/KEYS). Additionally it is necessary to update
-      the download page of the UIMA website to make the new release artifacts available. </p>
+      the download page of the UIMA website to make the new release artifacts available.
+      This is done indirectly, by editing both the downloads.xml page and also by
+      adding entries to the xdocs/stylesheets/project.xml page - follow the previous examples.</p>
       </li>
       <li>Things not needed to be mirrored go into our website:
         on p.a.o, in directory www/uima.apache.org/d/
         Currently, this includes the RELEASE_NOTES (plus issuesFixed) for the release,
         the new docbooks, and the Javadocs. 
-        This currently needs to get there via being put into SVN (due to svnpubsub setup I think).
-        
+        <p class="note">
+        Before, things only got to our website by being added to SVN.  Apache Infrastructure has
+        set up an additional path for our project to allow large generated objects (e.g., Javadocs)
+        to bypass SVN.  This works as follows:  Anything you want on our website can be put in 
+        people.a.o in the directory www/uima.apache.org/d/, just by copying it there.  This location
+        will be rsync'd to our website once an hour, approximately.
+        </p>
+        <p>
         Copy released artifacts to targets: bin, src, to p.a.o/www/www.apache.org/dist/uima, 
       new features / plugins from Eclipse update site target/eclipse-update-site to .../dist/uima/eclipse-update-site
       (add to what's already there).    
@@ -689,6 +696,7 @@ mvn install -Papache-release</pre>
           Update the Eclipse site and digest as needed.
         </li>
       </ul>
+      </p>
       <li>Copy RELEASE_NOTES and issuesFixed
       from the top level project (where
       the mvn release:perform was done from) in the directory
