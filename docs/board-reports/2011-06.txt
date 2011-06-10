@@ -5,20 +5,21 @@ software related to the analysis of unstructured data, guided by the
 UIMA Oasis Standard.
 
 Releases:
-Since last report, UIMA-AS Released (http://uima.apache.org/news.html#22 March 2011)
+Since last report, UIMA-AS Released 
+(http://uima.apache.org/news.html#22 March 2011).
 
 Development:
-
 UIMA CAS Editor is being improved and extended with inputs from several active users.
 
 The set of add-ons is being released soon (on 2nd release candidate as of now).
 
 Community:
-One new user starting to contribute patches who has expressed an interest in helping out. 
+One new user who has expressed an interest in helping out, has started 
+contributing patches.
  
 Issues: No Board level issues at this time
 
-Trademarks/Branding: all of our web pages have
-the right footers.  We changed the first occurrence of the use of trademark at the
-beginning to be a modifier to a generic class noun, per recent guidance.
+Trademarks/Branding: all of our web pages have the right footers.  
+We changed the first occurrence of the use of trademark at the
+beginning to be a modifier of a generic class noun, per recent guidance.
 
