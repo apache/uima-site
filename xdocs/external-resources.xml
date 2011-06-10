@@ -118,6 +118,38 @@ within Hadoop.
 </p>
 </subsection>
 
+<subsection name="UIMA French portal">
+<p><a href="http://www.uima-fr.org" target="_blank">http://www.uima-fr.org</a>
+is a French-speaking web portal
+about UIMA. It aims at developing a UIMA French-speaking community by
+providing services such as a discussion list, a feed aggregator and a
+repository of UIMA NLP resources (some of them being dedicated for
+processing French). It is supported by the LINA Lab. at the University
+of Nantes.
+</p>
+</subsection>
+
+<subsection name="DKPro">
+<p><a href="http://www.ukp.tu-darmstadt.de/research/current-projects/dkpro/" 
+target="_blank">http://www.ukp.tu-darmstadt.de/research/current-projects/dkpro/</a>
+DKPro Core is a collection of UIMA-based components and 
+provides APIs and components of basic pre-processing and NLP 
+analysis tasks such as tokenization, part-of-speech tagging, parsing etc. 
+It also provides support for several file formats such as text, 
+WSDL, XML, or PDF. Due to licensing issues the project is sub-divided into 
+<ul>
+<li><a href="http://code.google.com/p/dkpro-core-asl">http://code.google.com/p/dkpro-core-asl</a>
+DKPro Core ASL - components under the Apache Software License v2 
+</li>
+<li>
+<a href="http://code.google.com/p/dkpro-core-gpl"
+target="_blank">http://code.google.com/p/dkpro-core-gpl</a>
+DKPro Core GPL - components under the GNU Public License v3
+</li>
+</ul>
+</p>
+</subsection>
+
 <!-- removed 12/2010 at request of Digitalpebble (Julian Nioche) - says they're not supporting 
 subsection name="RASP4UIMA">
 
