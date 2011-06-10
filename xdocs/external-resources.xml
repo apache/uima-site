@@ -150,6 +150,16 @@ DKPro Core GPL - components under the GNU Public License v3
 </p>
 </subsection>
 
+<subsection name="uimaFIT">
+<li><p><a href="http://code.google.com/p/uimafit" target="_blank">
+http://code.google.com/p/uimafit</a>
+is a library that provides factories, injection, 
+and testing utilities for UIMA. It provides a convenient Java API 
+for using UIMA in Java projects without having to deal with XML descriptors.
+</p></li>
+
+</subsection>
+
 <!-- removed 12/2010 at request of Digitalpebble (Julian Nioche) - says they're not supporting 
 subsection name="RASP4UIMA">
 
