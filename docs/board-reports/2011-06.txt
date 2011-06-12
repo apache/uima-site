@@ -31,3 +31,14 @@ Issues: No Board level issues at this time
 Trademarks/Branding: all of our web pages have the right footers. 
 We changed the first occurrence of the use of trademark at the
 beginning to be a modifier of a generic class noun, per recent guidance.
+
+ Branding checklist:
+  Project Website Basics - done
+  Website Navigation Links - done
+  Trademark Attributions - done
+  Logos and Graphics - not done
+  Project Metadata - done
+  Read PMC Branding Responsibilities - partially done.  Need to get confirmation
+    that all PMC members have read this.
+  
+  
