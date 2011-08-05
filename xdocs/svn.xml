@@ -86,7 +86,8 @@ If you're new to Subversion, you can check out the
   <ol>
     <li>http://svn.apache.org/repos/asf/uima/uimaj - the Java code for base UIMA</li>
     <li>http://svn.apache.org/repos/asf/uima/uima-as - the Asynchronous Scaleout add-on for base UIMA</li>
-    <li>http://svn.apache.org/repos/asf/uima/sandbox - a collection of add-ons for UIMA including annotators</li>
+    <li>http://svn.apache.org/repos/asf/uima/addons - a collection of add-ons for UIMA including annotators</li>
+    <li>http://svn.apache.org/repos/asf/uima/sandbox - a collection of new things for UIMA, not yet released</li>
     <li>http://svn.apache.org/repos/asf/uima/uimacpp - the C++ framework supporting Annotators written in C++</li>
     <li>http://svn.apache.org/repos/asf/uima/build - Build information and configurations used in building from sources</li>
   </ol>
