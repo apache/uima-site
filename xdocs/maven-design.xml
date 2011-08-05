@@ -28,6 +28,7 @@ under the License.
 <body>
 
 <section name="Maven use for Apache UIMA builds">
+
 <p>This is developer information, mostly.  It documents how we are using Maven for
 building the various parts of UIMA.</p>
 
@@ -39,6 +40,30 @@ building the various parts of UIMA.</p>
   http://www.apache.org/dev/publishing-maven-artifacts.html</a>.</p>
 
 <p>This document covers how we use Maven for building Version: 2.3.1 and onwards.</p>
+
+  <ul>
+    <li><a href="#Nexus">Nexus use</a></li>
+    <li><a href="#POM Conventions">POM Conventions</a></li>
+    <li><a href="#Our POM hierarchy">POM Hierarchy</a></li>
+    <li><a href="#Selecting build alternatives based on the project">Selecting build alternatives based on the project</a></li>
+    <li><a href="#POM style">POM style</a></li>
+    <li><a href="#Release artifacts">Release artifacts</a></li>
+    <ul>
+	    <li><a href="#LICENSE and NOTICE files">LICENSE and NOTICE files</a></li>
+	    <li><a href="#Standard Artifacts"></a>Standard Artifacts</li>
+	  </ul>
+    <li><a href="#Handling Documentation">Handling Documentation</a></li>
+    <li><a href="#Packaging Individual Projects">Packaging Individual Projects</a>
+      <ul>
+        <li><a href="#Common conventions individual projects">Common conventions for structuring individually releaseable project</a></li>
+        <li><a href="#Conventions for PEARs">Conventions for structuring individual projects released as PEARs</a></li>
+      </ul>
+    </li>
+    <li><a href="#Building Assemblies for Distribution">Building Assemblies for Distribution</a></li>
+    <li><a href="#Special resources for build">Special resources for build</a></li>
+    <li><a href="#Using the Release Audit Tool (RAT)">Using the Release Audit Tool (RAT)</a></li>
+    <li><a href="#Lifecycle for building addons">Lifecycle for building addons</a></li>
+  </ul>    
   
 <subsection name="Nexus">
 
@@ -82,7 +107,7 @@ for purposes of building multi-module things, and releasing them all at once.
 we mostly keep these two uses in separate POMs:  parent POMs do not do aggregation, 
 and aggregation POMs do not do common factoring.</p>
 
-<p>The UIMA Project as one common parent pom, called "parent-pom", that contains common
+<p>The UIMA Project has one common parent pom, called "parent-pom", that contains common
 things for all the sub-projects.  Each multi-module sub-project, for instance, the UIMA Java SDK (uimaj),
 contains, in turn, a sub-project common parent pom for all the modules in that project.</p>
 
@@ -113,11 +138,12 @@ our svn tree, in a top level directory named "build".</p>
    
    <p>These are the current marker-file kinds:
      <ul>
-       <li>marker-file-identifying-standard-pear</li>
-       <li>marker-file-identifying-single-project</li>
        <li>marker-file-identifying-parent-pom</li>
        <li>marker-file-identifying-eclipse-plugin</li>
        <li>marker-file-identifying-eclipse-feature</li>
+       <li>marker-file-identifying-single-project</li>
+       <li>marker-file-identifying-standard-pear</li>
+       <li>marker-file-identifying-osgi-project</li>
      </ul>
    </p>
    
@@ -137,7 +163,7 @@ our svn tree, in a top level directory named "build".</p>
         <p>So, If this does not correspond to how the website is set up,
         please specify the url that is correct for the new project.</p>
       </li>
-      <li>The SCM connection is needed for releasing - and needs to be accurate for this
+      <li>The SCM connection is needed for doing releases - and needs to be accurate for this
         component.  The same defaulting is applied as above, which is incorrect for our
         flat layout, so each POM needs to have an explicit SCM element.</li>
       <li>The POM's "version" is stated literally, not via a "property", etc.  
@@ -147,7 +173,9 @@ our svn tree, in a top level directory named "build".</p>
       <li>The POM's groupId is omitted if it's the same as the parent pom's
         (which is true for all of our projects except our top-most parent pom); 
         if omitted, it inherits from the parent.</li>
-      <li>The packaging is omitted if it is "jar".</li>      
+      <li>The packaging is omitted if it is "jar".</li>
+      <li>In the <code>build</code> section, the <code>&lt;groupId></code> for 
+      standard maven plugins is omitted.</li>      
     </ul>
   </p>
   
@@ -157,21 +185,26 @@ our svn tree, in a top level directory named "build".</p>
   <p>We follow the standard release process for Maven-based artifacts at Apache,
     documented <a target="_blank" 
       href="http://www.apache.org/dev/publishing-maven-artifacts.html">here.</a></p>
-  <p>For each artifact, the release process builds additional artifacts, and
-     attaches them to the main one, so they will "go along with" the main artifact during 
-     Maven deployment to repositories.</p>
+  <p>For each artifact, the release process may build additional artifacts, and
+     attach them to the main one, so they will "go along with" the main artifact during 
+     Maven deployment to repositories.  Some of these are:</p>
     <ul>
       <li>
         sources.jar - holds the source files - this is for IDEs that want to refer to the source
       </li>
       
-      <li>
-        source-release.zip - only for the top-most project in an aggregate build - 
-        this is the same as the sources, but includes all other files 
+      <li><p>
+        source-release.zip. This is the same as the sources, but includes all other files 
         (such as the pom.xml) not under the /src
         directory, needed for building.  
         The intent is that this is the same as the SVN checked-in files, and once unzipped, this
         should be "buildable" by doing "mvn install", etc. in the unzipped directory.
+        </p>
+        <p><code>source-release.zip</code> files for multi-project aggregates (such as the main
+        UIMA SDK) are not "attached", and are not uploaded to maven for distribution; instead, 
+        these are considered the main binary artifacts for the project and are distributed
+        using Apache's own mirroring distribution system.
+        </p>
       </li>
     </ul>  
     <p>
@@ -184,12 +217,72 @@ our svn tree, in a top level directory named "build".</p>
     <code>-Papache-release</code> to the non-release Maven build commands.
   </p>
   
+  <subsection name="LICENSE and NOTICE files">
+  <p>
+    Things that are distributed from Apache need LICENSE and NOTICE files.  We have several kinds
+    of distributions:
+    <ul>
+      <li>Releases
+      <ul>
+        <li>source-release.zip files</li>
+        <li>binary (built) packagings
+          <ul>
+            <li>Binary assemblies
+              <ul>
+                <li>Multi-project assemblies, like our main UIMA SDK</li>
+                <li>Single-project assemblies, like our individual add-on projects</li>
+              </ul>
+            </li>
+            <li>uploaded to main Maven Repository as part of releasing:
+              <ul>
+                <li>Individual Jars</li>
+                <li>PEAR packages of some individual projects</li>
+                <li>OSGi packaging of some individual projects</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      </li>
+      <li>SVN
+      </li>
+    </ul>
+  </p>
+  
+  <h3>Two kinds of LICENSE/NOTICE files</h3>
+  
+  <p>There are typically two versions of these files, corresponding to source (only)
+  distributions versus other distributions which include "dependent" artifacts, which
+  may have their own separate license and notice information.  The source (only) 
+  versions of these files are in SVN at the top level of various project hierarchies.
+  </p>
+  <p class="Note">For some packagings of source artifacts, such as JARs for 
+  projects that are part of bigger assemblies, the projects do not contain individual
+  license and notice files (see for instance, <code>.../uimaj/trunk/uimaj-core</code>.
+  For these, a standard LICENSE and NOTICE is computed using a template, augmented
+  if needed by additions from the project's <code>pom</code>.</p>
+  
+  <p>The SVN itself has a top level license / notice file, 
+  for all nodes under the top areas (uima/xxx/trunk, tags, etc.).
+  All major releasable things (other than projects for Jars which are always released
+  as part of an assembly - such as the Jars which make up the UIMA SDK), have top
+  level license and notice files in their top most project; these are for the 
+  source, only, and do not cover the dependencies (if any) that might be included with
+  a binary-style release.
+  </p>
+  
+  <p>Many of our packagings include dependencies, including OSGi and PEAR packagings, 
+  as well as normal <code>binary</code> assemblies.
+  The license and notice for these packagings is made by merging the license and notice
+  files from the source artifact plus those from all the dependent artifacts 
+  (removing duplications).</p>
+  </subsection>
+  
   <subsection name="Standard Artifacts">
   
   <p>The release process includes standard boiler-plate things in standard places.  
-     The Maven remote-resources-plugin
-     is used to get these resources from a special a UIMA build artifact (uima-build-resources), 
-     customizing them for the particular project:
+     The Maven remote-resources-plugin is used to get these resources from a special 
+     UIMA build artifact (uima-build-resources), and customizes them for the particular project:
      <ul><li>The DEPENDENCIES file is generated from the 
      transitive closure of the dependencies in the POM.</li>
          <li>The NOTICES file is sometimes augmented with additional text 
@@ -198,7 +291,7 @@ our svn tree, in a top level directory named "build".</p>
          </li></ul>    
   </p>
   
-  <p>These resources after customization are placed in the project's 
+  <p>These resources, after customization, are placed in the project's 
      target/maven-shared-archive-resources/META-INF/
      directory.  Later steps in the build use this directory for two purposes:
      <ul><li>adding this information to any JAR that might be built</li>
@@ -209,22 +302,30 @@ our svn tree, in a top level directory named "build".</p>
    
    <p><b><u>Overriding on a per-project basis:</u></b> 
       Files that the remote-resources-plugin obtains and places
-      in the target/maven-shared-archive-resources/META-INF/ directory can be overridden
-      by including identically named files at the top level of the project.
-      This is commonly used for add-on projects having a different LICENSE or NOTICE file.</p>
+      in the target/maven-shared-archive-resources/META-INF/ directory are be overridden
+      by identically named files at the top level of the project.
+      </p>
       
-   <p>Note that there are sometimes two sets of LICENSE / NOTICE files - one for the source distribution,
+   <p>Note that there are two sets of LICENSE / NOTICE files for distributable entities - 
+      one for the source distribution,
       and one for the binary distribution.  This is because the source distribution rarely needs other
-      than the standard LICENSE/NOTICE files, for example, because it is 
-      (usually) only distributing source; while the
+      than the standard LICENSE/NOTICE files because it is 
+      (usually) only distributing Apache-authored source; while the
       binary distribution often distributes additional components that are licensed under other
-      licenses, with additional NOTICE requirements - in which case, the LICENSE and NOTICE files 
+      licenses, with perhaps additional NOTICE requirements - in which case, the LICENSE and NOTICE files 
       contains all of the required licenses and notices for everything
       being distributed.</p>
      
    <p style="margin-left: 3em">
-     For <i>binary</i> distributions, the LICENSE and NOTICE files 
+     For <code>binary</code> distributions, the LICENSE and NOTICE files 
      are taken from src/main/readme/ directory.
+   </p>
+   
+   <p class="note">
+     Some addon projects have just a single st of LICENSE and NOTICE at the top level. 
+     In this case, these are used for both the source and binary distribution, and they
+     therefore need to cover everything distributed with the binary distribution (even
+     if these are not delivered with the source distribution).
    </p>
    <br/><br/>
    <p>This next table summarizes the packaging artifacts and how and where they are 
@@ -241,76 +342,62 @@ our svn tree, in a top level directory named "build".</p>
     </tr>
 
     <tr>
-     <td><p>LICENSE, NOTICE, DEPENDENCIES.</p>
-     <!--p>Note that DEPENDENCIES are not (currently) in 
-         our "binary" assembly distributions.</p--></td>
+     <td><p>LICENSE, NOTICE, DEPENDENCIES.</p></td>
      <!-- variants -->
      <td><p>Standard, for source distribution</p>
          <p>Alternate: has extra Notice element used for copyrights moved to Notice file.</p>
          <p>Alternate2: for binary assemblies, the LICENSE and NOTICE 
             are customized for each binary assembly.</p>
      </td>
-     <td><p>uima-build-resources (in the build tooling).</p> 
+     <!-- origin -->
+     <td><p>For source distributions: uima-build-resources (in the build tooling).</p> 
          <p>Additional text for NOTICE (if needed) comes from 
             the property <code>&lt;postNoticeText></code>in the build POM.
             For many cases, the additional copyright notice is for 
             IBM contributed code, which can be included using
             <code>&lt;postNoticeText>${ibmNoticeText}&lt;/postNoticeText></code>.</p>  
-         <p>For binary assemblies, comes from either
-           <ul><li>src/main/readme/, or</li>
-               <li>top level (for Addons)</li>
-           </ul>
+         <p>For binary distributions, comes from src/main/readme/
          </p>
      </td>
       <!-- Targets -->     
-     <td><p>Jars: goes into the MANIFEST.MF. 
-         <p>Source-Release Assemblies:</p> 
-            goes into the zip as top level files.</p>
-         <p>Custom Binary assemblies: goes into the zip / tar as top level files.</p>
+     <td><p>Jars: goes into META-INF. 
+         <p>Source-Release zips, source assemblies, binary assemblies, PEAR files, OSGi artifacts:</p> 
+            goes into the zip/tar as top level files.</p>
      </td>
      <!-- Method -->
      <td><p>org.apache.uima:parent-pom configures the remote-resources plugin 
-            to copy these into
+            to copy the standard LICENSE/NOTICE/DEPENDENCIES into
             target/maven-shared-archive-resources/META-INF/
-            directory.  This info is then included in any Jars that are built.</p>
+            directory.  This info is then included in any Jars that are built, in META-INF.</p>
          <p>During release (only) (apache-release profile activated)
             the information in target/maven-shared-archive-resources/META-INF/
             is copied to the top level of the source-release archive.
             Any versions of these files at the project's top level
             will subsequently override these, at the top level of the archive.</p>
-            <p style="margin-left=3em">The common parent-pom configures the property
+            <!--p style="margin-left=3em">The common parent-pom configures the property
             <code>sourceReleaseAssemblyDescriptor</code> to "multimodule-source-release",
             this property value is used by the common Apache POM to pick the 
             source assembly descriptor from the
-            uima-build-resources.</p>
-         <p>For binary distributions, done with -distr projects, 
-            these files come from src/main/readme/.  For binary distributions,
-            done using single-project parent (add-ons, typically), these files
-            are copied from the top level of the project into the archive.</p></td>
+            uima-build-resources.</p-->
+         <p>For PEAR, OSGi, and binary assemblies, 
+            these files come from src/main/readme/, the <code>maven-resources-plugin</code>
+            uses the <code>copy-resources</code> goal to copy these.</p></td>
     </tr>
     <tr>
       <td>README.txt</td>
       <!-- variants -->
       <td/>      
-      <td><p>For -distr poms, for source distributions, these come from 
-           same-named files at the top level of the -distr project.
-           For binary distributions, the custom assembly specifies where these
-           files come from (typically src/main/readme).
-           </p>
-          <p>For Addon projects, if there is a README at the top level, this 
-             is copied into both the source and binary distributions, at the top level of the archive.</p>
+      <td><p>For PEAR, OSGi, binary assemblies, and source zips distributions, these come from 
+           same-named files at the top level of the project doing the creating of the release artifact.
+          </p>
       </td>
-      <td>source-release.zips and binary distribution releases (not in Jars).
-          Goes at the top level of archive.
-      </td>
+      <td>Included in all packagings, except project Jars at the top level of package.</td>
       <td>
         <p>For source release building, during release (only) (apache-release profile activated)
             parent-pom-top configures the assembly plugin for source assemblies to use
             the multimodule-source-release in uima-build-resources.  This copies 
             the README file from the top level into the top level of the archive.
             </p>
-         <p>For binary distributions, the assembly copies the README from src/main/readme/ 
-            or from the top level in the project.</p>
       </td>
     </tr>
 
@@ -322,17 +409,14 @@ our svn tree, in a top level directory named "build".</p>
       <!-- variants -->
       <td/>
       <!-- Sources -->
-      <td><p>For -distr poms, source for these was in src/main/readme/, but is now
-             at the top level (to reduce configuration by following more conventions)</p>
-          <p>For (some) Addons, there is a RELEASE_NOTES at the top level, which
-             is copied into the source and binary distributions to the top level of the archive.</p>
+      <td><p>At the top level</p>
       </td>
       <!-- Targets -->
-      <td>source-release.zips for some projects and binary distribution releases (not in Jars).
-          Goes at the top level of archive.</td>
+      <td>Included in all packagings, except project Jars at the top level of package.</td>
       <!-- Method -->
       <td>
-        <p>During release builds the assembly is configured to copy these from the top
+        <p>During release builds the assembly or maven-resources-plugin 
+           is configured to copy these from the top
            level of the project to the top level of the archive.
         </p>
       </td>
@@ -353,7 +437,7 @@ our svn tree, in a top level directory named "build".</p>
       <td>This is a computed resource.</td>
       <!-- Targets -->
       <td>This is generated into the top level of the project, and then goes
-          into any archives that are produced, at the top level.</td>
+          into all packagings except OSGi, at the top level.</td>
       <!-- Method -->
       <td>
         <p>The build process runs the maven changes:jira-report plugin to generate this.
@@ -450,9 +534,9 @@ our svn tree, in a top level directory named "build".</p>
   
   <p>If an annotator isn't suitable for PEAR packaging, perhaps because it is inappropriate to have 
     one pre-done main descriptor, then the annotator can be packaged as a single-project, instead, by 
-    making the POM's parent parent-pom-single-project.</p>
+    marking the POM's parent parent-pom-single-project.</p>
   
-  <h2>Common conventions for structuring individually releaseable projects</h2>
+  <h2 id="Common conventions individual projects">Common conventions for structuring individually releaseable projects</h2>
   <p>Use these conventions to get your annotator properly packaged when you use the parent-pom-annotator or 
     the parent-pom-single-project as your parent pom:
     <ul>
@@ -476,7 +560,7 @@ our svn tree, in a top level directory named "build".</p>
     </ul>
   </p>
   
-  <h2>Conventions for structuring individual projects released as PEARs</h2>
+  <h2 id="Conventions for PEARs">Conventions for structuring individual projects released as PEARs</h2>
   <p>
     <ul>
       <li>Using the following folders at the top level of your project (which 
@@ -514,8 +598,8 @@ our svn tree, in a top level directory named "build".</p>
     <ul>
       <li>UIMA - the base Java framework</li>
       <li>UIMA-AS - the asynchronous scaleout add-on</li>
-      <li>UIMA Add-ons - not decided yet, but it's likely we'll just release these as individual projects.  
-        So there is no add-ons-distr project (yet).</li>
+      <li>UIMA Add-ons - These are released as a collection.  Future updates will
+          likely release these individually.</li>
       <!--li>UIMA Add-ons - annotators and other add-on components such as the SimpleServer</li-->
       <li>UIMACPP - the C++ framework</li>
     </ul>
@@ -528,14 +612,20 @@ our svn tree, in a top level directory named "build".</p>
     
 </section>
 
-<section name="Build resources">
+<section name="Special resources for build">
   <p>During the build process, several resources are used, and are built into Maven Artifact Jars with
-    Maven coordinates:
+    Maven coordinates.  These projects are in the <code>build</code> section of SVN.
     <ul>
-      <li>uima-jar-resource-bundle - this is the standard License Notice and Dependencies from the 
+      <li>uima-build-resources - this contains various resources used in the build process
+        <ul>
+          <li>the standard License Notice and Dependencies from the 
         Apache common parent pom, except it allows adding post-Notice text.  We use this when 
-        we need to include the IBM Copyright notice, moved here from donated code from IBM.
-        This also has an override for the multi-module source release assembly.</li>
+        we need to include the IBM Copyright notice, moved here from donated code from IBM.</li>
+          <li>an override for the multi-module source release assembly</li>
+          <li>the binary assembly descriptor for single-projects.</li>
+          <li>common specification for the titlepage of docbooks</li>
+        </ul>
+      </li>
       <li>uima-docbook-olink - this is the shared 
         <a target="_blank" href="dev-docbook.html#Cross Referencing among UIMA Docbooks">olink</a> data.  
         This project's source contains the 
@@ -544,9 +634,7 @@ our svn tree, in a top level directory named "build".</p>
         This artifact is not released, it always stays at 1-SNAPSHOT level, but can be deployed 
         to the snapshot repository for sharing with others.
       </li>
-      <li>uima-docbook-resource-bundle - holds common information needed by docbook builds, including
-        the specification for the titlepage.</li>
-      <li>uima-assembly-single-project - holds the binary assembly descriptor for single-projects.</li>
+      
     </ul></p>
     
     <p>There is also one custom Maven plugin (uima-build-helper-maven-plugin) 
@@ -564,5 +652,31 @@ our svn tree, in a top level directory named "build".</p>
     </p>
   </section>
 
+  <section name="Lifecycle for building addons">
+    <p>Addon projects have multiple binary build artifacts:
+      <ul>
+        <li>binary assembly for the individual addon</li>
+        <li>binary assembly for aggregate of all the addons</li>
+        <li>PEAR packaging</li>
+        <li>OSGi packaging</li>        
+      </ul>      
+    </p>
+    
+    <p>Since these have many common parts, we use the maven lifecycle to order building of shared
+    common things ahead of their use:
+    <ul>
+      <li>package phase: build JARs, docbooks, etc.</li>
+      <li>pre-integration-test phase: this is the first phase after <code>package</code>, and is 
+      used to copy the Jar and docbook processing results to a common directory structure (base-bin).</li>
+      <li>integration-test phase: this is the 2nd phas after <code>package</code>, and is
+      used to copy the common things from base-bin to places for building the PEAR and OSGi artifacts.
+      It is also used for running the packaging steps sequentially, after the copy, for the PEAR, OSGi,
+      and single project assemblies.</li>
+      <li>post-integration-test phase: this is used to mark the generated PEAR file for "attachment"
+      using the maven-build-helper, so it gets deployed to the maven repositories.</li>
+    </ul>
+    </p>
+    
+  </section>
 </body>
 </document>
