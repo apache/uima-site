@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+  
+  http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+
+<document>
+
+  <properties>
+    <title>OSGi packaging and support</title>
+    <author email="dev@uima.apache.org">
+      Apache UIMA Documentation Team
+    </author>
+  </properties>
+
+  <body>
+      
+    <section name="OSGi packaging and support">
+      
+      <p>OSGi is not supported directly by the UIMA framework; the framework has no knowledge or interfaces for making use of it.
+      However, components are being packaged as OSGi bundles:  in particular, there are Eclipse Plugin tools that are packaged this way.
+      The Eclipse plugins are organized further using the Eclipse infrastructure for Features and Update Sites.</p>
+      
+      <p>Some of the addon annotators are being packaged experimentally as OSGi bundles.  Due to UIMA not knowing about OSGi,
+      the current experimental packaging includes the uimaj-core jar in the package; the expected use of this bundle 
+      is as an embedded UIMA application, running just the one annotator that is being bundled (because other annotators in other
+      bundles will not be "visible" in the class-loading sense)</p>  
+ 
+      <p>Users wanting to develop more advance deployments, such as UIMA pipelines containing multiple annotators, can use
+      these bundles and the maven processes that build them, as examples.  They will need to create special bundles of their
+      own, combining the UIMA framework, and all of the jars for the multiple annotators (and their dependencies), and again,
+      use that collection as a UIMA application.</p>
+      
+      <subsection name="OSGi and Eclipse-Buddy">
+      <p>There are two kinds of OSGi container/frameworks.  One, represented by Apache Felix, might be characterized 
+      as a "pure" OSGi implementation.  The other, represented by Eclipse RCP and the equinox framework, is charactereized by
+      including support to enable "legacy" frameworks (including UIMA) be used in some circumstances, by exploiting
+      Eclipse-buddy manifest directives.</p>
+      
+      <p>If users decide to use an OSGi container that supports the Eclipse-buddy directive, then it is possible to create
+      bundle structures where the annotators do not contain uimaj-core jars, and a common uimaj-ep-runtime bundle contains
+      the common UIMA framework jars used by the application.</p>
+      
+      <p>To do this, each annotator bundle will need to have the directive in the MANIFEST.MF 
+        <code>Eclipse-RegisterBuddy: org.apache.uima.runtime</code>; furthermore, the bundle
+        uimaj-ep-runtime (having the symbolic name org.apache.uima.runtime) must be the bundle in the container
+        that will provide the UIMA framework.</p>
+        
+      <p class="note">Currently, the experimental OSGi builds do not provide this directive.</p>
+      <p class="note">Apache Felix has stated that they do not support these "buddy" extensions, 
+      as a matter of principle.</p>
+      
+      </subsection>
+         
+    </section>
+    
+    <section name="Jigsaw as an alternative to OSGi">
+      <p>Jigsaw is the Java community's approach to improving class-path mechanisms, slated for inclusion into core Java at release 8.
+      It looks like it has similar goals to a subset of what OSGi is providing.</p>
+    </section>
+    
+  </body>
+</document>
