@@ -81,7 +81,7 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
       <li><a href="#alchemy.annotator">AlchemyAPI Annotator</a></li>
       <li><a href="#solrcas.consumer">Solr CAS Consumer (Solrcas)</a></li>
     </ul>
-  <h4>Servers</h4>
+  <h4 id="uima-addons-servers">Servers</h4>
     <ul>
       <li><a href="#simple-server">Simple Server (UIMA REST service)</a></li>
     </ul>

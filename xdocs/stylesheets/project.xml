@@ -30,8 +30,8 @@
       </item>
       
       <item name="Components &amp; Tools">
-        <item name="Annotators"               href="/annotators.html"/>
-        <item name="Tools &amp; Servers"      href="/toolsServers.html"/>
+        <item name="Annotators"               href="/sandbox.html#uima-addons-annotators"/>
+        <item name="Tools &amp; Servers"      href="/sandbox.html#uima-addons-servers"/>
         <item name="Addons and Sandbox"       href="/sandbox.html"/>
         <item name="External Resources"       href="/external-resources.html"/>        
       </item>
