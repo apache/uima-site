@@ -67,8 +67,22 @@ to your local maven repository, do the following:
 </p>
 </section>
 
-<section name="Checkout and Build a Sandbox project">
-<p>Coming soon...</p>
+<section name="Checkout and Build an Addons (Sandbox) project">
+<p>
+<ul>
+<li><code>svn checkout https://svn.apache.org/repos/asf/uima/addons/trunk /myWorkingCopyAddons</code></li>
+<li><code>cd /myWorkingCopyAddons</code></li>
+<li><code>mvn install</code></li>
+</ul>
+</p>
+
+<p>To check out just one of the addons and build it, say, the WhitespaceTokenizer, do:<a></a>
+<ul>
+<li><code>svn checkout https://svn.apache.org/repos/asf/uima/addons/trunk/WhitespaceTokenizer /myWorkingCopyWhitespaceTokenizer</code></li>
+<li><code>cd /myWorkingCopyWhitespaceTokenizer</code></li>
+<li><code>mvn install</code></li>
+</ul>
+</p>
 </section>
 
 

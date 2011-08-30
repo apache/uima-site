@@ -95,7 +95,7 @@
                 </div>
                           <div class="navBarItem">      <a href="./toolsServers.html">Tools & Servers</a>
                 </div>
-                          <div class="navBarItem">      <a href="./sandbox.html">Sandbox</a>
+                          <div class="navBarItem">      <a href="./sandbox.html">Addons and Sandbox</a>
                 </div>
                           <div class="navBarItem">      <a href="./external-resources.html">External Resources</a>
                 </div>
@@ -238,11 +238,24 @@ to your local maven repository, do the following:
                                         <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Checkout and Build a Sandbox project"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Checkout and Build a Sandbox project</h1></a>
+        <a name="Checkout and Build an Addons (Sandbox) project"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Checkout and Build an Addons (Sandbox) project</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>Coming soon...</p>
+                                    <p>
+<ul>
+<li><code>svn checkout https://svn.apache.org/repos/asf/uima/addons/trunk /myWorkingCopyAddons</code></li>
+<li><code>cd /myWorkingCopyAddons</code></li>
+<li><code>mvn install</code></li>
+</ul>
+</p>
+                                                <p>To check out just one of the addons and build it, say, the WhitespaceTokenizer, do:<a />
+<ul>
+<li><code>svn checkout https://svn.apache.org/repos/asf/uima/addons/trunk/WhitespaceTokenizer /myWorkingCopyWhitespaceTokenizer</code></li>
+<li><code>cd /myWorkingCopyWhitespaceTokenizer</code></li>
+<li><code>mvn install</code></li>
+</ul>
+</p>
                             </blockquote>
         </p>
       </td></tr>

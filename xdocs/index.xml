@@ -111,7 +111,7 @@
         Annotator components.  These components do the actual work
         of analyzing the unstructured information.  Users can <a href="doc-uima-annotator.html">write
         their own annotators</a>, or configure and use pre-existing 
-        annotators.  Some annotators are <a href="annotators.html">available as part of this project</a>;
+        annotators.  Some annotators are <a href="sandbox.html#uima-addons-annotators">available as part of this project</a>;
         others are contained in <a href="external-resources.html">various repositories</a> on the internet.
       </p>
         
@@ -121,8 +121,8 @@
         for use by other web services.
       </p>
       
-      <p>The <a href="sandbox.html">sandbox</a> is a place where new ideas
-        are developed for potential incorporation into the project.
+      <p>The <a href="sandbox.html">Addons and Sandbox</a> is for Addons (Annotators and other things) for UIMA, and
+        a place where new ideas are developed for potential incorporation into the project.
       </p>
       
 		</section>
@@ -131,6 +131,9 @@
 
 			<p>
 				<ul>
+          <li>
+            <a href="news.html#29 August 2011">29 August 2011: <strong>Apache UIMA Addons 2.3.1 released</strong></a>
+          </li>
 				  <li>
 				    <a href="news.html#22 March 2011">22 March 2011: <strong>Apache UIMA AS 2.3.1 released</strong></a>
 				  </li>

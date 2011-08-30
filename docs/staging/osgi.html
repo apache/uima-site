@@ -96,7 +96,7 @@
                 </div>
                           <div class="navBarItem">      <a href="../toolsServers.html">Tools & Servers</a>
                 </div>
-                          <div class="navBarItem">      <a href="../sandbox.html">Sandbox</a>
+                          <div class="navBarItem">      <a href="../sandbox.html">Addons and Sandbox</a>
                 </div>
                           <div class="navBarItem">      <a href="../external-resources.html">External Resources</a>
                 </div>
@@ -182,14 +182,14 @@
                                     <p>OSGi is not supported directly by the UIMA framework; the framework has no knowledge or interfaces for making use of it.
       However, components are being packaged as OSGi bundles:  in particular, there are Eclipse Plugin tools that are packaged this way.
       The Eclipse plugins are organized further using the Eclipse infrastructure for Features and Update Sites.</p>
-                                                <p>Some of the addon annotators are being packaged experimentally as OSGi bundles.  Due to UIMA not knowing about OSGi,
+                                                <p>The addon annotators are being packaged experimentally as OSGi bundles.  Due to UIMA not knowing about OSGi,
       the current experimental packaging includes the uimaj-core jar in the package; the expected use of this bundle 
-      is as an embedded UIMA application, running just the one annotator that is being bundled (because other annotators in other
-      bundles will not be "visible" in the class-loading sense)</p>
+      is as an embedded UIMA "application", running just the one annotator that is being bundled (because other annotators in other
+      bundles will not be "visible" in the class-loading sense).</p>
                                                 <p>Users wanting to develop more advance deployments, such as UIMA pipelines containing multiple annotators, can use
       these bundles and the maven processes that build them, as examples.  They will need to create special bundles of their
-      own, combining the UIMA framework, and all of the jars for the multiple annotators (and their dependencies), and again,
-      use that collection as a UIMA application.</p>
+      own, combining the UIMA framework and all of the jars for the multiple annotators (and their dependencies) into one bundle. 
+      This would then be used as a UIMA application.</p>
                                                       <table class="subsectionTable">
         <tr><td>
        

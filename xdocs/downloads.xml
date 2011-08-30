@@ -70,7 +70,7 @@ you may find the "incubating" level components
 deployed on the Apache Incubator repository: 
 <a href="http://people.apache.org/repo/m2-incubating-repository/">
 http://people.apache.org/repo/m2-incubating-repository/</a>.  
-See some of the sandbox POMs for
+See some of the Addons POMs for
 examples on how to reference the UIMA jars in Maven.
 </p>
 
@@ -105,9 +105,10 @@ Other mirrors: <select name="Preferred">
 <section name="Latest Official Releases">  
   <p>Note: As of release 2.3.0, the CAS Editor and the Pear packaging maven plugin are now part of the UIMA Java framework and SDK.</p>
 
-  <p>Note: So far only the base UIMA Java SDK and UIMA AS have been released at the 2.3.1 level.  As other components
+  <p>Note: So far, the base UIMA Java SDK and UIMA-AS and the UIMA Addons have been released at the 2.3.1 level.  
+  As other components
   are released that go with this level, we'll add them here.</p>
-  <subsection name="Apache UIMA Version 2.3.1 - Release Date: UIMA Java SDK: 10-Dec-2010    UIMA AS: 22-Mar-2011">
+  <subsection name="Apache UIMA Version 2.3.1 - Release Date: UIMA Java SDK: 10-Dec-2010    UIMA AS: 22-Mar-2011   UIMA Addons: 29-Aug-2011">
     <insertDownloads version="2.3.1"/>
   </subsection>
 

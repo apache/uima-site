@@ -33,6 +33,24 @@
 		<section name="Apache UIMA News">
       <subsectionToc/>
 
+      <subsection name='29 August 2011' date="29 August 2011" title="UIMA Addons 2.3.1 Released">
+        <p>
+          This release includes most of the projects in the Sandbox.  Those projects there
+          that were ready to be released were moved to a new SVN top node in the 
+          UIMA project, called "addons".  
+        </p>
+          
+          <p>
+          The addons package contains 2 new annotators: Solrcas (for storing CAS objects into an 
+          Apache Solr instance), and AlchemyAPIAnnotator (wraps alchemyapi.com services).  
+          </p>
+          
+          <p>Several fixes and improvements were made to other annotators.
+          Please see the release notes on the <a href="downloads.cgi">downloads</a> page, for a more complete summary
+          and a complete list of changes.
+        </p>       
+      </subsection>
+           
       <subsection name="22 March 2011" date = "22 March 2011" title="Apache UIMA AS 2.3.1 released">
         <p>UIMA AS 2.3.1 is a maintenance release that contains fixes and improvements over UIMA AS 2.3.0.
         Notable updates included in this release: upgrade to ActiveMQ 5.4.1, inclusion of base UIMA 

@@ -14,7 +14,7 @@
                         
             
                         
-                        <title>Apache UIMA - Apache UIMA Sandbox</title>
+                        <title>Apache UIMA - Apache UIMA Addons and Sandbox</title>
         </head>
 
         <body>
@@ -28,7 +28,7 @@
                             </a>
                     </td>
                     <td align='CENTER'>
-                          <div class="pageBanner">Apache UIMA Sandbox</div>
+                          <div class="pageBanner">Apache UIMA Addons and Sandbox</div>
                     </td>
                     <td align='RIGHT'>
                                   <a href="http://www.apache.org">
@@ -95,7 +95,7 @@
                 </div>
                           <div class="navBarItem">      <a href="./toolsServers.html">Tools & Servers</a>
                 </div>
-                          <div class="navBarItem">      <a href="./sandbox.html">Sandbox</a>
+                          <div class="navBarItem">      <a href="./sandbox.html">Addons and Sandbox</a>
                 </div>
                           <div class="navBarItem">      <a href="./external-resources.html">External Resources</a>
                 </div>
@@ -174,31 +174,34 @@
                                                           <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Apache UIMA Sandbox"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Apache UIMA Sandbox</h1></a>
+        <a name="Apache UIMA Addons and Sandbox"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Apache UIMA Addons and Sandbox</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
                                     <p>
-The Apache UIMA™ sandbox is a workspace that is open to all UIMA committers and developers who would like to 
-contribute code and join the UIMA developer community.  The sandbox hosts analysis components 
-and tooling around UIMA.  All the components are free to use and licensed under the 
-<a href="license.html">Apache Software License</a>.
+The Apache UIMA™ Sandbox is a workspace that is open to all UIMA committers and developers who would like to 
+contribute code and join the UIMA developer community.  
 </p>
-                                                <p>Components often migrate from here to other parts of the site, over time, as part of the 
+                                                <p>Components often start in the Sandbox and, when ready for release, migrate from here to the Addons or other parts of the site, over time, as part of the 
   process of integration by the Apache community.  
 </p>
-                                                <p>
+                                                <p>The Addons and Sandbox currently host analysis components 
+and tooling around UIMA.  All the components are free to use and licensed under the 
+<a href="license.html">Apache Software License</a>.
 A list of proposed analysis components and tooling for UIMA is available at the 
 <a href="http://cwiki.apache.org/UIMA/uima-sandbox-components.html">UIMA wiki</a> and can be discussed there. 
 </p>
                                                 <p>
-You can access the UIMA sandbox in the SVN repository at 
+You can access the UIMA Addons in the SVN repository at 
+<a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/">
+http://svn.apache.org/repos/asf/uima/addons/trunk/</a>. 
+Likewise, you can access the UIMA sandbox in the SVN repository at 
 <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/">
 http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>. 
 </p>
                                                 <p>
- The list below shows the currently available components of the UIMA sandbox.
- Many of these components are annotators, and are released - see the 
+ The list below shows the currently available components of the UIMA Addons.
+ Many of these components are annotators.  The Addons projects are released - see the 
  <a href="downloads.cgi">download</a> page.
 </p>
                             </blockquote>
@@ -208,11 +211,11 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
                                         <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="UIMA sandbox components"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;UIMA sandbox components</h1></a>
+        <a name="UIMA Addons components"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;UIMA Addons components</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <h4>Annotators and Consumers</h4>
+                                    <h4 id="uima-addons-annotators">Annotators and Consumers</h4>
                                                 <ul>
 		  <li><a href="#whitespace.tokenizer">Whitespace Tokenizer Annotator</a></li>
 		  <li><a href="#snowball.annotator">Snowball Annotator</a></li>
@@ -225,7 +228,6 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
       <li><a href="#configurable.feature.extractor.annotator">Configurable Feature Extractor Annotator</a></li>      <li><a href="#tika.annotator">Tika Annotator</a></li>
       <li><a href="#lucas.consumer">Lucene CAS indexer (Lucas)</a></li>
       <li><a href="#alchemy.annotator">AlchemyAPI Annotator</a></li>
-      <li><a href="#rdfcas.consumer">RDF CAS Consumer</a></li>      
       <li><a href="#solrcas.consumer">Solr CAS Consumer (Solrcas)</a></li>
     </ul>
                                                 <h4>Servers</h4>
@@ -240,7 +242,6 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
                                                 <h4>Miscellaneous</h4>
                                                 <ul>
       <li><a href="#fs.variables">Feature Structure Variables</a></li>
-      <li><a href="#gale.multimodal.example">GALE Multi-Modal Example</a></li>
     </ul>
                                                 <p>These are described in more detail below.</p>
                                                 <br />
@@ -312,7 +313,7 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
 		  detects entities like email addresses, URLs, phone numbers, zip codes or any other entity 
 		  based on regular expressions and concepts. For each entity that was detected an annotation
 		  can be created or an already existing annotation can be updated with feature values.
-		   <a href="downloads/sandbox/RegexAnnotatorUserGuide/RegexAnnotatorUserGuide.html">
+		   <a href="d/uima-addons-current/RegularExpressionAnnotator/RegexAnnotatorUserGuide.html">
 		  Click here to access the user documentation</a>.
 		  The Java source of the annotator can be accessed in the SVN repository at 
 		  <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/RegularExpressionAnnotator">
@@ -339,7 +340,7 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
 		  <a class="external" href="http://ant.apache.org/">Apache ANT</a> task. With this task, 
 		  users are able to build their components from the source and then package them 
 		  automatically as UIMA PEAR package. 
-      <a href="downloads/sandbox/PearPackagingAntTaskUserGuide/PearPackagingAntTaskUserGuide.html">
+      <a href="d/uima-addons-current/PearPackagingAntTask/PearPackagingAntTaskUserGuide.html">
 		  Click here to access the user documentation</a>.
 		  The Java source of the PEAR packaging task can be accessed in the SVN repository at 
 		  <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/PearPackagingAntTask">
@@ -366,7 +367,7 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
 		  during a component build using a custom Maven plugin.
 		  With this plugin, users are able to build their components from the source and then package them 
 		  automatically as UIMA PEAR package. 
-		  <a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tools/tools.html#ugr.tools.pear">
+		  <a href="d/uimaj-2.3.1/tools.html#ugr.tools.pear">
 		  Click here to access the user documentation</a>.
 		  The Java source of the PEAR packaging Maven plugin can be accessed in the SVN repository at 
 		  <a class="external" href="http://svn.apache.org/repos/asf/uima/uimaj/trunk/PearPackagingMavenPlugin">
@@ -391,7 +392,7 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
 		  The Dictionary Annotator is an Apache UIMA analysis engine that creates annotations based on word lists 
 		  that are compiled to simple dictionaries. The output annotation type for the annotations that are created
 		  and the input annotation type where the dictionary lookup is executed on, can be specified individually.
-		   <a href="downloads/sandbox/DictionaryAnnotatorUserGuide/DictionaryAnnotatorUserGuide.html">
+		   <a href="d/uima-addons-current/DictionaryAnnotator/DictionaryAnnotatorUserGuide.html">
 		  Click here to access the user documentation</a>.
 		  The Java source of the annotator can be accessed in the SVN repository at 
 		  <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/DictionaryAnnotator">
@@ -416,7 +417,7 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
 		  The Feature Structure variables project allows you to create named feature structure instances.
 		  It further allows you to refer to individual feature structures or annotations across annotators, 
 		  without creating a special index.
-      <a href="downloads/sandbox/FsVariablesUserGuide/FsVariablesUserGuide.html">
+      <a href="d/uima-addons-current/FsVariables/FsVariablesUserGuide.html">
       Click here to access the user documentation</a>.
 		  The Java source of the project can be accessed in the SVN repository at 
 		  <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/FsVariables">
@@ -445,7 +446,7 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
           For each Token it updates the posTag field with the part of speech tag. 
           Model training is happening outside of UIMA, the tagger just receives statistical information from 
           a model file which is passed to the tagger along with some further parameters through a properties file.
-          <a href="downloads/sandbox/hmmTaggerUsersGuide/hmmTaggerUsersGuide.html">
+          <a href="d/uima-addons-current/Tagger/hmmTaggerUsersGuide.html">
       Click here to access the user documentation</a>. 
           The Java source of the annotator can be accessed in the SVN repository at 
           <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/Tagger">
@@ -546,7 +547,7 @@ document; used by the FileSystemCollectionReader</dd>
             integrations for some Lucene token filters. Furthermore, you can
             deploy your own token filters. The mapping between UIMA annotations and Lucene
             tokens and token filtering is configured by a xml mapping file.</p>
-                                                <p><a href="downloads/sandbox/LuceneCASConsumerUserGuide/LuceneCASConsumerUserGuide.html">
+                                                <p><a href="d/uima-addons-current/Lucas/LuceneCASConsumerUserGuide.html">
       Click here to access the user documentation</a>.
           The Java source of the consumer can be accessed in the 
             <a href="http://svn.apache.org/repos/asf/uima/addons/trunk/Lucas">
@@ -574,7 +575,7 @@ document; used by the FileSystemCollectionReader</dd>
 			service. The Simple Server is implemented as a Java Servlet,
 			and can be deployed into any Servlet container (such as
 			Apache Tomcat or Jetty).</p>
-                                                <p><a href="downloads/sandbox/simpleServerUserGuide/simpleServerUserGuide.html">
+                                                <p><a href="d/uima-addons-current/SimpleServer/simpleServerUserGuide.html">
       Click here to access the user documentation</a>.
 			The Java source of the annotator can be accessed from the
 			SVN repository at
@@ -641,7 +642,7 @@ document; used by the FileSystemCollectionReader</dd>
 	  Additionally, ConceptMapper can be configured to use any tokenizer annotator, 
       enabling tokenization of the dictionary identically with the input text.
     </p>
-                                                <p><a href="downloads/sandbox/ConceptMapperAnnotatorUserGuide/ConceptMapperAnnotatorUserGuide.html">
+                                                <p><a href="d/uima-addons-current/ConceptMapper/ConceptMapperAnnotatorUserGuide.html">
       Click here to access the user documentation</a>.</p>
                             </blockquote>
         </td></tr>
@@ -671,7 +672,7 @@ document; used by the FileSystemCollectionReader</dd>
       FESL's rule semantics allow the precise identification of the information that 
       is required to be extracted by specifying precise multi-parameter criteria. 
     </p>
-                                                <p><a href="downloads/sandbox/CFE_UG/CFE_UG.html">
+                                                <p><a href="d/uima-addons-current/ConfigurableFeatureExtractor/CFE_UG.html">
       Click here to access the user documentation</a>.</p>
                             </blockquote>
         </td></tr>
@@ -692,28 +693,7 @@ document; used by the FileSystemCollectionReader</dd>
     provide text enrichment facilities like categorization, entity extraction,
     language identification, keyword extraction, concept tagging etc.
     </p>
-                                                <p><a href="downloads/sandbox/AAA_UG/AlchemyAPIAnnotatorUserGuide.html">
-      Click here to access the user documentation</a>.</p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable" id='rdfcas.consumer'>
-        <tr><td>
-       
-       
-       
-          <a name="RDF CAS Consumer">
-            <h2>RDF CAS Consumer
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>The RDF CAS Consumer is responsible of taking a CAS view and
-    write it to a file in a RDF format; this is usefult to plug UIMA
-    pipelines with RDF backed systems (using ontologies, reasoners, etc.).
-    </p>
-                                                <p><a href="downloads/sandbox/RDF_CC/RDFCASConsumerUserGuide.html">
+                                                <p><a href="d/uima-addons-current/AlchemyAPIAnnotator/AlchemyAPIAnnotatorUserGuide.html">
       Click here to access the user documentation</a>.</p>
                             </blockquote>
         </td></tr>
@@ -735,8 +715,49 @@ document; used by the FileSystemCollectionReader</dd>
     in order to provide serach capabilities on top of UIMA pipelines with
     the Apache Solr search server.
     </p>
-                                                <p><a href="downloads/sandbox/Solrcas/SolrcasUserGuide.html">
+                                                <p><a href="d/uima-addons-current/Solrcas/SolrcasUserGuide.html">
       Click here to access the user documentation</a>.</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="UIMA Sandbox components"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;UIMA Sandbox components</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>These components are only available in SVN at this time.</p>
+                                                <h4>Annotators and Consumers</h4>
+                                                <ul>
+      <li><a href="#rdfcas.consumer">RDF CAS Consumer</a></li>      
+    </ul>
+                                                <h4>Miscellaneous</h4>
+                                                <ul>
+      <li><a href="#gale.multimodal.example">GALE Multi-Modal Example</a></li>
+    </ul>
+                                                <p>These are described in more detail below.</p>
+                                                <br />
+                                                      <table class="subsectionTable" id='rdfcas.consumer'>
+        <tr><td>
+       
+       
+       
+          <a name="RDF CAS Consumer">
+            <h2>RDF CAS Consumer
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>The RDF CAS Consumer is responsible of taking a CAS view and
+    write it to a file in a RDF format; this is usefult to plug UIMA
+    pipelines with RDF backed systems (using ontologies, reasoners, etc.).
+    </p>
                             </blockquote>
         </td></tr>
     </table>
@@ -765,9 +786,9 @@ document; used by the FileSystemCollectionReader</dd>
     cross-reference links back to the original data.
    </p>
                                                 <p> The type system descriptors can be accessed from the SVN repository at
-			<a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/GaleMultiModalExample">
-				http://svn.apache.org/repos/asf/uima/sandbox/trunk/GaleMultiModalExample
-			</a>.
+      <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/GaleMultiModalExample">
+        http://svn.apache.org/repos/asf/uima/sandbox/trunk/GaleMultiModalExample
+      </a>.
    </p>
                             </blockquote>
         </td></tr>

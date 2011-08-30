@@ -95,7 +95,7 @@
                 </div>
                           <div class="navBarItem">      <a href="./toolsServers.html">Tools & Servers</a>
                 </div>
-                          <div class="navBarItem">      <a href="./sandbox.html">Sandbox</a>
+                          <div class="navBarItem">      <a href="./sandbox.html">Addons and Sandbox</a>
                 </div>
                           <div class="navBarItem">      <a href="./external-resources.html">External Resources</a>
                 </div>
@@ -295,7 +295,7 @@ our svn tree, in a top level directory named "build".</p>
      kinds of builds.  For instance, some projects use Docbook, 
      some projects are "distribution" projects that serve to build
      our binary distribution, some projects build PEAR artifacts 
-     (e.g., many of our sandbox projects), etc.</p>
+     (e.g., many of our Addons projects), etc.</p>
                                                 <p>Common support for each of these kinds of project builds is
       kept in the common parent POM, but in a profile, which is 
       only activated for that kind of project.  The activation
@@ -703,7 +703,7 @@ our svn tree, in a top level directory named "build".</p>
     The UIMA Project, in addition to the main frameworks (the UIMA SDK and the UIMA-AS addon), 
     has Annotators and other components and tools 
     (such as the SimpleServer) that it releases.  These in the past have been released as a big
-    assembly we called the Sandbox, but now are are being supported as individual items.
+    assembly we called the Addons or Sandbox, but now are are being supported also as individual items.
   </p>
                                                 <p>
     Two kinds of packaging for these are available, chosen by specifying one of the following parent-poms:
@@ -713,7 +713,7 @@ our svn tree, in a top level directory named "build".</p>
   </p>
                                                 <p>
     The individual Annotators are mostly packaged as 
-    <a href="http://uima.apache.org/downloads/releaseDocs/2.3.0-incubating/docs/html/references/references.html#ugr.ref.pear">
+    <a href="d/uimaj-2.3.1/references/references.html#ugr.ref.pear">
       PEAR</a> files, which are the UIMA standard for annotator component packaging and distribution.
     The Pear is generated using the PearPackagingMavenPlugin, which generates automatically a
     conventional Pear Installation Descriptor, from the information in the project.    
