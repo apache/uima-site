@@ -32,7 +32,7 @@
       
     <section name="OSGi packaging and support">
       
-      <p>OSGi is not supported directly by the UIMA framework; the framework has no knowledge or interfaces for making use of it.
+      <p>OSGi is not supported directly by the UIMA&#0153; framework; the framework has no knowledge or interfaces for making use of it.
       However, components are being packaged as OSGi bundles:  in particular, there are Eclipse Plugin tools that are packaged this way.
       The Eclipse plugins are organized further using the Eclipse infrastructure for Features and Update Sites.</p>
       
