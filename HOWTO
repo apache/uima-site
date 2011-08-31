@@ -26,8 +26,12 @@ How do I change the site content and generate ?
   **      add downloads information
   
 1.1) Do not put externally generated artifacts, like javadocs in xdocs/;
-     put these directly in docs/
+     put these directly into people.a.o: /x1/www/uima.apache.org/d/ 
+     following the subdirectory conventions you see there.
   
+1.2) Add trademark symbol to the first use of UIMA on a new page,
+     by following it with &#0153;
+      
 2) Run the default ant target to generate new html
 
     $ ant
@@ -44,7 +48,6 @@ How do I deploy site to the internet?
 
 Deployment is done as soon as the SVN commit happens, because
 the site is setup to use svnpubsub.
-
 
 How do I handle images?
 -----------------------
