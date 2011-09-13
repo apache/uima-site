@@ -1,0 +1,56 @@
+Board report for Apache UIMA, for September 2011.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Releases:
+Since last report, the Addons package for UIMA was released
+(http://uima.apache.org/news.html#29 August 2011).  The addons package 
+contains 2 new annotators: 
+  Solrcas (for storing CAS objects into an Apache Solr instance), and 
+  AlchemyAPIAnnotator (wraps alchemyapi.com services).
+
+Development:
+A new contributor, Peter Klügl contributed a UIMA tool to the sandbox,
+called TextMarker. 
+
+Nicolas Hernandez has set up a French language portal to all things UIMA, and
+contributed a French language models for the Hidden Markov Model (HMM)
+Tagger annotator, and generally improved that annotator.
+The French language models are awaiting getting some additional permissions 
+before they are put into SVN. 
+
+Some attempts to package UIMA Annotators as OSGi bundles led to renewed
+investigations toward this, and some progress was made in identifying
+approaches and tools, including Maven integration / support.
+
+There continue to be lots of incremental Cas Editor fixes, mostly driven
+by user feedback and the development of a new Cas Editor based plugins
+at the Apache Incubator OpenNLP project.
+
+UIMA-AS had a few bug fixes, and some new features, including exposing
+per-component statistics (for tuning) from UIMA aggregates for each CAS.
+
+Community:
+No changes.
+ 
+Issues: No Board level issues at this time
+
+Trademarks/Branding: 
+  Previous work to add TM started (at some point in time) to fail to display.
+  With infra's help, traced this to the fact that Apache Web sites
+  are now being forced to display using UTF-8.  We adjusted our build to 
+  accomodate this change.
+
+ Branding checklist:
+   no change from previous report:
+  Project Website Basics - done
+  Website Navigation Links - done
+  Trademark Attributions - done
+  Logos and Graphics - not done
+  Project Metadata - done
+  Read PMC Branding Responsibilities - partially done.  Need to get confirmation
+    that all PMC members have read this.
+  
+  
