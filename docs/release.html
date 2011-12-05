@@ -363,15 +363,7 @@ A previous version of this page, with the methods we used while in the incubator
 		            is updated to include the internal Jira version number, so the 
 		            right report is generated.</p>
 		        </li>
-        <li>
-          Do a trial build of the release candidate:
-          <pre>cd **directory for doing the release** e.g. uimaj
-mvn install -Papache-release</pre>
-          <p>The <code>-Papache-release</code> is used to have the build mimic the 
-             build actions that would be taken when the release plugin is running
-             the release build.</p>
-        </li>
-		  </ul>
+ 		  </ul>
 		</p>
                             </blockquote>
         </td></tr>
@@ -443,6 +435,33 @@ mvn install -Papache-release</pre>
       should be a copy of the SVN tag for that artifact, and once unzipped, should be buildable,
       using <code>mvn install</code>.
     </p>
+                                                <p>Steps:
+    <ul>
+           <li>Make sure all changes are checked into SVN.  Then check out from SVN the project(s)
+        you'll be building, into a new "build" location, and do all the building from there.</li>
+        <li>Purge your local maven repository of artifacts being built by running in the 
+        top level directory you'll be building from:
+        <br /><br />
+          <code>mvn dependency:purge-local-repository</code><br /><br />
+          Note that this will immediately re-resolve the dependencies from the maven repositories
+          you have configured. 
+        </li>
+        
+        <li>
+          Do a trial build of the release candidate:
+          <pre>cd **directory for doing the release** 
+mvn install -Papache-release</pre>
+          <p>The <code>-Papache-release</code> is used to have the build mimic the 
+             build actions that would be taken when the release plugin is running
+             the release build.</p>
+        </li>
+        <li><code>mvn release:prepare -DautoVersionSubmodules</code>
+        <ul><li>take the defaults for the questions, except add -rcN (e.g. -rc1) for the 
+        name of the svn tag - to allow for multiple release candidates</li></ul>
+        </li>
+        <li><code>mvn release:perform</code></li>
+    </ul> 
+    </p>
                                                 <p>Normally, everything built is uploaded to the Nexus Staging repository.  However, for the 
     (large) distribution objects, such as the source and binary distributions for UIMA Java SDK etc.,
     the "deploy" step is skipped.  These artifacts, instead of being "distributed" using the
@@ -504,13 +523,18 @@ mvn install -Papache-release</pre>
       another release candidate; depending on how far through the release process you've progressed.
     </p>
                                                 <p style="margin-left:3em"><code>[mvn release:prepare]</code> If you've just done release:prepare,
-    you can reset things back to as they were before (almost) that command by issuing
-    <code>mvn release:rollback</code>.  The "almost": you have to manually svn delete the tag for the
-    release candidate (or name the next try as another release candidate).
+    you can reset things back to as they were before that command by issuing
+    <code>mvn release:rollback</code>.  Check to confirm that the svn tag for the
+    release candidate is deleted; if not, remove it manually.
     </p>
                                                 <p style="margin-left:3em"><code>[mvn release:perform]</code> If you've done a release:perform, to
-    reset the source, you have to change the &lt;version&gt;x.y.z-SNAPSHOT&gt; back to their previous value.
-    You can use Eclipse's search/replace to do this, or the mvn versions plugin.  If you've 
+    reset the source, try doing the release:rollback; this may work if you haven't done a release:clean.
+    </p>
+                                                <p style="margin-left:3em">Otherwise, 
+    you have to change the &lt;version&gt;x.y.z-SNAPSHOT&gt; back to their previous value.
+    You can use Eclipse's search/replace to do this, or the mvn versions plugin.
+    </p>
+                                                <p style="margin-left:3em">If you've 
     "closed" the Nexus repo - you have to drop it.  If you haven't, you can just re-run the 
     release:perform when you're ready, and that will overwrite the staging repo data in Nexus.  But see
     the next tip.
