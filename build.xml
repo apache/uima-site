@@ -79,12 +79,13 @@
   	       base website's framework using the 
   	       build-ip-clearances.xml ant script instead -->
       <anakia basedir="${docs.src}" destdir="${docs.dest}/"
-           extension=".html" style="./site.vsl"
+           extension=".html" style="xdocs/stylesheets/site.vsl"
            projectFile="stylesheets/project.xml"
            excludes="**/stylesheets*/** **/downloads/** empty.xml **/ip-clearances/**"
            includes="**/*.xml"
            lastModifiedCheck="true"
-           templatePath="xdocs/stylesheets">
+           templatePath="xdocs/stylesheets"
+           velocityPropertiesFile="xdocs/stylesheets/velocity.properties">
       </anakia>
   	
   	  <!-- convert x99 (tm) to & trade ; -->
