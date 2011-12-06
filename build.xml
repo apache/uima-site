@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 
     Copyright 2006 The Apache Software Foundation
@@ -89,10 +89,11 @@
       </anakia>
   	
   	  <!-- convert x99 (tm) to & trade ; -->
-  	  <!-- replace dir="${docs.dest}/" token="™" value="&amp;trade;" summary="true">
+  	  <replace dir="${docs.dest}/" token="&#0153;" value="&amp;trade;" summary="true"
+               encoding="UTF-8">
   	  	<include name="*.html"/>
         <include name="staging/*.html"/>
-  	  </replace-->
+  	  </replace>
 
       <!--copy todir="${docs.dest}/images" filtering="no">
           <fileset dir="${docs.src}/images">
