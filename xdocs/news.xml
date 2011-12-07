@@ -32,6 +32,26 @@
 
 		<section name="Apache UIMA News">
       <subsectionToc/>
+news.html#07 December 2011"
+
+      <subsection name="07 December 2011" date = "07 December 2011" title="Apache UIMA Java SDK 2.4.0 released">
+          <p>This release only has the Apache UIMA&#0153; Java SDK, and does not yet have the other
+          components.  It is backwards compatible with previous releases, except for an API change in the 
+          JMX tooling, and a redesign of the Eclipse plugin for editing CASes.
+          </p>
+          
+          <p>Besides some bug fixes, there is some tooling enhancement.  A new Eclipse plugin hooks into Eclipse's "launching" capability to support launching
+          annotators more easily from Eclipse; see the <a href="../d/uimaj-2.4.0/tools.html">Tools</a> manual for information.
+          
+          The Cas Editor Eclipse plugin has been substantially enhanced; please see the <a href="../d/uimaj-2.4.0/tools.html">Tools</a> manual
+          for more information.</p>
+          
+        <p>
+           
+          Please see the release notes on the <a href="downloads.cgi">downloads</a> page, for a more complete summary
+          and a complete list of changes.
+        </p>       
+      </subsection>
 
       <subsection name='29 August 2011' date="29 August 2011" title="UIMA Addons 2.3.1 Released">
         <p>
