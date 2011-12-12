@@ -6,7 +6,7 @@ UIMA Oasis Standard.
 
 Releases:
 Since last report, UIMA Java SDK 2.4.0 was released
-(http://http://uima.apache.org/news.html#07 December 2011).
+(http://uima.apache.org/news.html#07 December 2011).
 This release contained a reworking of the Cas Editor, plus 
 a year's worth of accumulated bug fixes.  
 
