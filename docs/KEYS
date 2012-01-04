@@ -1,4 +1,4 @@
-This file contains the PGP keys of various developers.
+﻿This file contains the PGP keys of various developers.
 
 Users: pgp < KEYS
        gpg --import KEYS
@@ -406,6 +406,12 @@ vQPfg5Ys3XTipJT03+XNHMgcoQ5x+QUpLaABMzuErHNsRw/fywnbWJiqOU07NARD
 J9hZ
 =8I26
 -----END PGP PUBLIC KEY BLOCK-----
+pub   4096R/A9DD3D1F 2012-01-03
+uid                  Bhavani Iyer (UIMA Release Key) <bhavani10@gmail.com>
+sig 3        A9DD3D1F 2012-01-03  Bhavani Iyer (UIMA Release Key) <bhavani10@gmail.com>
+sub   4096R/A154AB63 2012-01-03
+sig          A9DD3D1F 2012-01-03  Bhavani Iyer (UIMA Release Key) <bhavani10@gmail.com>
+
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2.0.17 (MingW32)
 
