@@ -239,7 +239,7 @@
     you can use the <code>repo-browser</code> right-click menu option to do this.</p>
     </li>
     <li><p>
-      <code>cd to c:\myWorkingDirectoryForUimaj\uimaj</code> or <br />
+      <code>cd to c:\myWorkingDirectoryForUimaj\</code> or <br />
       <code>cd to c:\myWorkingDirectoryForUima-as\uima-as</code>.</p>
     </li>
     <li><p><code>mvn install</code></p>
@@ -263,11 +263,7 @@
     also are put into your local Maven repository.  
     Docbook output is placed in each project's target/site/d directory.
   </p>
-                                                <p>For multi-module projects (e.g. uimaj and uima-as), there is a module named
-     uimaj-distr or uima-as-distr, which contains the binary distribution build result.
-     You may want to retrieve the "lib" directory containing the built Jars; to do this,
-     go to the xxx-distr/target directory and unzip/untar the binary artifact - in that
-     you will find the lib directory.
+                                                <p>Multi-module builds create the build artifacts (including the binary assembly) in the <code>target</code> folder of their top level project.
   </p>
                             </blockquote>
         </td></tr>
@@ -289,8 +285,8 @@
       Eclipse menu: <code>File -&gt; Import -&gt; Maven -&gt; Existing Maven projects</code>
       to import the project or projects (for multi-module projects) into an Eclipse workspace 
       and set them up for Maven building.</li>
-    <li>To run maven commands on a project from within Eclipse, select the project, right click, and pick <code>Run as</code>
-      and then select mvn install (or other choice as you wish).</li>
+    <li>To run Maven commands on a project from within Eclipse, select the project, right click, and pick <code>Run as</code>
+      and then select <code>mvn install</code> (or other choice as you wish).</li>
   </ol>
                                                 <p class="note"><big><b>Help! I'm getting compile errors (class not found) in Eclipse!</b></big>  
     If your Maven build generates sources (e.g., you have some XMLBeans defined), 
@@ -337,7 +333,7 @@
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>The PDF docbook generation defaults to a paper type of USletter.  You may override this
-  by specifying the maven property "pdfPaperType".  You may specify this on the command line
+  by specifying the Maven property "pdfPaperType".  You may specify this on the command line
   as follows:
   <code>mvn -DpdfPaperType=A4 package</code>
   </p>
@@ -364,8 +360,8 @@
 (Note: this kludgy procedure needs improvement)
 </p>
                                                 <p>
-If you get a failure messsage, the details of the failures are logged in a file 
-for each project which has a failue, in the folder target/surefire-reports.  
+If you get a failure message, the details of the failures are logged in a file 
+for each project which has a failure, in the folder target/surefire-reports.  
 In Eclipse, you can use the Search facility to search Files in the workspace of type "*.txt" 
 for the string "&lt;&lt;&lt; FAILURE!" to locate all the failure messages.
 </p>
