@@ -11,16 +11,19 @@ UIMA-AS (Asynchronous Scaleout) is being worked on for release.
 
 Activity:
 Typical mailing list activities for this quarter.  We did notice that
-the approximate downloads (as reported here: 
+the approximate downloads (as reported here:
 http://people.apache.org/~vgritsenko/stats/projects/uima.html#Downloads-N1008F)
 seems to have doubled in the last 2 quarters.   
 
+The Lucene project has a new adapter that enables using UIMA annotators for
+tokenizing the stream, in their trunk (not yet released).
+
 Community:
-We added Peter Klügl to the PMC. 
+Peter Klügl joined the PMC.
  
 Issues: No Board level issues at this time
 
-Trademarks/Branding: 
+Trademarks/Branding:
   This is now complete:
   Branding checklist:
     Project Website Basics - done
@@ -28,5 +31,5 @@ Trademarks/Branding:
     Trademark Attributions - done
     Logos and Graphics - done
     Project Metadata - done
-    Read PMC Branding Responsibilities - done, 
-    all PMC members have confirmed   
+    Read PMC Branding Responsibilities - done,
+    all PMC members have confirmed 
