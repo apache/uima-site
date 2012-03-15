@@ -199,7 +199,8 @@ A previous version of this page, with the methods we used while in the incubator
 	<subsection name='Building The Release Candidate'>
     <p class="note">Prior to releasing, you must do the 
       <a href="one-time-release-setup.html">one-time setup</a>
-      required for releasing
+      required for releasing.  Be sure to use a Java 1.5 level, in order to catch
+      accidental dependencies on later Java features.
     </p>
 		<p>
       We use the maven-release-plugin to do the releasing.  In the prepare phase, it updates the

@@ -32,6 +32,8 @@ under the License.
   <p>
     Here you will find information on how to set up various tools used in working with Apache UIMA&#0153; source code, including:
     <ul>
+      <li>Java - use a 1.5 JVM because UIMA doesn't require any Java that's more recent.  Using a 1.5 Java
+          will help catch errors where you accidentally use some new-to-1.6 Java methods by accident.</li>
       <li><a href="#svn-setup">SVN</a></li>
       <li><a href="#maven-setup">Maven</a></li>
       <li><a href="#eclipse-setup">Eclipse</a></li>
