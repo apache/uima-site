@@ -39,7 +39,7 @@ A previous version of this page, with the methods we used while in the incubator
   
 <p>
   <ul>
-    <li><a href="#Overview">Overview of releasing</a></li>
+    <li><a href="#Release Overview">Overview of releasing</a></li>
 		<li><a href="#Release Discussions - Release Plan">Release Discussions - Release Plan</a></li>
     <li><a href="#Preparing the Jira for the Release">Preparing the Jira for the Release</a></li>
 		<li><a href="#Preparing The Sourcecode For The Release">Preparing The Sourcecode For The Release</a></li>
