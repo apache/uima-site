@@ -66,9 +66,11 @@
       
       <item name="ASF" >
         <item name="License"                href="http://www.apache.org/licenses/"/>
-        <item name="ASF Sponsors"           href="http://apache.org/foundataion/thanks.html"/>
+        <item name="ASF Sponsors"           href="http://www.apache.org/foundation/thanks.html"/>
         <item name="ASF Sponsorship"        href="http://www.apache.org/foundation/sponsorship.html"/>
+        <!--  next line duplicates ASF Sponsors 
         <item name="Thanks"                 href="http://www.apache.org/foundation/thanks.html"/>
+        -->
         <item name="Security"               href="http://www.apache.org/security"/>                             
       </item>      
         

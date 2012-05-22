@@ -35,84 +35,78 @@ under the License.
 
 Here are some links to Apache UIMA&#0153; components available from other places.  If you find other links that
 
-you think should be listed here, please drop us a line on on uima-dev or uima-user.  Similarly,
+you think should be listed here, please drop us a line on our dev or user mailing lists.  Similarly,
 
 if any of the content is out of date or inappropriate, please let us know.
 </p>
 
 <subsection name="OpenNLP Project">
 
-<p>The <a href="http://www.opennlp.org">OpenNLP Project</a> provides the
+<p>The <a href="http://opennlp.apache.org/">OpenNLP Project</a> provides the
 official UIMA integration for the OpenNLP Sentence Detector, Tokenizer, POS Tagger,
 Name Finder, Document Categorizer, Chunker and Parser. 
-The opennlp.uima distribution can be downloaded from the projects
-<a href="https://sourceforge.net/projects/opennlp/files/OpenNLP%20Tools/">download page</a> 
-and includes a sample PEAR which can easily be tested with the Cas Visual Debugger.
+The opennlp.uima distribution includes a sample PEAR which can easily be tested with the Cas Visual Debugger.
 </p>
 
-  <p>OpenNLP has recently moved to the Apache Software Foundation, and can be found
-  in the Apache Incubator, <a href="http://incubator.apache.org/projects/opennlp.html">here</a>.</p>
 </subsection>
 
 <subsection name="UIMA Component Repository at CMU">
 
-<p> The <a href="http://uima.lti.cs.cmu.edu/">UIMA Component Repository at CMU</a> lists
+<p> The <a href="http://uima.lti.cs.cmu.edu/" target="_blank">UIMA Component Repository at CMU</a> lists
 a large number of UIMA components, some of which can be freely downloaded.
 </p>
 </subsection>
 
 <subsection name="JULIE Lab NLP Toolsuite">
-<p>The <a href="http://www.julielab.de/content/view/117/174/">JULIE Lab NLP Toolsuite</a>
+<p>The <a href="http://www.julielab.de/Resources/Software/NLP_Tools.html" target="_blank">JULIE Lab NLP Toolsuite</a>
 consists of a collection of NLP components, some of which are provided as freely available
-UIMA components.  There is also a useful <a href="http://www.julielab.de/content/view/120/176/">
-type system</a> you can use as basis for your own NLP applications.
+UIMA components.  It includes also a 
+<a href="http://www.julielab.de/Resources/Software/UIMA+type+system-p-91.html" target="_blank">type system</a>
+you can use as basis for your own NLP applications.
 </p>
 </subsection>
 
 <subsection name="u-compare.org">
   <p>
-    <a href="http://u-compare.org/"><b>u-compare.org</b></a> provides 
+    <a href="http://u-compare.org/" target="_blank"><b>u-compare.org</b></a> provides 
     a web-based integrated platform for the purpose of       
     sharing and comparing UIMA components and tools, including visualizers and
 utilities, and includes a large set of type-system-compatible UIMA components.
-
-The site is jointly run by three organizations; each of these organizations also
-supports various UIMA components.  The organizations and links to their
-repositories are:
   </p>
-<ul>
-  <li>the <a href="http://www-tsujii.is.s.u-tokyo.ac.jp/">
-  Tsujii Laboratory</a> at the University of Tokyo; <a href="http://www-tsujii.is.s.u-tokyo.ac.jp/uima/">repository</a>.
-  </li>
-  <li>
-    the <a href="http://compbio.uchsc.edu/Hunter_lab/">
+  <p>
+    The site was run mainly by the Tsujii Laboratory at the University of Tokyo.
+    Because the Tsujii lab was closed in 2011, the u-compare site is no longer
+    being updated.  However, it is still up and available for use.
+  </p>
+</subsection>
+
+<subsection name="Center for Computation Pharmacology">
+  <p>
+    The <a href="http://compbio.ucdenver.edu/Hunter_lab/" target="_blank">
   Center for Computational Pharmacology</a> at the University of Colorado School of
-Medicine; <a href="http://bionlp-uima.sourceforge.net/">repository</a> (see BioNLP entry,
+Medicine hosts a <a href="http://bionlp-uima.sourceforge.net/" target="_blank">repository</a> (see BioNLP entry,
 which describes this in more detail).
+  </p>
+</subsection>
 
-  </li>
-  <li>
-    the <a href="http://www.nactem.ac.uk/">
+<subsection name="National Centre for Text Mining (NaCTeM)">
+  <p>  
+    The <a href="http://www.nactem.ac.uk/" target="_blank">
   National Centre for Text Mining (NaCTeM)</a> at the University
-of Manchester; <a href="http://www.nactem.ac.uk/uima_work/">repository</a>.
-
-  </li>
-</ul>
-
-
-
+of Manchester hosts a <a href="http://www.nactem.ac.uk/uima_work/" target="_blank">repository</a>.
+  </p>
 </subsection>
   
 <subsection name="BioNLP Wrappers">
   <p>The Center for Computational Pharmacology at the University of Colorodo
   has wrapped a number of popular bio-informatic annotators as UIMA components, and
   added some supporting additional code and components.  More information is available 
-  at <a href="http://bionlp-uima.sourceforge.net">http://bionlp-uima.sourceforge.net</a>.</p>
+  at <a href="http://bionlp-uima.sourceforge.net" target="_blank">http://bionlp-uima.sourceforge.net</a>.</p>
   
 </subsection>
 
 <subsection name="Behemoth">
-<p><a href="https://github.com/jnioche/behemoth">Behemoth</a> is an Apache Licensed open source 
+<p><a href="https://github.com/jnioche/behemoth" target="_blank">Behemoth</a> is an Apache Licensed open source 
 platform for large scale document processing which allows deploying UIMA applications
 within Hadoop.
 </p>
@@ -179,6 +173,7 @@ from <a href="http://www.digitalpebble.com/resources.html">the resource page</a>
 
 </section>
 
+<!-- removed 5/2012 - alphaworks no longer there
 <section name="UIMA Applications">
 
 <subsection name="IBM Semantic Search Package">
@@ -188,6 +183,7 @@ Semantic Search for Apache UIMA</a>.
 </subsection>
 
 </section>
+ -->
 
 </body>
 </document>
