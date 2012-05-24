@@ -303,11 +303,11 @@ document; used by the FileSystemCollectionReader</dd>
 	<subsection name='OpenCalais Annotator' id="opencalais.annotator">
 		<p>	  
 		  The OpenCalais Annotator component wraps the 
-		  <a class="external" href="http://www.opencalais.com/Overview">OpenCalais</a>
+		  <a class="external" href="http://www.opencalais.com">OpenCalais</a>
 		  web service and makes the OpenCalais analysis results available in UIMA. OpenCalais can detect a large variety
 		  of entities, facts and events like for example Persons, Companies, Acquisitions, Mergers, etc.
 		  For details about the OpenCalais analytics and the license to use the service, please refer to the
-		  to the <a class="external" href="http://www.opencalais.com/Overview">OpenCalais</a> website.
+		  to the <a class="external" href="http://www.opencalais.com">OpenCalais</a> website.
           The Java source of the annotator can be accessed in the SVN repository at 
           <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/OpenCalaisAnnotator">
           http://svn.apache.org/repos/asf/uima/addons/trunk/OpenCalaisAnnotator</a>.
