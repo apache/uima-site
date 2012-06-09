@@ -1,0 +1,25 @@
+Board report for Apache UIMA, for June 2012.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Releases:
+No releases since last report (except for some build tooling).
+
+Activity:
+Typical mailing list activities for this quarter. 
+Bug fixes and improvements are actively being done to both
+UIMA base SDK and UIMA-AS.  Work continues on the TextMarker project 
+in the sandbox.  A new project has been added to the sandbox for 
+UIMA components running on the Bulk Synchronous Parallel (BSP) 
+programming model. We are considering a proposal to bring a 
+contribution, uimaFIT, into the project.
+
+We hope to have the next release in the next Quarter, of UIMA-AS (probably
+based on a next release of UIMA SDK), and of UIMA-C++.
+ 
+Community:
+No changes
+ 
+Issues: No Board level issues at this time
