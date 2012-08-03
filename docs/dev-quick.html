@@ -258,6 +258,106 @@ to your local maven repository, do the following:
         </p>
       </td></tr>
     </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Checkout and Build UIMA C++ SDK"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Checkout and Build UIMA C++ SDK</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>
+Checkout the source code as follows:
+<ul>
+<li><code>svn checkout https://svn.apache.org/repos/asf/uima/uimacpp/trunk /myWorkingCopyUimacpp</code></li>
+</ul>
+</p>
+                                                <p>
+UIMACPP runtime prerequisites are APR, ICU, Xerces-C, ActiveMQ-cpp,
+APR-Util and a JDK for building the JNI interface. The SDK also
+requires doxygen for building the documentation.
+</p>
+                                                <p>
+To build the SDK, all prerequisites need to be built from source. 
+Alternatively UIMACPP can be built and installed on a machine with all the prerequisites available in system directories. 
+In this case the prerequisites can be installed from binary distributions.
+</p>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Building on Unix">
+            <h2>Building on Unix
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+To build and install on a machine with prerequisites available in system directories:
+</p>
+                                                <ul>
+<li><code>cd /myWorkingCopyUimacpp</code></li>
+<li><code>./configure --with-jdk=location_of_jni.h [other options]</code></li>
+<li><code>make</code></li>
+<li><code>make check</code></li>
+</ul>
+                                                <p>
+For a full SDK build,
+<ul>
+<li>
+<code>./configure --with-apr=loc_of_apr_install --with-icu=loc_of_icu_install --with-xerces=loc_of_xerces_install --with-activemq=loc_of_amq_install --with-apr-util=loc_of_apr-util_install</code>
+</li>
+<li><code>make install</code></li>
+<li><code>make sdk TARGETDIR="loc_of_sdk_tree [clean]"</code></li>
+</ul>
+</p>
+                                                <p>
+For a build of UIMACPP without UIMA-AS support, specify the option
+<code>--without-activemq</code>. The options <code>--with-activemq</code> and <code>--with-apr-util</code> can be left out.
+</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Building on Windows">
+            <h2>Building on Windows
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+To build an SDK all prerequisite components, APR, ICU, Xerces-C,
+ActiveMQ-cpp and APR-Util must first be built on the machine, and a
+JDK installed. The location of the dependencies must be set in
+environment variables APR_HOME, ICU_HOME, XERCES_HOME, ACTIVEMQ_HOME,
+APU_HOME and JAVA_INCLUDE.
+</p>
+                                                <ul>
+<li><code>cd /myWorkingCopyUimacpp</code></li>
+<li><code>winmake /build release (or debug)</code></li>
+<li><code>cd src\test</code></li>
+<li><code>devenv test.sln /build release</code></li>
+<li><code>fvt</code></li>
+<li><code>cd /myWorkingCopyUimacpp/docs</code></li>
+<li><code>builddocs</code></li>
+<li><code>buildsdk "target_dir [clean]"</code></li>
+</ul>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                <p>For more details on platform specific build issues and on the dependencies, see
+<a href="doc-uimacpp-build.html">UIMA C++ Building from source</a>.
+</p>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
                                   </td>
                 </tr>
                 <!-- FOOTER -->
