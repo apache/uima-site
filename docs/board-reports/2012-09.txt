@@ -1,0 +1,25 @@
+Board report for Apache UIMA, for September 2012.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Releases: No releases since last report.  But both 2.4.0 releases
+of the C++ and UIMA-AS frameworks are close.
+
+Activity:
+We have had much work in testing various release candidates for the 
+C++ version of the UIMA framework (we're up to Release Candidate 7),
+with feedback from user testing.
+Bug fixes and improvements are actively being done to both
+UIMA base SDK and UIMA-AS.  Work continues on the TextMarker project 
+in the sandbox, with most issues now resolved, and documentation started.
+
+We are progressing toward bringing in a contribution, UIMAFit; they've
+done the background work toward getting a software grant signed 
+by the various parties, and have posted a code drop on a Jira for the team to
+initially give feedback on.
+ 
+Community: no changes
+ 
+Issues: No Board level issues at this time
