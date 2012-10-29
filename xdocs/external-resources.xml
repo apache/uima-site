@@ -50,6 +50,22 @@ The opennlp.uima distribution includes a sample PEAR which can easily be tested 
 
 </subsection>
 
+<subsection name="cTAKES">
+
+<p>The <a href="http://incubator.apache.org/ctakes/">cTAKES</a>
+project 
+(clinical Text Analysis and Knowledge Extraction System) 
+is an open-source natural language processing system for 
+information extraction from electronic medical record 
+clinical free-text. It is currently incubating in Apache.
+cTAKES uses the UIMA Unstructured Information Management Architecture 
+framework and the OpenNLP natural language processing toolkit. 
+Its components are specifically trained for the (English language) 
+clinical domain;  it creates rich linguistic and semantic annotations that 
+can be used by clinical decision support systems and clinical research.
+</p>
+</subsection>S
+
 <subsection name="UIMA Component Repository at CMU">
 
 <p> The <a href="http://uima.lti.cs.cmu.edu/" target="_blank">UIMA Component Repository at CMU</a> lists
