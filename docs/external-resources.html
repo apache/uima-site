@@ -403,28 +403,38 @@ of Nantes.
        
        
        
-          <a name="DKPro">
-            <h2>DKPro
+          <a name="DKPro Core">
+            <h2>DKPro Core
                         </h2>
           </a>
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p><a href="http://www.ukp.tu-darmstadt.de/research/current-projects/dkpro/" target="_blank">DKPro Core</a>
-is a collection of UIMA-based components and 
-provides APIs and components of basic pre-processing and NLP 
-analysis tasks such as tokenization, part-of-speech tagging, parsing etc. 
-It also provides support for several file formats such as text, 
-WSDL, XML, or PDF. Due to licensing issues the project is sub-divided into 
+                                    <p><a href="http://www.ukp.tu-darmstadt.de/research/current-projects/dkpro/" target="_blank">DKPro Core</a> is a collection of software components for natural language 
+processing (NLP) based on the Apache UIMA framework. The provided components wrap a constantly 
+growing set of stand-of-the-art NLP tools and also include several original components covering a 
+wide range of tasks including: tokenization/segmentation, compound splitting, stemming,
+part-of-speech tagging, lemmatization, constituency parsing, dependency parsing, 
+named entity recognition, coreference resolution, language identification, 
+spelling correction, grammar checking, and  support for reading and writing various
+file and corpus formats.
+</p>
+                                                <p>
+DKPro Core offers two sets of components:
 <ul>
-<li><a href="http://code.google.com/p/dkpro-core-asl">DKPro Core ASL</a>
- - components under the Apache Software License v2 
+<li><a href="http://code.google.com/p/dkpro-core-asl" target="_blank">DKPro Core ASL</a> 
+provides components under the Apache Software License 2.0
 </li>
 <li>
 <a href="http://code.google.com/p/dkpro-core-gpl" target="_blank">DKPro Core GPL</a>
- - components under the GNU Public License v3
+provides components under the GNU Public License 3.0
 </li>
 </ul>
+</p>
+                                                <p>
+DKPro Core relies heavily on <a href="#uimaFIT">uimaFIT</a>. DKPro Core is meant to be used with Apache Maven. The main components
+are hosted on <a href="http://search.maven.org/#search%7Cga%7C1%7Cde.tudarmstadt.ukp.dkpro.core" target="_blank">Maven Central</a> while distributable models are available from the
+public <a href="https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/simple/public-model-releases-local/de/tudarmstadt/ukp/dkpro/core/" target="_blank">Maven repository</a> at UKP Lab.
 </p>
                             </blockquote>
         </td></tr>
