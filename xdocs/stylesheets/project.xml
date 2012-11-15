@@ -86,13 +86,12 @@
       <binary       filename="uimaj-2.4.0-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
       <source       filename="uimaj-2.4.0-source-release">                     <f>zip</f>  </source>
     </download>
-   <!--     
-    <download name="UIMA AS Asynchronous Scaleout" subdirectory="">
+    <download name="UIMA AS Asynchronous Scaleout" subdirectory="uima-as-2.4.0">
       <releasenotes filename="uima-as-2.4.0/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
       <binary       filename="uima-as-2.4.0-bin">                   <f>zip</f>  <f>tar.gz</f>                </binary>   
       <source       filename="uima-as-2.4.0-source-release">                   <f>zip</f>    </source>
     </download>
-    
+<!--     
     <download name="UIMA Annotator Addons &amp; Simple Server &amp; Pear packaging tools" subdirectory="">
       <releasenotes filename="uima-addons-2.4.0/RELEASE_NOTES"> <f>html</f>               </releasenotes>
       <binary       filename="uima-addons-2.4.0-bin">    <f>zip</f>  <f>tar.gz</f> </binary>    
