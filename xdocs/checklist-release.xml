@@ -87,9 +87,11 @@ under the License.
   <li>Delete any artifacts from the staging repo that aren't supposed to go to Maven Central
       (currently only the bin.tar artifacts - the bin.zip is used for building uima-as)</li>
   <li>Promote the release(s) from the staging repositories</li>
-  <li>Copy released artifacts to targets: bin, src, p.a.o/www/www.apache.org/dist/uima, 
+  <!--li>Copy released artifacts to targets: bin, src, p.a.o/www/www.apache.org/dist/uima, 
       new features / plugins from Eclipse update site target/eclipse-update-site to .../dist/uima/eclipse-update-site
-      (add to what's already there).</li>
+      (add to what's already there).</li-->
+  <li>Copy released artifacts to targets: bin, src, p.a.o/www/www.apache.org/dist/uima. <u>TEMPORARY:</u>
+      Copy the updated composite repository from eclipse-packagings/eclipse-update-site to .../dist/uima/eclipse-update-site.</li>
   <li>Copy RELEASE_NOTES and issuesFixed
       from uimaj/target/checkout (where
       the mvn release:perform was done from) to the p.a.o/ww/uima.apache.org/d/[project-version].</li>

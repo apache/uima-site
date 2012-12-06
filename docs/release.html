@@ -581,47 +581,57 @@ mvn install -Papache-release</pre>
        
        
        
-          <a name="Stage the (partial) eclipse-update-site">
-            <h2>Stage the (partial) eclipse-update-site
+          <a name="TEMPORARY: Stage the (partial) eclipse-update-site">
+            <h2>TEMPORARY: Stage the (partial) eclipse-update-site
                         </h2>
           </a>
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
                                     <ul>
-      <li>Build the Eclipse update site, after the corresponding jars have been staged 
+    <li>
+      Build the Eclipse update site, after the corresponding jars have been staged
       with their final release numbers to the staging repo:
       <ul>
-        <li>Edit the site.xml to include any new features, with the final release numbers.</li>
+        <li>Edit the site.xml to update the features with the final release numbers.</li>
+        <li>
+          run <code>mvn package</code>
+          on the uimaj-eclipse-update-site project to pack the new plugin Jars, and generate the new p2 repository (update site) containing
+          the new features.
+        </li>
+
+        <li>
+          This step is done automatically by the build script: copy the update site from target/eclipse-update-site to respective folder in
+          eclipse-packagings/eclipse-update-site and extend the composite repository with the new <quote>child</quote> update site.
+          The folder of the new update site will be renamed referring to the release number, e.g., <quote>uima-2.4.0</quote>.
+        </li>
+
+        <li>run the signEclipseUpdateSite.sh script to sign the new Jars and zip files. 
+          This script can be run on linux or on windows, but on windows, you need to run it inside Cygwin.
+          When you install Cygwin, indicate that it should fixup the windows line ending characters; otherwise the script may not
+          run. Since the name of the folder changes, you need to update the paths in the script files.
+        </li>
         
-        <!--li>Copy from the approved release candidate any new feature Jars to the <code>features</code> directory.</li>
-        (Note this step and the next are automatically done by the build 
-        <li>Copy from the approved release candidate any new plugin Jars to the <code>plugins</code> directory, after
-        first deleting any Jars that might be there from previous releases.</li>
-        -->
+        <li>The scripts for signing can also be directly applied on the built p2 repository (uimaj-eclipse-update-site/target/eclipse-update-site), 
+          without adapting the path in the script files. However, the second last step needs to be performed manually. Replace the folder of 
+          the update site in the composite repository and execute the build script <quote>buildCompositeRepository.xml</quote> by adapting 
+          the absolute path to the composite repository (<quote>eclipseUpdateSiteComposite</quote>) and child repository (<quote>eclipseUpdateSite</quote>).
+        </li>
         
-        <li>run <code>mvn package</code> on the uimaj-eclipse-update-site project
-        to pack the new plugin Jars, and generate the new site digest containing
-        the new features.</li>
-        
-        <li>run the signEclipseUpdateSite.sh script to sign the new Jars and zip files the build script created.
-        This script can be run on linux or on windows, but on windows, you need to run it inside Cygwin.  When you install
-        Cygwin, indicate that it should fixup the windows line ending characters; otherwise the script may not run.</li>
-        
-        <li>Test the result: try using the new site (as a local site) in various versions of Eclipse, and verify it installs OK.
-        If there are errors, correct these and rebuild.</li>
-        
-        <li>SVN commit any changes you did to the trunk.  
-        In particular, the uimaj-eclipse-update-site project's <code>features</code>
-        directory, containing any new Feature Jars, is committed, 
-        so future site builds have access to this information.
-        The <code>plugins</code> directory content is <b>not</b> committed, 
-        because the site build process does not 
-        require the plugin information.</li>
-        
+        <li>Test the result: try using the extended composite repository (as a local site) in various versions of
+          Eclipse, and verify it installs OK.
+          If there are errors, correct these and rebuild.
+        </li>
+
+        <li>
+          SVN commit any changes you did to the trunk.
+          In particular, the changed release numbers in the uimaj-eclipse-update-site project and
+          the extended composite repository in eclipse-packagings/eclipse-update-site.
+        </li>
+
       </ul>
-      </li>
-      </ul>
+    </li>
+  </ul>
                             </blockquote>
         </td></tr>
     </table>
@@ -687,8 +697,12 @@ mvn install -Papache-release</pre>
         <li><p>Upload the release artifacts from people.apache.org to the distribution server 
       (via copying on people.apache.org
       to the directory: <code>/www/www.apache.org/dist/uima</code>, including the 
-      release artifacts and the Eclipse update site data (which are merged with
+      release artifacts and the Eclipse update site data 
+      <!-- 
+       (which are merged with
       the existing previous plugin releases already on the update site).  
+       -->
+      (<u>TEMPORARY</u>: the updated composite repository replaces the existing one).
       Be sure to include the asc/md5/sha1 signatures.
       Make sure the KEYS file in that uploaded directory is current (master located in 
       SVN uima/site/trunk/uima-website/docs/KEYS). Additionally it is necessary to update
@@ -707,7 +721,8 @@ mvn install -Papache-release</pre>
         people.a.o in the directory www/uima.apache.org/d/, just by copying it there.  This location
         will be rsync'd to our website once an hour, approximately.
         </p>
-        <p>
+        <!-- 
+         <p>
         Copy released artifacts to targets: bin, src, to p.a.o/www/www.apache.org/dist/uima, 
       new features / plugins from Eclipse update site target/eclipse-update-site to .../dist/uima/eclipse-update-site
       (add to what's already there).    
@@ -721,6 +736,13 @@ mvn install -Papache-release</pre>
         </li>
       </ul>
       </p>
+         -->
+      
+         <p>
+        Copy released artifacts to targets: bin, src, to p.a.o/www/www.apache.org/dist/uima.
+        <u>TEMPORARY</u>: Copy the updated composite repository from eclipse-packagings/eclipse-update-site to .../dist/uima/eclipse-update-site.
+        The composite repository (update site) contains also all previous update site data and can therefore replace the existing one.
+      </p>   
       <li>Copy RELEASE_NOTES and issuesFixed
       from the top level project (where
       the mvn release:perform was done from) in the directory
