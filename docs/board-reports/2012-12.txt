@@ -1,0 +1,30 @@
+Board report for Apache UIMA, for December 2012.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Releases: 
+Two releases since last report: the 2.4.0version of the 
+C++ base framwork, and the 2.4.0 version of the asynchronous scaleout.
+
+Other Activity:
+Two major contributions, uimaFIT and DUCC, were voted into the
+sandbox.  One has just today filed the Software Grant, and the other
+should shortly.
+
+Bug fixes and improvements are actively being done to both
+UIMA base SDK and UIMA-AS.  The TextMarker project 
+in the sandbox is getting close to its first release.
+
+The Eclipse Update Site packaging was restructured to follow P2 conventions.
+A vote is pending on this.
+
+Some add-on components refreshed to update dependencies to newer levels (but not
+yet released).
+
+Community: 
+no changes
+ 
+Issues: 
+No Board level issues at this time
