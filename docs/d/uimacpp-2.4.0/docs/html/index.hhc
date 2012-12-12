@@ -1,0 +1,391 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="UIMA C++ API Documentation"><param name="Local" value="index.html"><param name="ImageNumber" value="11"></OBJECT>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="File List"><param name="Local" value="files.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="annotator_abase.hpp"><param name="Local" value="annotator__abase_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="annotator_context.hpp"><param name="Local" value="annotator__context_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="arrayfs.hpp"><param name="Local" value="arrayfs_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="assertmsg.h"><param name="Local" value="assertmsg_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="capability.hpp"><param name="Local" value="capability_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="cas.hpp"><param name="Local" value="cas_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="casdefinition.hpp"><param name="Local" value="casdefinition_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="casexception.hpp"><param name="Local" value="casexception_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="casiterator.hpp"><param name="Local" value="casiterator_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="caswriter_abase.hpp"><param name="Local" value="caswriter__abase_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ccsid.hpp"><param name="Local" value="ccsid_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="comp_ids.h"><param name="Local" value="comp__ids_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="config_param.hpp"><param name="Local" value="config__param_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="configure.h"><param name="Local" value="configure_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="consoleui.hpp"><param name="Local" value="consoleui_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="cp2ucnvrt.hpp"><param name="Local" value="cp2ucnvrt_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="dirwalk.hpp"><param name="Local" value="dirwalk_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="dllfile.hpp"><param name="Local" value="dllfile_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="dottypesystemwriter.hpp"><param name="Local" value="dottypesystemwriter_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="endian.h"><param name="Local" value="endian_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="engine.hpp"><param name="Local" value="engine_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="engine_state.hpp"><param name="Local" value="engine__state_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="envvar.hpp"><param name="Local" value="envvar_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="envvars.h"><param name="Local" value="envvars_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="err_ids.h"><param name="Local" value="err__ids_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="exceptions.hpp"><param name="Local" value="exceptions_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="featurestructure.hpp"><param name="Local" value="featurestructure_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="filename.hpp"><param name="Local" value="filename_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="fsindex.hpp"><param name="Local" value="fsindex_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="fsindexrepository.hpp"><param name="Local" value="fsindexrepository_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="fsiterator.hpp"><param name="Local" value="fsiterator_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ftools.hpp"><param name="Local" value="ftools_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="importdescription.hpp"><param name="Local" value="importdescription_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="language.hpp"><param name="Local" value="language_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="listfs.hpp"><param name="Local" value="listfs_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="location.hpp"><param name="Local" value="location_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="log.hpp"><param name="Local" value="log_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="macros.h"><param name="Local" value="macros_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="pragmas.hpp"><param name="Local" value="pragmas_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="res_abase.hpp"><param name="Local" value="res__abase_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="res_annotator.hpp"><param name="Local" value="res__annotator_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="resmgr.hpp"><param name="Local" value="resmgr_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="result_specification.hpp"><param name="Local" value="result__specification_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="sofaid.hpp"><param name="Local" value="sofaid_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="sofamapping.hpp"><param name="Local" value="sofamapping_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="sofastream.hpp"><param name="Local" value="sofastream_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="sofastreamhandler.hpp"><param name="Local" value="sofastreamhandler_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="strconvert.hpp"><param name="Local" value="strconvert_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="taemetadata.hpp"><param name="Local" value="taemetadata_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="taespecifier.hpp"><param name="Local" value="taespecifier_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="taespecifierbuilder.hpp"><param name="Local" value="taespecifierbuilder_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="text.h"><param name="Local" value="text_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="timedatetools.hpp"><param name="Local" value="timedatetools_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="token_properties.hpp"><param name="Local" value="token__properties_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="trace.hpp"><param name="Local" value="trace_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="type_or_feature.hpp"><param name="Local" value="type__or__feature_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="typenamespace.hpp"><param name="Local" value="typenamespace_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="types.h"><param name="Local" value="types_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="typesystem.hpp"><param name="Local" value="typesystem_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="typesystemdescription.hpp"><param name="Local" value="typesystemdescription_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="u2cpcnvrt.hpp"><param name="Local" value="u2cpcnvrt_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="unistrref.hpp"><param name="Local" value="unistrref_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="xcasdeserializer.hpp"><param name="Local" value="xcasdeserializer_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="xcasdeserializer_handler.hpp"><param name="Local" value="xcasdeserializer__handler_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="xmlerror_handler.hpp"><param name="Local" value="xmlerror__handler_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="xmlwriter.hpp"><param name="Local" value="xmlwriter_8hpp.html"><param name="ImageNumber" value="11"></OBJECT>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Class List"><param name="Local" value="annotated.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::AllowedValue"><param name="Local" value="classuima_1_1AllowedValue.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::AnalysisEngine"><param name="Local" value="classuima_1_1AnalysisEngine.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::AnalysisEngineDescription"><param name="Local" value="classuima_1_1AnalysisEngineDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::AnalysisEngineMetaData"><param name="Local" value="classuima_1_1AnalysisEngineMetaData.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ANIndex"><param name="Local" value="classuima_1_1ANIndex.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ANIterator"><param name="Local" value="classuima_1_1ANIterator.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::AnnotationFS"><param name="Local" value="classuima_1_1AnnotationFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Annotator"><param name="Local" value="classuima_1_1Annotator.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::AnnotatorContext"><param name="Local" value="classuima_1_1AnnotatorContext.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ArrayFS"><param name="Local" value="classuima_1_1ArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::BasicArrayFS"><param name="Local" value="classuima_1_1BasicArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::BasicListFS"><param name="Local" value="classuima_1_1BasicListFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::BooleanArrayFS"><param name="Local" value="classuima_1_1BooleanArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ByteArrayFS"><param name="Local" value="classuima_1_1ByteArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Capability"><param name="Local" value="classuima_1_1Capability.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::CapabilityLanguageFlow"><param name="Local" value="classuima_1_1CapabilityLanguageFlow.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::CAS"><param name="Local" value="classuima_1_1CAS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::internal::CASDefinition"><param name="Local" value="classuima_1_1internal_1_1CASDefinition.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::CASIterator"><param name="Local" value="classuima_1_1CASIterator.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::CASWriterABase"><param name="Local" value="classuima_1_1CASWriterABase.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::CCSID"><param name="Local" value="classuima_1_1CCSID.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::CodePage2UnicodeConverter"><param name="Local" value="classuima_1_1CodePage2UnicodeConverter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ConfigurationGroup"><param name="Local" value="classuima_1_1ConfigurationGroup.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ConfigurationParameter"><param name="Local" value="classuima_1_1ConfigurationParameter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::ConsoleUI"><param name="Local" value="classuima_1_1util_1_1ConsoleUI.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::DirectoryWalk"><param name="Local" value="classuima_1_1util_1_1DirectoryWalk.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::DllProcLoaderFile"><param name="Local" value="classuima_1_1util_1_1DllProcLoaderFile.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::DocumentFS"><param name="Local" value="classuima_1_1DocumentFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::DotTypeSystemWriter"><param name="Local" value="classuima_1_1DotTypeSystemWriter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::DoubleArrayFS"><param name="Local" value="classuima_1_1DoubleArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::EngineState"><param name="Local" value="classuima_1_1EngineState.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::EnvironmentVariableQueryOnly"><param name="Local" value="classuima_1_1util_1_1EnvironmentVariableQueryOnly.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ErrorContext"><param name="Local" value="classuima_1_1ErrorContext.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ErrorInfo"><param name="Local" value="classuima_1_1ErrorInfo.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ErrorMessage"><param name="Local" value="classuima_1_1ErrorMessage.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Exception"><param name="Local" value="classuima_1_1Exception.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Feature"><param name="Local" value="classuima_1_1Feature.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FeatureDescription"><param name="Local" value="classuima_1_1FeatureDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FeatureStructure"><param name="Local" value="classuima_1_1FeatureStructure.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FileLogger"><param name="Local" value="classuima_1_1FileLogger.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::Filename"><param name="Local" value="classuima_1_1util_1_1Filename.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FileResource"><param name="Local" value="classuima_1_1FileResource.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FixedFlow"><param name="Local" value="classuima_1_1FixedFlow.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FloatArrayFS"><param name="Local" value="classuima_1_1FloatArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FloatListFS"><param name="Local" value="classuima_1_1FloatListFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FlowConstraints"><param name="Local" value="classuima_1_1FlowConstraints.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::found_opt_t"><param name="Local" value="structuima_1_1util_1_1found__opt__t.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Framework"><param name="Local" value="classuima_1_1Framework.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FSIndex"><param name="Local" value="classuima_1_1FSIndex.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FSIndexDescription"><param name="Local" value="classuima_1_1FSIndexDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FSIndexKeyDescription"><param name="Local" value="classuima_1_1FSIndexKeyDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FSIndexRepository"><param name="Local" value="classuima_1_1FSIndexRepository.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FSInfo"><param name="Local" value="classuima_1_1FSInfo.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FSIterator"><param name="Local" value="classuima_1_1FSIterator.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ImportDescription"><param name="Local" value="classuima_1_1ImportDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::IntArrayFS"><param name="Local" value="classuima_1_1IntArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::IntListFS"><param name="Local" value="classuima_1_1IntListFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Language"><param name="Local" value="classuima_1_1Language.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::LanguageKindFileResource"><param name="Local" value="classuima_1_1LanguageKindFileResource.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::LanguageKindFileResourceFactory"><param name="Local" value="classuima_1_1LanguageKindFileResourceFactory.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ListFS"><param name="Local" value="classuima_1_1ListFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::LocalSofaDataStream"><param name="Local" value="classuima_1_1LocalSofaDataStream.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::Location"><param name="Local" value="classuima_1_1util_1_1Location.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::LogFacility"><param name="Local" value="classuima_1_1LogFacility.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Logger"><param name="Local" value="classuima_1_1Logger.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::LogStream"><param name="Local" value="classuima_1_1LogStream.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::LongArrayFS"><param name="Local" value="classuima_1_1LongArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::MetaDataObject"><param name="Local" value="classuima_1_1MetaDataObject.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::NameValuePair"><param name="Local" value="classuima_1_1NameValuePair.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::OperationalProperties"><param name="Local" value="classuima_1_1OperationalProperties.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::RemoteSofaDataStream"><param name="Local" value="classuima_1_1RemoteSofaDataStream.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ResourceABase"><param name="Local" value="classuima_1_1ResourceABase.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::internal::ResourceAnnotatorFile"><param name="Local" value="classuima_1_1internal_1_1ResourceAnnotatorFile.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::internal::ResourceAnnotatorFileFactory"><param name="Local" value="classuima_1_1internal_1_1ResourceAnnotatorFileFactory.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ResourceFactoryABase"><param name="Local" value="classuima_1_1ResourceFactoryABase.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ResourceManager"><param name="Local" value="classuima_1_1ResourceManager.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ResultSpecification"><param name="Local" value="classuima_1_1ResultSpecification.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::SettingsForGroup"><param name="Local" value="classuima_1_1SettingsForGroup.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ShortArrayFS"><param name="Local" value="classuima_1_1ShortArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::SofaDataStream"><param name="Local" value="classuima_1_1SofaDataStream.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::SofaFS"><param name="Local" value="classuima_1_1SofaFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::SofaID"><param name="Local" value="classuima_1_1SofaID.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::SofaMapping"><param name="Local" value="classuima_1_1SofaMapping.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::SofaStreamHandler"><param name="Local" value="classuima_1_1SofaStreamHandler.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::StringArrayFS"><param name="Local" value="classuima_1_1StringArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::StringListFS"><param name="Local" value="classuima_1_1StringListFS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TextAnalysisEngine"><param name="Local" value="classuima_1_1TextAnalysisEngine.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TextAnalysisEngineSpecifier"><param name="Local" value="classuima_1_1TextAnalysisEngineSpecifier.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TextAnalysisEngineSpecifierBuilder"><param name="Local" value="classuima_1_1TextAnalysisEngineSpecifierBuilder.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TextAnnotator"><param name="Local" value="classuima_1_1TextAnnotator.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Timer"><param name="Local" value="classuima_1_1Timer.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TokenProperties"><param name="Local" value="classuima_1_1TokenProperties.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::Trace"><param name="Local" value="classuima_1_1util_1_1Trace.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Type"><param name="Local" value="classuima_1_1Type.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypeDescription"><param name="Local" value="classuima_1_1TypeDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypeNameSpace"><param name="Local" value="classuima_1_1TypeNameSpace.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypeNameSpaceImport"><param name="Local" value="classuima_1_1TypeNameSpaceImport.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypeOrFeature"><param name="Local" value="classuima_1_1TypeOrFeature.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypePriority"><param name="Local" value="classuima_1_1TypePriority.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypeSystem"><param name="Local" value="classuima_1_1TypeSystem.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypeSystemDescription"><param name="Local" value="classuima_1_1TypeSystemDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Unicode2CodePageConverter"><param name="Local" value="classuima_1_1Unicode2CodePageConverter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::UnicodeStringRef"><param name="Local" value="classuima_1_1UnicodeStringRef.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XCASDeserializer"><param name="Local" value="classuima_1_1XCASDeserializer.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XCASDeserializerHandler"><param name="Local" value="classuima_1_1XCASDeserializerHandler.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XCASWriter"><param name="Local" value="classuima_1_1XCASWriter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XMLDumpWriter"><param name="Local" value="classuima_1_1XMLDumpWriter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XMLErrorHandler"><param name="Local" value="classuima_1_1XMLErrorHandler.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XMLParser"><param name="Local" value="classuima_1_1XMLParser.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XMLWriterABase"><param name="Local" value="classuima_1_1XMLWriterABase.html"><param name="ImageNumber" value="11"></OBJECT>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Class Hierarchy"><param name="Local" value="hierarchy.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::AnalysisEngine"><param name="Local" value="classuima_1_1AnalysisEngine.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TextAnalysisEngine"><param name="Local" value="classuima_1_1TextAnalysisEngine.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Annotator"><param name="Local" value="classuima_1_1Annotator.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TextAnnotator"><param name="Local" value="classuima_1_1TextAnnotator.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::AnnotatorContext"><param name="Local" value="classuima_1_1AnnotatorContext.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::CAS"><param name="Local" value="classuima_1_1CAS.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::internal::CASDefinition"><param name="Local" value="classuima_1_1internal_1_1CASDefinition.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::CASIterator"><param name="Local" value="classuima_1_1CASIterator.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::CASWriterABase"><param name="Local" value="classuima_1_1CASWriterABase.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XMLWriterABase"><param name="Local" value="classuima_1_1XMLWriterABase.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XCASWriter"><param name="Local" value="classuima_1_1XCASWriter.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XMLDumpWriter"><param name="Local" value="classuima_1_1XMLDumpWriter.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::CCSID"><param name="Local" value="classuima_1_1CCSID.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::CodePage2UnicodeConverter"><param name="Local" value="classuima_1_1CodePage2UnicodeConverter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::ConsoleUI"><param name="Local" value="classuima_1_1util_1_1ConsoleUI.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::DirectoryWalk"><param name="Local" value="classuima_1_1util_1_1DirectoryWalk.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::DllProcLoaderFile"><param name="Local" value="classuima_1_1util_1_1DllProcLoaderFile.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::DotTypeSystemWriter"><param name="Local" value="classuima_1_1DotTypeSystemWriter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::EngineState"><param name="Local" value="classuima_1_1EngineState.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::EnvironmentVariableQueryOnly"><param name="Local" value="classuima_1_1util_1_1EnvironmentVariableQueryOnly.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ErrorContext"><param name="Local" value="classuima_1_1ErrorContext.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ErrorInfo"><param name="Local" value="classuima_1_1ErrorInfo.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ErrorMessage"><param name="Local" value="classuima_1_1ErrorMessage.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Exception"><param name="Local" value="classuima_1_1Exception.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Feature"><param name="Local" value="classuima_1_1Feature.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FeatureStructure"><param name="Local" value="classuima_1_1FeatureStructure.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::AnnotationFS"><param name="Local" value="classuima_1_1AnnotationFS.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::DocumentFS"><param name="Local" value="classuima_1_1DocumentFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::BasicArrayFS"><param name="Local" value="classuima_1_1BasicArrayFS.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ArrayFS"><param name="Local" value="classuima_1_1ArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::BooleanArrayFS"><param name="Local" value="classuima_1_1BooleanArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ByteArrayFS"><param name="Local" value="classuima_1_1ByteArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::DoubleArrayFS"><param name="Local" value="classuima_1_1DoubleArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FloatArrayFS"><param name="Local" value="classuima_1_1FloatArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::IntArrayFS"><param name="Local" value="classuima_1_1IntArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::LongArrayFS"><param name="Local" value="classuima_1_1LongArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ShortArrayFS"><param name="Local" value="classuima_1_1ShortArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::StringArrayFS"><param name="Local" value="classuima_1_1StringArrayFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::BasicListFS"><param name="Local" value="classuima_1_1BasicListFS.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FloatListFS"><param name="Local" value="classuima_1_1FloatListFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::IntListFS"><param name="Local" value="classuima_1_1IntListFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ListFS"><param name="Local" value="classuima_1_1ListFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::StringListFS"><param name="Local" value="classuima_1_1StringListFS.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::SofaFS"><param name="Local" value="classuima_1_1SofaFS.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::Filename"><param name="Local" value="classuima_1_1util_1_1Filename.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::found_opt_t"><param name="Local" value="structuima_1_1util_1_1found__opt__t.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Framework"><param name="Local" value="classuima_1_1Framework.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FSIndex"><param name="Local" value="classuima_1_1FSIndex.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ANIndex"><param name="Local" value="classuima_1_1ANIndex.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FSIndexRepository"><param name="Local" value="classuima_1_1FSIndexRepository.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FSInfo"><param name="Local" value="classuima_1_1FSInfo.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FSIterator"><param name="Local" value="classuima_1_1FSIterator.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ANIterator"><param name="Local" value="classuima_1_1ANIterator.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Language"><param name="Local" value="classuima_1_1Language.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::Location"><param name="Local" value="classuima_1_1util_1_1Location.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::LogFacility"><param name="Local" value="classuima_1_1LogFacility.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Logger"><param name="Local" value="classuima_1_1Logger.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FileLogger"><param name="Local" value="classuima_1_1FileLogger.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::LogStream"><param name="Local" value="classuima_1_1LogStream.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::MetaDataObject"><param name="Local" value="classuima_1_1MetaDataObject.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::AllowedValue"><param name="Local" value="classuima_1_1AllowedValue.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::AnalysisEngineDescription"><param name="Local" value="classuima_1_1AnalysisEngineDescription.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TextAnalysisEngineSpecifier"><param name="Local" value="classuima_1_1TextAnalysisEngineSpecifier.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::AnalysisEngineMetaData"><param name="Local" value="classuima_1_1AnalysisEngineMetaData.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Capability"><param name="Local" value="classuima_1_1Capability.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ConfigurationGroup"><param name="Local" value="classuima_1_1ConfigurationGroup.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ConfigurationParameter"><param name="Local" value="classuima_1_1ConfigurationParameter.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FeatureDescription"><param name="Local" value="classuima_1_1FeatureDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FlowConstraints"><param name="Local" value="classuima_1_1FlowConstraints.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::CapabilityLanguageFlow"><param name="Local" value="classuima_1_1CapabilityLanguageFlow.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FixedFlow"><param name="Local" value="classuima_1_1FixedFlow.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FSIndexDescription"><param name="Local" value="classuima_1_1FSIndexDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FSIndexKeyDescription"><param name="Local" value="classuima_1_1FSIndexKeyDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ImportDescription"><param name="Local" value="classuima_1_1ImportDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::NameValuePair"><param name="Local" value="classuima_1_1NameValuePair.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::OperationalProperties"><param name="Local" value="classuima_1_1OperationalProperties.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::SettingsForGroup"><param name="Local" value="classuima_1_1SettingsForGroup.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::SofaMapping"><param name="Local" value="classuima_1_1SofaMapping.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypeDescription"><param name="Local" value="classuima_1_1TypeDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypePriority"><param name="Local" value="classuima_1_1TypePriority.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypeSystemDescription"><param name="Local" value="classuima_1_1TypeSystemDescription.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ResourceABase"><param name="Local" value="classuima_1_1ResourceABase.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::FileResource"><param name="Local" value="classuima_1_1FileResource.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::internal::ResourceAnnotatorFile"><param name="Local" value="classuima_1_1internal_1_1ResourceAnnotatorFile.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::LanguageKindFileResource"><param name="Local" value="classuima_1_1LanguageKindFileResource.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ResourceFactoryABase"><param name="Local" value="classuima_1_1ResourceFactoryABase.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::internal::ResourceAnnotatorFileFactory"><param name="Local" value="classuima_1_1internal_1_1ResourceAnnotatorFileFactory.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::LanguageKindFileResourceFactory"><param name="Local" value="classuima_1_1LanguageKindFileResourceFactory.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ResourceManager"><param name="Local" value="classuima_1_1ResourceManager.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::ResultSpecification"><param name="Local" value="classuima_1_1ResultSpecification.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::SofaDataStream"><param name="Local" value="classuima_1_1SofaDataStream.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::LocalSofaDataStream"><param name="Local" value="classuima_1_1LocalSofaDataStream.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::RemoteSofaDataStream"><param name="Local" value="classuima_1_1RemoteSofaDataStream.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::SofaID"><param name="Local" value="classuima_1_1SofaID.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::SofaStreamHandler"><param name="Local" value="classuima_1_1SofaStreamHandler.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Timer"><param name="Local" value="classuima_1_1Timer.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TokenProperties"><param name="Local" value="classuima_1_1TokenProperties.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util::Trace"><param name="Local" value="classuima_1_1util_1_1Trace.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Type"><param name="Local" value="classuima_1_1Type.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypeNameSpace"><param name="Local" value="classuima_1_1TypeNameSpace.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypeNameSpaceImport"><param name="Local" value="classuima_1_1TypeNameSpaceImport.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypeOrFeature"><param name="Local" value="classuima_1_1TypeOrFeature.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TypeSystem"><param name="Local" value="classuima_1_1TypeSystem.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::Unicode2CodePageConverter"><param name="Local" value="classuima_1_1Unicode2CodePageConverter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::UnicodeStringRef"><param name="Local" value="classuima_1_1UnicodeStringRef.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XCASDeserializer"><param name="Local" value="classuima_1_1XCASDeserializer.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XCASDeserializerHandler"><param name="Local" value="classuima_1_1XCASDeserializerHandler.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XMLErrorHandler"><param name="Local" value="classuima_1_1XMLErrorHandler.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::XMLParser"><param name="Local" value="classuima_1_1XMLParser.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::TextAnalysisEngineSpecifierBuilder"><param name="Local" value="classuima_1_1TextAnalysisEngineSpecifierBuilder.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="11"></OBJECT>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Namespace List"><param name="Local" value="namespaces.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima"><param name="Local" value="namespaceuima.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::internal"><param name="Local" value="namespaceuima_1_1internal.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::lowlevel"><param name="Local" value="namespaceuima_1_1lowlevel.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="uima::util"><param name="Local" value="namespaceuima_1_1util.html"><param name="ImageNumber" value="11"></OBJECT>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Modules"><param name="Local" value="modules.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="functions"><param name="Local" value="group__UtilFuncts.html"><param name="ImageNumber" value="11"></OBJECT>
+    <UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Predefined Indexes"><param name="Local" value="group__PreDefIndexes.html"><param name="ImageNumber" value="11"></OBJECT>
+    <UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Predefined Types"><param name="Local" value="group__PreDefTypes.html"><param name="ImageNumber" value="11"></OBJECT>
+    <UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Predefined Features"><param name="Local" value="group__PreDefFeatures.html"><param name="ImageNumber" value="11"></OBJECT>
+    <UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Creator IDs"><param name="Local" value="group__CreatorIDs.html"><param name="ImageNumber" value="11"></OBJECT>
+    <UL>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Directories"><param name="Local" value="dirs.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="src"><param name="Local" value="dir_000000.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="cas"><param name="Local" value="dir_000003.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima"><param name="Local" value="dir_000004.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        </UL>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="framework"><param name="Local" value="dir_000001.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="uima"><param name="Local" value="dir_000002.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        </UL>
+      </UL>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="File Members"><param name="Local" value="globals.html"><param name="ImageNumber" value="11"></OBJECT>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Namespace Members"><param name="Local" value="namespacemembers.html"><param name="ImageNumber" value="11"></OBJECT>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Related Pages"><param name="Local" value="pages.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Deprecated List"><param name="Local" value="deprecated.html"><param name="ImageNumber" value="11"></OBJECT>
+  </UL>
+</UL>
