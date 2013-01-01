@@ -76,7 +76,7 @@
            extension=".html" style="./site.vsl"
            projectFile="stylesheets/project.xml"
            excludes="**/stylesheets/** **/downloads/** empty.xml"
-           includes="**/*.xml"
+           includes="ip-clearances/*.xml"
            lastModifiedCheck="true"
            templatePath="xdocs/stylesheets-incubator-site">
       </anakia>
