@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>UIMA's Eclipse Update Site</title>
+<author email="dev@uima.apache.org">Apache UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+<section name="UIMA's Eclipse Update Site">
+
+<p>
+The Apache UIMA&#0153; project maintains an Eclipse update site as part 
+of its prebuilt artifacts.  The information on this page is mainly for
+developers, and documents how this update site is managed.
+</p>
+
+<p>
+Over time, the update site ends up containing various Eclipse features
+and their plugins, at different "versions".  It uses the (evolving) Eclipse standard
+mechanisms to install whatever version a user might require.
+</p>
+
+<p>
+Because of this, the update site itself keeps "older" versions.  Every
+time a new release is made which includes one or more new versions of some
+Eclipse features/plugins, these artifacts are built and <em>added</em> to 
+the set of existing (and perhaps, older versions of) feature and plugins.
+</p>
+
+<subsection name="Early Optimizations">
+<p>
+The first UIMA Eclipse update sites were optimized by the then-current
+approach to optimization.  This included 2 special things:
+<ul>
+<li>"super-duper" packing of the jar files using some new compression 
+utilities that came with Java 5.</li>
+<li>A separate copy of all the metadata needed for initial processing
+by the Eclipse update mechanism - put into a compressed "digest.zip".</li>
+<p>
+See <a target="_blank"
+href="http://wiki.eclipse.org/Update_Site_Optimization">http://wiki.eclipse.org/Update_Site_Optimization</a>,
+which describes the design goals for this.</p>
+<p class="note">But note that the information on this page is now out of date, and has been
+superseded by a second version of update site packaging.  In fact, the 
+previously available headless Eclipse application, <em>org.eclipse.update.core.siteOptimizer</em>, is no
+longer part of Eclipse releases.
+</p>
+</ul>
+</p>
+</subsection>
+
+<subsection name="P2">
+<p>
+At some point in the evolution of the Eclipse update site mechanisms,  
+the "P2" approach for Eclipse update sites became supported.
+It has some changes (among others):
+</p>
+<ul>
+<li>It adds to the normal metadata about components, the detailed
+version and dependency information contained in the manifest of the
+OSGi component JARs.  This is a finer-grained versioning system in which
+version information is associated with Java Packages, in contrast
+to the entire contents of a Jar being the entity which is versioned.
+<p>Some tooling, such as <a target="_blank"
+href="http://eclipse.org/tycho/">http://eclipse.org/tycho/Tycho</a>, 
+need this finer-grained information
+to resolve dependencies.</p></li>
+<li>
+It continues the previous approach of putting a copy of the metadata
+in a separately downloaded file (formerly, the digest.zip).  In P2 
+this is now in 2 files: content.xml
+and artifacts.xml. 
+</li>
+</ul>
+<p>
+Some of the UIMA plugin projects need to have the "high-fidelity" resolution of software
+dependencies that comes with the P2 repositories.
+</p>
+
+<p>
+As of January 2013, we are converting to the P2 style of update sites, and
+will not build the update site for pre-P2 style because P2 support has been
+in Eclipse for several years (since mid 2008).  
+</p>
+</subsection>
+
+<subsection name="Layout and Versioning">
+<p>
+Since the Eclipse update site is something that is added to whenever 
+particular components are released, the maven projects used to support it
+are in a shared location, under the SVN folder for our build tooling:
+<a target="_blank"
+  href="http://svn.apache.org/repos/asf/uima/build/trunk/eclipse-packagings">
+  http://svn.apache.org/repos/asf/uima/build/trunk/eclipse-packagings</a>.
+</p>
+<p>This is a change from our previous organization, which placed the 
+update-site project in the uimaj part of our repository (which holds the 
+source code for the Java SDK of the base UIMA).</p>
+
+<p>Feature plugin projects are associated with particular parts of
+the UIMA project (such as the textmarker, or Java Base SDK, etc.),
+and reside within those major components.</p>
+
+<p>
+Because the Update Site is a mere repackaging of released artifacts, it
+is treated more like our website, in the sense that changes here are not
+versioned.  However, because the update site contains downloadable
+signed artifacts, they are not hosted on our website, but rather on the
+official Apache distribution mirror system.  The meta information in the
+update site includes references to the Apache mirror system, so 
+the Eclipse install mechanism can use the mirrors.
+</p>
+
+</subsection>
+
+<subsection name="Composite Update Sites">
+<p>
+Update sites can be composite.  A composite update site
+merely includes pointers to other update sites.  The installation
+procedure combines all of the composite update sites mentioned
+in the top level composite description into one, for purposes
+of displaying and working with it.  We use the composite mechanism
+to make maintenance of independently developed features more isolated;
+when a new version of a sub-site is developed, updates are 
+localized to just that sub-site.
+</p>
+
+<p>Our subsites are named subfolders of the main update site 
+(.../dist/uima/eclipse-update-site).</p>
+
+<p>
+We currently have sub-sites for
+<ul>
+<li>uimaj - base Java UIMA SDK tools and runtime
+</li>
+<li>uima-as - addons for the base tooling to add the deployment descriptor editor, and uima-as runtime</li>
+<li>TextEditor (coming soon)</li>
+</ul>
+</p>
+</subsection>
+
+<subsection name="How to Change the Update Site">
+<p>To do any work on the Eclipse update sites, you must have
+maven property variables set to identify an accessible Eclipse
+installation so the Eclipse packaging tooling and Ant support
+can be located.  These are typically put into your .m2 setttings.xml
+file like this:</p>
+<pre>
+&lt;uima-maven-build-eclipse-home>C:/x/y/z/eclipse&lt;/uima-maven-build-eclipse-home>
+&lt;eclipse-equinox-launcher>
+  ${uima-maven-build-eclipse-home}/plugins/org.eclipse.equinox.launcher_1.1.1.R36x_v20101122_1400.jar
+&lt;/eclipse-equinox-launcher>
+</pre>
+<p>We use the Composite pattern for our update site, to allow a
+cleaner separation of independent sets of Features, for maintenance
+ease.  The first decision when doing an update is to decide if 
+you need to add a new sub-update-site to the set managed by the
+Composite collection.  If so, update the script part inside the
+POM (follow the commented instructions) to add the sub-site.</p>
+
+<p>
+To update a sub-site, go to that subsite's project for its update-site.
+For example, for uimaj, this is the project uimaj-eclipse-update-site.
+In that project, run the Eclipse category editor to update the categories
+(if necessary).
+</p>
+
+<p>
+Each update site "build" will use the pom to pull into a prototype
+update site in its /target directory the complete set of features and plugins.
+It does this using information specified in the POM, as dependencies.
+It does this for all versions of the features and plugins.
+</p>
+
+<p>
+Therefore, you must edit this POM if you are specifying new versions
+of any of the features and plugins, and add those dependencies to the 
+list inside of the build step that copies the plugin and feature 
+dependencies.
+</p>
+
+<p>
+Running <code>mvn package</code> on the update site pom will produce a 
+P2 update site in /target/eclipse-update-site.  When releasing, the
+contents of this directory needs to be copied into the appropriately
+named subfolder for this sub-site in the release spot for UIMA
+distribution.
+</p>
+</subsection>
+
+<subsection name="Links and References">
+<p>Here are links to more information; there are many (partially) out-of-date
+websites which are misleading but these links (as of January, 2013, seem up to date.)</p>
+<ul>
+<li><a target="_blank"
+href="http://wiki.eclipse.org/Equinox/p2/Getting_Started_for_Releng">
+http://wiki.eclipse.org/Equinox/p2/Getting_Started_for_Releng</a>
+- describes basic concepts</li>
+<li><a target="_blank"
+href="http://wiki.eclipse.org/Equinox/p2/Publisher">
+http://wiki.eclipse.org/Equinox/p2/Publisher</a>
+- describes the basic methods and Ant tasks used to create and modify update sites for P2;
+includes information on generating the P2 style Category metadata.
+</li>
+<li><a target="_blank"
+href="http://www.slideshare.net/PascalRapicault/understanding-and-extending-p2-for-fun-and-profit">
+http://www.slideshare.net/PascalRapicault/understanding-and-extending-p2-for-fun-and-profit</a>
+- a general presentation on P2
+</li>
+<li><a target="_blank"
+href="http://wiki.eclipse.org/P2">
+http://wiki.eclipse.org/P2</a>
+- the main starting page for P2 info on the Eclipse Wiki
+</li>
+<li><a target="_blank"
+href="http://wiki.eclipse.org/Update_Site_Optimization">
+http://wiki.eclipse.org/Update_Site_Optimization</a>
+- now <em>OUT OF DATE</em> information on how update sites were optimized, before P2
+</li>
+<li><a target="_blank"
+href="http://wiki.eclipse.org/Equinox/p2/Composite_Repositories_(new)">
+http://wiki.eclipse.org/Equinox/p2/Composite_Repositories_(new)</a>
+- a discussion of Composite Repositories - a top level file structure that aggregates together
+other update sites 
+</li>
+<li><a target="_blank"
+href="http://wiki.eclipse.org/Equinox/p2/Ant_Tasks">
+http://wiki.eclipse.org/Equinox/p2/Ant_Tasks</a>
+- Ant tasks for P2, but may be <em>out of date</em> - a good summary of the Ant tasks
+we use in the automated build of the update site.
+</li>
+<li><a target="_blank"
+href="http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_repositorytasks.htm">
+http://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_repositorytasks.htm</a>
+- a discussion of Ant tasks for P2.  These are the versions for the current Eclipse (Juno - 4.2) release.
+These are used in our build automation.
+</li>
+
+</ul>
+</subsection>
+</section>
+</body>
+</document>
