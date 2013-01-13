@@ -28,6 +28,9 @@ under the License.
 
 <section name="UIMA's Eclipse Update Site">
 
+<subsectionToc/>
+
+<subsection name="Introduction">
 <p>
 The Apache UIMA&#0153; project maintains an Eclipse update site as part 
 of its prebuilt artifacts.  The information on this page is mainly for
@@ -46,6 +49,7 @@ time a new release is made which includes one or more new versions of some
 Eclipse features/plugins, the new artifacts are <em>added</em> to 
 the set of existing (and perhaps, older versions of) feature and plugins.
 </p>
+</subsection>
 
 <subsection name="P2">
 <p>
