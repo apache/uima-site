@@ -184,23 +184,57 @@ A previous version of this page, with the methods we used while in the incubator
                                                 <p>Once you've done it a few times, you may find the shorter
   <a href="checklist-release.html">release checklist</a> more convenient.
 </p>
-                                                <p>
-  <ul>
-    <li><a href="#Release Overview">Overview of releasing</a></li>
-		<li><a href="#Release Discussions - Release Plan">Release Discussions - Release Plan</a></li>
-    <li><a href="#Preparing the Jira for the Release">Preparing the Jira for the Release</a></li>
-		<li><a href="#Preparing The Sourcecode For The Release">Preparing The Sourcecode For The Release</a></li>
-		<li><a href="#Including updates to the Build tooling">Including updates to the Build tooling</a></li>
-		<li><a href="#Building The Release Candidate">Building The Release Candidate</a></li>
-    <li><a href="#Tips for the Release Manager">Tips for the Release Manager</a></li>
-    <li><a href="#Removing -SNAPSHOT dependencies">Removing -SNAPSHOT dependencies</a></li>
-    <li><a href="#Stage the (partial) eclipse-update-site">Stage the (partial) eclipse-update-site</a></li>
-		<li><a href="#Doing The Release Vote">Doing The Release Vote</a></li>
-    <li><a href="#Releasing">Releasing</a></li>
-    <li><a href="#Announce The Release">Announce The Release</a></li>     
-      </ul>
-</p>
-                                                <br />
+                                                      <ul>
+          <li><a href='#Release Overview'>
+                  Release Overview
+        
+                </a></li>
+          <li><a href='#Release Discussions - Release Plan'>
+                  Release Discussions - Release Plan
+        
+                </a></li>
+          <li><a href='#Preparing the Jira for the Release'>
+                  Preparing the Jira for the Release
+        
+                </a></li>
+          <li><a href='#Preparing The Sourcecode For The Release'>
+                  Preparing The Sourcecode For The Release
+        
+                </a></li>
+          <li><a href='#Including updates to the Build tooling'>
+                  Including updates to the Build tooling
+        
+                </a></li>
+          <li><a href='#Building The Release Candidate'>
+                  Building The Release Candidate
+        
+                </a></li>
+          <li><a href='#Tips for the Release Manager'>
+                  Tips for the Release Manager
+        
+                </a></li>
+          <li><a href='#Removing -SNAPSHOT dependencies'>
+                  Removing -SNAPSHOT dependencies
+        
+                </a></li>
+          <li><a href='#PENDING new P2 Style: Stage the eclipse-update-site'>
+                  PENDING new P2 Style: Stage the eclipse-update-site
+        
+                </a></li>
+          <li><a href='#Doing The Release Vote'>
+                  Doing The Release Vote
+        
+                </a></li>
+          <li><a href='#Releasing'>
+                  Releasing
+        
+                </a></li>
+          <li><a href='#Announce The Release'>
+                  Announce The Release
+        
+                </a></li>
+        </ul>
+                                                  <br />
                                                       <table class="subsectionTable">
         <tr><td>
        
@@ -583,57 +617,47 @@ mvn install -Papache-release</pre>
        
        
        
-          <a name="TEMPORARY: Stage the (partial) eclipse-update-site">
-            <h2>TEMPORARY: Stage the (partial) eclipse-update-site
+          <a name="PENDING new P2 Style: Stage the eclipse-update-site">
+            <h2>PENDING new P2 Style: Stage the eclipse-update-site
                         </h2>
           </a>
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <ul>
-    <li>
-      Build the Eclipse update site, after the corresponding jars have been staged
-      with their final release numbers to the staging repo:
-      <ul>
-        <li>Edit the site.xml to update the features with the final release numbers.</li>
-        <li>
-          run <code>mvn package</code>
-          on the uimaj-eclipse-update-site project to pack the new plugin Jars, and generate the new p2 repository (update site) containing
-          the new features.
-        </li>
-
-        <li>
-          This step is done automatically by the build script: copy the update site from target/eclipse-update-site to respective folder in
-          eclipse-packagings/eclipse-update-site and extend the composite repository with the new <quote>child</quote> update site.
-          The folder of the new update site will be renamed referring to the release number, e.g., <quote>uima-2.4.0</quote>.
-        </li>
-
-        <li>run the signEclipseUpdateSite.sh script to sign the new Jars and zip files. 
-          This script can be run on linux or on windows, but on windows, you need to run it inside Cygwin.
-          When you install Cygwin, indicate that it should fixup the windows line ending characters; otherwise the script may not
-          run. Since the name of the folder changes, you need to update the paths in the script files.
-        </li>
-        
-        <li>The scripts for signing can also be directly applied on the built p2 repository (uimaj-eclipse-update-site/target/eclipse-update-site), 
-          without adapting the path in the script files. However, the second last step needs to be performed manually. Replace the folder of 
-          the update site in the composite repository and execute the build script <quote>buildCompositeRepository.xml</quote> by adapting 
-          the absolute path to the composite repository (<quote>eclipseUpdateSiteComposite</quote>) and child repository (<quote>eclipseUpdateSite</quote>).
-        </li>
-        
-        <li>Test the result: try using the extended composite repository (as a local site) in various versions of
+                                    <p>For a general background on how we build P2 sites, including Composite
+  update sites, see <a href="eclipse-update-site.html">eclipse-update-site</a> page.
+  </p>
+                                                <p>
+      The component being released, if it has Eclipse features, will have its own
+      Eclipse update (sub) site, which should be built along with the normal build of 
+      the entire component, as part of that component's release.
+  </p>
+                                                <p>
+  In building that component's update site, you may need to edit/update the affected
+  component's feature project(s), and the category.xml file in the update-site, before
+  building it.  For releases, run the signEclipseUpdateSite.sh (on windows - inside Cygwin)
+  to sign the Jars.  (Optional:) There's also a verifySignsEclipseUpdateSite.sh you can run to verify
+  the signing was successful.
+  </p>
+                                                <p>
+  If a new Eclipse update site is being added to the composite, edit in the composite
+  project (.../build/uima-eclipse-composite-update-site) the buildCompositeRepository.xml
+  file to add the new update site.  If doing a release, run the signing script for the
+  composite site too.  
+  </p>
+                                                <p>
+  The actual creation of the update site is done via copying the composite update site into
+  the staging point, followed by all the sub-sites to folders as named in the composite update
+  site.
+  </p>
+                                                <p>Test the result: using the extended composite repository (as a local site) in various versions of
           Eclipse, and verify it installs OK.
-          If there are errors, correct these and rebuild.
-        </li>
-
-        <li>
-          SVN commit any changes you did to the trunk.
-          In particular, the changed release numbers in the uimaj-eclipse-update-site project and
-          the extended composite repository in eclipse-packagings/eclipse-update-site.
-        </li>
-
-      </ul>
-    </li>
-  </ul>
+  </p>
+                                                <p>
+  If you changed the composite site, bump up the version of .../build/uima-eclipse-composite-site/pom.xml
+  and commit project changes to the trunk, and tag it (if doing a release).
+  The component's individual update sites should be built and tagged as part of that project's release.
+  </p>
                             </blockquote>
         </td></tr>
     </table>
