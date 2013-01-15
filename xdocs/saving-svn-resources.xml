@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+  
+  http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+<document>
+
+  <properties>
+    <title>Saving SVN Resources</title>
+    <author email="dev@uima.apache.org">
+      Apache UIMA Documentation Team 
+    </author>
+  </properties>
+
+  <body>
+
+    <section name="Saving SVN Resources">
+      <p>
+      Apache Infrastructure practices have websites and distributions go via SVN.
+      Whenever reasonable, please conserve SVN resources, using various approaches.
+      </p>
+      <ul>
+<li>Arrange to have files which don't change from release to release shared within the SVN.</li>
+<li>Arrange to have files which change minimally, and which are "text", to take advantage of 
+SVN storage of differences between versions</li>
+</ul>
+<p>These two principles mean we should not just generate a new set of Javadocs, for instance,
+and then commit them as xyz-version-2.4.0/ - this would add all these files as new ones.
+Instead we need to do something like do an SVN copy (within SVN) of the previous files,
+check that out, overwrite that with changes from the new generation, and check that back in.
+This way just changed files get checked in, and of those, just changed lines do.</p>
+<p>
+There is a webpage which details recommendations for how to do this: 
+<a target="_blank"
+href="http://www.apache.org/dev/project-site.html#generated">http://www.apache.org/dev/project-site.html#generated</a>.
+</p>
+    </section>
+  </body>
+</document>
+    

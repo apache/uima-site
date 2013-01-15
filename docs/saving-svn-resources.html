@@ -8,12 +8,14 @@
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
             <style type="text/css">@import "stylesheets/base.css";</style>
-                                          <meta name="author" value="Apache UIMA Documentation Team">
+                                          <meta name="author" value="
+      Apache UIMA Documentation Team 
+    ">
   <meta name="email" value="dev@uima.apache.org">
                         
             
                         
-                        <title>Apache UIMA - Checklist: Release</title>
+                        <title>Apache UIMA - Saving SVN Resources</title>
         </head>
 
         <body>
@@ -27,7 +29,7 @@
                             </a>
                     </td>
                     <td align='CENTER'>
-                          <div class="pageBanner">Checklist: Release</div>
+                          <div class="pageBanner">Saving SVN Resources</div>
                     </td>
                     <td align='RIGHT'>
                                   <a href="http://www.apache.org">
@@ -175,96 +177,28 @@
                                                           <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Checklist: Release"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Checklist: Release</h1></a>
+        <a name="Saving SVN Resources"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Saving SVN Resources</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <ol>
-  <li>Do <a href="one-time-release-setup.html">one-time setup</a> required for releasing.</li>
-  <li>Finish up any changes, close Jiras, assign Jiras to proper release(s).</li>
-  <!--li>(If remerging a branch:  Note- best to do these if possible at the root of aggregations, 
-    outside of Eclipse, so svn "batching" can work - will be quite a bit fraster)
-    <ol><li>update branch working copy to head</li>
-      <li>merge trunk head -> working copy (fully recursive)</li>
-      <li>commit</li>
-      <li>switch working copy to trunk (fully recursive)</li>
-      <li>merge reintegrate branch -> trunk</li>
-      <li>commit</li>
-      <li>(cleanup at end- delete the old branch)</li>
-    </ol>
-  </li-->
-  <p>More details on next steps are 
-    <a href="http://maven.apache.org/developers/release/apache-release.html">here</a></p>
-  <ol>
-    <p>Make sure you've not left open a previous release candidate staging repository. 
-      Then release one or more artifacts into the Apache Nexus staging repository.
-      You can do multiple release:prepare/perform steps, with subsequent steps
-      depending on the previous artifacts in their "release" version.</p>
-    <li>Do next steps in top release artifact (single module, or mult-module top project).
-      <ol>
-        <p>Release one or more artifacts into the staging repo.</p>     
-        <li>Scan poms to be sure there are <b>no</b> unintentional -SNAPSHOTs</li>.   
-        <li><code>mvn release:prepare -DdryRun</code> and diff the resulting poms
-          to verify nothing unintentional is dropped or updated incorrectly</li>
-          For multi-module projects, where all the submodules have the same version, use: <br />
-          <code>mvn release:prepare -DdryRun -DautoVersionSubmodules</code>.
-        <li><code>mvn release:clean</code> to restore projects</li>
-        <li><code>mvn deploy</code> to deploy snapshot</li>
-        <li><code>mvn release:prepare [-DautoVersionSubmodules]</code>. 
-        Try to accept the default suggestions for names; you might change the SVN tag to include a "-rc1"
-        suffix indicating a release candidate number.</li>
-        <li><code>mvn release:perform</code></li>      
-      </ol>
-    </li>
-    <li>Repeat above steps for all things being released in one go (not already in an aggregate).</li>
-    <li>login to <a href="https://repository.apache.org">https://repository.apache.org</a>
-      using your Apache LDAP credentials, find the staging artifact, and right click - "close" it
-      after all things that are being included in this release are present.</li> 
-    <!--li>Update the trunk: for all references that should now refer to the staged release version
-    </li>
-    <li>build/test these</li>
-    <li>commit trunk</li-->  
-  </ol>
-  <!--li>
-    Repeat above steps for all sets of dependent things where you need to update the dependencies to
-    depend on the release version of previous steps.  When you're done, you will have 1 or more
-    "closed" staging repositories, each having a unique URL.
-  </li-->
-  <li>Copy any artifacts (together with their signings) to the distribution SVN staging repo,
-  https://dist.apache.org/repos/dist/dev/uima.  For release which include eclipse-update-site
-  packagings, this should include any modifications to the update site or subsites (see
-  <a href="/eclipse-update-site.html">eclipse-update-site</a>.
-  Do this in a manner to <a href="saving-svn-resources.html">minimize SVN space</a> use, if possible.  
-  </li>
-  <li>Send [VOTE] message to dev list.  List the staging repository that testers
-    will need to add to their <code>settings.xml</code> files, and the distribution SVN repo link.</li>
-  <li>Post RESULT message</li>
-  <li>Delete any artifacts from the staging repo that aren't supposed to go to Maven Central
-      (currently only the bin.tar artifacts - the bin.zip is used for building uima-as)</li>
-  <li>Promote the release(s) from the staging repositories</li>
-  <li>svn move the approved artifacts in the distribution repo from the dev/uima spot to the release/uima spot.</li>
-  <li>update the UIMA website docs/d with any generated docs, in a manner to 
-  <a href="saving-svn-resources.html">minimize SVN space</a> use, if possible.
-This includes: PDFs, HTML versions of docbooks plus the index.html; all go on the
-      website under the uima.apache.org/d/ (non-SVN source) directory.  Update the index.html
-      as needed for the version.
-</li>
-  <!--li>Copy released artifacts to targets: bin, src, p.a.o/www/www.apache.org/dist/uima, 
-      new features / plugins from Eclipse update site target/eclipse-update-site to .../dist/uima/eclipse-update-site
-      (add to what's already there).</li-->
-  <!-- li>Copy released artifacts to targets: bin, src, p.a.o/www/www.apache.org/dist/uima. <u>TEMPORARY:</u>
-      Copy the updated composite repository from eclipse-packagings/eclipse-update-site to .../dist/uima/eclipse-update-site.</li-->
-  <li>Copy RELEASE_NOTES and issuesFixed
-      from uimaj/target/checkout (where
-      the mvn release:perform was done from) to the UIMA web site in doc/d/[project-version].</li>
-  <li>Update the downloads page of the web site</li>
-  <li>Update Jira version info to reflect the release status and date</li>
-  <li>Cleanup the SVN tag for the release candidate, removing any -rcXX, to indicate the release.</li>
-  <li>After release appears on maven central, post an appropriate announce letter</li>
-  <li>Add a news item for the release</li>
-  <li>Add release to next Board report</li>
-  <li>Celebrate :-)</li>
-</ol>
+                                    <p>
+      Apache Infrastructure practices have websites and distributions go via SVN.
+      Whenever reasonable, please conserve SVN resources, using various approaches.
+      </p>
+                                                <ul>
+<li>Arrange to have files which don't change from release to release shared within the SVN.</li>
+<li>Arrange to have files which change minimally, and which are "text", to take advantage of 
+SVN storage of differences between versions</li>
+</ul>
+                                                <p>These two principles mean we should not just generate a new set of Javadocs, for instance,
+and then commit them as xyz-version-2.4.0/ - this would add all these files as new ones.
+Instead we need to do something like do an SVN copy (within SVN) of the previous files,
+check that out, overwrite that with changes from the new generation, and check that back in.
+This way just changed files get checked in, and of those, just changed lines do.</p>
+                                                <p>
+There is a webpage which details recommendations for how to do this: 
+<a target="_blank" href="http://www.apache.org/dev/project-site.html#generated">http://www.apache.org/dev/project-site.html#generated</a>.
+</p>
                             </blockquote>
         </p>
       </td></tr>

@@ -219,8 +219,12 @@ A previous version of this page, with the methods we used while in the incubator
                   Removing -SNAPSHOT dependencies
         
                 </a></li>
-          <li><a href='#PENDING new P2 Style: Stage the eclipse-update-site'>
-                  PENDING new P2 Style: Stage the eclipse-update-site
+          <li><a href='#Copying release artifacts to staging spot'>
+                  Copying release artifacts to staging spot
+        
+                </a></li>
+          <li><a href='#Stage the eclipse-update-site'>
+                  Stage the eclipse-update-site
         
                 </a></li>
           <li><a href='#Doing The Release Vote'>
@@ -253,6 +257,7 @@ A previous version of this page, with the methods we used while in the incubator
     The UIMA project mainly releases:
     <ul><li>The UIMA SDK</li>
       <li>UIMA-AS add-on</li>
+      <li>UIMA-CPP</li>
       <li>Individual Annotators, tooling, and other useful components (like the Simple Server)</li></ul>
     In addition, it releases some Maven build tooling components that 
     need to be in the Maven repositories to support our Maven processes.
@@ -279,7 +284,7 @@ A previous version of this page, with the methods we used while in the incubator
                                     <p>
 		  At the beginning of the "UIMA Release Process" there must be consensus in the developer community 
 		  about the JIRA issues that should be part of the next release and the time frame for the release. 
-		  The result of this discussion should be published in a release plan to the UIMA wiki, if it is
+		  (Optional) The result of this discussion should be published in a release plan to the UIMA wiki, if it is
       complex. 
 		  This release plan should be kept up-to-date any time so that everybody can have a look at the target dates 
 		  to calculate personal ToDos.
@@ -500,7 +505,7 @@ mvn install -Papache-release</pre>
         <li><code>mvn release:perform</code></li>
     </ul> 
     </p>
-                                                <p>Normally, everything built is uploaded to the Nexus Staging repository.  However, for the 
+                                                <p>Normally, everything built is uploaded to the Apache's Nexus Staging repository.  However, for the 
     (large) distribution objects, such as the source and binary distributions for UIMA Java SDK etc.,
     the "deploy" step is skipped.  These artifacts, instead of being "distributed" using the
     Maven central repository, are distributed using the Apache Mirroring System.</p>
@@ -619,8 +624,31 @@ mvn install -Papache-release</pre>
        
        
        
-          <a name="PENDING new P2 Style: Stage the eclipse-update-site">
-            <h2>PENDING new P2 Style: Stage the eclipse-update-site
+          <a name="Copying release artifacts to staging spot">
+            <h2>Copying release artifacts to staging spot
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+  Copy all the artifacts to be released via the Apache mirror system to their positions in the
+  distribution SVN: https://dist.apache.org/repos/dist/dev/uima spot.  
+  Use the 
+  <a href="saving-svn-resources.html">saving-svn-space</a> tricks if reasonable. Typically, for each release, we create a new directory for that, and place
+  all files pertaining to that release underneath that directory.
+  Note that any JARs, Zips, Tars, tar.gz artifacts need to be signed.
+  </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Stage the eclipse-update-site">
+            <h2>Stage the eclipse-update-site
                         </h2>
           </a>
       </td></tr>
@@ -637,7 +665,7 @@ mvn install -Papache-release</pre>
                                                 <p>
   In building that component's update site, you may need to edit/update the affected
   component's feature project(s), and the category.xml file in the update-site, before
-  building it.  For releases, run the signEclipseUpdateSite.sh (on windows - inside Cygwin)
+  building it.  For releases, run the signEclipseUpdateSite.sh (on Windows - inside Cygwin)
   to sign the Jars.  (Optional:) There's also a verifySignsEclipseUpdateSite.sh you can run to verify
   the signing was successful.
   </p>
@@ -648,16 +676,22 @@ mvn install -Papache-release</pre>
   composite site too.  
   </p>
                                                 <p>
-  The actual creation of the update site is done via copying the composite update site into
-  the staging point, followed by all the sub-sites to folders as named in the composite update
-  site.
+  The actual creation of the update site is done in several steps, following
+  the conventions to 
+  <a href="saving-svn-resources.html">save SVN resources</a>.  First, SVN copy (if needed) 
+  the existing released composite update site
+  (from https://dist.apache.org/repos/dist/release/uima/eclipse-update-site) to
+  https://dist.apache.org/repos/dist/dev/uima/eclispe-update-site (the staging spot for releases).
+  Next, check out the existing update site from the dev spot into a working directory
+  Next, update the working directory with any changes, and then check it back in (to the /dev/... spot).
+  Note that any JARs, Zips, Tars, tar.gz artifacts need to be signed.
   </p>
-                                                <p>Test the result: using the extended composite repository (as a local site) in various versions of
+                                                <p>Test the result: using the extended composite repository in various versions of
           Eclipse, and verify it installs OK.
   </p>
                                                 <p>
   If you changed the composite site, bump up the version of .../build/uima-eclipse-composite-site/pom.xml
-  and commit project changes to the trunk, and tag it (if doing a release).
+  and commit project changes to the trunk, and tag it.
   The component's individual update sites should be built and tagged as part of that project's release.
   </p>
                             </blockquote>
@@ -683,8 +717,8 @@ mvn install -Papache-release</pre>
       </p>
                                                 <p>
       The source and binary distributions are manually copied by the 
-      release manager to the release manager's people.apache.com
-      account, to make them available for review.  The Maven module artifacts
+      release manager to the Apache distribution SVN in the dev/uima spot, 
+      to make them available for review.  The Maven module artifacts
       are found in the Nexus staging repository, and are available once 
       the release manager "closes" the repository.
     </p>
@@ -692,7 +726,7 @@ mvn install -Papache-release</pre>
       After things are staged, you write a note to the dev list, asking for an approval vote.
       You need to provide the url(s) of the closed staging repository in the note so the approvers
       can find the code to check, the SVN tag corresponding to the release, and
-      if needed, the place on people.apache.org where the source and binary
+      if needed, and the place in the distribution SVN where the source and binary
       distributions being proposed are found.  
       The [VOTE] email should be based on similar previous votes, and
       include instructions to testers on how to set up their maven settings.xml file to specify
@@ -722,16 +756,14 @@ mvn install -Papache-release</pre>
         <li>Promote the release(s) from the staging repositories: 
             log on to the staging repository again, and release the staged artifacts.  
             This will make the artifacts available in the Maven Central repository.</li>
-        <li><p>Upload the release artifacts from people.apache.org to the distribution server 
-      (via copying on people.apache.org
-      to the directory: <code>/www/www.apache.org/dist/uima</code>, including the 
-      release artifacts and the Eclipse update site data 
+        <li><p>SVN move the release artifacts from the distribution SVN staging spot
+        in dev/uima to release/uima.  
       <!-- 
        (which are merged with
       the existing previous plugin releases already on the update site).  
        -->
-      (<u>TEMPORARY</u>: the updated composite repository replaces the existing one).
-      Be sure to include the asc/md5/sha1 signatures.
+      If Eclipse plugins are being released, the updated composite update site is 
+      promoted to the release/uima directory.
       Make sure the KEYS file in that uploaded directory is current (master located in 
       SVN uima/site/trunk/uima-website/docs/KEYS). Additionally it is necessary to update
       the download page of the UIMA website to make the new release artifacts available.
@@ -739,50 +771,23 @@ mvn install -Papache-release</pre>
       adding entries to the xdocs/stylesheets/project.xml page - follow the previous examples.</p>
       </li>
       <li>Things not needed to be mirrored go into our website:
-        on p.a.o, in directory www/uima.apache.org/d/
+        in the docs/d directory.
         Currently, this includes the RELEASE_NOTES (plus issuesFixed) for the release,
-        the new docbooks, and the Javadocs. 
-        <p class="note">
-        Before, things only got to our website by being added to SVN.  Apache Infrastructure has
-        set up an additional path for our project to allow large generated objects (e.g., Javadocs)
-        to bypass SVN.  This works as follows:  Anything you want on our website can be put in 
-        people.a.o in the directory www/uima.apache.org/d/, just by copying it there.  This location
-        will be rsync'd to our website once an hour, approximately.
-        </p>
-        <!-- 
-         <p>
-        Copy released artifacts to targets: bin, src, to p.a.o/www/www.apache.org/dist/uima, 
-      new features / plugins from Eclipse update site target/eclipse-update-site to .../dist/uima/eclipse-update-site
-      (add to what's already there).    
-      <ul>
-        <li>The Eclipse update site on w.a.o/dist/uima will have previous versions of the jars for the
-        features and plugins.  The generated site in 
-          <code>uimaj-eclipse-update-site/target/eclipse-update-site</code> has the new version plugin(s)
-          and feature jars.  These should be added to the w.a.o/dist/uima update site - leave the others
-          that are already there in place.  
-          Update the Eclipse site and digest as needed.
-        </li>
-      </ul>
-      </p>
-         -->
+        the new docbooks, and the Javadocs.  Arrange to update these in a way that
+        preserves SVN resources.</li>
       
-         <p>
-        Copy released artifacts to targets: bin, src, to p.a.o/www/www.apache.org/dist/uima.
-        <u>TEMPORARY</u>: Copy the updated composite repository from eclipse-packagings/eclipse-update-site to .../dist/uima/eclipse-update-site.
-        The composite repository (update site) contains also all previous update site data and can therefore replace the existing one.
-      </p>   
       <li>Copy RELEASE_NOTES and issuesFixed
       from the top level project (where
       the mvn release:perform was done from) in the directory
-      target/checkout/ ...  to the p.a.o/www/uima.apache.org/d/[project-version].</li>
-      </li>
+      target/checkout/ ...  to the the website in docs/d/[project-version].</li>
       
-      <li>After the distribution directory on people.apache.org/www/www.apache.org/dist/uima is updated, 
-      update the downloads page of the web site</li>
+      
+      <li>Update the downloads page of the web site</li>
   <li>Update Jira version info to reflect the release status and date</li>
   <li>Rename the SVN tag for the release candidate if it ends in -rcXXX, without the -rcXX to indicate the release.</li>
   <li>After release appears on maven central, post an appropriate announce letter</li>
   <li>Add release to next Board report</li>
+  <li>Celebrate!</li>
   </ol>    
 		</p>
                             </blockquote>
@@ -814,7 +819,9 @@ mvn install -Papache-release</pre>
 	    For more details please refer to <a href="http://incubator.apache.org/guides/releasemanagement.html#announcements">
 	    A Guide To Release Management During Incubation</a>.
 	  </p>
-                                                <p>Our main uima website has a "News" section that should be updated with news of the release.</p>
+                                                <p>Our main uima website has a "News" section that should be updated with news of the release.
+    There are 2 place to update: One is the index.xml file, which has a one-line summary (at the bottom) that references
+    a link within the new.xml page; and a new entry in the news.xml page itself.  Follow previous examples.</p>
                             </blockquote>
         </td></tr>
     </table>
