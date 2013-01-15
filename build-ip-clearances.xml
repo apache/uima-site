@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -81,6 +81,24 @@
            templatePath="xdocs/stylesheets-incubator-site">
       </anakia>
 
+    <!-- convert x99 (tm) to & trade ; -->
+  	<!--
+     <replace dir="${docs.dest}/" token="&#0153;" value="&amp;trade;" summary="true" encoding="UTF-8">
+       <include name="ip-clearances/*.html"/>
+     </replace>
+
+    <replace dir="${docs.dest}/" token="ö" value="&amp;ouml;" summary="true" encoding="UTF-8">
+      <include name="ip-clearances/*.html"/>
+    </replace>
+
+    <replace dir="${docs.dest}/" token="&amp;amp;uuml;" value="&amp;uuml;" summary="true" encoding="UTF-8">
+      <include name="ip-clearances/*.html"/>
+    </replace>
+
+    <replace dir="${docs.dest}/" token="&#0228;" value="&amp;auml;" summary="true" encoding="UTF-8">
+      <include name="ip-clearances/*.html"/>
+    </replace>
+    -->
       <!--copy todir="${docs.dest}/images" filtering="no">
           <fileset dir="${docs.src}/images">
               <include name="**/*.gif"/>

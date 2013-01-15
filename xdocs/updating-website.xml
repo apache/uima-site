@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<document>
+
+<properties>
+<title>Updating the Apache UIMA Website</title>
+<author email="dev@uima.apache.org">
+ Apache UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+<section name="Updating the Apache UIMA Website">
+<p>The Apache UIMA&#0153; website is updated by committers on the
+project from time to time.  Besides normal edits to various pages, 
+with every release the download page needs updating.  There are
+special procedures for effectively handling large generated documentation,
+as well.</p>
+<subsectionToc/>
+
+<subsection name="Kinds of Web Content">
+<p>There are many kinds of data in the uima-website component.  Here's a summary:
+<ul>
+<li>Normal web pages.  These are kept in source form in /xdocs/....xml, and converted
+to published ....html form (formatting, adding required headers/footers, etc.) and kept
+as identically named (except for the .html suffix) files under /docs/.
+</li>
+<li>Generated files.  These are things like the current javadocs.  These are often
+large, with 1000's of files.  These are kept in /docs/d/ directory.
+</li>
+<li>xdocs/stylesheets - this is a repository for the main formatting macros and data for the
+website.  It includes the project.xml, which has the left-hand menu details, and the release
+details, and transformation macros.  Note: we use anakia and "velocity" (vsl) macros, we do
+not use XSLT transformation.  The filel site.xsl is out of date, not maintained, etc.; see
+the file site.vsl instead.</li>
+<li>downloads - needs impovement.  It has some old generated files (should be cleaned up -
+deleted or moved to /docs/d/).  There should also not be 2 copies both in docs/ and xdocs/.  
+A reasonable design would be for this to be only in the /docs/ directory, and to contain
+non-generated files for download.  Be careful in doing changes, in that external websites
+could link to files here.
+<p>This has generated docs for the sandbox projects, for old versions of UIMA while in
+incubation (probably should be removed), and charts and PDFs for the UIMA track of 
+the 2007 GLDV conference.</p></li>
+<li>ip-clearances - this should be moved from the /docs/ to a non-published directory.
+This is an output directory that doesn't really need to be checked into SVN - its there
+only to check ip-clearance documentation before committing it to the incubator web site
+(see the Apache IP clearance process).</li>
+<li>The DOAP file for UIMA.  See <a target="_blank" 
+href="http://projects.apache.org/doap.html">http://projects.apache.org/doap.html</a>.
+This file at this location is registered with the Apache infrastructure so do not 
+move it without updating that.</li>
+</ul></p>
+</subsection>
+<subsection name="How to SVN checkout the web-site">
+<p>You can use this trick when checkout of the uima-website project, to reduce the
+footprint of what's checked out.  The basic idea is to do a full checkout, but then
+discard from the working-copy, the /docs/d/ content (the generated Javadocs, etc.).
+This can be done using the command:
+<pre>cd to the top of the uima-website working copy, and then
+svn update --set-depth exclude docs/d
+svn update --set-depth exclude docs/download/gldv
+svn update --set-depth exclude docs/download/releaseDocs</pre>
+This will run for a while, but then the directories mentioned and their contents will be
+deleted from your working copy; this will speed up various SVN operations that have
+to scan the files for changes, etc. For more details, see
+<a target="_blank"
+href="http://svnbook.red-bean.com/en/1.6/svn.advanced.sparsedirs.html">
+http://svnbook.red-bean.com/en/1.6/svn.advanced.sparsedirs.html</a>.
+If this doesn't work for you, check that your svn version is at least 1.6.
+</p>
+</subsection>
+<subsection name="How to Generate and Publish the web-site">
+<p>The SVN spot uima/site/trunk/uima-website has the current published version of the
+website.  The subtree starting at the <code>docs</code> directory is automatically
+copied to the Apache webserver, whenever an SVN update is done.
+</p>
+<p>After updating any pages in xdocs/, you must run the build.xml ANT script to 
+convert these changes to corresponding pages in the docs/ directory.
+The build.xml script uses the time stamp on the source files to determine which
+files to run against, and only regenerates files which have changed (or been added).
+</p>
+</subsection>
+<subsection name="Using the stylesheets">
+<p>There are two kinds of stylesheets.  One is in the /docs/stylesheets and is the
+CSS styling of the website.  Change this to tweak the look and feel of the website.</p>
+<p>The other is the stylesheets directory in the xdocs/.  Change the project.xml to update
+the left-hand-side navigation menu, and to add details about new releases (these are used
+to generate the bulk of the download page).</p>
+</subsection>
+<subsection name="Generated Content Management">
+<p>Generated content can be large, and can contain 1000's of files.  It needs to be 
+somewhat carefully managed to conserve Apache infrastructure resources.</p>
+<p>With the new style of web-site management, the only way to get information published
+is to put it into SVN in our docs/ directory.  By convention, generated information goes 
+under docs/d/.</p>
+<p>
+Since most generated information is associated with release versions, this can change
+with each release.  Our website often keeps links to the current, and maybe one previous
+release.  To make the consumption of SVN resources minimal, the following is suggested
+as the way to update these.
+</p>
+<ul>
+<li>Arrange to have files which don't change from release to release shared within the SVN.</li>
+<li>Arrange to have files which change minimally, and which are "text", to take advantage of 
+SVN storage of differences between versions</li>
+</ul>
+<p>These two principles mean we should not just generate a new set of Javadocs, for instance,
+and then commit them as xyz-version-2.4.0/ - this would add all these files as new ones.
+Instead we need to do something like do an SVN copy (within SVN) of the previous files,
+check that out, overwrite that with changes from the new generation, and check that back in.</p>
+<p>
+There is a webpage which details recommendations for how to do this: 
+<a target="_blank"
+href="http://www.apache.org/dev/project-site.html#generated">http://www.apache.org/dev/project-site.html#generated</a>.
+</p>
+</subsection>
+<subsection name="Download CGI scripting">
+<p>The main download page, downloads.cgi in docs/ is specially crafted to interface with
+Apache's mirror system for downloading.  The actual download page is a "template" that the
+cgi uses, substituting a randomly picked mirror site.  Users which want to link to the 
+download page need to link to the .cgi version, to get a proper display of the webpage. 
+</p>
+</subsection>
+<subsection name="IP-Clearance documentation">
+<p>We keep ip-clearance documentation for our project in /xdocs/ip-clearances, so they
+can be iteratively developed.</p>
+</subsection>
+
+</section>
+</body>
+</document>

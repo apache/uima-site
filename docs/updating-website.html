@@ -14,7 +14,7 @@
                         
             
                         
-                        <title>Apache UIMA - Using Docbook for documentation</title>
+                        <title>Apache UIMA - Updating the Apache UIMA Website</title>
         </head>
 
         <body>
@@ -28,7 +28,7 @@
                             </a>
                     </td>
                     <td align='CENTER'>
-                          <div class="pageBanner">Using Docbook for documentation</div>
+                          <div class="pageBanner">Updating the Apache UIMA Website</div>
                     </td>
                     <td align='RIGHT'>
                                   <a href="http://www.apache.org">
@@ -176,137 +176,240 @@
                                                           <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Apache UIMA&trade; Docbook Bookshelf"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Apache UIMA&trade; Docbook Bookshelf</h1></a>
+        <a name="Updating the Apache UIMA Website"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Updating the Apache UIMA Website</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>To facilitate cross referencing among UIMA docbooks, we ask users
-      when downloading these books to place the downloaded files in a common
-      directory, which we refer to as the UIMA bookshelf.</p>
-                                                <p>When this is done, the user will be able to follow cross reference
-      linkages within the downloaded books, without needing an internet 
-      connection.</p>
-                            </blockquote>
-        </p>
-      </td></tr>
-    </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                    <p>The Apache UIMA&trade; website is updated by committers on the
+project from time to time.  Besides normal edits to various pages, 
+with every release the download page needs updating.  There are
+special procedures for effectively handling large generated documentation,
+as well.</p>
+                                                      <ul>
+          <li><a href='#Kinds of Web Content'>
+                  Kinds of Web Content
+        
+                </a></li>
+          <li><a href='#How to SVN checkout the web-site'>
+                  How to SVN checkout the web-site
+        
+                </a></li>
+          <li><a href='#How to Generate and Publish the web-site'>
+                  How to Generate and Publish the web-site
+        
+                </a></li>
+          <li><a href='#Using the stylesheets'>
+                  Using the stylesheets
+        
+                </a></li>
+          <li><a href='#Generated Content Management'>
+                  Generated Content Management
+        
+                </a></li>
+          <li><a href='#Download CGI scripting'>
+                  Download CGI scripting
+        
+                </a></li>
+          <li><a href='#IP-Clearance documentation'>
+                  IP-Clearance documentation
+        
+                </a></li>
+        </ul>
+                                                        <table class="subsectionTable">
         <tr><td>
-        <a name="Docbook Conventions used"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Docbook Conventions used</h1></a>
+       
+       
+       
+          <a name="Kinds of Web Content">
+            <h2>Kinds of Web Content
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
-                                    <p>The build tooling expects the following conventions to 
-    be followed:</p>
+        <blockquote class="subsectionBody">
+                                    <p>There are many kinds of data in the uima-website component.  Here's a summary:
+<ul>
+<li>Normal web pages.  These are kept in source form in /xdocs/....xml, and converted
+to published ....html form (formatting, adding required headers/footers, etc.) and kept
+as identically named (except for the .html suffix) files under /docs/.
+</li>
+<li>Generated files.  These are things like the current javadocs.  These are often
+large, with 1000's of files.  These are kept in /docs/d/ directory.
+</li>
+<li>xdocs/stylesheets - this is a repository for the main formatting macros and data for the
+website.  It includes the project.xml, which has the left-hand menu details, and the release
+details, and transformation macros.  Note: we use anakia and "velocity" (vsl) macros, we do
+not use XSLT transformation.  The filel site.xsl is out of date, not maintained, etc.; see
+the file site.vsl instead.</li>
+<li>downloads - needs impovement.  It has some old generated files (should be cleaned up -
+deleted or moved to /docs/d/).  There should also not be 2 copies both in docs/ and xdocs/.  
+A reasonable design would be for this to be only in the /docs/ directory, and to contain
+non-generated files for download.  Be careful in doing changes, in that external websites
+could link to files here.
+<p>This has generated docs for the sandbox projects, for old versions of UIMA while in
+incubation (probably should be removed), and charts and PDFs for the UIMA track of 
+the 2007 GLDV conference.</p></li>
+<li>ip-clearances - this should be moved from the /docs/ to a non-published directory.
+This is an output directory that doesn't really need to be checked into SVN - its there
+only to check ip-clearance documentation before committing it to the incubator web site
+(see the Apache IP clearance process).</li>
+<li>The DOAP file for UIMA.  See <a target="_blank" href="http://projects.apache.org/doap.html">http://projects.apache.org/doap.html</a>.
+This file at this location is registered with the Apache infrastructure so do not 
+move it without updating that.</li>
+</ul></p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="How to SVN checkout the web-site">
+            <h2>How to SVN checkout the web-site
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>You can use this trick when checkout of the uima-website project, to reduce the
+footprint of what's checked out.  The basic idea is to do a full checkout, but then
+discard from the working-copy, the /docs/d/ content (the generated Javadocs, etc.).
+This can be done using the command:
+<pre>cd to the top of the uima-website working copy, and then
+svn update --set-depth exclude docs/d
+svn update --set-depth exclude docs/download/gldv
+svn update --set-depth exclude docs/download/releaseDocs</pre>
+This will run for a while, but then the directories mentioned and their contents will be
+deleted from your working copy; this will speed up various SVN operations that have
+to scan the files for changes, etc. For more details, see
+<a target="_blank" href="http://svnbook.red-bean.com/en/1.6/svn.advanced.sparsedirs.html">
+http://svnbook.red-bean.com/en/1.6/svn.advanced.sparsedirs.html</a>.
+If this doesn't work for you, check that your svn version is at least 1.6.
+</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="How to Generate and Publish the web-site">
+            <h2>How to Generate and Publish the web-site
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>The SVN spot uima/site/trunk/uima-website has the current published version of the
+website.  The subtree starting at the <code>docs</code> directory is automatically
+copied to the Apache webserver, whenever an SVN update is done.
+</p>
+                                                <p>After updating any pages in xdocs/, you must run the build.xml ANT script to 
+convert these changes to corresponding pages in the docs/ directory.
+The build.xml script uses the time stamp on the source files to determine which
+files to run against, and only regenerates files which have changed (or been added).
+</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Using the stylesheets">
+            <h2>Using the stylesheets
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>There are two kinds of stylesheets.  One is in the /docs/stylesheets and is the
+CSS styling of the website.  Change this to tweak the look and feel of the website.</p>
+                                                <p>The other is the stylesheets directory in the xdocs/.  Change the project.xml to update
+the left-hand-side navigation menu, and to add details about new releases (these are used
+to generate the bulk of the download page).</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Generated Content Management">
+            <h2>Generated Content Management
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>Generated content can be large, and can contain 1000's of files.  It needs to be 
+somewhat carefully managed to conserve Apache infrastructure resources.</p>
+                                                <p>With the new style of web-site management, the only way to get information published
+is to put it into SVN in our docs/ directory.  By convention, generated information goes 
+under docs/d/.</p>
+                                                <p>
+Since most generated information is associated with release versions, this can change
+with each release.  Our website often keeps links to the current, and maybe one previous
+release.  To make the consumption of SVN resources minimal, the following is suggested
+as the way to update these.
+</p>
                                                 <ul>
-      <li>Docbook source(s) should be put in the directory src/docbook/.  The 
-        existance of this directory is what causes the normal parent pom chain
-        to notice that docbook processing is needed during the build.</li>
-      <li>Currently, the docbooks are written to the 4.4 version of Docbook;
-        begin your files with the standard boilerplate (best to copy from another
-        docbook in the "set".</li>
-      <li>There is one designated file specified in project's POM as the property
-        "&lt;bookNameRoot&gt;" which must have as its value the name of the docbook
-        source file to process, minus the ".xml".  This supports breaking large
-        docbooks into multiple parts, perhaps one per "chapter"; you have one
-        top-level docbook which xincludes the other parts.  See the file
-        uima-docbook-overview-and-setup/src/docbook/overview-and-setup.xml for
-        an example of using this technique.
-        <p>The bookNameRoot name serves also as the book "name" 
-          and must be unique among all the docbooks in the UIMA bookshelf.</p>
-      </li>
-      <li>The first part of the top docbook source must include the line:
-        <pre>&lt;xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-  href="../../target/docbook-shared/common_book_info.xml"/&gt;</pre>
-        This allows it to pick up the standard license, disclaimers, and copyright notices.
-        Please set the POM element &lt;inceptionYear&gt;; this is used in the copyright notice.
-      </li>
-      <li>Xinclude support is automatically provided by the docbkx toolchain; you do not have to set 
-        XML entities for this at the top of your file.</li>
-      <li>Images to be included are by convention expected be located in a folder named 
-        "images/[bookNameRoot]", which is located in the same parent directory as
-        the top docbook source file.  The [bookNameRoot] is the name of the top docbook source
-        file, less the ".xml".  The "extra" directory under "images" is used to separate
-        images from the different docbooks in the uima bookshelf.</li>
-      <li>Standard entities may be included, using the form:
-        <pre>&lt;!ENTITY imgroot
-  "images/insert-booknameroot-here/optional-sub-dir/"&gt;
-&lt;!ENTITY % uimaents SYSTEM 
-  "../../target/docbook-shared/entities.ent"&gt;  
-%uimaents;</pre>
-        <p>The docbook-shared/entities... are common shared entities you can use; please
-          see the source for the list, located here:
-          <a href="http://svn.apache.org/repos/asf/uima/build/trunk/uima-docbook-resource-bundle/src/main/resources/docbook-shared/entities.ent" target="_blank">here</a>.</p></li>
-    </ul>
+<li>Arrange to have files which don't change from release to release shared within the SVN.</li>
+<li>Arrange to have files which change minimally, and which are "text", to take advantage of 
+SVN storage of differences between versions</li>
+</ul>
+                                                <p>These two principles mean we should not just generate a new set of Javadocs, for instance,
+and then commit them as xyz-version-2.4.0/ - this would add all these files as new ones.
+Instead we need to do something like do an SVN copy (within SVN) of the previous files,
+check that out, overwrite that with changes from the new generation, and check that back in.</p>
+                                                <p>
+There is a webpage which details recommendations for how to do this: 
+<a target="_blank" href="http://www.apache.org/dev/project-site.html#generated">http://www.apache.org/dev/project-site.html#generated</a>.
+</p>
                             </blockquote>
-        </p>
-      </td></tr>
+        </td></tr>
     </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="Cross Referencing among UIMA Docbooks"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Cross Referencing among UIMA Docbooks</h1></a>
+       
+       
+       
+          <a name="Download CGI scripting">
+            <h2>Download CGI scripting
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
-                                    <p>Docbooks support an enhanced cross-referencing among
-      docbook collections, using a link style called "olink".
-      Olinks allow cross-referencing and
-      hyperlinking among documents, using extra saved information about the
-      target document (being linked to, as contrasted with plain href style
-      links, which only have the link url). For instance, in PDFs, there's
-      extra info enabling the referring doc to say "page 123 in document abc".
-      For PDF and HTML, olinks allow the referring text to include a hyperlink
-      which includes target document's element title, and maybe a number (if it
-      has numbered items - such as our chapter / section numbers in the main
-      UIMA documentation). So you can get a link that looks like this:
-      <ul><li>see Section 1.5.1, ?Annotator Methods?</li></ul>
-      where the 1.5.1 was generated by docbook processing, and the "Annotator
-      Methods" was the title of that section.</p>
-                                                <p>
-      To make olinks work, each time a docbook is processed, an extra database
-      of info for that docbook is created, containing just the things needed for
-      this. This database, together with some other data about how the
-      multiple interlinking docbooks are arranged, is then
-      used when processing a docbook.      
-    </p>
-                                                <p>
-      Olink data for all UIMA docbooks is stored in one additional project,
-      uima-docbook-olink, that has an attached artifact: a zip file of all 
-      olink data. 
-    </p>
-                                                <p>
-      This project is at the level 1-SNAPSHOT, and will stay there.  
-      Because it's a snapshot, it is updated whenever it is "deployed".
-      Each docbook processing run updates that docbook's olink data.
-      Committers should deploy the snapshot to share updates of olink
-      data with others.
-    </p>
+        <blockquote class="subsectionBody">
+                                    <p>The main download page, downloads.cgi in docs/ is specially crafted to interface with
+Apache's mirror system for downloading.  The actual download page is a "template" that the
+cgi uses, substituting a randomly picked mirror site.  Users which want to link to the 
+download page need to link to the .cgi version, to get a proper display of the webpage. 
+</p>
                             </blockquote>
-        </p>
-      </td></tr>
+        </td></tr>
     </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="Creating a new Docbook"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Creating a new Docbook</h1></a>
+       
+       
+       
+          <a name="IP-Clearance documentation">
+            <h2>IP-Clearance documentation
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
-                                    <p>
-      <ul>
-        <li>Add a src/docbook directory, and put an images directory there 
-          for new images (if you have images), and one or more XML files containing docbook source.</li>
-        <li>Put the name of the top docbook xml file in the project's docbookNameRoot property</li>
-        <li>Add this docbook to the UIMA bookshelf - modifying the uima-docbook-olink project's 
-          src/main/docbook-olink/{html, htmlsingle, and pdf}/site.xml files.
-          <ul><li>Add a stanza to the site-map, and</li>
-            <li>add an entity for the docbookNameRoot at the top of the site file.</li>
-            </ul>
-          </li>
-      </ul>
-    </p>
+        <blockquote class="subsectionBody">
+                                    <p>We keep ip-clearance documentation for our project in /xdocs/ip-clearances, so they
+can be iteratively developed.</p>
+                            </blockquote>
+        </td></tr>
+    </table>
                             </blockquote>
         </p>
       </td></tr>
