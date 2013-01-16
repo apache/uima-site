@@ -230,11 +230,10 @@
     depend on the release version of previous steps.  When you're done, you will have 1 or more
     "closed" staging repositories, each having a unique URL.
   </li-->
-  <li>Copy any artifacts (together with their signings) to the distribution SVN staging repo,
-  https://dist.apache.org/repos/dist/dev/uima.  For release which include eclipse-update-site
-  packagings, this should include any modifications to the update site or subsites (see
+  <li>Copy any artifacts (together with their signings) to the staging spot.  This is typically
+  in your people.apache.org/~[userid]/public_html directory. For releases which include eclipse-update-site
+  packagings, this should include any modifications to the composite update site or subsites (see
   <a href="/eclipse-update-site.html">eclipse-update-site</a>.
-  Do this in a manner to <a href="saving-svn-resources.html">minimize SVN space</a> use, if possible.  
   </li>
   <li>Send [VOTE] message to dev list.  List the staging repository that testers
     will need to add to their <code>settings.xml</code> files, and the distribution SVN repo link.</li>
@@ -242,7 +241,8 @@
   <li>Delete any artifacts from the staging repo that aren't supposed to go to Maven Central
       (currently only the bin.tar artifacts - the bin.zip is used for building uima-as)</li>
   <li>Promote the release(s) from the staging repositories</li>
-  <li>svn move the approved artifacts in the distribution repo from the dev/uima spot to the release/uima spot.</li>
+  <li>Add the approved staged artifacts to the release/uima spot: log onto people.a.o and do an svn add
+  of the actual staged signed artifacts.</li>
   <li>update the UIMA website docs/d with any generated docs, in a manner to 
   <a href="saving-svn-resources.html">minimize SVN space</a> use, if possible.
 This includes: PDFs, HTML versions of docbooks plus the index.html; all go on the
@@ -255,8 +255,8 @@ This includes: PDFs, HTML versions of docbooks plus the index.html; all go on th
   <!-- li>Copy released artifacts to targets: bin, src, p.a.o/www/www.apache.org/dist/uima. <u>TEMPORARY:</u>
       Copy the updated composite repository from eclipse-packagings/eclipse-update-site to .../dist/uima/eclipse-update-site.</li-->
   <li>Copy RELEASE_NOTES and issuesFixed
-      from uimaj/target/checkout (where
-      the mvn release:perform was done from) to the UIMA web site in doc/d/[project-version].</li>
+      from the .../target/checkout where
+      the mvn release:perform was done from to the UIMA web site in doc/d/[project-version].</li>
   <li>Update the downloads page of the web site</li>
   <li>Update Jira version info to reflect the release status and date</li>
   <li>Cleanup the SVN tag for the release candidate, removing any -rcXX, to indicate the release.</li>

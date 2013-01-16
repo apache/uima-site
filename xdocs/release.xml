@@ -341,12 +341,25 @@ mvn install -Papache-release</pre>
   
   <subsection name="Copying release artifacts to staging spot">
   <p>
-  Copy all the artifacts to be released via the Apache mirror system to their positions in the
-  distribution SVN: https://dist.apache.org/repos/dist/dev/uima spot.  
-  Use the 
-  <a href="saving-svn-resources.html">saving-svn-space</a> tricks if reasonable. Typically, for each release, we create a new directory for that, and place
+  Note that any JARs, Zips, Tars, tar.gz artifacts must be signed by the Release Manager.
+  </p>
+  <p>
+  Although we have a spot in the distribution SVN under dev/uima for all the artifacts to be released
+  via the Apache mirror system, you probably should not use this for
+  release candidates, unless you suspect there won't be many of these (or they're small).  This is because
+  SVN retains forever all the files you put into it, so if we go through 8 release candidates, each having 
+  several multi-megabyte zip/tar files, these will just waste space in SVN. 
+  </p>
+  <p>
+  The alternative is to stage the release candidate in your personal people.apache.org/~[user-id] space, and
+  let testers/voters pull it from there.
+  </p>
+ 
+ <p>If you do use the distribution SVN for the release candidates, 
+  follow the 
+  <a href="saving-svn-resources.html">saving-svn-space</a> tricks if reasonable. 
+  Typically, for each release, we create a new directory for that, and place
   all files pertaining to that release underneath that directory.
-  Note that any JARs, Zips, Tars, tar.gz artifacts need to be signed.
   </p>
   </subsection>
 
@@ -473,25 +486,35 @@ mvn install -Papache-release</pre>
         <li>Promote the release(s) from the staging repositories: 
             log on to the staging repository again, and release the staged artifacts.  
             This will make the artifacts available in the Maven Central repository.</li>
-        <li><p>SVN move the release artifacts from the distribution SVN staging spot
-        in dev/uima to release/uima.  
+        <li><p>If the release candidate used the distribution (...dev/uima) spot, 
+        SVN move the release artifacts from the distribution SVN staging spot
+        in dev/uima to release/uima.  Otherwise, log on to people.a.o and do 
+        SVN add of the voted-on artifacts from the place where they were staged.
+        </p> 
+          
       <!-- 
        (which are merged with
       the existing previous plugin releases already on the update site).  
        -->
-      If Eclipse plugins are being released, the updated composite update site is 
-      promoted to the release/uima directory.
-      Make sure the KEYS file in that uploaded directory is current (master located in 
-      SVN uima/site/trunk/uima-website/docs/KEYS). Additionally it is necessary to update
+       <p>
+      If Eclipse plugins are being released, promote any changed files to the release/uima directory.
+       </p>
+       <p>
+      Make sure the KEYS file in release/uima is current (master located in 
+      SVN uima/site/trunk/uima-website/docs/KEYS). 
+      </p>
+      
+      <p>Update
       the download page of the UIMA website to make the new release artifacts available.
       This is done indirectly, by editing both the downloads.xml page and also by
       adding entries to the xdocs/stylesheets/project.xml page - follow the previous examples.</p>
+      
       </li>
       <li>Things not needed to be mirrored go into our website:
         in the docs/d directory.
         Currently, this includes the RELEASE_NOTES (plus issuesFixed) for the release,
         the new docbooks, and the Javadocs.  Arrange to update these in a way that
-        preserves SVN resources.</li>
+        <a href="saving-svn-resources.html">preserves SVN resources</a>.</li>
       
       <li>Copy RELEASE_NOTES and issuesFixed
       from the top level project (where
