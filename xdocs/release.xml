@@ -501,7 +501,9 @@ mvn install -Papache-release</pre>
        </p>
        <p>
       Make sure the KEYS file in release/uima is current (master located in 
-      SVN uima/site/trunk/uima-website/docs/KEYS). 
+      SVN uima/site/trunk/uima-website/docs/KEYS).
+      Any changes also need to be made in the version of the KEYS file
+      in the distribution svn (https://dist.apache.org/repos/dist/release/uima/KEYS). 
       </p>
       
       <p>Update
