@@ -376,7 +376,7 @@ document; used by the FileSystemCollectionReader</dd>
 </section>
 
 <section name="UIMA Sandbox components">
- <p>These components are only available in SVN at this time.</p>
+ <p>These components are partially only available in SVN at this time.</p>
  <h4>Annotators and Consumers</h4>
     <ul>
       <li><a href="#rdfcas.consumer">RDF CAS Consumer</a></li>      
@@ -384,6 +384,7 @@ document; used by the FileSystemCollectionReader</dd>
   <h4>Miscellaneous</h4>
     <ul>
       <li><a href="#gale.multimodal.example">GALE Multi-Modal Example</a></li>
+      <li><a href="#uima.textmarker">UIMA TextMarker</a></li>
     </ul>
   <p>These are described in more detail below.</p>      
 
@@ -405,7 +406,7 @@ document; used by the FileSystemCollectionReader</dd>
     for applications that combine analytics from multiple sources and modalities, such as speech
     recognition, language translation, entity detection, topic detection, speech synthesis, etc.
    </p> 
-   <p>   
+   <p>
     The sample code will illustrate how to wrap NLP analytics as UIMA annotators using 
     appropriate GTS types, as well as data-reorganization components that convert the output of each
     analytic into a form suitable for the following analytics, and add
@@ -417,7 +418,22 @@ document; used by the FileSystemCollectionReader</dd>
       </a>.
    </p>
   </subsection>
-
+  <subsection name="UIMA TextMarker" id="uima.textmarker">
+    <p>Apache UIMA TextMarker is a rule-based script language supported by Eclipse-based tooling.
+      The language is designed to enable rapid development of text processing applications within UIMA. 
+      A special focus lies on the intuitive and flexible domain-specific language for defining 
+      patterns of annotations. The Eclipse-based tooling for the TextMarker language, called the Apache UIMA TextMarker Workbench,
+      was created to support the user and to facilitate every step when writing TextMarker rules.
+    </p>
+    <p>
+      You can install the UIMA TextMarker Workbench via our Eclipse update site:
+      <a href="http://www.apache.org/dist/uima/eclipse-update-site/">http://www.apache.org/dist/uima/eclipse-update-site/</a>
+    </p>
+    <p><a href="d/textmarker-current/tools.textmarker.book.html">
+      Click here to access the user documentation</a>.</p>
+    <!--p><a href="d/...">
+      Click here to access a more detailed description with developer information</a>.</p-->
+  </subsection>
 </section>
 
 
