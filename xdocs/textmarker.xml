@@ -22,7 +22,7 @@ under the License.
 <document>
 
 <properties>
-<title>Apache UIMA Addons and Sandbox</title>
+<title>Apache UIMA TextMarker</title>
 <author email="dev@uima.apache.org">
  Apache UIMA Documentation Team</author>
 </properties>
@@ -31,8 +31,137 @@ under the License.
 
 <section name="Apache UIMA TextMarker">
 
+<subsectionToc/>
 
+<subsection name='Overview' id="textmarker.overview">
+  <p>
+    Apache UIMA&#0153; TextMarker consists of to major parts: An Analysis Engine, which interpret 
+    and executes the TextMarker rule-based scripting language, and the Eclipse-based tooling (TextMarker Workbench), 
+    which provides various support for developing TextMarker rules.
+  </p>
+  <ul>
+    <li>
+      <p>
+        This page only contains a short overview. A more detailed introduction can be found in the documentation 
+        (<a href="d/textmarker-current/tools.textmarker.book.html">html</a>, 
+        <a href="d/textmarker-current/tools.textmarker.book.pdf">pdf</a>).
+      </p>    
+    </li> 
+    <li>
+      <p>
+        UIMA TextMarker Workbench can be installed via our Eclipse update site:
+        <a href="http://www.apache.org/dist/uima/eclipse-update-site/">http://www.apache.org/dist/uima/eclipse-update-site/</a>
+      </p>    
+    </li>     
+  </ul>
+</subsection>
 
+<subsection name='Rule Language' id="textmarker.language">
+  <p>
+    The TextMarker language is an imperative rule language extended with scripting elements. A TextMarker rule defines a
+    pattern of annotations with additional conditions. If this pattern applies, then the actions of the rule are performed 
+    on the matched annotations. A rule is composed of a sequence of rule elements and a rule element essentially consist of four parts: 
+    A matching condition, an optional quantifier, a list of conditions and a list of actions.
+    The matching condition is typically a type of an annotation by which the rule element matches on the covered text of one of those annotations.
+    The quantifier specifies, whether it is necessary that the rule element successfully matches and how often the rule element may match.
+    The list of conditions specifies additional constraints that the matched text or annotations need to fulfill. The list of actions defines
+    the consequences of the rule and often creates new annotations or modifies existing annotations.
+  </p>
+  <p>
+    The following example rule consists of three rule elements. The first one (<code>ANY...</code>) matches on every token, which has a covered text that occurs in a word lists named <code>MonthsList</code>.
+    The second rule element (<code>PERIOD?</code>) is optional and does not need to be fulfilled, which is indicated by the quantifier <code>?</code>. The last rule element (<code>NUM...</code>) matches
+    on numbers that fulfill the regular expression <code>REGEXP(".{2,4}"</code> and are therefore at least two characters to a maximum of four characters long.
+    If this rule successfully matches on a text passage, then its three actions are executed: An annotation of the type <code>Month</code> is created for the first rule element,
+    an annotation of the type <code>Year</code> is created for the last rule element and an annotation of the type <code>Date</code> 
+    is created for the span of all three rule elements. If the word list contains the correct entries, then this rule matches on strings like 
+    <code>Dec. 2004</code>, <code>July 85</code> or <code>11.2008</code> and creates the corresponding annotations.
+  
+    <pre>ANY{INLIST(MonthsList) -> MARK(Month), MARK(Date,1,3)} 
+    PERIOD? NUM{REGEXP(".{2,4}") -> MARK(Year))};</pre>
+  </p>
+  
+   <p>
+     Here is a short overview of additional features of the TextMarker language: 
+  </p>
+  <ul>
+    <li>Expressions and variables</li>
+    <li>Import and execution of external components</li> 
+    <li>Flexible matching with filtering</li> 
+    <li>Modularization in different files or blocks</li>
+    <li>Control structures, e.g., for windowing</li>
+    <li>Score-based extraction</li>
+    <li>Modification</li>
+    <li>Html support</li> 
+    <li>Dictionaries</li>
+    <li>Extensible language definition</li>  
+  </ul>
+  
+  
+  
+</subsection>
+
+<subsection name='Workbench' id="textmarker.workbench">
+  <p>
+   The TextMarker Workbench was created to facilitate all steps in creating Analysis Engines based on the TextMarker language.
+   Here is a short overview of included features: 
+  </p>
+  <ul>
+    <li>
+      <p>
+        <b>Editing support:</b> The full-featured editor for the TextMaker language provides syntax and semantic highlighting, 
+        syntax checking, context-sensitive auto-completion, template-based completion, open declaration and more.
+      </p>    
+    </li> 
+    <li>
+      <p>
+        <b>Rule Explanation:</b> Each step in the matching process can be explained: This includes how often a rule was applied, 
+        which condition was not fulfilled, or by which rule a specific annotation was created. Additionally, profile information 
+        about the runtime performance can be accessed.
+      </p>    
+    </li> 
+    <li>
+      <p>
+        <b>Test-driven development:</b> TextMarker scripts can automatically tested against a set of annotated documents. 
+      </p>    
+    </li>
+    <li>
+      <p>
+        <b>Rule learning:</b> The supervised learning algorithms of the included TextRuler framework are able to induce TextMarker rules 
+        and, therefore, enable semi-automatic development of rule-based components.
+      </p>    
+    </li>
+    <li>
+      <p>
+        <b>Query:</b> TextMarker rules can be used as query statements in order to investigate annotated documents.
+      </p>    
+    </li>     
+  </ul>
+  <img style="width: 75%; height: 75%" src="./images/textmarker/textmarker_workbench.png" alt="UIMA TextMarker Workbench"/>     
+</subsection>
+
+<subsection name='Developer Information' id="textmarker.developer">
+  <p>The latest version of UIMA TextMarker is available via <a href="http://search.maven.org/#search%7Cga%7C1%7Ctextmarker">Maven Central</a>. 
+  If you use Maven as your build tool, then you can add the basic UIMA TextMarker functionality as a dependency 
+  in your pom.xml file (additionally to other UIMA dependencies):</p>
+  <pre>
+&lt;dependency>
+  &lt;groupId>org.apache.uima&lt;/groupId>
+  &lt;artifactId>textmarker-core&lt;/artifactId>
+  &lt;version>2.0.0&lt;/version>
+&lt;/dependency>
+  </pre>
+  <subsubsection>
+    For building the UIMA TextMarker projects from sources, follow the instructions for <a href="building-uima.html">building UIMA</a>, 
+    but exchange the command for SVN checkout:<br/>
+    <code>svn checkout https://svn.apache.org/repos/asf/uima/sandbox/textmarker/trunk c:/myWorkingDirectoryForTextMarker</code>
+  </subsubsection>
+   
+  <p>
+    The sources of the current release are available at the <a href="downloads.html">download page</a>. 
+  </p>
+  
+</subsection>
+ 
 </section>
 
 </body>
