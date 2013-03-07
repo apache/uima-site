@@ -111,9 +111,16 @@ Other mirrors: <select name="Preferred">
   <subsection name="Apache UIMA Version 2.4.0 - Release Date: UIMA Java SDK 7-Dec-2011    UIMA-AS Version 2.4.0 Release Date: 15-Nov-2012	UIMA-C++ Version 2.4.0 Release Date: 15-Nov-2012">
     <insertDownloads version="2.4.0"/>
   </subsection>
+  
+  <subsection name="Apache UIMA TextMarker">
+    <insertDownloads version="TextMarker"/>
+  </subsection>
+  
   <subsection name="Apache UIMA Version 2.3.1 - Release Date: UIMA Java SDK: 10-Dec-2010    UIMA AS: 22-Mar-2011   UIMA Addons: 29-Aug-2011">
     <insertDownloads version="2.3.1"/>
   </subsection>
+
+
 
   <subsection name="Apache UIMA Version 2.3.0-incubating - Release Date: 26-Jan-2010">
     <p>Note: See <a href="http://archive.apache.org/dist/incubator/uima/" target="_blank">http://archive.apache.org/dist/incubator/uima/</a>

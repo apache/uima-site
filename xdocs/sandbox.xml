@@ -429,7 +429,7 @@ document; used by the FileSystemCollectionReader</dd>
       You can install the UIMA TextMarker Workbench via our Eclipse update site:
       <a href="http://www.apache.org/dist/uima/eclipse-update-site/">http://www.apache.org/dist/uima/eclipse-update-site/</a>
     </p>
-    <p><a href="d/textmarker-current/tools.textmarker.book.html">
+    <p><a href="http://people.apache.org/~pkluegl/site/textmarker-current/tools.textmarker.book.html">
       Click here to access the user documentation</a>.</p>
     <p><a href="textmarker.html">
       Click here to access a more detailed description with developer information</a>.</p>

@@ -32,8 +32,19 @@
 
 		<section name="Apache UIMA News">
       <subsectionToc/>
-news.html#15 November 2012"
 
+      <subsection name="05 March 2013" date = "05 March 2013" title="Apache UIMA TextMarker 2.0.0 released">
+          <p>This is the first release of the sandbox project UIMA TextMarker.</p>
+                                    
+        <p>Apache UIMA TextMarker is a rule-based script language supported by Eclipse-based tooling. 
+          The language is designed to enable rapid development of text processing applications within UIMA.
+        </p>
+        
+        <p>For a complete list of bugs and improvements included in this release please see
+        <a href="http://uima.apache.org/d/textmarker-2.0.0/RELEASE_NOTES.html">release-notes</a>.
+        </p>
+        
+      </subsection>
 
        <subsection name="20 November 2012" date = "20 November 2012" title="Apache UIMA C++ SDK 2.4.0 released">
           <p>This is the first release of UIMA C++ as a top level project.</p>
