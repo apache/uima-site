@@ -35,7 +35,7 @@ under the License.
 
 <subsection name='Overview' id="textmarker.overview">
   <p>
-    Apache UIMA&#0153; TextMarker consists of to major parts: An Analysis Engine, which interpret 
+    Apache UIMA&#0153; TextMarker consists of two major parts: An Analysis Engine, which interprets 
     and executes the TextMarker rule-based scripting language, and the Eclipse-based tooling (TextMarker Workbench), 
     which provides various support for developing TextMarker rules.
   </p>
@@ -60,7 +60,7 @@ under the License.
   <p>
     The TextMarker language is an imperative rule language extended with scripting elements. A TextMarker rule defines a
     pattern of annotations with additional conditions. If this pattern applies, then the actions of the rule are performed 
-    on the matched annotations. A rule is composed of a sequence of rule elements and a rule element essentially consist of four parts: 
+    on the matched annotations. A rule is composed of a sequence of rule elements and a rule element essentially consists of four parts: 
     A matching condition, an optional quantifier, a list of conditions and a list of actions.
     The matching condition is typically a type of an annotation by which the rule element matches on the covered text of one of those annotations.
     The quantifier specifies, whether it is necessary that the rule element successfully matches and how often the rule element may match.
@@ -68,7 +68,7 @@ under the License.
     the consequences of the rule and often creates new annotations or modifies existing annotations.
   </p>
   <p>
-    The following example rule consists of three rule elements. The first one (<code>ANY...</code>) matches on every token, which has a covered text that occurs in a word lists named <code>MonthsList</code>.
+    The following example rule consists of three rule elements. The first one (<code>ANY...</code>) matches on every token, which has a covered text that occurs in a word lists, named <code>MonthsList</code>.
     The second rule element (<code>PERIOD?</code>) is optional and does not need to be fulfilled, which is indicated by the quantifier <code>?</code>. The last rule element (<code>NUM...</code>) matches
     on numbers that fulfill the regular expression <code>REGEXP(".{2,4}"</code> and are therefore at least two characters to a maximum of four characters long.
     If this rule successfully matches on a text passage, then its three actions are executed: An annotation of the type <code>Month</code> is created for the first rule element,
