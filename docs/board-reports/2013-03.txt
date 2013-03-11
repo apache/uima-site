@@ -1,0 +1,23 @@
+Board report for Apache UIMA, for March 2013.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Releases: 
+We released a component, Apache UIMA TextMarker 2.0.0, on 05 March 2013.
+http://uima.apache.org/news.html#05 March 2013
+
+Other Activity:
+Two major contributions, uimaFIT and DUCC, are now official sandbox projects
+and are very active active.
+
+The Eclipse Update Site packaging was restructured to follow P2 conventions,
+and was released as part of the TextMarker release
+
+Community:
+New Committers: Jim Challenger and Lou Degenaro, were voted in
+on 15 January 2013.
+ 
+Issues: 
+No Board level issues at this time
