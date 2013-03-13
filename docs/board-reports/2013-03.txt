@@ -9,11 +9,14 @@ We released a component, Apache UIMA TextMarker 2.0.0, on 05 March 2013.
 http://uima.apache.org/news.html#05 March 2013
 
 Other Activity:
+The release of TextMarker elicited a trademark-violation letter; this
+is actively being worked through by trademarks@.
+
 Two major contributions, uimaFIT and DUCC, are now official sandbox projects
-and are very active active.
+and are very active.
 
 The Eclipse Update Site packaging was restructured to follow P2 conventions,
-and was released as part of the TextMarker release
+and was released as part of the TextMarker release.
 
 Community:
 New Committers: Jim Challenger and Lou Degenaro, were voted in
