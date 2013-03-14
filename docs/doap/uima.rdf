@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-  <!-- 
+  <!--
     RDF project description for UIMA
-    Meant to be listed in 
+    Meant to be listed in
     http://svn.apache.org/repos/asf/infrastructure/site-tools/trunk/projects/projects.xml
     so that UIMA appears on http://projects.apache.org/
    -->
@@ -10,7 +10,7 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns="http://usefulinc.com/ns/doap#" xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:asfext="http://projects.apache.org/ns/asfext#">
-  
+
   <Project rdf:about="http://uima.apache.org">
     <name>Apache UIMA</name>
     <shortname>UIMA</shortname>
@@ -18,24 +18,24 @@
     <!-- TODO: which URL? we need to request a new one?
     <category rdf:resource="http://projects.apache.org/category/"/>
      -->
-    
+
     <shortdesc xml:lang="en">Annotator components and a
-      scalable integration and deployment framework for 
+      scalable integration and deployment framework for
       Unstructured Information analysis</shortdesc>
-      
-    <description xml:lang="en">The Apache UIMA project supports 
-      the community working on the analysis of unstructured information 
-      with a unifying Java and C++ framework, tooling, 
+
+    <description xml:lang="en">The Apache UIMA project supports
+      the community working on the analysis of unstructured information
+      with a unifying Java and C++ framework, tooling,
       and analysis components, guided by the OASIS UIMA standard.
-      It includes support for very large scaleout using networked 
+      It includes support for very large scaleout using networked
       clusters of compute nodes.</description>
-    
+
     <homepage rdf:resource="http://uima.apache.org/"/>
     <license rdf:resource="http://usefulinc.com/doap/licenses/asl20"/>
     <mailing-list rdf:resource="http://uima.apache.org/mail-lists.html" />
     <download-page rdf:resource="http://uima.apache.org/downloads.cgi" />
     <created>2010-04-30</created>
-    
+
     <maintainer>
       <foaf:Person rdf:about="http://people.apache.org/~schor">
         <foaf:name>Marshall Schor</foaf:name>
@@ -57,19 +57,19 @@
         <asfext:url rdf:resource="http://docs.oasis-open.org/uima/v1.0/os/uima-spec-os.html"/>
       </asfext:Standard>
     </asfext:implements>
-    
-    <asfext:PMC rdf:about="apr">
+
+    <asfext:PMC rdf:about="UIMA">
       <asfext:name>Apache UIMA</asfext:name>
       <asfext:chair>
         <foaf:Person>
           <foaf:name>Marshall Schor</foaf:name>
         </foaf:Person>
       </asfext:chair>
-      <asfext:charter>The mission of the Apache UIMA project is 
+      <asfext:charter>The mission of the Apache UIMA project is
         the creation and maintenance of
         open-source software related to the analysis of unstructured
         data, guided by the UIMA Oasis Standard.</asfext:charter>
     </asfext:PMC>
-        
+
   </Project>
 </rdf:RDF>
