@@ -384,7 +384,7 @@ document; used by the FileSystemCollectionReader</dd>
   <h4>Miscellaneous</h4>
     <ul>
       <li><a href="#gale.multimodal.example">GALE Multi-Modal Example</a></li>
-      <li><a href="#uima.textmarker">UIMA TextMarker</a></li>
+      <li><a href="#uima.re">Apache UIMA Rule Engine and Workbench</a></li>
     </ul>
   <p>These are described in more detail below.</p>      
 
@@ -418,15 +418,18 @@ document; used by the FileSystemCollectionReader</dd>
       </a>.
    </p>
   </subsection>
-  <subsection name="UIMA TextMarker" id="uima.textmarker">
-    <p>Apache UIMA TextMarker is a rule-based script language supported by Eclipse-based tooling.
+  <subsection name="UIMA Rule Engine and Workbench" id="uima.re">
+    <p>Apache UIMA Rule Engine is a rule-based script language supported by Eclipse-based tooling.
       The language is designed to enable rapid development of text processing applications within UIMA. 
       A special focus lies on the intuitive and flexible domain-specific language for defining 
-      patterns of annotations. The Eclipse-based tooling for the TextMarker language, called the Apache UIMA TextMarker Workbench,
-      was created to support the user and to facilitate every step when writing TextMarker rules.
+      patterns of annotations. The Eclipse-based tooling for the rule language, called the Apache UIMA Rule Engine Workbench,
+      was created to support the user and to facilitate every step when writing rules.
     </p>
     <p>
-      You can install the UIMA TextMarker Workbench via our Eclipse update site:
+      This component was originally released as Apache UIMA TextMarker and is currently renamed.
+    </p>
+    <p>
+      You can install the UIMA Rule Engine Workbench via our Eclipse update site:
       <a href="http://www.apache.org/dist/uima/eclipse-update-site/">http://www.apache.org/dist/uima/eclipse-update-site/</a>
     </p>
     <p><a href="d/textmarker-current/tools.textmarker.book.html">

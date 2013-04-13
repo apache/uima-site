@@ -112,7 +112,7 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="2.4.0"/>
   </subsection>
   
-  <subsection name="Apache UIMA TextMarker">
+  <subsection name="Apache UIMA Rule Engine and Workbench">
     <insertDownloads version="TextMarker"/>
   </subsection>
   

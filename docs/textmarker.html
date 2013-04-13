@@ -14,7 +14,7 @@
                         
             
                         
-                        <title>Apache UIMA - Apache UIMA TextMarker</title>
+                        <title>Apache UIMA - Apache UIMA Rule Engine and Workbench</title>
         </head>
 
         <body>
@@ -28,7 +28,7 @@
                             </a>
                     </td>
                     <td align='CENTER'>
-                          <div class="pageBanner">Apache UIMA TextMarker</div>
+                          <div class="pageBanner">Apache UIMA Rule Engine and Workbench</div>
                     </td>
                     <td align='RIGHT'>
                                   <a href="http://www.apache.org">
@@ -97,7 +97,7 @@
                 </div>
                           <div class="navBarItem">      <a href="./sandbox.html">Addons and Sandbox</a>
                 </div>
-                          <div class="navBarItem">      <a href="./textmarker.html">TextMarker</a>
+                          <div class="navBarItem">      <a href="./uima-re.html">UIMA-RE</a>
                 </div>
                           <div class="navBarItem">      <a href="./external-resources.html">External Resources</a>
                 </div>
@@ -178,11 +178,14 @@
                                                           <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Apache UIMA TextMarker"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Apache UIMA TextMarker</h1></a>
+        <a name="Apache UIMA Rule Engine and Workbench"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Apache UIMA Rule Engine and Workbench</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                          <ul>
+                                    <p>
+  This component was originally released as Apache UIMA TextMarker and is currently renamed.
+</p>
+                                                      <ul>
           <li><a href='#Overview'>
                   Overview
         
@@ -200,7 +203,7 @@
         
                 </a></li>
         </ul>
-                                                        <table class="subsectionTable" id='textmarker.overview'>
+                                                        <table class="subsectionTable" id='uima.re.overview'>
         <tr><td>
        
        
@@ -213,9 +216,9 @@
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>
-    Apache UIMA&trade; TextMarker consists of two major parts: An Analysis Engine, which interprets 
-    and executes the TextMarker rule-based scripting language, and the Eclipse-based tooling (TextMarker Workbench), 
-    which provides various support for developing TextMarker rules.
+    This Apache UIMA&trade; component consists of two major parts: An Analysis Engine, which interprets 
+    and executes the rule-based scripting language, and the Eclipse-based tooling (Workbench), 
+    which provides various support for developing rules.
   </p>
                                                 <ul>
     <li>
@@ -227,7 +230,7 @@
     </li> 
     <li>
       <p>
-        UIMA TextMarker Workbench can be installed via our Eclipse update site:
+        UIMA Rule Engine Workbench can be installed via our Eclipse update site:
         <a href="http://www.apache.org/dist/uima/eclipse-update-site/">http://www.apache.org/dist/uima/eclipse-update-site/</a>
       </p>    
     </li>     
@@ -235,7 +238,7 @@
                             </blockquote>
         </td></tr>
     </table>
-                                                      <table class="subsectionTable" id='textmarker.language'>
+                                                      <table class="subsectionTable" id='uima.re.language'>
         <tr><td>
        
        
@@ -248,7 +251,7 @@
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>
-    The TextMarker language is an imperative rule language extended with scripting elements. A TextMarker rule defines a
+    The Rule Engine language is an imperative rule language extended with scripting elements. A rule defines a
     pattern of annotations with additional conditions. If this pattern applies, then the actions of the rule are performed 
     on the matched annotations. A rule is composed of a sequence of rule elements and a rule element essentially consists of four parts: 
     A matching condition, an optional quantifier, a list of conditions and a list of actions.
@@ -270,7 +273,7 @@
     PERIOD? NUM{REGEXP(".{2,4}") -&gt; MARK(Year))};</pre>
   </p>
                                                 <p>
-     Here is a short overview of additional features of the TextMarker language: 
+     Here is a short overview of additional features of the rule language: 
   </p>
                                                 <ul>
     <li>Expressions and variables</li>
@@ -287,7 +290,7 @@
                             </blockquote>
         </td></tr>
     </table>
-                                                      <table class="subsectionTable" id='textmarker.workbench'>
+                                                      <table class="subsectionTable" id='uima.re.workbench'>
         <tr><td>
        
        
@@ -300,7 +303,7 @@
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>
-   The TextMarker Workbench was created to facilitate all steps in creating Analysis Engines based on the TextMarker language.
+   The Rule Engine Workbench was created to facilitate all steps in creating Analysis Engines based on the Rule Engine language.
    Here is a short overview of included features: 
   </p>
                                                 <ul>
@@ -319,26 +322,26 @@
     </li> 
     <li>
       <p>
-        <b>Test-driven development:</b> TextMarker scripts can automatically tested against a set of annotated documents. 
+        <b>Test-driven development:</b> Rule Engine scripts can automatically tested against a set of annotated documents. 
       </p>    
     </li>
     <li>
       <p>
-        <b>Rule learning:</b> The supervised learning algorithms of the included TextRuler framework are able to induce TextMarker rules 
+        <b>Rule learning:</b> The supervised learning algorithms of the included TextRuler framework are able to induce rules 
         and, therefore, enable semi-automatic development of rule-based components.
       </p>    
     </li>
     <li>
       <p>
-        <b>Query:</b> TextMarker rules can be used as query statements in order to investigate annotated documents.
+        <b>Query:</b> Rules can be used as query statements in order to investigate annotated documents.
       </p>    
     </li>     
   </ul>
-                                                <img style="width: 75%; height: 75%" src="./images/textmarker/textmarker_workbench.png" alt="UIMA TextMarker Workbench" />
+                                                <img style="width: 75%; height: 75%" src="./images/textmarker/textmarker_workbench.png" alt="UIMA Rule Engine Workbench" />
                             </blockquote>
         </td></tr>
     </table>
-                                                      <table class="subsectionTable" id='textmarker.developer'>
+                                                      <table class="subsectionTable" id='uima.re.developer'>
         <tr><td>
        
        
@@ -350,8 +353,8 @@
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>The latest version of UIMA TextMarker is available via <a href="http://search.maven.org/#search%7Cga%7C1%7Ctextmarker">Maven Central</a>. 
-  If you use Maven as your build tool, then you can add the basic UIMA TextMarker functionality as a dependency 
+                                    <p>The latest version of UIMA Rule Engine is available via <a href="http://search.maven.org/#search%7Cga%7C1%7Ctextmarker">Maven Central</a>. 
+  If you use Maven as your build tool, then you can add the basic UIMA Rule Engine functionality as a dependency 
   in your pom.xml file (additionally to other UIMA dependencies):</p>
                                                 <pre>
 &lt;dependency&gt;
@@ -361,9 +364,9 @@
 &lt;/dependency&gt;
   </pre>
                                                 <subsubsection>
-    For building the UIMA TextMarker projects from sources, follow the instructions for <a href="building-uima.html">building UIMA</a>, 
+    For building the UIMA Rule Engine projects from sources, follow the instructions for <a href="building-uima.html">building UIMA</a>, 
     but exchange the command for SVN checkout:<br />
-    <code>svn checkout https://svn.apache.org/repos/asf/uima/sandbox/textmarker/trunk c:/myWorkingDirectoryForTextMarker</code>
+    <code>svn checkout https://svn.apache.org/repos/asf/uima/sandbox/textmarker/trunk c:/myWorkingDirectory</code>
   </subsubsection>
                                                 <p>
     The sources of the current release are available at the <a href="downloads.html">download page</a>. 

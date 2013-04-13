@@ -146,7 +146,7 @@ is kept with the general UIMA build tooling in
 </p>
 
 <p>Feature and Plugin projects associated with particular parts of
-the UIMA project (such as the TextMarker, or Java Base SDK, etc.),
+the UIMA project (such as the Rule Engine Workbench, or Java Base SDK, etc.),
 reside within those major components.</p>
 
 <p>
