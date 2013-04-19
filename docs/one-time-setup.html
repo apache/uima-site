@@ -185,8 +185,7 @@
                                     <p>
     Here you will find information on how to set up various tools used in working with Apache UIMA&trade; source code, including:
     <ul>
-      <li>Java - use a 1.5 JVM because UIMA doesn't require any Java that's more recent.  Using a 1.5 Java
-          will help catch errors where you accidentally use some new-to-1.6 Java methods by accident.</li>
+      <li>Java - use a 1.5 JVM or later.</li>
       <li><a href="#svn-setup">SVN</a></li>
       <li><a href="#maven-setup">Maven</a></li>
       <li><a href="#eclipse-setup">Eclipse</a></li>
@@ -210,7 +209,7 @@
     as the one from Tigris.org.</p>
                                                 <p>If you are using an IDE, you should obtain the SVN client for that IDE.</p>
                                                 <p>See <a href="svn.html">svn.html</a> for further details about accessing the source, 
-  including accomodating firewalls.</p>
+  including accommodating firewalls.</p>
                                                 <p class="Note">Important:</p>
                                                 <p>Configure your SVN client to set the eol-style to native, for newly created files; see 
      <a target="_blank" href="http://apache.org/dev/svn-eol-style.txt">http://apache.org/dev/svn-eol-style.txt</a>
@@ -284,16 +283,17 @@
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>Install Eclipse version 3.5.x or later
-    (these instructions tested with Eclipse 3.6.1).</p>
+                                    <p>Install Eclipse version 3.7.2 or later.</p>
                                                 <p>Then:
     <ol>
       <li><p>Install the SVN support plugin <code>Subclipse</code> from
         <a class="external" rel="nofollow" target="_blank" href="http://subclipse.tigris.org/">http://subclipse.tigris.org/</a>.
-        Be sure to pick the version for 1.6.x SVN client, needed to work with Apache SVN.        
+        Be sure to pick the version for 1.6.x or the 1.8.x SVN client.  Either of these work with the Apache SVN,
+        but you cannot mix them - pick one and stick with it for all your SVN access (e.g., Eclipse, commandline, 
+        TortiseSVN Windows shell extensions, etc.)        
         </p></li>
-      <li><p>Install m2Eclipse 0.12.0 from the Eclipse update site: 
-        <a class="external" rel="nofollow" target="_blank" href="http://m2eclipse.sonatype.org/sites/m2e/">http://m2eclipse.sonatype.org/sites/m2e/</a>.
+      <li><p>Install m2e (latest recommended version) from the Eclipse update site: 
+        <a class="external" rel="nofollow" target="_blank" href="http://www.eclipse.org/m2e/">http://www.eclipse.org/m2e/</a>.
         </p> </li>
       <!--li>You probably also want the m2eclipse SCM integration - this adds menus to SCM such as
         <code>Checkout as Maven project</code>.  To get this, add the Eclipse update site:  
@@ -309,9 +309,10 @@
         </p>
         
       </li-->
-      <li>Use Eclipse<code> Preferences -&gt; Maven -&gt; Installations </code> to add the Maven 3.0 (or later) installation as the
-        default to use.</li>
-      <li>(Optional - if you are using m2eclipse plugin to run maven 
+      <!--  
+      <li>Use Eclipse<code> Preferences -> Maven -> Installations </code> to add the Maven 3.0 (or later) installation as the
+        default to use.</li> -->
+      <li>(Optional - if you are using m2e plugin to run Maven 
           build commands.) Use Eclipse <code>Preferences -&gt; Java -&gt; Installed JREs</code>
           and select the JRE you will be using as the default, and click
           "Edit" and add the default VM arguments from MAVEN_OPTS above.</li>
