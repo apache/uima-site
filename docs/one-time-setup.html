@@ -295,6 +295,16 @@
       <li><p>Install m2e (latest recommended version) from the Eclipse update site: 
         <a class="external" rel="nofollow" target="_blank" href="http://www.eclipse.org/m2e/">http://www.eclipse.org/m2e/</a>.
         </p> </li>
+      <li><p>When checking out UIMA modules, one method known to work (others may be added) is to do the initial
+      check-out using the SVN command "svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk some-local-directory"
+      (This is just an example - you may need to check out different parts, branches, etc., please adjust the command as needed).
+      Then use the Eclipse menu File -&gt; Import -&gt; Import existing Maven projects and navigate to the directory where
+      you checked out the projects.  The plugin will analyze what's there, and then offer to import all the projects.
+      You can just go ahead, or select some subset to import into Eclipse.
+      </p>
+      <p>You will likely (the first time) get some messages from m2e about missing connectors - and the offer from m2e to have
+      it search for them - you should permit this and it will then find and download and install (with your permission)
+      the connectors it needs to do the m2e build of the Maven projects.</p></li>  
       <!--li>You probably also want the m2eclipse SCM integration - this adds menus to SCM such as
         <code>Checkout as Maven project</code>.  To get this, add the Eclipse update site:  
         <a class="external" rel="nofollow" target="_blank"
