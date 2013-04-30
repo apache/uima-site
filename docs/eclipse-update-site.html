@@ -411,9 +411,9 @@ file like this:</p>
 &lt;eclipse-equinox-launcher&gt;
   ${uima-maven-build-eclipse-home}/plugins/org.eclipse.equinox.launcher_1.1.1.R36x_v20101122_1400.jar
 &lt;/eclipse-equinox-launcher&gt;
-%lt;uima-eclipse-jar-processor&gt;
+&lt;uima-eclipse-jar-processor&gt;
   ${uima-maven-build-eclipse-home}/plugins/org.eclipse.equinox.p2.jarprocessor_1.0.200.v20110808-1657.jar
-%lt;/uima-eclipse-jar-processor&gt;
+&lt;/uima-eclipse-jar-processor&gt;
 </pre>
                                                 <p>
 The first decision when doing an update is to decide if 
@@ -432,7 +432,7 @@ changing categories, this is where that is done, also; but that
 is probably a rare occurrence.
 </p>
                                                 <p>
-Each update site "build" will use the pom to pull into .../target/eclipse-update-site
+Each individual update site "build" will use its pom to pull into its .../target/eclipse-update-site
 the complete set of features and plugins for that sub-site.
 It does this using information specified in the POM, 
 for all versions of the features and plugins.
@@ -444,8 +444,8 @@ to the lists inside of the build step that copies the plugin and feature
 artifacts.
 </p>
                                                 <p>
-Running <code>mvn package</code> on the update site pom will produce a 
-P2 update site in /target/eclipse-update-site. When releasing, the
+Running <code>mvn package</code> on the individual update site pom will produce a 
+P2 update site in its /target/eclipse-update-site. When releasing, the
 contents of this directory needs to be copied into the appropriately
 named subfolder for this sub-site in the release spot for UIMA
 distribution.
