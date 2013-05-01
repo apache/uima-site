@@ -9,13 +9,12 @@
             <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
             <style type="text/css">@import "stylesheets/base.css";</style>
                                           <meta name="author" value="
-   Apache UIMA Documentation Team
-  ">
+ Apache UIMA Documentation Team">
   <meta name="email" value="dev@uima.apache.org">
                         
             
                         
-                        <title>Apache UIMA - Apache UIMA Documentation</title>
+                        <title>Apache UIMA - Apache UIMA Ruta</title>
         </head>
 
         <body>
@@ -29,7 +28,7 @@
                             </a>
                     </td>
                     <td align='CENTER'>
-                          <div class="pageBanner">Apache UIMA Documentation</div>
+                          <div class="pageBanner">Apache UIMA Ruta</div>
                     </td>
                     <td align='RIGHT'>
                                   <a href="http://www.apache.org">
@@ -179,174 +178,199 @@
                                                           <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Documentation"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Documentation</h1></a>
+        <a name="Apache UIMA Ruta (Rule-based Text Annotation)"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Apache UIMA Ruta (Rule-based Text Annotation)</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>Here you will find 
-      <a href="#manuals_and_guides">Apache UIMA&trade; Manuals and Guides</a> (Overview and Setup, Tutorials and Users' Guides, Tools, and References), 
-      the 
-      <a href="#javadocs">Javadocs</a> for the
-    public APIs of UIMA, and 
-      <a href="#getting_started">Getting Started Guides</a>.
+                                    <p>
+  This component was originally released as Apache UIMA TextMarker.
+</p>
+                                                      <ul>
+          <li><a href='#Overview'>
+                  Overview
         
-    <ul><li>Note: The UIMA manuals/guides and Javadocs are also distributed 
-      as part of the binary distribution.</li></ul>
-    </p>
-                                                      <table class="subsectionTable" id='manuals_and_guides'>
+                </a></li>
+          <li><a href='#Rule Language'>
+                  Rule Language
+        
+                </a></li>
+          <li><a href='#Workbench'>
+                  Workbench
+        
+                </a></li>
+          <li><a href='#Developer Information'>
+                  Developer Information
+        
+                </a></li>
+        </ul>
+                                                        <table class="subsectionTable" id='uima.ruta.overview'>
         <tr><td>
        
        
        
-          <a name="UIMA Manuals and Guides">
-            <h2>UIMA Manuals and Guides
+          <a name="Overview">
+            <h2>Overview
                         </h2>
           </a>
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>The UIMA documentation for version 2.4.0 is available in two formats (HTML and PDF):
-   </p>
+                                    <p>
+    This Apache UIMA&trade; component consists of two major parts: An Analysis Engine, which interprets 
+    and executes the rule-based scripting language, and the Eclipse-based tooling (Workbench), 
+    which provides various support for developing rules.
+  </p>
                                                 <ul>
-     <li><a href="../d/uimaj-2.4.0/index.html">HTML online version - UIMA Java SDK</a></li>
-     <li><a href="../d/uima-as-2.4.0/uima_async_scaleout.html">HTML online version - UIMA Asynchronous Scaleout</a></li>       
-   </ul>
-                                                <p>PDF version for printing:</p>
-                                                <ul>
-     <li><a href="../d/uimaj-2.4.0/overview_and_setup.pdf">Overview and Setup</a></li>
-     <li><a href="../d/uimaj-2.4.0/tutorials_and_users_guides.pdf">Tutorials and Users' Guides</a></li>
-     <li><a href="../d/uimaj-2.4.0/tools.pdf">Tools</a></li>
-     <li><a href="../d/uimaj-2.4.0/references.pdf">References</a></li>
-     <li><a href="../d/uima-as-2.4.0/uima_async_scaleout.pdf">UIMA Asynchronous Scaleout</a></li>
-   </ul>
-                                                <p>The UIMA documentation for version 2.3.1 is available in two formats (HTML and PDF):
-   </p>
-                                                <ul>
-     <li><a href="../d/uimaj-2.3.1/index.html">HTML online version - UIMA Java SDK</a></li>
-     <li><a href="../d/uima-as-2.3.1/uima_async_scaleout.html">HTML online version - UIMA Asynchronous Scaleout</a></li>       
-   </ul>
-                                                <p>PDF version for printing:</p>
-                                                <ul>
-     <li><a href="../d/uimaj-2.3.1/overview_and_setup.pdf">Overview and Setup</a></li>
-     <li><a href="../d/uimaj-2.3.1/tutorials_and_users_guides.pdf">Tutorials and Users' Guides</a></li>
-     <li><a href="../d/uimaj-2.3.1/tools.pdf">Tools</a></li>
-     <li><a href="../d/uimaj-2.3.1/references.pdf">References</a></li>
-     <li><a href="../d/uima-as-2.3.1/uima_async_scaleout.pdf">UIMA Asynchronous Scaleout</a></li>
-   </ul>
+    <li>
+      <p>
+        This page only contains a short overview. A more detailed introduction can be found in the documentation 
+        (<a href="d/textmarker-current/tools.textmarker.book.html">html</a>, 
+        <a href="d/textmarker-current/tools.textmarker.book.pdf">pdf</a>).
+      </p>    
+    </li> 
+    <li>
+      <p>
+        UIMA Ruta Workbench can be installed via our Eclipse update site:
+        <a href="http://www.apache.org/dist/uima/eclipse-update-site/">http://www.apache.org/dist/uima/eclipse-update-site/</a>
+      </p>    
+    </li>     
+  </ul>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='uima.ruta.language'>
+        <tr><td>
+       
+       
+       
+          <a name="Rule Language">
+            <h2>Rule Language
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+    The UIMA Ruta language is an imperative rule language extended with scripting elements. A rule defines a
+    pattern of annotations with additional conditions. If this pattern applies, then the actions of the rule are performed 
+    on the matched annotations. A rule is composed of a sequence of rule elements and a rule element essentially consists of four parts: 
+    A matching condition, an optional quantifier, a list of conditions and a list of actions.
+    The matching condition is typically a type of an annotation by which the rule element matches on the covered text of one of those annotations.
+    The quantifier specifies, whether it is necessary that the rule element successfully matches and how often the rule element may match.
+    The list of conditions specifies additional constraints that the matched text or annotations need to fulfill. The list of actions defines
+    the consequences of the rule and often creates new annotations or modifies existing annotations.
+  </p>
                                                 <p>
-     The documentation version for version 2.3.0-incubating is also available in two formats (HTML and PDF):
-   </p>
+    The following example rule consists of three rule elements. The first one (<code>ANY...</code>) matches on every token, which has a covered text that occurs in a word lists, named <code>MonthsList</code>.
+    The second rule element (<code>PERIOD?</code>) is optional and does not need to be fulfilled, which is indicated by the quantifier <code>?</code>. The last rule element (<code>NUM...</code>) matches
+    on numbers that fulfill the regular expression <code>REGEXP(".{2,4}"</code> and are therefore at least two characters to a maximum of four characters long.
+    If this rule successfully matches on a text passage, then its three actions are executed: An annotation of the type <code>Month</code> is created for the first rule element,
+    an annotation of the type <code>Year</code> is created for the last rule element and an annotation of the type <code>Date</code> 
+    is created for the span of all three rule elements. If the word list contains the correct entries, then this rule matches on strings like 
+    <code>Dec. 2004</code>, <code>July 85</code> or <code>11.2008</code> and creates the corresponding annotations.
+  
+    <pre>ANY{INLIST(MonthsList) -&gt; MARK(Month), MARK(Date,1,3)} 
+    PERIOD? NUM{REGEXP(".{2,4}") -&gt; MARK(Year))};</pre>
+  </p>
+                                                <p>
+     Here is a short overview of additional features of the rule language: 
+  </p>
                                                 <ul>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/html/index.html">HTML online version - UIMA Java SDK</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs-uima-as/html/uima_async_scaleout/uima_async_scaleout.html">HTML online version - UIMA Asynchronous Scaleout</a></li>       
-   </ul>
-                                                <p>PDF version for printing:</p>
-                                                <ul>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/overview_and_setup.pdf">Overview and Setup</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/tutorials_and_users_guides.pdf">Tutorials and Users' Guides</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/tools.pdf">Tools</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/references.pdf">References</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs-uima-as/pdf/uima_async_scaleout.pdf">UIMA Asynchronous Scaleout</a></li>
-   </ul>
-                                                <p>Previous releases (HTML only)</p>
-                                                <ul>
-       <li><a href="downloads/releaseDocs/2.2.2-incubating/docs/html/index.html">Version 2.2.2-incubating</a></li> 
-       <li><a href="downloads/releaseDocs/2.2.1-incubating/docs/html/index.html">Version 2.2.1-incubating</a></li> 
-       <li><a href="downloads/releaseDocs/2.2.0-incubating/docs/html/index.html">Version 2.2.0-incubating</a></li>
-       <li><a href="downloads/releaseDocs/2.1.0-incubating/docs/html/index.html">Version 2.1.0-incubating</a></li>
-    </ul>
+    <li>Expressions and variables</li>
+    <li>Import and execution of external components</li> 
+    <li>Flexible matching with filtering</li> 
+    <li>Modularization in different files or blocks</li>
+    <li>Control structures, e.g., for windowing</li>
+    <li>Score-based extraction</li>
+    <li>Modification</li>
+    <li>Html support</li> 
+    <li>Dictionaries</li>
+    <li>Extensible language definition</li>  
+  </ul>
                             </blockquote>
         </td></tr>
     </table>
-                                                      <table class="subsectionTable" id='javadocs'>
+                                                      <table class="subsectionTable" id='uima.ruta.workbench'>
         <tr><td>
        
        
        
-          <a name="Javadoc (current version only)">
-            <h2>Javadoc (current version only)
+          <a name="Workbench">
+            <h2>Workbench
                         </h2>
           </a>
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>
-     Apache UIMA Javadoc is supplied with the binary distribution, or can be built from the
-     source distribution.  We also make it available directly from this website.
-    
-   <ul>
-     <li><a href="../d/uimaj-2.4.0/apidocs/index.html">Javadoc online - UIMA Java SDK 2.4.0</a></li>
-     <li><a href="../d/uimaj-2.3.1/api/index.html">Javadoc online - UIMA Java SDK 2.3.1</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/api/index.html">Javadoc online - UIMA Java SDK 2.3.0</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs-uima-as/api/index.html">Javadoc online - UIMA-AS 2.3.0</a></li>
-   </ul>
-   </p>
+   The UIMA Ruta Workbench was created to facilitate all steps in creating Analysis Engines based on the UIMA Ruta language.
+   Here is a short overview of included features: 
+  </p>
+                                                <ul>
+    <li>
+      <p>
+        <b>Editing support:</b> The full-featured editor for the UIMA Ruta language provides syntax and semantic highlighting, 
+        syntax checking, context-sensitive auto-completion, template-based completion, open declaration and more.
+      </p>    
+    </li> 
+    <li>
+      <p>
+        <b>Rule Explanation:</b> Each step in the matching process can be explained: This includes how often a rule was applied, 
+        which condition was not fulfilled, or by which rule a specific annotation was created. Additionally, profile information 
+        about the runtime performance can be accessed.
+      </p>    
+    </li> 
+    <li>
+      <p>
+        <b>Test-driven development:</b> UIMA Ruta scripts can automatically tested against a set of annotated documents. 
+      </p>    
+    </li>
+    <li>
+      <p>
+        <b>Rule learning:</b> The supervised learning algorithms of the included TextRuler framework are able to induce rules 
+        and, therefore, enable semi-automatic development of rule-based components.
+      </p>    
+    </li>
+    <li>
+      <p>
+        <b>Query:</b> Rules can be used as query statements in order to investigate annotated documents.
+      </p>    
+    </li>     
+  </ul>
+                                                <img style="width: 75%; height: 75%" src="./images/ruta/ruta_workbench.png" alt="UIMA Ruta Workbench" />
                             </blockquote>
         </td></tr>
     </table>
-                                                      <table class="subsectionTable" id='sandbox'>
+                                                      <table class="subsectionTable" id='uima.ruta.developer'>
         <tr><td>
        
        
        
-          <a name="Annotators, Web Servers, Tooling, and more">
-            <h2>Annotators, Web Servers, Tooling, and more
+          <a name="Developer Information">
+            <h2>Developer Information
                         </h2>
           </a>
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>Many of the additional components found in the Addons and Sandbox have individual documentation files, which 
-      you can access from the <a href="sandbox.html">Addons and Sandbox</a> page</p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable" id='getting_started'>
-        <tr><td>
-       
-       
-       
-          <a name="Getting Started">
-            <h2>Getting Started
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>
-    The UIMA "Getting Started" guides are intended to offer a quick overview of UIMA and how it works. 
-    They are designed to address different audiences that want to work with UIMA.
-   </p>
-                                                <p>   
-	The section below lists all currently available "getting started" guides with their links. 
-	For more advanced documentation about these topics, please refer to the Apache UIMA release documentation.
-	<ul>
-	
-	<li><a href="doc-uima-why.html">Getting Started: Why UIMA</a><br />
-		For first time UIMA users who want to know what UIMA is and how it can be used for.</li>
-	<br />
-	<li><a href="doc-uima-examples.html">Getting Started: Install UIMA And Run Examples</a><br />
-		For first time UIMA users who want to know how UIMA is installed and how they can run 
-		the UIMA analysis examples that are provided with the release package.</li>
-	<br />
-	<li><a href="doc-uima-annotator.html">Getting Started: Writing My First UIMA Annotator</a><br />
-		For UIMA beginners that want to develop their first UIMA analysis component using eclipse.
-		</li>
-	<br />
-	<li><a href="doc-uima-pears.html">Getting Started: Working With PEARs</a><br />
-		For UIMA users who want to know what a UIMA PEAR package is, how to generate them 
-		and how to use them within UIMA applications.</li>
-	<br />
-	<li><a href="doc-uimaas-what.html">Getting Started: UIMA Asynchronous Scaleout</a><br />
-		For UIMA users who need to scale out their UIMA analytics to achieve higher throughput, get
-                faster response time, and to develop applications utilizing UIMA Flow Controllers,
-                CAS Multipliers and advanced error handling capability.</li>
-	<br />
-	<li><a href="doc-uimacpp-huh.html">Getting Started: UIMA C++ Framework</a><br />
-		For UIMA users who want to create UIMA compliant Analysis Engines from programs written in C++,
-                Perl, Python or Tcl.</li>
-	</ul>
-   </p>
+                                    <p>The latest version of UIMA Ruta is available via <a href="http://search.maven.org/#search%7Cga%7C1%7Ctextmarker">Maven Central</a>. 
+  If you use Maven as your build tool, then you can add the basic UIMA Ruta functionality as a dependency 
+  in your pom.xml file (additionally to other UIMA dependencies):</p>
+                                                <pre>
+&lt;dependency&gt;
+  &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
+  &lt;artifactId&gt;textmarker-core&lt;/artifactId&gt;
+  &lt;version&gt;2.0.0&lt;/version&gt;
+&lt;/dependency&gt;
+  </pre>
+                                                <subsubsection>
+    For building the UIMA Ruta projects from sources, follow the instructions for <a href="building-uima.html">building UIMA</a>, 
+    but exchange the command for SVN checkout:<br />
+    <code>svn checkout https://svn.apache.org/repos/asf/uima/sandbox/ruta/trunk c:/myWorkingDirectory</code>
+  </subsubsection>
+                                                <p>
+    The sources of the current release are available at the <a href="downloads.html">download page</a>. 
+  </p>
                             </blockquote>
         </td></tr>
     </table>
