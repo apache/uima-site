@@ -74,7 +74,7 @@ under the License.
     </li>
     <li><p>
       <code>cd to c:\myWorkingDirectoryForUimaj\</code> or <br/>
-      <code>cd to c:\myWorkingDirectoryForUima-as\uima-as</code>.</p>
+      <code>cd to c:\myWorkingDirectoryForUima-as\</code>.</p>
     </li>
     <li><p><code>mvn install</code></p>
       <p>This will build the project and install it to your local Maven repository. 
