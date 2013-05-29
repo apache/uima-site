@@ -33,6 +33,19 @@
 		<section name="Apache UIMA News">
       <subsectionToc/>
 
+      <subsection name="29 May 2013" date = "29 May 2013" title="Apache UIMA Ruta 2.0.1 released">
+                                    
+        <p>Apache UIMA Ruta is a rule-based script language supported by Eclipse-based tooling. 
+          The language is designed to enable rapid development of text processing applications within UIMA.
+        </p>
+        
+        <p>For a complete list of bugs and improvements included in this release please see
+        <a href="http://uima.apache.org/d/ruta-2.0.1/RELEASE_NOTES.html">release-notes</a>.
+        </p>
+        
+      </subsection>
+
+
       <subsection name="05 March 2013" date = "05 March 2013" title="Apache UIMA TextMarker 2.0.0 released">
           <p>This is the first release of the sandbox project UIMA TextMarker.</p>
                                     

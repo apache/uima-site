@@ -31,10 +31,6 @@ under the License.
 
 <section name="Apache UIMA Ruta (Rule-based Text Annotation)">
 
-<p>
-  This component was originally released as Apache UIMA TextMarker.
-</p>
-
 <subsectionToc/>
 
 <subsection name='Overview' id="uima.ruta.overview">
@@ -47,8 +43,8 @@ under the License.
     <li>
       <p>
         This page only contains a short overview. A more detailed introduction can be found in the documentation 
-        (<a href="d/textmarker-current/tools.textmarker.book.html">html</a>, 
-        <a href="d/textmarker-current/tools.textmarker.book.pdf">pdf</a>).
+        (<a href="d/ruta-current/tools.ruta.book.html">html</a>, 
+        <a href="d/ruta-current/tools.ruta.book.pdf">pdf</a>).
       </p>    
     </li> 
     <li>
@@ -144,14 +140,14 @@ under the License.
 </subsection>
 
 <subsection name='Developer Information' id="uima.ruta.developer">
-  <p>The latest version of UIMA Ruta is available via <a href="http://search.maven.org/#search%7Cga%7C1%7Ctextmarker">Maven Central</a>. 
+  <p>The latest version of UIMA Ruta is available via <a href="http://search.maven.org/#search%7Cga%7C1%7Cruta">Maven Central</a>. 
   If you use Maven as your build tool, then you can add the basic UIMA Ruta functionality as a dependency 
   in your pom.xml file (additionally to other UIMA dependencies):</p>
   <pre>
 &lt;dependency>
   &lt;groupId>org.apache.uima&lt;/groupId>
-  &lt;artifactId>textmarker-core&lt;/artifactId>
-  &lt;version>2.0.0&lt;/version>
+  &lt;artifactId>ruta-core&lt;/artifactId>
+  &lt;version>2.0.1&lt;/version>
 &lt;/dependency>
   </pre>
   <subsubsection>

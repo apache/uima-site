@@ -113,7 +113,7 @@ Other mirrors: <select name="Preferred">
   </subsection>
   
   <subsection name="Apache UIMA Ruta">
-    <insertDownloads version="TextMarker"/>
+    <insertDownloads version="Ruta"/>
   </subsection>
   
   <subsection name="Apache UIMA Version 2.3.1 - Release Date: UIMA Java SDK: 10-Dec-2010    UIMA AS: 22-Mar-2011   UIMA Addons: 29-Aug-2011">

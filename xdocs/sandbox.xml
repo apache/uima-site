@@ -426,13 +426,10 @@ document; used by the FileSystemCollectionReader</dd>
       was created to support the user and to facilitate every step when writing rules.
     </p>
     <p>
-      This component was originally released as Apache UIMA TextMarker.
-    </p>
-    <p>
       You can install the UIMA Ruta Workbench via our Eclipse update site:
       <a href="http://www.apache.org/dist/uima/eclipse-update-site/">http://www.apache.org/dist/uima/eclipse-update-site/</a>
     </p>
-    <p><a href="d/textmarker-current/tools.textmarker.book.html">
+    <p><a href="d/ruta-current/tools.ruta.book.html">
       Click here to access the user documentation</a>.</p>
     <p><a href="ruta.html">
       Click here to access a more detailed description with developer information</a>.</p>

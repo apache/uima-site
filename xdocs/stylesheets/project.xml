@@ -109,11 +109,10 @@
  -->
   </downloads>
 
-  <downloads version="TextMarker" title="Apache UIMA Rule Engine and Workbench" withreleasedate="true">
-    <download name="UIMA TextMarker 2.0.0" subdirectory="textmarker-2.0.0" releasedate="05-Mar-2013">
-      <releasenotes filename="textmarker-2.0.0/RELEASE_NOTES">           <f>html</f>                </releasenotes>
-      <!--binary       filename="textmarker-2.0.0-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary-->   
-      <source       filename="textmarker-2.0.0-source-release">                     <f>zip</f>  </source>
+  <downloads version="Ruta" title="Apache UIMA Ruta" withreleasedate="true">
+    <download name="UIMA Ruta 2.0.1" subdirectory="ruta-2.0.1" releasedate="29-May-2013">
+      <releasenotes filename="ruta-2.0.1/RELEASE_NOTES">           <f>html</f>                </releasenotes>
+      <source       filename="ruta-2.0.1-source-release">                     <f>zip</f>  </source>
     </download>
   </downloads>
 
