@@ -200,8 +200,12 @@
                   Layout and Versioning
         
                 </a></li>
-          <li><a href='#How to Change the Update Site'>
-                  How to Change the Update Site
+          <li><a href='#Releasing an update to the Eclipse Update Site'>
+                  Releasing an update to the Eclipse Update Site
+        
+                </a></li>
+          <li><a href='#Lifecycle for development operations'>
+                  Lifecycle for development operations
         
                 </a></li>
           <li><a href='#Earlier Optimizations (Historical)'>
@@ -278,7 +282,8 @@ this is now in 2 files: content.xml
 and artifacts.xml (these files are actually made into compressed Jars). 
 </li>
 <li>
-The former update site files: site.xml, and digest.zip  are no longer needed.
+The former update site files: site.xml, and digest.zip  are no longer needed, 
+and are no longer provided.
 </li>
 </ul>
                                                 <p>
@@ -286,7 +291,7 @@ Some of the UIMA plugin projects now need to have the "high-fidelity" resolution
 dependencies that comes with the P2 repositories.
 </p>
                                                 <p>
-As of January 2013, we are converting to the P2 style of update sites, and
+As of January 2013, we converted to the P2 style of update sites, and
 are no longer building the update site for pre-P2 style because P2 support has been
 in Eclipse for several years (since mid 2008).  
 </p>
@@ -317,15 +322,14 @@ localized to just that sub-site.  The composite update site
 can also be separately maintained - it needs to change only when
 new sub-sites are added.
 </p>
-                                                <p>Our subsites are designed to be kept in named subfolders of the main update site 
-(.../dist/uima/eclipse-update-site).</p>
+                                                <p>Our subsites are designed to be kept in named subfolders of the main update site.</p>
                                                 <p>
 We currently have sub-sites for
 <ul>
 <li>uimaj - base Java UIMA SDK tools and runtime
 </li>
 <li>uima-as - addons for the base tooling to add the deployment descriptor editor, and uima-as runtime</li>
-<li>TextEditor (coming soon)</li>
+<li>ruta - the features for ruta</li>
 </ul>
 </p>
                                                 <p>The update site looks like:
@@ -343,7 +347,14 @@ We currently have sub-sites for
                                        /content.jar
                                        /features/.... all features
                                        /plugins/.... all plugins                                      
+                                 /ruta-2.0.1
+                                       /artifacts.jar
+                                       /content.jar
+                                       /features/.... all features
+                                       /plugins/.... all plugins                                      
+
 </pre>
+In addition to plain files, the jars have checksums and signature files.
 </p>
                             </blockquote>
         </td></tr>
@@ -382,11 +393,13 @@ numbers.
 </p>
                                                 <p>The update-site packaging of released components is released as part of 
 the underlying release of the components it packages; it doesn't (normally)
-have a separate "vote".  When doing a componet release, the release manager
+have a separate "vote".  When doing a component release, the release manager
 should build and make available for testing the update (sub) site (and a 
 new version of the composite update site, if that is being added to).
 When the release is accomplished, the release action is then a simple
-SVN copy from the dev/ to the release/ spot in the distribution SVN.
+SVN switch from the dev/ to the release/ spot in the distribution SVN for the
+update project's subsite, followed by a commit.  This guarantees the signed
+artifacts voted on are identical to what's put up for release.
 </p>
                             </blockquote>
         </td></tr>
@@ -396,8 +409,8 @@ SVN copy from the dev/ to the release/ spot in the distribution SVN.
        
        
        
-          <a name="How to Change the Update Site">
-            <h2>How to Change the Update Site
+          <a name="Releasing an update to the Eclipse Update Site">
+            <h2>Releasing an update to the Eclipse Update Site
                         </h2>
           </a>
       </td></tr>
@@ -426,32 +439,85 @@ to add the sub-site.</p>
                                                 <p>
 To update a sub-site, go to that subsite's project for its update-site.
 For example, for uimaj, this is the project uimaj-eclipse-update-site.
-In that project, run the Eclipse category editor on the file
-category.xml and update the categories.  You must add any new
-features to one (or more) categories, for them to be "visible";
-this includes new versions of existing features.  If you are
-changing categories, this is where that is done, also; but that
+In that project, there is a file under src/main/resources, cagetory.xml, 
+which has the information for the features in this update site.
+</p>
+                                                <p>You probably won't need to update this file, unless you're adding
+some completely new features.  If all you're doing is releasing new
+versions of existing features, you can leave this file alone, because
+the version information is added during resource filtering based on the
+the update site's own POM version.</p>
+                                                <p>Any new features must be added to one (or more) categories, for them to be "visible".
+If you are changing categories, this is where that is done, also; but that
 is probably a rare occurrence.
 </p>
+                                                <h3>How the update site build works</h3>
                                                 <p>
-Each individual update site "build" will use its pom to pull into its .../target/eclipse-update-site
-the complete set of features and plugins for that sub-site.
-It does this using information specified in the POM, 
-for all versions of the features and plugins.
+The build process packs (just the) new plugin Jars, and combines these
+and the new feature Jars with the existing update site (which 
+probably has older versions of the features and plugins), and generates
+new metadata for the new plugins and appends this to any
+existing metadata. 
 </p>
+                                                <ol>
+<li>The distribution SVN's .../dev/... spot is updated so that the 
+part of it which corresponds to the Eclipse update sub site is replaced by 
+an SVN copy of the .../release/... spot.</li>
+<li>The existing subsite is checked out of the (now current) .../dev/... spot in the distribution SVN.</li>
+<li>The new features and plugins
+are collected using the maven dependency plugin from "official" levels using
+maven artifact coordinates</li>
+<li>The new plugin jars are packed</li>
+<li>New metadata for the features and plugins is generated and appended to the
+the existing metadata for the older versions</li>
+<li>New catogory information for the features is generated and appended to the
+existing category information</li>
+<li>The new features and plug jars are checksummed and (if the Apache Release profile is in effect)
+signed</li>
+<li>The result is left in the target/eclipse-update-site/[subsite] directory of the 
+update site project.</li>
+<li>(Optional) You may want to do an SVN checkin on all the artifacts under 
+target/eclipse-update-site/[subsite] - they will go into the distribution SVN .../dev/... spot.
+If you expect to do a lot of release candidates, you may want to avoid doing this and instead
+just copy the results to some other spot for PMC members to check;  this is because multiple
+releases will take up extra space in the distribution SVN.</li>
+</ol>
                                                 <p>
-Therefore, you must edit the POM to specify the new versions
-of any of the features and plugins being released, adding those
-to the lists inside of the build step that copies the plugin and feature 
-artifacts.
+If the update consists of just new versions of the the existing features and plugins,
+it should not be necessary to update the POM for the update-site generation (other than
+to insure its version information is what you want the feature/plugin versions to be).
 </p>
-                                                <p>
-Running <code>mvn package</code> on the individual update site pom will produce a 
-P2 update site in its /target/eclipse-update-site. When releasing, the
-contents of this directory needs to be copied into the appropriately
-named subfolder for this sub-site in the release spot for UIMA
-distribution.
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Lifecycle for development operations">
+            <h2>Lifecycle for development operations
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+Plugins are the smallest unit of development.  During development, these are rebuilt
+and can be launched into a sub-eclipse for debugging as an Eclipse application.
 </p>
+                                                <p>During development, the goal is quick turn-around, so the m2e capabilities
+available in Eclipse 4.2 and later can be used to run tests using the .class 
+files produced by incremental Eclipse builds of the plugins, without running
+Maven builds of the plugin.
+</p>
+                                                <p>When the developer is finished with debugging the plugin and wants to proceed with
+more formal packaging, they can run <code>mvn install</code> to produce
+the plugin Jar (and eventually, the pack.gz form of the Jar). 
+</p>
+                                                <p>Feature projects are used to define the Features that include the plugins.</p>
+                                                <p>Each major UIMA component (e.g., uimaj, ruta, etc.) defines its own independent
+Eclipse update site.</p>
                             </blockquote>
         </td></tr>
     </table>
