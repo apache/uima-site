@@ -1,0 +1,25 @@
+Board report for Apache UIMA, for March 2013.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Releases: 
+We released a component, Apache UIMA Ruta r 2.0.2, on 29 May 2013
+http://uima.apache.org/news.html#29
+
+Other Activity:
+Following the advice of trademarks@, the trademark issue over the
+name "Textmarker" was resolved by us dropping the use of that 
+term, and renaming the project UIMA Ruta, and doing a new release 
+under that name, updating the Website, etc.
+
+All three new major recent contributions, uimaFIT, Ruta, and DUCC,
+are very active.  
+
+Community:
+Ruta is getting additional contributions from 
+4 new people in that community (who have sent in ICLAs).
+ 
+Issues: 
+No Board level issues at this time.
