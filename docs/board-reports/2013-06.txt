@@ -1,4 +1,4 @@
-Board report for Apache UIMA, for March 2013.
+Board report for Apache UIMA, for June 2013.
 
 Apache UIMA's mission: the creation and maintenance of open-source
 software related to the analysis of unstructured data, guided by the
