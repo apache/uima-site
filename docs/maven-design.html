@@ -192,30 +192,57 @@ building the various parts of UIMA.</p>
   <a target="_blank" href="http://www.apache.org/dev/publishing-maven-artifacts.html">
   http://www.apache.org/dev/publishing-maven-artifacts.html</a>.</p>
                                                 <p>This document covers how we use Maven for building Version: 2.3.1 and onwards.</p>
-                                                <ul>
-    <li><a href="#Nexus">Nexus use</a></li>
-    <li><a href="#POM Conventions">POM Conventions</a></li>
-    <li><a href="#Our POM hierarchy">POM Hierarchy</a></li>
-    <li><a href="#Selecting build alternatives based on the project">Selecting build alternatives based on the project</a></li>
-    <li><a href="#POM style">POM style</a></li>
-    <li><a href="#Release artifacts">Release artifacts</a></li>
-    <ul>
-	    <li><a href="#LICENSE and NOTICE files">LICENSE and NOTICE files</a></li>
-	    <li><a href="#Standard Artifacts" />Standard Artifacts</li>
-	  </ul>
-    <li><a href="#Handling Documentation">Handling Documentation</a></li>
-    <li><a href="#Packaging Individual Projects">Packaging Individual Projects</a>
-      <ul>
-        <li><a href="#Common conventions individual projects">Common conventions for structuring individually releaseable project</a></li>
-        <li><a href="#Conventions for PEARs">Conventions for structuring individual projects released as PEARs</a></li>
-      </ul>
-    </li>
-    <li><a href="#Building Assemblies for Distribution">Building Assemblies for Distribution</a></li>
-    <li><a href="#Special resources for build">Special resources for build</a></li>
-    <li><a href="#Using the Release Audit Tool (RAT)">Using the Release Audit Tool (RAT)</a></li>
-    <li><a href="#Lifecycle for building addons">Lifecycle for building addons</a></li>
-  </ul>
-                                                      <table class="subsectionTable">
+                                                      <ul>
+          <li><a href='#Nexus'>
+                  Nexus
+        
+                </a></li>
+          <li><a href='#POM Conventions'>
+                  POM Conventions
+        
+                </a></li>
+          <li><a href='#Our POM hierarchy'>
+                  Our POM hierarchy
+        
+                </a></li>
+          <li><a href='#Selecting build alternatives based on the project'>
+                  Selecting build alternatives based on the project
+        
+                </a></li>
+          <li><a href='#POM style'>
+                  POM style
+        
+                </a></li>
+          <li><a href='#Release artifacts'>
+                  Release artifacts
+        
+                </a></li>
+          <li><a href='#Handling Documentation'>
+                  Handling Documentation
+        
+                </a></li>
+          <li><a href='#Packaging Individual Projects'>
+                  Packaging Individual Projects
+        
+                </a></li>
+          <li><a href='#Building Assemblies for Distribution'>
+                  Building Assemblies for Distribution
+        
+                </a></li>
+          <li><a href='#Special resources for build'>
+                  Special resources for build
+        
+                </a></li>
+          <li><a href='#Using the Release Audit Tool (RAT)'>
+                  Using the Release Audit Tool (RAT)
+        
+                </a></li>
+          <li><a href='#Lifecycle for building addons'>
+                  Lifecycle for building addons
+        
+                </a></li>
+        </ul>
+                                                        <table class="subsectionTable">
         <tr><td>
        
        
@@ -242,31 +269,36 @@ It also supplies many of the standard items needed for all Apache projects.</p>
                             </blockquote>
         </td></tr>
     </table>
-                            </blockquote>
-        </p>
-      </td></tr>
-    </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="POM Conventions"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;POM Conventions</h1></a>
+       
+       
+       
+          <a name="POM Conventions">
+            <h2>POM Conventions
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
+        <blockquote class="subsectionBody">
                                     <p>We follow the conventions regarding the layout of the POM as specified 
     <a target="_blank" href="http://maven.apache.org/developers/conventions/code.html#POM_Code_Convention">
       here</a>.</p>
                             </blockquote>
-        </p>
-      </td></tr>
+        </td></tr>
     </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="Our POM hierarchy"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Our POM hierarchy</h1></a>
+       
+       
+       
+          <a name="Our POM hierarchy">
+            <h2>Our POM hierarchy
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
+        <blockquote class="subsectionBody">
                                     <p>POMs have two kinds of hierarchy:
   <ol>
     <li>The main one is used for factoring out common 
@@ -287,16 +319,20 @@ contains, in turn, a sub-project common parent pom for all the modules in that p
                                                 <p>The Project-wide parent pom and related build artifacts are kept in a separate part of
 our svn tree, in a top level directory named "build".</p>
                             </blockquote>
-        </p>
-      </td></tr>
+        </td></tr>
     </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="Selecting build alternatives based on the project"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Selecting build alternatives based on the project</h1></a>
+       
+       
+       
+          <a name="Selecting build alternatives based on the project">
+            <h2>Selecting build alternatives based on the project
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
+        <blockquote class="subsectionBody">
                                     <p>The shared UIMA-wide common parent POM supports many different
      kinds of builds.  For instance, some projects use Docbook, 
      some projects are "distribution" projects that serve to build
@@ -325,16 +361,20 @@ our svn tree, in a top level directory named "build".</p>
      </ul>
    </p>
                             </blockquote>
-        </p>
-      </td></tr>
+        </td></tr>
     </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="POM style"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;POM style</h1></a>
+       
+       
+       
+          <a name="POM style">
+            <h2>POM style
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
+        <blockquote class="subsectionBody">
                                     <p>When writing a new POM, it is best to start with an existing POM for a similar
     kind of project, and derive the new POM from that.  Some points:
     <ul>
@@ -364,16 +404,20 @@ our svn tree, in a top level directory named "build".</p>
     </ul>
   </p>
                             </blockquote>
-        </p>
-      </td></tr>
+        </td></tr>
     </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="Release artifacts"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Release artifacts</h1></a>
+       
+       
+       
+          <a name="Release artifacts">
+            <h2>Release artifacts
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
+        <blockquote class="subsectionBody">
                                     <p>We follow the standard release process for Maven-based artifacts at Apache,
     documented <a target="_blank" href="http://www.apache.org/dev/publishing-maven-artifacts.html">here.</a></p>
                                                 <p>For each artifact, the release process may build additional artifacts, and
@@ -407,19 +451,8 @@ our svn tree, in a top level directory named "build".</p>
     You can debug this process without doing a release, by adding the parameter 
     <code>-Papache-release</code> to the non-release Maven build commands.
   </p>
-                                                      <table class="subsectionTable">
-        <tr><td>
-       
-       
-       
-          <a name="LICENSE and NOTICE files">
-            <h2>LICENSE and NOTICE files
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>
+                                                <h2>LICENSE and NOTICE files</h2>
+                                                <p>
     Things that are distributed from Apache need LICENSE and NOTICE files.  We have several kinds
     of distributions:
     <ul>
@@ -447,12 +480,25 @@ our svn tree, in a top level directory named "build".</p>
       </li>
       <li>SVN
       </li>
+      <li>Eclipse Features
+        <ul>
+          <li>Features have their own special Eclipse-style form for licenses</li>
+          <li>Boilerplate for these are kept in a common spot in the uima-build-resources project,
+          in the subdirectory: licenses-eclipse-plugs-features.  
+          There are two files here.  One is the boilerplate license, in 
+          uima-eclipse-user-agreement.html (a text copy is also embedded in the features.properties).
+          The second file is a boilerplate features.properties.</li>
+          <li>Both of these files should be copied to the top level of feature project(s), and
+          the feature.properties should be edited to have the right values for the particular feature.</li>
+        </ul>
+      </li>
     </ul>
   </p>
-                                                <h3>Two kinds of LICENSE/NOTICE files</h3>
-                                                <p>There are typically two versions of these files, corresponding to source (only)
-  distributions versus other distributions which include "dependent" artifacts, which
-  may have their own separate license and notice information.  The source (only) 
+                                                <h3>Three kinds of LICENSE/NOTICE files</h3>
+                                                <p>There are typically three versions of these files, corresponding to source (only)
+  distributions, other distributions which include "dependent" artifacts, which
+  may have their own separate license and notice information, and a special one for 
+  Eclipse Features.  The source (only) 
   versions of these files are in SVN at the top level of various project hierarchies.
   </p>
                                                 <p class="Note">For some packagings of source artifacts, such as JARs for 
@@ -460,9 +506,7 @@ our svn tree, in a top level directory named "build".</p>
   license and notice files (see for instance, <code>.../uimaj/trunk/uimaj-core</code>.
   For these, a standard LICENSE and NOTICE is computed using a template, augmented
   if needed by additions from the project's <code>pom</code>.</p>
-                                                <p>The SVN itself has a top level license / notice file, 
-  for all nodes under the top areas (uima/xxx/trunk, tags, etc.).
-  All major releasable things (other than projects for Jars which are always released
+                                                <p>All major releasable things (other than projects for Jars which are always released
   as part of an assembly - such as the Jars which make up the UIMA SDK), have top
   level license and notice files in their top most project; these are for the 
   source, only, and do not cover the dependencies (if any) that might be included with
@@ -473,22 +517,8 @@ our svn tree, in a top level directory named "build".</p>
   The license and notice for these packagings is made by merging the license and notice
   files from the source artifact plus those from all the dependent artifacts 
   (removing duplications).</p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable">
-        <tr><td>
-       
-       
-       
-          <a name="Standard Artifacts">
-            <h2>Standard Artifacts
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>The release process includes standard boiler-plate things in standard places.  
+                                                <h2>Standard Artifacts</h2>
+                                                <p>The release process includes standard boiler-plate things in standard places.  
      The Maven remote-resources-plugin is used to get these resources from a special 
      UIMA build artifact (uima-build-resources), and customizes them for the particular project:
      <ul><li>The DEPENDENCIES file is generated from the 
@@ -506,9 +536,17 @@ our svn tree, in a top level directory named "build".</p>
              level (above any project).</li>
      </ul>
    </p>
+                                                <p>
+     The remote-resources-plugin adds a &lt;resource&gt; entry to the maven in-memory model &lt;resources&gt;
+     element that specifies that the files in target/maven-shared-archive-resources/ be copied to
+     target/classes.  (You can see this by running a mvn package step with the -X parameter.)
+     This is what the remote-resources documentation means when it says:  
+     "... the resources are injected into the current (in-memory) Maven project, 
+     making them available to the process-resources phase."
+   </p>
                                                 <p><b><u>Overriding on a per-project basis:</u></b> 
       Files that the remote-resources-plugin obtains and places
-      in the target/maven-shared-archive-resources/META-INF/ directory are be overridden
+      in the target/maven-shared-archive-resources/META-INF/ directory can be overridden
       by identically named files at the top level of the project.
       </p>
                                                 <p>Note that there are two sets of LICENSE / NOTICE files for distributable entities - 
@@ -525,13 +563,25 @@ our svn tree, in a top level directory named "build".</p>
      are taken from src/main/readme/ directory.
    </p>
                                                 <p class="note">
-     Some addon projects have just a single st of LICENSE and NOTICE at the top level. 
+     Some addon projects have just a single instance of LICENSE and NOTICE at the top level. 
      In this case, these are used for both the source and binary distribution, and they
      therefore need to cover everything distributed with the binary distribution (even
      if these are not delivered with the source distribution).
    </p>
-                                                <br />
-                                                <br />
+                                                <h2>Eclipse Features and Plugins</h2>
+                                                <p>The license and notice section for Eclipse plugins follows the conventions used for
+    other Jars.  For Eclipse Features, there is a boilerplate license used for all Features, which, in turn, refers to specific
+    other embedded Licenses and Notices.  The boilerplate becomes part of the Feature jar.
+    </p>
+                                                <p>When setting up a new Eclipse Feature, developers need to manually copy the latest boilerplate 
+    features.properties and uima-eclipse-user-agreement.html files from the uima-build-resources project 
+    into their feature project top-level directory.
+    They need to then modify the values of the following properties for their feature:
+    <ul><li>featureName</li><li>description</li></ul>
+    </p>
+                                                <p>The build adds these files to the resource set when building the jar.
+    </p>
+                                                <h2>Summary: License and Notices</h2>
                                                 <p>This next table summarizes the packaging artifacts and how and where they are 
       located and added during the build process.</p>
                                                 <table class="downloads"> <!-- class is just to format the table like our downloads tables -->
@@ -547,10 +597,11 @@ our svn tree, in a top level directory named "build".</p>
     <tr>
      <td><p>LICENSE, NOTICE, DEPENDENCIES.</p></td>
      <!-- variants -->
-     <td><p>Standard, for source distribution</p>
-         <p>Alternate: has extra Notice element used for copyrights moved to Notice file.</p>
+     <td><p>Standard, for source distribution</p><br /><br />
+         <p>Alternate: has extra Notice element used for copyrights moved to Notice file.</p><br /><br />
          <p>Alternate2: for binary assemblies, the LICENSE and NOTICE 
-            are customized for each binary assembly.</p>
+            are customized for each binary assembly.</p><br /><br />
+         <p>Eclipse Features</p>
      </td>
      <!-- origin -->
      <td><p>For source distributions: uima-build-resources (in the build tooling).</p> 
@@ -561,17 +612,25 @@ our svn tree, in a top level directory named "build".</p>
             <code>&lt;postNoticeText&gt;${ibmNoticeText}&lt;/postNoticeText&gt;</code>.</p>  
          <p>For binary distributions, comes from src/main/readme/
          </p>
+         <p>For Eclipse Features: developer manually copies features.properties and 
+         uima-eclipse-user-agreement.html from uima-build-resources project's folder
+         licenses-eclipse-plugs-features, to the Eclipse feature top level.  Developer
+         manually edits two properties in features.properties - the feature name and description.</p>
      </td>
       <!-- Targets -->     
      <td><p>Jars: goes into META-INF. 
          <p>Source-Release zips, source assemblies, binary assemblies, PEAR files, OSGi artifacts:</p> 
             goes into the zip/tar as top level files.</p>
+         <p>Eclipse Features: filter.properties and uima-eclipse-user-agreement.html get included in Jar at top level</p>
      </td>
      <!-- Method -->
      <td><p>org.apache.uima:parent-pom configures the remote-resources plugin 
             to copy the standard LICENSE/NOTICE/DEPENDENCIES into
             target/maven-shared-archive-resources/META-INF/
-            directory.  This info is then included in any Jars that are built, in META-INF.</p>
+            directory.  The remote-resources plugin addes this dir to the
+            the list of standard resources the resources:resources goal copies into
+            target/classes.
+            This info is then included in any Jars that are built, in META-INF.</p>
          <p>During release (only) (apache-release profile activated)
             the information in target/maven-shared-archive-resources/META-INF/
             is copied to the top level of the source-release archive.
@@ -585,6 +644,7 @@ our svn tree, in a top level directory named "build".</p>
          <p>For PEAR, OSGi, and binary assemblies, 
             these files come from src/main/readme/, the <code>maven-resources-plugin</code>
             uses the <code>copy-resources</code> goal to copy these.</p></td>
+         <p>For Eclipse features, a build &lt;resource&gt; element addes the 2 files.</p>
     </tr>
     <tr>
       <td>README.txt</td>
@@ -654,17 +714,18 @@ our svn tree, in a top level directory named "build".</p>
                             </blockquote>
         </td></tr>
     </table>
-                            </blockquote>
-        </p>
-      </td></tr>
-    </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="Handling Documentation"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Handling Documentation</h1></a>
+       
+       
+       
+          <a name="Handling Documentation">
+            <h2>Handling Documentation
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
+        <blockquote class="subsectionBody">
                                     <p>We have several kinds of documentation:</p>
                                                 <ul>
     <li>Javadocs</li>
@@ -695,16 +756,20 @@ our svn tree, in a top level directory named "build".</p>
     <a href="http://apache.org/dev/project-site.html" target="_blank">requirements</a>
     for Apache websites.</p>
                             </blockquote>
-        </p>
-      </td></tr>
+        </td></tr>
     </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="Packaging Individual Projects"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Packaging Individual Projects</h1></a>
+       
+       
+       
+          <a name="Packaging Individual Projects">
+            <h2>Packaging Individual Projects
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
+        <blockquote class="subsectionBody">
                                     <p>
     The UIMA Project, in addition to the main frameworks (the UIMA SDK and the UIMA-AS addon), 
     has Annotators and other components and tools 
@@ -797,16 +862,20 @@ our svn tree, in a top level directory named "build".</p>
     </ul>
   </p>
                             </blockquote>
-        </p>
-      </td></tr>
+        </td></tr>
     </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="Building Assemblies for Distribution"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Building Assemblies for Distribution</h1></a>
+       
+       
+       
+          <a name="Building Assemblies for Distribution">
+            <h2>Building Assemblies for Distribution
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
+        <blockquote class="subsectionBody">
                                     <p>The normal operation of Maven is concerned with the building of individual modules.  Each module
     when built produces maven artifacts in repositories (your local repository, or perhaps uploaded 
     to a snapshot or staging repository).</p>
@@ -822,16 +891,20 @@ our svn tree, in a top level directory named "build".</p>
     </ul>
   </p>
                             </blockquote>
-        </p>
-      </td></tr>
+        </td></tr>
     </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="Special resources for build"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Special resources for build</h1></a>
+       
+       
+       
+          <a name="Special resources for build">
+            <h2>Special resources for build
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
+        <blockquote class="subsectionBody">
                                     <p>During the build process, several resources are used, and are built into Maven Artifact Jars with
     Maven coordinates.  These projects are in the <code>build</code> section of SVN.
     <ul>
@@ -860,16 +933,20 @@ our svn tree, in a top level directory named "build".</p>
       This is used, for instance, in the common docbook frontmatter to indicate when the book was
       built.</p>
                             </blockquote>
-        </p>
-      </td></tr>
+        </td></tr>
     </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="Using the Release Audit Tool (RAT)"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Using the Release Audit Tool (RAT)</h1></a>
+       
+       
+       
+          <a name="Using the Release Audit Tool (RAT)">
+            <h2>Using the Release Audit Tool (RAT)
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
+        <blockquote class="subsectionBody">
                                     <p>From parent-pom version 2 and onwards, 
     RAT is run automatically, but only when the Maven profile "apache-release" is activated.
     Projects that override the default RAT exclusions must include all things that need to be excluded,
@@ -877,16 +954,20 @@ our svn tree, in a top level directory named "build".</p>
     for an example.
     </p>
                             </blockquote>
-        </p>
-      </td></tr>
+        </td></tr>
     </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="Lifecycle for building addons"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Lifecycle for building addons</h1></a>
+       
+       
+       
+          <a name="Lifecycle for building addons">
+            <h2>Lifecycle for building addons
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
+        <blockquote class="subsectionBody">
                                     <p>Addon projects have multiple binary build artifacts:
       <ul>
         <li>binary assembly for the individual addon</li>
@@ -909,6 +990,9 @@ our svn tree, in a top level directory named "build".</p>
       using the maven-build-helper, so it gets deployed to the maven repositories.</li>
     </ul>
     </p>
+                            </blockquote>
+        </td></tr>
+    </table>
                             </blockquote>
         </p>
       </td></tr>
