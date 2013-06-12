@@ -484,9 +484,21 @@ releases will take up extra space in the distribution SVN.</li>
 </ol>
                                                 <p>
 If the update consists of just new versions of the the existing features and plugins,
-it should not be necessary to update the POM for the update-site generation (other than
+it may not be necessary to update the POM for the update-site generation (other than
 to insure its version information is what you want the feature/plugin versions to be).
 </p>
+                                                <h3>Releasing a new Composite Update Site</h3>
+                                                <p>Normally, the composite update site doesn't change.  It changes when new sub-sites
+are created, usually for new projects having Eclipse components.</p>
+                                                <p>To change the Composite site, update the POM to a new version number (it's numbered 
+like build artifacts, with a simple incrementing integer).  Then update the buildCompositeRepository.xml 
+file at the top level to reflect the changes.</p>
+                                                <p>The build is done using the same techniques as the other update site: the dist .../release/... part is 
+copied to the .../dev/... and that's svn-checked-out. Then the build runs the special ant tasks to generate
+the composite Jars from the buildCompositeRepository.xml.  If you use the -Papache-release parameter on the mvn 
+command line, the build will generate the checksums and do the gpg signing of the artifacts.  The results
+are left in the tartet/eclipse-update-site for this project, ready to be svn-switched back to the dist .../release/...
+point and the changes committed.</p>
                             </blockquote>
         </td></tr>
     </table>
