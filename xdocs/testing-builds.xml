@@ -93,9 +93,15 @@ under the License.
       &lt;repositories>
         &lt;repository>
           &lt;id>staged-release&lt;/id>
-          &lt;url>https://repository.apache.org/content/repositories/orgapacheuima-xxxxxx/&lt;/url>
-        &lt;/repository>
+          &lt;url>https://repository.apache.org/content/repositories/orgapacheuima-xxx/&lt;/url>
+        &lt;/repository>       
       &lt;/repositories>
+      &lt;pluginRepositories>
+        &lt;pluginRepository>
+          &lt;id>staged-release&lt;/id>
+          &lt;url>https://repository.apache.org/content/repositories/orgapacheuima-xxx/&lt;/url>
+        &lt;/pluginRepository>
+      &lt;/pluginRepositories>
     &lt;/profile>
   &lt;/profiles>
 
