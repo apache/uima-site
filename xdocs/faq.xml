@@ -109,7 +109,7 @@
 				name="Does this project use a wiki?">
 				<p>
 					It does; see:
-					<a href="http://cwiki.apache.org/UIMA/">
+					<a href="http://cwiki.apache.org/confluence/display/UIMA/">
 						UIMA wiki
 					</a>
 					. It will complement the work taking place on the

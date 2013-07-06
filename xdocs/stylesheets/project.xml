@@ -22,11 +22,11 @@
                target="_blank"><em>Dev</em> <img src="images/offsitelink.png"/></a>
         </item>
         
-        <item name="Powered By UIMA" href="http://cwiki.apache.org/UIMA/powered-by-apache-uima.html" target="_blank" />
+        <item name="Powered By UIMA" href="http://cwiki.apache.org/confluence/display/UIMA/powered-by-apache-uima.html" target="_blank" />
 
         <item spacer="true"/>
         <item name="Issue tracker" href="http://issues.apache.org/jira/browse/uima" />
-        <item name="Wiki"                     href="http://cwiki.apache.org/UIMA/" />
+        <item name="Wiki"                     href="http://cwiki.apache.org/confluence/display/UIMA/" />
       </item>
       
       <item name="Components &amp; Tools">
