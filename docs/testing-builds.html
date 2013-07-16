@@ -14,7 +14,7 @@
                         
             
                         
-                        <title>Apache UIMA - Testing Builds</title>
+                        <title>Apache UIMA - Testing Release Candidates</title>
         </head>
 
         <body>
@@ -28,7 +28,7 @@
                             </a>
                     </td>
                     <td align='CENTER'>
-                          <div class="pageBanner">Testing Builds</div>
+                          <div class="pageBanner">Testing Release Candidates</div>
                     </td>
                     <td align='RIGHT'>
                                   <a href="http://www.apache.org">
@@ -180,17 +180,42 @@
                                                           <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Testing Builds"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Testing Builds</h1></a>
+        <a name="Testing Release Candidates"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Testing Release Candidates</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
                                     <p>
-    This page has information for testing builds.
+    This page has information for testing release candidates.
   </p>
                                                 <p>
       Prepare for testing by going to 
     <a href="building-uima.html">building-uima</a>
     and doing the one-time setup, if you haven't done this already.  This includes installing Maven 3.
+  </p>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Overview"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Overview</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>See <a target="_blank" href="http://www.apache.org/dev/release.html#what-must-every-release-contain">"What must be included in a release".</a>
+  To approve a release, it is good to do the following tests:
+  <ul>
+    <li>svn export the SVN tag for the code, and compare this to the unzip of the source-release.  These should be the same, except for some minor things; 
+    use your good judgement.</li>
+    <li>Check building from source:  In your local .m2, delete the files being built (a good thing is to
+    delete the "uima" directory), then get the source-release, unzip it, and run mvn install at the top level, to see if it builds.</li>
+    <li>Check that the license and notice files are present in the source and binary distributions, and that the binary distributions have license/notice parts
+    incorporated into the top-level license/notice files for any included artifacts being distributed.</li>
+    <li>Check that the Jars have appropriate license / notice files for things contained within them.</li>
+    <li>When an Eclipse update site is being released, try installing that into a fresh unzip of Eclipse 3.7.2 or later, and then verify the functionality seems present.
+    When installing, it should show the standard licensing boilerplate, that refers (like the Eclipse user agreement) to embedded license/notice files.</li>
+  </ul>
   </p>
                             </blockquote>
         </p>
