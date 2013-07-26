@@ -187,6 +187,13 @@
         <blockquote class="sectionBody">
                                           <table class="subsectionToc">
             <tr >
+      <td>26 July 2013</td>
+      <td><a href='#26 July 2013'>
+                  Apache UIMA Java SDK 2.4.1 released
+                </a>
+      </td>
+      </tr>  
+          <tr >
       <td>29 May 2013</td>
       <td><a href='#29 May 2013'>
                   Apache UIMA Ruta 2.0.1 released
@@ -363,6 +370,50 @@
       </tr>  
         </table>
                                                         <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="26 July 2013">
+            <h2>26 July 2013
+                        &ndash; Apache UIMA Java SDK 2.4.1 released
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>This release only has the Apache UIMA&trade; Java SDK, and does not yet have the other
+          components.  It is backwards compatible with previous releases, except some classes and interfaces
+          which have additional methods supporting new capabilities and features.
+          </p>
+                                                <p>Besides some bug fixes, this release includes:</p>
+                                                <ul>
+            <li>Documentation of binary serialization.</li>
+            <li>New kinds of compressed binary serialization that compress the data significantly
+      and one form that supports unequal source/target type systems</li>  
+            <li>A new facility called External Parameter Overrides for specifying parameter settings for annotators 
+      that uses properties files and is independent of the annotator hierarchy</li>  
+            <li>CasCopier enhancements to allow copying one view to a different view.</li>  
+            <li>Additional options to restrict JCasGen operation to generating just those types that are defined in a project,
+      excluding other types that are imported from other projects</li>  
+            <li>A new Maven plugin that runs JCasGen (see tools documentation for how to configure and use this)</li>  
+            <li>a new ability to preserve white space (indentation) when parsing XML descriptors; this is now used in the
+      Component Descriptor Editor (CDE), to preserve indentation when editing an existing descriptor.</li>  
+            <li>Performance and space improvements, including some bulk methods for efficiently removing Feature Structures from Indexes</li>  
+            <li>The CDE supports 3 new things: the preserving of existing white-space in XML descriptors, 
+      External Parameter Overrides, and a configuration option to restrict JCasGen to just those
+      types defined in the project.</li>  
+            <li>Enhancements to the DocumentAnalyzer utility to support reading CASes in various formats</li>  
+          </ul>
+                                                <p>
+           
+          Please see the release notes on the <a href="downloads.cgi">downloads</a> page, for a more complete summary
+          and a complete list of changes.
+        </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
         <tr><td>
        
        

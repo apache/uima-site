@@ -94,7 +94,11 @@
   	  	<include name="*.html"/>
         <include name="staging/*.html"/>
   	  </replace>
-
+  <!--	
+  	  <fixcrlf srcdir="${docs.dest}/" eol="crlf">
+  	  	<include name="d/uimaj-2.4.1/apidocs/**/*.html"/>
+  	  </fixcrlf>
+   -->
       <!--copy todir="${docs.dest}/images" filtering="no">
           <fileset dir="${docs.src}/images">
               <include name="**/*.gif"/>

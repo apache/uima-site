@@ -105,9 +105,14 @@ Other mirrors: <select name="Preferred">
 <section name="Latest Official Releases">  
   <p>Note: As of release 2.3.0, the CAS Editor and the Pear packaging maven plugin are now part of the UIMA Java framework and SDK.</p>
 
-  <p>Note: So far, the base UIMA Java SDK and UIMA-AS have been released at the 2.4.0 level.  
+  <p>Note: So far, only the base UIMA Java SDK at the 2.4.1 level.  
   As other components
   are released that go with this level, we'll add them here.</p>
+  <subsection name="Apache UIMA Version 2.4.1 - Release Date: UIMA Java SDK 26-Jul-2013">
+    <insertDownloads version="2.4.1"/>
+  </subsection>
+  
+  
   <subsection name="Apache UIMA Version 2.4.0 - Release Date: UIMA Java SDK 7-Dec-2011    UIMA-AS Version 2.4.0 Release Date: 15-Nov-2012	UIMA-C++ Version 2.4.0 Release Date: 15-Nov-2012">
     <insertDownloads version="2.4.0"/>
   </subsection>
@@ -116,25 +121,25 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="Ruta"/>
   </subsection>
   
-  <subsection name="Apache UIMA Version 2.3.1 - Release Date: UIMA Java SDK: 10-Dec-2010    UIMA AS: 22-Mar-2011   UIMA Addons: 29-Aug-2011">
-    <insertDownloads version="2.3.1"/>
-  </subsection>
+<!--   <subsection name="Apache UIMA Version 2.3.1 - Release Date: UIMA Java SDK: 10-Dec-2010    UIMA AS: 22-Mar-2011   UIMA Addons: 29-Aug-2011"> -->
+<!--     <insertDownloads version="2.3.1"/> -->
+<!--   </subsection> -->
 
 
 
-  <subsection name="Apache UIMA Version 2.3.0-incubating - Release Date: 26-Jan-2010">
-    <p>Note: See <a href="http://archive.apache.org/dist/incubator/uima/" target="_blank">http://archive.apache.org/dist/incubator/uima/</a>
-     for previous releases of UIMA SDK and UIMA-AS.</p>
+<!--   <subsection name="Apache UIMA Version 2.3.0-incubating - Release Date: 26-Jan-2010"> -->
+<!--     <p>Note: See <a href="http://archive.apache.org/dist/incubator/uima/" target="_blank">http://archive.apache.org/dist/incubator/uima/</a> -->
+<!--      for previous releases of UIMA SDK and UIMA-AS.</p> -->
      
-    <p>For previous releases of the UIMA C++ Framework found in the incubator archives,
-    see <ul><li>
-    <a href="http://archive.apache.org/dist/incubator/uima/binaries/uimacpp-2.3.0-incubating/">
-    <code>http://archive.apache.org/dist/incubator/uima/binaries/uimacpp-2.3.0-incubating/</code></a>, and </li>
-    <li><a href="http://archive.apache.org/dist/incubator/uima/source/uimacpp-2.3.0-incubating/"></a>
-    <code>http://archive.apache.org/dist/incubator/uima/source/uimacpp-2.3.0-incubating/</code></li></ul>
-    </p>
-    <!-- insertDownloads version="2.3.0-incubating"/-->
-  </subsection>
+<!--     <p>For previous releases of the UIMA C++ Framework found in the incubator archives, -->
+<!--     see <ul><li> -->
+<!--     <a href="http://archive.apache.org/dist/incubator/uima/binaries/uimacpp-2.3.0-incubating/"> -->
+<!--     <code>http://archive.apache.org/dist/incubator/uima/binaries/uimacpp-2.3.0-incubating/</code></a>, and </li> -->
+<!--     <li><a href="http://archive.apache.org/dist/incubator/uima/source/uimacpp-2.3.0-incubating/"></a> -->
+<!--     <code>http://archive.apache.org/dist/incubator/uima/source/uimacpp-2.3.0-incubating/</code></li></ul> -->
+<!--     </p> -->
+<!--     insertDownloads version="2.3.0-incubating"/ -->
+<!--   </subsection> -->
 
 <!-- 
 	<subsection name="Apache UIMA Version 2.2.2-incubating">
