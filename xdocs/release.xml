@@ -166,8 +166,7 @@ A previous version of this page, with the methods we used while in the incubator
 	
 	<subsection name="Including updates to the Build tooling">
 	<p>This step is skipped, unless the build tooling is being updated.</p>
-	<p>There are two projects in the build tooling, each having as a parent, the common Apache Parent POM
-	<b>uima-build-resources</b> and <b>parent-pom</b>.
+	<p>There are several projects in the build tooling.
 	  The following special procedure is used to release updates to these.
 	</p>
 	<p>
@@ -199,7 +198,7 @@ A previous version of this page, with the methods we used while in the incubator
       NEXUS staging repository.
     </p>
       
-    <p>During this process, the release plugin asks what the next levels should be and what the tag name 
+    <p>During release:prepare, the release plugin asks what the next levels should be and what the tag name 
         should be, and unless there's a good reason, we take the defaults (by just hitting enter).
         The exception to this is in naming the SVN TAG - normally we have "release candidates".
         The recommended convention is to take the suggested name and add "-rc1" for release candidate 1,
@@ -208,7 +207,7 @@ A previous version of this page, with the methods we used while in the incubator
     <p>The release plugin automatically signs everything that needs signing using gpg.  It also
       builds the sources.jar, and one overall (for multi-module projects) source-release.zip file, 
       which can be later obtained and 
-      should be a copy of the SVN tag for that artifact, and once unzipped, should be buildable,
+      should be an (approximate) copy of the SVN tag for that artifact, and once unzipped, should be buildable,
       using <code>mvn install</code>.
     </p>
     
@@ -227,7 +226,7 @@ A previous version of this page, with the methods we used while in the incubator
         <li>
           Do a trial build of the release candidate:
           <pre>cd **directory for doing the release** 
-mvn install -Papache-release</pre>
+               mvn deploy -Papache-release</pre>
           <p>The <code>-Papache-release</code> is used to have the build mimic the 
              build actions that would be taken when the release plugin is running
              the release build.</p>
@@ -351,7 +350,7 @@ mvn install -Papache-release</pre>
   several multi-megabyte zip/tar files, these will just waste space in SVN. 
   </p>
   <p>
-  The alternative is to stage the release candidate in your personal people.apache.org/~[user-id] space, and
+  The alternative is to copy the release candidate for voting into your personal people.apache.org/~[user-id] space, and
   let testers/voters pull it from there.
   </p>
  
@@ -430,13 +429,11 @@ mvn install -Papache-release</pre>
   <p>
   The actual creation of the update site is done in several steps, following
   the conventions to 
-  <a href="saving-svn-resources.html">save SVN resources</a>.  First, SVN copy (if needed) 
-  the existing released composite update site
-  (from https://dist.apache.org/repos/dist/release/uima/eclipse-update-site) to
-  https://dist.apache.org/repos/dist/dev/uima/eclispe-update-site (the staging spot for releases).
-  Next, check out the existing update site from the dev spot into a working directory
-  Next, update the working directory with any changes, and then check it back in (to the /dev/... spot).
-  Note that any JARs, Zips, Tars, tar.gz artifacts need to be signed.
+  <a href="saving-svn-resources.html">save SVN resources</a>.  
+  The Maven build for Eclipse update sites 
+  will end up with files in .../target/eclipse-update-site/[subsite] which
+  should be copied to some accessible spot for Voting/ testing.
+  (After the vot passes, the files in the target site can be svn switched to the release directory and committed.)
   </p>
 
   <p>Test the result: using the extended composite repository in various versions of
@@ -486,10 +483,8 @@ mvn install -Papache-release</pre>
         <li>Promote the release(s) from the staging repositories: 
             log on to the staging repository again, and release the staged artifacts.  
             This will make the artifacts available in the Maven Central repository.</li>
-        <li><p>If the release candidate used the distribution (...dev/uima) spot, 
-        SVN move the release artifacts from the distribution SVN staging spot
-        in dev/uima to release/uima.  Otherwise, log on to people.a.o and do 
-        SVN add of the voted-on artifacts from the place where they were staged.
+        <li><p>Do an svn add of the new released artifacts (bin.tar/zip) to the 
+        Apache release svn. 
         </p> 
           
       <!-- 
@@ -497,7 +492,9 @@ mvn install -Papache-release</pre>
       the existing previous plugin releases already on the update site).  
        -->
        <p>
-      If Eclipse plugins are being released, promote any changed files to the release/uima directory.
+      If Eclipse plugins are being released, 
+      do an svn switch to switch the files being released from the .../dev/... 
+      to the .../release/... directory in dist.apache.org.
        </p>
        <p>
       Make sure the KEYS file in release/uima is current (master located in 
