@@ -32,7 +32,7 @@ under the License.
   <li>Do <a href="one-time-release-setup.html">one-time setup</a> required for releasing.</li>
   <li>Finish up any changes, close Jiras, assign Jiras to proper release(s).</li>
   <li>Update the READMEs and RELEASE-NOTES.</li>
-  <li>Make a new build directory for this release, and svn export the trunk. This is so you can
+  <li>Make a new build directory for this release, and svn checkout the trunk (svn export fails at a later commit step by the release plugin). This is so you can
       preserve the build for later upload of selected artifacts to the distribution spot. 
       If instead you are building from an existing checkout, do a svn update to be sure the workspace is up-to-date.</li>
   <li>Purge your local maven repository of artifacts being built by running in the 

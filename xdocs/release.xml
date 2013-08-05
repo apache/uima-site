@@ -213,7 +213,7 @@ A previous version of this page, with the methods we used while in the incubator
     
     <p>Steps:
     <ul>
-           <li>Make sure all changes are checked into SVN.  Then check out from SVN the project(s)
+           <li>Make sure all changes are checked into SVN.  Then checkout (not export) from SVN the project(s)
         you'll be building, into a new "build" location, and do all the building from there.</li>
         <li>Purge your local maven repository of artifacts being built by running in the 
         top level directory you'll be building from:
