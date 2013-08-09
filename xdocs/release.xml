@@ -497,10 +497,8 @@ A previous version of this page, with the methods we used while in the incubator
       to the .../release/... directory in dist.apache.org.
        </p>
        <p>
-      Make sure the KEYS file in release/uima is current (master located in 
-      SVN uima/site/trunk/uima-website/docs/KEYS).
-      Any changes also need to be made in the version of the KEYS file
-      in the distribution svn (https://dist.apache.org/repos/dist/release/uima/KEYS). 
+      Make sure the KEYS file in release/uima is current.  See
+      <a href="one-time-release-setup.html">one-time-release-setup</a>. 
       </p>
       
       <p>Update

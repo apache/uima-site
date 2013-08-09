@@ -102,8 +102,8 @@ under the License.
       The UIMA project KEYS file is stored in SVN in the trunk/uima-website/docs/KEYS file.
       Please add your exported public key to the bottom of this file, and commit the change.
       <p>
-      Also, copy the updated keys file to people.apache.org/www/www.apache.org/dist/uima, to 
-      update the KEYS file found there.
+      Also, checkout and update the KEYS file at the top level of our release distribution, located
+      at https://dist.apache.org/repos/dist/release/uima/KEYS.
       </p> 
             
     </li>
