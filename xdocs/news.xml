@@ -33,6 +33,11 @@
 		<section name="Apache UIMA News">
       <subsectionToc/>
 
+      <subsection name="09 August 2013" date = "09 August 2013" title="Apache UIMA Java SDK 2.4.2 released">
+        <p>This is a bug-fix only release, and effectively replaces the 2.4.1 release.
+        The fixes are listed <a href="d/uimaj-2.4.2/issuesFixed/jira-report.html">here</a>.</p>
+      </subsection>
+
       <subsection name="26 July 2013" date = "26 July 2013" title="Apache UIMA Java SDK 2.4.1 released">
           <p>This release only has the Apache UIMA&#0153; Java SDK, and does not yet have the other
           components.  It is backwards compatible with previous releases, except some classes and interfaces
