@@ -28,7 +28,28 @@ under the License.
 
 <body>
 
-<section name="UIMA Workshop at GSCL 2013 in Darmstadt, Germany">
+<section name="GSCL 2013 in Darmstadt, Germany">
+<p>
+The <a href="http://gscl2013.ukp.informatik.tu-darmstadt.de/de/gscl-2013/">GSCL 2013</a>,
+the bi-annual conference of the German Society for Computational Linguistics and Language Technology,
+hosts two UIMA-related events:
+</p>
+<ul>
+    <li>
+      <p>
+        <a href="#gscl.workshop">3rd UIMA@GSCL Workshop</a>
+      </p>
+    </li>
+    <li>
+      <p>
+        <a href="#gscl.tutorial">Tutorial: Natural Language Processing and Rule-based Information Extraction with UIMA</a>
+      </p>
+    </li>
+</ul>
+</section>
+
+
+<section name="UIMA Workshop at GSCL 2013 in Darmstadt, Germany" id="gscl.workshop">
   
 <p>
   There will be a <a href="https://docs.google.com/document/d/18BfopkrOuGlhqybPf4z25_FYbA5hal7YvS7hSod4_-U/pub">workshop 
@@ -160,6 +181,7 @@ uima.gscl2013@gmail.com
 - Michael Herweg, IBM Deutschland
 - Nancy Ide, Vassar College
 - Peter Klügl, Universität Würzburg
+- Eric Nyberg, Carnegie Mellon University
 - Kai Simon, Averbis GmbH
 - Michael Tanenblatt, Thomas J. Watson Research Center
 - Martin Toepfer, Universität Würzburg
@@ -170,6 +192,38 @@ uima.gscl2013@gmail.com
 </pre>
 </p>
 
+</section>
+
+<section name="Tutorial: Natural Language Processing and Rule-based Information Extraction with UIMA" id="gscl.tutorial">
+  
+<p>
+The tutorial is split into two theoretic parts, followed by a hands-on session.
+</p>
+<p>
+The first part gives an introduction to doing UIMA-based natural language processing 
+using the <a href="http://www.ukp.tu-darmstadt.de/software/dkpro-core/">DKPro Core</a> 
+component collection.  It will be shown how a processing pipeline 
+can be composed from existing components, such as a tokenizer, part-of-speech tagger, and parser. 
+To illustrate how such a pipeline can be used on own data and how analysis results can 
+be exported to other tools, we also show how to implement simple reader and writer components. 
+This includes a basic introduction to the underlying concepts, such as 
+<a href="http://maven.apache.org/">Maven</a> and <a href="https://code.google.com/p/uimafit/">uimaFIT</a>.
+</p>
+<p>
+The second part gives an introduction to <a href="https://uima.apache.org/ruta.html">Apache UIMA Ruta</a>. We will cover the syntax 
+and semantics of the rule language as well as tooling support for developing rule-based 
+information extraction applications.
+</p>
+<p>
+In the hands-on session, we will implement and run a simple pipeline with DKPro Core.  
+We then will extend the pipeline with rule-based post-processing in order to approach 
+and solve different tasks such as information extraction. This includes solutions how 
+to combine the rules with the information annotated by the DKPro components and ways for 
+efficient and effective engineering of the rules themselves.
+</p>
+<p>
+Organizers: Peter Klügl, Dr. Katrin Tomanek, Richard Eckart de Castilho
+</p>
 </section>
 
 </body>
