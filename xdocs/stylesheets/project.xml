@@ -143,6 +143,13 @@
     </download>
   </downloads>
 
+  <downloads version="uimaFIT-2.0.0" title="Apache UIMA uimaFIT 2.0.0" withreleasedate="true">
+    <download name="uimaFIT 2.0.0" subdirectory="uimafit-2.0.0" releasedate="31-Aug-2013">
+      <releasenotes filename="uimafit-2.0.0/README">           <f>txt</f>                </releasenotes>
+      <source       filename="uimafit-2.0.0-source-release">                     <f>zip</f>  </source>
+    </download>
+  </downloads>
+
   <downloads version="2.3.1" title="Apache UIMA Version 2.3.1">
       
     <download name="UIMA Java framework &amp; SDK" subdirectory="">
