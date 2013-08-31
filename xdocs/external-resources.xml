@@ -177,13 +177,13 @@ target="_blank">Maven repository</a> at UKP Lab.
 
 
 
-<subsection name="uimaFIT">
-<li><p><a href="http://code.google.com/p/uimafit" target="_blank">
-uimaFIT</a>
+<subsection name="uimaFIT (legacy)">
+<p><a href="http://code.google.com/p/uimafit" target="_blank">
+uimaFIT (legacy)</a>
 is a library that provides factories, injection, 
 and testing utilities for UIMA. It provides a convenient Java API 
 for using UIMA in Java projects without having to deal with XML descriptors.
-</p></li>
+</p><p><a href="">Apache uimaFIT&#0153;</a> supersedes this project.</p>
 
 </subsection>
 

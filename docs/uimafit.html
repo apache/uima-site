@@ -9,13 +9,12 @@
             <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
             <style type="text/css">@import "stylesheets/base.css";</style>
                                           <meta name="author" value="
-   Apache UIMA Documentation Team
-  ">
+ Apache UIMA&trade; Documentation Team">
   <meta name="email" value="dev@uima.apache.org">
                         
             
                         
-                        <title>Apache UIMA - Getting Started: Why Apache UIMA</title>
+                        <title>Apache UIMA - Apache UIMA uimaFIT&trade;</title>
         </head>
 
         <body>
@@ -29,7 +28,7 @@
                             </a>
                     </td>
                     <td align='CENTER'>
-                          <div class="pageBanner">Getting Started: Why Apache UIMA</div>
+                          <div class="pageBanner">Apache UIMA uimaFIT&trade;</div>
                     </td>
                     <td align='RIGHT'>
                                   <a href="http://www.apache.org">
@@ -183,101 +182,275 @@
                                                           <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Getting Started: Why UIMA"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Getting Started: Why UIMA</h1></a>
+        <a name="Apache UIMA uimaFIT&trade;"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Apache UIMA uimaFIT&trade;</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>
-	 The "Getting Started: Why UIMA" guide should help you to understand what UIMA&trade; is, 
-	 what it can be used for, and how you can use it.
-   </p>
-                                                      <table class="subsectionTable">
+                                          <ul>
+          <li><a href='#Overview'>
+                  Overview
+        
+                </a></li>
+          <li><a href='#Modules'>
+                  Modules
+        
+                </a></li>
+          <li><a href='#Developer Information'>
+                  Developer Information
+        
+                </a></li>
+          <li><a href='#Reference'>
+                  Reference
+        
+                </a></li>
+          <li><a href='#History'>
+                  History
+        
+                </a></li>
+        </ul>
+                                                        <table class="subsectionTable" id='uima.fit.overview'>
         <tr><td>
        
        
        
-          <a name="What Is UIMA">
-            <h2>What Is UIMA
+          <a name="Overview">
+            <h2>Overview
                         </h2>
           </a>
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>
-    UIMA stands for Unstructured Information Management Architecture and is a component 
-    architecture and software framework implementation for the analysis of unstructured 
-    content like text, video and audio data. Unstructured information represents the largest, 
-    most current and fastest growing source of information available to businesses and governments.
-   </p>
+    Configuring UIMA components is generally achieved by creating XML descriptor
+    files which tell the framework at runtime how components should be
+    instantiated and deployed. These XML descriptor files are very tightly
+    coupled with the Java implementation of the components they describe.
+    We have found that it is very difficult to keep the two consistent
+    with each other especially when code refactoring is very frequent.
+    uimaFIT provides Java annotations for describing UIMA components which
+    can be used to directly describe the UIMA components in the code. This
+    greatly simplifies refactoring a component definition (e.g. changing a
+    configuration parameter name). It also makes it possible to generate
+    XML descriptor files as part of the build cycle rather than being
+    performed manually in parallel with code creation. uimaFIT also makes
+    it easy to instantiate UIMA components without using XML descriptor
+    files at all by providing a number of convenience factory methods
+    which allow programmatic/dynamic instantiation of UIMA components.
+    This makes uimaFIT an ideal library for testing UIMA components
+    because the component can be easily instantiated and invoked without
+    requiring a descriptor file to be created first. uimaFIT is also
+    helpful in research environments in which programmatic/dynamic
+    instantiation of a pipeline can simplify experimentation. For example,
+    when performing 10-fold cross-validation across a number of
+    experimental conditions it can be quite laborious to create a
+    different set of descriptor files for each run or even a script that
+    generates such descriptor files. uimaFIT is type system agnostic and
+    does not depend on (or provide) a specific type system.
+  </p>
                                                 <p>
-	The motivation to develop such a framework was to build a common platform for unstructured analytics, 
-	to foster reuse of analysis components and to reduce duplication of analysis development. 
-	The pluggable architecture of UIMA allows to easily plug-in your own analysis components and 
-	combine them together with others. A full analysis task of a solution using unstructured analytics 
-	like search or government intelligence applications is often not a 
-	monolithic thing but a multi-stage process where different modules need to build on each other 
-	to get a powerful analysis chain. In some cases also annotators from different specialized vendors 
-	may need to work together to produce the results needed. 
-    The UIMA application interested in such analysis results does not need to know the details of how annotators 
-    work together to create the results. The UIMA framework take care of the integration and orchestration 
-    of multiple annotators.
-   </p>
+    Apache uimaFIT&trade; is a library that provides factories, injection, and testing utilities for
+    Apache UIMA&trade;. The following list highlights some of the features uimaFIT provides:
+  </p>
+                                                <ul>
+    <li>
+      <p>
+        <b>Factories:</b> simplify instantiating UIMA components programmatically without descriptor files.  
+        For example, to instantiate an AnalysisEngine a call like this could be made: 
+      </p>    
+      <pre>AnalysisEngineFactory.createPrimitive(MyAEImpl.class, myTypeSystem, 
+  paramName1, paramValue1,
+  paramName2, paramValue2,
+  ...)</pre>
+    </li> 
+    <li>
+      <p>
+        <b>Injection:</b> handles the binding of configuration parameter values to the corresponding member
+        variables in the analysis engines and handles the binding of external resources. For example,
+        to bind a configuration parameter just annotate a member variable with <code>@ConfigurationParameter</code>.
+        Then add one line of code to your initialize method:
+      </p>
+      <pre>ConfigurationParameterInitializer.initialize(this, uimaContext)</pre>
+      <p>
+        This is handled automatically if you extend the uimaFIT component base classes, such as
+        <code>JCasAnnotator_ImplBase</code>. External resources can likewise by injected via the
+        <code>@ExternalResource</code> annotation.
+      </p>
+    </li>     
+    <li>
+      <p>
+        <b>Testing:</b> uimaFIT simplifies testing in a number of ways described in the documentation. By making
+        it easy to instantiate your components without descriptor files a large amount of 
+        difficult-to-maintain and unnecessary XML can be eliminated from your test code. This makes tests
+        easier to write and maintain. Also, running components as a pipeline can be accomplished with a
+        method call like this:
+      </p>
+      <pre>SimplePipeline.runPipeline(reader, ae1, ..., aeN, consumer1, ... consumerN)</pre>
+    </li>     
+  </ul>
                                                 <p>
-	So the major goal of UIMA is to transform unstructured information to structured 
-	information by orchestrating analysis engines to detect entities or relations and thus to build the 
-	bridge between the unstructured and the structured world.
-   </p>
-                                                <p>
-     <table width="100%"><tr><td align="center" valign="middle">
-       <img src="./images/getting-started/analytics-world.jpg" alt="analytics world" border="0" />
-     </td></tr></table>
-   </p>
-                                                <p>
-	The Apache UIMA project provides two Apache licensed UIMA framework implementations, 
-	one for Java and one for C++, and an extension to support Asynchronous Scaleout, called UIMA-AS.
-   </p>
+    For more detailed infromation, please refer to the <a href="d/uimafit-current/tools.uimafit.book.html">user documentation</a>.
+  </p>
+                                                <note>
+    <p>
+      uimaFIT is a part of the Apache UIMA&trade; project. uimaFIT can only be used in conjunction with 
+      a compatible version of the Java version of the Apache UIMA SDK. For your convenience, the binary
+      distribution package of uimaFIT includes all libraries necessary to use uimaFIT. In particular for
+      novice users, it is strongly advised to obtain a copy of the full UIMA SDK separately.
+    </p>
+  </note>
                             </blockquote>
         </td></tr>
     </table>
-                                                      <table class="subsectionTable">
+                                                      <table class="subsectionTable" id='uima.fit.modules'>
         <tr><td>
        
        
        
-          <a name="What Can UIMA Be Used For">
-            <h2>What Can UIMA Be Used For
+          <a name="Modules">
+            <h2>Modules
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <ul>
+    <li>
+      <b>uimafit-core</b> 
+      is the main uimaFIT module.
+    </li>
+    <li>
+      <b>uimafit-cpe</b>
+      provides support for the Collection Processing Engine (multi-threaded pipelines).
+    </li>
+    <li>
+      <b>uimafit-maven-plugin</b>
+      is a Maven plugin to automatically enhance UIMA components with uimaFIT
+      metadata and to generate XML descriptors for uimaFIT-enabled components.
+    </li>
+    <li>
+      <b>uimafit-legacy-support</b>
+      allows uimaFIT 2.0.0 to use uimaFIT 1.4.x meta data like Java annotations
+      and <code>META-INF/org.uimafit/types.txt</code> files. Pipelines mixing uimaFIT 1.4.x
+      and 2.x componens MUST be created using the 2.x factories, because the
+      1.4.x factories will <b>not</b> understand how to handle uimaFIT 2.x components
+      or auto-configuration.
+    </li>
+    <li>
+      <b>uimafit-spring</b>
+      is an experimental module serving as a proof-of-concept for the integration of
+      UIMA with the Spring Framework. It is currently not considered finished and
+      uses invasive reflection in order to patch the UIMA framework such that it
+      passes all components created by UIMA through Spring to provide for the 
+      wiring of Spring context dependencies. This module is made available for 
+      the adventurous but currently not considered stable, finished, or even a 
+      proper part of the package. E.g. it is not included in the binary 
+      distribution package.
+    </li>
+  </ul>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='uima.fit.developer'>
+        <tr><td>
+       
+       
+       
+          <a name="Developer Information">
+            <h2>Developer Information
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>The latest version of uimaFIT is available via <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.uima%22%20AND%20%22uimafit*%22">Maven Central</a>. 
+  If you use Maven as your build tool, then you can add uimaFIT as a dependency 
+  in your pom.xml file (additionally to other UIMA dependencies):</p>
+                                                <pre>
+&lt;dependency&gt;
+  &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
+  &lt;artifactId&gt;uimafit-core&lt;/artifactId&gt;
+  &lt;version&gt;2.0.0&lt;/version&gt;
+&lt;/dependency&gt;
+  </pre>
+                                                <subsubsection>
+    For building the uimaFIT projects from sources, follow the instructions for <a href="building-uima.html">building UIMA</a>, 
+    but exchange the command for SVN checkout:<br />
+    <code>svn checkout https://svn.apache.org/repos/asf/uima/sandbox/uimafit/trunk c:/myWorkingDirectory</code>
+  </subsubsection>
+                                                <p>
+    The sources of the current release are available at the <a href="downloads.html">download page</a>. 
+  </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='uima.fit.reference'>
+        <tr><td>
+       
+       
+       
+          <a name="Reference">
+            <h2>Reference
                         </h2>
           </a>
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>
-	 UIMA is, by itself, an empty framework. Its purpose is to enable a world-wide, diverse community to develop
-	 inter-operable, often complex analytic components, and allow them to be combined and run together, with
-	 framework supplied scaled-out and remoting as needed. Some of the major external UIMA resources are linked
-	 on the Apache UIMA website "<a href="external-resources.html">UIMA Resources on the Web</a>".
-	 You can also check the <a href="sandbox.html">UIMA Addons and Sandbox</a> for components that can be used and combined 
-	 to build your own application.
-   </p>
+    If you use uimaFIT to support academic research, then please consider citing the following
+    paper as appropriate:</p>
+                                                <pre>
+@InProceedings{ogren-bethard:2009:SETQA-NLP,
+  author    = {Ogren, Philip  and  Bethard, Steven},
+  title     = {Building Test Suites for {UIMA} Components},
+  booktitle = {Proceedings of the Workshop on Software Engineering, Testing, 
+               and Quality Assurance for Natural Language Processing (SETQA-NLP 2009)},
+  month     = {June},
+  year      = {2009},
+  address   = {Boulder, Colorado},
+  publisher = {Association for Computational Linguistics},
+  pages     = {1--4},
+  url       = {http://www.aclweb.org/anthology/W/W09/W09-1501}
+}
+</pre>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable" id='uima.fit.history'>
+        <tr><td>
+       
+       
+       
+          <a name="History">
+            <h2>History
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+    Since end of 2012, uimaFIT is part of the Apache UIMA project. 
+  </p>
                                                 <p>
-	 There are lots of use cases where UIMA may be applicable. One of the major ones are search applications. 
-	 Within search applications, the unstructured content that is available mainly as text in various kinds 
-	 must be processed and analyzed to be searchable. To obtain a powerful search application, the text 
-	 content must be analyzed to get the document language followed by language dependent linguistic 
-	 processing such as tokenization, lemmatization and part of speech detection. After these steps a 
-	 more sophisticated analysis like entity detection and relation detection between entities can be done. 
-	 For all these analysis steps UIMA and UIMA components can be used.
-   </p>
+    Apache uimaFIT was formerly known as uimaFIT, which in turn was formerly known as UUTUC.
+  </p>
                                                 <p>
-     Another important use case is business or government intelligence. For example, UIMA analysis is used 
-     to extract structured information from car repair reports.  This data is then used for quality feed-back 
-     and problem early warning systems.
-   </p>
+    Before uimaFIT has become an sub-project within the Apache UIMA project, it is was collaborative 
+    effort between the Center for Computational Pharmacology at the University of Colorado Denver, the
+    Center for Computational Language and Education Research at the University of Colorado at Boulder,
+    and the Ubiquitous Knowledge Processing (UKP) Lab at the Technische Universitaet Darmstadt.
+ </p>
                                                 <p>
-     Other possible solutions where UIMA can be used for are the analsyis of call center notes to detect product 
-     problems and customer issues or a public image monitoring solution to find out how others for example in internet
-     forums or press releases think about my product or company.
-   </p>
+    The initial uimaFIT development team was:
+  </p>
+                                                <ul>
+    <li>Philip Ogren, University of Colorado, USA</li>
+    <li>Richard Eckart de Castilho, Technische Universitaet Darmstadt, Germany</li>
+    <li>Steven Bethard, Stanford University, USA</li>
+  </ul>
+                                                <p>
+    with contributions from Niklas Jakob, Fabio Mancinelli, Chris Roeder, Philipp Wetzler, Shuo Yang, 
+    Torsten Zesch.
+  </p>
                             </blockquote>
         </td></tr>
     </table>

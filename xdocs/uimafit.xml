@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+
+<document>
+
+<properties>
+<title>Apache UIMA uimaFIT&#0153;</title>
+<author email="dev@uima.apache.org">
+ Apache UIMA&#0153; Documentation Team</author>
+</properties>
+
+<body>
+
+<section name="Apache UIMA uimaFIT&#0153;">
+
+<subsectionToc/>
+
+<subsection name='Overview' id="uima.fit.overview">
+  <p>
+    Configuring UIMA components is generally achieved by creating XML descriptor
+    files which tell the framework at runtime how components should be
+    instantiated and deployed. These XML descriptor files are very tightly
+    coupled with the Java implementation of the components they describe.
+    We have found that it is very difficult to keep the two consistent
+    with each other especially when code refactoring is very frequent.
+    uimaFIT provides Java annotations for describing UIMA components which
+    can be used to directly describe the UIMA components in the code. This
+    greatly simplifies refactoring a component definition (e.g. changing a
+    configuration parameter name). It also makes it possible to generate
+    XML descriptor files as part of the build cycle rather than being
+    performed manually in parallel with code creation. uimaFIT also makes
+    it easy to instantiate UIMA components without using XML descriptor
+    files at all by providing a number of convenience factory methods
+    which allow programmatic/dynamic instantiation of UIMA components.
+    This makes uimaFIT an ideal library for testing UIMA components
+    because the component can be easily instantiated and invoked without
+    requiring a descriptor file to be created first. uimaFIT is also
+    helpful in research environments in which programmatic/dynamic
+    instantiation of a pipeline can simplify experimentation. For example,
+    when performing 10-fold cross-validation across a number of
+    experimental conditions it can be quite laborious to create a
+    different set of descriptor files for each run or even a script that
+    generates such descriptor files. uimaFIT is type system agnostic and
+    does not depend on (or provide) a specific type system.
+  </p>
+  <p>
+    Apache uimaFIT&#0153; is a library that provides factories, injection, and testing utilities for
+    Apache UIMA&#0153;. The following list highlights some of the features uimaFIT provides:
+  </p>    
+  <ul>
+    <li>
+      <p>
+        <b>Factories:</b> simplify instantiating UIMA components programmatically without descriptor files.  
+        For example, to instantiate an AnalysisEngine a call like this could be made: 
+      </p>    
+      <pre>AnalysisEngineFactory.createPrimitive(MyAEImpl.class, myTypeSystem, 
+  paramName1, paramValue1,
+  paramName2, paramValue2,
+  ...)</pre>
+    </li> 
+    <li>
+      <p>
+        <b>Injection:</b> handles the binding of configuration parameter values to the corresponding member
+        variables in the analysis engines and handles the binding of external resources. For example,
+        to bind a configuration parameter just annotate a member variable with <code>@ConfigurationParameter</code>.
+        Then add one line of code to your initialize method:
+      </p>
+      <pre>ConfigurationParameterInitializer.initialize(this, uimaContext)</pre>
+      <p>
+        This is handled automatically if you extend the uimaFIT component base classes, such as
+        <code>JCasAnnotator_ImplBase</code>. External resources can likewise by injected via the
+        <code>@ExternalResource</code> annotation.
+      </p>
+    </li>     
+    <li>
+      <p>
+        <b>Testing:</b> uimaFIT simplifies testing in a number of ways described in the documentation. By making
+        it easy to instantiate your components without descriptor files a large amount of 
+        difficult-to-maintain and unnecessary XML can be eliminated from your test code. This makes tests
+        easier to write and maintain. Also, running components as a pipeline can be accomplished with a
+        method call like this:
+      </p>
+      <pre>SimplePipeline.runPipeline(reader, ae1, ..., aeN, consumer1, ... consumerN)</pre>
+    </li>     
+  </ul>
+  <p>
+    For more detailed infromation, please refer to the <a href="d/uimafit-current/tools.uimafit.book.html">user documentation</a>.
+  </p>
+  <note>
+    <p>
+      uimaFIT is a part of the Apache UIMA&#0153; project. uimaFIT can only be used in conjunction with 
+      a compatible version of the Java version of the Apache UIMA SDK. For your convenience, the binary
+      distribution package of uimaFIT includes all libraries necessary to use uimaFIT. In particular for
+      novice users, it is strongly advised to obtain a copy of the full UIMA SDK separately.
+    </p>
+  </note>
+</subsection>
+
+<subsection name='Modules' id="uima.fit.modules">
+  <ul>
+    <li>
+      <b>uimafit-core</b> 
+      is the main uimaFIT module.
+    </li>
+    <li>
+      <b>uimafit-cpe</b>
+      provides support for the Collection Processing Engine (multi-threaded pipelines).
+    </li>
+    <li>
+      <b>uimafit-maven-plugin</b>
+      is a Maven plugin to automatically enhance UIMA components with uimaFIT
+      metadata and to generate XML descriptors for uimaFIT-enabled components.
+    </li>
+    <li>
+      <b>uimafit-legacy-support</b>
+      allows uimaFIT 2.0.0 to use uimaFIT 1.4.x meta data like Java annotations
+      and <code>META-INF/org.uimafit/types.txt</code> files. Pipelines mixing uimaFIT 1.4.x
+      and 2.x componens MUST be created using the 2.x factories, because the
+      1.4.x factories will <b>not</b> understand how to handle uimaFIT 2.x components
+      or auto-configuration.
+    </li>
+    <li>
+      <b>uimafit-spring</b>
+      is an experimental module serving as a proof-of-concept for the integration of
+      UIMA with the Spring Framework. It is currently not considered finished and
+      uses invasive reflection in order to patch the UIMA framework such that it
+      passes all components created by UIMA through Spring to provide for the 
+      wiring of Spring context dependencies. This module is made available for 
+      the adventurous but currently not considered stable, finished, or even a 
+      proper part of the package. E.g. it is not included in the binary 
+      distribution package.
+    </li>
+  </ul>
+</subsection>
+
+<subsection name='Developer Information' id="uima.fit.developer">
+  <p>The latest version of uimaFIT is available via <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.uima%22%20AND%20%22uimafit*%22">Maven Central</a>. 
+  If you use Maven as your build tool, then you can add uimaFIT as a dependency 
+  in your pom.xml file (additionally to other UIMA dependencies):</p>
+  <pre>
+&lt;dependency>
+  &lt;groupId>org.apache.uima&lt;/groupId>
+  &lt;artifactId>uimafit-core&lt;/artifactId>
+  &lt;version>2.0.0&lt;/version>
+&lt;/dependency>
+  </pre>
+  <subsubsection>
+    For building the uimaFIT projects from sources, follow the instructions for <a href="building-uima.html">building UIMA</a>, 
+    but exchange the command for SVN checkout:<br/>
+    <code>svn checkout https://svn.apache.org/repos/asf/uima/sandbox/uimafit/trunk c:/myWorkingDirectory</code>
+  </subsubsection>
+   
+  <p>
+    The sources of the current release are available at the <a href="downloads.html">download page</a>. 
+  </p>
+</subsection>
+
+<subsection name='Reference' id="uima.fit.reference">
+  <p>
+    If you use uimaFIT to support academic research, then please consider citing the following
+    paper as appropriate:</p>
+<pre>
+@InProceedings{ogren-bethard:2009:SETQA-NLP,
+  author    = {Ogren, Philip  and  Bethard, Steven},
+  title     = {Building Test Suites for {UIMA} Components},
+  booktitle = {Proceedings of the Workshop on Software Engineering, Testing, 
+               and Quality Assurance for Natural Language Processing (SETQA-NLP 2009)},
+  month     = {June},
+  year      = {2009},
+  address   = {Boulder, Colorado},
+  publisher = {Association for Computational Linguistics},
+  pages     = {1--4},
+  url       = {http://www.aclweb.org/anthology/W/W09/W09-1501}
+}
+</pre>
+</subsection>
+
+<subsection name='History' id="uima.fit.history">
+  <p>
+    Since end of 2012, uimaFIT is part of the Apache UIMA project. 
+  </p>
+  <p>
+    Apache uimaFIT was formerly known as uimaFIT, which in turn was formerly known as UUTUC.
+  </p>
+  <p>
+    Before uimaFIT has become an sub-project within the Apache UIMA project, it is was collaborative 
+    effort between the Center for Computational Pharmacology at the University of Colorado Denver, the
+    Center for Computational Language and Education Research at the University of Colorado at Boulder,
+    and the Ubiquitous Knowledge Processing (UKP) Lab at the Technische Universitaet Darmstadt.
+ </p>
+  <p>
+    The initial uimaFIT development team was:
+  </p>
+  <ul>
+    <li>Philip Ogren, University of Colorado, USA</li>
+    <li>Richard Eckart de Castilho, Technische Universitaet Darmstadt, Germany</li>
+    <li>Steven Bethard, Stanford University, USA</li>
+  </ul>
+  <p>
+    with contributions from Niklas Jakob, Fabio Mancinelli, Chris Roeder, Philipp Wetzler, Shuo Yang, 
+    Torsten Zesch.
+  </p>
+</subsection>
+ 
+</section>
+
+</body>
+</document>

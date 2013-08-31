@@ -75,7 +75,7 @@ Modules
 
 uimafit-core           - the main uimaFIT module
 uimafit-cpe            - support for the Collection Processing Engine (multi-threaded pipelines)
-uimafit-maven          - a Maven plugin to automatically enhance UIMA components with uimaFIT
+uimafit-maven-plugin   - a Maven plugin to automatically enhance UIMA components with uimaFIT
                          metadata and to generate XML descriptors for uimaFIT-enabled components.
 uimafit-legacy-support - allows uimaFIT 2.0.0 to use uimaFIT 1.4.x meta data like Java annotations
                          and META-INF/org.uimafit/types.txt files. Pipelines mixing uimaFIT 1.4.x
@@ -88,7 +88,7 @@ uimafit-spring         - an experimental module serving as a proof-of-concept fo
                          passes all components created by UIMA through Spring to provide for the 
                          wiring of Spring context dependencies. This module is made available for 
                          the adventurous but currently not considered stable, finished, or even a 
-                         proper part of the ackage. E.g. it is not included in the binary 
+                         proper part of the package. E.g. it is not included in the binary 
                          distribution package. 
 
 
