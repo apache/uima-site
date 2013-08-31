@@ -146,6 +146,7 @@
   <downloads version="uimaFIT-2.0.0" title="Apache UIMA uimaFIT 2.0.0" withreleasedate="true">
     <download name="uimaFIT 2.0.0" subdirectory="uimafit-2.0.0" releasedate="31-Aug-2013">
       <releasenotes filename="uimafit-2.0.0/README">           <f>txt</f>                </releasenotes>
+      <binary       filename="uimafit-2.0.0-bin">                   <f>zip</f>  <f>tar.gz</f>                </binary>   
       <source       filename="uimafit-2.0.0-source-release">                     <f>zip</f>  </source>
     </download>
   </downloads>
