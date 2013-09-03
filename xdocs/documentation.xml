@@ -121,6 +121,16 @@
    </ul>
    </p>
   </subsection>
+
+  <subsection name="uimaFIT" id="uimafit">
+    <p>Documentation for the Aapche uimaFIT&#0153; 2.0.0 release:</p>
+    <ul>
+      <li><a href="d/uimafit-current/tools.uimafit.book.html">Guide and Reference Manual (html)</a></li>
+      <li><a href="d/uimafit-current/tools.uimafit.book.pdf">Guide and Reference Manual (pdf)</a></li>
+      <li><a href="d/uimafit-current/api/index.html">API documentation</a></li>
+      <li><a href="d/uimafit-current/README.txt">Latest release notes</a></li>
+    </ul>
+  </subsection>  
   
   <subsection name="Annotators, Web Servers, Tooling, and more" id="sandbox">
     <p>Many of the additional components found in the Addons and Sandbox have individual documentation files, which 

@@ -22,14 +22,14 @@ under the License.
 <document>
 
 <properties>
-<title>Apache UIMA uimaFIT&#0153;</title>
+<title>Apache uimaFIT&#0153;</title>
 <author email="dev@uima.apache.org">
  Apache UIMA&#0153; Documentation Team</author>
 </properties>
 
 <body>
 
-<section name="Apache UIMA uimaFIT&#0153;">
+<section name="Apache uimaFIT">
 
 <subsectionToc/>
 
@@ -62,7 +62,7 @@ under the License.
     does not depend on (or provide) a specific type system.
   </p>
   <p>
-    Apache uimaFIT&#0153; is a library that provides factories, injection, and testing utilities for
+    Apache uimaFIT is a library that provides factories, injection, and testing utilities for
     Apache UIMA&#0153;. The following list highlights some of the features uimaFIT provides:
   </p>    
   <ul>
@@ -101,12 +101,9 @@ under the License.
       <pre>SimplePipeline.runPipeline(reader, ae1, ..., aeN, consumer1, ... consumerN)</pre>
     </li>     
   </ul>
-  <p>
-    For more detailed infromation, please refer to the <a href="d/uimafit-current/tools.uimafit.book.html">user documentation</a>.
-  </p>
   <note>
     <p>
-      uimaFIT is a part of the Apache UIMA&#0153; project. uimaFIT can only be used in conjunction with 
+      uimaFIT is a part of the Apache UIMA project. uimaFIT can only be used in conjunction with 
       a compatible version of the Java version of the Apache UIMA SDK. For your convenience, the binary
       distribution package of uimaFIT includes all libraries necessary to use uimaFIT. In particular for
       novice users, it is strongly advised to obtain a copy of the full UIMA SDK separately.
@@ -151,6 +148,14 @@ under the License.
   </ul>
 </subsection>
 
+<subsection name='Documentation' id="uima.fit.documentation">
+  <ul>
+    <li><a href="d/uimafit-current/tools.uimafit.book.html">Guide and Reference Manual</a></li>
+    <li><a href="d/uimafit-current/api/index.html">API documentation</a></li>
+    <li><a href="d/uimafit-current/README.txt">Latest release notes</a></li>
+  </ul>
+</subsection>
+    
 <subsection name='Developer Information' id="uima.fit.developer">
   <p>The latest version of uimaFIT is available via <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.uima%22%20AND%20%22uimafit*%22">Maven Central</a>. 
   If you use Maven as your build tool, then you can add uimaFIT as a dependency 
