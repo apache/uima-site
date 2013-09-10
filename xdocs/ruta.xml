@@ -83,7 +83,7 @@ under the License.
     <code>Dec. 2004</code>, <code>July 85</code> or <code>11.2008</code> and creates the corresponding annotations.
   
     <pre>ANY{INLIST(MonthsList) -> MARK(Month), MARK(Date,1,3)} 
-    PERIOD? NUM{REGEXP(".{2,4}") -> MARK(Year))};</pre>
+    PERIOD? NUM{REGEXP(".{2,4}") -> MARK(Year)};</pre>
   </p>
   
    <p>
