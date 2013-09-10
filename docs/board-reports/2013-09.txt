@@ -10,20 +10,24 @@ Dates:
 15 Jan 2013    last Committer addition
             
 3 Releases: 
-  2.4.1 release of main UIMA Java SDK, 26 July 2013 http://uima.apache.org/news.html#26 July 2013
-  2.4.2 release of main UIMA Java SDK, 09 Aug 2013  http://uima.apache.org/news.html#09 August 2013     
-  2.0.0 release of uimaFIT             31 Aug 2013  http://uima.apache.org/news.html#31 August 2013
+  2.4.1 release of main UIMA Java SDK, 26 Jul 2013 
+      http://uima.apache.org/news.html#26 Jul 2013
+  2.4.2 release of main UIMA Java SDK, 09 Aug 2013  
+      http://uima.apache.org/news.html#09 Aug 2013     
+  2.0.0 release of uimaFIT             31 Aug 2013  
+      http://uima.apache.org/news.html#31 Aug 2013
 
 Other Activity:
 
 All three new major recent contributions, uimaFIT, Ruta, and DUCC,
-are very active. 
+continue to be very active. 
 
-An upcoming UIMA workshop and tutorial will be held at the International Conference of the 
-German Society for Computational Linguistics and Language Technology (GSCL) 
-2013 (23-24. Sept.).  This workshop is co-organized by two of this project's committers. 
-A keynote at the workshop will be given by Pei Chen (PMC Chairperson) and Guergana Savova
-from the Apache cTAKES project.  
+An upcoming UIMA workshop and tutorial will be held at the 
+International Conference of the German Society for Computational 
+Linguistics and Language Technology (GSCL) 2013 (23-24. Sept.).  
+This workshop is co-organized by two of the Apache UIMA project's 
+committers. A keynote at the workshop will be given by Pei Chen 
+(Apache cTAKES PMC Chairperson) and Guergana Savova.
 
 Community:
 We are voting on adding one new committer who has been contributing
