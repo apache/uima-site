@@ -54,12 +54,6 @@ under the License.
       </p>    
     </li>     
   </ul>
-  <note>
-    <p>
-      The UIMA Ruta Workbench 2.0.1 requires version 2.4.0 of the UIMA runtime and tooling plugins. 
-      Please deselect the option <quote>Show only the latest version of available software</quote> in order to install the older version.
-    </p>
-  </note>
 </subsection>
 
 <subsection name='Rule Language' id="uima.ruta.language">
@@ -153,7 +147,7 @@ under the License.
 &lt;dependency>
   &lt;groupId>org.apache.uima&lt;/groupId>
   &lt;artifactId>ruta-core&lt;/artifactId>
-  &lt;version>2.0.1&lt;/version>
+  &lt;version>2.1.0&lt;/version>
 &lt;/dependency>
   </pre>
   <subsubsection>
