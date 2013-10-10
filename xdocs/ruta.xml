@@ -44,9 +44,10 @@ under the License.
       <p>
         This page only contains a short overview. A more detailed introduction can be found in the documentation 
         (<a href="d/ruta-current/tools.ruta.book.html">html</a>, 
-        <a href="d/ruta-current/tools.ruta.book.pdf">pdf</a>).
+        <a href="d/ruta-current/tools.ruta.book.pdf">pdf</a>) or in the <a href="downloads/gscl2013/2013-GSCL-Ruta.pdf">slides of the tutorial</a> in conjunction with GSCL 2013.
+        
       </p>    
-    </li> 
+    </li>
     <li>
       <p>
         The UIMA Ruta Workbench can be installed via our Eclipse update site:

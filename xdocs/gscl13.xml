@@ -52,144 +52,76 @@ hosts two UIMA-related events:
 <section name="UIMA Workshop at GSCL 2013 in Darmstadt, Germany" id="gscl.workshop">
   
 <p>
-  There will be a <a href="https://docs.google.com/document/d/18BfopkrOuGlhqybPf4z25_FYbA5hal7YvS7hSod4_-U/pub">workshop 
+  There was a <a href="https://docs.google.com/document/d/18BfopkrOuGlhqybPf4z25_FYbA5hal7YvS7hSod4_-U/pub">workshop 
   dedicated to UIMA</a> at <a href="http://gscl2013.ukp.informatik.tu-darmstadt.de/de/gscl-2013/">GSCL 2013</a>,
   the bi-annual conference of the German Society for Computational Linguistics and Language Technology.  
-  Please find the CFP below.
+  The accepted papers and slides can be found below. For further information, please visit the 
+  <a href="https://docs.google.com/document/d/18BfopkrOuGlhqybPf4z25_FYbA5hal7YvS7hSod4_-U/pub">homepage of the workshop</a>.
 </p>
 
-
 <p> 
-<pre>
-====================================================
-
-First Call for Papers
-Workshop: Unstructured Information Management Architecture (UIMA)
-3rd UIMA@GSCL Workshop
-
-September 23, 2013
-Darmstadt, Germany
-
-Further Information:
-http://bit.ly/123EYSv
-
-====================================================
-
-In recent years, the Unstructured Information Management Architecture 
-(UIMA) framework has been proposed as a middleware platform which 
-offers integration by design through common type systems and
-standardized communication methods for components analysing streams
-of unstructured information, such as natural language. The UIMA
-framework offers a solid processing infrastructure that allows
-developers to concentrate on the implementation of the actual
-analytics components. An increasing number of members of the NLP
-community thus have adopted UIMA as a platform facilitating the
-creation of reusable NLP components that can be assembled to address
-different NLP tasks depending on their order, combination and
-configuration.
-
-This workshop aims at bringing together the NLP community -- users,
-developers or providers of either UIMA components or UIMA-related
-tools in order to explore and discuss the opportunities and 
-challenges in using UIMA as a platform for modern, well-engineered
-NLP. Alternatives to and comparisons of other frameworks (such as
-GATE, LingPipe, etc) with UIMA are of interest, too.
-
-Workshop topics include, but are not limited to:
-- processing of very large data collections: scale-out, 
-  parallelization, and performance optimization
-- advanced applications driven by UIMA
-- sophisticated tools to build and manage complex processing 
-  pipelines
-- analysis of results: exploration, evaluation, visualization, and 
-  statistical analysis
-- experience reports combining UIMA-based components from different 
-  sources, as well as solutions to interoperability issues
-- UIMA components with a special focus on genericity and type-system 
-  independence
-- repositories of ready-to-use UIMA-based components
-- (generic) type systems for UIMA
-- distribution of UIMA components: documentation, licensing and 
-  packaging
-- developing for UIMA: simplified APIs, debugging, unit testing, and 
-  limitations of UIMA
-
-
-### Submissions ###
-
-We invite submissions of full papers, limited to 8 pages of text, and 
-position papers or papers describing ongoing work as short papers, 
-limited to 4 pages. Also, system demostration papers are welcome (4 
-pages). Submitted paper must be original, i.e. not published in an 
-earlier workshop or conference or journal. Reviewing will not be 
-anonymous but authors wishing to keep their anonymity may hide their 
-identity on demand. The submitted papers will be reviewed by three 
-members of the program committee.
-
-All submissions must be in English and follow the Springer LNCS style 
-[1] and should be created using LaTeX. All papers must be submitted
-in PDF and via EasyChair [2].
-
-The one-day workshop will be held with oral presentations of accepted 
-papers. A comfortable time slot for discussions will be given. The 
-workshop will also include a keynote on Apache cTAKES, the Apache 
-clinical Text Analysis and Knowledge Extraction System which is also 
-based on the UIMA framework.
-
-Note that at least one author of each accepted paper must register
-and present the contribution. Accepted contributions are planned to
-appear as CEUR Workshop Proceedings (CEUR-WS.org).
-
-[1] http://www.springer.com/computer/lncs?SGWID=0-164-7-72376-0
-[2] https://www.easychair.org/conferences/?conf=uimagscl2013
-
-
-### Important Dates ###
-
-July, 12:    Submission deadline
-August, 16:  Notification of acceptance
-August, 31:  Camera-ready deadline
-Sept, 23:    Workshop held in Darmstadt in conjunction with GSCL 2013
-
-
-### Organizers and Contact ###
-
-Peter Klügl, Universität Würzburg
-Richard Eckart de Castilho, TU Darmstadt
-Katrin Tomanek, Averbis GmbH
-
-
-Please address any inquiries regarding the workshop to: 
-uima.gscl2013@gmail.com
-
-
-### Program Committee ###
-
-- Sophia Ananiadou, University of Manchester
-- Steven Bethard, KU Leuven
-- Ekaterina Buyko, Nuance Deutschland
-- Philipp Cimiano, Universität Bielefeld
-- Kevin Cohen, University of Colorado
-- Anni R. Coden, Thomas J. Watson Research Center
-- Richard Eckart de Castilho, TU Darmstadt
-- Frank Enders, Averbis GmbH
-- Nicolai Erbs, TU Darmstadt
-- Stefan Geissler, TEMIS
-- Thilo Götz, IBM Deutschland
-- Udo Hahn, FSU Jena
-- Nicolas Hernandez, University of Nantes
-- Michael Herweg, IBM Deutschland
-- Nancy Ide, Vassar College
-- Peter Klügl, Universität Würzburg
-- Eric Nyberg, Carnegie Mellon University
-- Kai Simon, Averbis GmbH
-- Michael Tanenblatt, Thomas J. Watson Research Center
-- Martin Toepfer, Universität Würzburg
-- Katrin Tomanek, Averbis GmbH
-- Karin Verspoor, National ICT Australia
-- Graham Wilcock, University of Helsinki
-- Torsten Zesch, University of Duisburg-Essen
-</pre>
+  <ul>
+    <li>
+      <p>
+        <b><u>Keynote:</u> Apache clinical Text Analysis and Knowledge Extraction System (cTAKES)</b><br/>
+        <i>Pei Chen, Guergana Savova</i> - (slides: <a href="downloads/gscl2013/keynote_ctakes.pdf">pdf</a>, <a href="downloads/gscl2013/keynote_ctakes.ppt">ppt</a>)       
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>Storing UIMA CASes in a relational database</b><br/>
+        <i>Georg Fette, Martin Toepfer, Frank Puppe</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_1.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_1.pdf">pdf</a>, <a href="downloads/gscl2013/slides_1.pptx">pptx</a>)       
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>Constraint-driven Evaluation in UIMA Ruta</b><br/>
+        <i>Andreas Wittek, Martin Toepfer, Georg Fette, Peter Kluegl, Frank Puppe</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_2.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_2.pdf">pdf</a>)       
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>Using UIMA to Structure An Open Platform for Textual Entailment</b><br/>
+        <i>Tae-Gil Noh, Sebastian Padó</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_3.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_3.pdf">pdf</a>)       
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>Sentiment Analysis and Visualization using UIMA and Solr</b><br/>
+        <i>Carlos Rodríguez-Penagos, David García Narbona, Guillem Massó Sanabre, Jens Grivolla, Joan Codina</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_5.pdf">paper</a>)       
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>Bluima: a UIMA-based NLP Toolkit for Neuroscience</b><br/>
+        <i>Renaud Richardet, Jean-Cédric Chappelier, Martin Telefont</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_7.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_7.pdf">pdf</a>)       
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>Extracting hierarchical data points and tables from scanned contracts</b><br/>
+        <i>Jan Stadermann, Stephan Symons, Ingo Thon</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_8.pdf">paper</a>)       
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>A Model-driven approach to NLP programming with UIMA</b><br/>
+        <i>Alessandro Di Bari, Alessandro Faraotti, Carmela Gambardella, Guido Vetere</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_9.pdf">paper</a>)       
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>CSE Framework: A UIMA-based Distributed System for Configuration Space Exploration</b><br/>
+        <i>Elmer Garduno, Zi Yang, Avner Maiberg, Collin McCormack, Yan Fang, Eric Nyberg</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_10.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_10.pdf">pdf</a>, <a href="downloads/gscl2013/slides_10.pptx">pptx</a>)       
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>Aid to spatial navigation within a UIMA annotation index</b><br/>
+        <i>Nicolas Hernandez</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_11.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_11.pdf">pdf</a>)       
+      </p>
+    </li>
+  </ul>
 </p>
 
 </section>
@@ -221,6 +153,18 @@ and solve different tasks such as information extraction. This includes solution
 to combine the rules with the information annotated by the DKPro components and ways for 
 efficient and effective engineering of the rules themselves.
 </p>
+<p>
+  <b>Resources:</b>
+  <ul>
+    <li>
+      Part I (UIMA, uimaFIT, DKPro): slides
+    </li>
+    <li>
+      Part II (UIMA Ruta): <a href="downloads/gscl2013/2013-GSCL-Ruta.pdf">slides</a>
+    </li>
+  </ul>
+</p>
+
 <p>
 Organizers: Peter Klügl, Dr. Katrin Tomanek, Richard Eckart de Castilho
 </p>
