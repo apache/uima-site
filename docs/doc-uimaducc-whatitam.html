@@ -1,0 +1,421 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+    <!-- ====================================================================== -->
+    <!-- GENERATED FILE, DO NOT EDIT, EDIT THE XML FILE IN xdocs INSTEAD! -->
+    <!-- ====================================================================== -->
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+            <style type="text/css">@import "stylesheets/base.css";</style>
+                                          <meta name="author" value="
+   Apache UIMA Documentation Team
+  ">
+  <meta name="email" value="dev@uima.apache.org">
+                        
+            
+                        
+                        <title>Apache UIMA - Getting Started: Apache UIMA DUCC</title>
+        </head>
+
+        <body>
+          <div class="topLogos">        
+            <table border="0" width="100%" cellspacing="0">
+                <!-- TOP IMAGE -->
+                <tr>
+                    <td align='LEFT'>
+                      <a href="index.html">
+                                    <img style="border: 1px solid black;" src="./images/UIMA_banner2tlpTm.png" alt="UIMA project logo" border="0"/>
+                            </a>
+                    </td>
+                    <td align='CENTER'>
+                          <div class="pageBanner">Getting Started: Apache UIMA DUCC</div>
+                    </td>
+                    <td align='RIGHT'>
+                                  <a href="http://www.apache.org">
+        <img src="./images/asf-logo-on-white-smallTm.png" alt="Apache UIMA" border="0"/>
+      </a>
+                          </td>
+                </tr>
+            </table>
+            <hr noshade="" size="1"/>
+            </div>
+            <table border="0" width="100%" cellspacing="4">
+              <tr>
+                <td align='RIGHT' colspan="2">
+                  <form method="get" action="http://www.google.com/search">
+                    Search the site
+                    <input type="text"   name="q" size="25" maxlength="255" value="" />
+                    <input type="hidden" name="sitesearch" value="http://uima.apache.org/" />
+                    <input name="Search" value="Search Site" type="submit"/>
+                  </form>
+                </td>
+              </tr>
+              <tr> <!-- LEFT SIDE NAVIGATION -->
+                <td width="20%" valign="top">
+
+
+
+
+
+
+                   <!-- regular menu -->
+                      <div class="navBar">
+                  <br/>
+            <div class="navBarItem">      <div class="navPartHeading">General</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./index.html">Home</a>
+                </div>
+                          <div class="navBarItem">      <a href="./downloads.cgi">Downloads</a>
+                </div>
+                          <div class="navBarItem">      <a href="./documentation.html">Documentation</a>
+                </div>
+                          <div class="navBarItem">      <a href="./news.html">News</a>
+                </div>
+                    <br style="line-height: .5em"/>
+                          <div class="navBarItem">      <a href="./mail-lists.html">Mailing Lists</a>
+                </div>
+                          <div class="navBarItem">      <a href="./mail-lists.html#Apache_UIMA_Forums">Forums</a>
+                    <a href="http://news.gmane.org/gmane.comp.apache.uima.general" target="_blank"><em> Users</em> <img src="images/offsitelink.png" /></a>
+                  <a href="http://news.gmane.org/gmane.comp.apache.uima.devel" target="_blank"><em>Dev</em> <img src="images/offsitelink.png" /></a>
+              </div>
+                          <div class="navBarItem">      <a href="http://cwiki.apache.org/confluence/display/UIMA/Powered+by+Apache+UIMA" target="_blank">Powered By UIMA <img src="images/offsitelink.png"/></a>
+                </div>
+                    <br style="line-height: .5em"/>
+                          <div class="navBarItem">      <a href="http://issues.apache.org/jira/browse/uima" target="_blank">Issue tracker <img src="images/offsitelink.png"/></a>
+                </div>
+                          <div class="navBarItem">      <a href="http://cwiki.apache.org/confluence/display/UIMA/" target="_blank">Wiki <img src="images/offsitelink.png"/></a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Components & Tools</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./sandbox.html#uima-addons-annotators">Annotators</a>
+                </div>
+                          <div class="navBarItem">      <a href="./toolsServers.html">Tools & Servers</a>
+                </div>
+                          <div class="navBarItem">      <a href="./sandbox.html">Addons and Sandbox</a>
+                </div>
+                          <div class="navBarItem">      <a href="./ruta.html">UIMA Ruta</a>
+                </div>
+                          <div class="navBarItem">      <a href="./uimafit.html">uimaFIT</a>
+                </div>
+                          <div class="navBarItem">      <a href="./external-resources.html">External Resources</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Community</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./get-involved.html">Get Involved</a>
+                </div>
+                          <div class="navBarItem">      <a href="./contribution-policy.html">Contribution Policies</a>
+                </div>
+                          <div class="navBarItem">      <a href="./faq.html">FAQ</a>
+                </div>
+                          <div class="navBarItem">      <a href="./project-guidelines.html">Project Guidelines</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Development</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./dev-quick.html">Quick Start: building</a>
+                </div>
+                          <div class="navBarItem">      <a href="./building-uima.html">Building from Source</a>
+                </div>
+                          <div class="navBarItem">      <a href="./one-time-setup.html">One-time setups</a>
+                </div>
+                          <div class="navBarItem">      <a href="./svn.html">Source Code</a>
+                </div>
+                          <div class="navBarItem">      <a href="./distribution.html">Creating a Distribution</a>
+                </div>
+                          <div class="navBarItem">      <a href="./release.html">Doing a UIMA release</a>
+                </div>
+                          <div class="navBarItem">      <a href="./eclipse-update-site.html">Eclipse Update Sites</a>
+                </div>
+                          <div class="navBarItem">      <a href="./codeConventions.html">Code Conventions</a>
+                </div>
+                          <div class="navBarItem">      <a href="./uima-specification.html">UIMA Specification (OASIS)</a>
+                </div>
+                          <div class="navBarItem">      <a href="./team-list.html">Project Team</a>
+                </div>
+                          <div class="navBarItem">      <a href="./maven-design.html">Maven Use</a>
+                </div>
+                          <div class="navBarItem">      <a href="./updating-website.html">Updating this Website</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Events and Conferences</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./gscl13.html">GSCL 2013</a>
+                </div>
+                          <div class="navBarItem">      <a href="./iks09.html">IKS 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gscl09.html">GSCL 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./lsm09.html">LSM 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./lrec08.html">LREC 2008</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gldv07.html">GLDV 2007</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">ASF</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="http://www.apache.org/licenses/" target="_blank">License <img src="images/offsitelink.png"/></a>
+                </div>
+                          <div class="navBarItem">      <a href="http://www.apache.org/foundation/thanks.html" target="_blank">ASF Sponsors <img src="images/offsitelink.png"/></a>
+                </div>
+                          <div class="navBarItem">      <a href="http://www.apache.org/foundation/sponsorship.html" target="_blank">ASF Sponsorship <img src="images/offsitelink.png"/></a>
+                </div>
+                          <div class="navBarItem">      <a href="http://www.apache.org/security" target="_blank">Security <img src="images/offsitelink.png"/></a>
+                </div>
+            </div>
+        </div>
+                </td>
+                <td width="80%" align="left" valign="top">
+                                                          <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Getting Started: Apache UIMA DUCC"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Getting Started: Apache UIMA DUCC</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>
+This guide is intended to be a user oriented overview of Apache UIMA&trade; DUCC.
+<br>DUCC is short for Distributed UIMA Cluster Computing.</br>
+   </p>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="High Level Overview of the UIMA DUCC Platform">
+            <h2>High Level Overview of the UIMA DUCC Platform
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+DUCC is a Linux cluster controller designed to scale out any UIMA pipeline
+for high throughput collection processing jobs as well as for low latency
+real-tme applications.
+Building on UIMA-AS, DUCC is particularly well suited to run large memory Java 
+analytics in multiple threads in order to fully utilize multicore machines.
+DUCC manages the life cycle of all processes deployed across the cluster.
+Non-UIMA processes such as tomcat servers or VNC sessions can also be managed.
+   </p>
+                                                <p>
+DUCC has an extensive web interface providing details on all user activity
+across the cluster. Because DUCC is built for UIMA-based analytics from the
+ground up it automatically makes available such details as what annotators are
+currently initializing as well as the timing breakdown for each primitive annotator 
+in a pipeline.
+   </p>
+                                                <p>
+DUCC's resource manager uses the combination of specified memory requirement and
+process class to find space to run each new managed process instance. 
+The resource manager does not overcommit RAM memory for machines, and DUCC uses Linux 
+cgroups to constrain managed processes from interfering with each other.
+Only processes that exceed their requested memory allocation will be subject to paging.
+The resource manager employs process preemption to dynamically rebalance compute
+resources between collection processing jobs.
+   </p>
+                                                <p>
+DUCC is primarily intended to be used for research and development activities where
+multiple users need to efficiently share cluster resources for a wide variety of
+computational activities. All processes run with
+the credentials of the submitting user. Process logfiles and DUCC collected performance
+data are stored in user filesystem space. This allows/forces each
+user to decide how to manage the metadata associated work submitted to DUCC.
+   </p>
+                                                <p>
+The following sections will describe each of the three type of DUCC managed processes:
+collection processing jobs, services and arbitary processes.
+   </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="DUCC Collection Processing Jobs">
+            <h2>DUCC Collection Processing Jobs
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+A classic UIMA pipeline starts with
+a Collection Reader (CR) that defines how to segment the input collection into separate
+artifacts for analysis, reads the input data, initializes a new CAS with each artifact and 
+returns the CAS to be sent to downstream analytic components.
+Because a single CR supplying artifacts to a large number of analysis pipelines 
+would be a bottleneck, DUCC implements collection level scale out according to the design in
+Figure 1. 
+   </p>
+                                                <p>
+     <table width="100%"><tr><td align="center" valign="middle">
+       <img src="./images/getting-started/jobmodel.png" alt="DUCC Collection Processing Job Model" border="0" />
+       <br>Figure 1 - DUCC Collection Processing Job Model</br></td>
+      </tr></table>
+   </p>
+                                                <p>
+In a DUCC collection processing job the role of collection segmentation is
+implemented by the CR run in the Job Driver. Figure 1 shows the CR inspecting
+the input collection to determine how to segment the data into work items to be sent
+to the analysis pipeline. The CR may also inspect the target output location to see
+which work items have already been done. Then the CR outputs small CASes containing
+references to input work items and the associated output locations.
+   </p>
+                                                <p>
+DUCC wraps the user's CR in a Job Driver, which sends the CASes to a queue feeding
+one or more instances of a Job Process containing the analysis pipeline.
+Input data reading, artifact extraction and CAS initialization are implemented by the Cas Multiplier
+(CM) running in the Job Process. Each artifact CAS is then passed thru the analysis engine (AE) and
+CAS Consumer (CC) components.
+   </p>
+                                                <p>
+A DUCC job specification includes the number of pipeline instances to run in each Job Process.
+Each instance is run in a separate thread.
+During the job DUCC will automatically scale the number of Job Processes running based on the
+number of number of work items left to do, the number of threads per Job Process, and the 
+amount of resources available to the job.
+   </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="DUCC Services">
+            <h2>DUCC Services
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+A DUCC service is a process whose life cycle DUCC will manage and/or whose health DUCC will monitor.
+The service can be configured to 
+be automatically started as soon as resources are available, or it can be started on demand, when DUCC is
+asked to start a job or another service that have declared a dependency on it. 
+Another configuration parameter specifies the default number of service processes to start.
+Users can also start or stop services manually, as well as manually change the number of running instances.
+   </p>
+                                                <p>
+There are two type of DUCC services: UIMA-AS and CUSTOM.
+Any existing UIMA-AS services would be able to use DUCC for service life cycle management.
+Each DUCC service must have a "service pinger" class that DUCC will call periodically to
+get the status of the service. A dependent job or service will not be given resources to run unless
+the service pingers indicate all services it depends on are available.
+DUCC has a default pinger for UIMA-AS services which will be used if none are specified.
+CUSTOM services must register a pinger class.
+   </p>
+                                                <p>
+Each service instance runs in a cgroup, and any spawned subprocesses will also run in the same container.
+When a UIMA-AS service instance is stopped DUCC will initiate a quiesce and then 60 seconds later
+do hard kill. CUSTOM services will first receive a SIGTERM and then 60 seconds later SIGKILL.
+All spawned processes are terminated when the container is removed.
+   </p>
+                                                <p>
+Services are tracked on the Services page of DUCC webserver.
+   </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="DUCC Arbitrary Processes">
+            <h2>DUCC Arbitrary Processes
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+DUCC can be used to run an arbitrary process on a DUCC worker node. 
+Resources are allocated according to the memory size and scheduling class requested. 
+The process is run in a cgroup.
+The allocated resource is freed when the process terminates.
+   </p>
+                                                <p>
+A command line script, viaducc, that can be used to launch processes on a DUCC worker node.
+With a symlink named java-viaducc-&gt;$DUCC_HOME/bin/viaducc placed in $JAVA_HOME/bin, viaducc can
+be used to launch arbitrary processes directly from eclipse onto DUCC worker nodes.
+   </p>
+                                                <p>
+Arbitrary processes are tracked on the Reservations page of DUCC webserver.
+   </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="DUCC - What next?">
+            <h2>DUCC - What next?
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+Go to ??? and see the full documentation.
+   </p>
+                                                <p>
+Go to the <a href="http://uima.apache.org/downloads.cgi">UIMA Download Page</a> 
+and get the "UIMA DUCC" install package.
+   </p>
+                                                <p>
+The DUCC install package includes sample applications that demonstrate two useful
+Collection Processing applications.
+   </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                  </td>
+                </tr>
+                <!-- FOOTER -->
+                <tr><td colspan="2">
+                  <hr noshade="" size="1"/>
+                </td></tr>
+                <tr><td colspan="2"> 
+                  <table class="pageFooter">
+                    <tr>
+                      <td><a href="index.html">Home</a></td>
+                      <td><a href="privacy-policy.html">Privacy Policy</a></td>
+                      <td style="font-size:75%">
+                Copyright &#169; 2006-2013, The Apache Software Foundation.<br/>
+                Apache UIMA, UIMA, the Apache UIMA logo and the Apache Feather logo are trademarks of The Apache Software Foundation.<br/>
+                All other marks mentioned may be trademarks or registered trademarks of their respective owners.
+                      </td>
+                      <td><a href="mailto:dev@uima.apache.org">Contact us</a></td>
+                    </tr>
+                  </table>                    
+                </td></tr>
+            </table>
+        </body>
+    </html>
+
