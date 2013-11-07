@@ -55,6 +55,12 @@
      can stay aware of changes to the repository).
     </p>
 
+    <p>
+      <strong>Note:</strong> Please don't send patches or attachments to any of the mailing lists. 
+       Patches are best handled via the <a class="external" rel="nofollow" target="_blank" 
+       href="https://issues.apache.org/jira/browse/uima">Issue Tracking</a> system. 
+       Otherwise, please upload the file to a public server and include the URL in the mail.</p>
+       
    <p>
     You subscribe and unsubscribe by sending an empty email message to
     the list name suffixed with -subscribe or -unsubscribe. The buttons
