@@ -209,12 +209,12 @@ for high throughput collection processing jobs as well as for low latency
 real-tme applications.
 Building on UIMA-AS, DUCC is particularly well suited to run large memory Java 
 analytics in multiple threads in order to fully utilize multicore machines.
-DUCC manages the life cycle of all processes deployed across the cluster.
-Non-UIMA processes such as tomcat servers or VNC sessions can also be managed.
+DUCC manages the life cycle of all processes deployed across the cluster, including
+non-UIMA processes such as tomcat servers or VNC sessions.
    </p>
                                                 <p>
-DUCC has an extensive web interface providing details on all user activity
-across the cluster. Because DUCC is built for UIMA-based analytics from the
+DUCC has an extensive web interface providing details on all user activity.
+Because DUCC is built for UIMA-based analytics from the
 ground up it automatically makes available such details as what annotators are
 currently initializing as well as the timing breakdown for each primitive annotator 
 in a pipeline.
@@ -237,8 +237,9 @@ data are stored in user filesystem space. This allows/forces each
 user to decide how to manage the metadata associated work submitted to DUCC.
    </p>
                                                 <p>
-The following sections will describe each of the three type of DUCC managed processes:
-collection processing jobs, services and arbitary processes.
+The following sections will describe each of the three types of DUCC managed processes
+(collection processing jobs, services and arbitary processes) and constrast some
+differences between DUCC and Hadoop for scaling out UIMA applications.
    </p>
                             </blockquote>
         </td></tr>
@@ -325,12 +326,6 @@ DUCC has a default pinger for UIMA-AS services which will be used if none are sp
 CUSTOM services must register a pinger class.
    </p>
                                                 <p>
-Each service instance runs in a cgroup, and any spawned subprocesses will also run in the same container.
-When a UIMA-AS service instance is stopped DUCC will initiate a quiesce and then 60 seconds later
-do hard kill. CUSTOM services will first receive a SIGTERM and then 60 seconds later SIGKILL.
-All spawned processes are terminated when the container is removed.
-   </p>
-                                                <p>
 Services are tracked on the Services page of DUCC webserver.
    </p>
                             </blockquote>
@@ -350,17 +345,79 @@ Services are tracked on the Services page of DUCC webserver.
         <blockquote class="subsectionBody">
                                     <p>
 DUCC can be used to run an arbitrary process on a DUCC worker node. 
-Resources are allocated according to the memory size and scheduling class requested. 
-The process is run in a cgroup.
+Resources are allocated according to the memory size and scheduling class requested,
+and the process is run in a cgroup.
 The allocated resource is freed when the process terminates.
    </p>
                                                 <p>
-A command line script, viaducc, that can be used to launch processes on a DUCC worker node.
-With a symlink named java-viaducc-&gt;$DUCC_HOME/bin/viaducc placed in $JAVA_HOME/bin, viaducc can
-be used to launch arbitrary processes directly from eclipse onto DUCC worker nodes.
+A command line script, viaducc, can be used to launch processes on a DUCC worker node.
+With a symlink named "java-viaducc" pointing at $DUCC_HOME/bin/viaducc, java commands
+can be run remotely from the command line. If java-viaducc is put into $JAVA_HOME/bin,
+eclipse can be configured to launch processes onto remote machines.
    </p>
                                                 <p>
 Arbitrary processes are tracked on the Reservations page of DUCC webserver.
+   </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Scaling UIMA with DUCC vs Hadoop">
+            <h2>Scaling UIMA with DUCC vs Hadoop
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+DUCC offers a number of potential advantages over Hadoop for many UIMA applications.
+     <dl>
+	<dt>Threading</dt>
+	<dd>
+Hadoop mapper processes are intended to have a single analytic thread.
+DUCC is designed to run multiple UIMA pipelines in 
+a single job process,
+allowing sharing of static Java objects and yielding significant RAM saving.
+	</dd> <br />
+	<dt>Application Interface</dt>
+	<dd>
+The application interfaces for a UIMA application continue to be UIMA-standard
+components: CollectionReader, CasConsumer, and CasMultiplier.
+Hadoop requires integrating a new set of interface components.
+	</dd> <br />
+	<dt>Collection Processing Errors</dt>
+	<dd>
+If a mapper fails to handle a single work item in a collection the entire
+collection must be reprocessed after fixing the mapper problem, no
+way to make incremental progress.
+DUCC Jobs are designed to preserve previous results, if appropriate.
+	</dd> <br />
+	<dt>Performance Reports</dt>
+	<dd>
+For every job DUCC automatically provides the performance breakdown for every
+UIMA component.
+	</dd> <br />
+	<dt>Other Workloads</dt>
+	<dd>
+DUCC has support for managing a wide range of processes, including non-UIMA
+processes. For example, DUCC could dynamically start a Hadoop instance
+on a subset of DUCC worker machines.
+	</dd> <br />
+	<dt>Debug Support</dt>
+	<dd>
+DUCC offers tight integration with Eclipse debugging. 
+All or part of a UIMA application can be run in the Eclipse debugger
+by adding a single parameter to the Job submission.
+	</dd>
+     </dl>
+   </p>
+                                                <p>
+   </p>
+                                                <p>
    </p>
                             </blockquote>
         </td></tr>
