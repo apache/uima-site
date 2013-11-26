@@ -154,7 +154,7 @@ under the License.
   <subsubsection>
     For building the UIMA Ruta projects from sources, follow the instructions for <a href="building-uima.html">building UIMA</a>, 
     but exchange the command for SVN checkout:<br/>
-    <code>svn checkout https://svn.apache.org/repos/asf/uima/sandbox/ruta/trunk c:/myWorkingDirectory</code>
+    <code>svn checkout https://svn.apache.org/repos/asf/uima/ruta/trunk c:/myWorkingDirectory</code>
   </subsubsection>
    
   <p>
