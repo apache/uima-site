@@ -84,15 +84,15 @@
         --> 
   </menus>
 
-  <downloads version="2.4.2" title="Apache UIMA Version 2.4.2">
+  <downloads version="2.4.2" title="Apache UIMA Version 2.4.2" withreleasedate="true">
       
-    <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-2.4.2">
+    <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-2.4.2" releasedate="09-Aug-2013">
       <releasenotes filename="uimaj-2.4.2/RELEASE_NOTES">           <f>html</f>                </releasenotes>
       <binary       filename="uimaj-2.4.2-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
       <source       filename="uimaj-2.4.2-source-release">                     <f>zip</f>  </source>
     </download>
 
-    <download name="UIMA AS Asynchronous Scaleout" subdirectory="uima-as-2.4.2">
+    <download name="UIMA AS Asynchronous Scaleout" subdirectory="uima-as-2.4.2" releasedate="14-Nov-2013">
       <releasenotes filename="uima-as-2.4.2/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
       <binary       filename="uima-as-2.4.2-bin">                   <f>zip</f>  <f>tar.gz</f>                </binary>   
       <source       filename="uima-as-2.4.2-source-release">                   <f>zip</f>    </source>
@@ -113,19 +113,19 @@
  -->
   </downloads>
   
-  <downloads version="2.4.0" title="Apache UIMA Version 2.4.0">
+  <downloads version="2.4.0" title="Apache UIMA Version 2.4.0" withreleasedate="true">
       
-    <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-2.4.0">
+    <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-2.4.0" releasedate="7-Dec-2011">
       <releasenotes filename="uimaj-2.4.0/RELEASE_NOTES">           <f>html</f>                </releasenotes>
       <binary       filename="uimaj-2.4.0-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
       <source       filename="uimaj-2.4.0-source-release">                     <f>zip</f>  </source>
     </download>
-    <download name="UIMA AS Asynchronous Scaleout" subdirectory="uima-as-2.4.0">
+    <download name="UIMA AS Asynchronous Scaleout" subdirectory="uima-as-2.4.0"  releasedate="15-Nov-2012">
       <releasenotes filename="uima-as-2.4.0/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
       <binary       filename="uima-as-2.4.0-bin">                   <f>zip</f>  <f>tar.gz</f>                </binary>   
       <source       filename="uima-as-2.4.0-source-release">                   <f>zip</f>    </source>
     </download>
-    <download name="UIMA C++ framework &amp; SDK" subdirectory="uimacpp-2.4.0">
+    <download name="UIMA C++ framework &amp; SDK" subdirectory="uimacpp-2.4.0"  releasedate="15-Nov-2012">
       <releasenotes filename="uimacpp-2.4.0/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
       <binary       filename="uimacpp-2.4.0-bin">                   <f>zip</f>  <f>tgz</f>                </binary>   
       <source       filename="uimacpp-2.4.0-src">                   <f>zip</f>    </source>
@@ -144,10 +144,12 @@
       <releasenotes filename="ruta-2.1.0/RELEASE_NOTES">           <f>html</f>                </releasenotes>
       <source       filename="ruta-2.1.0-source-release">                     <f>zip</f>  </source>
     </download>
+    <!-- 
     <download name="UIMA Ruta 2.0.1" subdirectory="ruta-2.0.1" releasedate="29-May-2013">
       <releasenotes filename="ruta-2.0.1/RELEASE_NOTES">           <f>html</f>                </releasenotes>
       <source       filename="ruta-2.0.1-source-release">                     <f>zip</f>  </source>
     </download>
+     -->
   </downloads>
 
   <downloads version="uimaFIT-2.0.0" title="Apache UIMA uimaFIT 2.0.0" withreleasedate="true">
@@ -158,7 +160,7 @@
     </download>
   </downloads>
 
-  <downloads version="2.3.1" title="Apache UIMA Version 2.3.1">
+  <downloads version="2.3.1" title="Apache UIMA Addons Version 2.3.1" withreleasedate="true">
     
     <!--      
     <download name="UIMA Java framework &amp; SDK" subdirectory="">
@@ -174,7 +176,7 @@
     </download>
     -->
     
-    <download name="UIMA Annotator Addons &amp; Simple Server &amp; Pear packaging tools" subdirectory="">
+    <download name="UIMA Annotator Addons &amp; Simple Server &amp; Pear packaging tools" subdirectory="" releasedate="29-Aug-2011">
       <releasenotes filename="uima-addons-2.3.1/RELEASE_NOTES"> <f>html</f>               </releasenotes>
       <binary       filename="uima-addons-2.3.1-bin">    <f>zip</f>  <f>tar.gz</f> </binary>    
       <source       filename="uima-addons-2.3.1-source-release">    <f>zip</f>  </source>
