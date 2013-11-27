@@ -105,16 +105,18 @@ Other mirrors: <select name="Preferred">
 <section name="Latest Official Releases">  
   <p>Note: As of release 2.3.0, the CAS Editor and the Pear packaging maven plugin are now part of the UIMA Java framework and SDK.</p>
 
-  <p>Note: So far, only the base UIMA Java SDK is available at the 2.4.2 level.  
-  As other components   are released that go with this level, we'll add them here.</p>
   <subsection name="Apache UIMA Version 2.4.2 - Release Date: UIMA Java SDK 09-Aug-2013    UIMA-AS Version 2.4.2 Release Date: 14-Nov-2013">
     <insertDownloads version="2.4.2"/>
   </subsection>
   
-  <p>The 2.4.1 of the UIMA Java SDK and UIMA-AS have been replaced by the 2.4.2 versions above.</p>
+  <p>The 2.4.1 of the UIMA Java SDK has been replaced by the 2.4.2 version above. There was no UIMA-AS version 2.4.1 released.</p>
 
   <subsection name="Apache UIMA Version 2.4.0 - Release Date: UIMA Java SDK 7-Dec-2011    UIMA-AS Version 2.4.0 Release Date: 15-Nov-2012	UIMA-C++ Version 2.4.0 Release Date: 15-Nov-2012">
     <insertDownloads version="2.4.0"/>
+  </subsection>
+  
+  <subsection name="Apache UIMA Downloads Version 2.3.1 - Release Date: 29-Aug-2011">
+    <insertDownloads version="2.3.1"/>
   </subsection>
   
   <subsection name="Apache UIMA Ruta">
