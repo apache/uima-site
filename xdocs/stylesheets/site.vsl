@@ -371,15 +371,7 @@ under the License.
 #end
 ##
 #macro (insertDownload2 $downloads)
-  #if ($downloads.getAttributeValue("incubator"))
-    #set ( $drmirror = "[preferred]/incubator/uima")
-    #set ( $dr = "http://www.apache.org/dist/incubator/uima")
-    #set ( $rn = "http://www.apache.org/dist/incubator/uima")
-  #else
-    #set ( $drmirror = "[preferred]/uima")
-    #set ( $dr = "http://www.apache.org/dist/uima")
-    #set ( $rn = "../d")
-  #end
+  #set ( $rn = "../d")
   <table class="downloads">
     <tr>
       <th>Artifact</th>
@@ -392,6 +384,13 @@ under the License.
     </tr>
 ##    
     #foreach ( $download in $downloads.getChildren("download"))
+      #if ($download.getAttributeValue("archived"))
+        #set ( $drmirror = "http://archive.apache.org/dist/uima")
+        #set ( $dr =       "http://archive.apache.org/dist/uima")
+      #else
+        #set ( $drmirror = "[preferred]/uima")
+        #set ( $dr = "http://www.apache.org/dist/uima")
+      #end
       #set ($subdirectory = $download.getAttributeValue("subdirectory"))
 ##      
       #set ($releasenotes = $download.getChild("releasenotes"))
