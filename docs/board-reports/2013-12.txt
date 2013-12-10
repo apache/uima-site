@@ -9,7 +9,7 @@ Dates:
 12 Mar 2013    last PMC addition
  5 Nov 2013    last Committer addition
             
-3 Releases:
+2 Releases:
   2.1.0 release of UIMA Ruta 20 Sep 2013
       http://uima.apache.org/news.html#20 September 2013 
   2.4.2 release of UIMA Asynchronous Scaleout 14 Nov 2013 
