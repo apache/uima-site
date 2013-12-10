@@ -1,0 +1,32 @@
+Board report for Apache UIMA, for December 2013.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates:
+14 Nov 2013    last release
+12 Mar 2013    last PMC addition
+ 5 Nov 2013    last Committer addition
+            
+3 Releases:
+  2.1.0 release of UIMA Ruta 20 Sep 2013
+      http://uima.apache.org/news.html#20 September 2013 
+  2.4.2 release of UIMA Asynchronous Scaleout 14 Nov 2013 
+      http://uima.apache.org/news.html#14 November 2013
+
+Other Activity:
+
+A Git repo is being added.
+
+A UIMA workshop and tutorial was held at the 
+International Conference of the German Society for Computational 
+Linguistics and Language Technology (GSCL) 2013 (23-24. Sept.).  
+This workshop was co-organized by two of the Apache UIMA project's 
+committers. 
+
+Community:
+2 committers added in November.
+ 
+Issues: 
+No Board level issues at this time.
