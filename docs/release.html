@@ -650,6 +650,10 @@ A previous version of this page, with the methods we used while in the incubator
   The alternative is to copy the release candidate for voting into your personal people.apache.org/~[user-id] space, and
   let testers/voters pull it from there.
   </p>
+                                                <p>Be sure to copy artifacts from the build-from tag spot, which should have a path like:
+      ...[top level project]/target/checkout/target.  Note this is not from [top level project]/target.
+      Doing this will guarantee that you're posting the artifacts built from the tag (which could be 
+      different from the release:prepare build in /target if someone snuck in a svn commit at the right moment.)</p>
                                                 <p>If you do use the distribution SVN for the release candidates, 
   follow the 
   <a href="saving-svn-resources.html">saving-svn-space</a> tricks if reasonable. 
