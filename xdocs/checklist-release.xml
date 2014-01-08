@@ -37,7 +37,9 @@ under the License.
   <li>Make a new build directory for this release, and svn checkout the trunk (svn "export" instead of checkout 
       fails at a later commit step by the release plugin). This is so you can
       preserve the build for later upload of selected artifacts to the distribution spot. 
+      <p>
       If instead you are building from an existing checkout, do a svn update to be sure the workspace is up-to-date.
+      </p>
             </li>
   <li>Purge your local maven repository of artifacts being built by running in the 
     top level directory you'll be building from:

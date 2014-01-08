@@ -215,12 +215,16 @@ A previous version of this page, with the methods we used while in the incubator
     <ul>
            <li>Make sure all changes are checked into SVN.  Then checkout (not export) from SVN the project(s)
         you'll be building, into a new "build" location, and do all the building from there.</li>
+        <li>If you instead choose to build from your "working" SVN checkout, insure it's up-to-date with
+        all changes that others may have checked into trunk.</li>
         <li>Purge your local maven repository of artifacts being built by running in the 
         top level directory you'll be building from:
         <br/><br/>
           <code>mvn dependency:purge-local-repository</code><br/><br/>
           Note that this will immediately re-resolve the dependencies from the maven repositories
           you have configured. 
+          <p>For many multi-module projects, this will fail because it purges things that other modules need.
+          So, the alternative is to just delete the .m2/.../uima/...  directory on your build machine.</p>
         </li>
         
         <li>
