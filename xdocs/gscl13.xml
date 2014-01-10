@@ -157,9 +157,9 @@ efficient and effective engineering of the rules themselves.
   <b>Resources:</b>
   <ul>
     <li>
-      <p>Part I (UIMA, uimaFIT, DKPro): <a href="https://dkpro-tutorials.googlecode.com/svn/de.tudarmstadt.ukp.dkpro.tutorial/GSCL2013/tags/latest/slides/GSCL2013UIMATutorialUKP.pdf">slides <img src="images/offsitelink.png"/></a></p>
+      <p>Part I (UIMA, uimaFIT, DKPro): <a href="https://dkpro-tutorials.googlecode.com/svn/GSCL2013/tags/latest/slides/GSCL2013UIMATutorialUKP.pdf">slides <img src="images/offsitelink.png"/></a></p>
       <p>Check out the examples using Subversion (external non-Apache repository):</p>
-      <pre>svn co https://dkpro-tutorials.googlecode.com/svn/de.tudarmstadt.ukp.dkpro.tutorial/GSCL2013/tags/latest GSCL2013</pre>
+      <pre>svn co https://dkpro-tutorials.googlecode.com/svn/GSCL2013/tags/latest GSCL2013</pre>
     </li>
     <li>
       Part II (UIMA Ruta): <a href="downloads/gscl2013/2013-GSCL-Ruta.pdf">slides</a>
