@@ -65,11 +65,7 @@ documentation</a>.
 <subsection name="Maven Repository">
 
 <p>If you're using Maven to build your projects, you can use the UIMA Maven artifacts that are
-deployed to the Maven central repository.  Until we get all components released as a top level project,
-you may find the "incubating" level components
-deployed on the Apache Incubator repository: 
-<a href="http://people.apache.org/repo/m2-incubating-repository/">
-http://people.apache.org/repo/m2-incubating-repository/</a>.  
+deployed to the Maven central repository.  
 See some of the Addons POMs for
 examples on how to reference the UIMA jars in Maven.
 </p>
@@ -105,6 +101,10 @@ Other mirrors: <select name="Preferred">
 <section name="Latest Official Releases">  
   <p>Note: As of release 2.3.0, the CAS Editor and the Pear packaging maven plugin are now part of the UIMA Java framework and SDK.</p>
 
+  <subsection name="Apache UIMA Version 2.5.0">
+    <insertDownloads version="2.5.0"/>
+  </subsection>
+  
   <subsection name="Apache UIMA Version 2.4.2">
     <insertDownloads version="2.4.2"/>
   </subsection>

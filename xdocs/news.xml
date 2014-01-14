@@ -33,6 +33,11 @@
 		<section name="Apache UIMA News">
       <subsectionToc/>
 
+    <subsection name="14 January 2014" date = "14 January 2014" title="Apache UIMA Java SDK 2.5.0 released">
+      <p>This is a bug-fix only release.
+      The fixes are listed <a href="d/uimaj-2.5.0/issuesFixed/jira-report.html">here</a>.</p>
+    </subsection>
+
     <subsection name="14 November 2013" date = "14 November 2013" title="Apache UIMA Asynchronous Scaleout (UIMA-AS) 2.4.2 released">
           <p>UIMA AS 2.4.2 is a maintenance release that contains fixes and improvements over UIMA-AS 2.4.0.
           </p>

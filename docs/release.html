@@ -781,7 +781,7 @@ A previous version of this page, with the methods we used while in the incubator
             This will make the artifacts available in the Maven Central repository.</li>
         <li><p>Do an svn add of the new released artifacts (bin.tar/zip) to the 
         Apache release svn (<a href="https://dist.apache.org/repos/dist/release/uima">
-        https://dist.apache.org/repos/dist/release/uima</a>). 
+        https://dist.apache.org/repos/dist/release/uima</a>).
         </p> 
           
       <!-- 
@@ -790,9 +790,15 @@ A previous version of this page, with the methods we used while in the incubator
        -->
        <p>
       If Eclipse plugins are being released, 
-      do an svn switch to switch the files being released from the .../dev/... 
-      to the .../release/... directory in dist.apache.org.
-       </p>
+      the update site build will have under the target/eclipse-update-site/[subsite] 
+      the sub-site, as checked out of the .../dist/... svn. 
+      You can check things by doing an svn status command.  "cd" to the The features
+      subdirectory, and do an svn add *2.5.0*,
+      followed by an svn commit -m "uimaj 2.5.0 release [ replace with the right message]".
+      Repeat for the plugins subdirectory.
+      Then go up to the subsite directory, and do another svn commit -m "[message]" to update
+      the artifacts and contents stuff.</p>
+    
        <p>
       Make sure the KEYS file in release/uima is current.  See
       <a href="one-time-release-setup.html">one-time-release-setup</a>. 
