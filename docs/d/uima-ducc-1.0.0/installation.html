@@ -1,0 +1,724 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>DUCC Installation and Verification
+Excerpt From Complete DUCC Documentation</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html --> 
+<meta name="src" content="installation.tex"> 
+<meta name="date" content="2014-01-24 16:33:00"> 
+<link rel="stylesheet" type="text/css" href="installation.css"> 
+</head><body 
+>
+<div class="maketitle">
+                                                                                                
+                                                                                                
+                                                                                                
+                                                                                                
+
+<h2 class="titleHead">DUCC Installation and Verification<br />
+Excerpt From Complete DUCC Documentation</h2>
+<div class="author" ><span 
+class="cmr-12">Written and maintained by the Apache</span>
+<br />  <span 
+class="cmr-12">UIMA</span><sup class="textsuperscript"><span 
+class="cmr-9">TM</span></sup><span 
+class="cmr-12">Development Community</span></div>
+<br />
+<div class="date" ></div>
+</div>
+<!--l. 18--><p class="noindent" >Copyright <span 
+class="cmsy-10">©</span>&#x00A0; 2012 The Apache Software Foundation
+<!--l. 20--><p class="noindent" >Copyright <span 
+class="cmsy-10">©</span>&#x00A0; 2012 International Business Machines Corporation
+     <!--l. 23--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-1000"></a><span 
+class="cmbx-10">License and Disclaimer</span></span>
+     The ASF licenses this documentation to you under the Apache License, Version 2.0 (the &#8221;License&#8221;); you may not
+     use this documentation except in compliance with the License. You may obtain a copy of the License
+     at
+     <!--l. 28--><p class="noindent" ><a 
+href="http://www.apache.org/licenses/LICENSE-2.0" class="url" ><span 
+class="cmtt-10">http://www.apache.org/licenses/LICENSE-2.0</span></a>
+     <!--l. 30--><p class="noindent" >Unless required by applicable law or agreed to in writing, this documentation and its contents are distributed under
+     the License on an &#8221;AS IS&#8221; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+     or implied. See the License for the specific language governing permissions and limitations under the
+     License.
+     <!--l. 35--><p class="noindent" ><span class="paragraphHead"><a 
+ id="x1-2000"></a><span 
+class="cmbx-10">Trademarks</span></span>
+     All terms mentioned in the text that are known to be trademarks or service marks have been appropriately capitalized.
+     Use of such terms in this book should not be regarded as affecting the validity of the the trademark or service
+     mark.
+<!--l. 47--><p class="noindent" >Publication date: January&#x00A0;2014
+                                                                                                
+                                                                                                
+<h3 class="sectionHead"><a 
+ id="x1-3000"></a>Overview</h3>
+<!--l. 21--><p class="noindent" >DUCC is a multi-user, multi-system distributed application. First-time installation is performed in two stages:
+     <ul class="itemize1">
+     <li class="itemize">Single-user installation: This provides single-user, single-system installation for testing, and verification. Simple
+     development of small applications on small systems such as laptops or office workstations is possible after
+     Single-user Installation.
+     </li>
+     <li class="itemize">Multi-user installation: This provides secure multi-user capabilities and configuration for multi-system clusters.</li></ul>
+<!--l. 33--><p class="noindent" >First-time users must perform single-user installation and verification on a single system. Once this configuration is working
+and verified, it is straightforward to upgrade to a multi-user configuration.
+<!--l. 37--><p class="noindent" >
+     <dl class="description"><dt class="description">
+<span 
+class="cmbx-10">Note:</span> </dt><dd 
+class="description">A key feature of DUCC is to run user processes in CGroups in order to guarantee each process always has the
+     amount of RAM requested. Total RAM allocation to the managed process and its child processes that exceed
+     requested memory will go to swap space. Without CGroups a process that exceeds its requested memory size
+     by N% is killed (default N=5 in ducc.properties), and memory use by child processes is ignored.</dd></dl>
+<!--l. 45--><p class="noindent" >DUCC is distributed as a compressed tar file. The instructions below assume installation from one of this distribution media.
+If building from source, the build creates this file in your svn trunk/target directory. The distribution file is in the
+form
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-1">
+&#x00A0;&#x00A0;&#x00A0;uima-ducc-[version]-bin.tar.gz</div>
+<!--l. 50--><p class="nopar" > where [version] is the DUCC version; for example, <span 
+class="cmti-10">uima-ducc-1.0.0-bin.tar.gz</span>. This document will refer to the distribution
+file as the &#8220;<span 
+class="cmmi-10">&#x003C;</span>distribution.file<span 
+class="cmmi-10">&#x003E;</span>&#8221;.
+<!--l. 54--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-4000"></a>Software Prerequisites</h3>
+<a 
+ id="x1-4000doc"></a>
+<!--l. 56--><p class="noindent" >Both single and multi-user configurations have the following software pre-requisites:
+     <ul class="itemize1">
+     <li class="itemize">A userid <span 
+class="cmti-10">ducc</span>, and group <span 
+class="cmti-10">ducc</span>. User <span 
+class="cmti-10">ducc </span>must the the only member of group <span 
+class="cmti-10">ducc</span>.
+     </li>
+     <li class="itemize">Reasonably current Linux. DUCC has been tested on SLES 10.2, 11.1, and 11.2, and RHEL 6.3.
+     <!--l. 62--><p class="noindent" ><span 
+class="cmti-10">Note: </span>On some systems the default <span 
+class="cmti-10">user limits </span>for max user processes (ulimit -u) and nfiles (ulimit -n) are
+     defined too low for DUCC. The shell login profile for user <span 
+class="cmti-10">ducc </span>should set the soft limit for max user processes
+     to be the same as the hard limit (ulimit -u &#8216;ulimit -Hu&#8216;), and the nfiles limit raised above 1024 to at least twice
+     the number of user processes running on the cluster.
+     </li>
+     <li class="itemize">For CGroupt support, libcgroup1-0.37+ on SLES and libcgroup-0.37+ on RHEL.
+     </li>
+     <li class="itemize">DUCC has been tested and run on IBM and Oracle JDK 1.6 and 1.7.
+     </li>
+     <li class="itemize">Python 2.x, where &#8217;x&#8217; is 4 or greater. DUCC has not been tested on Python 3.x.</li></ul>
+<!--l. 75--><p class="noindent" >Multi-user installation has additional requirements:
+     <ul class="itemize1">
+     <li class="itemize">All systems must have a shared filesystem (such as NFS or GPFS) and common user space
+     </li>
+     <li class="itemize">Passwordless ssh must be installed for user <span 
+class="cmti-10">ducc </span>on all systems.
+     </li>
+     <li class="itemize">Root access is required to install a small setuid-root program on each system.</li></ul>
+<!--l. 83--><p class="noindent" >In order to build DUCC from source the following software is also required:
+     <ul class="itemize1">
+     <li class="itemize">A    Subversion    client,    from    <a 
+href="http://subversion.apache.org/packages.html" class="url" ><span 
+class="cmtt-10">http://subversion.apache.org/packages.html</span></a>.    The    svn    url    is
+     <a 
+href="https://svn.apache.org/repos/asf/uima/sandbox/uima-ducc/trunk" class="url" ><span 
+class="cmtt-10">https://svn.apache.org/repos/asf/uima/sandbox/uima-ducc/trunk</span></a>.
+     </li>
+     <li class="itemize">Apache Maven, from <a 
+href="http://maven.apache.org/index.html" class="url" ><span 
+class="cmtt-10">http://maven.apache.org/index.html</span></a></li></ul>
+<!--l. 90--><p class="noindent" >The DUCC webserver server optionally supports direct &#8220;jconsole&#8221; attach to DUCC job processes. To install this, the
+following is required:
+                                                                                                
+                                                                                                
+     <ul class="itemize1">
+     <li class="itemize">Apache Ant, any reasonably current version.</li></ul>
+<!--l. 96--><p class="noindent" >To (optionally) build the documentation, the following is also required:
+     <ul class="itemize1">
+     <li class="itemize">Latex,  including  the  <span 
+class="cmti-10">pdflatex  </span>and  <span 
+class="cmti-10">htlatex  </span>packages.  A  good  place  to  start  if  you  need  to  install  it  is
+     <a 
+href="https://www.tug.org/texlive/" class="url" ><span 
+class="cmtt-10">https://www.tug.org/texlive/</span></a>.</li></ul>
+<!--l. 102--><p class="noindent" >More detailed one-time setup instructions for source-level builds via subversion can be found here:
+<a 
+href="http://uima.apache.org/one-time-setup.html\#svn-setup" class="url" ><span 
+class="cmtt-10">http://uima.apache.org/one-time-setup.html\#svn-setup</span></a>
+<!--l. 105--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-5000"></a>Building from Source</h3>
+<!--l. 107--><p class="noindent" >To build from source, ensure you have Subversion and Maven installed. Extract the source from the SVN repository named
+above.
+<!--l. 110--><p class="noindent" >Then from your extract directory into the root directory (usually current-directory¿/trunk), and run the command
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-2">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;mvn&#x00A0;install</div>
+<!--l. 114--><p class="nopar" > or
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-3">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;mvn&#x00A0;install&#x00A0;-Pbuild-duccdocs</div>
+<!--l. 118--><p class="nopar" > if you have LaTeX insalled and wish to do the optional build of documentation.
+<!--l. 121--><p class="noindent" >If this is your first Maven build it may take quite a while as Maven downloads all the open-source pre-requisites. (The
+pre-requisites are stored in the Maven repository, usually your $HOME/.m2).
+<!--l. 125--><p class="noindent" >When build is complete, a tarball is placed in your current-directory/trunk/target directory.
+<!--l. 128--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-6000"></a>Documentation</h3>
+<!--l. 130--><p class="noindent" >After single-user installation, the DUCC documentation is found (in both PDF and HTML format) in the
+directory ducc_runtime/docs. As well, the DUCC webserver contains a link to the full documentation on
+each major page. The API is documented only via JavaDoc, distributed in the webserver&#8217;s root directory
+<span 
+class="cmtt-10">$DUCC</span><span 
+class="cmtt-10">_HOME/webserver/root/doc/api.</span>
+<!--l. 136--><p class="noindent" >If building from source, Maven places the documentation in
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="cmtt-10">trunk/uima-ducc-duccdocs/target/site </span>(main documentation), and
+     </li>
+     <li class="itemize"><span 
+class="cmtt-10">trunk/target/site/apidocs </span>(API Javadoc)</li></ul>
+<!--l. 142--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-7000"></a>Single-user Installation and Verification</h3>
+<!--l. 144--><p class="noindent" >Single-user installation sets up an initial, working configuration on a single system. Although any user ID can be used to run
+DUCC in single-user mode, it is recommended to create user &#8220;ducc&#8221; to avoid confusion. No security is established in
+single-user mode, and all user processes run as the DUCC user ID.
+<!--l. 149--><p class="noindent" >Verification submits a very simple UIMA pipeline for execution under DUCC. Once this is shown to be working, one may
+proceed to upgrade to full installation.
+<!--l. 153--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-8000"></a>Minimal Hardware Requirements for single-user Installation</h3>
+     <ul class="itemize1">
+     <li class="itemize">One Intel-based or IBM Power-based system. (More systems may be added during multi-user installation,
+     described below.)
+     </li>
+     <li class="itemize">8GB of memory. 16GB or more is preferable for developing and testing applications beyond the non-trivial.
+                                                                                                
+                                                                                                
+     </li>
+     <li class="itemize">1GB disk space to hold the DUCC runtime, system logs, and job logs. More is usually needed for larger
+     installations.</li></ul>
+<!--l. 165--><p class="noindent" >Please note: DUCC is intended for scaling out memory-intensive UIMA applications over computing clusters consisting of
+multiple nodes with large (16GB-256GB or more) memory. The minimal requirements are for initial test and evaluation
+purposes, but will not be sufficient to run actual workloads.
+<!--l. 170--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-9000"></a>Single-user System Installation</h3>
+<a 
+ id="x1-9000doc"></a>
+<!--l. 172--><p class="noindent" >
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-9002x1">Expand the distribution file:
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-4">
+     tar&#x00A0;-zxf&#x00A0;&#x003C;distribution.file&#x003E;</div>
+     <!--l. 176--><p class="nopar" >
+     <!--l. 178--><p class="noindent" >This creates a directory with a name of the form &#8220;apache-uima-ducc-[version]&#8221;.
+     <!--l. 180--><p class="noindent" >This directory contains the full DUCC runtime which you may use &#8220;in place&#8221; but it is highly recommended that you
+     move it into a standard location; for example, under ducc&#8217;s HOME directory:
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-5">
+     mv&#x00A0;apache-uima-ducc-1.0.0&#x00A0;/home/ducc/ducc_runtime</div>
+     <!--l. 185--><p class="nopar" >
+     <!--l. 187--><p class="noindent" >We refer to this directory, regardless of its location, as $DUCC_HOME. For simplicity, some of the examples in this
+     document assume it has been moved to /home/ducc/ducc_runtime.
+     </li>
+     <li 
+  class="enumerate" id="x1-9004x2">Change directories into the admin sub-directory of $DUCC_HOME:
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-6">
+     cd&#x00A0;$DUCC_HOME/admin</div>
+     <!--l. 193--><p class="nopar" >
+     </li>
+     <li 
+  class="enumerate" id="x1-9006x3">Run the post-installation script:
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-7">
+     ./ducc_post_install</div>
+     <!--l. 198--><p class="nopar" > If this script fails, correct any problems it identifies and run it again.
+     <!--l. 201--><p class="noindent" >Note that <span 
+class="cmti-10">ducc</span><span 
+class="cmti-10">_post</span><span 
+class="cmti-10">_install </span>initializes various default parameters which may be changed later by the system
+     administrator. Therefore it usually should be run only during this first installation step.
+     </li>
+     <li 
+  class="enumerate" id="x1-9008x4">If you wish to install jconsole support from the webserver, make sure Apache Ant is installed, and run
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-8">
+     ./sign_jconsole_jar</div>
+     <!--l. 209--><p class="nopar" > This step may be run at any time if you wish to defer it.
+     </li></ol>
+<!--l. 214--><p class="noindent" >That&#8217;s it, DUCC is installed and ready to run. (If errors were displayed during ducc_post_install they must be corrected
+before continuing.)
+<!--l. 217--><p class="noindent" >The post-installation script performs these tasks:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-9010x1">Verifies that the correct level of Java and Python are installed and available.
+     </li>
+     <li 
+  class="enumerate" id="x1-9012x2">Creates a default nodelist, $DUCC_HOME/resources/ducc.nodes, containing the name of the node you are
+     installing on.
+     </li>
+     <li 
+  class="enumerate" id="x1-9014x3">Defines the &#8220;ducc head&#8221; node to be to node you are installing from.
+     </li>
+     <li 
+  class="enumerate" id="x1-9016x4">Sets up the default https keystore for the webserver.
+     </li>
+     <li 
+  class="enumerate" id="x1-9018x5">Installs the DUCC documentation &#8220;ducc book&#8221; into the DUCC webserver root.
+     </li>
+     <li 
+  class="enumerate" id="x1-9020x6">Builds and installs the C program, &#8220;ducc_ling&#8221;, into the default location.
+     </li>
+     <li 
+  class="enumerate" id="x1-9022x7">Ensures that the (supplied) ActiveMQ broker is runnable.</li></ol>
+<!--l. 228--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-10000"></a>Initial System Verification</h3>
+<!--l. 230--><p class="noindent" >Here we start the basic installation, submit a simple UIMA-AS job, verify that it ran, and stop DUCC. Once this is
+confirmed working DUCC is ready to use in an unsecured, single-user mode on a single system.
+<!--l. 234--><p class="noindent" >To run the verification, issue these commands.
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-10002x1">cd $DUCC_HOME/admin
+     </li>
+     <li 
+  class="enumerate" id="x1-10004x2">./check_ducc -s
+     <!--l. 239--><p class="noindent" >Examine the output of check_ducc. If any errors are shown, correct the errors and rerun check_ducc until there
+     are no errors.
+     </li>
+     <li 
+  class="enumerate" id="x1-10006x3">Finally, start ducc: ./start_ducc -s</li></ol>
+<!--l. 244--><p class="noindent" >Start_ducc will first perform a number of consistency checks. It then starts the ActiveMQ broker, the DUCC control
+processes, and a single DUCC agent on the local node. Note that &#8220;single user mode&#8221; (-s) is specified for this first start. This
+inhibits the checks on the permissions on ducc_ling (described <a 
+href="#x1-13000doc">below</a>).
+<!--l. 249--><p class="noindent" >You will see some startup messages similar to the following:
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-9">
+ENV:&#x00A0;Java&#x00A0;is&#x00A0;configured&#x00A0;as:&#x00A0;/share/jdk1.6/bin/java
+&#x00A0;<br />ENV:&#x00A0;java&#x00A0;full&#x00A0;version&#x00A0;"1.6.0_14-b08"
+&#x00A0;<br />ENV:&#x00A0;Threading&#x00A0;enabled:&#x00A0;True
+&#x00A0;<br />MEM:&#x00A0;memory&#x00A0;is&#x00A0;15&#x00A0;gB
+&#x00A0;<br />ENV:&#x00A0;system&#x00A0;is&#x00A0;Linux
+&#x00A0;<br />allnodes&#x00A0;/home/ducc/ducc_runtime/resources/ducc.nodes
+&#x00A0;<br />Class&#x00A0;definition&#x00A0;file&#x00A0;is&#x00A0;ducc.mixed.classes
+&#x00A0;<br />OK:&#x00A0;Class&#x00A0;and&#x00A0;node&#x00A0;definitions&#x00A0;validated.
+&#x00A0;<br />OK:&#x00A0;Class&#x00A0;configuration&#x00A0;checked
+&#x00A0;<br />Starting&#x00A0;broker&#x00A0;on&#x00A0;ducchead.biz.org
+&#x00A0;<br />Waiting&#x00A0;for&#x00A0;broker&#x00A0;.....&#x00A0;0
+&#x00A0;<br />Waiting&#x00A0;for&#x00A0;broker&#x00A0;.....&#x00A0;1
+&#x00A0;<br />ActiveMQ&#x00A0;broker&#x00A0;is&#x00A0;found&#x00A0;on&#x00A0;configured&#x00A0;host&#x00A0;and&#x00A0;port:&#x00A0;ducchead.biz.org:61618
+&#x00A0;<br />Starting&#x00A0;1&#x00A0;agents
+&#x00A0;<br />**********&#x00A0;Starting&#x00A0;agents&#x00A0;from&#x00A0;file&#x00A0;/home/ducc/ducc_runtime/resources/ducc.nodes
+&#x00A0;<br />Starting&#x00A0;warm
+&#x00A0;<br />Waiting&#x00A0;for&#x00A0;Completion
+&#x00A0;<br />ducchead.biz.org&#x00A0;Starting&#x00A0;rm
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;PID&#x00A0;14198
+&#x00A0;<br />ducchead.biz.org&#x00A0;Starting&#x00A0;pm
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;PID&#x00A0;14223
+&#x00A0;<br />ducchead.biz.org&#x00A0;Starting&#x00A0;sm
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;PID&#x00A0;14248
+&#x00A0;<br />ducchead.biz.org&#x00A0;Starting&#x00A0;or
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;PID&#x00A0;14275
+&#x00A0;<br />ducchead.biz.org&#x00A0;Starting&#x00A0;ws
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;PID&#x00A0;14300
+&#x00A0;<br />ducchead.biz.org
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;ducc_ling&#x00A0;OK
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;DUCC&#x00A0;Agent&#x00A0;started&#x00A0;PID&#x00A0;14325
+&#x00A0;<br />All&#x00A0;threads&#x00A0;returned</div>
+<!--l. 283--><p class="nopar" >
+<!--l. 285--><p class="noindent" >Now open a browser and go to the DUCC webserver&#8217;s url, http://<span 
+class="cmmi-10">&#x003C;</span>hostname<span 
+class="cmmi-10">&#x003E;</span>:42133 where <span 
+class="cmmi-10">&#x003C;</span>hostname<span 
+class="cmmi-10">&#x003E; </span>is the
+name of the host where DUCC is started. Navigate to the Reservations page via the links in the upper-left
+corner. You should see the DUCC JobDriver reservation in state WaitingForResources. In a few minutes this
+should change to Assigned. (This usually takes 3-4 minutes in the default configuration.) Now jobs can be
+submitted.
+<div class="center" 
+>
+<!--l. 291--><p class="noindent" >
+<div class="fbox">The hostname and port are configurable by the DUCC administrator in ducc.properties</div>
+</div>
+<!--l. 296--><p class="noindent" >To submit a job,
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-10008x1">$DUCC_HOME/bin/ducc_submit &#8211;specification $DUCC_HOME/examples/simple/1.job</li></ol>
+                                                                                                
+                                                                                                
+<!--l. 301--><p class="noindent" >Open the browser in the DUCC jobs page. You should see the job progress through a series of transitions: Waiting For
+Driver, Waiting For Services, Waiting For Resources, Initializing, and finally, Running. You&#8217;ll see the number of work items
+submitted (15) and the number of work items completed grow from 0 to 15. Finally, the job will move into Completing and
+then Completed..
+<!--l. 307--><p class="noindent" >Since this example does not specify a log directory DUCC will create a log directory in your HOME directory
+under
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-10">
+$HOME/ducc/logs/job-id</div>
+<!--l. 310--><p class="nopar" >
+<!--l. 312--><p class="noindent" >In this directory, you will find a log for the sample job&#8217;s JobDriver (JD), JobProcess (JP), and a number of other files
+relating to the job.
+<!--l. 315--><p class="noindent" >This is a good time to explore the DUCC web pages. Notice that the job id is a link to a set of pages with details about the
+execution of the job.
+<!--l. 318--><p class="noindent" >Notice also, in the upper-right corner is a link to the full DUCC documentation, the &#8220;DuccBook&#8221;.
+<!--l. 320--><p class="noindent" >Finally, stop DUCC:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-10010x1">cd $DUCC_HOME/admin
+     </li>
+     <li 
+  class="enumerate" id="x1-10012x2">./stop_ducc -a</li></ol>
+<!--l. 326--><p class="noindent" >Once the system is verified and the sample job completes correctly, proceed to Multi-User Installation and Verification to set
+up multiple-user support and optionally, multi-node operation.
+<!--l. 330--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-11000"></a>Logs</h3>
+<!--l. 331--><p class="noindent" >The DUCC system logs are written to the directory
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-11">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;$DUCC_HOME/logs</div>
+<!--l. 334--><p class="nopar" >
+<!--l. 336--><p class="noindent" >In that directory are found logs for each of the DUCC components plus one for each node DUCC is installed
+on.
+<!--l. 339--><p class="noindent" >DUCC job/user logs are written by default to the user&#8217;s HOME directory under
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-12">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;$HOME/ducc/logs/&#x003C;jobid&#x003E;</div>
+<!--l. 342--><p class="nopar" >
+<!--l. 344--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-12000"></a>Multi-User Installation and Verification</h3>
+<!--l. 346--><p class="noindent" >Multi-user installation consists of these steps over and above single-user installation:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-12002x1">Install and configure the setuid-root program, ducc_ling. This small program allows DUCC jobs to be run as
+     the submitting user rather than user ducc.
+     </li>
+     <li 
+  class="enumerate" id="x1-12004x2">Optionally install and configure CGroups.
+     </li>
+     <li 
+  class="enumerate" id="x1-12006x3">Optionally update the configuration to include additional nodes.</li></ol>
+<!--l. 356--><p class="noindent" >Multi-user installation has these pre-requisites (DUCC will not work on multiple nodes unless these steps are
+taken):
+     <ul class="itemize1">
+     <li class="itemize">All systems in the DUCC cluster must have a shared filesystem and shared user space (user directories are
+     shared over NFS or an equivalent networked file system, across the systems, and user ids and credentials are
+     the same).
+     </li>
+     <li class="itemize">Passwordless ssh must be installed for user ducc on all systems. Users do NOT require ssh access to the DUCC
+     nodes.
+     </li>
+     <li class="itemize">Root access is (briefly) required to install a small setuid-root program on each system.</li></ul>
+<!--l. 370--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-13000"></a>Ducc_ling Installation</h3>
+<a 
+ id="x1-13000doc"></a>
+<!--l. 372--><p class="noindent" >Before proceeding with this step, please note:
+     <ul class="itemize1">
+     <li class="itemize">This step is required ONLY to install multi-user capabilities.
+     </li>
+     <li class="itemize">The sequence operations consisting of <span 
+class="cmti-10">chown </span>and <span 
+class="cmti-10">chmod </span>MUST be performed in the exact order given below.
+     If the <span 
+class="cmti-10">chmod </span>operation is performed before the <span 
+class="cmti-10">chown </span>operation, Linux will regress the permissions granted by
+     <span 
+class="cmti-10">chmod </span>and ducc_ling will be incorrectly installed.</li></ul>
+<!--l. 381--><p class="noindent" >ducc_ling is a setuid-root program whose function is to execute user tasks under the identity of the user. This must be
+installed correctly; incorrect installation can prevent jobs from running as their submitters, and in the worse case, can
+introduce security problems into the system.
+                                                                                                
+                                                                                                
+<!--l. 385--><p class="noindent" >ducc_ling must be installed on LOCAL disk on every system in the DUCC cluster, to avoid shared-filesystem access to it.
+The path to ducc_ling must be the same on each system. For example, one could install it to /local/ducc/bin on local disk on
+every system.
+<!--l. 389--><p class="noindent" >To install ducc_ling (these instructions assume it is installed into /local/ducc/bin): As ducc, ensure ducc_ling is built
+correctly for your architecture:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-13002x1">cd $DUCC_HOME/duccling/src
+     </li>
+     <li 
+  class="enumerate" id="x1-13004x2">make clean all</li></ol>
+<!--l. 396--><p class="noindent" >Now, as root, move ducc_ling to a secure location and grant authorization to run tasks under different users&#8217;
+identities:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-13006x1">mkdir /local/ducc
+     </li>
+     <li 
+  class="enumerate" id="x1-13008x2">mkdir /local/ducc/bin
+     </li>
+     <li 
+  class="enumerate" id="x1-13010x3">chown ducc.ducc /local/ducc
+     </li>
+     <li 
+  class="enumerate" id="x1-13012x4">chown ducc.ducc /local/ducc/bin
+     </li>
+     <li 
+  class="enumerate" id="x1-13014x5">chmod 700 /local/ducc
+     </li>
+     <li 
+  class="enumerate" id="x1-13016x6">chmod 700 /local/ducc/bin
+     </li>
+     <li 
+  class="enumerate" id="x1-13018x7">cp $DUCC_HOME/duccling/src/ducc_ling /local/ducc/bin
+     </li>
+     <li 
+  class="enumerate" id="x1-13020x8">chown root.ducc /local/ducc/bin/ducc_ling
+     </li>
+     <li 
+  class="enumerate" id="x1-13022x9">chmod 4750 /local/ducc/bin/ducc_ling</li></ol>
+<!--l. 410--><p class="noindent" >Finally, update the configuration to use this ducc_ling instead of the default ducc_ling:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-13024x1">Edit $DUCC_HOME/resources/ducc.properties and change this line:
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-13">
+     &#x00A0;ducc.agent.launcher.ducc_spawn_path=${DUCC_HOME}/admin/ducc_ling</div>
+     <!--l. 415--><p class="nopar" > to this line (Using the actual location of the updated ducc_ling, if different from /local/ducc/bin):
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-14">
+     ducc.agent.launcher.ducc_spawn_path=/local/ducc/bin/ducc_ling</div>
+     <!--l. 419--><p class="nopar" ></li></ol>
+<!--l. 423--><p class="noindent" >What these steps do:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-13026x1">The first two step compile ducc_ling for your current machine architecture and operating system level.
+     </li>
+     <li 
+  class="enumerate" id="x1-13028x2">The next two steps (mkdir) create directory /local/ducc/bin
+     </li>
+     <li 
+  class="enumerate" id="x1-13030x3">The next two steps (chown) set ownership of /local/ducc and /local/ducc/bin to user ducc, group ducc
+     </li>
+     <li 
+  class="enumerate" id="x1-13032x4">The next two steps (chmod) set permissions for /local/ducc and /local/ducc/bin so only user ducc may access
+     the contents of these directories
+     </li>
+     <li 
+  class="enumerate" id="x1-13034x5">The copy stop copies the ducc_ling program created in initial installation into /local/ducc/bin
+     </li>
+     <li 
+  class="enumerate" id="x1-13036x6">The next step (chown) sets ownership of /local/ducc/bin/ducc_ling to root, and group ownership to ducc.
+     </li>
+     <li 
+  class="enumerate" id="x1-13038x7">The next step (chmod) stablishes the <span 
+class="cmti-10">setuid </span>bit, which allows user ducc to execute ducc_ling with root privileges.
+     </li>
+     <li 
+  class="enumerate" id="x1-13040x8">Finally, ducc.properties is updated to point to the new, privileged ducc_ling.</li></ol>
+<!--l. 440--><p class="noindent" >If these steps are correctly performed, ONLY user <span 
+class="cmti-10">ducc </span>may use the ducc_ling program in a privileged way. Ducc_ling
+contains checks to prevent even user <span 
+class="cmti-10">root </span>from using it for privileged operations.
+<!--l. 444--><p class="noindent" >Ducc_ling contains the following functions, which the security-conscious may verify by examining the source in
+$DUCC_HOME/duccling. All sensitive operations are performed only AFTER switching userids, to prevent unauthorized
+root access to the system.
+     <ul class="itemize1">
+     <li class="itemize">Changes it&#8217;s real and effective userid to that of the user invoking the job.
+     </li>
+     <li class="itemize">Optionally redirects its stdout and stderr to the DUCC log for the current job.
+     </li>
+     <li class="itemize">Optionally redirects its stdio to a port set by the CLI, when a job is submitted.
+     </li>
+     <li class="itemize">&#8220;Nice&#8221;s itself to a &#8220;worse&#8221; priority than the default, to reduce the chances that a runaway DUCC job could
+     monopolize a system.
+     </li>
+     <li class="itemize">Optionally sets user limits.
+     </li>
+     <li class="itemize">Prints the effective limits for a job to both the user&#8217;s log, and the DUCC agent&#8217;s log.
+     </li>
+     <li class="itemize">Changes to the user&#8217;s working directory, as specified by the job.
+                                                                                                
+                                                                                                
+     </li>
+     <li class="itemize">Optionally establishes LD_LIBRARY_PATH for the job from the environment variable
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-15">
+     &#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;DUCC_LD_LIBRARY_PATH</div>
+     <!--l. 460--><p class="nopar" > if set in the DUCC job specification. (Secure Linux systems will prevent LD_LIBRARY_PATH from being set by a
+     program with root authority, so this is done AFTER changing userids).
+     </li></ul>
+<!--l. 468--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-14000"></a>CGroups Installation and Configuration</h3>
+<!--l. 469--><p class="noindent" >The steps in this task must be done as user root and user ducc.
+<!--l. 471--><p class="noindent" >To install and configure CGroups for DUCC:
+     <ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-14002x1">Install the appropriate <a 
+href="#x1-4000doc">libcgroup package</a> at level 0.37 or above.
+     </li>
+     <li 
+  class="enumerate" id="x1-14004x2">Configure /etc/cgconfig.conf as follows:
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-16">
+     &#x00A0;&#x00A0;&#x00A0;#&#x00A0;Mount&#x00A0;cgroups
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;mount&#x00A0;{
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;memory&#x00A0;=&#x00A0;/cgroup;
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;}
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;#&#x00A0;Define&#x00A0;cgroup&#x00A0;ducc&#x00A0;and&#x00A0;setup&#x00A0;permissions
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;group&#x00A0;ducc&#x00A0;{
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;perm&#x00A0;{
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;task&#x00A0;{
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;uid&#x00A0;=&#x00A0;ducc;
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;}
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;admin&#x00A0;{
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;uid&#x00A0;=&#x00A0;ducc;
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;}
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;}
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;memory&#x00A0;{}
+     &#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;}</div>
+     <!--l. 494--><p class="nopar" >
+     </li>
+     <li 
+  class="enumerate" id="x1-14006x3">Start the cgconfig service:
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-17">
+     &#x00A0;&#x00A0;&#x00A0;service&#x00A0;cgconfig&#x00A0;start</div>
+     <!--l. 498--><p class="nopar" >
+     </li>
+     <li 
+  class="enumerate" id="x1-14008x4">Verify cgconfig service is running by the existence of directory:
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-18">
+     &#x00A0;&#x00A0;&#x00A0;/cgroups/ducc</div>
+     <!--l. 503--><p class="nopar" >
+     </li>
+     <li 
+  class="enumerate" id="x1-14010x5">Some versions of libcgroup are buggy. As user ducc, verify that the following command executes with no
+     error:
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-19">
+     &#x00A0;&#x00A0;&#x00A0;cgcreate&#x00A0;-t&#x00A0;ducc&#x00A0;-a&#x00A0;ducc&#x00A0;-g&#x00A0;memory:ducc/test-cgroups</div>
+     <!--l. 508--><p class="nopar" >
+     </li>
+     <li 
+  class="enumerate" id="x1-14012x6">Configure the cgconfig service to start on reboot:
+                                                                                                
+                                                                                                
+     <div class="verbatim" id="verbatim-20">
+     &#x00A0;&#x00A0;&#x00A0;chkconfig&#x00A0;cgconfig&#x00A0;on</div>
+     <!--l. 513--><p class="nopar" >
+     </li>
+     <li 
+  class="enumerate" id="x1-14014x7">Update <span 
+class="cmbx-10">??</span> to enable CGroups. Note that if CGroups is not installed, the DUCC Agent will detect this and not attempt
+     to use the feature. It is completely safe to enable CGroups in <span 
+class="cmti-10">ducc.properties </span>on machines where it is not
+     installed.</li></ol>
+<!--l. 521--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-15000"></a>Set up the full nodelists</h3>
+<!--l. 522--><p class="noindent" >To add additional nodes to the ducc cluster, DUCC needs to know what nodes to start its Agent processes on. These nodes
+are listed in the file
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-21">
+$DUCC_HOME/resources/ducc.nodes.</div>
+<!--l. 526--><p class="nopar" >
+<!--l. 528--><p class="noindent" >During initial installation, this file was initialized with the node DUCC is installed on. Additional nodes may be added to the
+file using a text editor to increase the size of the DUCC cluster.
+<!--l. 532--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-16000"></a>Full DUCC Verification</h3>
+<!--l. 534--><p class="noindent" >This is identical to initial verification, with the one difference that the job &#8220;1.job&#8221; should be submitted as any user other
+than ducc. Watch the webserver and check that the job executes under the correct identity. Once this completes, DUCC is
+installed and verified.
+<!--l. 538--><p class="noindent" >
+<h3 class="sectionHead"><a 
+ id="x1-17000"></a>Enable DUCC webserver login</h3>
+<!--l. 540--><p class="noindent" >This step is optional. As shipped, the webserver is disabled for logins. This can be seen by hovering over the Login text
+located in the upper right of most webserver pages:
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-22">
+System&#x00A0;is&#x00A0;configured&#x00A0;to&#x00A0;disallow&#x00A0;logins</div>
+<!--l. 545--><p class="nopar" >
+<!--l. 547--><p class="noindent" >To enable logins, a Java-based authenticator must be plugged-in and the login feature must be enabled in the ducc.properties
+file by the DUCC administrator. Also, ducc_ling should be properly deployed (see Ducc_ling Installation section
+above).
+<!--l. 552--><p class="noindent" >A beta version of a Linux-based authentication plug-in is shipped with DUCC. It can be found in the source
+tree:
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-23">
+org.apache.uima.ducc.ws.authentication.LinuxAuthenticationManager</div>
+<!--l. 556--><p class="nopar" >
+<!--l. 558--><p class="noindent" >The Linux-based authentication plug-in will attempt to validate webserver login requests by appealing to the host OS. The
+user who wishes to login provides a userid and password to the webserver via https, which in-turn are handed-off to the OS
+for a success/failure reply.
+<!--l. 563--><p class="noindent" >To have the webserver employ the beta Linux-based authentication plug-in, the DUCC administrator should perform the
+following as user ducc:
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-24">
+1.&#x00A0;edit&#x00A0;ducc.properties
+&#x00A0;<br />2.&#x00A0;locate:&#x00A0;ducc.ws.login.enabled&#x00A0;=&#x00A0;false
+&#x00A0;<br />3.&#x00A0;modify:&#x00A0;ducc.ws.login.enabled&#x00A0;=&#x00A0;true
+&#x00A0;<br />4.&#x00A0;save</div>
+<!--l. 570--><p class="nopar" >
+<!--l. 572--><p class="noindent" >Note: The beta Linux-based authentication plug-in has limited testing. In particular, it was tested using:
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-25">
+Red&#x00A0;Hat&#x00A0;Enterprise&#x00A0;Linux&#x00A0;Workstation&#x00A0;release&#x00A0;6.4&#x00A0;(Santiago)</div>
+<!--l. 576--><p class="nopar" >
+<!--l. 578--><p class="noindent" >Alternatively, you can provide your own authentication plug-in. To do so:
+                                                                                                
+                                                                                                
+<div class="verbatim" id="verbatim-26">
+1.&#x00A0;author&#x00A0;a&#x00A0;Java&#x00A0;class&#x00A0;that&#x00A0;implements
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;org.apache.uima.ducc.common.authentication.IAuthenticationManager
+&#x00A0;<br />2.&#x00A0;create&#x00A0;a&#x00A0;jar&#x00A0;file&#x00A0;comprising&#x00A0;your&#x00A0;authentication&#x00A0;class
+&#x00A0;<br />3.&#x00A0;put&#x00A0;the&#x00A0;jar&#x00A0;file&#x00A0;in&#x00A0;a&#x00A0;location&#x00A0;accessible&#x00A0;by&#x00A0;the&#x00A0;DUCC&#x00A0;webserver,&#x00A0;such&#x00A0;as
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;$DUCC_HOME/lib/authentication
+&#x00A0;<br />4.&#x00A0;put&#x00A0;any&#x00A0;authentication&#x00A0;dependency&#x00A0;jar&#x00A0;files&#x00A0;there&#x00A0;as&#x00A0;well
+&#x00A0;<br />5.&#x00A0;edit&#x00A0;ducc.properties
+&#x00A0;<br />6.&#x00A0;add&#x00A0;the&#x00A0;following:
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;ducc.local.jars&#x00A0;=&#x00A0;authentication/*
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;ducc.authentication.implementer=&#x003C;your.authenticator.class.Name&#x003E;
+&#x00A0;<br />7.&#x00A0;locate:&#x00A0;ducc.ws.login.enabled&#x00A0;=&#x00A0;false
+&#x00A0;<br />8.&#x00A0;modify:&#x00A0;ducc.ws.login.enabled&#x00A0;=&#x00A0;true
+&#x00A0;<br />9.&#x00A0;save</div>
+<!--l. 593--><p class="nopar" >
+ 
+</body></html> 
+
+                                                                                                
+
+
