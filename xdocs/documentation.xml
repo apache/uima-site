@@ -198,8 +198,8 @@
 	<li><a href="doc-uimacpp-huh.html">Getting Started: UIMA C++ Framework</a><br></br>
 		For UIMA users who want to create UIMA compliant Analysis Engines from programs written in C++,
                 Perl, Python or Tcl.</li>
-	</ul>
-	
+
+	<br></br>
 	<li><a href="doc-uimaducc-whatitam.xml">Getting Started: UIMA DUCC</a><br></br>
 		For UIMA users who need cluster management services to automate the scale-out of 
 		UIMA pipelines over computing clusters .</li>
