@@ -131,6 +131,18 @@
    </p>
   </subsection>
 
+  <subsection name="UIMA DUCC" id="uima-ducc">
+    <p>Documentation for the Apache UIMA DUCC 1.0.0 release:</p>
+    <ul>
+      <li><a href="d/uima-ducc-1.0.0/duccbook.html">Guide and Reference Manual (html)</a></li>
+      <li><a href="d/uima-ducc-1.0.0/duccbook.pdf">Guide and Reference Manual (pdf)</a></li>
+      <li><a href="d/uima-ducc-1.0.0/installation.html">Installation Manual (html)</a></li>
+      <li><a href="d/uima-ducc-1.0.0/installation.pdf">Installation Manual (pdf)</a></li>
+      <li><a href="d/uima-ducc-1.0.0/apidocs/index.html">API documentation</a></li>
+      <li><a href="d/uima-ducc-1.0.0/RELEASE_NOTES.html">Latest release notes</a></li>
+    </ul>
+  </subsection>  
+  
   <subsection name="uimaFIT" id="uimafit">
     <p>Documentation for the Apache uimaFIT&#0153; 2.0.0 release:</p>
     <ul>
@@ -187,6 +199,13 @@
 		For UIMA users who want to create UIMA compliant Analysis Engines from programs written in C++,
                 Perl, Python or Tcl.</li>
 	</ul>
+	
+	<li><a href="doc-uimaducc-whatitam.xml">Getting Started: UIMA DUCC</a><br></br>
+		For UIMA users who need cluster management services to automate the scale-out of 
+		UIMA pipelines over computing clusters .</li>
+	</ul>
+	
+	
    </p>
   </subsection>
   </section>
