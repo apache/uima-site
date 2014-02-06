@@ -49,7 +49,7 @@
         relations, such as works-for or located-at.
       </p>
 
-      <img style="float: right;" src="./images/UimaIs.png" alt="UIMA is made of many things"/>     
+      <img style="float: right;" src="./images/UimaIs.png" width="430" alt="UIMA is made of many things" />     
 
       <p>UIMA enables applications to be decomposed into components,
         for example "language identification" =&gt; "language
