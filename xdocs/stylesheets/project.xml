@@ -29,6 +29,12 @@
         <item name="Wiki"                     href="http://cwiki.apache.org/confluence/display/UIMA/" />
       </item>
       
+      <item name="Scaleout Frameworks">
+        <item name="UIMA-AS"               href="/doc-uimaas-what.html"/>
+        <item name="UIMA-DUCC"      href="/doc-uimaducc-whatitam.html"/>
+      </item>
+
+  
       <item name="Components &amp; Tools">
         <item name="Annotators"               href="/sandbox.html#uima-addons-annotators"/>
         <item name="Tools &amp; Servers"      href="/toolsServers.html"/>
