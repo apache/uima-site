@@ -1,0 +1,39 @@
+Board report for Apache UIMA, for March 2014.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates:
+30 Jan 2014    last release
+12 Mar 2013    last PMC addition
+24 Dec 2013    last Committer addition
+            
+2 Releases:
+  30 Jan 2014  UIMA-DUCC 1.0.0 released
+      http://uima.apache.org/news.html#30 January 2014
+      DUCC = Distributed UIMA Cluster Computing
+  14 Jan 2014  UIMA Java SDK 2.5.0 released 
+      http://uima.apache.org/news.html#14 January 2014
+
+Other Activity:
+
+Worked with Infra to set up a demo web-server for DUCC
+here:  http://uima-ducc-vm.apache.org:42133/jobs.jsp
+
+The main web page was augmented to reflect the growning
+number of significant components: Ruta, DUCC, and uimaFIT
+were added to the big picture.
+
+Major work continues on DUCC and Ruta. The core Java
+framework is being improved to better support large
+multi-core processors.
+
+The mailing lists are fairly active, and normal
+bug finding/fixing work continues.
+
+Community:
+1 committer added in December.
+ 
+Issues: 
+No Board level issues at this time.
