@@ -200,9 +200,13 @@ A previous version of this page, with the methods we used while in the incubator
       
     <p>During release:prepare, the release plugin asks what the next levels should be and what the tag name 
         should be, and unless there's a good reason, we take the defaults (by just hitting enter).
-        The exception to this is in naming the SVN TAG - normally we have "release candidates".
-        The recommended convention is to take the suggested name and add "-rc1" for release candidate 1,
-        etc.
+    </p>
+    <p class="note">In the past, we added a suffix representing the release candidate to the tag,
+        e.g. "-rc1" for release candidate 1, etc. However, that the URL for this tag becomes part
+        of the released POM. We would then have upgrade the release candidate to the final release
+        after the vote has been successful and rename the tag in SVN. At that point, the URL in the
+        POM would have become invalid. For this reason, it was decided not to add the -rc1 to the
+        tag anymore.
     </p>
     <p>The release plugin automatically signs everything that needs signing using gpg.  It also
       builds the sources.jar, and one overall (for multi-module projects) source-release.zip file, 
@@ -235,10 +239,7 @@ A previous version of this page, with the methods we used while in the incubator
              build actions that would be taken when the release plugin is running
              the release build.</p>
         </li>
-        <li><code>mvn release:prepare -DautoVersionSubmodules</code>
-        <ul><li>take the defaults for the questions, except add -rcN (e.g. -rc1) for the 
-        name of the svn tag - to allow for multiple release candidates</li></ul>
-        </li>
+        <li><code>mvn release:prepare -DautoVersionSubmodules</code></li>
         <li><code>mvn release:perform</code></li>
     </ul> 
     </p>
@@ -537,7 +538,6 @@ A previous version of this page, with the methods we used while in the incubator
       
       <li>Update the downloads page of the web site</li>
   <li>Update Jira version info to reflect the release status and date</li>
-  <li>Rename the SVN tag for the release candidate if it ends in -rcXXX, without the -rcXX to indicate the release.</li>
   <li>After release appears on maven central, post an appropriate announce letter</li>
   <li>Add release to next Board report</li>
   <li>Celebrate!</li>
