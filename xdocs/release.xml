@@ -202,9 +202,9 @@ A previous version of this page, with the methods we used while in the incubator
         should be, and unless there's a good reason, we take the defaults (by just hitting enter).
     </p>
     <p class="note">In the past, we added a suffix representing the release candidate to the tag,
-        e.g. "-rc1" for release candidate 1, etc. However, that the URL for this tag becomes part
-        of the released POM. We would then have upgrade the release candidate to the final release
-        after the vote has been successful and rename the tag in SVN. At that point, the URL in the
+        e.g. "-rc1" for release candidate 1, etc. However, the URL for this tag becomes part
+        of the released POM. After a successful vote, we would have  upgraded the release candidate to
+        the final release by renaming the tag in SVN. At that point, the URL in the
         POM would have become invalid. For this reason, it was decided not to add the -rc1 to the
         tag anymore.
     </p>
