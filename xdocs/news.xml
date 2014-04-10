@@ -33,6 +33,14 @@
 		<section name="Apache UIMA News">
       <subsectionToc/>
 
+  <subsection name="10 April 2014" date = "10 April 2014" title="Upcoming UIMA Workshop at COLING 2014">
+         <p>There will be a workshop with a strong focus on UIMA, as part of the 
+  <a href="http://glicom.upf.edu/OIAF4HLT/">Workshop on Open Infrastructures and Analysis Frameworks for HLT</a> 
+  at <a href="http://www.coling-2014.org/">COLING 2014</a>, the 25th International Conference on Computational Linguistics.  
+  Please find the CFP <a href="./coling14.html">here</a>.
+        </p>
+              
+  </subsection>
 	<subsection name="30 January 2014" date = "30 January 2014" title="Apache UIMA DUCC 1.0.0 released">
          <p>This is the first release of the sandbox project UIMA DUCC.</p>
                                     
