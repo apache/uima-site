@@ -36,7 +36,7 @@
     <subsection name="12 May 2014" date = "12 May 2014" title="Apache UIMA Java SDK 2.6.0 released">
       <p>The UIMA framework has been enhanced to support large memory/ large multi-core machines,
 		  with various improvements to synchronization, lock contention, and locality of reference to optimize
-		  memory bandwith in the presence of non-uniform memory access speeds.  In addition, embedders of the framework
+		  memory bandwidth in the presence of non-uniform memory access speeds.  In addition, embedders of the framework
 		  can now choose to run initialization of UIMA components that share a common Resource Manager 
 		  and/or common UIMA Context, on multiple threads, concurrently.  CASes which are not being modified can
 		  be accessed (read-only) by multiple threads, simultaneously.  Along the way, many subtle bugs were fixed.
