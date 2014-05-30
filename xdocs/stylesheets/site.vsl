@@ -259,6 +259,12 @@ under the License.
             #end
 ##
             <title>$project.getChild("title").getText() - $root.getChild("properties").getChild("title").getText()</title>
+#set ($scripts = $root.getChild("scripts"))
+#if ($scripts)
+  #foreach ( $item in $scripts.getChildren() )
+    $item
+  #end
+#end
         </head>
 
         <body>
