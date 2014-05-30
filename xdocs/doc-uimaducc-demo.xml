@@ -85,10 +85,19 @@
 	the associated web server home page. The visitor is free to navigate and 
 	explore an actual DUCC working system as a view-only user.
    </p>
-   <p>
-   	The purpose of the web server (known as ducc-mon) is to provide information
-	about the running system.
-   </p>
+   </subsection>
+   <subsection name="Questions and Answers">
+   <div id="q1">
+   <table>
+   <tr>
+    <td valign="top">
+    </td>
+    <td valign="top">
+     <img src="./q1.rhs.png" />
+    </td>
+   </tr>
+   </table>
+   </div>
    </subsection>
   </section>
  </body>
