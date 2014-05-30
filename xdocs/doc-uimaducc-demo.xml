@@ -93,6 +93,7 @@
     <td valign="top">
      <table>
 	 <tr>
+	 
 	 <td align="center" valign="middle">
 	  <div>
 	  <a onClick="goLeft('q1');">
@@ -105,9 +106,40 @@
       Question
 	  </div>
 	 </td>
+	 
 	 <td align="center" valign="middle">
-	 image
+	 
+	 <table>
+	 <tr>
+	 <td>
+	  <table>
+	  <tr>
+	   <td>
+	    123456789012345
+	   </td>
+	   <td>
+	    <img src="./images/ducc-demo/q1.cloud.png" />
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>
+	    <table>
+		<caption>1 of 3</caption>
+		<tr>
+		 <td>
+		  <img src="./images/ducc-demo/ts-2.0x1.3.jpeg" />
+		 </td>
+		</tr>
+		</table>
+	   </td>
+	  </tr>
+	  </table>
 	 </td>
+	 </tr>
+	 </table>
+	 
+	 </td>
+	 
 	 <td align="center" valign="middle">
 	  <div>
 	  <a onClick="goRight('q1');">
