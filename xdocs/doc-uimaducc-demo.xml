@@ -57,6 +57,17 @@
 	job model DUCC provides cluster management services to automate the 
 	scale-out of UIMA pipelines over computing clusters.
    </p>
+   <subsection name="What is ducc-mon?">
+   <p>
+   <i style="color:#009900;">
+	ducc-mon
+	</i>
+	stands for Distributed UIMA Cluster Computing Monitor. 
+	It comprises a web server that is meant to display information about 
+	the running DUCC including: users' Jobs, users' Reservations, users' 
+	Services and the DUCC System itself.
+   </p>
+   </subsection>
   </section>
  </body>
 
