@@ -87,13 +87,13 @@
    </p>
    </subsection>
    <subsection name="Questions and Answers">
+   
    <div id="q1">
    <table>
    <tr>
     <td valign="top">
      <table>
 	 <tr>
-	 
 	 <td align="center" valign="middle">
 	  <div>
 	  <a onClick="goLeft('q1');">
@@ -106,10 +106,7 @@
       Question
 	  </div>
 	 </td>
-	 
 	 <td align="center" valign="middle">
-	 
-	 
 	  <table>
 	  <tr>
 	   <td>
@@ -140,11 +137,7 @@
 	   </td>
 	  </tr>
 	 </table>
-	 
-	 
-	 
 	 </td>
-	 
 	 <td align="center" valign="middle">
 	  <div>
 	  <a onClick="goRight('q1');">
@@ -166,6 +159,80 @@
    </tr>
    </table>
    </div>
+   
+      
+   <div id="q2">
+   <table>
+   <tr>
+    <td valign="top">
+     <table>
+	 <tr>
+	 <td align="center" valign="middle">
+	  <div>
+	  <a onClick="goLeft('q2');">
+	  <img src="./images/ducc-demo/120px-Go-previous.svg.png" />
+	  </a>
+	  </div>
+	  <div>
+	  Previous
+	  <br/>
+      Question
+	  </div>
+	 </td>
+	 <td align="center" valign="middle">
+	  <table>
+	  <tr>
+	   <td>
+	    <table>
+	    <tr>
+	     <td>
+	      <div style="visibility:hidden">1234567890</div>
+	     </td>
+	     <td>
+	      <img src="./images/ducc-demo/q2.cloud.png" />
+	     </td>
+	     <td>
+	     </td>
+	    </tr>
+	    </table>
+	   </td>
+	  </tr>
+	  <tr>
+	   <td>
+	    <table>
+	    <caption>2 of 3</caption>
+	    <tr>
+	     <td>
+	     <img src="./images/ducc-demo/ts-2.0x1.3.jpeg" />
+	     </td>
+	    </tr>
+	    </table>
+	   </td>
+	  </tr>
+	 </table>
+	 </td>
+	 <td align="center" valign="middle">
+	  <div>
+	  <a onClick="goRight('q2');">
+	  <img src="./images/ducc-demo/120px-Go-next.svg.png" />
+	  </a>
+	  </div>
+	  <div>
+	  Next
+	  <br/>
+      Question
+	  </div>
+	 </td>
+	 </tr>
+	 </table>
+    </td>
+    <td valign="top">
+     <img src="./images/ducc-demo/q2.rhs.png" />
+    </td>
+   </tr>
+   </table>
+   </div>
+   
    </subsection>
   </section>
  </body>
