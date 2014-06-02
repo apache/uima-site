@@ -30,11 +30,10 @@
       </item>
       
       <item name="Scaleout Frameworks">
-        <item name="UIMA-AS"               href="/doc-uimaas-what.html"/>
-        <item name="UIMA-DUCC"      href="/doc-uimaducc-whatitam.html">
-          <a href="doc-uimaducc-demo.html"><em>Demo Page</em></a> 
-          <a title='http://uima-ducc-vm.apache.org:42133' href="http://uima-ducc-vm.apache.org:42133/jobs.jsp" target="_blank"><em>Demo Live</em><img src="images/offsitelink.png"/></a> 
-        </item>
+        <item name="UIMA-AS"        href="/doc-uimaas-what.html"/>
+        <item name="UIMA-DUCC"      href="/doc-uimaducc-whatitam.html"/>
+        <item name="..Demo Page"   href="/doc-uimaducc-demo.html"/>
+        <item name="..Demo Live"   href="/uima-ducc-vm.apache.org:42133/jobs.jsp" target="_blank"/>
       </item>
 
   
