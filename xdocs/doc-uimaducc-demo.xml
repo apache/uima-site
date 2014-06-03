@@ -161,8 +161,6 @@
       Question
 	  </div>
 	 </td>
-	 </tr>
-	 <tr>
 	 <td align="center" valign="middle">
 	  <table>
 	  <tr>
@@ -195,8 +193,6 @@
 	  </tr>
 	 </table>
 	 </td>
-	 </tr>
-	 <tr>
 	 <td align="center" valign="middle">
 	  <div>
 	  <a onClick="goRight('q1');">
@@ -212,6 +208,14 @@
 	 </tr>
 	 </table>
     </td>
+   </tr> 
+   <tr>
+    <td>
+    <br/>
+    <br/>
+    </td>
+    </tr>
+   <tr> 
     <td valign="top">
      <img src="./images/ducc-demo/q1.rhs.png" />
     </td>
@@ -237,8 +241,6 @@
       Question
 	  </div>
 	 </td>
-	 </tr>
-	 <tr>
 	 <td align="center" valign="middle">
 	  <table>
 	  <tr>
@@ -271,8 +273,6 @@
 	  </tr>
 	 </table>
 	 </td>
-	 </tr>
-	 <tr>
 	 <td align="center" valign="middle">
 	  <div>
 	  <a onClick="goRight('q2');">
@@ -288,6 +288,14 @@
 	 </tr>
 	 </table>
     </td>
+    </tr>
+    <tr>
+    <td>
+    <br/>
+    <br/>
+    </td>
+    </tr>
+    <tr>
     <td valign="top">
      <img src="./images/ducc-demo/q2.rhs.png" />
     </td>
@@ -314,8 +322,6 @@
       Question
 	  </div>
 	 </td>
-	 </tr>
-	 <tr>
 	 <td align="center" valign="middle">
 	  <table>
 	  <tr>
@@ -348,8 +354,6 @@
 	  </tr>
 	 </table>
 	 </td>
-	 </tr>
-	 <tr>
 	 <td align="center" valign="middle">
 	  <div>
 	  <a onClick="goRight('q3');">
@@ -365,6 +369,14 @@
 	 </tr>
 	 </table>
     </td>
+    </tr>
+    <tr>
+    <td>
+    <br/>
+    <br/>
+    </td>
+    </tr>
+    <tr>
     <td valign="top">
      <img src="./images/ducc-demo/q3.rhs.png" />
     </td>
