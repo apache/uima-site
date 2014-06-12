@@ -71,7 +71,7 @@ under the License.
         <b>Factories:</b> simplify instantiating UIMA components programmatically without descriptor files.  
         For example, to instantiate an AnalysisEngine a call like this could be made: 
       </p>    
-      <pre>AnalysisEngineFactory.createPrimitive(MyAEImpl.class, myTypeSystem, 
+      <pre>AnalysisEngineFactory.createEngine(MyAEImpl.class, myTypeSystem, 
   paramName1, paramValue1,
   paramName2, paramValue2,
   ...)</pre>
@@ -128,7 +128,7 @@ under the License.
     </li>
     <li>
       <b>uimafit-legacy-support</b>
-      allows uimaFIT 2.0.0 to use uimaFIT 1.4.x meta data like Java annotations
+      allows uimaFIT 2.x to use uimaFIT 1.4.x meta data like Java annotations
       and <code>META-INF/org.uimafit/types.txt</code> files. Pipelines mixing uimaFIT 1.4.x
       and 2.x componens MUST be created using the 2.x factories, because the
       1.4.x factories will <b>not</b> understand how to handle uimaFIT 2.x components

@@ -2,7 +2,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    <title>Apache uimaFIT&#8482; Guide and Reference</title><link rel="stylesheet" type="text/css" href="css/stylesheet-html.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="Apache uimaFIT&#8482; Guide and Reference" id="d5e1"><div xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h1 class="title">Apache uimaFIT&#8482; Guide and Reference</h1></div><div><div class="authorgroup">
       <h3 class="corpauthor">Written and maintained by the Apache UIMA&#8482; Development Community</h3>
-    </div></div><div><p class="releaseinfo">Version 2.0.0</p></div><div><p class="copyright">Copyright &copy; 2012, 2013 The Apache Software Foundation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
+    </div></div><div><p class="releaseinfo">Version 2.1.0</p></div><div><p class="copyright">Copyright &copy; 2012, 2014 The Apache Software Foundation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
       <p> </p>
       <p title="License and Disclaimer">
         <b>License and Disclaimer.&nbsp;</b>
@@ -35,7 +35,7 @@
         the trademark or service mark.
         
       </p>
-    </div></div><div><p class="pubdate">August, 2013</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#ugr.tools.uimafit.introduction">1. Introduction</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e30">1.1. Simplify Component Implementation</a></span></dt><dt><span class="section"><a href="#d5e44">1.2. Simplify Component Instantiation</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e65">1.2.1. From a class</a></span></dt><dt><span class="section"><a href="#d5e73">1.2.2. From an XML descriptor</a></span></dt></dl></dd><dt><span class="section"><a href="#d5e82">1.3. Is this cheating?</a></span></dt><dt><span class="section"><a href="#d5e102">1.4. Conclusion</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.gettingstarted">2. Getting Started</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e109">2.1. Adding uimaFIT to your project</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e112">2.1.1. Maven users</a></span></dt><dt><span class="section"><a href="#d5e117">2.1.2. Non-Maven users</a></span></dt></dl></dd><dt><span class="section"><a href="#d5e122">2.2. A simple analysis engine implementation</a></span></dt><dt><span class="section"><a href="#d5e137">2.3. Running the analysis engine</a></span></dt><dt><span class="section"><a href="#d5e150">2.4. Generate a descriptor file</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.pipelines">3. Pipelines</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.uimafit.experiments">4. Running Experiments</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.uimafit.casutil">5. CAS Utilities</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e218">5.1. Access methods</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.configurationparameters">6. Configuration Parameters</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.uimafit.externalresources">7. External Resources</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e387">7.1. Resource injection</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e389">7.1.1. Regular UIMA components</a></span></dt><dt><span class="section"><a href="#d5e396">7.1.2. uimaFIT-aware components</a></span></dt><dt><span class="section"><a href="#d5e472">7.1.3. Resources extending Resource_ImplBase</a></span></dt><dt><span class="section"><a href="#d5e482">7.1.4. Resources implementing SharedResourceObject</a></span></dt><dt><span class="section"><a href="#d5e501">7.1.5. Note on injecting resources into resources</a></span></dt></dl></dd><dt><span class="section"><a href="#d5e506">7.2. Resource locators</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.typesystem">8. Type System Detection</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e518">8.1. Making types auto-detectable</a></span></dt><dt><span class="section"><a href="#d5e536">8.2. Using type auto-detection </a></span></dt><dt><span class="section"><a href="#d5e543">8.3. Multiple META-INF/org.apache.uima.fit/types.txt files</a></span></dt><dt><span class="section"><a href="#d5e565">8.4. Performance note and caching</a></span></dt><dt><span class="section"><a href="#d5e569">8.5. Potential problems</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e572">8.5.1. m2eclipse fails to copy descriptors to target/classes</a></span></dt><dt><span class="section"><a href="#d5e577">8.5.2. Class version conflicts</a></span></dt><dt><span class="section"><a href="#d5e581">8.5.3. Classes and resources in the default package</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#tools.uimafit.maven">9. uimaFIT Maven Plugin</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e593">9.1. enhance goal</a></span></dt><dt><span class="section"><a href="#d5e605">9.2. generate goal</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.migration">10. Migration Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e617">10.1. Version 1.4.0 to 2.0.0</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e619">10.1.1. Changes</a></span></dt><dt><span class="section"><a href="#d5e701">10.1.2. Legacy support module</a></span></dt></dl></dd></dl></dd></dl></div>
+    </div></div><div><p class="pubdate">Juni, 2014</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#ugr.tools.uimafit.introduction">1. Introduction</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e30">1.1. Simplify Component Implementation</a></span></dt><dt><span class="section"><a href="#d5e44">1.2. Simplify Component Instantiation</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e65">1.2.1. From a class</a></span></dt><dt><span class="section"><a href="#d5e73">1.2.2. From an XML descriptor</a></span></dt></dl></dd><dt><span class="section"><a href="#d5e82">1.3. Is this cheating?</a></span></dt><dt><span class="section"><a href="#d5e102">1.4. Conclusion</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.gettingstarted">2. Getting Started</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e109">2.1. Adding uimaFIT to your project</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e112">2.1.1. Maven users</a></span></dt><dt><span class="section"><a href="#d5e117">2.1.2. Non-Maven users</a></span></dt></dl></dd><dt><span class="section"><a href="#d5e122">2.2. A simple analysis engine implementation</a></span></dt><dt><span class="section"><a href="#d5e137">2.3. Running the analysis engine</a></span></dt><dt><span class="section"><a href="#d5e150">2.4. Generate a descriptor file</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.pipelines">3. Pipelines</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.uimafit.experiments">4. Running Experiments</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.uimafit.casutil">5. CAS Utilities</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e218">5.1. Access methods</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.configurationparameters">6. Configuration Parameters</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.uimafit.externalresources">7. External Resources</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e387">7.1. Resource injection</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e389">7.1.1. Regular UIMA components</a></span></dt><dt><span class="section"><a href="#d5e409">7.1.2. uimaFIT-aware components</a></span></dt><dt><span class="section"><a href="#d5e485">7.1.3. Resources extending Resource_ImplBase</a></span></dt><dt><span class="section"><a href="#d5e495">7.1.4. Resources implementing SharedResourceObject</a></span></dt><dt><span class="section"><a href="#d5e514">7.1.5. Note on injecting resources into resources</a></span></dt></dl></dd><dt><span class="section"><a href="#d5e519">7.2. Resource locators</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.typesystem">8. Type System Detection</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e531">8.1. Making types auto-detectable</a></span></dt><dt><span class="section"><a href="#d5e556">8.2. Using type auto-detection </a></span></dt><dt><span class="section"><a href="#d5e563">8.3. Multiple META-INF/org.apache.uima.fit/types.txt files</a></span></dt><dt><span class="section"><a href="#d5e585">8.4. Performance note and caching</a></span></dt><dt><span class="section"><a href="#d5e589">8.5. Potential problems</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e592">8.5.1. m2eclipse fails to copy descriptors to target/classes</a></span></dt><dt><span class="section"><a href="#d5e597">8.5.2. Class version conflicts</a></span></dt><dt><span class="section"><a href="#d5e601">8.5.3. Classes and resources in the default package</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.packaging">9. Building an executable JAR</a></span></dt><dt><span class="chapter"><a href="#tools.uimafit.maven">10. uimaFIT Maven Plugin</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e629">10.1. enhance goal</a></span></dt><dt><span class="section"><a href="#d5e641">10.2. generate goal</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.migration">11. Migration Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e653">11.1. Version 2.0.0 to 2.1.0</a></span></dt><dt><span class="section"><a href="#d5e662">11.2. Version 1.4.0 to 2.0.0</a></span></dt><dt><span class="section"><a href="#d5e744">11.3. Legacy support module</a></span></dt></dl></dd></dl></div>
   
   
     
@@ -192,7 +192,7 @@ for(Token token : iterate(jCas, Token.class)){
       <pre class="programlisting">&lt;dependency&gt;
   &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
   &lt;artifactId&gt;uimafit-core&lt;/artifactId&gt;
-  &lt;version&gt;2.0.0&lt;/version&gt;
+  &lt;version&gt;2.1.0&lt;/version&gt;
 &lt;/dependency&gt;</pre>
       <p>uimaFIT distributions are hosted by Maven Central and so no repository needs to be added
         to your pom.xml file. </p>
@@ -200,7 +200,7 @@ for(Token token : iterate(jCas, Token.class)){
     <div class="section" title="2.1.2.&nbsp;Non-Maven users"><div class="titlepage"><div><div><h3 class="title" id="d5e117">2.1.2.&nbsp;Non-Maven users</h3></div></div></div>
       
       <p>If you do not build with Maven, then download uimaFIT from the <a class="ulink" href="http://uima.apache.org/downloads.cgi" target="_top">Apache UIMA downloads page</a>. The file
-        name should be uimafit-2.0.0-bin.zip. Download and unpack this file.
+        name should be uimafit-2.1.0-bin.zip. Download and unpack this file.
         The contents of the resulting upacked directory will contain a directory called
           <code class="filename">lib</code>. Add all of the files in this directory to your classpath.</p>
     </div>
@@ -649,12 +649,30 @@ AnalysisEngineDescription tokenizer = createEngineDescription(
 createDependencyAndBind(tokenizer, UimaUtil.MODEL_PARAMETER,
   TokenizerModelResourceImpl.class,
   "http://opennlp.sourceforge.net/models-1.5/en-token.bin");</pre>
+      <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+        <p>We recommend declaring parameter constants in the classes that use them, e.g. here
+        in  <code class="classname">Tokenizer</code>. This way, the parameters for a class can be found
+        easily. However, OpenNLP declares parameters centrally in <code class="classname">UimaUtil</code>.
+        Thus, the example above is correct, although unconvential.</p>
+      </div>
+      <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+        <p>Note that uimaFIT is unable to perform type-coercion on parameters if a descriptor
+          is created from a class that does not contain <code class="classname">@ConfigurationParameter</code>
+          annotations, such as the OpenNLP <code class="classname">Tokenizer</code>. Such a descriptor does
+          not contain any parameter declarations! However, it is
+          still possible to configure such a component using uimaFIT by passing exactly the expected
+          types as parameter values. Thus, we need use the <code class="methodname">getName()</code> method 
+          to get the class name as a string, instead of simply passing the class itself. Also, setting
+          multi-valued parameter from a list or single value does not work here. Multi-values parameters
+          must be passed as an array of the required type. Only the default UIMA types are possible:
+          <span class="type">String</span>, <span class="type">boolean</span>, <span class="type">int</span>, and <span class="type">float</span>.</p>
+      </div>
     </div>
-    <div class="section" title="7.1.2.&nbsp;uimaFIT-aware components"><div class="titlepage"><div><div><h3 class="title" id="d5e396">7.1.2.&nbsp;uimaFIT-aware components</h3></div></div></div>
+    <div class="section" title="7.1.2.&nbsp;uimaFIT-aware components"><div class="titlepage"><div><div><h3 class="title" id="d5e409">7.1.2.&nbsp;uimaFIT-aware components</h3></div></div></div>
       
       <p>uimaFIT provides the <code class="classname">@ExternalResource</code> annotation to inject
         external resources directly into class member variables.</p>
-      <div class="table"><a name="d5e400"></a><p class="title"><b>Table&nbsp;7.1.&nbsp;<code class="classname">@ExternalResource</code> annotation</b></p><div class="table-contents">
+      <div class="table"><a name="d5e413"></a><p class="title"><b>Table&nbsp;7.1.&nbsp;<code class="classname">@ExternalResource</code> annotation</b></p><div class="table-contents">
         
         <table summary="@ExternalResource annotation" style="border-collapse: collapse;border-top: 0.5pt solid black; border-bottom: 0.5pt solid black; border-left: 0.5pt solid black; border-right: 0.5pt solid black; "><colgroup><col class="c1"><col class="c2"><col class="c3"></colgroup><thead><tr><th style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Parameter</th><th style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Description</th><th style="border-bottom: 0.5pt solid black; ">Default</th></tr></thead><tbody><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">key</td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Resource key</td><td style="border-bottom: 0.5pt solid black; ">field name</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">api</td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Used when the external resource type is different from the field type, e.g.
                 when using an ExternalResourceLocator</td><td style="border-bottom: 0.5pt solid black; ">field type</td></tr><tr><td style="border-right: 0.5pt solid black; ">mandatory</td><td style="border-right: 0.5pt solid black; ">Whether a value must be specified</td><td style="">true</td></tr></tbody></table>
@@ -733,7 +751,7 @@ ae.process(ae.newJCas());</pre>
       <p>This example is given as a full JUnit-based example in the the
           <span class="emphasis"><em>uimaFIT-examples</em></span> project.</p>
     </div>
-    <div class="section" title="7.1.3.&nbsp;Resources extending Resource_ImplBase"><div class="titlepage"><div><div><h3 class="title" id="d5e472">7.1.3.&nbsp;Resources extending Resource_ImplBase</h3></div></div></div>
+    <div class="section" title="7.1.3.&nbsp;Resources extending Resource_ImplBase"><div class="titlepage"><div><div><h3 class="title" id="d5e485">7.1.3.&nbsp;Resources extending Resource_ImplBase</h3></div></div></div>
       
       <p>One kind of resources extend <code class="classname">Resource_ImplBase</code>. These are the
         easiest to handle, because uimaFIT's version of <code class="classname">Resource_ImplBase</code>
@@ -754,7 +772,7 @@ ae.process(ae.newJCas());</pre>
   }
 }</pre>
     </div>
-    <div class="section" title="7.1.4.&nbsp;Resources implementing SharedResourceObject"><div class="titlepage"><div><div><h3 class="title" id="d5e482">7.1.4.&nbsp;Resources implementing SharedResourceObject</h3></div></div></div>
+    <div class="section" title="7.1.4.&nbsp;Resources implementing SharedResourceObject"><div class="titlepage"><div><div><h3 class="title" id="d5e495">7.1.4.&nbsp;Resources implementing SharedResourceObject</h3></div></div></div>
       
       <p>The other kind of resources implement
           <code class="interfacename">SharedResourceObject</code>. Since this is an interface, uimaFIT
@@ -798,7 +816,7 @@ ae.process(ae.newJCas());</pre>
   }
 }</pre>
     </div>
-    <div class="section" title="7.1.5.&nbsp;Note on injecting resources into resources"><div class="titlepage"><div><div><h3 class="title" id="d5e501">7.1.5.&nbsp;Note on injecting resources into resources</h3></div></div></div>
+    <div class="section" title="7.1.5.&nbsp;Note on injecting resources into resources"><div class="titlepage"><div><div><h3 class="title" id="d5e514">7.1.5.&nbsp;Note on injecting resources into resources</h3></div></div></div>
       
       <p>Nested resources are only initialized if they are used in a pipeline which contains at
         least one component that calls
@@ -808,7 +826,7 @@ ae.process(ae.newJCas());</pre>
           <code class="classname">NoopAnnotator</code> to the pipeline.</p>
     </div>
   </div>
-  <div class="section" title="7.2.&nbsp;Resource locators"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e506">7.2.&nbsp;Resource locators</h2></div></div></div>
+  <div class="section" title="7.2.&nbsp;Resource locators"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e519">7.2.&nbsp;Resource locators</h2></div></div></div>
     
     <p>Normally, in UIMA an external resource needs to implement either
         <code class="interfacename">SharedResourceObject</code> or
@@ -843,7 +861,7 @@ bindResource(desc, MyAnalysisEngine2.RES_DICTIONARY,
     in the classpath. Thus is becomes possible for a UIMA component provider to have component's
     type automatically detected and thus the components becomes immediately usable by adding it to
     the classpath.</p>
-  <div class="section" title="8.1.&nbsp;Making types auto-detectable"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e518">8.1.&nbsp;Making types auto-detectable</h2></div></div></div>
+  <div class="section" title="8.1.&nbsp;Making types auto-detectable"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e531">8.1.&nbsp;Making types auto-detectable</h2></div></div></div>
     
     <p>The provider of a type system should create a file
         <code class="filename">META-INF/org.apache.uima.fit/types.txt</code> in the classpath. This file
@@ -852,6 +870,13 @@ bindResource(desc, MyAnalysisEngine2.RES_DICTIONARY,
         <code class="filename">org/apache/uima/fit/type/Token.xml</code>, then the file should have the
       following contents:</p>
     <pre class="programlisting">classpath*:org/apache/uima/fit/type/Token.xml</pre>
+    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+      <p>Mind that the file <code class="filename">types.txt</code> is must be located in
+          <code class="filename">META-INF/org.apache.uima.fit</code> where
+          <code class="filename">org.apache.uima.fit</code> is the name of a sub-directory inside
+          <code class="filename">META-INF</code>. <span class="emphasis"><em>We are not using the Java package notation
+          here!</em></span></p>
+    </div>
     <p>To specify multiple TSDs, add additonal lines to the file. If you have a large number of
       TSDs, you may prefer to add a pattern. Assume that we have a large number of TSDs under
         <code class="filename">org/apache/uima/fit/type</code>, we can use the following pattern which
@@ -863,11 +888,15 @@ bindResource(desc, MyAnalysisEngine2.RES_DICTIONARY,
     <p>If it is not possible or inconvenient to add the `types.txt` file, patterns can also be
       specified using the system property
         <em class="parameter"><code>org.apache.uima.fit.type.import_pattern</code></em>. Multiple patterns may be
-      specified separated by semicolon<sup>[<a name="d5e532" href="#ftn.d5e532" class="footnote">1</a>]</sup>:</p>
+      specified separated by semicolon:</p>
     <pre class="programlisting">-Dorg.apache.uima.fit.type.import_pattern=\
   classpath*:org/apache/uima/fit/type/**/*.xml</pre>
+    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+      <p>The <code class="literal">\</code> in the example is used as a line-continuation indicator. It
+        and all spaces following it should be ommitted.</p>
+    </div>
   </div>
-  <div class="section" title="8.2.&nbsp;Using type auto-detection"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e536">8.2.&nbsp;Using type auto-detection </h2></div></div></div>
+  <div class="section" title="8.2.&nbsp;Using type auto-detection"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e556">8.2.&nbsp;Using type auto-detection </h2></div></div></div>
     
     <p>The auto-detected type system can be obtained from the
         <code class="classname">TypeSystemDescriptionFactory</code>:</p>
@@ -876,7 +905,7 @@ bindResource(desc, MyAnalysisEngine2.RES_DICTIONARY,
     <p>Popular factory methods also support auto-detection:</p>
     <pre class="programlisting">AnalysisEngine ae = createEngine(MyEngine.class);</pre>
   </div>
-  <div class="section" title="8.3.&nbsp;Multiple META-INF/org.apache.uima.fit/types.txt files"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e543">8.3.&nbsp;Multiple META-INF/org.apache.uima.fit/types.txt files</h2></div></div></div>
+  <div class="section" title="8.3.&nbsp;Multiple META-INF/org.apache.uima.fit/types.txt files"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e563">8.3.&nbsp;Multiple META-INF/org.apache.uima.fit/types.txt files</h2></div></div></div>
     
     <p>uimaFIT supports multiple `types.txt` files in the classpath (e.g. in differnt JARs). The
         <code class="filename">types.txt</code> files are located via Spring using the classpath search
@@ -911,18 +940,18 @@ jar:/path/to/token-types.jar!/org/foobar/typesystems/Tokens.xml </pre>
 classpath*:desc/type/Syntax.xml </pre>
         </li></ol></div><p>Method 1 should be preferred. Both methods can be mixed. </p>
   </div>
-  <div class="section" title="8.4.&nbsp;Performance note and caching"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e565">8.4.&nbsp;Performance note and caching</h2></div></div></div>
+  <div class="section" title="8.4.&nbsp;Performance note and caching"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e585">8.4.&nbsp;Performance note and caching</h2></div></div></div>
     
     <p>Currently uimaFIT evaluates the patterns for TSDs once and caches the locations, but not
       the actual merged type system description. A rescan can be forced using
         <code class="methodname">TypeSystemDescriptionFactory.forceTypeDescriptorsScan()</code>. This may
       change in future.</p>
   </div>
-  <div class="section" title="8.5.&nbsp;Potential problems"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e569">8.5.&nbsp;Potential problems</h2></div></div></div>
+  <div class="section" title="8.5.&nbsp;Potential problems"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e589">8.5.&nbsp;Potential problems</h2></div></div></div>
     
     <p>The mechanism works fine. However, there are specific issues with Java in general that one
       should be aware of.</p>
-    <div class="section" title="8.5.1.&nbsp;m2eclipse fails to copy descriptors to target/classes"><div class="titlepage"><div><div><h3 class="title" id="d5e572">8.5.1.&nbsp;m2eclipse fails to copy descriptors to target/classes</h3></div></div></div>
+    <div class="section" title="8.5.1.&nbsp;m2eclipse fails to copy descriptors to target/classes"><div class="titlepage"><div><div><h3 class="title" id="d5e592">8.5.1.&nbsp;m2eclipse fails to copy descriptors to target/classes</h3></div></div></div>
       
       <p>There seems to be a bug in some older versions of m2eclipse that causes resources not
         always to be copied to <code class="filename">target/classes</code>. If UIMA complains about type
@@ -930,7 +959,7 @@ classpath*:desc/type/Syntax.xml </pre>
         carefully check the m2eclipse console in the console view for error messages that might
         cause m2eclipse to abort.</p>
     </div>
-    <div class="section" title="8.5.2.&nbsp;Class version conflicts"><div class="titlepage"><div><div><h3 class="title" id="d5e577">8.5.2.&nbsp;Class version conflicts</h3></div></div></div>
+    <div class="section" title="8.5.2.&nbsp;Class version conflicts"><div class="titlepage"><div><div><h3 class="title" id="d5e597">8.5.2.&nbsp;Class version conflicts</h3></div></div></div>
       
       <p>A problem can occur if you end up having multiple incompatible versions of the same type
         system in the classpath. This is a general problem and not related to the auto-detection
@@ -941,7 +970,7 @@ classpath*:desc/type/Syntax.xml </pre>
         may end up with undefined behavior at runtime because one of the class versions is used at
         random. </p>
     </div>
-    <div class="section" title="8.5.3.&nbsp;Classes and resources in the default package"><div class="titlepage"><div><div><h3 class="title" id="d5e581">8.5.3.&nbsp;Classes and resources in the default package</h3></div></div></div>
+    <div class="section" title="8.5.3.&nbsp;Classes and resources in the default package"><div class="titlepage"><div><div><h3 class="title" id="d5e601">8.5.3.&nbsp;Classes and resources in the default package</h3></div></div></div>
       
       <p>It is bad practice to place classes into the default (unnamed) package. In fact it is
         not possible to import classes from the default package in another class. Similarly it is a
@@ -954,19 +983,103 @@ classpath*:desc/type/Syntax.xml </pre>
           <code class="filename">/desc/types/XXX.xml</code>. </p>
     </div>
   </div>
-<div class="footnotes"><br><hr width="100" align="left"><div class="footnote">
-        <p><sup>[<a id="ftn.d5e532" href="#d5e532" class="para">1</a>] </sup>The <code class="literal">\</code> in the example is used as a line-continuation indicator. It
-          and all spaces following it should be ommitted.</p>
-      </div></div></div>
+</div>
 
-  <div class="chapter" title="Chapter&nbsp;9.&nbsp;uimaFIT Maven Plugin" id="tools.uimafit.maven"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;9.&nbsp;uimaFIT Maven Plugin</h2></div></div></div>
+  <div class="chapter" title="Chapter&nbsp;9.&nbsp;Building an executable JAR" id="ugr.tools.uimafit.packaging"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;9.&nbsp;Building an executable JAR</h2></div></div></div>
+  
+  <p>Building an executable JAR including uimaFIT components typically requires extra care. Per
+    convention, uimaFIT expects certain information in specific locations on the classpath, e.g. the
+      <code class="filename">types.txt</code> file that controls the <a class="link" href="#ugr.tools.uimafit.packaging" title="Chapter&nbsp;9.&nbsp;Building an executable JAR">automatic type system detection</a> mechanism must
+    reside at <code class="filename">META-INF/org.apache.uima.fit/types.txt</code>. It often occurs that a
+    project has several dependencies, each supplying its own configuration files at these standard
+    locations. However, this causes a problem with naive approaches to creating an executable
+      <span class="emphasis"><em>fat-jar</em></span> merging all dependencies into a single JAR file. Without extra
+    care, the files supplied by the different dependencies overwrite each other during the packaging
+    process and only one file <span class="emphasis"><em>wins</em></span> in the end. As a consequence, the types
+    configured in the other files cannot be detected at runtime. Such a native approach is taken,
+    for example, by the Maven Assembly Plugin.</p>
+  <p>The Maven Shade Plugin provides a convenient alternative for the creation of executable
+    fat-jars, as it provides a mechanism to concatenate the configuration files from different
+    dependencies while creating the fat-jar. To use the Maven Shade Plugin with uimaFIT, use the
+    following configuration section in your POM file and make sure to change the
+      <em class="parameter"><code>mainClass</code></em> as required for your project:</p>
+  <pre class="programlisting">&lt;build&gt;
+  &lt;plugins&gt;
+    &lt;plugin&gt;
+      &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+      &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt;
+      &lt;version&gt;2.2&lt;/version&gt;
+      &lt;executions&gt;
+        &lt;execution&gt;
+          &lt;phase&gt;package&lt;/phase&gt;
+          &lt;goals&gt;&lt;goal&gt;shade&lt;/goal&gt;&lt;/goals&gt;
+          &lt;configuration&gt;
+            &lt;transformers&gt;
+              &lt;!-- Set the main class of the executable JAR --&gt;
+              &lt;transformer
+                implementation="org.apache.maven.plugins.shade.\
+                                resource.ManifestResourceTransformer"&gt;
+                &lt;mainClass&gt;org.apache.uima.fit.example.Main&lt;/mainClass&gt;
+              &lt;/transformer&gt;
+              &lt;!-- Merge the uimaFIT configuration files --&gt;
+              &lt;transformer
+                implementation="org.apache.maven.plugins.shade.\
+                                resource.AppendingTransformer"&gt;
+                &lt;resource&gt;\
+                  META-INF/org.apache.uima.fit/fsindexes.txt\
+                &lt;/resource&gt;
+              &lt;/transformer&gt;
+              &lt;transformer
+                implementation="org.apache.maven.plugins.shade.\
+                                resource.AppendingTransformer"&gt;
+                &lt;resource&gt;\
+                  META-INF/org.apache.uima.fit/types.txt\
+                &lt;/resource&gt;
+              &lt;/transformer&gt;
+              &lt;transformer
+                implementation="org.apache.maven.plugins.shade.\
+                                resource.AppendingTransformer"&gt;
+                &lt;resource&gt;\
+                  META-INF/org.apache.uima.fit/typepriorities.txt\
+                &lt;/resource&gt;
+              &lt;/transformer&gt;
+              &lt;!-- 
+                Prevent huge shaded artifacts from being deployed
+                to a Maven repository (remove if not desired) 
+              --&gt;
+              &lt;outputFile&gt;\
+                ${project.build.directory}/\
+                ${artifactId}-${version}-standalone.jar\
+              &lt;/outputFile&gt;
+            &lt;/transformers&gt;
+          &lt;/configuration&gt;
+        &lt;/execution&gt;
+      &lt;/executions&gt;
+    &lt;/plugin&gt;
+  &lt;/plugins&gt;
+&lt;/build&gt;</pre>
+  <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+    <p>Due to formatting constraints in the PDF version of this manual, the example above uses
+        <code class="code">\</code> to indicate a line continuation. Remove these and join the lines when you
+      copy/paste this example.</p>
+  </div>
+  <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+    <p>You might want to consider also merging additional files, such as LICENSE, NOTICE, or
+      DEPENDENCY files,  configuration files for the Java Service Locator API, or  files used by
+      other frameworks that uses similar conventions for configuration file locations. Check the
+      documentation of the Maven Shade Plugin, as different kinds of configuration files require
+      different specialized transformers.</p>
+  </div>
+</div>
+
+  <div class="chapter" title="Chapter&nbsp;10.&nbsp;uimaFIT Maven Plugin" id="tools.uimafit.maven"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;10.&nbsp;uimaFIT Maven Plugin</h2></div></div></div>
   
   
   <p>uimaFIT dynamically generates UIMA component descriptions from annotations in the Java
     source code. The uimaFIT Maven plugin provides the ability to automatically create such
     annotations in already compiled classes and to automatically generate XML descriptors from the
     annotated classes.</p>
-  <div class="section" title="9.1.&nbsp;enhance goal"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e593">9.1.&nbsp;enhance goal</h2></div></div></div>
+  <div class="section" title="10.1.&nbsp;enhance goal"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e629">10.1.&nbsp;enhance goal</h2></div></div></div>
     
     <p>The goal enhance allows automatically augmenting compiled classes with uimaFIT
       annotations. Information like vendor, copyright, or version can be obtained from the Maven
@@ -975,7 +1088,7 @@ classpath*:desc/type/Syntax.xml </pre>
     <pre class="programlisting">&lt;plugin&gt;
   &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
   &lt;artifactId&gt;uimafit-maven-plugin&lt;/artifactId&gt;
-  &lt;version&gt;2.0.0&lt;/version&gt; &lt;!-- change to latest version --&gt;
+  &lt;version&gt;2.1.0&lt;/version&gt; &lt;!-- change to latest version --&gt;
   &lt;configuration&gt;
     &lt;!-- OPTIONAL --&gt;
     &lt;!-- Override component description in generated descriptors. --&gt;
@@ -1067,13 +1180,13 @@ private MyResource resource;</pre>
       generated in <code class="filename">uimafit-missing-meta-data-report.txt</code> in the project build
       directory.</p>
   </div>
-  <div class="section" title="9.2.&nbsp;generate goal"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e605">9.2.&nbsp;generate goal</h2></div></div></div>
+  <div class="section" title="10.2.&nbsp;generate goal"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e641">10.2.&nbsp;generate goal</h2></div></div></div>
     
     <p>The generate goal generates XML component descriptors for UIMA components. </p>
     <pre class="programlisting">&lt;plugin&gt;
   &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
   &lt;artifactId&gt;uimafit-maven-plugin&lt;/artifactId&gt;
-  &lt;version&gt;2.0.0&lt;/version&gt; &lt;!-- change to latest version --&gt;
+  &lt;version&gt;2.1.0&lt;/version&gt; &lt;!-- change to latest version --&gt;
   &lt;configuration&gt;
     &lt;!-- OPTIONAL --&gt;
     &lt;!-- Path where the generated resources are written. --&gt;
@@ -1118,113 +1231,121 @@ private MyResource resource;</pre>
   
 </div>
 
-  <div class="chapter" title="Chapter&nbsp;10.&nbsp;Migration Guide" id="ugr.tools.uimafit.migration"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;10.&nbsp;Migration Guide</h2></div></div></div>
+  <div class="chapter" title="Chapter&nbsp;11.&nbsp;Migration Guide" id="ugr.tools.uimafit.migration"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;11.&nbsp;Migration Guide</h2></div></div></div>
   
-  <p>This section provides helpful information on incompatible chanes between versions.</p>
-  <div class="section" title="10.1.&nbsp;Version 1.4.0 to 2.0.0"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e617">10.1.&nbsp;Version 1.4.0 to 2.0.0</h2></div></div></div>
+  <p>This section provides helpful information on incompatible changes between versions.</p>
+  <div class="section" title="11.1.&nbsp;Version 2.0.0 to 2.1.0"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e653">11.1.&nbsp;Version 2.0.0 to 2.1.0</h2></div></div></div>
     
-    <div class="section" title="10.1.1.&nbsp;Changes"><div class="titlepage"><div><div><h3 class="title" id="d5e619">10.1.1.&nbsp;Changes</h3></div></div></div>
-      
-      <p title="Backwards compatibility">
-        <b>Backwards compatibility.&nbsp;</b>
-        Compatibility with legacy annotation is provided by the Legacy
-            support module.
-      </p>
-      <p title="Change of Maven groupId and artifactId">
-        <b>Change of Maven groupId and artifactId.&nbsp;</b>
-        The Maven group ID has changed from <code class="literal">org.uimafit</code> to
-            <code class="literal">org.apache.uima</code>.
-      </p>
-      <p>The artifact ID of the main uimaFIT artifact has been changed from
-          <code class="literal">uimafit</code> to <code class="literal">uimafit-core</code>.</p>
-      <p title="Change of package names">
-        <b>Change of package names.&nbsp;</b>
-        The base package has been renamed from <code class="literal">org.uimafit</code> to
-            <code class="literal">org.apache.uima.fit</code>. A global search/replace on Java files with for
-          lines starting with <code class="literal">import org.uimafit</code> and replacing that with
-            <code class="literal">import org.apache.uima.fit</code> should work.
-      </p>
-      <p title="Version requirements">
-        <b>Version requirements.&nbsp;</b>
-        Depends on UIMA 2.4.2.
-      </p>
-      <p title="@ConfigurationParameter">
-        <b>@ConfigurationParameter.&nbsp;</b>
-        The default value for the mandatory attribute now is <code class="literal">true</code>. The
-          default name of configuration parameters is now the name of the annotated field only. The
-          classname is no longer prefixed. The method
-            <code class="code">ConfigurationParameterFactory.createConfigurationParameterName()</code> that was
-          used to generate the prefixed name has been removed.
-      </p>
-      <p title="Type detection: META-INF/org.uimafit folder">
-        <b>Type detection: META-INF/org.uimafit folder.&nbsp;</b>
-        The <code class="literal">META-INF/org.uimafit</code> was renamed to
-            <code class="literal">META-INF/org.apache.uima.fit</code>.
-      </p>
-      <p title="JCasUtil">
-        <b>JCasUtil.&nbsp;</b>
-        The deprecated <code class="code">JCasUtil.iterate()</code> methods have been removed.
-            <code class="code">JCasUtil.select()</code> should be used instead.
-      </p>
-      <p title="AnalysisEngineFactory">
-        <b>AnalysisEngineFactory.&nbsp;</b>
-        All <code class="literal">createAggregateXXX</code> and <code class="literal">createPrimitiveXXX</code>
-          methods have been renamed to <code class="literal">createEngineXXX</code>. The old names are
-          deprecated and will be removed in future versions.
-      </p>
-      <p>All <code class="literal">createAnalysisEngineXXX</code> methods have been renamed to
-          <code class="literal">createEngineXXX</code>. The old names are deprecated and will be removed in
-        future versions.</p>
-      <p title="CollectionReaderFactory">
-        <b>CollectionReaderFactory.&nbsp;</b>
-        All <code class="literal">createDescriptionXXX</code> methods have been renamed to
-            <code class="literal">createReaderDescriptionXXX</code>. The old names are deprecated and will be
-          removed in future versions.
-      </p>
-      <p>All <code class="literal">createCollectionReaderXXX</code> methods have been renamed to
-          <code class="literal">createReaderXXX</code>. The old names are deprecated and will be removed in
-        future versions.</p>
-      <p title="JCasIterable">
-        <b>JCasIterable.&nbsp;</b>
-        <code class="code">JCasIterable</code> now only accepts reader and engine descriptions (no
-          instances) and no longer implements the <code class="code">Iterator</code> interface. Instead, new
-            <code class="code">JCasIterator</code> has been added, which replaces <code class="code">JCasIterable</code> in
-          that respect.
-      </p>
-      <p title="CasDumpWriter">
-        <b>CasDumpWriter.&nbsp;</b>
-        <code class="literal">org.uimafit.component.xwriter.CASDumpWriter</code> has been renamed to
-            <code class="literal">org.apache.uima.fit.component.CasDumpWriter</code>.
-      </p>
-      <p title="CpePipeline">
-        <b>CpePipeline.&nbsp;</b>
-        <code class="literal">CpePipeline</code> has been moved to a separate module with the artifact
-          ID <code class="literal">uimafit-cpe</code> to reduce the dependencies incurred by the main uimaFIT
-          artifact.
-      </p>
-      <p title="XWriter removed">
-        <b>XWriter removed.&nbsp;</b>
-        The <code class="literal">XWriter</code> and associated file namers have been removed as they
-          were much more complex then acutally needed. As an alternative,
-            <code class="literal">CasIOUtil</code> has been introduced providing several convenience methods
-          to read/write JCas/CAS data. 
-      </p>
-      <p title="JCasFactory">
-        <b>JCasFactory.&nbsp;</b>
-        Methods only loading JCas data have been removed from <code class="literal">JCasFactory</code>.
-          The new methods in <code class="literal">CasIOUtil</code> can be used instead.
-      </p>
-    </div>
-    <div class="section" title="10.1.2.&nbsp;Legacy support module"><div class="titlepage"><div><div><h3 class="title" id="d5e701">10.1.2.&nbsp;Legacy support module</h3></div></div></div>
-      
-      <p>The compatibility layer should allow you to migrate to uimaFIT 2.0.0 without breaking
-        anything. You should then be able to gradually change the codebase to be compatible with
-        uimaFIT 2.0.0. As far as my tests go, uimaFIT 1.x and 2.0.0 can coexist peacefully on the
-        classpath (and indeed both need to be on the classpath in order to use the legacy support
-        module).</p>
-      <p>To enable the legacy support, make sure that you have a dependency on uimaFIT 1.x and
-        then just add a dependency on the legacy module:</p>
-      <pre class="programlisting">&lt;dependency&gt;
+    <p title="Version requirements">
+      <b>Version requirements.&nbsp;</b>
+      Depends on UIMA 2.6.0 and Java 6.
+    </p>
+    <p title="AnnotationFactory.createAnnotation()">
+      <b>AnnotationFactory.createAnnotation().&nbsp;</b>
+      No longer throws <code class="literal">UIMAExcption</code>. If this exception was cought, some
+        IDEs may complain here after upgrading to uimaFIT 2.1.0. 
+    </p>
+  </div>
+  <div class="section" title="11.2.&nbsp;Version 1.4.0 to 2.0.0"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e662">11.2.&nbsp;Version 1.4.0 to 2.0.0</h2></div></div></div>
+    
+    <p title="Version requirements">
+      <b>Version requirements.&nbsp;</b>
+      Depends on UIMA 2.4.2.
+    </p>
+    <p title="Backwards compatibility">
+      <b>Backwards compatibility.&nbsp;</b>
+      Compatibility with legacy annotation is provided by the Legacy support module.
+    </p>
+    <p title="Change of Maven groupId and artifactId">
+      <b>Change of Maven groupId and artifactId.&nbsp;</b>
+      The Maven group ID has changed from <code class="literal">org.uimafit</code> to
+          <code class="literal">org.apache.uima</code>.
+    </p>
+    <p>The artifact ID of the main uimaFIT artifact has been changed from
+        <code class="literal">uimafit</code> to <code class="literal">uimafit-core</code>.</p>
+    <p title="Change of package names">
+      <b>Change of package names.&nbsp;</b>
+      The base package has been renamed from <code class="literal">org.uimafit</code> to
+          <code class="literal">org.apache.uima.fit</code>. A global search/replace on Java files with for
+        lines starting with <code class="literal">import org.uimafit</code> and replacing that with
+          <code class="literal">import org.apache.uima.fit</code> should work.
+    </p>
+    <p title="@ConfigurationParameter">
+      <b>@ConfigurationParameter.&nbsp;</b>
+      The default value for the mandatory attribute now is <code class="literal">true</code>. The
+        default name of configuration parameters is now the name of the annotated field only. The
+        classname is no longer prefixed. The method
+          <code class="code">ConfigurationParameterFactory.createConfigurationParameterName()</code> that was
+        used to generate the prefixed name has been removed.
+    </p>
+    <p title="Type detection: META-INF/org.uimafit folder">
+      <b>Type detection: META-INF/org.uimafit folder.&nbsp;</b>
+      The <code class="literal">META-INF/org.uimafit</code> was renamed to
+          <code class="literal">META-INF/org.apache.uima.fit</code>.
+    </p>
+    <p title="JCasUtil">
+      <b>JCasUtil.&nbsp;</b>
+      The deprecated <code class="code">JCasUtil.iterate()</code> methods have been removed.
+          <code class="code">JCasUtil.select()</code> should be used instead.
+    </p>
+    <p title="AnalysisEngineFactory">
+      <b>AnalysisEngineFactory.&nbsp;</b>
+      All <code class="literal">createAggregateXXX</code> and <code class="literal">createPrimitiveXXX</code>
+        methods have been renamed to <code class="literal">createEngineXXX</code>. The old names are
+        deprecated and will be removed in future versions.
+    </p>
+    <p>All <code class="literal">createAnalysisEngineXXX</code> methods have been renamed to
+        <code class="literal">createEngineXXX</code>. The old names are deprecated and will be removed in
+      future versions.</p>
+    <p title="CollectionReaderFactory">
+      <b>CollectionReaderFactory.&nbsp;</b>
+      All <code class="literal">createDescriptionXXX</code> methods have been renamed to
+          <code class="literal">createReaderDescriptionXXX</code>. The old names are deprecated and will be
+        removed in future versions.
+    </p>
+    <p>All <code class="literal">createCollectionReaderXXX</code> methods have been renamed to
+        <code class="literal">createReaderXXX</code>. The old names are deprecated and will be removed in
+      future versions.</p>
+    <p title="JCasIterable">
+      <b>JCasIterable.&nbsp;</b>
+      <code class="code">JCasIterable</code> now only accepts reader and engine descriptions (no instances)
+        and no longer implements the <code class="code">Iterator</code> interface. Instead, new
+          <code class="code">JCasIterator</code> has been added, which replaces <code class="code">JCasIterable</code> in that
+        respect.
+    </p>
+    <p title="CasDumpWriter">
+      <b>CasDumpWriter.&nbsp;</b>
+      <code class="literal">org.uimafit.component.xwriter.CASDumpWriter</code> has been renamed to
+          <code class="literal">org.apache.uima.fit.component.CasDumpWriter</code>.
+    </p>
+    <p title="CpePipeline">
+      <b>CpePipeline.&nbsp;</b>
+      <code class="literal">CpePipeline</code> has been moved to a separate module with the artifact ID
+          <code class="literal">uimafit-cpe</code> to reduce the dependencies incurred by the main uimaFIT
+        artifact.
+    </p>
+    <p title="XWriter removed">
+      <b>XWriter removed.&nbsp;</b>
+      The <code class="literal">XWriter</code> and associated file namers have been removed as they were
+        much more complex then acutally needed. As an alternative, <code class="literal">CasIOUtil</code> has
+        been introduced providing several convenience methods to read/write JCas/CAS data. 
+    </p>
+    <p title="JCasFactory">
+      <b>JCasFactory.&nbsp;</b>
+      Methods only loading JCas data have been removed from <code class="literal">JCasFactory</code>.
+        The new methods in <code class="literal">CasIOUtil</code> can be used instead.
+    </p>
+  </div>
+  <div class="section" title="11.3.&nbsp;Legacy support module"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e744">11.3.&nbsp;Legacy support module</h2></div></div></div>
+    
+    <p>The compatibility layer should allow you to migrate to uimaFIT 2.1.0 without breaking
+      anything. You should then be able to gradually change the codebase to be compatible with
+      uimaFIT 2.1.0. As far as my tests go, uimaFIT 1.x and 2.1.0 can coexist peacefully on the
+      classpath (and indeed both need to be on the classpath in order to use the legacy support
+      module).</p>
+    <p>To enable the legacy support, make sure that you have a dependency on uimaFIT 1.x and then
+      just add a dependency on the legacy module:</p>
+    <pre class="programlisting">&lt;dependency&gt;
   &lt;groupId&gt;org.uimafit&lt;/groupId&gt;
   &lt;artifactId&gt;uimafit&lt;/artifactId&gt;
   &lt;version&gt;1.4.0&lt;/version&gt;
@@ -1232,11 +1353,10 @@ private MyResource resource;</pre>
 &lt;dependency&gt;
   &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
   &lt;artifactId&gt;uimafit-legacy-support&lt;/artifactId&gt;
-  &lt;version&gt;2.0.0&lt;/version&gt;
+  &lt;version&gt;2.1.0&lt;/version&gt;
 &lt;/dependency&gt;</pre>
-      <p>uimaFIT 2.x automatically detects the presence of the legacy module and uses it - no
-        additional configuration is necessary.</p>
-    </div>
+    <p>uimaFIT 2.1.0 automatically detects the presence of the legacy module and uses it - no
+      additional configuration is necessary.</p>
   </div>
 </div>
 </div></body></html>
