@@ -164,7 +164,7 @@ under the License.
 &lt;dependency>
   &lt;groupId>org.apache.uima&lt;/groupId>
   &lt;artifactId>uimafit-core&lt;/artifactId>
-  &lt;version>2.0.0&lt;/version>
+  &lt;version>2.1.0&lt;/version>
 &lt;/dependency>
   </pre>
   <subsubsection>
@@ -221,7 +221,7 @@ under the License.
   </ul>
   <p>
     with contributions from Niklas Jakob, Fabio Mancinelli, Chris Roeder, Philipp Wetzler, Shuo Yang, 
-    Torsten Zesch.
+    and Torsten Zesch.
   </p>
 </subsection>
  
