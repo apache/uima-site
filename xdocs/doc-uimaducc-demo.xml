@@ -126,9 +126,7 @@
    <subsection name="What is the DUCC demo?">
    <p>
    The 
-	<i style="color:#484848;">
-	demo
-	</i>
+    <a href='http://uima-ducc-vm.apache.org:42133' title='http://uima-ducc-vm.apache.org:42133'>demo</a>
 	comprises a DUCC installation within the apache.org domain. 
 	A computing cluster has been configured and started, and a continually 
 	running driver simulates user work submissions.
