@@ -1,0 +1,36 @@
+Board report for Apache UIMA, for September 2014.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates:
+14 July 2014   last release
+12 Mar 2013    last PMC addition
+24 Dec 2013    last Committer addition
+            
+2 Releases:
+  16 July 2014  UIMA-AS (Asynchronous Scaleout support for UIMA) 2.6.0 released
+      http://uima.apache.org/news.html#16 July 2014
+  12 June 2014  uimaFIT 2.1.0 released 
+      http://uima.apache.org/news.html#12 June 2014
+
+Other Activity:
+
+UIMA DUCC (Distributed UIMA Cluster Controller) work is very active and
+progressing toward a next release.
+
+Core UIMA is close to being able to add JSON serialization, in support
+of the trend toward Cloud deployments.
+
+UIMA Ruta (Rule-based script language supported by Eclipse tooling) is
+about to release the next version (vote underway). 
+
+The mailing lists are fairly active, and normal
+bug finding/fixing work continues.
+
+Community:
+Several new contributers have started contributing, especially to Ruta.
+ 
+Issues: 
+No Board level issues at this time.
