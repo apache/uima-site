@@ -101,7 +101,8 @@ Other mirrors: <select name="Preferred">
 <section name="Latest Official Releases">  
   <p>Note: As of release 2.3.0, the CAS Editor and the Pear packaging maven plugin are now part of the UIMA Java framework and SDK.</p>
 
-  <subsection name="UIMA DUCC">
+  
+  <subsection name="Apache UIMA DUCC Version 1.1.0">
     <insertDownloads version="1.1.0"/>
   </subsection>
  

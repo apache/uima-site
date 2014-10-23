@@ -1,113 +1,113 @@
-Thu Oct 23 12:18:13 EDT 2014  [debug] AvalonLogSystem initialized using logfile 'velocity.log'
-Thu Oct 23 12:18:13 EDT 2014   [info] ************************************************************** 
-Thu Oct 23 12:18:13 EDT 2014   [info] Starting Jakarta Velocity v1.5-dev
-Thu Oct 23 12:18:13 EDT 2014   [info] RuntimeInstance initializing.
-Thu Oct 23 12:18:13 EDT 2014   [info] Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
-Thu Oct 23 12:18:13 EDT 2014   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
-Thu Oct 23 12:18:13 EDT 2014   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
-Thu Oct 23 12:18:13 EDT 2014   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-Thu Oct 23 12:18:13 EDT 2014   [info] Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Thu Oct 23 12:18:13 EDT 2014   [info] FileResourceLoader : initialization starting.
-Thu Oct 23 12:18:13 EDT 2014   [info] FileResourceLoader : adding path '.'
-Thu Oct 23 12:18:13 EDT 2014   [info] FileResourceLoader : initialization complete.
-Thu Oct 23 12:18:13 EDT 2014   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
-Thu Oct 23 12:18:13 EDT 2014   [info] Default ResourceManager initialization complete.
-Thu Oct 23 12:18:13 EDT 2014   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-Thu Oct 23 12:18:13 EDT 2014   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-Thu Oct 23 12:18:13 EDT 2014   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-Thu Oct 23 12:18:13 EDT 2014   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
-Thu Oct 23 12:18:13 EDT 2014   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-Thu Oct 23 12:18:13 EDT 2014   [info] Created '20' parsers.
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : initialization starting.
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : adding VMs from VM library template : VM_global_library.vm
-Thu Oct 23 12:18:13 EDT 2014  [error] ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro :  VM library template macro registration complete.
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : messages on  : VM system will output logging messages
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : initialization complete.
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocity successfully started.
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #metaauthor( author email ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #source( value ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #subsection( subsection ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #section( section ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #subsectionToc( subsections ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #projectanchor( name href ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #navBarParts( items ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #getApacheImage( ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #getProjectImage( ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #getBannerTitle( ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #printMeta( metaElement ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #document( ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #insertDownloads( insertVersionInfo ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #insertDownload2( downloads ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014   [info] Velocimacro : added new VM : #suffixes( dir item subdirectory ) : source = xdocs/stylesheets/site.vsl
-Thu Oct 23 12:18:13 EDT 2014  [error] VM #insertDownloads: error : too few arguments to macro. Wanted 1 got 0
-Thu Oct 23 12:18:13 EDT 2014  [error] VM #subsectionToc: error : too few arguments to macro. Wanted 1 got 0
-Thu Oct 23 12:18:13 EDT 2014  [error] VM #insertDownloads: error : too few arguments to macro. Wanted 1 got 0
-Thu Oct 23 12:18:13 EDT 2014  [error] VM #navBarParts: error : too few arguments to macro. Wanted 1 got 0
-Thu Oct 23 12:18:13 EDT 2014  [error] VM #insertDownload2: error : too few arguments to macro. Wanted 1 got 0
-Thu Oct 23 12:18:13 EDT 2014  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
-Thu Oct 23 12:18:13 EDT 2014  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
-Thu Oct 23 12:18:13 EDT 2014  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
-Thu Oct 23 12:18:13 EDT 2014  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
-Thu Oct 23 12:18:13 EDT 2014   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
-Thu Oct 23 12:18:13 EDT 2014   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 26, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
-Thu Oct 23 12:18:13 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:14 EDT 2014  [debug] AvalonLogSystem initialized using logfile 'velocity.log'
+Thu Oct 23 12:38:14 EDT 2014   [info] ************************************************************** 
+Thu Oct 23 12:38:14 EDT 2014   [info] Starting Jakarta Velocity v1.5-dev
+Thu Oct 23 12:38:14 EDT 2014   [info] RuntimeInstance initializing.
+Thu Oct 23 12:38:14 EDT 2014   [info] Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+Thu Oct 23 12:38:14 EDT 2014   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Thu Oct 23 12:38:14 EDT 2014   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Thu Oct 23 12:38:14 EDT 2014   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Thu Oct 23 12:38:14 EDT 2014   [info] Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Thu Oct 23 12:38:14 EDT 2014   [info] FileResourceLoader : initialization starting.
+Thu Oct 23 12:38:14 EDT 2014   [info] FileResourceLoader : adding path '.'
+Thu Oct 23 12:38:14 EDT 2014   [info] FileResourceLoader : initialization complete.
+Thu Oct 23 12:38:14 EDT 2014   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Thu Oct 23 12:38:14 EDT 2014   [info] Default ResourceManager initialization complete.
+Thu Oct 23 12:38:14 EDT 2014   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Thu Oct 23 12:38:14 EDT 2014   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Thu Oct 23 12:38:14 EDT 2014   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Thu Oct 23 12:38:14 EDT 2014   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Thu Oct 23 12:38:14 EDT 2014   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Thu Oct 23 12:38:14 EDT 2014   [info] Created '20' parsers.
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : initialization starting.
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : adding VMs from VM library template : VM_global_library.vm
+Thu Oct 23 12:38:14 EDT 2014  [error] ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro :  VM library template macro registration complete.
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : messages on  : VM system will output logging messages
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : initialization complete.
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocity successfully started.
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #metaauthor( author email ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #source( value ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #subsection( subsection ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #section( section ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #subsectionToc( subsections ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #projectanchor( name href ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #navBarParts( items ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #getApacheImage( ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #getProjectImage( ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #getBannerTitle( ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #printMeta( metaElement ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #document( ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #insertDownloads( insertVersionInfo ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #insertDownload2( downloads ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014   [info] Velocimacro : added new VM : #suffixes( dir item subdirectory ) : source = xdocs/stylesheets/site.vsl
+Thu Oct 23 12:38:14 EDT 2014  [error] VM #insertDownloads: error : too few arguments to macro. Wanted 1 got 0
+Thu Oct 23 12:38:14 EDT 2014  [error] VM #subsectionToc: error : too few arguments to macro. Wanted 1 got 0
+Thu Oct 23 12:38:14 EDT 2014  [error] VM #insertDownloads: error : too few arguments to macro. Wanted 1 got 0
+Thu Oct 23 12:38:14 EDT 2014  [error] VM #navBarParts: error : too few arguments to macro. Wanted 1 got 0
+Thu Oct 23 12:38:14 EDT 2014  [error] VM #insertDownload2: error : too few arguments to macro. Wanted 1 got 0
+Thu Oct 23 12:38:14 EDT 2014  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
+Thu Oct 23 12:38:14 EDT 2014  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
+Thu Oct 23 12:38:14 EDT 2014  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
+Thu Oct 23 12:38:14 EDT 2014  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
+Thu Oct 23 12:38:14 EDT 2014   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Thu Oct 23 12:38:14 EDT 2014   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Thu Oct 23 12:38:14 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 26, column 1]
+Thu Oct 23 12:38:14 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:14 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Thu Oct 23 12:38:15 EDT 2014  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
