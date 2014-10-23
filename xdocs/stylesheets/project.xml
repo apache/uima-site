@@ -97,7 +97,7 @@
 
     <download name="UIMA DUCC" subdirectory="uima-ducc-1.1.0" releasedate="23-Oct-2014">
       <releasenotes filename="uima-ducc-1.1.0/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
-      <binary       filename="uima-ducc-1.1.0-bin">                   <f>zip</f>  <f>tar.gz</f>                </binary>   
+      <binary       filename="uima-ducc-1.1.0-bin">                   <f>tar.gz</f>                </binary>   
       <source       filename="uima-ducc-1.1.0-source-release">                   <f>zip</f>    </source>
     </download>
   </downloads>
