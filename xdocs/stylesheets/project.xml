@@ -189,7 +189,7 @@
     </download>
     <download name="UIMA C++ framework &amp; SDK 64bit" subdirectory="uimacpp-2.4.0"  releasedate="15-Nov-2012">
       <releasenotes filename="uimacpp-2.4.0/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
-      <binary       filename="uimacpp-2.4.0-bin64">                   <f>zip</f>  <f>tgz</f>                </binary>   
+      <binary       filename="uimacpp-2.4.0-bin64">                   <f>tgz</f>                </binary>   
       <source       filename="uimacpp-2.4.0-src">                   <f>zip</f>    </source>
     </download>
 <!--     

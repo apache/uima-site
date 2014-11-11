@@ -30,6 +30,11 @@ The mailing lists are fairly active, and normal
 bug finding/fixing work continues.
 
 Community:
+
+A workshop with a strong focus on UIMA was held in conjunction with COLING 2014,
+the International Conference on Computational Linguistics, and UIMA Ruta
+was demonstrated here as well.  http://uima.apache.org/coling14.html 
+
 Several new contributers have started contributing, especially to Ruta.
  
 Issues: 
