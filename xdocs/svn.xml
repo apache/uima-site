@@ -108,8 +108,8 @@ commits-subscribe@uima.apache.org</a>.
 <p>
 If you just want to browse the source code, you can use the
 <a class="external" rel="nofollow" 
-href="http://svn.apache.org/viewcvs/uima">
-ViewCVS web interface</a> to Subversion.  This is current at all times.
+href="http://svn.apache.org/viewvc/uima">
+viewvc web interface</a> to Subversion.  This is current at all times.
 </p>
 </subsection>
 </section>
