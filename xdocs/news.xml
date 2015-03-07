@@ -32,7 +32,29 @@
 
 		<section name="Apache UIMA News">
       <subsectionToc/>
-	  
+      
+      <subsection name="06 March 2015" date = "06 March 2015" title="Apache UIMA Java SDK 2.7.0 released">
+      <p>The UIMA Java SDK now requires Java 7.  There are significant changes in this release.  
+      Some of these may break backwards compatibility; we have included some new JVM properties
+      to aid in gradually adapting to these changes.  See the 
+      <a href="d/uimaj-2.7.0/README">README</a> file for a description of these properties.
+      </p>
+      
+      <p>There is a new capability that detects operations which change feature values used as keys
+      in sorted and set indexes; by default, the Framework now insures that the indexes
+      are properly updated when this happens.  A new report can be generated to show the user when this is happening,
+      so they may improve their code.</p>
+      
+      <p>This release supports a new JSON serialization of the CAS and of UIMA descriptors.  This is
+      described in the <a href="d/uimaj-2.7.0/references.html#ugr.ref.json">reference manual</a>.</p>
+      
+      <p>Many performance improvements have been made.</p>
+      
+      <p>
+      The complete list of fixes is <a href="d/uimaj-2.7.0/issuesFixed/jira-report.html">here</a>.
+      </p>
+    </subsection>
+	 
 	 <subsection name="23 October 2014" date = "23 October 2014" title="Apache UIMA DUCC 1.1.0 released">
 		      <p>UIMA DUCC 1.1.0 is a maintenance release that contains fixes and improvements over UIMA-DUCC 1.0.0.</p>
                                     
