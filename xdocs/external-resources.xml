@@ -68,12 +68,14 @@ can be used by clinical decision support systems and clinical research.
 </p>
 </subsection>S
 
+<!--  appears to be not found as of 5/2015 -->
 <subsection name="UIMA Component Repository at CMU">
 
 <p> The <a href="http://uima.lti.cs.cmu.edu/" target="_blank">UIMA Component Repository at CMU</a> lists
 a large number of UIMA components, some of which can be freely downloaded.
 </p>
 </subsection>
+-->
 
 <subsection name="JCoRe NLP Toolsuite">
 <p>The <a href="http://www.julielab.de/Resources/JCoRe+NLP+Tools.html" target="_blank">JCoRe NLP Toolsuite</a>
@@ -144,7 +146,7 @@ of Nantes.
 </subsection>
 
 <subsection name="DKPro Core">
-<p><a href="http://www.ukp.tu-darmstadt.de/research/current-projects/dkpro/" 
+<p><a href="https://www.ukp.tu-darmstadt.de/research/current-projects/dkpro/" 
 target="_blank">DKPro Core</a> is a collection of software components for natural language 
 processing (NLP) based on the Apache UIMA framework. The provided components wrap a constantly 
 growing set of stand-of-the-art NLP tools and also include several original components covering a 
@@ -157,7 +159,7 @@ file and corpus formats.
 <p>
 DKPro Core offers two sets of components:
 <ul>
-<li><a href="http://code.google.com/p/dkpro-core-asl" target="_blank">DKPro Core ASL</a> 
+<li><a href="http://code.google.com/p/dkpro-core-asl/" target="_blank">DKPro Core ASL</a> 
 provides components under the Apache Software License 2.0
 </li>
 <li>
@@ -167,7 +169,7 @@ provides components under the GNU Public License 3.0
 </ul>
 </p>
 <p>
-DKPro Core relies heavily on <a href="#uimaFIT">uimaFIT</a>. DKPro Core is meant to be used with Apache Maven. The main components
+DKPro Core relies heavily on <a href="../uimafit.html">uimaFIT</a>. DKPro Core is meant to be used with Apache Maven. The main components
 are hosted on <a href="http://search.maven.org/#search%7Cga%7C1%7Cde.tudarmstadt.ukp.dkpro.core" 
 target="_blank">Maven Central</a> while distributable models are available from the
 public <a href="https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/simple/public-model-releases-local/de/tudarmstadt/ukp/dkpro/core/" 
