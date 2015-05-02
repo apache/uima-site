@@ -58,7 +58,7 @@
       </asfext:Standard>
     </asfext:implements>
 
-    <asfext:pmc rdf:about="UIMA">
+    <asfext:pmc rdf:resource="http://uima.apache.org">
       <asfext:name>Apache UIMA</asfext:name>
       <asfext:chair>
         <foaf:Person>
