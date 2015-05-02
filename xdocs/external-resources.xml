@@ -75,8 +75,8 @@ a large number of UIMA components, some of which can be freely downloaded.
 </p>
 </subsection>
 
-<subsection name="JULIE Lab NLP Toolsuite">
-<p>The <a href="http://www.julielab.de/Resources/Software/NLP_Tools.html" target="_blank">JULIE Lab NLP Toolsuite</a>
+<subsection name="JCoRe NLP Toolsuite">
+<p>The <a href="http://www.julielab.de/Resources/JCoRe+NLP+Tools.html" target="_blank">JCoRe NLP Toolsuite</a>
 consists of a collection of NLP components, some of which are provided as freely available
 UIMA components.  It includes also a 
 <a href="http://www.julielab.de/Resources/Software/UIMA+type+system-p-91.html" target="_blank">type system</a>
@@ -183,7 +183,7 @@ uimaFIT (legacy)</a>
 is a library that provides factories, injection, 
 and testing utilities for UIMA. It provides a convenient Java API 
 for using UIMA in Java projects without having to deal with XML descriptors.
-</p><p><a href="">Apache uimaFIT&#0153;</a> supersedes this project.</p>
+</p><p><a href="../uimafit.html">Apache uimaFIT&#0153;</a> supersedes this project.</p>
 
 </subsection>
 
