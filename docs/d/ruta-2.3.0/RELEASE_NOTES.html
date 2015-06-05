@@ -21,10 +21,10 @@
    -->
 
 <head>
-  <title>Apache UIMA Ruta v2.2.1 Release Notes</title>
+  <title>Apache UIMA Ruta v2.3.0 Release Notes</title>
 </head>
 <body>
-<h1>Apache UIMA&#8482; Ruta v2.2.1 Release Notes</h1>
+<h1>Apache UIMA Ruta&#8482; v2.3.0 Release Notes</h1>
 
 <h2>Contents</h2>
 <p>
@@ -38,8 +38,8 @@
 <h2><a name="what.is.uima-as">1. What is UIMA Ruta?</a></h2>
 
      <p>
-  			Apache UIMA&#8482; Ruta is a rule-based script language supported by Eclipse-based tooling.
-      The language is designed to enable rapid development of text processing applications within UIMA. 
+  			Apache UIMA Ruta&#8482; is a rule-based script language supported by Eclipse-based tooling.
+      The language is designed to enable rapid development of text processing applications within Apache UIMA&#8482;. 
       A special focus lies on the intuitive and flexible domain specific language for defining 
       patterns of annotations. The Eclipse-based tooling for Ruta, called the Ruta Workbench,
       was created to support the user and to facilitate every step when writing Ruta rules. Both the 
@@ -48,14 +48,40 @@
 
 <h2><a name="major.changes">2. Major Changes in this Release</a></h2>
 <p>
+  This release requires an update of script projects and its descriptors, 
+  e.g, in the UIMA Ruta Workbench by deleting all descriptors and updating the script project.
+  Right-click on a project and select "UIMA Ruta -> Convert to UIMA Ruta project"
+</p>
+<p>
 <h3>UIMA Ruta Language and Analysis Engine:</h3>
 <ul>
   <li>
-    Bug fixes
+    Requires Java 7
+  </li>
+  <li>
+    Maven Plugin for UIMA Ruta
+  </li>
+  <li>
+    Extensions and simplifications of the language (external resources, null values, more syntactic sugar)
+  </li>
+  <li>
+    Improvements to Analysis Engines (RutaEngine, HtmlConverter)
+  </li>
+  <li>
+    More exemplary script projects
+  </li>
+  <li>
+    Many, many bug fixes
   </li>
  </ul>
 <h3>UIMA Ruta Workbench:</h3>
  <ul>
+  <li>
+    Requires Java 7
+  </li>
+  <li>
+    Works now also in other project structures (Maven projects)
+  </li>
   <li>
     Bug fixes
   </li>
