@@ -33,6 +33,47 @@
 		<section name="Apache UIMA News">
       <subsectionToc/>
       
+      <subsection name="08 June 2015" date = "08 June 2015" title="Apache UIMA Ruta 2.3.0 released">
+        <p>Apache UIMA Ruta is a rule-based script language supported by
+          Eclipse-based tooling. The language is designed to enable rapid
+          development of text processing applications within UIMA. A special
+          focus lies on the intuitive and flexible domain specific language for defining
+          patterns of annotations. The Eclipse-based tooling,
+          called the Apache UIMA Ruta Workbench, was created to support the
+          user and to facilitate every step when writing rules. Both
+          the rule language and the workbench integrate
+          smoothly with Apache UIMA. 
+        </p>
+        <p>Major Changes in this Release</p>
+				<p>
+				  This release requires an update of script projects and its descriptors in the UIMA Ruta Workbench, 
+				  e.g, by deleting all descriptors and updating the script project.
+				  Right-click on a project and select "UIMA Ruta -> Convert to UIMA Ruta project"
+				</p>
+				<p>
+				<p>UIMA Ruta Language and Analysis Engine:</p>
+				<ul>
+				  <li>Requires Java 7</li>
+				  <li>Maven Plugin for UIMA Ruta</li>
+				  <li>Extensions and simplifications of the language (external resources, null values, more syntactic sugar)</li>
+				  <li>Improvements to Analysis Engines (RutaEngine, HtmlConverter)</li>
+				  <li>More exemplary script projects</li>
+				  <li>Many, many bug fixes</li>
+				 </ul>
+				<p>UIMA Ruta Workbench:</p>
+				 <ul>
+				  <li>Requires Java 7</li>
+				  <li>Works now also in other project structures (Maven projects)</li>
+				  <li>Bug fixes</li>
+				 </ul>
+				</p>
+        
+        <p>For a complete list of bugs and improvements included in this release please see
+        <a href="http://uima.apache.org/d/ruta-2.3.0/issuesFixed/jira-report.html">issue report</a>.
+        </p>
+      </subsection>
+      
+      
       <subsection name="06 March 2015" date = "06 March 2015" title="Apache UIMA Java SDK 2.7.0 released">
       <p>The UIMA Java SDK now requires Java 7.  There are significant changes in this release.  
       Some of these may break backwards compatibility; we have included some new JVM properties
