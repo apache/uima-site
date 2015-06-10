@@ -1,0 +1,54 @@
+Board report for Apache UIMA, for June 2015.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates: 
+08 Jun 2015  (new)        last release  
+12 Mar 2013  (no change)  last PMC addition
+24 Dec 2013  (no change)  last Committer addition
+          
+Releases:
+  UIMA Ruta 2.3.0 released, with better integration with Maven,
+  extensions and simplification of the rules language,
+  improvements to analysis engines including the HtmlConverter,
+  and many bug fixes. http://uima.apache.org/news.html#08 June 2015
+    
+Other Activity:
+
+A major potential contribution was posted to our Jira, which reimplements
+much of the "innards" of UIMA core using more standard Java constructions,
+in an attempt to support better concurrancy on processors with large
+numbers (e.g. 64) of cores.  This work is a proof-of-concept, and is
+being evaluated.  The community has asked the donor to submit a
+software grant so we can take this through IP clearance and put it into our
+SVN for further study and evaluation.
+
+This has prompted some new wiki pages documenting various ideas, tradeoffs,
+and diagrams explaining some of the more subtle points about UIMA innards.
+These are on our confluence wiki.  As a side note, a big thank you to
+infra for the upgrades to the wiki, in support of nice diagramming tooling!
+
+3 people including 2 PMC members gave UIMA-related talks at Apachecon 2015
+in Austin. We heard from one person that they attended ApacheCon just to be
+able to meet with the UIMA team.  One person subsequently has started
+contributing to the project. 
+
+Based on an ApacheCon talk which suggested talking with your community
+where they like to talk, more people have started responding to UIMA
+questions on StackOverflow, a popular website for these kinds of questions.
+
+We have agreed to participate in the documentary video about the ASF;
+a video call is planned for later this month.
+
+Besides UIMA Ruta (which had a release), UIMA DUCC is progressing toward
+a next release, and core UIMA development continues to be quite active.
+
+Community:
+
+The community continues to be moderately active.  A new person has started
+committing improvements to one of the core UIMA tools.
+ 
+Issues:
+No Board level issues at this time.
