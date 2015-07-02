@@ -31,6 +31,7 @@ under the License.
 <ol>
   <li>Do <a href="one-time-release-setup.html">one-time setup</a> required for releasing.</li>
   <li>Finish up any changes, close Jiras, assign Jiras to proper release(s).</li>
+  <li>Update the property in the main pom controlling the ISSUES-FIXED</li>
   <li>Update the READMEs and RELEASE-NOTES.</li>
   <li>Announce on the dev list that you're doing a release so others can get any changes in, and also
       know not to be committing to trunk while you're in the middle of doing the release.</li>
@@ -50,7 +51,7 @@ under the License.
       <p>Note: this doesn't seem to work, as the purged items end up being needed by the recursive module build.
       So, instead, just go to the .m2 .../uima/ node and consider deleting that directory.</p> 
     </li>
-  <li>Try a full build: mvn clean install -Papache-release</li>
+  <li>Do a full build with deploy of the (last) snapshot before release: mvn clean deploy -Papache-release</li>
   <li>If retrying a release candidate, delete the old rc-xxx in svn xxx/tags/</li>
   <li>If retrying a release candidate, <code><b>close</b></code> (and <code><b>drop</b></code> as appropriate) any previous repository.apache.org staging repo</li>
   <!--li>(If remerging a branch:  Note- best to do these if possible at the root of aggregations, 
@@ -102,7 +103,9 @@ under the License.
   <li>If necessary, run mvn release:prepare on the eclipse update site.  This will create the svn tag,
       and create the needed artifacts in the target/eclipse-update-site.  Or, you can create the tag 
       yourself, and run mvn install -Papache-release.
-      No need to run release:perform because no artifacts from this are going to Maven central distribution.</li>
+      No need to run release:perform because no artifacts from this are going to Maven central distribution.
+      <p>Note that the target/eclipse-update-site will have .svn files - don't delete these - they're needed when
+      you decide to "publish" via comitting these to the release svn.</p></li>
   <li>Copy any artifacts (together with their signings) to the staging spot.  This is typically
   in your people.apache.org/~[userid]/public_html directory. For releases which include eclipse-update-site
   packagings, this should include any modifications to the composite update site or subsites (see
