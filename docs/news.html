@@ -204,6 +204,13 @@
         <blockquote class="sectionBody">
                                           <table class="subsectionToc">
             <tr >
+      <td>22 July 2015</td>
+      <td><a href='#22 July 2015'>
+                  Apache UIMA Java SDK 2.8.0 released
+                </a>
+      </td>
+      </tr>  
+          <tr >
       <td>08 June 2015</td>
       <td><a href='#08 June 2015'>
                   Apache UIMA Ruta 2.3.0 released
@@ -492,6 +499,40 @@
       </tr>  
         </table>
                                                         <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="22 July 2015">
+            <h2>22 July 2015
+                        &ndash; Apache UIMA Java SDK 2.8.0 released
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>This release is a bug fix release, plus one enhancement.  The version number incremented because
+	      we restored some APIs that were accidentally dropped in 2.7.0.  
+	      </p>
+                                                <p>An improvement was made to the performance of iterators over sorted indexes, such as the 
+	      built-in Annotation index.  This improvement may be significant when iterating over types where the type has
+	      many subtypes.</p>
+                                                <p>Index usage by iterators in this situation is now monitored, and when it is determined 
+	      that a particular index is no longer being updated and is experiencing poor performance due to merging of 
+	      subindexes for the subtypes being iterated over, a one-time conversion of this index to a "flattened" version is done; 
+	      the flattened form incurs the cost of merging subindexes once, and for subsequent uses, 
+	      iteration overhead is reduced. Any update that affects this flattened index will cause it to be discarded 
+        and not used for subsequent iterations.</p>
+                                                <p>Performance improvement may be seen for use cases 
+	      where one annotator creates and indexes instances of a type and its subtypes, and subsequent annotators 
+	      read and perhaps update these, but don't add or remove entries of this type/subtypes from the index. 
+	      For more details, see Jira issue 
+	      <a target="_blank" href="https://issues.apache.org/jira/browse/UIMA-4357">UIMA-4357</a>. 
+	      </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
         <tr><td>
        
        
