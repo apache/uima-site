@@ -295,12 +295,18 @@
       other builds might need some cleanup.
       </li>
   <li>Promote the release(s) from the staging repositories</li>
-  <li>Add the approved staged artifacts to the release/uima spot.  
-      Do an svn add on the bin (zip and tar) and source-release files and their sigs.
-      Do not add files like POMs which have line-endings, if they have signatures; the files added should
+  <li>Add the approved staged artifacts to the release/uima spot. This is
+      https://dist.apache.org/repos/dist/release/uima/uimaj-2.8.0  (replace the last with the thing being released).
+      A suggested approach: Make a new dir in the build project, called svnUpload (or whatever), and copy the artifacts (typically the
+      bin/zip/tar and the source release and all the signature/checksums) into this dir.  Then do the svn command:
+      <pre>cd the-svnUpload-directory
+svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos/dist/release/uima/xxxxxxxx-n.n.n
+</pre>
+            Do not add files like POMs which have line-endings, if they have signatures; the files added should
       be "binary" style files.  (The line endings (if you build on windows) will be changed upon upload to svn,
       which will result in bad signatures).
       </li>
+      <li>Eclipse update sites are already svn working copies, so you can commit these.</li>
   <li>update the UIMA website docs/d with any generated docs, in a manner to 
   <a href="saving-svn-resources.html">minimize SVN space</a> use, if possible.
 This includes: PDFs, HTML versions of docbooks plus the index.html; all go on the
