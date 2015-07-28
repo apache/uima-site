@@ -32,6 +32,7 @@ under the License.
   <li>Do <a href="one-time-release-setup.html">one-time setup</a> required for releasing.</li>
   <li>Finish up any changes, close Jiras, assign Jiras to proper release(s).</li>
   <li>Update the property in the main pom controlling the ISSUES-FIXED</li>
+  <li><b>NEW ! </b>Update the parent-pom settings for API compatibility: previous version and compat.level</li>
   <li>Update the READMEs and RELEASE-NOTES.</li>
   <li>Announce on the dev list that you're doing a release so others can get any changes in, and also
       know not to be committing to trunk while you're in the middle of doing the release.</li>

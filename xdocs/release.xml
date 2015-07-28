@@ -160,6 +160,8 @@ A previous version of this page, with the methods we used while in the incubator
 		            is updated to include the internal Jira version number, so the 
 		            right report is generated.</p>
 		        </li>
+		        
+		    <li><b>NEW !!! </b>Update the parent-pom settings for API compatibility: previous version and compat.level.</li>    
  		  </ul>
 		</p>
 	</subsection>
