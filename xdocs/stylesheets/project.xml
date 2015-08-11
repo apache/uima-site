@@ -93,6 +93,15 @@
         --> 
   </menus>
 
+  <downloads version="2.0.0" title="Apache UIMA DUCC Version 2.0.0" withreleasedate="true">
+
+    <download name="UIMA DUCC" subdirectory="uima-ducc-2.0.0" releasedate="11-Aug-2015">
+      <releasenotes filename="uima-ducc-2.0.0/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
+      <binary       filename="uima-ducc-2.0.0-bin">                   <f>tar.gz</f>                </binary>   
+      <source       filename="uima-ducc-2.0.0-source-release">                   <f>zip</f>    </source>
+    </download>
+  </downloads>
+
   <downloads version="2.8.1" title="Apache UIMA Version 2.8.1" withreleasedate="true">
     <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-2.8.1" releasedate="11-Aug-2015">
       <releasenotes filename="uimaj-2.8.1/RELEASE_NOTES">           <f>html</f>                </releasenotes>
@@ -101,16 +110,6 @@
     </download>
   </downloads>
 
-  <downloads version="1.1.0" title="Apache UIMA DUCC Version 1.1.0" withreleasedate="true">
-
-    <download name="UIMA DUCC" subdirectory="uima-ducc-1.1.0" releasedate="23-Oct-2014">
-      <releasenotes filename="uima-ducc-1.1.0/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
-      <binary       filename="uima-ducc-1.1.0-bin">                   <f>tar.gz</f>                </binary>   
-      <source       filename="uima-ducc-1.1.0-source-release">                   <f>zip</f>    </source>
-    </download>
-  </downloads>
-
-  
   <downloads version="2.6.0" title="Apache UIMA-AS 2.6.0" withreleasedate="true">
 
     <download name="UIMA AS Asynchronous Scaleout" subdirectory="uima-as-2.6.0" releasedate="16-Jul-2014">
@@ -122,12 +121,12 @@
 
 
 
-  <downloads version="1.0.0" title="Apache UIMA DUCC Version 1.0.0" withreleasedate="true">
+  <downloads version="1.1.0" title="Apache UIMA DUCC Version 1.1.0" withreleasedate="true">
 
-    <download name="UIMA DUCC" subdirectory="uima-ducc-1.0.0" releasedate="30-Jan-2014">
-      <releasenotes filename="uima-ducc-1.0.0/RELEASE_NOTES">           <f>html</f>                </releasenotes>
-      <binary       filename="uima-ducc-1.0.0-bin">                     <f>tar.gz</f>  </binary>   
-      <source       filename="uima-ducc-1.0.0-source-release">                     <f>zip</f>  </source>
+    <download name="UIMA DUCC" subdirectory="uima-ducc-1.1.0" releasedate="23-Oct-2014">
+      <releasenotes filename="uima-ducc-1.1.0/RELEASE_NOTES">           <f>html</f>                </releasenotes>
+      <binary       filename="uima-ducc-1.1.0-bin">                     <f>tar.gz</f>  </binary>   
+      <source       filename="uima-ducc-1.1.0-source-release">                     <f>zip</f>  </source>
     </download>
     
   </downloads>
@@ -149,6 +148,16 @@
     </download>
   </downloads>
   
+  <downloads version="1.0.0" title="Apache UIMA DUCC Version 1.0.0" withreleasedate="true">
+
+    <download name="UIMA DUCC" subdirectory="uima-ducc-1.0.0" releasedate="30-Jan-2014">
+      <releasenotes filename="uima-ducc-1.0.0/RELEASE_NOTES">           <f>html</f>                </releasenotes>
+      <binary       filename="uima-ducc-1.0.0-bin">                     <f>tar.gz</f>  </binary>   
+      <source       filename="uima-ducc-1.0.0-source-release">                     <f>zip</f>  </source>
+    </download>
+    
+  </downloads>
+
   <downloads version="2.5.0" title="Apache UIMA Version 2.5.0" withreleasedate="true">
     <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-2.5.0" releasedate="14-Jan-2014">
       <releasenotes filename="uimaj-2.5.0/RELEASE_NOTES">           <f>html</f>                </releasenotes>
