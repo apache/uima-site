@@ -125,8 +125,9 @@ under the License.
       </li>
   <li>Promote the release(s) from the staging repositories</li>
   <li>Add the approved staged artifacts to the release/uima spot. This is
-      https://dist.apache.org/repos/dist/release/uima/uimaj-2.8.0  (replace the last with the thing being released).
-      A suggested approach: Make a new dir in the build project, called svnUpload (or whatever), and copy the artifacts (typically the
+      https://dist.apache.org/repos/dist/release/uima/uimaj-x.y.z  (replace the last with the thing being released).
+      A suggested approach: Make a new dir in the build project, called svnUpload (or whatever), and 
+      copy the artifacts (<b>from the build/target/checkout/target directory</b>)(typically the
       bin/zip/tar and the source release and all the signature/checksums) into this dir.  Then do the svn command:
       <pre>cd the-svnUpload-directory
 svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos/dist/release/uima/xxxxxxxx-n.n.n
