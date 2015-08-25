@@ -29,10 +29,20 @@
 	</properties>
 
 	<body>
+	
 
 		<section name="Apache UIMA News">
       <subsectionToc/>
  
+		  <subsection name="25 Aug 2015" date = "25 August 2015" title="Apache UIMA Ruta 2.3.1 released">
+	
+	        <p>This is a bugfix release. It fixes diverse problems of the rule inference, 
+	          the ruta-maven-plugin and the UIMA Ruta Workbench.</p>
+	        <p>For a complete list of bugs and improvements included in this release please see
+	        <a href="http://uima.apache.org/d/ruta-2.3.1/issuesFixed/jira-report.html">issue report</a>.
+	        </p>
+	    </subsection>
+
      <subsection name="11 Aug 2015" date = "11 August 2015" title="Apache UIMA DUCC 2.0.0 released">
         <p>DUCC stands for Distributed UIMA Cluster Computing. DUCC is a cluster management system providing tooling,
 management, and scheduling facilities to automate the scale-out of applications written to the UIMA framework.
