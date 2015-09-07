@@ -29,31 +29,15 @@ under the License.
 
 <section name="UIMA Components">
 
-
-
 <p>
-
-Here are some links to Apache UIMA&#0153; components available from other places.  If you find other links that
-
-you think should be listed here, please drop us a line on our dev or user mailing lists.  Similarly,
-
-if any of the content is out of date or inappropriate, please let us know.
+Here are some links to Apache UIMA&#0153; components available from other places. If you find other
+links that you think should be listed here, please drop us a line on our dev or user mailing lists.
+Similarly, if any of the content is out of date or inappropriate, please let us know.
 </p>
 
 <subsectionToc/>
 
-<subsection name="OpenNLP Project">
-
-<p>The <a href="http://opennlp.apache.org/">OpenNLP Project</a> provides the
-official UIMA integration for the OpenNLP Sentence Detector, Tokenizer, POS Tagger,
-Name Finder, Document Categorizer, Chunker and Parser. 
-The opennlp.uima distribution includes a sample PEAR which can easily be tested with the Cas Visual Debugger.
-</p>
-
-</subsection>
-
-<subsection name="cTAKES">
-
+<subsection name="Apache cTAKES">
 <p>The <a href="http://ctakes.apache.org">cTAKES</a>
 project 
 (clinical Text Analysis and Knowledge Extraction System) 
@@ -66,16 +50,60 @@ Its components are specifically trained for the (English language)
 clinical domain;  it creates rich linguistic and semantic annotations that 
 can be used by clinical decision support systems and clinical research.
 </p>
-</subsection>S
+</subsection>
 
-<!--  appears to be not found as of 5/2015 -->
-<subsection name="UIMA Component Repository at CMU">
-
-<p> The <a href="http://uima.lti.cs.cmu.edu/" target="_blank">UIMA Component Repository at CMU</a> lists
-a large number of UIMA components, some of which can be freely downloaded.
+<subsection name="Apache OpenNLP">
+<p>The <a href="http://opennlp.apache.org/">OpenNLP Project</a> provides the
+official UIMA integration for the OpenNLP Sentence Detector, Tokenizer, POS Tagger,
+Name Finder, Document Categorizer, Chunker and Parser. 
+The opennlp.uima distribution includes a sample PEAR which can easily be tested with the Cas Visual Debugger.
 </p>
 </subsection>
--->
+
+<subsection name="Behemoth">
+<p><a href="https://github.com/DigitalPebble/behemoth" target="_blank">Behemoth</a> is an Apache Licensed open source 
+platform for large scale document processing which allows deploying UIMA applications
+within Hadoop.
+</p>
+</subsection>
+
+<subsection name="BioNLP Wrappers">
+<p>The <a href="http://compbio.ucdenver.edu/Hunter_lab/" target="_blank">
+  Center for Computational Pharmacology</a> at the University of Colorodo
+  has wrapped a number of popular bio-informatic annotators as UIMA components, and
+  added some supporting additional code and components.  More information is available 
+  at <a href="http://bionlp-uima.sourceforge.net" target="_blank">http://bionlp-uima.sourceforge.net</a>.
+</p>  
+</subsection>
+
+<subsection name="ClearTK">
+<p><a href="http://cleartk.github.io/cleartk/">ClearTK</a> is a framework for developing machine
+learning and natural language processing components within the Apache UIMA.
+</p>
+</subsection>
+
+<subsection name="DKPro Core">
+<p><a href="https://dkpro.github.io/dkpro-core" target="_blank">DKPro Core</a> is a collection of software components for natural language 
+processing (NLP) based on the Apache UIMA framework. The provided components wrap a constantly 
+growing set of stand-of-the-art NLP tools and also include several original components covering a 
+wide range of tasks including: tokenization/segmentation, compound splitting, stemming,
+part-of-speech tagging, lemmatization, constituency parsing, dependency parsing, 
+named entity recognition, coreference resolution, language identification, 
+spelling correction, grammar checking, and  support for reading and writing various
+file and corpus formats.
+</p>
+<p>
+DKPro Core relies heavily on <a href="../uimafit.html">uimaFIT</a>. DKPro Core is meant to be used with Apache Maven. The main components
+are hosted on <a href="http://search.maven.org/#search%7Cga%7C1%7Cde.tudarmstadt.ukp.dkpro.core" 
+target="_blank">Maven Central</a> while distributable models are available from the
+public <a href="https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/simple/public-model-releases-local/de/tudarmstadt/ukp/dkpro/core/" 
+target="_blank">Maven repository</a> at <a href="https://www.ukp.tu-darmstadt.de">Ubiquitous Knowledge Processing (UKP) Lab</a>, TU Darmstadt.
+</p>
+</subsection>
+
+<subsection name="DKPro Text Classification">
+<p><a href="https://dkpro.github.io/dkpro-tc/">DKPro TC</a> is a UIMA-based text classification framework built on top of DKPro Core, DKPro Lab and the Weka Machine Learning Toolkit. It is intended to alleviate supervised machine learning experiments with any kind of textual data.</p>
+</subsection>
 
 <subsection name="JCoRe NLP Toolsuite">
 <p>The <a href="http://www.julielab.de/Resources/JCoRe+NLP+Tools.html" target="_blank">JCoRe NLP Toolsuite</a>
@@ -84,6 +112,14 @@ UIMA components.  It includes also a
 <a href="http://www.julielab.de/Resources/Software/UIMA+type+system-p-91.html" target="_blank">type system</a>
 you can use as basis for your own NLP applications.
 </p>
+</subsection>
+
+<subsection name="National Centre for Text Mining (NaCTeM)">
+  <p>  
+    The <a href="http://www.nactem.ac.uk/" target="_blank">
+  National Centre for Text Mining (NaCTeM)</a> at the University
+of Manchester hosts a <a href="http://www.nactem.ac.uk/uima_work/" target="_blank">repository</a>.
+  </p>
 </subsection>
 
 <subsection name="u-compare">
@@ -102,36 +138,13 @@ utilities, and includes a large set of type-system-compatible UIMA components.
   </p>
 </subsection>
 
-<subsection name="Center for Computation Pharmacology">
-  <p>
-    The <a href="http://compbio.ucdenver.edu/Hunter_lab/" target="_blank">
-  Center for Computational Pharmacology</a> at the University of Colorado School of
-Medicine hosts a <a href="http://bionlp-uima.sourceforge.net/" target="_blank">repository</a> (see BioNLP entry,
-which describes this in more detail).
-  </p>
-</subsection>
-
-<subsection name="National Centre for Text Mining (NaCTeM)">
-  <p>  
-    The <a href="http://www.nactem.ac.uk/" target="_blank">
-  National Centre for Text Mining (NaCTeM)</a> at the University
-of Manchester hosts a <a href="http://www.nactem.ac.uk/uima_work/" target="_blank">repository</a>.
-  </p>
-</subsection>
-  
-<subsection name="BioNLP Wrappers">
-  <p>The Center for Computational Pharmacology at the University of Colorodo
-  has wrapped a number of popular bio-informatic annotators as UIMA components, and
-  added some supporting additional code and components.  More information is available 
-  at <a href="http://bionlp-uima.sourceforge.net" target="_blank">http://bionlp-uima.sourceforge.net</a>.</p>
-  
-</subsection>
-
-<subsection name="Behemoth">
-<p><a href="https://github.com/DigitalPebble/behemoth" target="_blank">Behemoth</a> is an Apache Licensed open source 
-platform for large scale document processing which allows deploying UIMA applications
-within Hadoop.
-</p>
+<subsection name="uimaFIT (legacy)">
+<p><a href="http://code.google.com/p/uimafit" target="_blank">
+uimaFIT (legacy)</a>
+is a library that provides factories, injection, 
+and testing utilities for UIMA. It provides a convenient Java API 
+for using UIMA in Java projects without having to deal with XML descriptors.
+</p><p><a href="../uimafit.html">Apache uimaFIT&#0153;</a> supersedes this project.</p>
 </subsection>
 
 <subsection name="UIMA French portal">
@@ -145,49 +158,25 @@ of Nantes.
 </p>
 </subsection>
 
-<subsection name="DKPro Core">
-<p><a href="https://www.ukp.tu-darmstadt.de/research/current-projects/dkpro/" 
-target="_blank">DKPro Core</a> is a collection of software components for natural language 
-processing (NLP) based on the Apache UIMA framework. The provided components wrap a constantly 
-growing set of stand-of-the-art NLP tools and also include several original components covering a 
-wide range of tasks including: tokenization/segmentation, compound splitting, stemming,
-part-of-speech tagging, lemmatization, constituency parsing, dependency parsing, 
-named entity recognition, coreference resolution, language identification, 
-spelling correction, grammar checking, and  support for reading and writing various
-file and corpus formats.
-</p>
-<p>
-DKPro Core offers two sets of components:
-<ul>
-<li><a href="http://code.google.com/p/dkpro-core-asl/" target="_blank">DKPro Core ASL</a> 
-provides components under the Apache Software License 2.0
-</li>
-<li>
-<a href="http://code.google.com/p/dkpro-core-gpl" target="_blank">DKPro Core GPL</a>
-provides components under the GNU Public License 3.0
-</li>
-</ul>
-</p>
-<p>
-DKPro Core relies heavily on <a href="../uimafit.html">uimaFIT</a>. DKPro Core is meant to be used with Apache Maven. The main components
-are hosted on <a href="http://search.maven.org/#search%7Cga%7C1%7Cde.tudarmstadt.ukp.dkpro.core" 
-target="_blank">Maven Central</a> while distributable models are available from the
-public <a href="https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/simple/public-model-releases-local/de/tudarmstadt/ukp/dkpro/core/" 
-target="_blank">Maven repository</a> at UKP Lab.
+<!--  appears to be not found as of 5/2015
+<subsection name="UIMA Component Repository at CMU">
+
+<p> The <a href="http://uima.lti.cs.cmu.edu/" target="_blank">UIMA Component Repository at CMU</a> lists
+a large number of UIMA components, some of which can be freely downloaded.
 </p>
 </subsection>
+-->
 
-
-
-<subsection name="uimaFIT (legacy)">
-<p><a href="http://code.google.com/p/uimafit" target="_blank">
-uimaFIT (legacy)</a>
-is a library that provides factories, injection, 
-and testing utilities for UIMA. It provides a convenient Java API 
-for using UIMA in Java projects without having to deal with XML descriptors.
-</p><p><a href="../uimafit.html">Apache uimaFIT&#0153;</a> supersedes this project.</p>
-
+<!-- Redundant with BioNLP  - hence removed 09/2015
+<subsection name="Center for Computation Pharmacology">
+  <p>
+    The <a href="http://compbio.ucdenver.edu/Hunter_lab/" target="_blank">
+  Center for Computational Pharmacology</a> at the University of Colorado School of
+Medicine hosts a <a href="http://bionlp-uima.sourceforge.net/" target="_blank">repository</a> (see BioNLP entry,
+which describes this in more detail).
+  </p>
 </subsection>
+-->  
 
 <!-- removed 12/2010 at request of Digitalpebble (Julian Nioche) - says they're not supporting 
 subsection name="RASP4UIMA">
