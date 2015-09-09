@@ -1,0 +1,37 @@
+Board report for Apache UIMA, for September 2015.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates: 
+25 Aug 2015  (new)        last release - Apache UIMA Ruta 2.3.1  
+12 Mar 2013  (no change)  last PMC addition
+24 Jul 2015  (new)        last Committer addition
+          
+Releases:
+  22 Jul 2015: UIMA Java SDK 2.8.0 released - restoring some accidentally dropped public APIs
+  11 Aug 2015: UIMA Java SDK 2.8.1 released - a few bug fixes found in 2.8.0 after release
+  11 Aug 2015: UIMA DUCC 2.0.0 released - a major release with many new features and bug fixes
+  25 Aug 2015: UIMA Ruta 2.3.1 released - bugfix release
+    
+Other Activity:
+
+Received a software grant for the donation of a rework of the UIMA innards.
+
+Work continues documenting various ideas, tradeoffs,
+and diagrams explaining some of the more subtle points about UIMA innards.
+These are on our confluence wiki.  
+
+The person we talked with at ApacheCon contributed some improvements to a 
+visualization tool; these were incorporated into our UIMA 2.8.0 release.
+
+We participated in the documentary video about the ASF via a video call.
+
+Community:
+
+The community continues to be moderately active with some contributions
+coming from a couple of new people. 
+ 
+Issues:
+No Board level issues at this time.
