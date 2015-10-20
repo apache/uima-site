@@ -299,8 +299,8 @@ discard from the working-copy, the /docs/d/ content (the generated Javadocs, etc
 This can be done using the command:
 <pre>cd to the top of the uima-website working copy, and then
 svn update --set-depth exclude docs/d
-svn update --set-depth exclude docs/download/gldv
-svn update --set-depth exclude docs/download/releaseDocs</pre>
+svn update --set-depth exclude docs/downloads/gldv
+svn update --set-depth exclude docs/downloads/releaseDocs</pre>
 This will run for a while, but then the directories mentioned and their contents will be
 deleted from your working copy; this will speed up various SVN operations that have
 to scan the files for changes, etc. For more details, see

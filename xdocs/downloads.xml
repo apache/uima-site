@@ -97,12 +97,13 @@ Other mirrors: <select name="Preferred">
 </section>
 
 
-<!-- add a subsection for the project version being released. Do not enter download info here, instead enter it in the project.xml file--> 
+<!-- add a subsection for the project version being released. Do not enter download info here, instead enter it in the stylesheets/project.xml file--> 
 <section name="Latest Official Releases">  
   <p>Note: As of release 2.3.0, the CAS Editor and the Pear packaging maven plugin are now part of the UIMA Java framework and SDK.</p>
 
   <subsection name="Apache UIMA DUCC Version 2.0.0">
     <insertDownloads version="2.0.0"/>
+    <p>Note: For a script that will migrate an existing installation to a new version try <a href='d/uima-ducc-2.0.0/ducc_update'>ducc_update</a></p>
   </subsection>
 
   <subsection name="Apache UIMA Version 2.8.1">
