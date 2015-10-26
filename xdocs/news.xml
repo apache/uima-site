@@ -34,7 +34,15 @@
 		<section name="Apache UIMA News">
       <subsectionToc/>
  
-		  <subsection name="25 Aug 2015" date = "25 August 2015" title="Apache UIMA Ruta 2.3.1 released">
+     <subsection name="26 October 2015" date = "26 October 2015" title="Apache UIMA Ducc 2.0.0 released">
+	
+	        <p>This is a bug fix release addressing bugs found since ducc 2.0.0 release.</p>
+	        <p>For a complete list of bugs included in this release please see
+        <p>Please see the <a target="_blank" href="http://uima.apache.org/d/uima-ducc-2.0.1/RELEASE_NOTES.html">RELEASE_NOTES</a>
+        for a summary of the changes.</p>
+	    </subsection>
+
+     <subsection name="25 Aug 2015" date = "25 August 2015" title="Apache UIMA Ruta 2.3.1 released">
 	
 	        <p>This is a bugfix release. It fixes diverse problems of the rule inference, 
 	          the ruta-maven-plugin and the UIMA Ruta Workbench.</p>
