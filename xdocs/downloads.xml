@@ -106,11 +106,6 @@ Other mirrors: <select name="Preferred">
     <p>Note: For a script that will migrate an existing installation to a new version try <a href='d/uima-ducc-2.0.1/ducc_update'>ducc_update</a></p>
   </subsection>
 
-  <subsection name="Apache UIMA DUCC Version 2.0.0">
-    <insertDownloads version="2.0.0"/>
-    <p>Note: For a script that will migrate an existing installation to a new version try <a href='d/uima-ducc-2.0.0/ducc_update'>ducc_update</a></p>
-  </subsection>
-
   <subsection name="Apache UIMA Version 2.8.1">
     <p>Note: This version replaces 2.8.0 with bug fixes, and 2.8.0 is only available in the archives.</p>
     <insertDownloads version="2.8.1"/>
