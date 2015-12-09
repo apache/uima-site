@@ -1,0 +1,31 @@
+Board report for Apache UIMA, for December 2015.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates: 
+26 Oct 2015  (new)        last release - Apache UIMA DUCC 2.0.1  
+12 Mar 2013  (no change)  last PMC addition
+24 Jul 2015  (no change)  last Committer addition
+          
+Releases:
+  26 Oct 2015: UIMA DUCC 2.0.1 released - a bug fix release
+    
+Other Activity:
+
+Implementation on the experimental UIMA Version 3 core has advanced to the point
+where a significant number of test cases are passing.
+
+UIMA Ruta (Rules Text Language and workbench) and DUCC continue to be very active.
+
+Community:
+
+The community continues to be moderately active with some contributions
+coming from a couple of new people. 
+
+An official communication from the UK Ministry of Defence announced a text analytics 
+framework based on UIMA, see https://www.gov.uk/government/news/dstl-adds-to-open-source-software
+ 
+Issues:
+No Board level issues at this time.
