@@ -171,20 +171,22 @@ under the License.
   <p>
     If you use UIMA Ruta to support academic research, then please consider citing the following
     paper as appropriate:</p>
-	<pre>@article{NLE:9375265,
+    
+  <pre>@article{NLE:10051335,
   author = {Kluegl, Peter and Toepfer, Martin and Beck, Philip-Daniel and Fette, Georg and Puppe, Frank},
   title = {UIMA Ruta: Rapid development of rule-based information extraction applications},
   journal = {Natural Language Engineering},
-  volume = {FirstView},
-  month = {4},
-  year = {2015},
+  volume = {22},
+  issue = {01},
+  month = {1},
+  year = {2016},
   issn = {1469-8110},
   pages = {1--40},
   numpages = {40},
   doi = {10.1017/S1351324914000114},
   URL = {http://journals.cambridge.org/article_S1351324914000114},
 }
-	</pre>
+  </pre>  
 	</subsection>
  
 </section>
