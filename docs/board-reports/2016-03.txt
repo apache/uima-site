@@ -1,0 +1,48 @@
+Board report for Apache UIMA, for March 2016.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates: 
+15 Feb 2016  (new)        last release - Apache UIMA RUTA 2.4.0 
+                                        (Rules Text Language and workbench) 
+12 Mar 2013  (no change)  last PMC addition
+24 Jul 2015  (no change)  last Committer addition
+          
+Releases:
+  15 Feb 2016 Apache UIMA RUTA 2.4.0 - this was a large-ish collection of new 
+              features and bug fixes
+              
+Other Activity:
+
+The experimental UIMA Version 3 core has advanced to having all but 3 of the 
+core test cases running. Next phase will involve compatibility testing and
+building bridges from the current to the new version, a potentially non-trivial
+task.
+
+UIMA Ruta (Rules Text Language and workbench) and DUCC continue to be very active.
+Work is also underway to do a release of UIMA-AS to upgrade several of the
+components within it.  One component, ActiveMQ, was identified as having security
+issues, and the upgrade will resolve those.  
+
+We began work with Mark Thomas (of Apache) on two initiatives - code signing, and
+looking at the results of the SRC CLR scanning for code vulnerabilities - this
+is currently ongoing work.
+
+A Committer and PMC member, Richard Eckart de Castilho, gave an Apache UIMA
+lightning talk at the Apache Software Foundation Roadshow event in 
+Karlsruhe, Germany.  http://jug-karlsruhe.de/content/apache-software-foundation/
+
+We managed with help from various sources within Apache to guess the owner of
+the Twitter account named Apache UIMA, and also managed to reclaim that account;
+this was done without invoking trademark infringement claims.
+it is now under control of Apache UIMA PMC members, and will be used to 
+tweet Apache UIMA significant events.
+
+Community:
+
+The community continues to be moderately active.
+ 
+Issues:
+No Board level issues at this time.
