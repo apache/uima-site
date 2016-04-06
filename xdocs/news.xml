@@ -33,6 +33,15 @@
 
 		<section name="Apache UIMA News">
       <subsectionToc/>
+
+      <subsection name="06 Apr 2016" date = "06 Apr 2016" title="Apache uimaFIT 2.2.0 released">
+        <p>uimaFIT 2.2.0 is a minor feature and bugfix release to uimaFIT 2.1.0. It should should 
+        serve as a drop-in replacement for previous uimaFIT 2.x versions.</p><p>
+        The complete list of fixes is <a href="d/uimafit-2.2.0/issuesFixed/jira-report.html">here</a>.
+        </p><p>
+        This version of uimaFIT requires Java version 7 or later.      
+        </p>
+      </subsection>
  
       <subsection name="15 Feb 2016" date = "15 February 2016" title="Apache UIMA Ruta 2.4.0 released">
         <p>Apache UIMA Ruta is a rule-based script language supported by

@@ -272,16 +272,21 @@
   </downloads>
 
   <downloads version="uimaFIT" title="Apache UIMA uimaFIT" withreleasedate="true">
-    <download name="uimaFIT 2.1.0" subdirectory="uimafit-2.1.0" releasedate="12-Jun-2014">
-      <releasenotes filename="uimafit-2.1.0/README">           <f>txt</f>                </releasenotes>
-      <binary       filename="uimafit-2.1.0-bin">                   <f>zip</f>  <f>tar.gz</f>                </binary>   
-      <source       filename="uimafit-2.1.0-source-release">                     <f>zip</f>  </source>
+    <download name="uimaFIT 2.2.0" subdirectory="uimafit-2.2.0" releasedate="06-Apr-2016">
+      <releasenotes filename="uimafit-2.2.0/README">           <f>txt</f>  </releasenotes>
+      <binary       filename="uimafit-2.2.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   
+      <source       filename="uimafit-2.2.0-source-release">   <f>zip</f>  </source>
     </download>
-    <!--
+    <!-- 
+    <download name="uimaFIT 2.1.0" subdirectory="uimafit-2.1.0" releasedate="12-Jun-2014">
+      <releasenotes filename="uimafit-2.1.0/README">           <f>txt</f>  </releasenotes>
+      <binary       filename="uimafit-2.1.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   
+      <source       filename="uimafit-2.1.0-source-release">   <f>zip</f>  </source>
+    </download>
     <download name="uimaFIT 2.0.0" subdirectory="uimafit-2.0.0" releasedate="31-Aug-2013">
-      <releasenotes filename="uimafit-2.0.0/README">           <f>txt</f>                </releasenotes>
-      <binary       filename="uimafit-2.0.0-bin">                   <f>zip</f>  <f>tar.gz</f>                </binary>   
-      <source       filename="uimafit-2.0.0-source-release">                     <f>zip</f>  </source>
+      <releasenotes filename="uimafit-2.0.0/README">           <f>txt</f>  </releasenotes>
+      <binary       filename="uimafit-2.0.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   
+      <source       filename="uimafit-2.0.0-source-release">   <f>zip</f>  </source>
     </download>
     -->
   </downloads>
