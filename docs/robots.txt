@@ -1,11 +1,12 @@
 # robots.txt for http://uima.apache.org
 
 User-agent: Googlebot
+Disallow: /downloads/releaseDocs/
 Disallow: /docs/d/
-Allow: /docs/d/ruta-current
-Allow: /docs/d/uima-addons-current
-Allow: /docs/d/uima-as-current
-Allow: /docs/d/uima-ducc-current
-Allow: /docs/d/uimacpp-current
-Allow: /docs/d/uimafit-current
-Allow: /docs/d/uimaj-current
+Allow: /docs/d/ruta-current/
+Allow: /docs/d/uima-addons-current/
+Allow: /docs/d/uima-as-current/
+Allow: /docs/d/uima-ducc-current/
+Allow: /docs/d/uimacpp-current/
+Allow: /docs/d/uimafit-current/
+Allow: /docs/d/uimaj-current/
