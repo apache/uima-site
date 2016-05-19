@@ -119,6 +119,15 @@
     </download>
   </downloads>
 
+  <downloads version="2.8.1" title="Apache UIMA-AS 2.8.1" withreleasedate="true">
+    <download name="UIMA AS Asynchronous Scaleout" subdirectory="uima-as-2.8.1" releasedate="20-May-2016">
+      <releasenotes filename="uima-as-2.8.1/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
+      <binary       filename="uima-as-2.8.1-bin">                   <f>zip</f>  <f>tar.gz</f>                </binary>   
+      <source       filename="uima-as-2.8.1-source-release">                   <f>zip</f>    </source>
+    </download>
+  </downloads>
+
+
   <downloads version="2.6.0" title="Apache UIMA-AS 2.6.0" withreleasedate="true">
 
     <download name="UIMA AS Asynchronous Scaleout" subdirectory="uima-as-2.6.0" releasedate="16-Jul-2014">

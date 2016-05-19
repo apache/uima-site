@@ -34,6 +34,29 @@
 		<section name="Apache UIMA News">
       <subsectionToc/>
 
+
+    <subsection name="20 May 2016" date = "20 May 2016" title="Apache UIMA Asynchronous Scaleout (UIMA-AS) 2.8.1 released">
+      <p>UIMA AS 2.8.1 is a maintenance release that contains fixes and improvements over UIMA-AS 2.6.0.
+      </p><p>
+      The complete list of fixes is <a href="d/uima-as-2.8.1/issuesFixed/jira-report.html">here</a>.
+      </p>
+        <p>The major changes in this release are:</p>
+        <ul>
+          <li>Upgraded ActiveMQ, Spring Framework and Jetty</li>
+          <li>Upgraded dependency on UIMA-SDK to v.2.8.1</li>
+          <li>Fixed per CAS Performance Metrics breakdown for async deployments</li>
+          <li>Added new feature to allow warm up of a JVM service instance before real processing begins,
+    by feeding it a specified set of CASes before the instance connects to the service input queue.</li>
+         </ul>
+        <p>
+
+
+      <p>
+      This version of UIMA-AS requires Java version 7 or later.      
+      </p>
+    </subsection>
+
+
       <subsection name="06 Apr 2016" date = "06 Apr 2016" title="Apache uimaFIT 2.2.0 released">
         <p>uimaFIT 2.2.0 is a minor feature and bugfix release to uimaFIT 2.1.0. It should should 
         serve as a drop-in replacement for previous uimaFIT 2.x versions.</p><p>
