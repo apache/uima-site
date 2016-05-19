@@ -48,8 +48,6 @@
           <li>Added new feature to allow warm up of a JVM service instance before real processing begins,
     by feeding it a specified set of CASes before the instance connects to the service input queue.</li>
          </ul>
-        <p>
-
 
       <p>
       This version of UIMA-AS requires Java version 7 or later.      
