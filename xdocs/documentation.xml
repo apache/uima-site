@@ -79,7 +79,7 @@
    </p>
    <ul>
      <li><a href="../d/uimaj-2.3.1/index.html">HTML online version - UIMA Java SDK</a></li>
-     <li><a href="../d/uima-as-2.3.1/uima_async_scaleout.html">HTML online version - UIMA Asynchronous Scaleout</a></li>       
+     <!--li><a href="../d/uima-as-2.3.1/uima_async_scaleout.html">HTML online version - UIMA Asynchronous Scaleout</a></li-->       
    </ul>
    <p>PDF version for printing:</p> 
    <ul>
@@ -87,7 +87,7 @@
      <li><a href="../d/uimaj-2.3.1/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
      <li><a href="../d/uimaj-2.3.1/tools.pdf">Tools</a></li>
      <li><a href="../d/uimaj-2.3.1/references.pdf">References</a></li>
-     <li><a href="../d/uima-as-2.3.1/uima_async_scaleout.pdf">UIMA Asynchronous Scaleout</a></li>
+     <!--li><a href="../d/uima-as-2.3.1/uima_async_scaleout.pdf">UIMA Asynchronous Scaleout</a></li-->
    </ul>
        
    <p>
@@ -95,7 +95,7 @@
    </p>
    <ul>
      <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/html/index.html">HTML online version - UIMA Java SDK</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs-uima-as/html/uima_async_scaleout/uima_async_scaleout.html">HTML online version - UIMA Asynchronous Scaleout</a></li>       
+     <!--li><a href="downloads/releaseDocs/2.3.0-incubating/docs-uima-as/html/uima_async_scaleout/uima_async_scaleout.html">HTML online version - UIMA Asynchronous Scaleout</a></li-->       
    </ul>
    <p>PDF version for printing:</p> 
    <ul>
