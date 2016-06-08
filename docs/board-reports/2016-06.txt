@@ -1,0 +1,31 @@
+Board report for Apache UIMA, for June 2016.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates: 
+20 May 2016  (new)        last release - Apache UIMA-AS 2.8.1
+                                        (UIMA Asynchronous Scalout) 
+03 May 2016  (new)        last PMC addition 
+24 Jul 2015  (no change)  last Committer addition
+          
+Releases:
+  06 Apr 2016 Apache uimaFIT 2.2.0 this had many bug fixes and improvements, and 
+                                   upgrades to dependencies
+  20 May 2016 Apache UIMA-AS 2.8.1 this was an upgrade of many dependencies
+                                   to later release levels.          
+              
+Other Activity:
+
+Work on the experimental UIMA Version 3 core is focused on getting a migration
+path that is easy for the user community. 
+
+UIMA Ruta (Rules Text Language and workbench) and DUCC continue to be very active. 
+
+Community:
+
+The community continues to be moderately active.
+ 
+Issues:
+No Board level issues at this time.
