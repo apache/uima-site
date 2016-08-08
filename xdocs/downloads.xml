@@ -101,9 +101,8 @@ Other mirrors: <select name="Preferred">
 <section name="Latest Official Releases">  
   <p>Note: As of release 2.3.0, the CAS Editor and the Pear packaging maven plugin are now part of the UIMA Java framework and SDK.</p>
 
-  <subsection name="Apache UIMA DUCC Version 2.0.1">
-    <insertDownloads version="2.0.1"/>
-    <p>Note: For a script that will migrate an existing installation to a new version try <a href='d/uima-ducc-2.0.1/ducc_update'>ducc_update</a></p>
+  <subsection name="Apache UIMA DUCC Version 2.1.0">
+    <insertDownloads version="2.1.0"/>
   </subsection>
 
   <subsection name="Apache UIMA Version 2.8.1">
@@ -115,9 +114,15 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="2.7.0"/>
   </subsection>
 
+  <subsection name="Apache UIMA DUCC Version 2.0.1">
+    <insertDownloads version="2.0.1"/>
+    <p>Note: For a script that will migrate an existing installation to a new version try <a href='d/uima-ducc-2.0.1/ducc_update'>ducc_update</a></p>
+  </subsection>
+
   <subsection name="Apache UIMA DUCC Version 1.1.0">
     <insertDownloads version="1.1.0"/>
   </subsection>
+
 
   <subsection name="Apache UIMA Version 2.6.0">
     <insertDownloads version="2.6.0"/>

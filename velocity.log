@@ -1,74 +1,1109 @@
-Thu May 19 15:46:39 EDT 2016  [debug] AvalonLogSystem initialized using logfile 'velocity.log'
-Thu May 19 15:46:39 EDT 2016   [info] ************************************************************** 
-Thu May 19 15:46:39 EDT 2016   [info] Starting Jakarta Velocity v1.5-dev
-Thu May 19 15:46:39 EDT 2016   [info] RuntimeInstance initializing.
-Thu May 19 15:46:39 EDT 2016   [info] Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
-Thu May 19 15:46:39 EDT 2016   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
-Thu May 19 15:46:39 EDT 2016   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
-Thu May 19 15:46:39 EDT 2016   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
-Thu May 19 15:46:39 EDT 2016   [info] Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Thu May 19 15:46:39 EDT 2016   [info] FileResourceLoader : initialization starting.
-Thu May 19 15:46:39 EDT 2016   [info] FileResourceLoader : adding path '.'
-Thu May 19 15:46:39 EDT 2016   [info] FileResourceLoader : initialization complete.
-Thu May 19 15:46:39 EDT 2016   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
-Thu May 19 15:46:39 EDT 2016   [info] Default ResourceManager initialization complete.
-Thu May 19 15:46:39 EDT 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
-Thu May 19 15:46:39 EDT 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
-Thu May 19 15:46:39 EDT 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
-Thu May 19 15:46:39 EDT 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
-Thu May 19 15:46:39 EDT 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
-Thu May 19 15:46:39 EDT 2016   [info] Created '20' parsers.
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : initialization starting.
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : adding VMs from VM library template : VM_global_library.vm
-Thu May 19 15:46:39 EDT 2016  [error] ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro :  VM library template macro registration complete.
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : messages on  : VM system will output logging messages
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : initialization complete.
-Thu May 19 15:46:39 EDT 2016   [info] Velocity successfully started.
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #metaauthor( author email ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #source( value ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #subsection( subsection ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #section( section ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #subsectionToc( subsections ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #projectanchor( name href ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #navBarParts( items ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #getApacheImage( ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #getProjectImage( ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #getBannerTitle( ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #printMeta( metaElement ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #document( ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #insertDownloads( insertVersionInfo ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #insertDownload2( downloads ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016   [info] Velocimacro : added new VM : #suffixes( dir item subdirectory ) : source = xdocs/stylesheets/site.vsl
-Thu May 19 15:46:39 EDT 2016  [error] VM #insertDownloads: error : too few arguments to macro. Wanted 1 got 0
-Thu May 19 15:46:39 EDT 2016  [error] VM #subsectionToc: error : too few arguments to macro. Wanted 1 got 0
-Thu May 19 15:46:39 EDT 2016  [error] VM #insertDownloads: error : too few arguments to macro. Wanted 1 got 0
-Thu May 19 15:46:39 EDT 2016  [error] VM #navBarParts: error : too few arguments to macro. Wanted 1 got 0
-Thu May 19 15:46:39 EDT 2016  [error] VM #insertDownload2: error : too few arguments to macro. Wanted 1 got 0
-Thu May 19 15:46:39 EDT 2016  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
-Thu May 19 15:46:39 EDT 2016  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
-Thu May 19 15:46:39 EDT 2016  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
-Thu May 19 15:46:39 EDT 2016  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
-Thu May 19 15:46:39 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
-Thu May 19 15:46:40 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
-Thu May 19 15:46:40 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:55 EDT 2016  [debug] AvalonLogSystem initialized using logfile 'velocity.log'
+Mon Aug 08 16:12:55 EDT 2016   [info] ************************************************************** 
+Mon Aug 08 16:12:55 EDT 2016   [info] Starting Jakarta Velocity v1.5-dev
+Mon Aug 08 16:12:55 EDT 2016   [info] RuntimeInstance initializing.
+Mon Aug 08 16:12:55 EDT 2016   [info] Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+Mon Aug 08 16:12:55 EDT 2016   [info] Trying to use logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Mon Aug 08 16:12:55 EDT 2016   [info] Using logger class org.apache.velocity.runtime.log.AvalonLogSystem
+Mon Aug 08 16:12:55 EDT 2016   [info] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+Mon Aug 08 16:12:55 EDT 2016   [info] Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:55 EDT 2016   [info] FileResourceLoader : initialization starting.
+Mon Aug 08 16:12:55 EDT 2016   [info] FileResourceLoader : adding path '.'
+Mon Aug 08 16:12:55 EDT 2016   [info] FileResourceLoader : initialization complete.
+Mon Aug 08 16:12:55 EDT 2016   [info] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+Mon Aug 08 16:12:55 EDT 2016   [info] Default ResourceManager initialization complete.
+Mon Aug 08 16:12:55 EDT 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+Mon Aug 08 16:12:55 EDT 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+Mon Aug 08 16:12:55 EDT 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+Mon Aug 08 16:12:55 EDT 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+Mon Aug 08 16:12:55 EDT 2016   [info] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+Mon Aug 08 16:12:55 EDT 2016   [info] Created '20' parsers.
+Mon Aug 08 16:12:55 EDT 2016   [info] Velocimacro : initialization starting.
+Mon Aug 08 16:12:55 EDT 2016   [info] Velocimacro : adding VMs from VM library template : VM_global_library.vm
+Mon Aug 08 16:12:56 EDT 2016  [error] ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro :  VM library template macro registration complete.
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : allowInline = true : VMs can be defined inline in templates
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : messages on  : VM system will output logging messages
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : autoload off  : VM system will not automatically reload global library macros
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : initialization complete.
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocity successfully started.
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #metaauthor( author email ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #source( value ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #subsection( subsection ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #section( section ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #subsectionToc( subsections ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #projectanchor( name href ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #navBarParts( items ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #getApacheImage( ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #getProjectImage( ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #getBannerTitle( ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #printMeta( metaElement ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #document( ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #insertDownloads( insertVersionInfo ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #insertDownload2( downloads ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016   [info] Velocimacro : added new VM : #suffixes( dir item subdirectory ) : source = xdocs/stylesheets/site.vsl
+Mon Aug 08 16:12:56 EDT 2016  [error] VM #insertDownloads: error : too few arguments to macro. Wanted 1 got 0
+Mon Aug 08 16:12:56 EDT 2016  [error] VM #subsectionToc: error : too few arguments to macro. Wanted 1 got 0
+Mon Aug 08 16:12:56 EDT 2016  [error] VM #insertDownloads: error : too few arguments to macro. Wanted 1 got 0
+Mon Aug 08 16:12:56 EDT 2016  [error] VM #navBarParts: error : too few arguments to macro. Wanted 1 got 0
+Mon Aug 08 16:12:56 EDT 2016  [error] VM #insertDownload2: error : too few arguments to macro. Wanted 1 got 0
+Mon Aug 08 16:12:56 EDT 2016  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
+Mon Aug 08 16:12:56 EDT 2016  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
+Mon Aug 08 16:12:56 EDT 2016  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
+Mon Aug 08 16:12:56 EDT 2016  [error] VM #suffixes: error : too few arguments to macro. Wanted 3 got 0
+Mon Aug 08 16:12:56 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:58 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:58 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:59 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:59 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:59 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:59 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:59 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:59 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:59 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:59 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:59 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:59 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:59 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:12:59 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:12:59 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 5, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:00 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:00 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : metaauthor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : source : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsection : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : section : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : subsectionToc : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : projectanchor : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : navBarParts : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getApacheImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getProjectImage : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : getBannerTitle : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : printMeta : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : document : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownloads : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : insertDownload2 : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [warn] Velocimacro : VM addition rejected : suffixes : inline not allowed to replace existing VM
+Mon Aug 08 16:13:01 EDT 2016   [info] ResourceManager : found xdocs/stylesheets/site.vsl with loader org.apache.velocity.runtime.resource.loader.FileResourceLoader
+Mon Aug 08 16:13:01 EDT 2016  [error] RHS of #set statement is null. Context will not be modified. xdocs/stylesheets/site.vsl [line 48, column 1]
