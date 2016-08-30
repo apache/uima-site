@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>UimaContext (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<title>UimaContext (Apache UIMA Java SDK 2.9.0 User-Level API Documentation)</title>
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="UimaContext (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+        parent.document.title="UimaContext (Apache UIMA Java SDK 2.9.0 User-Level API Documentation)";
     }
 //-->
 </script>
@@ -164,88 +164,112 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/util/Settings.html" title="interface in org.apache.uima.util">Settings</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getExternalOverrides()">getExternalOverrides</a></strong>()</code>
+<div class="block">Gets the <code>Settings</code> used for external parameter overrides</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/apache/uima/util/InstrumentationFacility.html" title="interface in org.apache.uima.util">InstrumentationFacility</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getInstrumentationFacility()">getInstrumentationFacility</a></strong>()</code>
 <div class="block">Gets the <code>InstrumentationFacility</code> that a component can use to record information
  about its performance.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/apache/uima/util/Logger.html" title="interface in org.apache.uima.util">Logger</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getLogger()">getLogger</a></strong>()</code>
 <div class="block">Gets the <code>Logger</code> to which log output will be sent.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getResourceAsStream(java.lang.String)">getResourceAsStream</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aKey)</code>
 <div class="block">Retrieves an InputStream for reading from the named resource.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getResourceAsStream(java.lang.String,%20java.lang.String[])">getResourceAsStream</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aKey,
                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;aParams)</code>
 <div class="block">Retrieves an InputStream for reading from the named resource.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getResourceFilePath(java.lang.String)">getResourceFilePath</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aKey)</code>
 <div class="block">Retrieves the absolute file path to the named resource.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getResourceFilePath(java.lang.String,%20java.lang.String[])">getResourceFilePath</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aKey,
                    <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;aParams)</code>
 <div class="block">Retrieves the absolute file path to the named resource.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getResourceObject(java.lang.String)">getResourceObject</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aKey)</code>
 <div class="block">Retrieves the named resource object.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getResourceObject(java.lang.String,%20java.lang.String[])">getResourceObject</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aKey,
                  <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;aParams)</code>
 <div class="block">Retrieves the named resource object.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getResourceURI(java.lang.String)">getResourceURI</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aKey)</code>
 <div class="block">Retrieves the URI to the named resource.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/net/URI.html?is-external=true" title="class or interface in java.net">URI</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getResourceURI(java.lang.String,%20java.lang.String[])">getResourceURI</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aKey,
               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;aParams)</code>
 <div class="block">Retrieves the URI to the named resource.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getResourceURL(java.lang.String)">getResourceURL</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aKey)</code>
 <div class="block">Retrieves the URL to the named resource.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getResourceURL(java.lang.String,%20java.lang.String[])">getResourceURL</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aKey,
               <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;aParams)</code>
 <div class="block">Retrieves the URL to the named resource.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/apache/uima/resource/Session.html" title="interface in org.apache.uima.resource">Session</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getSession()">getSession</a></strong>()</code>
 <div class="block">Returns the Session object, which can be used to store data that pertains to a particular
  client session.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getSharedSettingArray(java.lang.String)">getSharedSettingArray</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Get the array of values for a shared configuration parameter from the external override settings.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getSharedSettingNames()">getSharedSettingNames</a></strong>()</code>
+<div class="block">Get the names of all the external override settings available.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/UimaContext.html#getSharedSettingValue(java.lang.String)">getSharedSettingValue</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">Get the value of a shared configuration parameter from the external override settings.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -368,6 +392,58 @@
 <div class="block">Gets the names of all configuration parameters that are not declared in a group.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>an array containing the names of all configuration parameters not declared in any
          group. Returns an empty array if there are none.</dd></dl>
+</li>
+</ul>
+<a name="getSharedSettingValue(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSharedSettingValue</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getSharedSettingValue(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
+                             throws <a href="../../../org/apache/uima/resource/ResourceConfigurationException.html" title="class in org.apache.uima.resource">ResourceConfigurationException</a></pre>
+<div class="block">Get the value of a shared configuration parameter from the external override settings.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - - the name of the parameter</dd>
+<dt><span class="strong">Returns:</span></dt><dd>- the value found in the shared settings file(s), or null if missing.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../org/apache/uima/resource/ResourceConfigurationException.html" title="class in org.apache.uima.resource">ResourceConfigurationException</a></code> - if the value references an undefined parameter, or the value is an array</dd></dl>
+</li>
+</ul>
+<a name="getSharedSettingArray(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSharedSettingArray</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getSharedSettingArray(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
+                               throws <a href="../../../org/apache/uima/resource/ResourceConfigurationException.html" title="class in org.apache.uima.resource">ResourceConfigurationException</a></pre>
+<div class="block">Get the array of values for a shared configuration parameter from the external override settings.</div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - - the name of the parameter</dd>
+<dt><span class="strong">Returns:</span></dt><dd>- an array of values found in the shared settings file(s), or null if missing.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="../../../org/apache/uima/resource/ResourceConfigurationException.html" title="class in org.apache.uima.resource">ResourceConfigurationException</a></code> - if the value references an undefined parameter, or the value is not an array</dd></dl>
+</li>
+</ul>
+<a name="getSharedSettingNames()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSharedSettingNames</h4>
+<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getSharedSettingNames()</pre>
+<div class="block">Get the names of all the external override settings available.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>- an array containing the names of all the external override settings.</dd></dl>
+</li>
+</ul>
+<a name="getExternalOverrides()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getExternalOverrides</h4>
+<pre><a href="../../../org/apache/uima/util/Settings.html" title="interface in org.apache.uima.util">Settings</a>&nbsp;getExternalOverrides()</pre>
+<div class="block">Gets the <code>Settings</code> used for external parameter overrides</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>the Settings object</dd></dl>
 </li>
 </ul>
 <a name="getLogger()">
@@ -856,6 +932,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

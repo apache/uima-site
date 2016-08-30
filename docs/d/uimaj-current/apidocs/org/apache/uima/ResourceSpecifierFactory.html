@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ResourceSpecifierFactory (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<title>ResourceSpecifierFactory (Apache UIMA Java SDK 2.9.0 User-Level API Documentation)</title>
 <link rel="stylesheet" type="text/css" href="../../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="ResourceSpecifierFactory (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+        parent.document.title="ResourceSpecifierFactory (Apache UIMA Java SDK 2.9.0 User-Level API Documentation)";
     }
 //-->
 </script>
@@ -410,18 +410,24 @@
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createRunInSeperateProcess()">createRunInSeperateProcess</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code><a href="../../../org/apache/uima/util/Settings.html" title="interface in org.apache.uima.util">Settings</a></code></td>
+<td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createSettings()">createSettings</a></strong>()</code>
+<div class="block">Creates an empty <code>Settings</code> for External Override parameters.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/SimplePrecondition.html" title="interface in org.apache.uima.resource.metadata">SimplePrecondition</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createSimplePrecondition()">createSimplePrecondition</a></strong>()</code>
 <div class="block">Creates a <code>SimplePrecondition</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/apache/uima/analysis_engine/metadata/SofaMapping.html" title="interface in org.apache.uima.analysis_engine.metadata">SofaMapping</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createSofaMapping()">createSofaMapping</a></strong>()</code>
 <div class="block">Creates a <code>SofaMapping</code>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/apache/uima/analysis_engine/TaeDescription.html" title="interface in org.apache.uima.analysis_engine">TaeDescription</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createTaeDescription()">createTaeDescription</a></strong>()</code>
 <div class="block"><strong>Deprecated.</strong>&nbsp;
@@ -429,37 +435,37 @@
 </div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/TypeDescription.html" title="interface in org.apache.uima.resource.metadata">TypeDescription</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createTypeDescription()">createTypeDescription</a></strong>()</code>
 <div class="block">Creates a <code>TypeDescription</code>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/apache/uima/analysis_engine/TypeOrFeature.html" title="interface in org.apache.uima.analysis_engine">TypeOrFeature</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createTypeOrFeature()">createTypeOrFeature</a></strong>()</code>
 <div class="block">Creates a <code>TypeOrFeature</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/TypePriorities.html" title="interface in org.apache.uima.resource.metadata">TypePriorities</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createTypePriorities()">createTypePriorities</a></strong>()</code>
 <div class="block">Creates an <code>TypePriorities</code>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/TypePriorityList.html" title="interface in org.apache.uima.resource.metadata">TypePriorityList</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createTypePriorityList()">createTypePriorityList</a></strong>()</code>
 <div class="block">Creates an <code>TypePriorityList</code>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/apache/uima/resource/metadata/TypeSystemDescription.html" title="interface in org.apache.uima.resource.metadata">TypeSystemDescription</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createTypeSystemDescription()">createTypeSystemDescription</a></strong>()</code>
 <div class="block">Creates a <code>TypeSystemDescription</code>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/apache/uima/resource/URISpecifier.html" title="interface in org.apache.uima.resource">URISpecifier</a></code></td>
 <td class="colLast"><code><strong><a href="../../../org/apache/uima/ResourceSpecifierFactory.html#createURISpecifier()">createURISpecifier</a></strong>()</code>
 <div class="block">Creates a <code>URISpecifier</code>.</div>
@@ -678,6 +684,17 @@
 <pre><a href="../../../org/apache/uima/resource/metadata/ConfigurationParameterSettings.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameterSettings</a>&nbsp;createConfigurationParameterSettings()</pre>
 <div class="block">Creates a <code>ConfigurationParameterSettings</code>.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>ConfigurationParameterSettings</code>.</dd></dl>
+</li>
+</ul>
+<a name="createSettings()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createSettings</h4>
+<pre><a href="../../../org/apache/uima/util/Settings.html" title="interface in org.apache.uima.util">Settings</a>&nbsp;createSettings()</pre>
+<div class="block">Creates an empty <code>Settings</code> for External Override parameters.</div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>an instance of an object implementing <code>Settings</code>.</dd></dl>
 </li>
 </ul>
 <a name="createCapability()">
@@ -1221,6 +1238,6 @@
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

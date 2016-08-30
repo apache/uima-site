@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Index (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<title>Index (Apache UIMA Java SDK 2.9.0 User-Level API Documentation)</title>
 <link rel="stylesheet" type="text/css" href="./stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Index (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+        parent.document.title="Index (Apache UIMA Java SDK 2.9.0 User-Level API Documentation)";
     }
 //-->
 </script>
@@ -1013,7 +1013,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/CASRuntimeException.html#BLOB_DESERIALIZATION">BLOB_DESERIALIZATION</a></span> - Static variable in exception org.apache.uima.cas.<a href="./org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></dt>
 <dd>
-<div class="block">Error trying to read BLOB data from an input stream and deserialize Stringo a CAS.</div>
+<div class="block">Error while deserializing binary CAS.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/CASRuntimeException.html#BLOB_SERIALIZATION">BLOB_SERIALIZATION</a></span> - Static variable in exception org.apache.uima.cas.<a href="./org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></dt>
 <dd>
@@ -1433,9 +1433,19 @@
              org.apache.uima.examples.XmlDetagger for an example.</i></div>
 </div>
 </dd>
+<dt><a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util"><span class="strong">CasIOUtils</span></a> - Class in <a href="./org/apache/uima/util/package-summary.html">org.apache.uima.util</a></dt>
+<dd>
+<div class="block">A collection of static methods aimed at making it easy to</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasIOUtils.html#CasIOUtils()">CasIOUtils()</a></span> - Constructor for class org.apache.uima.util.<a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util">CasIOUtils</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="./org/apache/uima/analysis_engine/CasIterator.html" title="interface in org.apache.uima.analysis_engine"><span class="strong">CasIterator</span></a> - Interface in <a href="./org/apache/uima/analysis_engine/package-summary.html">org.apache.uima.analysis_engine</a></dt>
 <dd>
 <div class="block">An iterator over a collection of CASes.</div>
+</dd>
+<dt><a href="./org/apache/uima/util/CasLoadMode.html" title="enum in org.apache.uima.util"><span class="strong">CasLoadMode</span></a> - Enum in <a href="./org/apache/uima/util/package-summary.html">org.apache.uima.util</a></dt>
+<dd>
+<div class="block">Used with CasIOUtils, maybe elsewhere, to indicate how CASes are to be loaded or saved.</div>
 </dd>
 <dt><a href="./org/apache/uima/resource/CasManager.html" title="interface in org.apache.uima.resource"><span class="strong">CasManager</span></a> - Interface in <a href="./org/apache/uima/resource/package-summary.html">org.apache.uima.resource</a></dt>
 <dd>
@@ -1585,6 +1595,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/util/XMLUtil.html#CDATA_SECTION_END">CDATA_SECTION_END</a></span> - Static variable in class org.apache.uima.pear.util.<a href="./org/apache/uima/pear/util/XMLUtil.html" title="class in org.apache.uima.pear.util">XMLUtil</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html#characters(char[],%20int,%20int)">characters(char[], int, int)</a></span> - Method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html" title="class in org.apache.uima.cas.impl">XmiCasDeserializer.XmiCasDeserializerHandler</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html#characters(char[],%20int,%20int)">characters(char[], int, int)</a></span> - Method in class org.apache.uima.pear.tools.<a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html" title="class in org.apache.uima.pear.tools">InstallationDescriptorHandler</a></dt>
 <dd>
 <div class="block">Receives notification of character data inside an element.</div>
@@ -1628,6 +1640,10 @@
 <dt><span class="strong"><a href="./org/apache/uima/util/ProcessTrace.html#clear()">clear()</a></span> - Method in interface org.apache.uima.util.<a href="./org/apache/uima/util/ProcessTrace.html" title="interface in org.apache.uima.util">ProcessTrace</a></dt>
 <dd>
 <div class="block">Resets this <code>ProcessTrace</code> by removing all events.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/UimaContextHolder.html#clearContext()">clearContext()</a></span> - Static method in class org.apache.uima.<a href="./org/apache/uima/UimaContextHolder.html" title="class in org.apache.uima">UimaContextHolder</a></dt>
+<dd>
+<div class="block">Clears the UimaContext entry for the current thread</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/tools/InstallationDescriptor.html#clearDelegateComponents()">clearDelegateComponents()</a></span> - Method in class org.apache.uima.pear.tools.<a href="./org/apache/uima/pear/tools/InstallationDescriptor.html" title="class in org.apache.uima.pear.tools">InstallationDescriptor</a></dt>
 <dd>
@@ -2807,6 +2823,10 @@
 <dd>
 <div class="block">Gets new instance of the <code>SAXParser</code> class and sets standard features.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/ResourceSpecifierFactory.html#createSettings()">createSettings()</a></span> - Method in interface org.apache.uima.<a href="./org/apache/uima/ResourceSpecifierFactory.html" title="interface in org.apache.uima">ResourceSpecifierFactory</a></dt>
+<dd>
+<div class="block">Creates an empty <code>Settings</code> for External Override parameters.</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/CAS.html#createShortArrayFS(int)">createShortArrayFS(int)</a></span> - Method in interface org.apache.uima.cas.<a href="./org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a></dt>
 <dd>
 <div class="block">Create a new Short array.</div>
@@ -3092,7 +3112,7 @@
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/util/XmlCasDeserializer.html#deserialize(java.io.InputStream,%20org.apache.uima.cas.CAS,%20boolean)">deserialize(InputStream, CAS, boolean)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/XmlCasDeserializer.html" title="class in org.apache.uima.util">XmlCasDeserializer</a></dt>
 <dd>
-<div class="block">Deserializes a CAS from XMI.</div>
+<div class="block">Deserializes a CAS from XMI or XCAS.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/impl/Serialization.html#deserializeCAS(org.apache.uima.cas.CAS,%20java.io.InputStream)">deserializeCAS(CAS, InputStream)</a></span> - Static method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/Serialization.html" title="class in org.apache.uima.cas.impl">Serialization</a></dt>
 <dd>
@@ -3414,6 +3434,8 @@
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html#endCDATA()">endCDATA()</a></span> - Method in class org.apache.uima.util.<a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html" title="class in org.apache.uima.util">XMLSerializer.CharacterValidatingContentHandler</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html#endDocument()">endDocument()</a></span> - Method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html" title="class in org.apache.uima.cas.impl">XmiCasDeserializer.XmiCasDeserializerHandler</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html#endDocument()">endDocument()</a></span> - Method in class org.apache.uima.pear.tools.<a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html" title="class in org.apache.uima.pear.tools">InstallationDescriptorHandler</a></dt>
 <dd>
 <div class="block">Receives notification of the end of the document.</div>
@@ -3421,6 +3443,8 @@
 <dt><span class="strong"><a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html#endDocument()">endDocument()</a></span> - Method in class org.apache.uima.util.<a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html" title="class in org.apache.uima.util">XMLSerializer.CharacterValidatingContentHandler</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html#endDTD()">endDTD()</a></span> - Method in class org.apache.uima.util.<a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html" title="class in org.apache.uima.util">XMLSerializer.CharacterValidatingContentHandler</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html#endElement(java.lang.String,%20java.lang.String,%20java.lang.String)">endElement(String, String, String)</a></span> - Method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html" title="class in org.apache.uima.cas.impl">XmiCasDeserializer.XmiCasDeserializerHandler</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html#endElement(java.lang.String,%20java.lang.String,%20java.lang.String)">endElement(String, String, String)</a></span> - Method in class org.apache.uima.pear.tools.<a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html" title="class in org.apache.uima.pear.tools">InstallationDescriptorHandler</a></dt>
 <dd>
@@ -3510,6 +3534,8 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/util/ProcessUtil.StdStreamListener.html#errMsgPrinted(java.lang.String)">errMsgPrinted(String)</a></span> - Method in interface org.apache.uima.pear.util.<a href="./org/apache/uima/pear/util/ProcessUtil.StdStreamListener.html" title="interface in org.apache.uima.pear.util">ProcessUtil.StdStreamListener</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html#error(org.xml.sax.SAXParseException)">error(SAXParseException)</a></span> - Method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html" title="class in org.apache.uima.cas.impl">XmiCasDeserializer.XmiCasDeserializerHandler</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html#error(org.xml.sax.SAXParseException)">error(SAXParseException)</a></span> - Method in class org.apache.uima.pear.tools.<a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html" title="class in org.apache.uima.pear.tools">InstallationDescriptorHandler</a></dt>
 <dd>
 <div class="block">XML parser error handler.</div>
@@ -3587,6 +3613,14 @@
 <dd>
 <div class="block">Message key for a standard UIMA exception message: External override variable "{0}" references the undefined variable "{1}"</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/resource/ResourceConfigurationException.html#EXTERNAL_OVERRIDE_NUMERIC_ERROR">EXTERNAL_OVERRIDE_NUMERIC_ERROR</a></span> - Static variable in exception org.apache.uima.resource.<a href="./org/apache/uima/resource/ResourceConfigurationException.html" title="class in org.apache.uima.resource">ResourceConfigurationException</a></dt>
+<dd>
+<div class="block">Message key for a standard UIMA exception message: External override value "{0}" is not an integer</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/resource/ResourceConfigurationException.html#EXTERNAL_OVERRIDE_TYPE_MISMATCH">EXTERNAL_OVERRIDE_TYPE_MISMATCH</a></span> - Static variable in exception org.apache.uima.resource.<a href="./org/apache/uima/resource/ResourceConfigurationException.html" title="class in org.apache.uima.resource">ResourceConfigurationException</a></dt>
+<dd>
+<div class="block">Message key for a standard UIMA exception message: External override value for "{0}" has the wrong type (scalar or array)</div>
+</dd>
 <dt><a href="./org/apache/uima/resource/metadata/ExternalResourceBinding.html" title="interface in org.apache.uima.resource.metadata"><span class="strong">ExternalResourceBinding</span></a> - Interface in <a href="./org/apache/uima/resource/metadata/package-summary.html">org.apache.uima.resource.metadata</a></dt>
 <dd>
 <div class="block">Binds an <a href="./org/apache/uima/resource/ExternalResourceDependency.html" title="interface in org.apache.uima.resource"><code>ExternalResourceDependency</code></a> to an
@@ -3647,6 +3681,8 @@
 </a>
 <h2 class="title">F</h2>
 <dl>
+<dt><span class="strong"><a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html#fatalError(org.xml.sax.SAXParseException)">fatalError(SAXParseException)</a></span> - Method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html" title="class in org.apache.uima.cas.impl">XmiCasDeserializer.XmiCasDeserializerHandler</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html#fatalError(org.xml.sax.SAXParseException)">fatalError(SAXParseException)</a></span> - Method in class org.apache.uima.pear.tools.<a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html" title="class in org.apache.uima.pear.tools">InstallationDescriptorHandler</a></dt>
 <dd>
 <div class="block">XML parser fatal error handler.</div>
@@ -5189,6 +5225,10 @@
 <dd>
 <div class="block">Gets the FlowControllerContext for this FlowController.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/UimaContextHolder.html#getContext()">getContext()</a></span> - Static method in class org.apache.uima.<a href="./org/apache/uima/UimaContextHolder.html" title="class in org.apache.uima">UimaContextHolder</a></dt>
+<dd>
+<div class="block">Get the UimaContext for this thread</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/uima/resource/metadata/ResourceMetaData.html#getCopyright()">getCopyright()</a></span> - Method in interface org.apache.uima.resource.metadata.<a href="./org/apache/uima/resource/metadata/ResourceMetaData.html" title="interface in org.apache.uima.resource.metadata">ResourceMetaData</a></dt>
 <dd>
 <div class="block">Gets the copyright notice for this Resource.</div>
@@ -5264,6 +5304,8 @@
 <dd>
 <div class="block">Retrieves the default value for this precondition.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/SerialFormat.html#getDefaultFileExtension()">getDefaultFileExtension()</a></span> - Method in enum org.apache.uima.cas.<a href="./org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/resource/metadata/ConfigurationParameterDeclarations.html#getDefaultGroupName()">getDefaultGroupName()</a></span> - Method in interface org.apache.uima.resource.metadata.<a href="./org/apache/uima/resource/metadata/ConfigurationParameterDeclarations.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameterDeclarations</a></dt>
 <dd>
 <div class="block">Gets the name of the default configuration group.</div>
@@ -5598,6 +5640,10 @@
 <dt><span class="strong"><a href="./org/apache/uima/resource/metadata/ConfigurationParameter.html#getExternalOverrideName()">getExternalOverrideName()</a></span> - Method in interface org.apache.uima.resource.metadata.<a href="./org/apache/uima/resource/metadata/ConfigurationParameter.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameter</a></dt>
 <dd>
 <div class="block">Retrieves the external name of this configuration parameter.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/UimaContext.html#getExternalOverrides()">getExternalOverrides()</a></span> - Method in interface org.apache.uima.<a href="./org/apache/uima/UimaContext.html" title="interface in org.apache.uima">UimaContext</a></dt>
+<dd>
+<div class="block">Gets the <code>Settings</code> used for external parameter overrides</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/UimaContextAdmin.html#getExternalOverrides()">getExternalOverrides()</a></span> - Method in interface org.apache.uima.<a href="./org/apache/uima/UimaContextAdmin.html" title="interface in org.apache.uima">UimaContextAdmin</a></dt>
 <dd>
@@ -6003,8 +6049,9 @@
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/resource/ResourceManager.html#getImportCache()">getImportCache()</a></span> - Method in interface org.apache.uima.resource.<a href="./org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource">ResourceManager</a></dt>
 <dd>
-<div class="block">Gets a cache of imported descriptors, so that the parsed objects can be reused if the
- same URL is imported more than once.</div>
+<div class="block"><span class="strong">Deprecated.</span>
+<div class="block"><i>Intended just for internal use.</i></div>
+</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/resource/metadata/FsIndexCollection.html#getImports()">getImports()</a></span> - Method in interface org.apache.uima.resource.metadata.<a href="./org/apache/uima/resource/metadata/FsIndexCollection.html" title="interface in org.apache.uima.resource.metadata">FsIndexCollection</a></dt>
 <dd>
@@ -7294,9 +7341,29 @@
 <div class="block">Returns the Session object, which can be used to store data that pertains to a particular
  client session.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/Settings.html#getSetting(java.lang.String)">getSetting(String)</a></span> - Method in interface org.apache.uima.util.<a href="./org/apache/uima/util/Settings.html" title="interface in org.apache.uima.util">Settings</a></dt>
+<dd>
+<div class="block">Get the value of an external override setting.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/Settings.html#getSettingArray(java.lang.String)">getSettingArray(String)</a></span> - Method in interface org.apache.uima.util.<a href="./org/apache/uima/util/Settings.html" title="interface in org.apache.uima.util">Settings</a></dt>
+<dd>
+<div class="block">Get the array of values for an external override setting.</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/uima/resource/metadata/ConfigurationParameterSettings.html#getSettingsForGroups()">getSettingsForGroups()</a></span> - Method in interface org.apache.uima.resource.metadata.<a href="./org/apache/uima/resource/metadata/ConfigurationParameterSettings.html" title="interface in org.apache.uima.resource.metadata">ConfigurationParameterSettings</a></dt>
 <dd>
 <div class="block">Gets the settings for configuration parameters that are defined within groups.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/UimaContext.html#getSharedSettingArray(java.lang.String)">getSharedSettingArray(String)</a></span> - Method in interface org.apache.uima.<a href="./org/apache/uima/UimaContext.html" title="interface in org.apache.uima">UimaContext</a></dt>
+<dd>
+<div class="block">Get the array of values for a shared configuration parameter from the external override settings.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/UimaContext.html#getSharedSettingNames()">getSharedSettingNames()</a></span> - Method in interface org.apache.uima.<a href="./org/apache/uima/UimaContext.html" title="interface in org.apache.uima">UimaContext</a></dt>
+<dd>
+<div class="block">Get the names of all the external override settings available.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/UimaContext.html#getSharedSettingValue(java.lang.String)">getSharedSettingValue(String)</a></span> - Method in interface org.apache.uima.<a href="./org/apache/uima/UimaContext.html" title="interface in org.apache.uima">UimaContext</a></dt>
+<dd>
+<div class="block">Get the value of a shared configuration parameter from the external override settings.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/uimacpp/CppUimajEngine.html#getShortHeap()">getShortHeap()</a></span> - Method in class org.apache.uima.uimacpp.<a href="./org/apache/uima/uimacpp/CppUimajEngine.html" title="class in org.apache.uima.uimacpp">CppUimajEngine</a></dt>
 <dd>&nbsp;</dd>
@@ -8153,6 +8220,8 @@
 <dd>
 <div class="block">Makes and attempt to identify possible UTF signature (BOM) in a given sequence of bytes.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html#ignorableWhitespace(char[],%20int,%20int)">ignorableWhitespace(char[], int, int)</a></span> - Method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html" title="class in org.apache.uima.cas.impl">XmiCasDeserializer.XmiCasDeserializerHandler</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html#ignorableWhitespace(char[],%20int,%20int)">ignorableWhitespace(char[], int, int)</a></span> - Method in class org.apache.uima.util.<a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html" title="class in org.apache.uima.util">XMLSerializer.CharacterValidatingContentHandler</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/UIMARuntimeException.html#ILLEGAL_ADDING_OF_NEW_META_INFO_AFTER_CAS_DEFINED">ILLEGAL_ADDING_OF_NEW_META_INFO_AFTER_CAS_DEFINED</a></span> - Static variable in exception org.apache.uima.<a href="./org/apache/uima/UIMARuntimeException.html" title="class in org.apache.uima">UIMARuntimeException</a></dt>
@@ -9250,8 +9319,7 @@
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/CASException.html#JCAS_FEATURENOTFOUND_ERROR">JCAS_FEATURENOTFOUND_ERROR</a></span> - Static variable in exception org.apache.uima.cas.<a href="./org/apache/uima/cas/CASException.html" title="class in org.apache.uima.cas">CASException</a></dt>
 <dd>
-<div class="block">Feature information from the CAS cannot be accessed while initializing the JCAS type {0} with
- feature {1}.</div>
+<div class="block">JCas Type "{0}" implements getters and setters for feature "{1}", but the type system doesn't define that feature.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/CASRuntimeException.html#JCAS_GET_NTH_NEGATIVE_INDEX">JCAS_GET_NTH_NEGATIVE_INDEX</a></span> - Static variable in exception org.apache.uima.cas.<a href="./org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></dt>
 <dd>
@@ -9455,6 +9523,14 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html#lastOutputNodeClearLevel()">lastOutputNodeClearLevel()</a></span> - Method in class org.apache.uima.util.<a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html" title="class in org.apache.uima.util">XMLSerializer.CharacterValidatingContentHandler</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/CASRuntimeException.html#LENIENT_FORM_6_NO_TS">LENIENT_FORM_6_NO_TS</a></span> - Static variable in exception org.apache.uima.cas.<a href="./org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></dt>
+<dd>
+<div class="block">Deserializing Compressed Form 6 with CasLoadMode LENIENT, but no Type System provided.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/CASRuntimeException.html#LENIENT_NOT_SUPPORTED">LENIENT_NOT_SUPPORTED</a></span> - Static variable in exception org.apache.uima.cas.<a href="./org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></dt>
+<dd>
+<div class="block">Lenient deserialization not support for input of type {0}.</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/FSFloatConstraint.html#leq(float)">leq(float)</a></span> - Method in interface org.apache.uima.cas.<a href="./org/apache/uima/cas/FSFloatConstraint.html" title="interface in org.apache.uima.cas">FSFloatConstraint</a></dt>
 <dd>
 <div class="block">Require float value to be less than or equal to <code>f</code>.</div>
@@ -9509,6 +9585,39 @@
 <dd>
 <div class="block">Called by the <a href="./org/apache/uima/resource/ResourceManager.html" title="interface in org.apache.uima.resource"><code>ResourceManager</code></a> after this object has been
  instantiated.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasIOUtils.html#load(java.net.URL,%20org.apache.uima.cas.CAS)">load(URL, CAS)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util">CasIOUtils</a></dt>
+<dd>
+<div class="block">Loads a Cas from a URL source.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasIOUtils.html#load(java.net.URL,%20java.net.URL,%20org.apache.uima.cas.CAS,%20org.apache.uima.util.CasLoadMode)">load(URL, URL, CAS, CasLoadMode)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util">CasIOUtils</a></dt>
+<dd>
+<div class="block">Loads a CAS from a URL source.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasIOUtils.html#load(java.net.URL,%20java.net.URL,%20org.apache.uima.cas.CAS,%20boolean)">load(URL, URL, CAS, boolean)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util">CasIOUtils</a></dt>
+<dd>
+<div class="block">Loads a CAS from a URL source.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasIOUtils.html#load(java.io.InputStream,%20org.apache.uima.cas.CAS)">load(InputStream, CAS)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util">CasIOUtils</a></dt>
+<dd>
+<div class="block">Loads a Cas from an Input Stream.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasIOUtils.html#load(java.io.InputStream,%20java.io.InputStream,%20org.apache.uima.cas.CAS)">load(InputStream, InputStream, CAS)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util">CasIOUtils</a></dt>
+<dd>
+<div class="block">Loads a CAS from an Input Stream.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasIOUtils.html#load(java.io.InputStream,%20java.io.InputStream,%20org.apache.uima.cas.CAS,%20boolean)">load(InputStream, InputStream, CAS, boolean)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util">CasIOUtils</a></dt>
+<dd>
+<div class="block">Loads a CAS from an Input Stream.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasIOUtils.html#load(java.io.InputStream,%20java.io.InputStream,%20org.apache.uima.cas.CAS,%20org.apache.uima.util.CasLoadMode)">load(InputStream, InputStream, CAS, CasLoadMode)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util">CasIOUtils</a></dt>
+<dd>
+<div class="block">Loads a CAS from an Input Stream.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasIOUtils.html#load(java.io.InputStream,%20org.apache.uima.cas.CAS,%20org.apache.uima.cas.TypeSystem)">load(InputStream, CAS, TypeSystem)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util">CasIOUtils</a></dt>
+<dd>
+<div class="block">This load variant can be used for loading Form 6 compressed CASes where the 
+ type system to use to deserialize is provided as an argument.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/util/Settings.html#load(java.io.InputStream)">load(InputStream)</a></span> - Method in interface org.apache.uima.util.<a href="./org/apache/uima/util/Settings.html" title="interface in org.apache.uima.util">Settings</a></dt>
 <dd>
@@ -12449,6 +12558,14 @@ Resource.</div>
 </a>
 <h2 class="title">S</h2>
 <dl>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasIOUtils.html#save(org.apache.uima.cas.CAS,%20java.io.OutputStream,%20org.apache.uima.cas.SerialFormat)">save(CAS, OutputStream, SerialFormat)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util">CasIOUtils</a></dt>
+<dd>
+<div class="block">Write the CAS in the specified format.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasIOUtils.html#save(org.apache.uima.cas.CAS,%20java.io.OutputStream,%20java.io.OutputStream,%20org.apache.uima.cas.SerialFormat)">save(CAS, OutputStream, OutputStream, SerialFormat)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util">CasIOUtils</a></dt>
+<dd>
+<div class="block">Write the CAS in the specified format.</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html#saveInstallationDescriptor(org.apache.uima.pear.tools.InstallationDescriptor,%20java.io.File)">saveInstallationDescriptor(InstallationDescriptor, File)</a></span> - Static method in class org.apache.uima.pear.tools.<a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html" title="class in org.apache.uima.pear.tools">InstallationDescriptorHandler</a></dt>
 <dd>
 <div class="block">Saves a given <code>InstallationDescriptor</code> object in a given XML file.</div>
@@ -12644,6 +12761,11 @@ Resource.</div>
 <div class="block">Convert a Type System and Index Repository into a 
  CASMgrSerializer object which can be serialized</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/impl/Serialization.html#serializeCASMgrTypeSystemOnly(org.apache.uima.cas.admin.CASMgr)">serializeCASMgrTypeSystemOnly(CASMgr)</a></span> - Static method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/Serialization.html" title="class in org.apache.uima.cas.impl">Serialization</a></dt>
+<dd>
+<div class="block">Convert a Type System into a 
+ CASMgrSerializer object which can be serialized</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/impl/Serialization.html#serializeNoMetaData(org.apache.uima.cas.CAS)">serializeNoMetaData(CAS)</a></span> - Static method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/Serialization.html" title="class in org.apache.uima.cas.impl">Serialization</a></dt>
 <dd>
 <div class="block">Convert a CAS to a CASSerializer object.</div>
@@ -12659,6 +12781,11 @@ Resource.</div>
 <dt><span class="strong"><a href="./org/apache/uima/cas/impl/Serialization.html#serializeWithCompression(org.apache.uima.cas.CAS,%20java.lang.Object,%20org.apache.uima.cas.Marker)">serializeWithCompression(CAS, Object, Marker)</a></span> - Static method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/Serialization.html" title="class in org.apache.uima.cas.impl">Serialization</a></dt>
 <dd>
 <div class="block">Serialize in compress binary form 4, only the delta part of a CAS</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/impl/Serialization.html#serializeWithCompression(org.apache.uima.cas.CAS,%20java.lang.Object,%20boolean,%20boolean)">serializeWithCompression(CAS, Object, boolean, boolean)</a></span> - Static method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/Serialization.html" title="class in org.apache.uima.cas.impl">Serialization</a></dt>
+<dd>
+<div class="block">Serialize in compressed binary with type filtering
+ This method can use type filtering to omit sending those types and/or features not present in the target type system.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/impl/Serialization.html#serializeWithCompression(org.apache.uima.cas.CAS,%20java.lang.Object,%20org.apache.uima.cas.TypeSystem)">serializeWithCompression(CAS, Object, TypeSystem)</a></span> - Static method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/Serialization.html" title="class in org.apache.uima.cas.impl">Serialization</a></dt>
 <dd>
@@ -13057,6 +13184,10 @@ Resource.</div>
 <dd>
 <div class="block">Sets the configuration parameter settings for this Resource.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/UimaContextHolder.html#setContext(org.apache.uima.UimaContext)">setContext(UimaContext)</a></span> - Static method in class org.apache.uima.<a href="./org/apache/uima/UimaContextHolder.html" title="class in org.apache.uima">UimaContextHolder</a></dt>
+<dd>
+<div class="block">Sets the UimaContext for the current thread.</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/uima/resource/metadata/ResourceMetaData.html#setCopyright(java.lang.String)">setCopyright(String)</a></span> - Method in interface org.apache.uima.resource.metadata.<a href="./org/apache/uima/resource/metadata/ResourceMetaData.html" title="interface in org.apache.uima.resource.metadata">ResourceMetaData</a></dt>
 <dd>
 <div class="block">Sets the copyright notice for this Resource.</div>
@@ -13202,6 +13333,8 @@ Resource.</div>
 <dd>
 <div class="block">Sets the language for this document.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html#setDocumentLocator(org.xml.sax.Locator)">setDocumentLocator(Locator)</a></span> - Method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html" title="class in org.apache.uima.cas.impl">XmiCasDeserializer.XmiCasDeserializerHandler</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html#setDocumentLocator(org.xml.sax.Locator)">setDocumentLocator(Locator)</a></span> - Method in class org.apache.uima.util.<a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html" title="class in org.apache.uima.util">XMLSerializer.CharacterValidatingContentHandler</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/examples/SourceDocumentInformation.html#setDocumentSize(int)">setDocumentSize(int)</a></span> - Method in class org.apache.uima.examples.<a href="./org/apache/uima/examples/SourceDocumentInformation.html" title="class in org.apache.uima.examples">SourceDocumentInformation</a></dt>
@@ -14817,6 +14950,10 @@ Resource.</div>
 <dd>
 <div class="block">No sofaFS for specified sofaRef found.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/CASRuntimeException.html#SOFAREF_NOT_SET">SOFAREF_NOT_SET</a></span> - Static variable in exception org.apache.uima.cas.<a href="./org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></dt>
+<dd>
+<div class="block">Sofa reference for FS {0} is required, but it is not set.</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/FSIndex.html#SORTED_INDEX">SORTED_INDEX</a></span> - Static variable in interface org.apache.uima.cas.<a href="./org/apache/uima/cas/FSIndex.html" title="interface in org.apache.uima.cas">FSIndex</a></dt>
 <dd>
 <div class="block">Indexing strategy: sorted index.</div>
@@ -14880,6 +15017,8 @@ Resource.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html#startCDATA()">startCDATA()</a></span> - Method in class org.apache.uima.util.<a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html" title="class in org.apache.uima.util">XMLSerializer.CharacterValidatingContentHandler</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html#startDocument()">startDocument()</a></span> - Method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html" title="class in org.apache.uima.cas.impl">XmiCasDeserializer.XmiCasDeserializerHandler</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html#startDocument()">startDocument()</a></span> - Method in class org.apache.uima.pear.tools.<a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html" title="class in org.apache.uima.pear.tools">InstallationDescriptorHandler</a></dt>
 <dd>
 <div class="block">Receives notification of the beginning of the document.</div>
@@ -14887,6 +15026,8 @@ Resource.</div>
 <dt><span class="strong"><a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html#startDocument()">startDocument()</a></span> - Method in class org.apache.uima.util.<a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html" title="class in org.apache.uima.util">XMLSerializer.CharacterValidatingContentHandler</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html#startDTD(java.lang.String,%20java.lang.String,%20java.lang.String)">startDTD(String, String, String)</a></span> - Method in class org.apache.uima.util.<a href="./org/apache/uima/util/XMLSerializer.CharacterValidatingContentHandler.html" title="class in org.apache.uima.util">XMLSerializer.CharacterValidatingContentHandler</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html#startElement(java.lang.String,%20java.lang.String,%20java.lang.String,%20org.xml.sax.Attributes)">startElement(String, String, String, Attributes)</a></span> - Method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html" title="class in org.apache.uima.cas.impl">XmiCasDeserializer.XmiCasDeserializerHandler</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html#startElement(java.lang.String,%20java.lang.String,%20java.lang.String,%20org.xml.sax.Attributes)">startElement(String, String, String, Attributes)</a></span> - Method in class org.apache.uima.pear.tools.<a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html" title="class in org.apache.uima.pear.tools">InstallationDescriptorHandler</a></dt>
 <dd>
@@ -14992,7 +15133,7 @@ Resource.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/text/AnnotationIndex.html#subiterator(org.apache.uima.cas.text.AnnotationFS,%20boolean,%20boolean)">subiterator(AnnotationFS, boolean, boolean)</a></span> - Method in interface org.apache.uima.cas.text.<a href="./org/apache/uima/cas/text/AnnotationIndex.html" title="interface in org.apache.uima.cas.text">AnnotationIndex</a></dt>
 <dd>
-<div class="block">Return a subiterator whose bounds are defined by the input annotation.</div>
+<div class="block">Return a subiterator whose bounds are defined by the <code>annot</code>.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/tools/PackageBrowser.html#SUBMISSION_PROPERTIES_FILE">SUBMISSION_PROPERTIES_FILE</a></span> - Static variable in class org.apache.uima.pear.tools.<a href="./org/apache/uima/pear/tools/PackageBrowser.html" title="class in org.apache.uima.pear.tools">PackageBrowser</a></dt>
 <dd>&nbsp;</dd>
@@ -15024,6 +15165,10 @@ Resource.</div>
 <dt><span class="strong"><a href="./org/apache/uima/util/CasCreationUtils.html#subsumes(java.lang.String,%20java.lang.String,%20java.util.Map)">subsumes(String, String, Map&lt;String, ? extends TypeDescription&gt;)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/CasCreationUtils.html" title="class in org.apache.uima.util">CasCreationUtils</a></dt>
 <dd>
 <div class="block">Determines whether one type subsumes another.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/CASRuntimeException.html#SWITCH_CLASS_LOADER_NESTED">SWITCH_CLASS_LOADER_NESTED</a></span> - Static variable in exception org.apache.uima.cas.<a href="./org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></dt>
+<dd>
+<div class="block">Multiply nested classloaders not supported.</div>
 </dd>
 <dt><a href="./org/apache/uima/collection/base_cpm/SynchPoint.html" title="interface in org.apache.uima.collection.base_cpm"><span class="strong">SynchPoint</span></a> - Interface in <a href="./org/apache/uima/collection/base_cpm/package-summary.html">org.apache.uima.collection.base_cpm</a></dt>
 <dd>
@@ -16009,6 +16154,12 @@ Resource.</div>
 <dd>
 <div class="block">Admin interface to the UIMA Context.</div>
 </dd>
+<dt><a href="./org/apache/uima/UimaContextHolder.html" title="class in org.apache.uima"><span class="strong">UimaContextHolder</span></a> - Class in <a href="./org/apache/uima/package-summary.html">org.apache.uima</a></dt>
+<dd>
+<div class="block">This class holds the UimaContext for the current thread, or a parent thread.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/UimaContextHolder.html#UimaContextHolder()">UimaContextHolder()</a></span> - Constructor for class org.apache.uima.<a href="./org/apache/uima/UimaContextHolder.html" title="class in org.apache.uima">UimaContextHolder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="./org/apache/uima/uimacpp/UimacppAnalysisComponent.html" title="class in org.apache.uima.uimacpp"><span class="strong">UimacppAnalysisComponent</span></a> - Class in <a href="./org/apache/uima/uimacpp/package-summary.html">org.apache.uima.uimacpp</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/uimacpp/UimacppAnalysisComponent.html#UimacppAnalysisComponent(org.apache.uima.resource.ResourceCreationSpecifier,%20org.apache.uima.analysis_engine.impl.AnalysisEngineImplBase)">UimacppAnalysisComponent(ResourceCreationSpecifier, AnalysisEngineImplBase)</a></span> - Constructor for class org.apache.uima.uimacpp.<a href="./org/apache/uima/uimacpp/UimacppAnalysisComponent.html" title="class in org.apache.uima.uimacpp">UimacppAnalysisComponent</a></dt>
@@ -16183,6 +16334,10 @@ Resource.</div>
 <dd>
 <div class="block">Error parsing XCAS from source {0} at line {1}, column {2}: unknown type: {3}.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/CASRuntimeException.html#UNRECOGNIZED_SERIALIZED_CAS_FORMAT">UNRECOGNIZED_SERIALIZED_CAS_FORMAT</a></span> - Static variable in exception org.apache.uima.cas.<a href="./org/apache/uima/cas/CASRuntimeException.html" title="class in org.apache.uima.cas">CASRuntimeException</a></dt>
+<dd>
+<div class="block">Unrecognized serialized CAS format.</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/text/Language.html#UNSPECIFIED_LANGUAGE">UNSPECIFIED_LANGUAGE</a></span> - Static variable in class org.apache.uima.cas.text.<a href="./org/apache/uima/cas/text/Language.html" title="class in org.apache.uima.cas.text">Language</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/UIMARuntimeException.html#UNSUPPORTED_CAS_COPY_TO_OR_FROM_BASE_CAS">UNSUPPORTED_CAS_COPY_TO_OR_FROM_BASE_CAS</a></span> - Static variable in exception org.apache.uima.<a href="./org/apache/uima/UIMARuntimeException.html" title="class in org.apache.uima">UIMARuntimeException</a></dt>
@@ -16285,6 +16440,10 @@ Resource.</div>
 <dd>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasLoadMode.html#valueOf(java.lang.String)">valueOf(String)</a></span> - Static method in enum org.apache.uima.util.<a href="./org/apache/uima/util/CasLoadMode.html" title="enum in org.apache.uima.util">CasLoadMode</a></dt>
+<dd>
+<div class="block">Returns the enum constant of this type with the specified name.</div>
+</dd>
 <dt><span class="strong"><a href="./org/apache/uima/analysis_engine/AnalysisEngineManagement.State.html#values()">values()</a></span> - Static method in enum org.apache.uima.analysis_engine.<a href="./org/apache/uima/analysis_engine/AnalysisEngineManagement.State.html" title="enum in org.apache.uima.analysis_engine">AnalysisEngineManagement.State</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
@@ -16301,6 +16460,11 @@ the order they are declared.</div>
 the order they are declared.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/json/JsonCasSerializer.JsonContextFormat.html#values()">values()</a></span> - Static method in enum org.apache.uima.json.<a href="./org/apache/uima/json/JsonCasSerializer.JsonContextFormat.html" title="enum in org.apache.uima.json">JsonCasSerializer.JsonContextFormat</a></dt>
+<dd>
+<div class="block">Returns an array containing the constants of this enum type, in
+the order they are declared.</div>
+</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasLoadMode.html#values()">values()</a></span> - Static method in enum org.apache.uima.util.<a href="./org/apache/uima/util/CasLoadMode.html" title="enum in org.apache.uima.util">CasLoadMode</a></dt>
 <dd>
 <div class="block">Returns an array containing the constants of this enum type, in
 the order they are declared.</div>
@@ -16366,6 +16530,8 @@ the order they are declared.</div>
 <div class="block">Allows the caller to wait for the completion of the process, but no longer than a given
  timeout value.</div>
 </dd>
+<dt><span class="strong"><a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html#warning(org.xml.sax.SAXParseException)">warning(SAXParseException)</a></span> - Method in class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html" title="class in org.apache.uima.cas.impl">XmiCasDeserializer.XmiCasDeserializerHandler</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html#warning(org.xml.sax.SAXParseException)">warning(SAXParseException)</a></span> - Method in class org.apache.uima.pear.tools.<a href="./org/apache/uima/pear/tools/InstallationDescriptorHandler.html" title="class in org.apache.uima.pear.tools">InstallationDescriptorHandler</a></dt>
 <dd>
 <div class="block">XML parser warning handler.</div>
@@ -16388,6 +16554,8 @@ the order they are declared.</div>
 <dt><span class="strong"><a href="./org/apache/uima/util/LoggerPrintStream.html#write(byte[],%20int,%20int)">write(byte[], int, int)</a></span> - Method in class org.apache.uima.util.<a href="./org/apache/uima/util/LoggerPrintStream.html" title="class in org.apache.uima.util">LoggerPrintStream</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/util/LoggerPrintStream.html#write(int)">write(int)</a></span> - Method in class org.apache.uima.util.<a href="./org/apache/uima/util/LoggerPrintStream.html" title="class in org.apache.uima.util">LoggerPrintStream</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/apache/uima/util/CasIOUtils.html#writeTypeSystem(org.apache.uima.cas.CAS,%20java.io.OutputStream,%20boolean)">writeTypeSystem(CAS, OutputStream, boolean)</a></span> - Static method in class org.apache.uima.util.<a href="./org/apache/uima/util/CasIOUtils.html" title="class in org.apache.uima.util">CasIOUtils</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/apache/uima/analysis_engine/annotator/AnnotatorInitializationException.html#WRONG_CAS_TYPE">WRONG_CAS_TYPE</a></span> - Static variable in exception org.apache.uima.analysis_engine.annotator.<a href="./org/apache/uima/analysis_engine/annotator/AnnotatorInitializationException.html" title="class in org.apache.uima.analysis_engine.annotator">AnnotatorInitializationException</a></dt>
 <dd>
@@ -16457,6 +16625,8 @@ the order they are declared.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/cas/impl/XmiCasDeserializer.html#XmiCasDeserializer(org.apache.uima.cas.TypeSystem)">XmiCasDeserializer(TypeSystem)</a></span> - Constructor for class org.apache.uima.cas.impl.<a href="./org/apache/uima/cas/impl/XmiCasDeserializer.html" title="class in org.apache.uima.cas.impl">XmiCasDeserializer</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="./org/apache/uima/cas/impl/XmiCasDeserializer.XmiCasDeserializerHandler.html" title="class in org.apache.uima.cas.impl"><span class="strong">XmiCasDeserializer.XmiCasDeserializerHandler</span></a> - Class in <a href="./org/apache/uima/cas/impl/package-summary.html">org.apache.uima.cas.impl</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="./org/apache/uima/cas/impl/XmiCasSerializer.html" title="class in org.apache.uima.cas.impl"><span class="strong">XmiCasSerializer</span></a> - Class in <a href="./org/apache/uima/cas/impl/package-summary.html">org.apache.uima.cas.impl</a></dt>
 <dd>
 <div class="block">CAS serializer for XMI format; writes a CAS in the XML Metadata Interchange (XMI) format.</div>
@@ -16516,7 +16686,7 @@ the order they are declared.</div>
 <dd>&nbsp;</dd>
 <dt><a href="./org/apache/uima/util/XmlCasSerializer.html" title="class in org.apache.uima.util"><span class="strong">XmlCasSerializer</span></a> - Class in <a href="./org/apache/uima/util/package-summary.html">org.apache.uima.util</a></dt>
 <dd>
-<div class="block">Serializes a CAS to inline XML format.</div>
+<div class="block">This class is an older class with just two static methods which forward to methods in XmiCasSerializer.</div>
 </dd>
 <dt><span class="strong"><a href="./org/apache/uima/util/XmlCasSerializer.html#XmlCasSerializer()">XmlCasSerializer()</a></span> - Constructor for class org.apache.uima.util.<a href="./org/apache/uima/util/XmlCasSerializer.html" title="class in org.apache.uima.util">XmlCasSerializer</a></dt>
 <dd>&nbsp;</dd>
@@ -16769,6 +16939,6 @@ the order they are declared.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

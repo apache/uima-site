@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Uses of Interface org.apache.uima.cas.CAS (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<title>Uses of Interface org.apache.uima.cas.CAS (Apache UIMA Java SDK 2.9.0 User-Level API Documentation)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="Uses of Interface org.apache.uima.cas.CAS (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+        parent.document.title="Uses of Interface org.apache.uima.cas.CAS (Apache UIMA Java SDK 2.9.0 User-Level API Documentation)";
     }
 //-->
 </script>
@@ -783,6 +783,16 @@ Resource.</div>
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo</code></td>
+<td class="colLast"><span class="strong">Serialization.</span><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeWithCompression(org.apache.uima.cas.CAS,%20java.lang.Object,%20boolean,%20boolean)">serializeWithCompression</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
+                        <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;out,
+                        boolean&nbsp;includeTS,
+                        boolean&nbsp;includeTSI)</code>
+<div class="block">Serialize in compressed binary with type filtering
+ This method can use type filtering to omit sending those types and/or features not present in the target type system.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><span class="strong">Serialization.</span><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeWithCompression(org.apache.uima.cas.CAS,%20java.lang.Object,%20org.apache.uima.cas.Marker)">serializeWithCompression</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;out,
@@ -790,7 +800,7 @@ Resource.</div>
 <div class="block">Serialize in compress binary form 4, only the delta part of a CAS</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo</code></td>
 <td class="colLast"><span class="strong">Serialization.</span><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeWithCompression(org.apache.uima.cas.CAS,%20java.lang.Object,%20org.apache.uima.cas.TypeSystem)">serializeWithCompression</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;out,
@@ -799,7 +809,7 @@ Resource.</div>
  This method can use type filtering to omit sending those types and/or features not present in the target type system.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><span class="strong">Serialization.</span><code><strong><a href="../../../../../org/apache/uima/cas/impl/Serialization.html#serializeWithCompression(org.apache.uima.cas.CAS,%20java.lang.Object,%20org.apache.uima.cas.TypeSystem,%20org.apache.uima.cas.Marker,%20org.apache.uima.cas.impl.BinaryCasSerDes6.ReuseInfo)">serializeWithCompression</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;cas,
                         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;out,
@@ -1419,7 +1429,7 @@ Resource.</div>
 <td class="colLast"><span class="strong">XmlCasDeserializer.</span><code><strong><a href="../../../../../org/apache/uima/util/XmlCasDeserializer.html#deserialize(java.io.InputStream,%20org.apache.uima.cas.CAS,%20boolean)">deserialize</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;aStream,
            <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS,
            boolean&nbsp;aLenient)</code>
-<div class="block">Deserializes a CAS from XMI.</div>
+<div class="block">Deserializes a CAS from XMI or XCAS.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -1513,9 +1523,93 @@ Resource.</div>
          <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aTypeS)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a></code></td>
+<td class="colLast"><span class="strong">CasIOUtils.</span><code><strong><a href="../../../../../org/apache/uima/util/CasIOUtils.html#load(java.io.InputStream,%20org.apache.uima.cas.CAS)">load</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;casInputStream,
+    <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS)</code>
+<div class="block">Loads a Cas from an Input Stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a></code></td>
+<td class="colLast"><span class="strong">CasIOUtils.</span><code><strong><a href="../../../../../org/apache/uima/util/CasIOUtils.html#load(java.io.InputStream,%20org.apache.uima.cas.CAS,%20org.apache.uima.cas.TypeSystem)">load</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;casInputStream,
+    <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS,
+    <a href="../../../../../org/apache/uima/cas/TypeSystem.html" title="interface in org.apache.uima.cas">TypeSystem</a>&nbsp;typeSystem)</code>
+<div class="block">This load variant can be used for loading Form 6 compressed CASes where the 
+ type system to use to deserialize is provided as an argument.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a></code></td>
+<td class="colLast"><span class="strong">CasIOUtils.</span><code><strong><a href="../../../../../org/apache/uima/util/CasIOUtils.html#load(java.io.InputStream,%20java.io.InputStream,%20org.apache.uima.cas.CAS)">load</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;casInputStream,
+    <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;tsiInputStream,
+    <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS)</code>
+<div class="block">Loads a CAS from an Input Stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a></code></td>
+<td class="colLast"><span class="strong">CasIOUtils.</span><code><strong><a href="../../../../../org/apache/uima/util/CasIOUtils.html#load(java.io.InputStream,%20java.io.InputStream,%20org.apache.uima.cas.CAS,%20boolean)">load</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;casInputStream,
+    <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;tsiInputStream,
+    <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS,
+    boolean&nbsp;leniently)</code>
+<div class="block">Loads a CAS from an Input Stream.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a></code></td>
+<td class="colLast"><span class="strong">CasIOUtils.</span><code><strong><a href="../../../../../org/apache/uima/util/CasIOUtils.html#load(java.io.InputStream,%20java.io.InputStream,%20org.apache.uima.cas.CAS,%20org.apache.uima.util.CasLoadMode)">load</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;casInputStream,
+    <a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;tsiInputStream,
+    <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS,
+    <a href="../../../../../org/apache/uima/util/CasLoadMode.html" title="enum in org.apache.uima.util">CasLoadMode</a>&nbsp;casLoadMode)</code>
+<div class="block">Loads a CAS from an Input Stream.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a></code></td>
+<td class="colLast"><span class="strong">CasIOUtils.</span><code><strong><a href="../../../../../org/apache/uima/util/CasIOUtils.html#load(java.net.URL,%20org.apache.uima.cas.CAS)">load</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;casUrl,
+    <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS)</code>
+<div class="block">Loads a Cas from a URL source.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a></code></td>
+<td class="colLast"><span class="strong">CasIOUtils.</span><code><strong><a href="../../../../../org/apache/uima/util/CasIOUtils.html#load(java.net.URL,%20java.net.URL,%20org.apache.uima.cas.CAS,%20boolean)">load</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;casUrl,
+    <a href="http://docs.oracle.com/javase/7/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;tsiUrl,
+    <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS,
+    boolean&nbsp;leniently)</code>
+<div class="block">Loads a CAS from a URL source.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a></code></td>
+<td class="colLast"><span class="strong">CasIOUtils.</span><code><strong><a href="../../../../../org/apache/uima/util/CasIOUtils.html#load(java.net.URL,%20java.net.URL,%20org.apache.uima.cas.CAS,%20org.apache.uima.util.CasLoadMode)">load</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;casUrl,
+    <a href="http://docs.oracle.com/javase/7/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;tsiUrl,
+    <a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS,
+    <a href="../../../../../org/apache/uima/util/CasLoadMode.html" title="enum in org.apache.uima.util">CasLoadMode</a>&nbsp;casLoadMode)</code>
+<div class="block">Loads a CAS from a URL source.</div>
+</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">CasPool.</span><code><strong><a href="../../../../../org/apache/uima/util/CasPool.html#releaseCas(org.apache.uima.cas.CAS)">releaseCas</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCas)</code>
 <div class="block">Checks in a CAS to the pool.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><span class="strong">CasIOUtils.</span><code><strong><a href="../../../../../org/apache/uima/util/CasIOUtils.html#save(org.apache.uima.cas.CAS,%20java.io.OutputStream,%20java.io.OutputStream,%20org.apache.uima.cas.SerialFormat)">save</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCas,
+    <a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;docOS,
+    <a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;tsiOS,
+    <a href="../../../../../org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a>&nbsp;format)</code>
+<div class="block">Write the CAS in the specified format.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><span class="strong">CasIOUtils.</span><code><strong><a href="../../../../../org/apache/uima/util/CasIOUtils.html#save(org.apache.uima.cas.CAS,%20java.io.OutputStream,%20org.apache.uima.cas.SerialFormat)">save</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCas,
+    <a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;docOS,
+    <a href="../../../../../org/apache/uima/cas/SerialFormat.html" title="enum in org.apache.uima.cas">SerialFormat</a>&nbsp;format)</code>
+<div class="block">Write the CAS in the specified format.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -1532,6 +1626,12 @@ Resource.</div>
          <a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;aStream)</code>
 <div class="block">Serializes a CAS to XMI format and writes it to an output stream.</div>
 </td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><span class="strong">CasIOUtils.</span><code><strong><a href="../../../../../org/apache/uima/util/CasIOUtils.html#writeTypeSystem(org.apache.uima.cas.CAS,%20java.io.OutputStream,%20boolean)">writeTypeSystem</a></strong>(<a href="../../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCas,
+               <a href="http://docs.oracle.com/javase/7/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;aOS,
+               boolean&nbsp;includeIndexDefs)</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -1606,6 +1706,6 @@ Resource.</div>
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>

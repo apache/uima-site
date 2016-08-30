@@ -3,13 +3,13 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>XmlCasDeserializer (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)</title>
+<title>XmlCasDeserializer (Apache UIMA Java SDK 2.9.0 User-Level API Documentation)</title>
 <link rel="stylesheet" type="text/css" href="../../../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="XmlCasDeserializer (Apache UIMA Java SDK 2.8.1 User-Level API Documentation)";
+        parent.document.title="XmlCasDeserializer (Apache UIMA Java SDK 2.9.0 User-Level API Documentation)";
     }
 //-->
 </script>
@@ -146,7 +146,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../../../org/apache/uima/util/XmlCasDeserializer.html#deserialize(java.io.InputStream,%20org.apache.uima.cas.CAS,%20boolean)">deserialize</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;aStream,
            <a href="../../../../org/apache/uima/cas/CAS.html" title="interface in org.apache.uima.cas">CAS</a>&nbsp;aCAS,
            boolean&nbsp;aLenient)</code>
-<div class="block">Deserializes a CAS from XMI.</div>
+<div class="block">Deserializes a CAS from XMI or XCAS.</div>
 </td>
 </tr>
 </table>
@@ -217,7 +217,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
                boolean&nbsp;aLenient)
                         throws <a href="http://docs.oracle.com/javase/7/docs/api/org/xml/sax/SAXException.html?is-external=true" title="class or interface in org.xml.sax">SAXException</a>,
                                <a href="http://docs.oracle.com/javase/7/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Deserializes a CAS from XMI.</div>
+<div class="block">Deserializes a CAS from XMI or XCAS.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>aStream</code> - input stream from which to read the XML document</dd><dd><code>aCAS</code> - CAS into which to deserialize. This CAS must be set up with a type system that is
           compatible with that in the XML</dd><dd><code>aLenient</code> - if true, unknown Types will be ignored. If false, unknown Types will cause an
           exception. The default is false.</dd>
@@ -293,6 +293,6 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2015 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2006&#x2013;2016 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.</small></p>
 </body>
 </html>
