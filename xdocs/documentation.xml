@@ -58,7 +58,8 @@
      <li><a href="../d/uimaj-current/references.pdf">References</a></li>
      <li><a href="../d/uima-as-2.8.1/uima_async_scaleout.pdf">UIMA Asynchronous Scaleout</a></li>
    </ul>
-   
+  
+  <!--  TO BE DELETED 
   <p>The UIMA Documentation for version 2.4.2 of the UIMA SDK is here:</p>
    <ul>
      <li><a href="../d/uimaj-2.4.2/overview_and_setup.pdf">Overview and Setup</a></li>
@@ -79,15 +80,13 @@
    </p>
    <ul>
      <li><a href="../d/uimaj-2.3.1/index.html">HTML online version - UIMA Java SDK</a></li>
-     <!--li><a href="../d/uima-as-2.3.1/uima_async_scaleout.html">HTML online version - UIMA Asynchronous Scaleout</a></li-->       
-   </ul>
+    </ul>
    <p>PDF version for printing:</p> 
    <ul>
      <li><a href="../d/uimaj-2.3.1/overview_and_setup.pdf">Overview and Setup</a></li>
      <li><a href="../d/uimaj-2.3.1/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
      <li><a href="../d/uimaj-2.3.1/tools.pdf">Tools</a></li>
      <li><a href="../d/uimaj-2.3.1/references.pdf">References</a></li>
-     <!--li><a href="../d/uima-as-2.3.1/uima_async_scaleout.pdf">UIMA Asynchronous Scaleout</a></li-->
    </ul>
        
    <p>
@@ -95,7 +94,6 @@
    </p>
    <ul>
      <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/html/index.html">HTML online version - UIMA Java SDK</a></li>
-     <!--li><a href="downloads/releaseDocs/2.3.0-incubating/docs-uima-as/html/uima_async_scaleout/uima_async_scaleout.html">HTML online version - UIMA Asynchronous Scaleout</a></li-->       
    </ul>
    <p>PDF version for printing:</p> 
    <ul>
@@ -113,6 +111,7 @@
        <li><a href="downloads/releaseDocs/2.2.0-incubating/docs/html/index.html">Version 2.2.0-incubating</a></li>
        <li><a href="downloads/releaseDocs/2.1.0-incubating/docs/html/index.html">Version 2.1.0-incubating</a></li>
     </ul>
+     -->
   </subsection>
 
   <subsection name="Javadoc (current version only)" id="javadocs">
@@ -123,10 +122,6 @@
     
    <ul>
      <li><a href="../d/uimaj-current/apidocs/index.html">Javadoc online - UIMA Java SDK curent-release</a></li>
-     <li><a href="../d/uima-as-2.8.1/apidocs/index.html">Javadoc online - UIMA-AS current release</a></li>
-     <li><a href="../d/uimaj-current/api/index.html">Javadoc online - UIMA Java SDK 2.4.0</a></li>
-<!--      <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/api/index.html">Javadoc online - UIMA Java SDK 2.3.0</a></li> -->
-<!--      <li><a href="downloads/releaseDocs/2.3.0-incubating/docs-uima-as/api/index.html">Javadoc online - UIMA-AS 2.3.0</a></li> -->
    </ul>
    </p>
   </subsection>

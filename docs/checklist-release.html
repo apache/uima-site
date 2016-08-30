@@ -330,7 +330,10 @@ svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos
       be "binary" style files.  (The line endings (if you build on windows) will be changed upon upload to svn,
       which will result in bad signatures).
       </li>
-      <li>Eclipse update sites are already svn working copies, so you can commit these.</li>
+      <li>Eclipse update sites are already svn working copies, so you can commit these.
+      If using Windows and have tortise svn installed, cd to the eclipse-update-site/uimaj (or wherever your update site
+      was built) and right click and say commit (and click the "all" selection to upload the new files).  
+      </li>
   <li>update the UIMA website docs/d with any generated docs, in a manner to 
   <a href="saving-svn-resources.html">minimize SVN space</a> use, if possible.
 This includes: PDFs, HTML versions of docbooks plus the index.html; all go on the
@@ -350,6 +353,7 @@ This includes: PDFs, HTML versions of docbooks plus the index.html; all go on th
   <li>Cleanup the SVN tag for the release candidate, removing any -rcXX, to indicate the release.</li>
   <li>After release appears on maven central, post an appropriate announce letter</li>
   <li>Add a news item for the release</li>
+  <li>Tweet about the release</li>
   <li>Add release to next Board report</li>
   <li>Celebrate :-)</li>
 </ol>
