@@ -32,8 +32,34 @@
 	
 
 		<section name="Apache UIMA News">
-      <subsectionToc/>
+    <subsectionToc/>
 
+    <subsection name="30 Aug 2016" date = "30 August 2015" title="Apache UIMA Java SDK 2.9.0 released">
+
+      <p>The UIMA core Java SDK adds some new capabilities and fixes some bugs.
+      <ul>
+					<li>Two new features were added.
+					<ul><li>CasIOUtls - a collection of general-purpose CAS load/save utilities, with support for
+					including the type system and index definition information along with the Feature Structures.</li>
+					<li>A new set of APIs allowing use of the external shared settings files to be used directly, rather than only by 
+					overriding UIMA configuration parameters. These APIs give direct access by the external settings file's key names to the 
+					key values.</li>
+					</ul>
+					</li>
+					<li>Many bugs were fixed, including:
+					<ul>
+					<li>A regression (since version 2.8.0) which broke the unambiguous AnnotationIndex iterator in some cases.</li>
+					<li>fixes for the Eclipse tooling plugins to work with the latest Eclipse (4.6, Neon) version.</li>
+					<li>Sofa mapping support for flow controllers.</li>
+					<li>Fixing a stack overflow error in AnnotationViewer when switching Sofas.</li>
+					<li>Fixing 2 JSON serialization issues: mishandling of arrays of FeatureStructures having null entries,
+					and mishandling of namespaces for uninstantiated types found as supertypes.</li>
+					</ul>
+					</li>
+					</ul></p>
+      <p>Please see the <a target="_blank" href="http://uima.apache.org/d/uimaj-2.9.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
+      for a summary of the changes.</p>
+    </subsection>
 
     <subsection name="08 Aug 2016" date = "08 Aug 2016" title="Apache UIMA DUCC 2.1.0 released">
  <p>DUCC stands for Distributed UIMA Cluster Computing. DUCC is a cluster management system providing tooling,
@@ -209,7 +235,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         for a summary of the changes.</p>
       </subsection>
 
-     <subsection name="11 Aug 2015" date = "11 August 2015" title="Apache UIMA Java SDK 2.8.1 released">
+      <subsection name="11 Aug 2015" date = "11 August 2015" title="Apache UIMA Java SDK 2.8.1 released">
 
         <p>This release is a bug fix release; replacing 2.8.0, and addressing a few issues reported
         after the 2.8.0 release.</p>
