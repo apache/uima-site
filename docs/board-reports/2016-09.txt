@@ -1,0 +1,35 @@
+Board report for Apache UIMA, for September 2016.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates: 
+30 Aug 2016  (new)        last release - Apache UIMA Java SDK 2.9.0 
+03 May 2016  (no change)  last PMC addition 
+24 Jul 2015  (no change)  last Committer addition
+          
+Releases:
+  30 Aug 2016 Apache UIMA Java SDK 2.9.0 - bug fixes + 2 new features
+  08 Aug 2016 Apache DUCC 2.1.0 many updates and upgrades 
+                                of contained subcomponents        
+              
+Other Activity:
+
+Apache UIMA Ruta subproject in release vote (pending).
+Dev mailing lists had more discussions around various directional 
+issues for the experimental UIMA V3 work, such as backward 
+compatibility concerns, and the best ways to exploit Java 8 idioms.
+
+Reported an Infra issue 
+https://issues.apache.org/jira/browse/INFRA-12551
+where the mechanism that ties SVN updates to Jira issues 
+(an important facility) via commit message tagging, stopped working 
+in mid June for many Apache projects.
+
+Community:
+
+The community continues to be moderately active.
+ 
+Issues:
+No Board level issues at this time.
