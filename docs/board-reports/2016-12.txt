@@ -1,0 +1,31 @@
+Board report for Apache UIMA, for December 2016.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates: 
+28 Sep 2016  (new)        last release - Apache UIMA Ruta 2.5.0 
+03 May 2016  (no change)  last PMC addition 
+24 Jul 2015  (no change)  last Committer addition
+          
+Releases:
+  28 Sep 2016 Apache UIMA Ruta 2.5.0 
+              many upgrades, improvements, fixes
+              
+Other Activity:
+
+  At infra's request, fixed a test case running as part of 
+  Jenkins build for UIMA-AS that opened an RMI port.  
+  We fixed the test harness and configured it to not open
+  this port. Infra chat support was very helpful in 
+  getting this resolved.
+  
+  Apache UIMA AS subproject in release vote (pending).
+
+Community:
+
+  The community continues to be moderately active.
+ 
+Issues:
+No Board level issues at this time.
