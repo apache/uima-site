@@ -46,7 +46,7 @@
           <li>Fixed http based service connectivity</li>  
           <li>Added support for automatic recovery of temp queues after broker restart.</li>
           <li>Fixed per CAS Performance Metrics breakdown </li>
-          <li>Fixed per process CPU & RSS reporting</li> 
+          <li>Fixed per process CPU and RSS reporting</li> 
           <li>Fixed example runtime configurations</li>
           <li>Fixed error recovery on exception while deserializing a CAS</li>
           <li>"Pinned" JMX MBeans to a specific deployment to enable orderly cleanup</li>
@@ -58,6 +58,7 @@
       <p>
       This version of UIMA-AS requires Java version 7 or later.      
       </p>
+
     </subsection>
 
 

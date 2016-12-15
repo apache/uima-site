@@ -226,6 +226,13 @@
         <blockquote class="sectionBody">
                                           <table class="subsectionToc">
             <tr >
+      <td>15 Dec 2016</td>
+      <td><a href='#15 Dec 2016'>
+                  Apache UIMA Asynchronous Scaleout (UIMA-AS) 2.9.0 released
+                </a>
+      </td>
+      </tr>  
+          <tr >
       <td>28 September 2016</td>
       <td><a href='#28 Sep 2016'>
                   Apache UIMA Ruta 2.5.0 released
@@ -591,6 +598,46 @@
       </tr>  
         </table>
                                                         <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="15 Dec 2016">
+            <h2>15 Dec 2016
+                        &ndash; Apache UIMA Asynchronous Scaleout (UIMA-AS) 2.9.0 released
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>UIMA AS 2.9.0 is a maintenance release that contains fixes and improvements over UIMA-AS 2.8.1.
+      </p>
+                                                <p>
+      The complete list of fixes is <a href="d/uima-as-2.9.0/issuesFixed/jira-report.html">here</a>.
+      </p>
+                                                <p>The major changes in this release are:</p>
+                                                <ul>
+          <li>Updated to use Activemq 5.14.0</li> 
+          <li>Added dependency on UIMA SDK 2.9.0</li>
+          <li>Fixed http based service connectivity</li>  
+          <li>Added support for automatic recovery of temp queues after broker restart.</li>
+          <li>Fixed per CAS Performance Metrics breakdown </li>
+          <li>Fixed per process CPU and RSS reporting</li> 
+          <li>Fixed example runtime configurations</li>
+          <li>Fixed error recovery on exception while deserializing a CAS</li>
+          <li>"Pinned" JMX MBeans to a specific deployment to enable orderly cleanup</li>
+          <li>Fixed support of AMQ white listing of packages</li>
+          <li>Added support to disable JMX via a new argument -Duima.as.enable.jmx=false</li>
+          <li>Fixed dd2spring issues</li>
+          <li>Updated version checker to test compatibility with UIMA SDK.</li> 
+         </ul>
+                                                <p>
+      This version of UIMA-AS requires Java version 7 or later.      
+      </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
         <tr><td>
        
        
