@@ -239,16 +239,35 @@
         <blockquote class="sectionBody">
                                     <p>To build all of the Apache UIMA Java SDK
 (including the docbooks and the binary assembly) and install these artifacts 
-to your local maven repository, do the following:
+to your local maven repository, do the following commands.  We'll assume 
+you want to do this work in a local disk directory on your build machine.
+</p>
+                                                <p>First, as an example, create the local build directory by using whatever your operating system's
+  commands are for creating this.  For instance, in Windows, you might pick "myWorkingCopy"
+  as the name of your local build directory, and create it at the top level, using the command:
+  </p>
+                                                <ul>
+  <lil><code>mkdir \myWorkingCopy</code></lil>
+</ul>
+                                                <p>UIMA has several projects.  The main, core project, is the Java SDK.  This is named "uimaj" - 
+the last letter, "j" stands for "Java".  Here are sample commands that check out the "trunk"
+(most current) version  
+into a subdirectory of <code>\myWorkingCopy</code>
+and build it using:
 <ul>
-<li><code>svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk /myWorkingCopy</code></li>
-<li><code>cd /myWorkingCopy/uimaj</code></li>
+<li>cd \myWorkingCopy</li>
+<li><code>svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk uimaj</code></li>
+<li><code>cd uimaj</code></li>
 <li><code>mvn install</code></li>
 </ul>
 </p>
-                                                <p class="note">Note: if you're using windows, 
-change the directory separator to backslash (but keep it forward for the url).</p>
-                                                <p>If you're looking for the lib containing all the built Jars, <code>cd ../uimaj-distr/target</code>
+                                                <p class="note">Note: if you're using Linux or MacOS,  
+change the directory separator character to a forward slash ( "/" ).</p>
+                                                <p class="note">Note: to build a particular release. instead of the most current (and possibly, not working)
+version under development, replace "trunk" with "tags/" + the svn name
+of that release,
+such as "tags/uimaj-2.9.0".</p>
+                                                <p>If you're looking for the lib containing all the built Jars, <code>cd \myWorkingCopy\uimaj\target</code>
 and unzip/untar the binary distribution artifact, named something like
 <code>uimaj-[version]-bin.zip or uimaj-[version]-bin.tar.gz</code>.
 Then, look inside the unpacked result for a lib directory - it will have the Jars that were built.
@@ -264,15 +283,13 @@ Then, look inside the unpacked result for a lib directory - it will have the Jar
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>The build for UIMA-AS depends on the UIMA SDK, so build that first,
-following the directions above.
-</p>
-                                                <p>Then, to build UIMA-AS
+                                    <p>To build UIMA-AS
 (including the docbooks and the binary assembly) and install these artifacts 
 to your local maven repository, do the following:
 <ul>
-<li><code>svn checkout https://svn.apache.org/repos/asf/uima/uima-as/trunk /myWorkingCopyAS</code></li>
-<li><code>cd /myWorkingCopyAS/uima-as</code></li>
+<li><code>cd \myWorkingCopy</code></li>
+<li><code>svn checkout https://svn.apache.org/repos/asf/uima/uima-as/trunk uima-as</code></li>
+<li><code>cd uima-as</code></li>
 <li><code>mvn install</code></li>
 </ul>
 </p>
@@ -289,15 +306,17 @@ to your local maven repository, do the following:
         <blockquote class="sectionBody">
                                     <p>
 <ul>
-<li><code>svn checkout https://svn.apache.org/repos/asf/uima/addons/trunk /myWorkingCopyAddons</code></li>
-<li><code>cd /myWorkingCopyAddons</code></li>
+<li><code>cd \myWorkingCopy</code></li>
+<li><code>svn checkout https://svn.apache.org/repos/asf/uima/addons/trunk addons</code></li>
+<li><code>cd addons</code></li>
 <li><code>mvn install</code></li>
 </ul>
 </p>
                                                 <p>To check out just one of the addons and build it, say, the WhitespaceTokenizer, do:<a />
 <ul>
-<li><code>svn checkout https://svn.apache.org/repos/asf/uima/addons/trunk/WhitespaceTokenizer /myWorkingCopyWhitespaceTokenizer</code></li>
-<li><code>cd /myWorkingCopyWhitespaceTokenizer</code></li>
+<li><code>cd \myWorkingCopy</code></li>
+<li><code>svn checkout https://svn.apache.org/repos/asf/uima/addons/trunk/WhitespaceTokenizer whitespaceTokenizer</code></li>
+<li><code>cd whitespaceTokenizer</code></li>
 <li><code>mvn install</code></li>
 </ul>
 </p>
