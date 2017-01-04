@@ -12,6 +12,7 @@
         <item name="Downloads"              href="/downloads.cgi"/>
         <item name="Documentation"          href="/documentation.html"/>
         <item name="News"                   href="/news.html"/>
+        <item name="Publications"           href="/publications.html"/>
         
         <item spacer="true"/>
         <item name="Mailing Lists"            href="/mail-lists.html"/>
