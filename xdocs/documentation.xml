@@ -42,9 +42,9 @@
       as part of the binary distribution.</li></ul>
     </p>
   
-  <subsection name="UIMA Manuals and Guides" id="manuals_and_guides">
+  <subsection name="UIMA Java SDK and UIMA-AS Manuals and Guides" id="manuals_and_guides">
        
-   <p>The UIMA documentation is available in two formats (HTML and PDF).  Here are the latest versions:
+   <p>The UIMA Java SDK and UIMA-AS documentation is available in two formats (HTML and PDF).  Here are the latest versions:
    </p>
    <ul>
      <li><a href="../d/uimaj-current/index.html">HTML online version - UIMA Java SDK</a></li>
@@ -58,6 +58,40 @@
      <li><a href="../d/uimaj-current/references.pdf">References</a></li>
      <li><a href="../d/uima-as-2.9.0/uima_async_scaleout.pdf">UIMA Asynchronous Scaleout</a></li>
    </ul>
+  
+   <p>
+     Apache UIMA JavaDoc is supplied with the binary distribution, or can be built from the
+     source distribution.  We also make it available directly from this website.
+    
+   <ul>
+     <li><a href="../d/uimaj-current/apidocs/index.html">JavaDoc online - UIMA Java SDK current-release</a></li>
+     <li><a href="../d/uima-as-2.9.0/apidocs/index.html">JavaDoc online - UIMA-AS current-release</a></li>
+   </ul>
+   </p>
+
+   <h2>UIMA SDK 3.0.0-alpha documentation</h2>
+   <p>The 3.0.0-alpha release (not for production, but for wider testing) documents include an 
+      additional "book" describing the version 3 new and changed features, and the migration tooling.</p>
+
+   <ul>
+     <li><a href="../d/uimaj-3.0.0-alpha/index.html">HTML online version - UIMA Java SDK</a></li>
+   </ul>
+   <p>PDF version for printing:</p> 
+   <ul>
+     <li><a href="../d/uimaj-3.0.0-alpha/overview_and_setup.pdf">Overview and Setup</a></li>
+     <li><a href="../d/uimaj-3.0.0-alpha/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
+     <li><a href="../d/uimaj-3.0.0-alpha/tools.pdf">Tools</a></li>
+     <li><a href="../d/uimaj-3.0.0-alpha/references.pdf">References</a></li>
+     <li><a href="../d/uimaj-3.0.0-alpha/version_3_users_guide.pdf"><b><i>(New) </i></b>Version 3 User's Guide</a></li>
+   </ul>
+  
+   <p>
+     Here is the JavaDoc for Version 3.0.0-alpha.
+    
+   <ul>
+     <li><a href="../d/uimaj-3.0.0-alpha/apidocs/index.html">JavaDoc online for Version 3.0.0-alpha</a></li>
+   </ul>
+   </p>
   
   <!--  TO BE DELETED 
   <p>The UIMA Documentation for version 2.4.2 of the UIMA SDK is here:</p>
@@ -114,17 +148,7 @@
      -->
   </subsection>
 
-  <subsection name="Javadoc (current version only)" id="javadocs">
-
-   <p>
-     Apache UIMA Javadoc is supplied with the binary distribution, or can be built from the
-     source distribution.  We also make it available directly from this website.
-    
-   <ul>
-     <li><a href="../d/uimaj-current/apidocs/index.html">Javadoc online - UIMA Java SDK curent-release</a></li>
-   </ul>
-   </p>
-  </subsection>
+  
 
   <subsection name="UIMA DUCC" id="uima-ducc">
     <p>Documentation for the Apache UIMA DUCC 2.1.0 release:</p>

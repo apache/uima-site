@@ -34,6 +34,29 @@
 		<section name="Apache UIMA News">
     <subsectionToc/>
 
+    <subsection name="30 Jan 2017" date = "30 Jan 2017" title="Apache UIMA Java SDK 3.0.0-alpha released">
+      <p>UIMA Java SDK 3.0.0-alpha is a preliminary version of core UIMA 3.0.0;  it is being released as an
+         <b>alpha version</b> to encourage wider testing and to get early feedback.
+       </p>
+       <p>This version is not recommended for production.  As an alpha version, some APIs may change 
+         going forward if issues are discovered.  We especially welcome user testing of the many new capabilities, including
+         contributing of new test cases.</p>
+       
+       <p>Requirements: Java 8 and, for any user-defined JCas cover classes, regeneration or migration of those 
+       (a migration tool is provided).</p>  
+
+       <p>
+       <a target="_blank" href="http://uima.apache.org/d/uimaj-3.0.0-alpha/version_3_users_guide.html#uv3.overview.new">  
+       <b>Here</b></a> is a brief overview of the new features, capabilities, and migration tooling.</p>
+       
+       <p>Except for migration of user-defined JCas classes, it is designed to backwards compatible with existing
+          version 2 UIMA pipelines.  The    
+          <a target="_blank" href="http://uima.apache.org/d/uimaj-3.0.0-alpha/version_3_users_guide.html#uv3.overview.new">
+          Version 3 User's Guide</a> has more details.
+       </p>
+       
+    </subsection>
+         
     <subsection name="15 Dec 2016" date = "15 Dec 2016" title="Apache UIMA Asynchronous Scaleout (UIMA-AS) 2.9.0 released">
       <p>UIMA AS 2.9.0 is a maintenance release that contains fixes and improvements over UIMA-AS 2.8.1.
       </p><p>

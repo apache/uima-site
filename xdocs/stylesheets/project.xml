@@ -94,6 +94,14 @@
         --> 
   </menus>
 
+  <downloads version="3.0.0-alpha" title="Apache UIMA Version 3.0.0-alpha" withreleasedate="true">
+    <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-3.0.0-alpha" releasedate="30-Jan-2017">
+      <releasenotes filename="uimaj-3.0.0-alpha/RELEASE_NOTES">           <f>html</f>                </releasenotes>
+      <binary       filename="uimaj-3.0.0-alpha-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
+      <source       filename="uimaj-3.0.0-alpha-source-release">          <f>zip</f>  </source>
+    </download>
+  </downloads>
+
   <downloads version="2.9.0" title="Apache UIMA-AS 2.9.0" withreleasedate="true">
     <download name="UIMA AS Asynchronous Scaleout" subdirectory="uima-as-2.9.0" releasedate="15-Dec-2016">
       <releasenotes filename="uima-as-2.9.0/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
