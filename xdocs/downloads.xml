@@ -122,6 +122,10 @@ Other mirrors: <select name="Preferred">
  
 <section name="Latest Official Releases">  
 
+  <subsection name="Apache UIMA DUCC Version 2.2.0">
+    <insertDownloads version="2.2.0"/>
+  </subsection>
+
   <subsection name="Apache UIMA Version 2.9.0">
     <insertDownloads version="2.9.0"/>
   </subsection>
