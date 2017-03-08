@@ -1,0 +1,41 @@
+Board report for Apache UIMA, for March 2017.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates: 
+23 Feb 2017  (new)        last release - Apache UIMA DUCC 2.2.0 
+03 May 2016  (no change)  last PMC addition 
+24 Jul 2015  (no change)  last Committer addition
+          
+Releases:
+  23 Feb 2017 Apache UIMA DUCC 2.2.0
+  30 Jan 2017 Apache UIMA Java SDK 3.0.0-alpha
+                Alpha release of significant new internal 
+                implementation of core UIMA Java framework
+  15 Dec 2016 Apache UIMA Asynchronous Scaleout (UIMA-AS) 2.9.0 
+                many upgrades, improvements, fixes
+              
+Other Activity:
+
+  Two release candidate votes are pending.
+
+Community:
+
+  Response to board question:
+    idf: No new committer for over a year - any candidates?
+    We did reach out in one project to see if a contributor
+    might be interested, but got a not-at-this-time response.
+    
+    We are watching some other people who have started with 
+    some initial contributions.
+     
+  The community continues to be moderately active.
+  
+  Actively working on boosting prioritization for work on
+  UIMA CPP; this (sub)project has had pending fixes that haven't been
+  applied and needs a new release.  
+ 
+Issues:
+No Board level issues at this time.
