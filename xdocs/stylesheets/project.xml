@@ -292,10 +292,14 @@
   </downloads>
 
 <downloads version="Ruta" title="Apache UIMA Ruta" withreleasedate="true">
-    <download name="UIMA Ruta 2.5.0" subdirectory="ruta-2.5.0" releasedate="28-Sep-2016">
-      <releasenotes filename="ruta-2.5.0/RELEASE_NOTES">           <f>html</f>  </releasenotes>
-      <source       filename="ruta-2.5.0-source-release">          <f>zip</f>  </source>
+    <download name="UIMA Ruta 2.6.0" subdirectory="ruta-2.6.0" releasedate="10-Mar-2017">
+      <releasenotes filename="ruta-2.6.0/RELEASE_NOTES">           <f>html</f>  </releasenotes>
+      <source       filename="ruta-2.6.0-source-release">          <f>zip</f>  </source>
     </download>
+<!--     <download name="UIMA Ruta 2.5.0" subdirectory="ruta-2.5.0" releasedate="28-Sep-2016"> -->
+<!--       <releasenotes filename="ruta-2.5.0/RELEASE_NOTES">           <f>html</f>  </releasenotes> -->
+<!--       <source       filename="ruta-2.5.0-source-release">          <f>zip</f>  </source> -->
+<!--     </download> -->
 <!--     <download name="UIMA Ruta 2.4.0" subdirectory="ruta-2.4.0" releasedate="15-Feb-2016"> -->
 <!--       <releasenotes filename="ruta-2.4.0/RELEASE_NOTES">           <f>html</f>  </releasenotes> -->
 <!--       <source       filename="ruta-2.4.0-source-release">          <f>zip</f>  </source> -->
