@@ -224,14 +224,8 @@
     </tr>
    </table>
 
-    <p>The archive at <a href="http://uima.markmail.org">uima.markmail.org</a> has good faclities for
+   <p>The archive at <a href="http://uima.markmail.org">uima.markmail.org</a> has good faclities for
     searching the messages on the list, and can display the hits in a threaded view.</p>
-    <p>The archive at
-        <a href="http://dir.gmane.org/gmane.comp.apache.uima.devel">
-          GMane
-        </a> allows interacting with the mailing lists as if they were a forum with topics; the topics
-      correspond to threads in the email list.  You can also post from this interface
-    just like you can from a forum.</p>
    <p>You may want to review some general information about 
    <a href="http://www.apache.org/foundation/mailinglists.html">Apache mailing lists</a>.  In
    particular, please note that all UIMA mailing lists are public and that 
@@ -240,48 +234,6 @@
    </p>
 
   </section>
-  
-  <section name="Apache UIMA Forums" id="Apache_UIMA_Forums">
-    <p>
-      The contents of two of the mailing lists can be viewed as a forum in several styles, 
-      thanks to technology from <a href="http://news.gmane.org/">Gmane</a>.  
-      You may also use this interface to post responses.
-    </p>
-    <table class="downloads">
-      <tr>
-        <th>Forum</th>
-        <th>View as<br/>threaded list</th>
-        <th>View as<br/>a Blog</th>
-        <th>NNTP<br/>newsreader<br/>feed</th>
-        <th>RSS feeds</th>
-      </tr>
-      <tr>
-        <td>UIMA Users</td>
-        <td><a href="http://news.gmane.org/gmane.comp.apache.uima.general">threaded</a></td>
-        <td><a href="http://blog.gmane.org/gmane.comp.apache.uima.general">blog</a></td>
-        <td><a href="nntp://news.gmane.org/gmane.comp.apache.uima.general">news reader</a></td>
-        <td><a href="http://rss.gmane.org/messages/excerpts/gmane.comp.apache.uima.general">Messages -- excerpted text</a>
-          <br/><a href="http://rss.gmane.org/topics/excerpts/gmane.comp.apache.uima.general">Topics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- excerpted text</a>
-          <br/><a href="http://rss.gmane.org/messages/complete/gmane.comp.apache.uima.general">Messages -- complete text</a>
-          <br/><a href="http://rss.gmane.org/topics/complete/gmane.comp.apache.uima.general">Topics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- complete text</a>
-        </td>
-      </tr>
-      <tr>
-        <td>UIMA Development</td>
-        <td><a href="http://news.gmane.org/gmane.comp.apache.uima.devel">threaded</a></td>
-        <td><a href="http://blog.gmane.org/gmane.comp.apache.uima.devel">blog</a></td>
-        <td><a href="nntp://news.gmane.org/gmane.comp.apache.uima.devel">news reader</a></td>
-        <td><a href="http://rss.gmane.org/messages/excerpts/gmane.comp.apache.uima.devel">Messages -- excerpted text</a>
-          <br/><a href="http://rss.gmane.org/topics/excerpts/gmane.comp.apache.uima.devel">Topics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- excerpted text</a>
-          <br/><a href="http://rss.gmane.org/messages/complete/gmane.comp.apache.uima.devel">Messages -- complete text</a>
-          <br/><a href="http://rss.gmane.org/topics/complete/gmane.comp.apache.uima.devel">Topics &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-- complete text</a>
-        </td>
-      </tr>
-    </table>
-    
-    <p>The left-hand navigation bar has two quick links following the forum link, 
-      which take you directly to the threaded views of the forums.</p>
-  </section>  
   
  </body>
 </document>
