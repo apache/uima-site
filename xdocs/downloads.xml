@@ -99,11 +99,12 @@ Other mirrors: <select name="Preferred">
 
 <!-- add a subsection for the project version being released. Do not enter download info here, instead enter it in the stylesheets/project.xml file-->
 
-<section name="Alpha and Beta levels for early adoptors and testing">
+<section name="Alpha and Beta levels for early adopters and testing">
   <p>Occasionally, we release alpha and beta levels of upcoming versions, in order to gain feedback from a wider
     community.  These early versions are less stable than normal releases, and should not be used for production work.
   </p>
-  
+
+  <!--  
   <subsection name="Apache UIMA Version 3.0.0-alpha">
     <p>Version 3.0.0-alpha <b><i>requires</i></b> Java 8.  
     Several new features are integrated with Java 8 capabilities, such as the new <code>select</code> framework.
@@ -116,6 +117,29 @@ Other mirrors: <select name="Preferred">
     </p>
     
     <insertDownloads version="3.0.0-alpha"/>
+  </subsection>
+  -->
+  
+  <subsection name="Apache UIMA Version 3.0.0-alpha02">
+    <p>This is the second "alpha" version.  It <b><i>requires</i></b> Java 8.  
+    Several new features are integrated with Java 8 capabilities, such as the new <code>select</code> framework.
+    </p>
+    
+    <p>There are many new features, described in 
+      <a target="_blank" href="http://uima.apache.org/d/uimaj-3.0.0-alpha02/version_3_users_guide.html#uv3.overview.new">
+      this overview</a>.  For more details, please see the documentation for version 3, which can be found 
+      <a target="_blank" href="http://uima.apache.org/d/uimaj-3.0.0-alpha02/version_3_users_guide.html">here.</a>
+      Changes since the first alpha version are mainly involving an update to the logging framework; see
+      the <a target="_blank" href="../d/uimaj-3.0.0-alpha02/RELEASE_NOTES.html">Release Notes</a> for details.
+    </p>
+    
+    <p>A version of the Eclipse plugin tooling is available, at a special eclipse update
+       site, <a target="_blank" href="http://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production">
+       http://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production
+       </a>.  It's version of the JCasGen plugin will generate V3 JCas classes.
+    </p>
+    
+    <insertDownloads version="3.0.0-alpha02"/>
   </subsection>
   
 </section>

@@ -17,11 +17,11 @@
         <item spacer="true"/>
         <item name="Issue tracker"          href="http://issues.apache.org/jira/browse/uima" />
         <item name="Wiki"                   href="http://cwiki.apache.org/confluence/display/UIMA/" />
-
+        
         <item spacer="true"/>
         <item name="Powered By UIMA" href="http://cwiki.apache.org/confluence/display/UIMA/Powered+by+Apache+UIMA" target="_blank" />
       </item>
-      
+
       <item name="Community">
         <item name="Get Involved"           href="/get-involved.html"/>        
         <item name="Mailing Lists"          href="/mail-lists.html"/>
@@ -32,10 +32,10 @@
       </item>
       
       <item name="Scaleout Frameworks">
-        <item name="UIMA-AS"                href="/doc-uimaas-what.html"/>
-        <item name="UIMA-DUCC"              href="/doc-uimaducc-whatitam.html"/>
-        <item name="..Demo Page"            href="/doc-uimaducc-demo.html"/>
-        <item name="..Demo Live"            href="http://uima-ducc-demo.apache.org:42133" target="_blank"/>
+        <item name="UIMA-AS"        href="/doc-uimaas-what.html"/>
+        <item name="UIMA-DUCC"      href="/doc-uimaducc-whatitam.html"/>
+        <item name="..Demo Page"   href="/doc-uimaducc-demo.html"/>
+        <item name="..Demo Live"   href="http://uima-ducc-demo.apache.org:42133" target="_blank"/>
       </item>
 
   
@@ -43,11 +43,11 @@
         <item name="Annotators"               href="/sandbox.html#uima-addons-annotators"/>
         <item name="Tools &amp; Servers"      href="/toolsServers.html"/>
         <item name="Addons and Sandbox"       href="/sandbox.html"/>
-        <item name="UIMA Ruta"                href="/ruta.html"/>
+        <item name="UIMA Ruta"                  href="/ruta.html"/>
         <item name="uimaFIT"                  href="/uimafit.html"/>
         <item name="External Resources"       href="/external-resources.html"/>        
       </item>
-
+                                                
       <item name="Development">
         <item name="Quick Start: building"  href="/dev-quick.html"/>
         <item name="Building from Source"   href="/building-uima.html"/>
@@ -64,11 +64,11 @@
       </item>
       
       <item name="Events and Conferences"                                  >
-        <item name="COLING 2014"            href="/coling14.html"/>
+        <item name="COLING 2014"              href="/coling14.html"/>
         <item name="GSCL 2013"              href="/gscl13.html"/>
-        <item name="IKS 2009"               href="/iks09.html"/>
+        <item name="IKS 2009"              href="/iks09.html"/>
         <item name="GSCL 2009"              href="/gscl09.html"/>
-        <item name="LSM 2009"               href="/lsm09.html"/>
+        <item name="LSM 2009"              href="/lsm09.html"/>
         <item name="LREC 2008"              href="/lrec08.html"/>
         <item name="GLDV 2007"              href="/gldv07.html"/>       
       </item>
@@ -94,6 +94,14 @@
       <releasenotes filename="uima-ducc-2.2.0/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
       <binary       filename="uima-ducc-2.2.0-bin">                   <f>tar.gz</f>                </binary>   
       <source       filename="uima-ducc-2.2.0-source-release">                   <f>zip</f>    </source>
+    </download>
+  </downloads>
+
+  <downloads version="3.0.0-alpha02" title="Apache UIMA Version 3.0.0-alpha02" withreleasedate="true">
+    <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-3.0.0-alpha02" releasedate="19-Mar-2017">
+      <releasenotes filename="uimaj-3.0.0-alpha02/RELEASE_NOTES">           <f>html</f>                </releasenotes>
+      <binary       filename="uimaj-3.0.0-alpha02-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
+      <source       filename="uimaj-3.0.0-alpha02-source-release">          <f>zip</f>  </source>
     </download>
   </downloads>
 

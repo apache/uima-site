@@ -391,7 +391,7 @@ under the License.
 ##
   #set ($allDownloads = $project.getChildren("downloads"))
   #foreach ($potentialDownloads in $allDownloads)
-    <!-- potentialDownloads version attr = $potentialDownloads.getAttributeValue("version") $version -->
+##    <!-- potentialDownloads version attr = $potentialDownloads.getAttributeValue("version") $version -->
     #if ($potentialDownloads.getAttributeValue("version").equals($version))
       #insertDownload2 ($potentialDownloads)
     #end

@@ -70,29 +70,41 @@
    </ul>
    </p>
 
-   <h2>UIMA SDK 3.0.0-alpha documentation</h2>
-   <p>The 3.0.0-alpha release (not for production, but for wider testing) documents include an 
+   <h2>UIMA SDK 3.0.0-alpha02 documentation</h2>
+   <p>The 3.0.0-alpha02 release (not for production, but for wider testing) documents include an 
       additional "book" describing the version 3 new and changed features, and the migration tooling.</p>
 
    <ul>
-     <li><a href="../d/uimaj-3.0.0-alpha/index.html">HTML online version - UIMA Java SDK</a></li>
+     <li><a href="../d/uimaj-3.0.0-alpha02/index.html">HTML online version - UIMA Java SDK</a></li>
    </ul>
    <p>PDF version for printing:</p> 
    <ul>
-     <li><a href="../d/uimaj-3.0.0-alpha/overview_and_setup.pdf">Overview and Setup</a></li>
-     <li><a href="../d/uimaj-3.0.0-alpha/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
-     <li><a href="../d/uimaj-3.0.0-alpha/tools.pdf">Tools</a></li>
-     <li><a href="../d/uimaj-3.0.0-alpha/references.pdf">References</a></li>
-     <li><a href="../d/uimaj-3.0.0-alpha/version_3_users_guide.pdf"><b><i>(New) </i></b>Version 3 User's Guide</a></li>
+     <li><a href="../d/uimaj-3.0.0-alpha02/overview_and_setup.pdf">Overview and Setup</a></li>
+     <li><a href="../d/uimaj-3.0.0-alpha02/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
+     <li><a href="../d/uimaj-3.0.0-alpha02/tools.pdf">Tools</a></li>
+     <li><a href="../d/uimaj-3.0.0-alpha02/references.pdf">References</a></li>
+     <li><a href="../d/uimaj-3.0.0-alpha02/version_3_users_guide.pdf"><b><i>(New) </i></b>Version 3 User's Guide</a></li>
    </ul>
   
    <p>
-     Here is the JavaDoc for Version 3.0.0-alpha.
+     Here is the JavaDoc for Version 3.0.0-alpha02.
     
    <ul>
-     <li><a href="../d/uimaj-3.0.0-alpha/apidocs/index.html">JavaDoc online for Version 3.0.0-alpha</a></li>
+     <li><a href="../d/uimaj-3.0.0-alpha02/apidocs/index.html">JavaDoc online for Version 3.0.0-alpha02</a></li>
    </ul>
    </p>
+   
+   <h3>Release Notes</h3>
+		<p>Click <a href="../d/uimaj-3.0.0-alpha02/RELEASE_NOTES.html">RELEASE_NOTES.html</a> for the 3.0.0-alpha02 Apache UIMA JAVA SDK
+		release notes.</p>
+		
+	 <h3>API changes for V3</h3>
+		<p>Click <a href="../d/uimaj-3.0.0-alpha02/uimaj-core/api-change-report/japicmp.html">api change report</a> 
+		for a report of the APIs in UIMA that were changed in this release, versus the 2.9.0 version.</p>
+		
+	 <h3>Issues Fixed</h3>
+		<p>Click <a href="../d/uimaj-3.0.0-alpha02/issuesFixed/jira-report.html">issues fixed</a> for the list of Jira issues fixed since the previous release.</p>
+
   
   <!--  TO BE DELETED 
   <p>The UIMA Documentation for version 2.4.2 of the UIMA SDK is here:</p>
