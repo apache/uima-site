@@ -34,6 +34,24 @@
 		<section name="Apache UIMA News">
     <subsectionToc/>
 
+    <subsection name="29 Mar 2017" date = "29 Mar 2017" title="Apache uimaFIT 2.3.0 released">
+      <p>uimaFIT 2.3.0 is a minor feature and bugfix release to uimaFIT 2.2.0. It should should 
+      serve as a drop-in replacement for previous uimaFIT 2.x versions.</p><p>
+      The complete list of fixes is <a href="d/uimafit-2.3.0/issuesFixed/jira-report.html">here</a>.
+      </p>
+      <p>The major changes in this release are:</p>
+      <ul>
+        <li>Support for language and mime-type capabilities;</li>
+        <li>Faster indexCovered implementation;</li>
+        <li>Document auto-detection of index and type priority definitions;</li>
+        <li>Fixed selectPreceding not skipping over undesired annotations;</li>
+        <li>Fixed calling typeSystemInit on readers and other life-cycle methods;</li>
+       </ul>
+      <p>
+      This version of uimaFIT requires Java version 7 or later.      
+      </p>
+    </subsection>
+
     <subsection name="19 Mar 2017" date = "19 Mar 2017" title="Apache UIMA Java SDK 3.0.0-alpha02 released">
       <p>UIMA Java SDK 3.0.0-alpha02 is a preliminary version of core UIMA 3.0.0;  it is being released as an
          <b>alpha version</b> to encourage wider testing and to get early feedback.
