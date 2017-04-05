@@ -124,7 +124,7 @@
   </downloads>
 
   <downloads version="2.10.0" title="Apache UIMA Version 2.10.0" withreleasedate="true">
-    <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-2.10.0" releasedate="04-Aug-2017">
+    <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-2.10.0" releasedate="04-Apr-2017">
       <releasenotes filename="uimaj-2.10.0/RELEASE_NOTES">           <f>html</f>                </releasenotes>
       <binary       filename="uimaj-2.10.0-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
       <source       filename="uimaj-2.10.0-source-release">          <f>zip</f>  </source>
