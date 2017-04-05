@@ -107,10 +107,16 @@ under the License.
       No need to run release:perform because no artifacts from this are going to Maven central distribution.
       <p>Note that the target/eclipse-update-site will have .svn files - don't delete these - they're needed when
       you decide to "publish" via comitting these to the release svn.</p></li>
-  <li>Copy any artifacts (together with their signings) to the staging spot.  This is typically
-  in your people.apache.org/~[userid]/public_html directory. For releases which include eclipse-update-site
-  packagings, this should include any modifications to the composite update site or subsites (see
-  <a href="/eclipse-update-site.html">eclipse-update-site</a>.
+  <li>Copy any artifacts (together with their signings) to the staging spot.  
+  A suggested approach: Make a new dir in the build project, called svnUpload (or whatever), and 
+      copy the artifacts (<b>from the build/target/checkout/target directory</b>)(typically the
+      bin/zip/tar and the source release and all the signature/checksums) into this dir.  Then do the svn command:
+      <pre>cd the-svnUpload-directory
+svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos/dist/dev/uima/uimaj/n.n.n-rc1/artifacts
+</pre>
+     And do something similar for the eclipse update sub-site.
+  
+  
   <p>Be sure to copy artifacts from the build-from tag spot, which should have a path like:
       ...[top level project]/target/checkout/target.  Note this is not from [top level project]/target.
       Doing this will guarantee that you're posting the artifacts built from the tag (which could be 
@@ -126,12 +132,12 @@ under the License.
   <li>Promote the release(s) from the staging repositories</li>
   <li>Add the approved staged artifacts to the release/uima spot. This is
       https://dist.apache.org/repos/dist/release/uima/uimaj-x.y.z  (replace the last with the thing being released).
-      A suggested approach: Make a new dir in the build project, called svnUpload (or whatever), and 
-      copy the artifacts (<b>from the build/target/checkout/target directory</b>)(typically the
-      bin/zip/tar and the source release and all the signature/checksums) into this dir.  Then do the svn command:
-      <pre>cd the-svnUpload-directory
-svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos/dist/release/uima/xxxxxxxx-n.n.n
-</pre>
+      Assuming you previously promoted the release candidate to https://dist.apache.org/repos/dist/dev/uima/uimaj/xxx/yyy,
+      you can use the command (modify the details, of course)
+      <pre>svn copy https://dist.apache.org/repos/dist/dev/uima/uimaj/2.10.0-rc1/artifacts
+        https://dist.apache.org/repos/dist/release/uima/uimaj-2.10.0 -m "release uimaj-2.10.0"
+      </pre>
+      
             Do not add files like POMs which have line-endings, if they have signatures; the files added should
       be "binary" style files.  (The line endings (if you build on windows) will be changed upon upload to svn,
       which will result in bad signatures).
@@ -145,18 +151,21 @@ svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos
 This includes: PDFs, HTML versions of docbooks plus the index.html; all go on the
       website under the uima.apache.org/d/ (non-SVN source) directory.  Update the index.html
       as needed for the version.
-</li>
+  </li>
   <!--li>Copy released artifacts to targets: bin, src, p.a.o/www/www.apache.org/dist/uima, 
       new features / plugins from Eclipse update site target/eclipse-update-site to .../dist/uima/eclipse-update-site
       (add to what's already there).</li-->
   <!-- li>Copy released artifacts to targets: bin, src, p.a.o/www/www.apache.org/dist/uima. <u>TEMPORARY:</u>
       Copy the updated composite repository from eclipse-packagings/eclipse-update-site to .../dist/uima/eclipse-update-site.</li-->
-  <li>Copy RELEASE_NOTES and issuesFixed
+  <li>Copy RELEASE_NOTES and issuesFixed, and maybe api-change-report
       from the .../target/checkout where
       the mvn release:perform was done from to the UIMA web site in doc/d/[project-version].</li>
-  <li>Update the downloads page of the web site</li>
+  <li>update the current-release folder, if needed.</li>
+  <li>Update the downloads page of the web site, and the xdocs/stylesheets/project.xml for the new release.</li>
   <li>Update Jira version info to reflect the release status and date</li>
-  <li>Cleanup the SVN tag for the release candidate, removing any -rcXX, to indicate the release.</li>
+  <li>Log into <a target="_blank" href="https://reporter.apache.org/addrelease.html?uima"> 
+  https://reporter.apache.org/addrelease.html?uima</a> and add release data (e.g. uimaj-2.10.0 2017-04-04).</li>
+  <li>Cleanup the SVN tag for the release candidate if needed, removing any -rcXX, to indicate the release.</li>
   <li>After release appears on maven central, post an appropriate announce letter</li>
   <li>Add a news item for the release</li>
   <li>Tweet about the release</li>

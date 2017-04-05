@@ -226,6 +226,13 @@
         <blockquote class="sectionBody">
                                           <table class="subsectionToc">
             <tr >
+      <td>4 April 2017</td>
+      <td><a href='#4 Apr 2017'>
+                  Apache UIMA Java SDK 2.10.0 released
+                </a>
+      </td>
+      </tr>  
+          <tr >
       <td>29 Mar 2017</td>
       <td><a href='#29 Mar 2017'>
                   Apache uimaFIT 2.3.0 released
@@ -275,7 +282,7 @@
       </td>
       </tr>  
           <tr >
-      <td>30 August 2015</td>
+      <td>30 August 2016</td>
       <td><a href='#30 Aug 2016'>
                   Apache UIMA Java SDK 2.9.0 released
                 </a>
@@ -633,6 +640,47 @@
       </tr>  
         </table>
                                                         <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="4 Apr 2017">
+            <h2>4 Apr 2017
+                        &ndash; Apache UIMA Java SDK 2.10.0 released
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>The UIMA core Java SDK adds some new capabilities and fixes some bugs.
+      <ul>
+          <li>External Override values are supported within UIMA Descriptor import statements
+          and within the fileUrl value of fileResourceSpecifiers.</li>
+          <li>External Overrides: support was added for searching the classpath and UIMA Datapath to find the
+              external overrides.
+              If a relative file name is specified but the file is not found, 
+              the classpath and datapath will be searched.  
+              This approach will be changed in the next release 
+              to make a clearer distinction between file and classpath resources 
+              in order to avoid the ambiguity of the current design; note   
+              that this change will not be backwards-compatible.</li>
+          
+          <li>to improve integration with Java, the JCas cover classes 
+              for the built-in UIMA types FSArray, FSList,
+              StringArray, and StringList now support the Iterable interface.</li>
+          <li>a new report on API changes, <a target="_blank" href="d/uimaj-2.10.0/api-change-report.html">api-change-report.html</a>,
+              is included as part of the release.</li>
+          <li>several bugs were fixed; please see <a target="_blank" href="d/uimaj-2.10.0/issuesFixed/jira-report.html">
+              issuesFixed</a> for a list of changes.</li>
+          </ul>
+          
+        </p>
+                                                <p>Please see the <a target="_blank" href="d/uimaj-2.10.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
+      for a summary of the changes.</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
         <tr><td>
        
        

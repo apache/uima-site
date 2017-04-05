@@ -34,6 +34,35 @@
 		<section name="Apache UIMA News">
     <subsectionToc/>
 
+    <subsection name="4 Apr 2017" date = "4 April 2017" title="Apache UIMA Java SDK 2.10.0 released">
+
+      <p>The UIMA core Java SDK adds some new capabilities and fixes some bugs.
+      <ul>
+          <li>External Override values are supported within UIMA Descriptor import statements
+          and within the fileUrl value of fileResourceSpecifiers.</li>
+          <li>External Overrides: support was added for searching the classpath and UIMA Datapath to find the
+              external overrides.
+              If a relative file name is specified but the file is not found, 
+              the classpath and datapath will be searched.  
+              This approach will be changed in the next release 
+              to make a clearer distinction between file and classpath resources 
+              in order to avoid the ambiguity of the current design; note   
+              that this change will not be backwards-compatible.</li>
+          
+          <li>to improve integration with Java, the JCas cover classes 
+              for the built-in UIMA types FSArray, FSList,
+              StringArray, and StringList now support the Iterable interface.</li>
+          <li>a new report on API changes, <a target="_blank" href="d/uimaj-2.10.0/api-change-report.html">api-change-report.html</a>,
+              is included as part of the release.</li>
+          <li>several bugs were fixed; please see <a target="_blank" href="d/uimaj-2.10.0/issuesFixed/jira-report.html">
+              issuesFixed</a> for a list of changes.</li>
+          </ul>
+          
+        </p>
+      <p>Please see the <a target="_blank" href="d/uimaj-2.10.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
+      for a summary of the changes.</p>
+    </subsection>
+
     <subsection name="29 Mar 2017" date = "29 Mar 2017" title="Apache uimaFIT 2.3.0 released">
       <p>uimaFIT 2.3.0 is a minor feature and bugfix release to uimaFIT 2.2.0. It should should 
       serve as a drop-in replacement for previous uimaFIT 2.x versions.</p><p>
@@ -269,7 +298,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         </p>
       </subsection>
       
-    <subsection name="30 Aug 2016" date = "30 August 2015" title="Apache UIMA Java SDK 2.9.0 released">
+    <subsection name="30 Aug 2016" date = "30 August 2016" title="Apache UIMA Java SDK 2.9.0 released">
 
       <p>The UIMA core Java SDK adds some new capabilities and fixes some bugs.
       <ul>

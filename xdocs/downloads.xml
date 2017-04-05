@@ -103,22 +103,6 @@ Other mirrors: <select name="Preferred">
   <p>Occasionally, we release alpha and beta levels of upcoming versions, in order to gain feedback from a wider
     community.  These early versions are less stable than normal releases, and should not be used for production work.
   </p>
-
-  <!--  
-  <subsection name="Apache UIMA Version 3.0.0-alpha">
-    <p>Version 3.0.0-alpha <b><i>requires</i></b> Java 8.  
-    Several new features are integrated with Java 8 capabilities, such as the new <code>select</code> framework.
-    </p>
-    
-    <p>There are many new features, described in 
-      <a target="_blank" href="http://uima.apache.org/d/uimaj-3.0.0-alpha/version_3_users_guide.html#uv3.overview.new">
-      this overview</a>.  For more details, please see the documentation for version 3, which can be found 
-      <a target="_blank" href="http://uima.apache.org/d/uimaj-3.0.0-alpha/version_3_users_guide.html">here.</a>
-    </p>
-    
-    <insertDownloads version="3.0.0-alpha"/>
-  </subsection>
-  -->
   
   <subsection name="Apache UIMA Version 3.0.0-alpha02">
     <p>This is the second "alpha" version.  It <b><i>requires</i></b> Java 8.  
@@ -146,25 +130,66 @@ Other mirrors: <select name="Preferred">
  
 <section name="Latest Official Releases">  
 
+  <p>Note that some older releases appear under the "Latest" because they contain
+     the latest release of some of the components included in that version. </p>
+
+  <subsection name="Apache UIMA Version 2.10.0">
+    <insertDownloads version="2.10.0"/>
+  </subsection>
+
+  <!-- includes latest uima-as release -->
+  <subsection name="Apache UIMA Version 2.9.0">
+    <insertDownloads version="2.9.0"/>
+  </subsection>
+  
+  <!-- includes latest uima-c++ release -->
+  <subsection name="Apache UIMA Version 2.4.0">
+    <insertDownloads version="2.4.0"/>
+  </subsection>
+
+  <subsection name="Apache UIMA uimaFIT">
+    <insertDownloads version="uimaFIT"/>
+  </subsection>
+
+  <subsection name="Apache UIMA Ruta">
+    <insertDownloads version="Ruta"/>
+  </subsection>
+
   <subsection name="Apache UIMA DUCC Version 2.2.0">
     <insertDownloads version="2.2.0"/>
   </subsection>
 
-  <subsection name="Apache UIMA Version 2.9.0">
-    <insertDownloads version="2.9.0"/>
-  </subsection>
+</section> 
 
-  <subsection name="Apache UIMA DUCC Version 2.1.0">
-    <insertDownloads version="2.1.0"/>
-  </subsection>
+<section name="Older Releases">
 
   <subsection name="Apache UIMA Version 2.8.1">
     <p>Note: This version replaces 2.8.0 with bug fixes, and 2.8.0 is only available in the archives.</p>
     <insertDownloads version="2.8.1"/>
   </subsection>
-   
+
   <subsection name="Apache UIMA Version 2.7.0">
     <insertDownloads version="2.7.0"/>
+  </subsection>
+
+  <subsection name="Apache UIMA Version 2.6.0">
+    <insertDownloads version="2.6.0"/>
+  </subsection>
+
+  <subsection name="Apache UIMA Version 2.5.0">
+    <insertDownloads version="2.5.0"/>
+  </subsection>
+
+  <subsection name="Apache UIMA Version 2.4.2">
+    <insertDownloads version="2.4.2"/>
+  </subsection>
+  
+  <p>The 2.4.1 of the UIMA Java SDK has been replaced by the 2.4.2 version above. There was no UIMA-AS version 2.4.1 released.</p>
+
+  
+  
+  <subsection name="Apache UIMA DUCC Version 2.1.0">
+    <insertDownloads version="2.1.0"/>
   </subsection>
 
   <subsection name="Apache UIMA DUCC Version 2.0.1">
@@ -176,41 +201,16 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="1.1.0"/>
   </subsection>
 
-
-  <subsection name="Apache UIMA Version 2.6.0">
-    <insertDownloads version="2.6.0"/>
-  </subsection>
-  
   <subsection name="Apache UIMA DUCC Version 1.0.0">
     <insertDownloads version="1.0.0"/>
   </subsection>
   
-  <subsection name="Apache UIMA Version 2.5.0">
-    <insertDownloads version="2.5.0"/>
-  </subsection>
-
-  <subsection name="Apache UIMA uimaFIT">
-    <insertDownloads version="uimaFIT"/>
-  </subsection>
-  
-  <subsection name="Apache UIMA Version 2.4.2">
-    <insertDownloads version="2.4.2"/>
-  </subsection>
-  
-  <p>The 2.4.1 of the UIMA Java SDK has been replaced by the 2.4.2 version above. There was no UIMA-AS version 2.4.1 released.</p>
-
-  <subsection name="Apache UIMA Version 2.4.0">
-    <insertDownloads version="2.4.0"/>
-  </subsection>
   
 <!--  <subsection name="Apache UIMA Addons">
     <insertDownloads version="2.3.1"/>
   </subsection>
 -->
   
-  <subsection name="Apache UIMA Ruta">
-    <insertDownloads version="Ruta"/>
-  </subsection>
   
 <!--   <subsection name="Apache UIMA Version 2.3.1 - Release Date: UIMA Java SDK: 10-Dec-2010    UIMA AS: 22-Mar-2011   UIMA Addons: 29-Aug-2011"> -->
 <!--     <insertDownloads version="2.3.1"/> -->
