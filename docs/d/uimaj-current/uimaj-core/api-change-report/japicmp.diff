@@ -1,0 +1,64 @@
+Comparing source compatibility of C:\au\builds\uimaj-2.10.0\target\checkout\uimaj-core\target\uima-core.jar against C:\Users\IBM_ADMIN\.m2\repository\org\apache\uima\uimaj-core\2.9.0\uimaj-core-2.9.0.jar
+***  MODIFIED CLASS: PUBLIC FINAL org.apache.uima.jcas.cas.BooleanArray  (not serializable)
+	+++  NEW INTERFACE: java.lang.Iterable
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+***  MODIFIED CLASS: PUBLIC FINAL org.apache.uima.jcas.cas.ByteArray  (not serializable)
+	+++  NEW INTERFACE: java.lang.Iterable
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+***  MODIFIED CLASS: PUBLIC FINAL org.apache.uima.jcas.cas.DoubleArray  (not serializable)
+	+++  NEW INTERFACE: java.lang.Iterable
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+***  MODIFIED CLASS: PUBLIC org.apache.uima.jcas.cas.FloatList  (not serializable)
+	+++  NEW INTERFACE: java.lang.Iterable
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+	+++  NEW METHOD: PUBLIC(+) org.apache.uima.jcas.cas.NonEmptyFloatList push(float)
+***  MODIFIED CLASS: PUBLIC FINAL org.apache.uima.jcas.cas.FSArray  (not serializable)
+	+++  NEW INTERFACE: java.lang.Iterable
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+***  MODIFIED CLASS: PUBLIC org.apache.uima.jcas.cas.FSList  (not serializable)
+	+++  NEW INTERFACE: java.lang.Iterable
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+	+++  NEW METHOD: PUBLIC(+) org.apache.uima.jcas.cas.NonEmptyFSList push(org.apache.uima.jcas.cas.TOP)
+***  MODIFIED CLASS: PUBLIC FINAL org.apache.uima.jcas.cas.IntegerArray  (not serializable)
+	+++  NEW INTERFACE: java.lang.Iterable
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+***  MODIFIED CLASS: PUBLIC org.apache.uima.jcas.cas.IntegerList  (not serializable)
+	+++  NEW INTERFACE: java.lang.Iterable
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+	+++  NEW METHOD: PUBLIC(+) org.apache.uima.jcas.cas.NonEmptyIntegerList push(int)
+***  MODIFIED CLASS: PUBLIC FINAL org.apache.uima.jcas.cas.LongArray  (not serializable)
+	+++  NEW INTERFACE: java.lang.Iterable
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+***  MODIFIED CLASS: PUBLIC org.apache.uima.jcas.cas.NonEmptyFloatList  (not serializable)
+	+++  NEW CONSTRUCTOR: PUBLIC(+) NonEmptyFloatList(org.apache.uima.jcas.JCas, float, org.apache.uima.jcas.cas.FloatList)
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+***  MODIFIED CLASS: PUBLIC org.apache.uima.jcas.cas.NonEmptyFSList  (not serializable)
+	+++  NEW CONSTRUCTOR: PUBLIC(+) NonEmptyFSList(org.apache.uima.jcas.JCas, org.apache.uima.jcas.cas.TOP, org.apache.uima.jcas.cas.FSList)
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+***  MODIFIED CLASS: PUBLIC org.apache.uima.jcas.cas.NonEmptyIntegerList  (not serializable)
+	+++  NEW CONSTRUCTOR: PUBLIC(+) NonEmptyIntegerList(org.apache.uima.jcas.JCas, int, org.apache.uima.jcas.cas.IntegerList)
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+***  MODIFIED CLASS: PUBLIC org.apache.uima.jcas.cas.NonEmptyStringList  (not serializable)
+	+++  NEW CONSTRUCTOR: PUBLIC(+) NonEmptyStringList(org.apache.uima.jcas.JCas, java.lang.String, org.apache.uima.jcas.cas.StringList)
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+***  MODIFIED CLASS: PUBLIC FINAL org.apache.uima.jcas.cas.ShortArray  (not serializable)
+	+++  NEW INTERFACE: java.lang.Iterable
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+***  MODIFIED CLASS: PUBLIC FINAL org.apache.uima.jcas.cas.StringArray  (not serializable)
+	+++  NEW INTERFACE: java.lang.Iterable
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+***  MODIFIED CLASS: PUBLIC org.apache.uima.jcas.cas.StringList  (not serializable)
+	+++  NEW INTERFACE: java.lang.Iterable
+	+++  NEW METHOD: PUBLIC(+) java.util.Iterator iterator()
+	+++  NEW METHOD: PUBLIC(+) org.apache.uima.jcas.cas.NonEmptyStringList push(java.lang.String)
+***  MODIFIED CLASS: PUBLIC ABSTRACT org.apache.uima.resource.Resource_ImplBase  (not serializable)
+	+++  NEW METHOD: PUBLIC(+) org.apache.uima.resource.RelativePathResolver getRelativePathResolver(java.util.Map)
+***  MODIFIED CLASS: PUBLIC org.apache.uima.resource.ResourceConfigurationException  (compatible)
+	+++  NEW FIELD: PUBLIC(+) STATIC(+) FINAL(+) java.lang.String EXTERNAL_OVERRIDE_CIRCULAR_REFERENCE
+**** MODIFIED INTERFACE: PUBLIC ABSTRACT org.apache.uima.resource.ResourceManager  (not serializable)
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) void destroy()
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) java.util.List getExternalResources()
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) java.lang.Class loadUserClass(java.lang.String)
+		+++  NEW EXCEPTION: java.lang.ClassNotFoundException
+***! MODIFIED CLASS: PUBLIC org.apache.uima.UimaContextHolder  (not serializable)
+	***! MODIFIED METHOD: PUBLIC STATIC org.apache.uima.UimaContext (<-void) setContext(org.apache.uima.UimaContext)
