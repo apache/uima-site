@@ -2,7 +2,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    <title>Apache UIMA Ruta&#8482; Guide and Reference</title><link rel="stylesheet" type="text/css" href="css/stylesheet-html.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="Apache UIMA Ruta&#8482; Guide and Reference" id="d5e1"><div xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h1 class="title">Apache UIMA Ruta&#8482; Guide and Reference</h1></div><div><div class="authorgroup">
       <h3 class="corpauthor">Written and maintained by the Apache UIMA Development Community</h3>
-    </div></div><div><p class="releaseinfo">Version 2.6.0</p></div><div><p class="copyright">Copyright &copy; 2011, 2017 The Apache Software Foundation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
+    </div></div><div><p class="releaseinfo">Version 2.6.1</p></div><div><p class="copyright">Copyright &copy; 2011, 2017 The Apache Software Foundation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
       <p> </p>
       <p title="License and Disclaimer">
         <b>License and Disclaimer.&nbsp;</b>
@@ -35,8 +35,8 @@
         the trademark or service mark.
         
       </p>
-    </div></div><div><p class="pubdate">March, 2017</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#ugr.tools.ruta.overview">1. Apache UIMA Ruta Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.overview.intro">1.1. What is Apache UIMA Ruta?</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.overview.gettingstarted">1.2. Getting started</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.overview.coreconcepts">1.3. Core Concepts</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.overview.examples">1.4. Learning by Example</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae">1.5. UIMA Analysis Engines</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.ae.basic">1.5.1. Ruta Engine</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.annotationwriter">1.5.2. Annotation Writer</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.plaintext">1.5.3. Plain Text Annotator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.modifier">1.5.4. Modifier</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.html">1.5.5. HTML Annotator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.htmlconverter">1.5.6. HTML Converter</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.stylemap">1.5.7. Style Map Creator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.cutter">1.5.8. Cutter</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.view">1.5.9. View Writer</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.xmi">1.5.10. XMI Writer</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ruta.language.language">2. Apache UIMA Ruta Language</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.syntax">2.1. Syntax</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.anchoring">2.2. Rule elements and their matching order</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.seeding">2.3. Basic annotations and tokens</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier">2.4. Quantifiers</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.sg">2.4.1. * Star Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.sr">2.4.2. *? Star Reluctant</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.pg">2.4.3. + Plus Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.pr">2.4.4. +? Plus Reluctant</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.qg">2.4.5. ? Question Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.qr">2.4.6. ?? Question Reluctant</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.mmg">2.4.7. [x,y] Min Max Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.mmr">2.4.8. [x,y]? Min Max Reluctant</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations">2.5. Declarations</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.type">2.5.1. Types</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.variable">2.5.2. Variables</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.ressource">2.5.3. Resources</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.scripts">2.5.4. Scripts</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.components">2.5.5. Components</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions">2.6. Expressions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.type">2.6.1. Type Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.number">2.6.2. Number Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.string">2.6.3. String Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.boolean">2.6.4. Boolean Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.lists">2.6.5. List Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.features">2.6.6. Feature Expressions</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions">2.7. Conditions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.after">2.7.1. AFTER</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.and">2.7.2. AND</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.before">2.7.3. BEFORE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.contains">2.7.4. CONTAINS</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.contextcount">2.7.5. CONTEXTCOUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.count">2.7.6. COUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.currentcount">2.7.7. CURRENTCOUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.endswith">2.7.8. ENDSWITH</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.feature">2.7.9. FEATURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.if">2.7.10. IF</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.inlist">2.7.11. INLIST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.is">2.7.12. IS</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.last">2.7.13. LAST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.mofn">2.7.14. MOFN</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.near">2.7.15. NEAR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.not">2.7.16. NOT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.or">2.7.17. OR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.parse">2.7.18. PARSE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.partof">2.7.19. PARTOF</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.partofneq">2.7.20. PARTOFNEQ</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.position">2.7.21. POSITION</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.regexp">2.7.22. REGEXP</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.score">2.7.23. SCORE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.size">2.7.24. SIZE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.startswith">2.7.25. STARTSWITH</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.totalcount">2.7.26. TOTALCOUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.vote">2.7.27. VOTE</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.actions">2.8. Actions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.add">2.8.1. ADD</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.addfiltertype">2.8.2. ADDFILTERTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.addretaintype">2.8.3. ADDRETAINTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.assign">2.8.4. ASSIGN</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.call">2.8.5. CALL</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.clear">2.8.6. CLEAR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.color">2.8.7. COLOR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.configure">2.8.8. CONFIGURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.create">2.8.9. CREATE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.del">2.8.10. DEL</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.dynamicanchoring">2.8.11. DYNAMICANCHORING</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.exec">2.8.12. EXEC</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.fill">2.8.13. FILL</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.filtertype">2.8.14. FILTERTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.gather">2.8.15. GATHER</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.get">2.8.16. GET</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.getfeature">2.8.17. GETFEATURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.getlist">2.8.18. GETLIST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.greedyanchoring">2.8.19. GREEDYANCHORING</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.log">2.8.20. LOG</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.mark">2.8.21. MARK</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markfast">2.8.22. MARKFAST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markfirst">2.8.23. MARKFIRST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.marklast">2.8.24. MARKLAST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markonce">2.8.25. MARKONCE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markscore">2.8.26. MARKSCORE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.marktable">2.8.27. MARKTABLE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.matchedtext">2.8.28. MATCHEDTEXT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.merge">2.8.29. MERGE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.remove">2.8.30. REMOVE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.removeduplicate">2.8.31. REMOVEDUPLICATE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.removefiltertype">2.8.32. REMOVEFILTERTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.removeretaintype">2.8.33. REMOVERETAINTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.replace">2.8.34. REPLACE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.retaintype">2.8.35. RETAINTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.setfeature">2.8.36. SETFEATURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.shift">2.8.37. SHIFT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.split">2.8.38. SPLIT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.transfer">2.8.39. TRANSFER</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.trie">2.8.40. TRIE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.trim">2.8.41. TRIM</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.unmark">2.8.42. UNMARK</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.unmarkall">2.8.43. UNMARKALL</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.filtering">2.9. Robust extraction using filtering</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.blocks">2.10. Blocks</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.blocks.block">2.10.1. BLOCK</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.blocks.foreach">2.10.2. FOREACH</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.inlined">2.11. Inlined rules</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.macro">2.12. Macros for conditions and actions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.score">2.13. Heuristic extraction using scoring rules</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.modification">2.14. Modification</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.external_resources">2.15. External resources</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e2488">2.15.1. WORDLISTs</a></span></dt><dt><span class="section"><a href="#d5e2510">2.15.2. WORDTABLEs</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.regexprule">2.16. Simple Rules based on Regular Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.extensions">2.17. Language Extensions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.extensions.core-ext">2.17.1. Provided Extensions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.extensions.new">2.17.2. Adding new Language Elements</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ruta.workbench">3. Apache UIMA Ruta Workbench</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.install">3.1. Installation</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.overview">3.2. UIMA Ruta Workbench Overview</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.projects">3.3. UIMA Ruta Projects</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.projects.create_projects">3.3.1. UIMA Ruta create project wizard</a></span></dt></dl></dd><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_perspective">3.4. UIMA Ruta Perspective</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_perspective.annotation_browser">3.4.1. Annotation Browser</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_perspective.selection">3.4.2. Selection</a></span></dt></dl></dd><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective">3.5. UIMA Ruta Explain Perspective</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.applied_rules">3.5.1. Applied Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.matched_and_failed_rules">3.5.2. Matched Rules and Failed Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.rule_elements">3.5.3. Rule Elements</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.covering_rules">3.5.4. Covering Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.rule_list">3.5.5. Rule List</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.created_by">3.5.6. Created By</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.statistics">3.5.7. Statistics</a></span></dt></dl></dd><dt><span class="section"><a href="#section.tools.ruta.workbench.cde">3.6. UIMA Ruta CDE perspective</a></span></dt><dd><dl><dt><span class="section"><a href="#section.tools.ruta.workbench.cde.documents">3.6.1. CDE Documents view</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.cde.constraints">3.6.2. CDE Constraints view</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.cde.result">3.6.3. CDE Result view</a></span></dt></dl></dd><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_query">3.7. Ruta Query View</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.testing">3.8. Testing</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.testing.usage">3.8.1. Usage</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.testing.evaluators">3.8.2. Evaluators</a></span></dt></dl></dd><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler">3.9. TextRuler</a></span></dt><dd><dl><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler.learner">3.9.1. Included rule learning algorithms</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler.ui">3.9.2. The TextRuler view</a></span></dt></dl></dd><dt><span class="section"><a href="#section.tools.ruta.workbench.check">3.10. Check Annotations view</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.create_dictionaries">3.11. Creation of Tree Word Lists</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.workbench.apply">3.12. Apply a UIMA Ruta script to a folder</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ruta.howtos">4. Apache UIMA Ruta HowTos</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.ae.basic.apply">4.1. Apply UIMA Ruta Analysis Engine in plain Java</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.integration">4.2. Integrating UIMA Ruta in an existing UIMA Annotator</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.ae.integration.mvn">4.2.1. Adding Ruta to our Annotator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.integration.loading">4.2.2. Developing Ruta rules and applying them from inside Java code
-			</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.maven">4.3. UIMA Ruta Maven Plugin</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e3414">4.3.1. generate goal</a></span></dt><dt><span class="section"><a href="#d5e3419">4.3.2. twl goal</a></span></dt><dt><span class="section"><a href="#d5e3423">4.3.3. mtwl goal</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.archetype">4.4. UIMA Ruta Maven Archetype</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler.example">4.5. Induce rules with the TextRuler framework</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.howto.html">4.6. HTML annotations in plain text</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.howto.sorter">4.7. Sorting files with UIMA Ruta</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.howto.xml">4.8. Converting XML documents with UIMA Ruta</a></span></dt></dl></dd></dl></div>
+    </div></div><div><p class="pubdate">July, 2017</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#ugr.tools.ruta.overview">1. Apache UIMA Ruta Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.overview.intro">1.1. What is Apache UIMA Ruta?</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.overview.gettingstarted">1.2. Getting started</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.overview.coreconcepts">1.3. Core Concepts</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.overview.examples">1.4. Learning by Example</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae">1.5. UIMA Analysis Engines</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.ae.basic">1.5.1. Ruta Engine</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.annotationwriter">1.5.2. Annotation Writer</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.plaintext">1.5.3. Plain Text Annotator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.modifier">1.5.4. Modifier</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.html">1.5.5. HTML Annotator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.htmlconverter">1.5.6. HTML Converter</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.stylemap">1.5.7. Style Map Creator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.cutter">1.5.8. Cutter</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.view">1.5.9. View Writer</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.xmi">1.5.10. XMI Writer</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ruta.language.language">2. Apache UIMA Ruta Language</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.syntax">2.1. Syntax</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.anchoring">2.2. Rule elements and their matching order</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.seeding">2.3. Basic annotations and tokens</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier">2.4. Quantifiers</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.sg">2.4.1. * Star Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.sr">2.4.2. *? Star Reluctant</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.pg">2.4.3. + Plus Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.pr">2.4.4. +? Plus Reluctant</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.qg">2.4.5. ? Question Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.qr">2.4.6. ?? Question Reluctant</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.mmg">2.4.7. [x,y] Min Max Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.mmr">2.4.8. [x,y]? Min Max Reluctant</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations">2.5. Declarations</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.type">2.5.1. Types</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.variable">2.5.2. Variables</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.ressource">2.5.3. Resources</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.scripts">2.5.4. Scripts</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.components">2.5.5. Components</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions">2.6. Expressions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.type">2.6.1. Type Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.number">2.6.2. Number Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.string">2.6.3. String Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.boolean">2.6.4. Boolean Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.lists">2.6.5. List Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.features">2.6.6. Feature Expressions</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions">2.7. Conditions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.after">2.7.1. AFTER</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.and">2.7.2. AND</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.before">2.7.3. BEFORE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.contains">2.7.4. CONTAINS</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.contextcount">2.7.5. CONTEXTCOUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.count">2.7.6. COUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.currentcount">2.7.7. CURRENTCOUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.endswith">2.7.8. ENDSWITH</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.feature">2.7.9. FEATURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.if">2.7.10. IF</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.inlist">2.7.11. INLIST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.is">2.7.12. IS</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.last">2.7.13. LAST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.mofn">2.7.14. MOFN</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.near">2.7.15. NEAR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.not">2.7.16. NOT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.or">2.7.17. OR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.parse">2.7.18. PARSE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.partof">2.7.19. PARTOF</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.partofneq">2.7.20. PARTOFNEQ</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.position">2.7.21. POSITION</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.regexp">2.7.22. REGEXP</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.score">2.7.23. SCORE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.size">2.7.24. SIZE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.startswith">2.7.25. STARTSWITH</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.totalcount">2.7.26. TOTALCOUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.vote">2.7.27. VOTE</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.actions">2.8. Actions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.add">2.8.1. ADD</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.addfiltertype">2.8.2. ADDFILTERTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.addretaintype">2.8.3. ADDRETAINTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.assign">2.8.4. ASSIGN</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.call">2.8.5. CALL</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.clear">2.8.6. CLEAR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.color">2.8.7. COLOR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.configure">2.8.8. CONFIGURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.create">2.8.9. CREATE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.del">2.8.10. DEL</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.dynamicanchoring">2.8.11. DYNAMICANCHORING</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.exec">2.8.12. EXEC</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.fill">2.8.13. FILL</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.filtertype">2.8.14. FILTERTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.gather">2.8.15. GATHER</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.get">2.8.16. GET</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.getfeature">2.8.17. GETFEATURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.getlist">2.8.18. GETLIST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.greedyanchoring">2.8.19. GREEDYANCHORING</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.log">2.8.20. LOG</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.mark">2.8.21. MARK</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markfast">2.8.22. MARKFAST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markfirst">2.8.23. MARKFIRST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.marklast">2.8.24. MARKLAST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markonce">2.8.25. MARKONCE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markscore">2.8.26. MARKSCORE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.marktable">2.8.27. MARKTABLE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.matchedtext">2.8.28. MATCHEDTEXT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.merge">2.8.29. MERGE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.remove">2.8.30. REMOVE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.removeduplicate">2.8.31. REMOVEDUPLICATE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.removefiltertype">2.8.32. REMOVEFILTERTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.removeretaintype">2.8.33. REMOVERETAINTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.replace">2.8.34. REPLACE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.retaintype">2.8.35. RETAINTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.setfeature">2.8.36. SETFEATURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.shift">2.8.37. SHIFT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.split">2.8.38. SPLIT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.transfer">2.8.39. TRANSFER</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.trie">2.8.40. TRIE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.trim">2.8.41. TRIM</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.unmark">2.8.42. UNMARK</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.unmarkall">2.8.43. UNMARKALL</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.filtering">2.9. Robust extraction using filtering</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.wildcard">2.10. Wildcard #</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.labels">2.11. Label expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.blocks">2.12. Blocks</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.blocks.block">2.12.1. BLOCK</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.blocks.foreach">2.12.2. FOREACH</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.inlined">2.13. Inlined rules</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.macro">2.14. Macros for conditions and actions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.score">2.15. Heuristic extraction using scoring rules</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.modification">2.16. Modification</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.external_resources">2.17. External resources</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e2507">2.17.1. WORDLISTs</a></span></dt><dt><span class="section"><a href="#d5e2529">2.17.2. WORDTABLEs</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.regexprule">2.18. Simple Rules based on Regular Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.extensions">2.19. Language Extensions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.extensions.core-ext">2.19.1. Provided Extensions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.extensions.new">2.19.2. Adding new Language Elements</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ruta.workbench">3. Apache UIMA Ruta Workbench</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.install">3.1. Installation</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.overview">3.2. UIMA Ruta Workbench Overview</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.projects">3.3. UIMA Ruta Projects</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.projects.create_projects">3.3.1. UIMA Ruta create project wizard</a></span></dt></dl></dd><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_perspective">3.4. UIMA Ruta Perspective</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_perspective.annotation_browser">3.4.1. Annotation Browser</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_perspective.selection">3.4.2. Selection</a></span></dt></dl></dd><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective">3.5. UIMA Ruta Explain Perspective</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.applied_rules">3.5.1. Applied Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.matched_and_failed_rules">3.5.2. Matched Rules and Failed Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.rule_elements">3.5.3. Rule Elements</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.covering_rules">3.5.4. Covering Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.rule_list">3.5.5. Rule List</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.created_by">3.5.6. Created By</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.statistics">3.5.7. Statistics</a></span></dt></dl></dd><dt><span class="section"><a href="#section.tools.ruta.workbench.cde">3.6. UIMA Ruta CDE perspective</a></span></dt><dd><dl><dt><span class="section"><a href="#section.tools.ruta.workbench.cde.documents">3.6.1. CDE Documents view</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.cde.constraints">3.6.2. CDE Constraints view</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.cde.result">3.6.3. CDE Result view</a></span></dt></dl></dd><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_query">3.7. Ruta Query View</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.testing">3.8. Testing</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.testing.usage">3.8.1. Usage</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.testing.evaluators">3.8.2. Evaluators</a></span></dt></dl></dd><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler">3.9. TextRuler</a></span></dt><dd><dl><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler.learner">3.9.1. Included rule learning algorithms</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler.ui">3.9.2. The TextRuler view</a></span></dt></dl></dd><dt><span class="section"><a href="#section.tools.ruta.workbench.check">3.10. Check Annotations view</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.create_dictionaries">3.11. Creation of Tree Word Lists</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.workbench.apply">3.12. Apply a UIMA Ruta script to a folder</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ruta.howtos">4. Apache UIMA Ruta HowTos</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.ae.basic.apply">4.1. Apply UIMA Ruta Analysis Engine in plain Java</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.integration">4.2. Integrating UIMA Ruta in an existing UIMA Annotator</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.ae.integration.mvn">4.2.1. Adding Ruta to our Annotator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.integration.loading">4.2.2. Developing Ruta rules and applying them from inside Java code
+			</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.maven">4.3. UIMA Ruta Maven Plugin</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e3433">4.3.1. generate goal</a></span></dt><dt><span class="section"><a href="#d5e3438">4.3.2. twl goal</a></span></dt><dt><span class="section"><a href="#d5e3442">4.3.3. mtwl goal</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.archetype">4.4. UIMA Ruta Maven Archetype</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler.example">4.5. Induce rules with the TextRuler framework</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.howto.html">4.6. HTML annotations in plain text</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.howto.sorter">4.7. Sorting files with UIMA Ruta</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.howto.xml">4.8. Converting XML documents with UIMA Ruta</a></span></dt></dl></dd></dl></div>
   
   
     
@@ -640,7 +640,7 @@ Document{-&gt; EXEC(Modifier)};
     The first rule deletes all text covered by annotations of the type <span class="quote">&#8220;<span class="quote">Date</span>&#8221;</span>. The second rule replaces the text of all annotations of the type <span class="quote">&#8220;<span class="quote">MoneyAmount</span>&#8221;</span> 
     with the string <span class="quote">&#8220;<span class="quote">&lt;MoneyAmount/&gt;</span>&#8221;</span>. The third rule remembers to set the background color of text in Headline annotation to green. The last rule
     finally performs all of these changes in an additional view called <span class="quote">&#8220;<span class="quote">modified</span>&#8221;</span>, which is specified in the configuration parameters of the analysis engine.
-    <a class="xref" href="#ugr.tools.ruta.ae.modifier" title="1.5.4.&nbsp;Modifier">Section&nbsp;1.5.4, &#8220;Modifier&#8221;</a> and <a class="xref" href="#ugr.tools.ruta.language.modification" title="2.14.&nbsp;Modification">Section&nbsp;2.14, &#8220;Modification&#8221;</a> provide a more detailed description.
+    <a class="xref" href="#ugr.tools.ruta.ae.modifier" title="1.5.4.&nbsp;Modifier">Section&nbsp;1.5.4, &#8220;Modifier&#8221;</a> and <a class="xref" href="#ugr.tools.ruta.language.modification" title="2.16.&nbsp;Modification">Section&nbsp;2.16, &#8220;Modification&#8221;</a> provide a more detailed description.
   </p>
   
   <p>
@@ -1559,7 +1559,8 @@ RuleElement            -&gt; (Identifier ":")? "@"?
                         RuleElementType | RuleElementLiteral
                         | RuleElementComposed | RuleElementWildCard
 RuleElementType        -&gt;  AnnotationTypeExpr OptionalRuleElementPart
-RuleElementWithCA      -&gt;  AnnotationTypeExpr ("{" Conditions?  Actions? "}")?
+RuleElementWithCA      -&gt;  AnnotationTypeExpr ("{" Conditions?  
+                           Actions? "}")?
 AnnotationTypeExpr     -&gt; (TypeExpression | AnnotationExpression) 
                           (Operator)? Expression ("{" Conditions "}")?
 FeatureMatchExpression -&gt; TypeExpression ( "." Feature)+ 
@@ -4177,7 +4178,7 @@ Document{-&gt; MARKFAST(FirstName, FirstNameList, true, 2)};</pre><p>
       information of several rule elements. Additionally, a score value
       (first parameter) is added to the heuristic score value of the
       annotation. For more information on heuristic scores see
-      <a class="xref" href="#ugr.tools.ruta.language.score" title="2.13.&nbsp;Heuristic extraction using scoring rules">Section&nbsp;2.13, &#8220;Heuristic extraction using scoring rules&#8221;</a>
+      <a class="xref" href="#ugr.tools.ruta.language.score" title="2.15.&nbsp;Heuristic extraction using scoring rules">Section&nbsp;2.15, &#8220;Heuristic extraction using scoring rules&#8221;</a>
       .
     </p>
     <div class="section" title="2.8.26.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2063">2.8.26.1.&nbsp;
@@ -4429,7 +4430,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       The REPLACE action replaces the text of all matched annotations with
       the given StringExpression. It remembers the modification for the
       matched annotations and shows them in the modified view (see
-      <a class="xref" href="#ugr.tools.ruta.language.modification" title="2.14.&nbsp;Modification">Section&nbsp;2.14, &#8220;Modification&#8221;</a>).
+      <a class="xref" href="#ugr.tools.ruta.language.modification" title="2.16.&nbsp;Modification">Section&nbsp;2.16, &#8220;Modification&#8221;</a>).
     </p>
     <div class="section" title="2.8.34.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2177">2.8.34.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
@@ -4898,10 +4899,66 @@ Dr.JoachimBaumeister
     </p>
 
   </div>
+
+  <div class="section" title="2.10.&nbsp;Wildcard #"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.wildcard">2.10.&nbsp;Wildcard #</h2></div></div></div>
+    
+    <p>
+      The wildcard <code class="code">#</code> is a special matching condition of a rule element, 
+      which does not match itself but uses the next rule element to determine its match.
+      It's behavior is similar to a generic rule element with a reluctant, not restricted quantifier like
+      <code class="code">ANY+?</code> but it much more efficient since no additional annotations have to be matched.
+      The functionality of the wildcard is illustrated with following examples:
+      
+      </p><pre class="programlisting">PERIOD #{-&gt; Sentence} PERIOD;</pre><p>
+      
+      In this example, everything in beteen two periods is annotated with an annotation of the type
+      <code class="code">Sentence</code>. This rule is much more efficient than a rule like 
+      <code class="code">PERIOD ANY+{-PARTOF(PERIOD)} PERIOD;</code> since it only navigated in the index of PERIOD annotations 
+      and does not match on all tokens.
+      
+      The wildcard is a normal matching condition and can be used as any other matching condition. If the sentence 
+      should include the period, the rule would look like:
+      
+      </p><pre class="programlisting">PERIOD (# PERIOD){-&gt; Sentence};</pre><p>
+      
+      This rule creates only annotations after a period. If the wildcard is used as an anchor of the rule, 
+      e.g., is the first rule element and no manual anchor is specified, then it starts to match at the beginning 
+      of the doucment or current window.
+      
+      </p><pre class="programlisting">(# PERIOD){-&gt; Sentence};</pre><p>
+      
+      This rule creates a Sentence annotation starting at the begin of the document ending with the first period.
+      If the rule lements are swicthed, the result is quite different because of the starting anchor of the rule:
+      
+      </p><pre class="programlisting">(PERIOD #){-&gt; Sentence};</pre><p>
+      
+      Here, one annotation of the type Sentence is create for each PERIOD annotation starting with the period and 
+      ending at the end of the document.
+      
+      Currently, optional rule elements after wildcards are not optional.
+    </p>
+  </div>
   
+  <div class="section" title="2.11.&nbsp;Label expressions"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.labels">2.11.&nbsp;Label expressions</h2></div></div></div>
+    
+    <p>
+      Rule elements can be extended with labels, which introduce a new local variable storing one or 
+      multiple annotations - the annotations matched by the matching condition of the rule element. 
+      The name of the variable is the short identifier before the colon in front of the matching condition, e.g., 
+      in <code class="code">sw:SW</code>, <code class="code">SW</code> is the matching condition and <code class="code">sw</code> is the name of the local variable.
+      The variable will be assigned when the rule element tries to match (also when it fails afterall) 
+      and can be utilzed in all other language elements afterwards.
+      The functionality of the label expressions is illustrated with following examples:
+      
+      </p><pre class="programlisting">sw1:SW sw2:SW{sw1.end=sw2.begin};</pre><p>
+      
+      This rule matches on two consecutive small-written words, but matches only if there is no space inbetween them.
+      
+      Label expression can also be used across <a class="xref" href="#ugr.tools.ruta.language.inlined" title="2.13.&nbsp;Inlined rules">Section&nbsp;2.13, &#8220;Inlined rules&#8221;</a>.
+    </p>
+  </div>
   
-  
-  <div class="section" title="2.10.&nbsp;Blocks"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.blocks">2.10.&nbsp;Blocks</h2></div></div></div>
+  <div class="section" title="2.12.&nbsp;Blocks"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.blocks">2.12.&nbsp;Blocks</h2></div></div></div>
     
 
     <p>
@@ -4909,7 +4966,7 @@ Dr.JoachimBaumeister
       even other blocks and may serve as more complex control structures.
       They are even able to change the rule behavior of the contained rules.
     </p>
-    <div class="section" title="2.10.1.&nbsp;BLOCK"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.ruta.language.blocks.block">2.10.1.&nbsp;BLOCK</h3></div></div></div>
+    <div class="section" title="2.12.1.&nbsp;BLOCK"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.ruta.language.blocks.block">2.12.1.&nbsp;BLOCK</h3></div></div></div>
       
       <p>
         BLOCK provides a simple control structure in the UIMA Ruta language:
@@ -4971,9 +5028,9 @@ RuleElementWithCA      -&gt;  TypeExpression QuantifierPart?
         declaration. But a block may also be called from another
         position of
         the script. See
-        <a class="xref" href="#ugr.tools.ruta.language.blocks.block.procedure" title="2.10.1.3.&nbsp;Procedures">Section&nbsp;2.10.1.3, &#8220;Procedures&#8221;</a>
+        <a class="xref" href="#ugr.tools.ruta.language.blocks.block.procedure" title="2.12.1.3.&nbsp;Procedures">Section&nbsp;2.12.1.3, &#8220;Procedures&#8221;</a>
       </p>
-      <div class="section" title="2.10.1.1.&nbsp;Conditioned statements"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.blocks.block.condition">2.10.1.1.&nbsp;Conditioned statements</h4></div></div></div>
+      <div class="section" title="2.12.1.1.&nbsp;Conditioned statements"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.blocks.block.condition">2.12.1.1.&nbsp;Conditioned statements</h4></div></div></div>
         
         <p>
           A block can use common UIMA Ruta conditions to condition the
@@ -4998,7 +5055,7 @@ BLOCK(GermanDates) Document{FEATURE("language", "de")} {
           .
         </p>
       </div>
-      <div class="section" title="2.10.1.2.&nbsp; Loops with restriction of the matching window"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.blocks.block.foreach">2.10.1.2.&nbsp;
+      <div class="section" title="2.12.1.2.&nbsp; Loops with restriction of the matching window"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.blocks.block.foreach">2.12.1.2.&nbsp;
           Loops with restriction of the matching window
         </h4></div></div></div>
         
@@ -5068,7 +5125,7 @@ BLOCK(IsBig) Paragraph{} {
           this is done for every Paragraph in the whole document.
         </p>
       </div>
-      <div class="section" title="2.10.1.3.&nbsp;Procedures"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.blocks.block.procedure">2.10.1.3.&nbsp;Procedures</h4></div></div></div>
+      <div class="section" title="2.12.1.3.&nbsp;Procedures"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.blocks.block.procedure">2.12.1.3.&nbsp;Procedures</h4></div></div></div>
         
         <p>
           Blocks can be used to introduce procedures to the UIMA Ruta
@@ -5120,7 +5177,7 @@ Document{-&gt;CALL(MyScript.countNumberOfTypesInDocument)};
       </div>
 
     </div>
-    <div class="section" title="2.10.2.&nbsp;FOREACH"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.ruta.language.blocks.foreach">2.10.2.&nbsp;FOREACH</h3></div></div></div>
+    <div class="section" title="2.12.2.&nbsp;FOREACH"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.ruta.language.blocks.foreach">2.12.2.&nbsp;FOREACH</h3></div></div></div>
     
     <p>
       The syntax of the FOREACH block is very similar to the common BLOCK construct, 
@@ -5176,7 +5233,7 @@ Document{-&gt;CALL(MyScript.countNumberOfTypesInDocument)};
     </p>
   </div>
 
-  <div class="section" title="2.11.&nbsp;Inlined rules"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.inlined">2.11.&nbsp;Inlined rules</h2></div></div></div>
+  <div class="section" title="2.13.&nbsp;Inlined rules"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.inlined">2.13.&nbsp;Inlined rules</h2></div></div></div>
     
     <p>
       A rule element can have a few optional parts, e.g., the quantifier or the curly brackets with
@@ -5244,7 +5301,7 @@ Sentence{-&gt; SentenceWithNumBeforeWord} &lt;- {NUM W;};
     </p>
   </div>
 
-  <div class="section" title="2.12.&nbsp;Macros for conditions and actions"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.macro">2.12.&nbsp;Macros for conditions and actions</h2></div></div></div>
+  <div class="section" title="2.14.&nbsp;Macros for conditions and actions"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.macro">2.14.&nbsp;Macros for conditions and actions</h2></div></div></div>
     
     <p>
       UIMA Ruta supports the specification of macros for conditions and action.
@@ -5288,7 +5345,7 @@ ANY{CWorPERIODor(Bold)-&gt;INC(counter,1)};</pre>
     </p>
   </div>
 
-  <div class="section" title="2.13.&nbsp;Heuristic extraction using scoring rules"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.score">2.13.&nbsp;Heuristic extraction using scoring rules</h2></div></div></div>
+  <div class="section" title="2.15.&nbsp;Heuristic extraction using scoring rules"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.score">2.15.&nbsp;Heuristic extraction using scoring rules</h2></div></div></div>
     
     <p>
       Diagnostic scores are a well known and successfully applied
@@ -5364,7 +5421,7 @@ Headline{SCORE(5,10)-&gt;LOG("Maybe a headline")};</pre><p>
       points, respectively.
     </p>
   </div>
-  <div class="section" title="2.14.&nbsp;Modification"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.modification">2.14.&nbsp;Modification</h2></div></div></div>
+  <div class="section" title="2.16.&nbsp;Modification"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.modification">2.16.&nbsp;Modification</h2></div></div></div>
     
     <p>
       There are different actions that can modify the input document,
@@ -5392,7 +5449,7 @@ Document{-&gt; EXEC(Modifier)};
 
   </div>
 
-  <div class="section" title="2.15.&nbsp;External resources"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.external_resources">2.15.&nbsp;External resources</h2></div></div></div>
+  <div class="section" title="2.17.&nbsp;External resources"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.external_resources">2.17.&nbsp;External resources</h2></div></div></div>
     
     <p>
       Imagine you have a set of documents containing many different
@@ -5430,7 +5487,7 @@ Document{-&gt; EXEC(Modifier)};
       solve such tasks more
       easily: WORDLISTs and WORDTABLEs.
     </p>
-    <div class="section" title="2.15.1.&nbsp;WORDLISTs"><div class="titlepage"><div><div><h3 class="title" id="d5e2488">2.15.1.&nbsp;WORDLISTs</h3></div></div></div>
+    <div class="section" title="2.17.1.&nbsp;WORDLISTs"><div class="titlepage"><div><div><h3 class="title" id="d5e2507">2.17.1.&nbsp;WORDLISTs</h3></div></div></div>
       
       <p>
         A WORDLIST is a list of text items. There are three
@@ -5537,7 +5594,7 @@ Document{-&gt;MARKFAST(FirstName, FirstNameList)};
       </p>
       
     </div>
-    <div class="section" title="2.15.2.&nbsp;WORDTABLEs"><div class="titlepage"><div><div><h3 class="title" id="d5e2510">2.15.2.&nbsp;WORDTABLEs</h3></div></div></div>
+    <div class="section" title="2.17.2.&nbsp;WORDTABLEs"><div class="titlepage"><div><div><h3 class="title" id="d5e2529">2.17.2.&nbsp;WORDTABLEs</h3></div></div></div>
       
       <p>
         WORDLISTs have been used to annotate all occurrences of any list
@@ -5582,7 +5639,7 @@ WORDTABLE presidentsOfUSA = "" + package + "presidentsOfUSA.csv";
       </p>
     </div>
   </div>
-  <div class="section" title="2.16.&nbsp;Simple Rules based on Regular Expressions"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.regexprule">2.16.&nbsp;Simple Rules based on Regular Expressions</h2></div></div></div>
+  <div class="section" title="2.18.&nbsp;Simple Rules based on Regular Expressions"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.regexprule">2.18.&nbsp;Simple Rules based on Regular Expressions</h2></div></div></div>
     
     <p>
       The UIMA Ruta language includes, additionally to the normal rules, a simplified rule syntax
@@ -5628,7 +5685,7 @@ FeatureAssignment -&gt; "(" StringExpression "=" Expression
 
 
   </div>
-  <div class="section" title="2.17.&nbsp;Language Extensions"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.extensions">2.17.&nbsp;Language Extensions</h2></div></div></div>
+  <div class="section" title="2.19.&nbsp;Language Extensions"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.extensions">2.19.&nbsp;Language Extensions</h2></div></div></div>
     
     <p>
       The UIMA Ruta language can be extended with external blocks, actions, conditions,
@@ -5645,7 +5702,7 @@ FeatureAssignment -&gt; "(" StringExpression "=" Expression
       <span class="quote">&#8220;<span class="quote">example-projects</span>&#8221;</span>
       folder.
     </p>
-    <div class="section" title="2.17.1.&nbsp;Provided Extensions"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.ruta.language.extensions.core-ext">2.17.1.&nbsp;Provided Extensions</h3></div></div></div>
+    <div class="section" title="2.19.1.&nbsp;Provided Extensions"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.ruta.language.extensions.core-ext">2.19.1.&nbsp;Provided Extensions</h3></div></div></div>
       
       <p>
         The UIMA Ruta language already provides extensions besides the exemplary elements.
@@ -5653,7 +5710,7 @@ FeatureAssignment -&gt; "(" StringExpression "=" Expression
         ruta-ep-core-ext contains the integration in the UIMA Ruta Workbench.
       </p>
 
-      <div class="section" title="2.17.1.1.&nbsp;DOCUMENTBLOCK"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.extensions.core-ext.documentblock">2.17.1.1.&nbsp;DOCUMENTBLOCK</h4></div></div></div>
+      <div class="section" title="2.19.1.1.&nbsp;DOCUMENTBLOCK"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.extensions.core-ext.documentblock">2.19.1.1.&nbsp;DOCUMENTBLOCK</h4></div></div></div>
         
         <p>
           This additional block construct applies the contained statements/rules on
@@ -5671,7 +5728,7 @@ FeatureAssignment -&gt; "(" StringExpression "=" Expression
           matched number.
         </p>
       </div>
-      <div class="section" title="2.17.1.2.&nbsp;ONLYFIRST"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.extensions.core-ext.onlyfirst">2.17.1.2.&nbsp;ONLYFIRST</h4></div></div></div>
+      <div class="section" title="2.19.1.2.&nbsp;ONLYFIRST"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.extensions.core-ext.onlyfirst">2.19.1.2.&nbsp;ONLYFIRST</h4></div></div></div>
         
         <p>
           This additional block construct applies the contained statements/rules only until
@@ -5690,7 +5747,7 @@ FeatureAssignment -&gt; "(" StringExpression "=" Expression
           the second rules is able to match, then the third rule will not try to be applied.
         </p>
       </div>
-    <div class="section" title="2.17.1.3.&nbsp;ONLYONCE"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.extensions.core-ext.onlyonce">2.17.1.3.&nbsp;ONLYONCE</h4></div></div></div>
+    <div class="section" title="2.19.1.3.&nbsp;ONLYONCE"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.extensions.core-ext.onlyonce">2.19.1.3.&nbsp;ONLYONCE</h4></div></div></div>
       
       <p>
         Rules within this block construct will stop after the first successful match.
@@ -5712,14 +5769,14 @@ FeatureAssignment -&gt; "(" StringExpression "=" Expression
         the ONLYONCE block.
       </p>
     </div>
-    <div class="section" title="2.17.1.4.&nbsp;Stringfunctions"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.extensions.core-ext.stringfunctions">2.17.1.4.&nbsp;Stringfunctions</h4></div></div></div>
+    <div class="section" title="2.19.1.4.&nbsp;Stringfunctions"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.extensions.core-ext.stringfunctions">2.19.1.4.&nbsp;Stringfunctions</h4></div></div></div>
       
       <p>
         In order to manipulate Strings in variables a bunch of Stringfunctions
         have been added.
         They will all be presented with a short example demonstrating their use.
       </p>
-      <div class="section" title="firstCharToUpperCase(IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2556">firstCharToUpperCase(IStringExpression expr)</h5></div></div></div>
+      <div class="section" title="firstCharToUpperCase(IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2575">firstCharToUpperCase(IStringExpression expr)</h5></div></div></div>
         
         <pre class="programlisting">STRING s;
 STRINGLIST sl;
@@ -5743,7 +5800,7 @@ CW{INLIST(sl) -&gt; Test};</pre>
           Annotation.
         </p>
       </div>
-      <div class="section" title="replaceFirst(IStringExpression expr, IStringExpression searchTerm, IStringExpression replacement)"><div class="titlepage"><div><div><h5 class="title" id="d5e2560">replaceFirst(IStringExpression expr, IStringExpression
+      <div class="section" title="replaceFirst(IStringExpression expr, IStringExpression searchTerm, IStringExpression replacement)"><div class="titlepage"><div><div><h5 class="title" id="d5e2579">replaceFirst(IStringExpression expr, IStringExpression
           searchTerm,
           IStringExpression
           replacement)
@@ -5764,7 +5821,7 @@ CW{INLIST(sl) -&gt; Test};</pre>
           Annotation if a match occurs.
         </p>
       </div>
-      <div class="section" title="replaceAll(IStringExpression expr, IStringExpression searchTerm, IStringExpression replacement)"><div class="titlepage"><div><div><h5 class="title" id="d5e2564">replaceAll(IStringExpression expr, IStringExpression
+      <div class="section" title="replaceAll(IStringExpression expr, IStringExpression searchTerm, IStringExpression replacement)"><div class="titlepage"><div><div><h5 class="title" id="d5e2583">replaceAll(IStringExpression expr, IStringExpression
           searchTerm,
           IStringExpression
           replacement)
@@ -5788,7 +5845,7 @@ CW{INLIST(sl) -&gt; Test};</pre>
         </p>
       </div>
 
-      <div class="section" title="substring(IStringExpression expr, INumberExpression from, INumberExpression to)"><div class="titlepage"><div><div><h5 class="title" id="d5e2568">substring(IStringExpression expr, INumberExpression from,
+      <div class="section" title="substring(IStringExpression expr, INumberExpression from, INumberExpression to)"><div class="titlepage"><div><div><h5 class="title" id="d5e2587">substring(IStringExpression expr, INumberExpression from,
           INumberExpression to)
         </h5></div></div></div>
         
@@ -5810,7 +5867,7 @@ SW{INLIST(sl) -&gt; Test};</pre>
         </p>
       </div>
 
-      <div class="section" title="toLowerCase(IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2572">toLowerCase(IStringExpression expr)</h5></div></div></div>
+      <div class="section" title="toLowerCase(IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2591">toLowerCase(IStringExpression expr)</h5></div></div></div>
         
         <pre class="programlisting">STRING s;
 STRINGLIST sl;
@@ -5833,7 +5890,7 @@ SW{INLIST(sl) -&gt; Test};</pre>
 
         </p>
       </div>
-      <div class="section" title="toUpperCase(IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2576">toUpperCase(IStringExpression expr)</h5></div></div></div>
+      <div class="section" title="toUpperCase(IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2595">toUpperCase(IStringExpression expr)</h5></div></div></div>
         
         <pre class="programlisting">STRING s;
 STRINGLIST sl;
@@ -5855,15 +5912,10 @@ SW{INLIST(sl) -&gt; T1};</pre>
       </div>
 
 
-      <div class="section" title="contains(IStringExpression expr,IStringExpression contains)"><div class="titlepage"><div><div><h5 class="title" id="d5e2580">contains(IStringExpression expr,IStringExpression contains)
+      <div class="section" title="contains(IStringExpression expr,IStringExpression contains)"><div class="titlepage"><div><div><h5 class="title" id="d5e2599">contains(IStringExpression expr,IStringExpression contains)
         </h5></div></div></div>
         
-        <pre class="programlisting">STRING s;
-BOOLEAN a ;
-BLOCK(forEACH) W{}{
-    W{-&gt;MATCHEDTEXT(s), ASSIGN(a,contains(s,"er"))};
-    W{a -&gt;Test};
-}</pre>
+        <pre class="programlisting">w:W{contains(w.ct, "er")-&gt; Test};</pre>
         <p>
           If you want to find all words that contain a given charactersequence.
           Assume again you
@@ -5877,17 +5929,12 @@ BLOCK(forEACH) W{}{
         </p>
       </div>
 
-      <div class="section" title="endsWith(IStringExpression expr,IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2584">endsWith(IStringExpression expr,IStringExpression expr)
+      <div class="section" title="endsWith(IStringExpression expr,IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2603">endsWith(IStringExpression expr,IStringExpression expr)
         </h5></div></div></div>
         
-        <pre class="programlisting">STRING s;
-BOOLEAN a;
-BLOCK(forEACH) W{}{
-    W{-&gt;MATCHEDTEXT(s), ASSIGN(a,endsWith(s,"str."))};
-    W{a -&gt;Test};
-}</pre>
+        <pre class="programlisting">w:W{endsWith(w.ct, "str")-&gt; Test};</pre>
         <p>
-          Assume you found the suffix "str." as a strong indicator whether a given
+          Assume you found the suffix "str" as a strong indicator whether a given
           token
           represents
           location (a street) by using this function you can now easily identify all
@@ -5897,25 +5944,19 @@ BLOCK(forEACH) W{}{
         </p>
       </div>
 
-      <div class="section" title="startsWith(IStringExpression expr,IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2588">startsWith(IStringExpression expr,IStringExpression expr)
+      <div class="section" title="startsWith(IStringExpression expr,IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2607">startsWith(IStringExpression expr,IStringExpression expr)
         </h5></div></div></div>
         
-        <pre class="programlisting">STRING s;
-BOOLEAN a ;
-BLOCK(forEACH) W{}{
-    W{-&gt;MATCHEDTEXT(s), ASSIGN(a,startsWith(s,"sprech"))};
-    W{a -&gt;Test};
-}</pre>
+        <pre class="programlisting">w:W{startsWith(w.ct, "sprech")-&gt; Test};</pre>
         <p>
           Given a stem of a word you want to mark every instance that was possibly derived from that stem.
           If you decide to use that function you can detect all those words in 1 line and in a next step
           mark all
           of them as an Annotationtype of choice.
-
         </p>
       </div>
 
-      <div class="section" title="equals(IStringExpression expr,IStringExpression expr) and equalsIgnoreCase(expr,expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2592">equals(IStringExpression expr,IStringExpression expr) and equalsIgnoreCase(expr,expr)
+      <div class="section" title="equals(IStringExpression expr,IStringExpression expr) and equalsIgnoreCase(expr,expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2611">equals(IStringExpression expr,IStringExpression expr) and equalsIgnoreCase(expr,expr)
         </h5></div></div></div>
         
         <pre class="programlisting">STRING s;
@@ -5934,7 +5975,7 @@ BLOCK(forEACH) W{}{
         </p>
       </div>
 
-      <div class="section" title="isEmpty(IStringExpression expr) and equalsIgnoreCase(expr,expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2596">isEmpty(IStringExpression expr) and equalsIgnoreCase(expr,expr)
+      <div class="section" title="isEmpty(IStringExpression expr) and equalsIgnoreCase(expr,expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2615">isEmpty(IStringExpression expr) and equalsIgnoreCase(expr,expr)
         </h5></div></div></div>
         
         <pre class="programlisting">STRING s;
@@ -5951,7 +5992,7 @@ BLOCK(forEACH) W{}{
         </p>
       </div>
     </div>
-    <div class="section" title="2.17.1.5.&nbsp;typeFromString"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.extensions.core-ext.typefunctions">2.17.1.5.&nbsp;typeFromString</h4></div></div></div>
+    <div class="section" title="2.19.1.5.&nbsp;typeFromString"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.ruta.language.extensions.core-ext.typefunctions">2.19.1.5.&nbsp;typeFromString</h4></div></div></div>
       
       <p>
         This function takes a string expression and tries to find the corresponding type.
@@ -5964,7 +6005,7 @@ BLOCK(forEACH) W{}{
       </p>
     </div>
     </div>
-    <div class="section" title="2.17.2.&nbsp;Adding new Language Elements"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.ruta.language.extensions.new">2.17.2.&nbsp;Adding new Language Elements</h3></div></div></div>
+    <div class="section" title="2.19.2.&nbsp;Adding new Language Elements"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.ruta.language.extensions.new">2.19.2.&nbsp;Adding new Language Elements</h3></div></div></div>
       
       <p>
         The extension of the UIMA Ruta language is illustrated using an example on how to add a new
@@ -7286,7 +7327,7 @@ BLOCK(forEACH) W{}{
     Tree word lists are external resources, which can be used
     to annotate all occurrences of list items in a document
     with a given annotation type, very fast. For more details
-    on their use, see <a class="xref" href="#ugr.tools.ruta.language.external_resources" title="2.15.&nbsp;External resources">Section&nbsp;2.15, &#8220;External resources&#8221;</a>. 
+    on their use, see <a class="xref" href="#ugr.tools.ruta.language.external_resources" title="2.17.&nbsp;External resources">Section&nbsp;2.17, &#8220;External resources&#8221;</a>. 
     Since simple tree and multi tree word lists have to be compiled
     the UIMA Ruta Workbench provides an easy way to compile
     them from ordinary text files. These text files have to
@@ -7603,7 +7644,7 @@ The|DT rabbit|NN made|VBD up|RP this|DT story|NN .|.</pre>
 			following. An exemplary maven project for UIMA Ruta is given here:
 			<code class="code">https://svn.apache.org/repos/asf/uima/ruta/trunk/example-projects/ruta-maven-example</code>
 		</p>
-		<div class="section" title="4.3.1.&nbsp;generate goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3414">4.3.1.&nbsp;generate goal</h3></div></div></div>
+		<div class="section" title="4.3.1.&nbsp;generate goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3433">4.3.1.&nbsp;generate goal</h3></div></div></div>
 		
 		<p>
 		The generate goal can be utilized to create xml descriptors for the UIMA Ruta script files. 
@@ -7756,7 +7797,7 @@ The|DT rabbit|NN made|VBD up|RP this|DT story|NN .|.</pre>
     </p>
 		</div>
 		
-		<div class="section" title="4.3.2.&nbsp;twl goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3419">4.3.2.&nbsp;twl goal</h3></div></div></div>
+		<div class="section" title="4.3.2.&nbsp;twl goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3438">4.3.2.&nbsp;twl goal</h3></div></div></div>
 		
     <p>
     The twl goal can be utilized to create .twl files from .txt files.
@@ -7809,7 +7850,7 @@ The|DT rabbit|NN made|VBD up|RP this|DT story|NN .|.</pre>
        </pre>
 		</div>
 		
-		<div class="section" title="4.3.3.&nbsp;mtwl goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3423">4.3.3.&nbsp;mtwl goal</h3></div></div></div>
+		<div class="section" title="4.3.3.&nbsp;mtwl goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3442">4.3.3.&nbsp;mtwl goal</h3></div></div></div>
     
     <p>
     The mtwl goal can be utilized to create a .mtwl file from multiple .txt files.
