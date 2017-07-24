@@ -54,7 +54,7 @@ under the License.
         <a href="http://www.apache.org/dist/uima/eclipse-update-site/">http://www.apache.org/dist/uima/eclipse-update-site/</a>
       </p> 
       <p>
-        The UIMA Ruta Workbench 2.6.0 is tested with Eclipse Neon (older versions are still supported). The UIMA Ruta Workbench 2.3.0 - 2.4.0 is tested with Eclipse 4.3 (Kepler) and Eclipse 4.4 (Luna). The UIMA Ruta Workbench 2.2.1 requires Eclipse 4.3.2
+        The UIMA Ruta Workbench 2.6.1 is tested with Eclipse Oxygen (older versions are still supported). The UIMA Ruta Workbench 2.3.0 - 2.4.0 is tested with Eclipse 4.3 (Kepler) and Eclipse 4.4 (Luna). The UIMA Ruta Workbench 2.2.1 requires Eclipse 4.3.2
       </p> 
     </li>     
   </ul>
@@ -152,7 +152,7 @@ under the License.
 &lt;dependency>
   &lt;groupId>org.apache.uima&lt;/groupId>
   &lt;artifactId>ruta-core&lt;/artifactId>
-  &lt;version>2.6.0&lt;/version>
+  &lt;version>2.6.1&lt;/version>
 &lt;/dependency>
   </pre>
   <subsubsection>
