@@ -9,7 +9,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -32,12 +32,12 @@ under the License.
 
 <p>
   We use <a class="external" rel="nofollow" target="_blank" 
-    href="http://maven.apache.org/">Maven</a>, release 3.0 or later, for building.
+    href="https://maven.apache.org/">Maven</a>, release 3.0 or later, for building.
   
   Most of us use <a class="external" rel="nofollow" target="_blank"
     href="">Eclipse</a> as the IDE for working with Java.  Maven has a plugin for Eclipse,
   <a class="external" rel="nofollow" target="_blank"
-    href="http://m2eclipse.sonatype.org/">m2eclipse</a>, that is useful in working with Maven from
+    href="https://m2eclipse.sonatype.org/">m2eclipse</a>, that is useful in working with Maven from
     within Eclipse.
 </p>
 
@@ -69,7 +69,7 @@ under the License.
         <code>  svn checkout https://svn.apache.org/repos/asf/uima/uima-as/trunk c:\myWorkingDirectoryForUima-as</code>
       </p>
       <p>If you have <a class="external" rel="nofollow" target="_blank" 
-    href="http://tortoisesvn.tigris.org/">tortoiseSVN</a> windows shell extensions installed, 
+    href="https://tortoisesvn.tigris.org/">tortoiseSVN</a> windows shell extensions installed, 
     you can use the <code>repo-browser</code> right-click menu option to do this.</p>
     </li>
     <li><p>
@@ -156,8 +156,8 @@ under the License.
   </p>
   <p>The allowed values for paper type in Docbook can be seen on this page:
   <a class="external" target="_blank" rel="nofollow" 
-  href="http://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html">
-  http://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html</a>.
+  href="https://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html">
+  https://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html</a>.
   </p>
   
   </subsection>
@@ -190,7 +190,7 @@ under the License.
 <ol>
   <li>Bring up the "SVN Repositories" View (from <code>Window -> Show View -> Other</code>)</li>
   <li>Right click in the SVN Repositories View and select <code>New -> Repository Location</code>.</li>
-  <li>Enter the URL <code>http://svn.apache.org/repos/asf/uima/uimaj/trunk</code> (or <code>https://</code>...)</li>
+  <li>Enter the URL <code>https://svn.apache.org/repos/asf/uima/uimaj/trunk</code> (or <code>https://</code>...)</li>
   <li>Shift-click to multi-select the projects you want, right click and choose "Checkout as Maven Projects"</li>
   <li>Select "Check out into the workspace as projects" and click "Finish"</li> 
 </ol>       

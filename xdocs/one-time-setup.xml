@@ -9,7 +9,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -43,7 +43,7 @@ under the License.
 <section name="One time setup for SVN" id="svn-setup">
   <p>Install an svn client (not server) to use for command line invocation of SVN from 
     <a class="external" rel="nofollow" target="_blank" 
-      href="http://subversion.apache.org/packages.html">http://subversion.apache.org/packages.html</a>.
+      href="https://subversion.apache.org/packages.html">https://subversion.apache.org/packages.html</a>.
     Use the 1.6.x or later version.
     For Windows platform, you may find it convenient to also install a windows shell extension for this, such 
     as the one from Tigris.org.</p>
@@ -54,14 +54,14 @@ under the License.
   
   <p class="Note">Important:</p>
   <p>Configure your SVN client to set the eol-style to native, for newly created files; see 
-     <a target="_blank" href="http://apache.org/dev/svn-eol-style.txt">http://apache.org/dev/svn-eol-style.txt</a>
+     <a target="_blank" href="https://apache.org/dev/svn-eol-style.txt">https://apache.org/dev/svn-eol-style.txt</a>
      for instructions on how to do this.</p>
 </section>
 
 <section name="One time setup for Maven" id="maven-setup">
   <ol><li>Download Maven 3.0 or later from
     <a class="external" rel="nofollow" target="_blank"
-      href="http://maven.apache.org/download.html">http://maven.apache.org/download.html</a>.</li>
+      href="https://maven.apache.org/download.html">https://maven.apache.org/download.html</a>.</li>
       <li>Set up your path to use this version.</li>
       <li>(Optional, but is needed for some JVM/platforms, to give the JVM enough room to build things). 
       Add the following environment variable for Maven: <br/>
@@ -72,16 +72,16 @@ under the License.
            common subproject parent pom -->
       <!--li>If you plan to build from "trunk" which contains unreleased as-of-yet artifacts, you'll need
       to have the build get access to UIMA's build tooling.  This can be done in 2 ways:
-      <ol><li>Checkout the build tooling from svn (http://svn.apache.org/repos/asf/uima/build/trunk) and 
+      <ol><li>Checkout the build tooling from svn (https://svn.apache.org/repos/asf/uima/build/trunk) and 
       build and install it into your local maven repository.  To do the build and install,  
       go into the parent-poms/parent-pom-top directory, and do the "mvn install" command.</li>
       <li>Change your maven settings.xml file to include the Apache snapshot repository in the set of repositories it
       searches for artifacts.  For general information on maven settings files, 
       see <a class="external" rel="nofollow" target="_blank"
-      href="http://maven.apache.org/settings.html">http://maven.apache.org/settings.html</a> and
+      href="https://maven.apache.org/settings.html">https://maven.apache.org/settings.html</a> and
       <a class="external" rel="nofollow" target="_blank"
-      href="http://maven.apache.org/ref/3.0/maven-settings/settings.html">
-      http://maven.apache.org/ref/3.0/maven-settings/settings.html</a>.
+      href="https://maven.apache.org/ref/3.0/maven-settings/settings.html">
+      https://maven.apache.org/ref/3.0/maven-settings/settings.html</a>.
       <p>To follow this approach, create a settings.xml file in the right location (usually ~/.m2/) and 
       add a setting for the repository.apache.org NEXUS snapshot repository. 
       There's an existing settings.xml you can use as a template, in the conf/ directory of the maven install.
@@ -116,14 +116,14 @@ under the License.
     <ol>
       <li><p>Install the SVN support plugin <code>Subclipse</code> from
         <a class="external" rel="nofollow" target="_blank"
-          href="http://subclipse.tigris.org/">http://subclipse.tigris.org/</a>.
+          href="https://subclipse.tigris.org/">https://subclipse.tigris.org/</a>.
         Be sure to pick the version for 1.6.x or the 1.8.x SVN client.  Either of these work with the Apache SVN,
         but you cannot mix them - pick one and stick with it for all your SVN access (e.g., Eclipse, commandline, 
         TortiseSVN Windows shell extensions, etc.)        
         </p></li>
       <li><p>Install m2e (latest recommended version) from the Eclipse update site: 
         <a class="external" rel="nofollow" target="_blank"
-          href="http://www.eclipse.org/m2e/">http://www.eclipse.org/m2e/</a>.
+          href="https://www.eclipse.org/m2e/">https://www.eclipse.org/m2e/</a>.
         </p> </li>
       <li><p>When checking out UIMA modules, one method known to work (others may be added) is to do the initial
       check-out using the SVN command "svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk some-local-directory"
@@ -138,8 +138,8 @@ under the License.
       <!--li>You probably also want the m2eclipse SCM integration - this adds menus to SCM such as
         <code>Checkout as Maven project</code>.  To get this, add the Eclipse update site:  
         <a class="external" rel="nofollow" target="_blank"
-              href="http://m2eclipse.sonatype.org/sites/m2e-extras">
-                    http://m2eclipse.sonatype.org/sites/m2e-extras</a>
+              href="https://m2eclipse.sonatype.org/sites/m2e-extras">
+                    https://m2eclipse.sonatype.org/sites/m2e-extras</a>
               and then select 
               <ul><li>Maven SCM handler for Subclispe</li>
                 <li>Maven SCM Integration</li>

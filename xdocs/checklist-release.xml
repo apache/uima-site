@@ -8,7 +8,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -67,7 +67,7 @@ under the License.
     </ol>
   </li-->
   <p>More details on next steps are 
-    <a href="http://maven.apache.org/developers/release/apache-release.html">here</a></p>
+    <a href="https://maven.apache.org/developers/release/apache-release.html">here</a></p>
   <ol>
     <p>Release one or more artifacts into the Apache Nexus staging repository.
       You can do multiple release:prepare/perform steps, with subsequent steps

@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
 #*
 Licensed to the Apache Software Foundation (ASF) under one
 or more contributor license agreements.  See the NOTICE file
@@ -8,7 +8,7 @@ to you under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -69,7 +69,7 @@ under the License.
       <tr><td>
        ## <a name ... used instead of id= on the contained tag
        ## to allow richer value for the name
-       ## see http://www.w3.org/TR/REC-html40/struct/links.html#h-12.2.1 
+       ## see https://www.w3.org/TR/REC-html40/struct/links.html#h-12.2.1 
           <a name="$subsection.getAttributeValue("name")">
             <h2>$subsection.getAttributeValue("name")
             #if ($subsection.getAttributeValue('title'))
@@ -164,7 +164,7 @@ under the License.
 #macro ( projectanchor $name $href)
   #if (!$href)
     <div class="navPartHeading">$name</div>
-  #elseif ($href.startsWith("http://") || $href.startsWith("https://"))
+  #elseif ($href.startsWith("https://") || $href.startsWith("https://"))
     <a href="$href" target="_blank">$name <img src="images/offsitelink.png"/></a>
   #else
     <a href="$relativePath$href">$name</a>
@@ -197,11 +197,11 @@ under the License.
   #if ($project.getChild("logo"))
     #set ( $logoString = $project.getChild("logo").getAttributeValue("href") )
     #if ( $logoString.startsWith("/") )
-      <a href="http://www.apache.org">
+      <a href="https://www.apache.org">
         <img src="$relativePath$logoString" alt="$project.getChild("logo").getText()" border="0"/>
       </a>
     #else
-      <a href="http://www.apache.org">
+      <a href="https://www.apache.org">
         <img src="$relativePath/$logoString" alt="$project.getChild("logo").getText()" border="0"/>
       </a>
     #end
@@ -260,7 +260,7 @@ under the License.
 ##
             <title>$project.getChild("title").getText() - $root.getChild("properties").getChild("title").getText()</title>
             
-            <!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+            <!-- Begin Cookie Consent plugin by Silktide - https://silktide.com/cookieconsent -->
             <script type="text/javascript">
                 window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"https://uima.apache.org/privacy-policy.html","theme":"dark-bottom"};
             </script>
@@ -315,7 +315,7 @@ under the License.
                   <form method="get" action="https://www.google.com/search">
                     Search the site
                     <input type="text"   name="q" size="25" maxlength="255" value="" />
-                    <input type="hidden" name="sitesearch" value="http://uima.apache.org/" />
+                    <input type="hidden" name="sitesearch" value="https://uima.apache.org/" />
                     <input name="Search" value="Search Site" type="submit"/>
                   </form>
                 </td>
@@ -324,8 +324,8 @@ under the License.
                 <td width="20%" valign="top">
 ##      
 ##    special ACon Logo - leave here for next time                            
-##                  <a href="http://apachecon.com/2005/US/">
-##                    <img src="http://apache.org/images/ac2005us_blue_125x125.jpg" height="125"
+##                  <a href="https://apachecon.com/2005/US/">
+##                    <img src="https://apache.org/images/ac2005us_blue_125x125.jpg" height="125"
 ##                             width="125" border="0" alt="ApacheCon US 2005" />
 ##                  </a>
 ##
@@ -413,11 +413,11 @@ under the License.
 ##    
     #foreach ( $download in $downloads.getChildren("download"))
       #if ($download.getAttributeValue("archived"))
-        #set ( $drmirror = "http://archive.apache.org/dist/uima")
-        #set ( $dr =       "http://archive.apache.org/dist/uima")
+        #set ( $drmirror = "https://archive.apache.org/dist/uima")
+        #set ( $dr =       "https://archive.apache.org/dist/uima")
       #else
         #set ( $drmirror = "[preferred]/uima")
-        #set ( $dr = "http://www.apache.org/dist/uima")
+        #set ( $dr = "https://www.apache.org/dist/uima")
       #end
       #set ($subdirectory = $download.getAttributeValue("subdirectory"))
 ##      

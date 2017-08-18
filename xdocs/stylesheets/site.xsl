@@ -15,7 +15,7 @@
 
 <!-- $Id: site.xsl,v 1.7 2003/12/31 14:42:28 tetsuya Exp $ -->
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:xsl="https://www.w3.org/1999/XSL/Transform"
   version="1.0">
 
 
@@ -71,8 +71,8 @@
       <tr><td colspan="2">
 
         <xsl:comment>JAKARTA LOGO</xsl:comment>
-        <a href="http://jakarta.apache.org/">
-          <img src="http://jakarta.apache.org/images/jakarta-logo.gif"
+        <a href="https://jakarta.apache.org/">
+          <img src="https://jakarta.apache.org/images/jakarta-logo.gif"
              align="left" alt="The Jakarta Project" border="0"/>
         </a>
         <xsl:if test="$project/logo">
@@ -149,11 +149,11 @@
   <xsl:template match="item">
     <xsl:variable name="href">
       <xsl:choose>
-            <xsl:when test="starts-with(@href, 'http://')">
+            <xsl:when test="starts-with(@href, 'https://')">
                 <xsl:value-of select="@href"/>
             </xsl:when>
             <xsl:when test="starts-with(@href, '/site')">
-                <xsl:text>http://jakarta.apache.org</xsl:text><xsl:value-of select="@href"/>
+                <xsl:text>https://jakarta.apache.org</xsl:text><xsl:value-of select="@href"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:value-of select="$relative-path"/><xsl:value-of select="@href"/>

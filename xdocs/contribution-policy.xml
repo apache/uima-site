@@ -8,7 +8,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -48,7 +48,7 @@ The Apache UIMA&#0153; Contribution Policy is summarized below:
 </li>
 <li>
   We require every contributor to fill out the standard Apache
-  <a href="http://www.apache.org/licenses/#clas">Individual 
+  <a href="https://www.apache.org/licenses/#clas">Individual 
     Contributors License Agreement</a>.
   <ul><li><p><b>Exception</b> - very small contributions such as fixing spelling errors, where the content
   is small enough to not be considered intellectual property, can be submitted by a contributor
@@ -95,7 +95,7 @@ and patches that are the normal flow of project life.
       if the contributed code contains third party code not the original work of the
       contributor, it must be first discussed on the uima-dev discussion list and
       the IP Clearance process described in 
-      <a href="http://incubator.apache.org/ip-clearance/index.html">
+      <a href="https://incubator.apache.org/ip-clearance/index.html">
         Intellectual property clearance</a>
       must be done and documented.  A special subdirectory of the UIMA project is
     kept for storing the results of these clearances.</li>
@@ -122,7 +122,7 @@ as Bulk Contributions.
 
 <p>
 Each committer is required to complete a standard 
-<a href="http://www.apache.org/licenses/#clas">Apache Individual Contributor License Agreement</a>.
+<a href="https://www.apache.org/licenses/#clas">Apache Individual Contributor License Agreement</a>.
 This document asserts that the contributor is licensing their 
 material to the ASF under the Apache license and is their original work (there's some other details).
 This document is maintained and managed by the Secretary of the Apache Software Foundation.
@@ -130,7 +130,7 @@ This document is maintained and managed by the Secretary of the Apache Software 
 
 <p>
 We encourage every committer, if appropriate, to have their employer execute a 
-<a href="http://www.apache.org/licenses/">Apache Corporate Contributor License Agreement</a>.
+<a href="https://www.apache.org/licenses/">Apache Corporate Contributor License Agreement</a>.
 Note that this is recommended, but not required.
 </p>
 

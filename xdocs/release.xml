@@ -8,7 +8,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -69,7 +69,7 @@ A previous version of this page, with the methods we used while in the incubator
 		</p>
 		<p>  
 		  The previous UIMA release plans and a release plan template are available in the UIMA wiki at
-		  <a href="http://cwiki.apache.org/confluence/display/UIMA/release-plan.html">http://cwiki.apache.org/confluence/display/UIMA/release-plan.html</a>
+		  <a href="https://cwiki.apache.org/confluence/display/UIMA/release-plan.html">https://cwiki.apache.org/confluence/display/UIMA/release-plan.html</a>
 		</p> 
 	</subsection>
 	
@@ -482,7 +482,7 @@ A previous version of this page, with the methods we used while in the incubator
       The [VOTE] email should be based on similar previous votes, and
       include instructions to testers on how to set up their maven settings.xml file to specify
       the particular staging repository (or repositories, if more than one is being used).
-      For an example, see <a href="http://markmail.org/message/4ae7zb4ucmivlkaa">this dev-list post</a>.
+      For an example, see <a href="https://markmail.org/message/4ae7zb4ucmivlkaa">this dev-list post</a>.
       
 		</p>
 	</subsection>
@@ -572,7 +572,7 @@ svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos
 	    and describe the major changes of the release. 
 	    Announcements should be posted from the release manager's <code>apache.org</code> address,
       and signed by the release manager using the same code-signing key as was used to sign the release.
-	    For more details please refer to <a href="http://incubator.apache.org/guides/releasemanagement.html#announcements">
+	    For more details please refer to <a href="https://incubator.apache.org/guides/releasemanagement.html#announcements">
 	    A Guide To Release Management During Incubation</a>.
 	  </p>
     <p>Our main uima website has a "News" section that should be updated with news of the release.

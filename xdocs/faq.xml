@@ -8,7 +8,7 @@
 	"License"); you may not use this file except in compliance
 	with the License.  You may obtain a copy of the License at
 	
-	http://www.apache.org/licenses/LICENSE-2.0
+	https://www.apache.org/licenses/LICENSE-2.0
 	
 	Unless required by applicable law or agreed to in writing,
 	software distributed under the License is distributed on an
@@ -109,7 +109,7 @@
 				name="Does this project use a wiki?">
 				<p>
 					It does; see:
-					<a href="http://cwiki.apache.org/confluence/display/UIMA/">
+					<a href="https://cwiki.apache.org/confluence/display/UIMA/">
 						UIMA wiki
 					</a>
 					. It will complement the work taking place on the
@@ -126,7 +126,7 @@
 				<p>
 					Any new file should contain the
 					<a
-						href="http://www.apache.org/legal/src-headers.html">
+						href="https://www.apache.org/legal/src-headers.html">
 						Apache license header
 					</a>
 					. This is true of source code, but also XML files
@@ -140,7 +140,7 @@
 				<p>
 					For source code, please also follow the
 					<a
-						href="http://uima.apache.org/codeConventions.html">
+						href="https://uima.apache.org/codeConventions.html">
 						coding conventions
 					</a>
 					of the UIMA team.

@@ -9,7 +9,7 @@
 	"License"); you may not use this file except in compliance
 	with the License.  You may obtain a copy of the License at
 	
-	http://www.apache.org/licenses/LICENSE-2.0
+	https://www.apache.org/licenses/LICENSE-2.0
 	
 	Unless required by applicable law or agreed to in writing,
 	software distributed under the License is distributed on an
@@ -67,7 +67,7 @@
         </ul>
         
         <p>For a complete list of bugs and improvements included in this release please see
-        <a href="http://uima.apache.org/d/ruta-2.6.1/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://uima.apache.org/d/ruta-2.6.1/issuesFixed/jira-report.html">issue report</a>.
         </p>
       </subsection>
 
@@ -140,7 +140,7 @@
        </p>
        
        <p>The Eclipse update site is available, but located in a 
-          <a target="_blank" href="http://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production">different spot</a>,
+          <a target="_blank" href="https://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production">different spot</a>,
           in order to prevent accidentally installing the pre-production version,
           and because the v3 tooling requires Java 8 and the JCasGen generates
           v3 style classes.  If you want to use this, please install it into a 
@@ -189,7 +189,7 @@
           Projects built with the UIMA Ruta Maven Plugin require no manual effort.
         </p>
         <p>For a complete list of bugs and improvements included in this release please see
-        <a href="http://uima.apache.org/d/ruta-2.6.0/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://uima.apache.org/d/ruta-2.6.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
       </subsection>
 
@@ -246,12 +246,12 @@ provides cluster management services to automate the scale-out of UIMA pipelines
        (a migration tool is provided).</p>  
 
        <p>
-       <a target="_blank" href="http://uima.apache.org/d/uimaj-3.0.0-alpha/version_3_users_guide.html#uv3.overview.new">  
+       <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-alpha/version_3_users_guide.html#uv3.overview.new">  
        <b>Here</b></a> is a brief overview of the new features, capabilities, and migration tooling.</p>
        
        <p>Except for migration of user-defined JCas classes, it is designed to backwards compatible with existing
           version 2 UIMA pipelines.  The    
-          <a target="_blank" href="http://uima.apache.org/d/uimaj-3.0.0-alpha/version_3_users_guide.html#uv3.overview.new">
+          <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-alpha/version_3_users_guide.html#uv3.overview.new">
           Version 3 User's Guide</a> has more details.
        </p>
        
@@ -331,7 +331,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           Projects built with the UIMA Ruta Maven Plugin require no manual effort.
         </p>
         <p>For a complete list of bugs and improvements included in this release please see
-        <a href="http://uima.apache.org/d/ruta-2.5.0/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://uima.apache.org/d/ruta-2.5.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
       </subsection>
       
@@ -358,7 +358,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 					</ul>
 					</li>
 					</ul></p>
-      <p>Please see the <a target="_blank" href="http://uima.apache.org/d/uimaj-2.9.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
+      <p>Please see the <a target="_blank" href="https://uima.apache.org/d/uimaj-2.9.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
       for a summary of the changes.</p>
     </subsection>
 
@@ -486,14 +486,14 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           Projects built with the UIMA Ruta Maven Plugin require no manual effort.
         </p>
         <p>For a complete list of bugs and improvements included in this release please see
-        <a href="http://uima.apache.org/d/ruta-2.4.0/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://uima.apache.org/d/ruta-2.4.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
       </subsection>
  
      <subsection name="26 Oct 2015" date = "26 October 2015" title="Apache UIMA Ducc 2.0.1 released">
 	
 	        <p>This is a bug fix release addressing bugs found since ducc 2.0.0 release.</p>
-        <p>Please see the <a target="_blank" href="http://uima.apache.org/d/uima-ducc-2.0.1/RELEASE_NOTES.html">RELEASE_NOTES</a>
+        <p>Please see the <a target="_blank" href="https://uima.apache.org/d/uima-ducc-2.0.1/RELEASE_NOTES.html">RELEASE_NOTES</a>
         for a summary of the changes.</p>
 	    </subsection>
 
@@ -502,7 +502,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 	        <p>This is a bugfix release. It fixes diverse problems of the rule inference, 
 	          the ruta-maven-plugin and the UIMA Ruta Workbench.</p>
 	        <p>For a complete list of bugs and improvements included in this release please see
-	        <a href="http://uima.apache.org/d/ruta-2.3.1/issuesFixed/jira-report.html">issue report</a>.
+	        <a href="https://uima.apache.org/d/ruta-2.3.1/issuesFixed/jira-report.html">issue report</a>.
 	        </p>
 	    </subsection>
 
@@ -532,7 +532,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         <p>Added support for queueing resource requests that were previously unfulfillable</p>
 
 
-        <p>Please see the <a target="_blank" href="http://uima.apache.org/d/uima-ducc-2.0.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
+        <p>Please see the <a target="_blank" href="https://uima.apache.org/d/uima-ducc-2.0.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
         for a summary of the changes.</p>
       </subsection>
 
@@ -540,7 +540,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 
         <p>This release is a bug fix release; replacing 2.8.0, and addressing a few issues reported
         after the 2.8.0 release.</p>
-        <p>Please see the <a target="_blank" href="http://uima.apache.org/d/uimaj-2.8.1/RELEASE_NOTES.html">RELEASE_NOTES</a>
+        <p>Please see the <a target="_blank" href="https://uima.apache.org/d/uimaj-2.8.1/RELEASE_NOTES.html">RELEASE_NOTES</a>
         for a summary of the changes.</p>
       </subsection>
       
@@ -567,7 +567,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 	      For more details, see Jira issue 
 	      <a target="_blank" href="https://issues.apache.org/jira/browse/UIMA-4357">UIMA-4357</a>. 
 	      </p>
-	      <p>For more details, please see the <a target="_blank" href="http://uima.apache.org/d/uimaj-2.8.0/RELEASE_NOTES.html">RELEASE_NOTES</a>.</p>
+	      <p>For more details, please see the <a target="_blank" href="https://uima.apache.org/d/uimaj-2.8.0/RELEASE_NOTES.html">RELEASE_NOTES</a>.</p>
 	    </subsection>
       
       <subsection name="08 June 2015" date = "08 June 2015" title="Apache UIMA Ruta 2.3.0 released">
@@ -606,7 +606,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 				</p>
         
         <p>For a complete list of bugs and improvements included in this release please see
-        <a href="http://uima.apache.org/d/ruta-2.3.0/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://uima.apache.org/d/ruta-2.3.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
       </subsection>
       
@@ -663,7 +663,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           smoothly with Apache UIMA. 
         </p>
         <p>For a complete list of bugs and improvements included in this release please see
-        <a href="http://uima.apache.org/d/ruta-2.2.1/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://uima.apache.org/d/ruta-2.2.1/issuesFixed/jira-report.html">issue report</a>.
         </p>
         <p> The UIMA Ruta Workbench 2.2.1 requires a newer version of Eclipse (>4.0) due to the CAS Editor. It has been tested with Eclipse 4.3.2.
         </p>
@@ -734,7 +734,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 						<li>Many bug fixes</li>
 					</ul>
         <p>For a complete list of bugs and improvements included in this release please see
-        <a href="http://uima.apache.org/d/ruta-2.2.0/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://uima.apache.org/d/ruta-2.2.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
         
       </subsection>
@@ -742,8 +742,8 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 
   <subsection name="10 April 2014" date = "10 April 2014" title="Upcoming UIMA Workshop at COLING 2014">
          <p>There will be a workshop with a strong focus on UIMA, as part of the 
-  <a href="http://glicom.upf.edu/OIAF4HLT/">Workshop on Open Infrastructures and Analysis Frameworks for HLT</a> 
-  at <a href="http://www.coling-2014.org/">COLING 2014</a>, the 25th International Conference on Computational Linguistics.  
+  <a href="https://glicom.upf.edu/OIAF4HLT/">Workshop on Open Infrastructures and Analysis Frameworks for HLT</a> 
+  at <a href="https://www.coling-2014.org/">COLING 2014</a>, the 25th International Conference on Computational Linguistics.  
   Please find the CFP <a href="./coling14.html">here</a>.
         </p>
               
@@ -829,7 +829,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
             <li>Many bug fixes</li>
           </ul>
         <p>For a complete list of bugs and improvements included in this release please see
-        <a href="http://uima.apache.org/d/ruta-2.1.0/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://uima.apache.org/d/ruta-2.1.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
         
       </subsection>
@@ -925,7 +925,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         </p>
         
         <p>For a complete list of bugs and improvements included in this release please see
-        <a href="http://uima.apache.org/d/ruta-2.0.1/RELEASE_NOTES.html">release-notes</a>.
+        <a href="https://uima.apache.org/d/ruta-2.0.1/RELEASE_NOTES.html">release-notes</a>.
         </p>
         
       </subsection>
@@ -948,7 +948,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           many bug fixes.</p>
         
         <p>For a complete list of bugs and improvements included in this release please see
-        <a href="http://uima.apache.org/d/uimacpp-2.4.0/RELEASE_NOTES.html">release-notes</a>.
+        <a href="https://uima.apache.org/d/uimacpp-2.4.0/RELEASE_NOTES.html">release-notes</a>.
         </p>
         
       </subsection>
@@ -962,7 +962,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         improved stability and error handling, many bug fixes.</p>
         
         <p>For a complete list of bugs and improvements included in this release please see
-        <a href="http://uima.apache.org/d/uima-as-2.4.0/issuesFixed/jira-report.html">jira-report</a>.
+        <a href="https://uima.apache.org/d/uima-as-2.4.0/issuesFixed/jira-report.html">jira-report</a>.
         </p>
         
       </subsection>
@@ -1010,12 +1010,12 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         Notable updates included in this release: upgrade to ActiveMQ 5.4.1, inclusion of base UIMA 
         2.3.1 jars, improved stability and error handling, many bug fixes.
         For a complete list of bugs and improvements included in this release please see
-        <a href="http://uima.apache.org/d/uima-as-2.3.1/issuesFixed/jira-report.html">jira-report</a>.
+        <a href="https://uima.apache.org/d/uima-as-2.3.1/issuesFixed/jira-report.html">jira-report</a>.
         </p>
       </subsection>
  
       <subsection name="14 February 2011" date = "14 February 2011" title="Apache UIMA underlies Watson Jeopardy! challenger">
-        <a target="_blank" href="http://s.apache.org/WJ3">
+        <a target="_blank" href="https://s.apache.org/WJ3">
           ASF news item about UIMA underlying Watson</a>
       </subsection>
       
@@ -1072,12 +1072,12 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       
       <subsection name='19 March 2009' date="19 March 2009" title="UIMA approved as an OASIS Standard">
         <p>       
-          OASIS (<a href="http://www.oasis-open.org" target="_blank">http://www.oasis-open.org</a>)
+          OASIS (<a href="https://www.oasis-open.org" target="_blank">https://www.oasis-open.org</a>)
           members have approved the 
           Unstructured Information Management Architecture (UIMA) version 1.0 
           as an OASIS Standard, a status that signifies the highest level of ratification. 
         </p>
-        <p>See <a href="http://www.oasis-open.org/news/oasis-news-2009-03-19.php" target="_blank">http://www.oasis-open.org/news/oasis-news-2009-03-19.php</a></p>
+        <p>See <a href="https://www.oasis-open.org/news/oasis-news-2009-03-19.php" target="_blank">https://www.oasis-open.org/news/oasis-news-2009-03-19.php</a></p>
       </subsection>     
 
 			<subsection name='29 December 2008' date="29 December 2008" title="UIMA C++ Framework Released">
@@ -1114,8 +1114,8 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 			<subsection name='16 July 2008' date='16 July 2008' title='Hotfix-1 for UIMA core 2.2.2-incubating Released'>
 				<p>
 					This fixes memory issues with the UIMA CAS noted in 
-					<a href="http://issues.apache.org/jira/browse/UIMA-1067">Jira issue 1067</a> and
-					<a href="http://issues.apache.org/jira/browse/UIMA-1068">Jira issue 1068</a>.
+					<a href="https://issues.apache.org/jira/browse/UIMA-1067">Jira issue 1067</a> and
+					<a href="https://issues.apache.org/jira/browse/UIMA-1068">Jira issue 1068</a>.
           			The hotfix consists of one zip file, which contains a replacement for the 
           			uima-core.jar and a README with some install and usage instructions.
 				</p>
@@ -1125,7 +1125,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 				<p>
 					The Apache UIMA version 2.2.2-incubating has been released!
 					For a list of all fixed issues, please refer to the 
-					<a href="http://www.apache.org/dist/uima/RELEASE_NOTES-uimaj-2.2.2-incubating.html">Release Notes</a>.
+					<a href="https://www.apache.org/dist/uima/RELEASE_NOTES-uimaj-2.2.2-incubating.html">Release Notes</a>.
 					Downloads of the bugfix release can be found on
 					<a href="downloads.cgi">our download page.</a>
 				</p>
@@ -1155,7 +1155,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         <p>
           A "hotfix" for the Component Descriptor Editor, an Eclipse plugin used when editing UIMA descriptors,
           has been released.  This fixes functionality problems noted in 
-          <a href="http://issues.apache.org/jira/browse/UIMA-364">Jira issue 364</a>.
+          <a href="https://issues.apache.org/jira/browse/UIMA-364">Jira issue 364</a>.
           This hotfix consists of one zip file, which, when unzipped, constitutes a replacement for the Eclipse 
           plugin.  It includes a README-HOTFIX-1 file describing how to install it.
         </p>
@@ -1165,20 +1165,20 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 				<p>
           Version 2.1.0-incubating has been released!
           Downloads of the project can be found at 
-          <a href="downloads.cgi">http://uima.apache.org/downloads.cgi</a>
+          <a href="downloads.cgi">https://uima.apache.org/downloads.cgi</a>
 				</p>
 			</subsection>
       
 			<subsection name='20 December 2006' date='20 December 2006' title='GLDV conference workshop (Germany)'>
-				<p>We are pleased announce a UIMA workshop at the <a href="http://www.sfb441.uni-tuebingen.de/gldv2007/index.en.html">GLDV 2007 spring conference</a>
-				in beautiful <a href="http://www.tuebingen.de/en/1559.html">Tübingen</a>, Germany.  
+				<p>We are pleased announce a UIMA workshop at the <a href="https://www.sfb441.uni-tuebingen.de/gldv2007/index.en.html">GLDV 2007 spring conference</a>
+				in beautiful <a href="https://www.tuebingen.de/en/1559.html">Tübingen</a>, Germany.  
 				Please see the <a href="gldv07.html">full announcement</a>
 				for further details.
 				</p>
 			</subsection>
 			
 			<subsection name='13 December 2006' date='13 December 2006' title='ApacheCon 2007 Europe coming up'>
-				<p><a href="http://apachecon.com/2007/EU/index.html/e=MjAwNy9FVQ">ApacheCon 2007 Europe</a>
+				<p><a href="https://apachecon.com/2007/EU/index.html/e=MjAwNy9FVQ">ApacheCon 2007 Europe</a>
 				is coming up.  We are hoping to have some UIMA attendance
 				there, although we have no concrete plans as of now.  Watch this space.  If you would
 				like to meet with

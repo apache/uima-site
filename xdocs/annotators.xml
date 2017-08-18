@@ -9,7 +9,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -41,8 +41,8 @@ at various repositories.
 <p>Several annotators are available as part of Apache UIMA; they are packaged up into one 
   <a href="downloads.cgi">downloadable package</a>.
   You can access the source for the annotators in the SVN repository at 
-  <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/">
-     http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>. 
+  <a class="external" href="https://svn.apache.org/repos/asf/uima/sandbox/trunk/">
+     https://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>. 
 </p>
 
 <p>The annotators available here are:</p>
@@ -59,7 +59,7 @@ at various repositories.
         <li><a href="sandbox.html#dict.annotator">Dictionary Annotator</a></li>
         <li><a href="sandbox.html#opencalais.annotator">OpenCalais Annotator</a> - an 
           experimental annotator that uses the 
-          <a href="http://www.opencalais.com/">OpenCalais service</a> to 
+          <a href="https://www.opencalais.com/">OpenCalais service</a> to 
           do the annotations.</li>
         <li><a href="sandbox.html#lucas.consumer">Lucene CAS indexer (Lucas)</a></li>
         <li><a href="sandbox.html#concept.mapper.annotator">Concept Mapper Annotator</a></li>

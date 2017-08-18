@@ -9,7 +9,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -45,9 +45,9 @@ under the License.
       <b><code>Settings.xml</code></b> file:
       <p>Create and/or update your Maven settings.xml file (located where your local repo is).
         Follow <a target="_blank" 
-          href="http://maven.apache.org/developers/committer-settings.html">these instructions</a> (but
+          href="https://maven.apache.org/developers/committer-settings.html">these instructions</a> (but
           ignore the last line about needing to be a member of group <code>apcvs</code> and <code>maven</code>).
-        Use Maven's <a target="_blank" href="http://maven.apache.org/guides/mini/guide-encryption.html">
+        Use Maven's <a target="_blank" href="https://maven.apache.org/guides/mini/guide-encryption.html">
           password encryption capabilities</a> to encrypt your LDAP password, used to log on to
           the server for uploading things to the Apache Nexus Repositories (both SNAPSHOTs and Staging).
       </p>
@@ -67,10 +67,10 @@ under the License.
 &lt;/properties></pre>
         </p>
     <p>Here is a sample settings.xml profile:
-<pre style="font-size:70%">&lt;settings xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<pre style="font-size:70%">&lt;settings xmlns="https://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://maven.apache.org/POM/4.0.0
+                      https://maven.apache.org/xsd/settings-1.0.0.xsd">
   &lt;profiles>
     &lt;profile>
       &lt;id>local-build-configuration&lt;/id>
@@ -98,7 +98,7 @@ under the License.
     <li>
       Create (if you haven't already) your GPG keys; see 
         <a target="_blank" 
-          href="http://apache.org/dev/openpgp.html">Making GPG Keys</a>.
+          href="https://apache.org/dev/openpgp.html">Making GPG Keys</a>.
       The UIMA project KEYS file is stored in SVN in the trunk/uima-website/docs/KEYS file.
       Please add your exported public key to the bottom of this file, and commit the change.
       <p>
@@ -113,17 +113,17 @@ under the License.
       the passphrase is needed - so you never need to put the passphrase into a file. And, 
       they remember this, so if you're signing a bunch of things, you only need to put in the
       passphrase once (it forgets/resets after a few minutes). 
-      I've found <a target="_blank" href="http://www.gpg4win.org/">http://www.gpg4win.org/</a>
+      I've found <a target="_blank" href="https://www.gpg4win.org/">https://www.gpg4win.org/</a>
       has this kind of support, for Windows XP.
       See the main gpg site 
-      <a target="_blank" href="http://www.gnupg.org/">http://www.gnupg.org/</a> for references
+      <a target="_blank" href="https://www.gnupg.org/">https://www.gnupg.org/</a> for references
       to other implementations.
     </li>
     <li>
       You need a current version of the SVN client, Subversion (1.6) installed and on your shell's path. 
-    See <a target="_blank" href="http://subversion.apache.org/">http://subversion.apache.org/</a>
+    See <a target="_blank" href="https://subversion.apache.org/">https://subversion.apache.org/</a>
     At least one person has had success using the client from <a target="_blank"
-      href="http://www.collab.net/downloads/subversion/">Collabnet</a> on Windows.
+      href="https://www.collab.net/downloads/subversion/">Collabnet</a> on Windows.
     </li>
     <li>You need Java 1.5.  (Our builds should be done with 1.5 to catch any accidental use of 1.6-only 
       methods).</li>

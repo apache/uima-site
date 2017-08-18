@@ -8,7 +8,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -38,7 +38,7 @@ Similarly, if any of the content is out of date or inappropriate, please let us 
 <subsectionToc/>
 
 <subsection name="Apache cTAKES">
-<p>The <a href="http://ctakes.apache.org">cTAKES</a>
+<p>The <a href="https://ctakes.apache.org">cTAKES</a>
 project 
 (clinical Text Analysis and Knowledge Extraction System) 
 is an open-source natural language processing system for 
@@ -53,7 +53,7 @@ can be used by clinical decision support systems and clinical research.
 </subsection>
 
 <subsection name="Apache OpenNLP">
-<p>The <a href="http://opennlp.apache.org/">OpenNLP Project</a> provides the
+<p>The <a href="https://opennlp.apache.org/">OpenNLP Project</a> provides the
 official UIMA integration for the OpenNLP Sentence Detector, Tokenizer, POS Tagger,
 Name Finder, Document Categorizer, Chunker and Parser. 
 The opennlp.uima distribution includes a sample PEAR which can easily be tested with the Cas Visual Debugger.
@@ -68,16 +68,16 @@ within Hadoop.
 </subsection>
 
 <subsection name="BioNLP Wrappers">
-<p>The <a href="http://compbio.ucdenver.edu/Hunter_lab/" target="_blank">
+<p>The <a href="https://compbio.ucdenver.edu/Hunter_lab/" target="_blank">
   Center for Computational Pharmacology</a> at the University of Colorodo
   has wrapped a number of popular bio-informatic annotators as UIMA components, and
   added some supporting additional code and components.  More information is available 
-  at <a href="http://bionlp-uima.sourceforge.net" target="_blank">http://bionlp-uima.sourceforge.net</a>.
+  at <a href="https://bionlp-uima.sourceforge.net" target="_blank">https://bionlp-uima.sourceforge.net</a>.
 </p>  
 </subsection>
 
 <subsection name="ClearTK">
-<p><a href="http://cleartk.github.io/cleartk/">ClearTK</a> is a framework for developing machine
+<p><a href="https://cleartk.github.io/cleartk/">ClearTK</a> is a framework for developing machine
 learning and natural language processing components within the Apache UIMA.
 </p>
 </subsection>
@@ -94,7 +94,7 @@ file and corpus formats.
 </p>
 <p>
 DKPro Core relies heavily on <a href="../uimafit.html">uimaFIT</a>. DKPro Core is meant to be used with Apache Maven. The main components
-are hosted on <a href="http://search.maven.org/#search%7Cga%7C1%7Cde.tudarmstadt.ukp.dkpro.core" 
+are hosted on <a href="https://search.maven.org/#search%7Cga%7C1%7Cde.tudarmstadt.ukp.dkpro.core" 
 target="_blank">Maven Central</a> while distributable models are available from the
 public <a href="https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/simple/public-model-releases-local/de/tudarmstadt/ukp/dkpro/core/" 
 target="_blank">Maven repository</a> at <a href="https://www.ukp.tu-darmstadt.de">Ubiquitous Knowledge Processing (UKP) Lab</a>, TU Darmstadt.
@@ -106,25 +106,25 @@ target="_blank">Maven repository</a> at <a href="https://www.ukp.tu-darmstadt.de
 </subsection>
 
 <subsection name="JCoRe NLP Toolsuite">
-<p>The <a href="http://www.julielab.de/Resources/JCoRe+NLP+Tools.html" target="_blank">JCoRe NLP Toolsuite</a>
+<p>The <a href="https://www.julielab.de/Resources/JCoRe+NLP+Tools.html" target="_blank">JCoRe NLP Toolsuite</a>
 consists of a collection of NLP components, some of which are provided as freely available
 UIMA components.  It includes also a 
-<a href="http://www.julielab.de/Resources/Software/UIMA+type+system-p-91.html" target="_blank">type system</a>
+<a href="https://www.julielab.de/Resources/Software/UIMA+type+system-p-91.html" target="_blank">type system</a>
 you can use as basis for your own NLP applications.
 </p>
 </subsection>
 
 <subsection name="National Centre for Text Mining (NaCTeM)">
   <p>  
-    The <a href="http://www.nactem.ac.uk/" target="_blank">
+    The <a href="https://www.nactem.ac.uk/" target="_blank">
   National Centre for Text Mining (NaCTeM)</a> at the University
-of Manchester hosts a <a href="http://www.nactem.ac.uk/uima_work/" target="_blank">repository</a>.
+of Manchester hosts a <a href="https://www.nactem.ac.uk/uima_work/" target="_blank">repository</a>.
   </p>
 </subsection>
 
 <subsection name="u-compare">
   <p>
-    <a href="http://nactem.ac.uk/ucompare" target="_blank"><b>http://nactem.ac.uk/ucompare</b></a> provides 
+    <a href="https://nactem.ac.uk/ucompare" target="_blank"><b>https://nactem.ac.uk/ucompare</b></a> provides 
     a web-based integrated platform for the purpose of       
     sharing and comparing UIMA components and tools, including visualizers and
 utilities, and includes a large set of type-system-compatible UIMA components.
@@ -132,14 +132,14 @@ utilities, and includes a large set of type-system-compatible UIMA components.
   </p>
   <p>
     An older version of this site, available at 
-    <a href="http://u-compare.org">http://u-compare.org</a>, was run mainly by the Tsujii Laboratory at the University of Tokyo.
+    <a href="https://u-compare.org">https://u-compare.org</a>, was run mainly by the Tsujii Laboratory at the University of Tokyo.
     Because the Tsujii lab was closed in 2011, that site is no longer
     being updated.  
   </p>
 </subsection>
 
 <subsection name="uimaFIT (legacy)">
-<p><a href="http://code.google.com/p/uimafit" target="_blank">
+<p><a href="https://code.google.com/p/uimafit" target="_blank">
 uimaFIT (legacy)</a>
 is a library that provides factories, injection, 
 and testing utilities for UIMA. It provides a convenient Java API 
@@ -148,7 +148,7 @@ for using UIMA in Java projects without having to deal with XML descriptors.
 </subsection>
 
 <subsection name="UIMA French portal">
-<p><a href="http://www.uima-fr.org" target="_blank">uima-fr.org</a>
+<p><a href="https://www.uima-fr.org" target="_blank">uima-fr.org</a>
 is a French-speaking web portal
 about UIMA. It aims at developing a UIMA French-speaking community by
 providing services such as a discussion list, a feed aggregator and a
@@ -161,7 +161,7 @@ of Nantes.
 <!--  appears to be not found as of 5/2015
 <subsection name="UIMA Component Repository at CMU">
 
-<p> The <a href="http://uima.lti.cs.cmu.edu/" target="_blank">UIMA Component Repository at CMU</a> lists
+<p> The <a href="https://uima.lti.cs.cmu.edu/" target="_blank">UIMA Component Repository at CMU</a> lists
 a large number of UIMA components, some of which can be freely downloaded.
 </p>
 </subsection>
@@ -170,9 +170,9 @@ a large number of UIMA components, some of which can be freely downloaded.
 <!-- Redundant with BioNLP  - hence removed 09/2015
 <subsection name="Center for Computation Pharmacology">
   <p>
-    The <a href="http://compbio.ucdenver.edu/Hunter_lab/" target="_blank">
+    The <a href="https://compbio.ucdenver.edu/Hunter_lab/" target="_blank">
   Center for Computational Pharmacology</a> at the University of Colorado School of
-Medicine hosts a <a href="http://bionlp-uima.sourceforge.net/" target="_blank">repository</a> (see BioNLP entry,
+Medicine hosts a <a href="https://bionlp-uima.sourceforge.net/" target="_blank">repository</a> (see BioNLP entry,
 which describes this in more detail).
   </p>
 </subsection>
@@ -181,15 +181,15 @@ which describes this in more detail).
 <!-- removed 12/2010 at request of Digitalpebble (Julian Nioche) - says they're not supporting 
 subsection name="RASP4UIMA">
 
-<p><a href="http://www.digitalpebble.com/rasp4uima/index.html">RASP4UIMA</a> is a UIMA wrapper around
+<p><a href="https://www.digitalpebble.com/rasp4uima/index.html">RASP4UIMA</a> is a UIMA wrapper around
 
-the <a href="http://www.informatics.susx.ac.uk/research/groups/nlp/rasp/index.html">RASP</a>
+the <a href="https://www.informatics.susx.ac.uk/research/groups/nlp/rasp/index.html">RASP</a>
 
 system, a parsing system for English.  RASP is free for research and education.  Download RASP4UIMA
 
-from <a href="http://www.digitalpebble.com/resources.html">the resource page</a> at 
+from <a href="https://www.digitalpebble.com/resources.html">the resource page</a> at 
 
-<a href="http://www.digitalpebble.com/">digitalpebble.com</a>
+<a href="https://www.digitalpebble.com/">digitalpebble.com</a>
 
 </p>
 
@@ -201,7 +201,7 @@ from <a href="http://www.digitalpebble.com/resources.html">the resource page</a>
 <section name="UIMA Applications">
 
 <subsection name="IBM Semantic Search Package">
-<p>IBM provides a freely available <a href="http://www.alphaworks.ibm.com/tech/uima/download">
+<p>IBM provides a freely available <a href="https://www.alphaworks.ibm.com/tech/uima/download">
 Semantic Search for Apache UIMA</a>.
 </p>
 </subsection>

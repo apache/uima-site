@@ -9,7 +9,7 @@
 	"License"); you may not use this file except in compliance
 	with the License.  You may obtain a copy of the License at
 	
-	http://www.apache.org/licenses/LICENSE-2.0
+	https://www.apache.org/licenses/LICENSE-2.0
 	
 	Unless required by applicable law or agreed to in writing,
 	software distributed under the License is distributed on an
@@ -45,12 +45,12 @@
 					To work with this guide you need a working Eclipse installation with 
 					installed UIMA Eclipse plugins. If you haven't already installed Eclipse with
 					the UIMA plugins, please refer to the UIMA documentation  
-					<a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/overview_and_setup/overview_and_setup.html#ugr.ovv.eclipse_setup">
+					<a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/overview_and_setup/overview_and_setup.html#ugr.ovv.eclipse_setup">
 					Setting up the Eclipse IDE to work with UIMA</a> 
 					to install and set up your UIMA Eclipse environment. Please also install the UIMA examples
 					into your Eclipse workspace since we refer to some of these in this guide; this
           is explained in the same chapter at section
-					<a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/overview_and_setup/overview_and_setup.html#ugr.ovv.eclipse_setup.example_code">
+					<a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/overview_and_setup/overview_and_setup.html#ugr.ovv.eclipse_setup.example_code">
 					Setting up Eclipse to view Example Code</a>.
 					
 				</p>
@@ -61,11 +61,11 @@
 					The annotator we will create in this guide is very simple. It uses a simple 
 					regular expression to detect room numbers in text documents (it is the
 					same example as used in the UIMA documentation in the 
-					<a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae">
+					<a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae">
 					Annotator and Analysis Engine Developer's Guide</a>).
 					Although the task is very simple, it is sufficient to demonstrate
 					how to write an UIMA annotator.	For more detailed information about the annotator 
-					development, refer to the <a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae">
+					development, refer to the <a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae">
 					Annotator and Analysis Engine Developer's Guide</a>
 				</p>
 			</subsection>
@@ -143,7 +143,7 @@
 				  resources that the annotator uses. The descriptor is also used by the UIMA framework 
 				  to load the annotator. Details about creating XML descriptors can also be found in the
 				  UIMA documentation at
-				  <a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae.creating_xml_descriptor">
+				  <a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae.creating_xml_descriptor">
 				  Creating the XML Descriptor</a>.
 				</p>
 				<p>
@@ -196,7 +196,7 @@
 				  meta information like, for example, the document language. Some more details about the UIMA
 				  type system and about the type system we will create for the RoomNumberAnnotator is available
 				  in the UIMA documentation in the chapter
-				   <a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae.defining_types">
+				   <a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae.defining_types">
 				   Defining Types</a>.
 				</p>
 				<p>
@@ -288,7 +288,7 @@
 				<p>
 					In this section we will create the RoomNumberAnnotator source code. For more detailed 
 					information about this topic please refer to the UIMA documentation at chapter
-					<a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae.developing_annotator_code">
+					<a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae.developing_annotator_code">
 					Developing Your Annotator Code</a>
 				</p>
 				<p>
@@ -398,7 +398,7 @@ public class RoomNumberAnnotator extends JCasAnnotator_ImplBase {
           specifies the regular expressions used 
 				to detect the room numbers.	For more details about configuration parameters, please refer to the
 				UIMA documentation at chapter  
-				<a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae.configuration_parameters">
+				<a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tutorials_and_users_guides/tutorials_and_users_guides.html#ugr.tug.aae.configuration_parameters">
 				Configuration Parameters</a>.
 				</p>
 			</subsection>
@@ -499,7 +499,7 @@ May 11, 2004 UIMA Tutorial
 				</p>
 				<p>
 				  For more details about the CAS Visual Debugger, please refer to the UIMA documentation 
-				  <a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tools/tools.html#ugr.tools.cvd">
+				  <a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tools/tools.html#ugr.tools.cvd">
 				CAS Visual Debugger</a>.
 				</p>
 			</subsection>
@@ -511,7 +511,7 @@ May 11, 2004 UIMA Tutorial
 				  (Processing Engine ARchive) and contains all necessary information to run
 				  the wrapped annotator component. For details about the PEAR packaging 
 				  format please refer to the UIMA documentation chapter
-				  <a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear">
+				  <a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear">
 				  PEAR Reference</a>.
 				</p>
 				<p>
@@ -574,7 +574,7 @@ May 11, 2004 UIMA Tutorial
 				  that allows us to use the annotator component easily in different applications. 
 				  How we handle and use PEAR packages and how we install it in other applications is not part 
 				  of this guide; please refer to the UIMA documentation at the 
-				  <a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tools/tools.html#ugr.tools.pear.installer">
+				  <a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/tools/tools.html#ugr.tools.pear.installer">
 				  PEAR Installer User's Guide</a> for additional information about this topic. 
 				</p>
 			</subsection>

@@ -8,7 +8,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -32,8 +32,8 @@ under the License.
   
 <p>
   There will be a workshop with a strong focus on UIMA, as part of the 
-  <a href="http://glicom.upf.edu/OIAF4HLT/">Workshop on Open Infrastructures and Analysis Frameworks for HLT</a> 
-  at <a href="http://www.coling-2014.org/">COLING 2014</a>, the 25th International Conference on Computational Linguistics.  
+  <a href="https://glicom.upf.edu/OIAF4HLT/">Workshop on Open Infrastructures and Analysis Frameworks for HLT</a> 
+  at <a href="https://www.coling-2014.org/">COLING 2014</a>, the 25th International Conference on Computational Linguistics.  
   Please find the CFP below.
 </p>
 
@@ -41,7 +41,7 @@ under the License.
 <p> 
 <blockquote>
 <h1 id="workshop-on-open-infrastructures-and-analysis-frameworks-for-hlt">Workshop on Open Infrastructures and Analysis Frameworks for HLT</h1>
-<p>http://glicom.upf.edu/OIAF4HLT/</p>
+<p>https://glicom.upf.edu/OIAF4HLT/</p>
 <p>At the 25th International Conference on Computational Linguistics (COLING 2014)<br />Helix Conference Centre at Dublin City University (DCU)<br />23-29 August 2014</p>
 <h2 id="description">Description</h2>
 <p>Recent advances in digital storage and networking, coupled with the extension of human language technologies (HLT) into ever broader areas and the persistence of difficulties in software portability, have led to an increased focus on development and deployment of web-based infrastructures that allow users to access tools and other resources and combine them to create novel solutions that can be efficiently composed, tuned, evaluated, disseminated and consumed. This in turn engenders collaborative development and deployment among individuals and teams across the globe. It also increases the need for robust, widely available evaluation methods and tools, means to achieve interoperability of software and data from diverse sources, means to handle licensing for limited access resources distributed over the web, and, perhaps crucially, the need to develop strategies for multi-site collaborative work.</p>

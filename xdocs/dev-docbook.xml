@@ -8,7 +8,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -27,7 +27,7 @@ under the License.
 
 <body>
   <p>This page is for developers, and describes how we use 
-     <a href="http://www.docbook.org/" target="_blank">Docbook</a> for 
+     <a href="https://www.docbook.org/" target="_blank">Docbook</a> for 
      technical documentation.  
       Docbook files can be incorporated with projects and processed as part of the
       Maven build.</p>   
@@ -88,7 +88,7 @@ under the License.
           and must be unique among all the docbooks in the UIMA bookshelf.</p>
       </li>
       <li>The first part of the top docbook source must include the line:
-        <pre>&lt;xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+        <pre>&lt;xi:include xmlns:xi="https://www.w3.org/2001/XInclude"
   href="../../target/docbook-shared/common_book_info.xml"/></pre>
         This allows it to pick up the standard license, disclaimers, and copyright notices.
         Please set the POM element &lt;inceptionYear>; this is used in the copyright notice.
@@ -108,7 +108,7 @@ under the License.
 %uimaents;</pre>
         <p>The docbook-shared/entities... are common shared entities you can use; please
           see the source for the list, located here:
-          <a href="http://svn.apache.org/repos/asf/uima/build/trunk/uima-build-resources/src/main/resources/docbook-shared/entities.ent"
+          <a href="https://svn.apache.org/repos/asf/uima/build/trunk/uima-build-resources/src/main/resources/docbook-shared/entities.ent"
              target="_blank">here</a>.</p></li>
     </ul>
   </section>

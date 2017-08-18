@@ -9,7 +9,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -44,16 +44,16 @@ contribute code and join the UIMA developer community.
 and tooling around UIMA.  All the components are free to use and licensed under the 
 <a href="license.html">Apache Software License</a>.
 A list of proposed analysis components and tooling for UIMA is available at the 
-<a href="http://cwiki.apache.org/confluence/display/UIMA/uima-sandbox-components.html">UIMA wiki</a> and can be discussed there. 
+<a href="https://cwiki.apache.org/confluence/display/UIMA/uima-sandbox-components.html">UIMA wiki</a> and can be discussed there. 
 </p>
 
 <p>
 You can access the UIMA Addons in the SVN repository at 
-<a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/">
-http://svn.apache.org/repos/asf/uima/addons/trunk/</a>. 
+<a class="external" href="https://svn.apache.org/repos/asf/uima/addons/trunk/">
+https://svn.apache.org/repos/asf/uima/addons/trunk/</a>. 
 Likewise, you can access the UIMA sandbox in the SVN repository at 
-<a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/">
-http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>. 
+<a class="external" href="https://svn.apache.org/repos/asf/uima/sandbox/trunk/">
+https://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>. 
 </p>
 
 <p>
@@ -104,8 +104,8 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
 		  text documents using a simple whitespace segmentation. During the tokenization, the annotator creates
 		  token and sentence annotations as result. The Java source of the annotator
 		  can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/WhitespaceTokenizer">
-		  http://svn.apache.org/repos/asf/uima/addons/trunk/WhitespaceTokenizer</a>.
+		  <a class="external" href="https://svn.apache.org/repos/asf/uima/addons/trunk/WhitespaceTokenizer">
+		  https://svn.apache.org/repos/asf/uima/addons/trunk/WhitespaceTokenizer</a>.
 		</p>	
 	</subsection>
 
@@ -115,10 +115,10 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
 		  iterates over the available token annotations in the CAS and creates for each token a feature 
 		  containing the stem.
 		  The stemming algorithm is avaialble for several languages. For details about Snowball please see 
-		  <a class="external" href="http://snowball.tartarus.org/">http://snowball.tartarus.org/</a>.
+		  <a class="external" href="https://snowball.tartarus.org/">https://snowball.tartarus.org/</a>.
 		  The Java source of the annotator can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/SnowballAnnotator">
-		  http://svn.apache.org/repos/asf/uima/addons/trunk/SnowballAnnotator</a>. 
+		  <a class="external" href="https://svn.apache.org/repos/asf/uima/addons/trunk/SnowballAnnotator">
+		  https://svn.apache.org/repos/asf/uima/addons/trunk/SnowballAnnotator</a>. 
 		</p>
 		<p>
 		  Note: the used implementation of the Snowball stemming algorithm is licensed under the BSD license.
@@ -134,8 +134,8 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
 		   <a href="d/uima-addons-current/RegularExpressionAnnotator/RegexAnnotatorUserGuide.html">
 		  Click here to access the user documentation</a>.
 		  The Java source of the annotator can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/RegularExpressionAnnotator">
-		  http://svn.apache.org/repos/asf/uima/addons/trunk/RegularExpressionAnnotator</a>.
+		  <a class="external" href="https://svn.apache.org/repos/asf/uima/addons/trunk/RegularExpressionAnnotator">
+		  https://svn.apache.org/repos/asf/uima/addons/trunk/RegularExpressionAnnotator</a>.
 		</p>	
 	</subsection>
 
@@ -143,14 +143,14 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
 		<p>
 		  The PEAR packaging ANT task component is a project to create UIMA PEAR packages automatically 
 		  during a component build using a custom 
-		  <a class="external" href="http://ant.apache.org/">Apache ANT</a> task. With this task, 
+		  <a class="external" href="https://ant.apache.org/">Apache ANT</a> task. With this task, 
 		  users are able to build their components from the source and then package them 
 		  automatically as UIMA PEAR package. 
       <a href="d/uima-addons-current/PearPackagingAntTask/PearPackagingAntTaskUserGuide.html">
 		  Click here to access the user documentation</a>.
 		  The Java source of the PEAR packaging task can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/PearPackagingAntTask">
-		  http://svn.apache.org/repos/asf/uima/addons/trunk/PearPackagingAntTask</a>. 
+		  <a class="external" href="https://svn.apache.org/repos/asf/uima/addons/trunk/PearPackagingAntTask">
+		  https://svn.apache.org/repos/asf/uima/addons/trunk/PearPackagingAntTask</a>. 
 		</p>
 	</subsection>
 
@@ -164,8 +164,8 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
 		  <a href="d/uimaj-current/tools.html#ugr.tools.pear">
 		  Click here to access the user documentation</a>.
 		  The Java source of the PEAR packaging Maven plugin can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/uima/uimaj/trunk/PearPackagingMavenPlugin">
-		  http://svn.apache.org/repos/asf/uima/uimaj/trunk/PearPackagingMavenPlugin</a>. 
+		  <a class="external" href="https://svn.apache.org/repos/asf/uima/uimaj/trunk/PearPackagingMavenPlugin">
+		  https://svn.apache.org/repos/asf/uima/uimaj/trunk/PearPackagingMavenPlugin</a>. 
 		</p>
 	</subsection>
 
@@ -177,8 +177,8 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
 		   <a href="d/uima-addons-current/DictionaryAnnotator/DictionaryAnnotatorUserGuide.html">
 		  Click here to access the user documentation</a>.
 		  The Java source of the annotator can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/DictionaryAnnotator">
-		  http://svn.apache.org/repos/asf/uima/addons/trunk/DictionaryAnnotator</a>.
+		  <a class="external" href="https://svn.apache.org/repos/asf/uima/addons/trunk/DictionaryAnnotator">
+		  https://svn.apache.org/repos/asf/uima/addons/trunk/DictionaryAnnotator</a>.
 		</p>	
 	</subsection>
 
@@ -190,8 +190,8 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
       <a href="d/uima-addons-current/FsVariables/fsVariablesUserGuide.html">
       Click here to access the user documentation</a>.
 		  The Java source of the project can be accessed in the SVN repository at 
-		  <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/FsVariables">
-		  http://svn.apache.org/repos/asf/uima/addons/trunk/FsVariables</a>.
+		  <a class="external" href="https://svn.apache.org/repos/asf/uima/addons/trunk/FsVariables">
+		  https://svn.apache.org/repos/asf/uima/addons/trunk/FsVariables</a>.
 		</p>	
 	</subsection>
 
@@ -207,8 +207,8 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
           <a href="d/uima-addons-current/Tagger/hmmTaggerUsersGuide.html">
       Click here to access the user documentation</a>. 
           The Java source of the annotator can be accessed in the SVN repository at 
-          <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/Tagger">
-          http://svn.apache.org/repos/asf/uima/addons/trunk/Tagger</a>.
+          <a class="external" href="https://svn.apache.org/repos/asf/uima/addons/trunk/Tagger">
+          https://svn.apache.org/repos/asf/uima/addons/trunk/Tagger</a>.
 		</p>	
 	</subsection>
 
@@ -216,20 +216,20 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
 		<p>
 		  The Bean Scripting Framework (BSF) Annotator is an Apache UIMA analysis engine that provides 
 		  a link between the UIMA framework and the scripting languages that are supported by
-		  Apache BSF (<a class="external" href="http://jakarta.apache.org/bsf">http://jakarta.apache.org/bsf</a>).
+		  Apache BSF (<a class="external" href="https://jakarta.apache.org/bsf">https://jakarta.apache.org/bsf</a>).
 		  The current implementation comes with examples in Beanshell 
-		  (<a class="external" href="http://www.beanshell.org">http://www.beanshell.org</a>) and Rhino Javascript
-		  (<a class="external" href="http://www.mozilla.org/rhino">http://www.mozilla.org/rhino</a>).
+		  (<a class="external" href="https://www.beanshell.org">https://www.beanshell.org</a>) and Rhino Javascript
+		  (<a class="external" href="https://www.mozilla.org/rhino">https://www.mozilla.org/rhino</a>).
 		  Simple tests have also been conducted successfully with Jython
-		  (<a class="external" href="http://jython.sourceforge.net/Project/index.html">http://jython.sourceforge.net/Project/index.html</a>)
-		  and JRuby (<a class="external" href="http://jruby.codehaus.org">http://jruby.codehaus.org</a>).
+		  (<a class="external" href="https://jython.sourceforge.net/Project/index.html">https://jython.sourceforge.net/Project/index.html</a>)
+		  and JRuby (<a class="external" href="https://jruby.codehaus.org">https://jruby.codehaus.org</a>).
           The annotator takes as parameter the source file containing the script.
 		  The script is supposed to implement the initialize and process functions of the analysis engine.
 		  Using a scripting language can be very handy to do quick prototyping, pre/post processing, CAS cleaning tasks or 
 		  typeystem conversion/adaptation.
 		  The Java source of the annotator can be accessed from the SVN repository at
-		  <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/BSFAnnotator">
-          http://svn.apache.org/repos/asf/uima/addons/trunk/BSFAnnotator</a>.
+		  <a class="external" href="https://svn.apache.org/repos/asf/uima/addons/trunk/BSFAnnotator">
+          https://svn.apache.org/repos/asf/uima/addons/trunk/BSFAnnotator</a>.
 		</p>	
 	</subsection>
 
@@ -238,7 +238,7 @@ http://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
             Apache Tika is a toolkit for detecting and extracting metadata and
             structured text content from various documents using existing parser
             libraries. The TikaAnnotator uses
-            <a href="http://lucene.apache.org/tika/" target="_blank">Tika</a>
+            <a href="https://lucene.apache.org/tika/" target="_blank">Tika</a>
             to generate annotations representing
             the original markup of a document, extract its text and metadata. It
             consists of three resources:
@@ -264,7 +264,7 @@ document; used by the FileSystemCollectionReader</dd>
     <subsection name="Lucene CAS indexer (Lucas)" id="lucas.consumer">
         <p>
             The Lucene CAS indexer (Lucas) is a UIMA CAS consumer that stores CAS
-            data in a <a href="http://lucene.apache.org">Lucene</a> index. The consumer
+            data in a <a href="https://lucene.apache.org">Lucene</a> index. The consumer
             transforms annotation objects of a CAS into Lucene token streams
             which are stored in a Lucene document. Token streams can further be processed
             by token filters. Lucas comes with a set of its own token filters and
@@ -275,7 +275,7 @@ document; used by the FileSystemCollectionReader</dd>
         <p><a href="d/uima-addons-current/Lucas/LuceneCASConsumerUserGuide.html">
       Click here to access the user documentation</a>.
           The Java source of the consumer can be accessed in the 
-            <a href="http://svn.apache.org/repos/asf/uima/addons/trunk/Lucas">
+            <a href="https://svn.apache.org/repos/asf/uima/addons/trunk/Lucas">
             SVN repository</a>.
         </p>
     </subsection>
@@ -294,8 +294,8 @@ document; used by the FileSystemCollectionReader</dd>
 			The Java source of the annotator can be accessed from the
 			SVN repository at
 			<a class="external"
-				href="http://svn.apache.org/repos/asf/uima/addons/trunk/SimpleServer">
-				http://svn.apache.org/repos/asf/uima/addons/trunk/SimpleServer
+				href="https://svn.apache.org/repos/asf/uima/addons/trunk/SimpleServer">
+				https://svn.apache.org/repos/asf/uima/addons/trunk/SimpleServer
 			</a>.
 		</p> 
 	</subsection>
@@ -303,14 +303,14 @@ document; used by the FileSystemCollectionReader</dd>
 	<subsection name='OpenCalais Annotator' id="opencalais.annotator">
 		<p>	  
 		  The OpenCalais Annotator component wraps the 
-		  <a class="external" href="http://www.opencalais.com">OpenCalais</a>
+		  <a class="external" href="https://www.opencalais.com">OpenCalais</a>
 		  web service and makes the OpenCalais analysis results available in UIMA. OpenCalais can detect a large variety
 		  of entities, facts and events like for example Persons, Companies, Acquisitions, Mergers, etc.
 		  For details about the OpenCalais analytics and the license to use the service, please refer to the
-		  to the <a class="external" href="http://www.opencalais.com">OpenCalais</a> website.
+		  to the <a class="external" href="https://www.opencalais.com">OpenCalais</a> website.
           The Java source of the annotator can be accessed in the SVN repository at 
-          <a class="external" href="http://svn.apache.org/repos/asf/uima/addons/trunk/OpenCalaisAnnotator">
-          http://svn.apache.org/repos/asf/uima/addons/trunk/OpenCalaisAnnotator</a>.
+          <a class="external" href="https://svn.apache.org/repos/asf/uima/addons/trunk/OpenCalaisAnnotator">
+          https://svn.apache.org/repos/asf/uima/addons/trunk/OpenCalaisAnnotator</a>.
        </p>
 	</subsection>
   
@@ -412,8 +412,8 @@ document; used by the FileSystemCollectionReader</dd>
     cross-reference links back to the original data.
    </p>
    <p> The type system descriptors can be accessed from the SVN repository at
-      <a class="external" href="http://svn.apache.org/repos/asf/uima/sandbox/trunk/GaleMultiModalExample">
-        http://svn.apache.org/repos/asf/uima/sandbox/trunk/GaleMultiModalExample
+      <a class="external" href="https://svn.apache.org/repos/asf/uima/sandbox/trunk/GaleMultiModalExample">
+        https://svn.apache.org/repos/asf/uima/sandbox/trunk/GaleMultiModalExample
       </a>.
    </p>
   </subsection>

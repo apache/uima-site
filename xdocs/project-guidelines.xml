@@ -8,7 +8,7 @@ to you under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -40,8 +40,8 @@ under the License.
       
       <p>This project's purpose is to develop Apache-licensed implementations of the UIMA
       standard being developed by the UIMA Technical Committee at 
-      <a href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=uima">
-        http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=uima
+      <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=uima">
+        https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=uima
       </a>.  As such, we will not incorporate changes into the project which are not compliant with 
       the standard, and will evolve implementations here to be compliant with the evolving changes
       in the standard.</p>

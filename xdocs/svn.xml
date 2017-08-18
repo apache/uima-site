@@ -9,7 +9,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -73,10 +73,10 @@ under the License.
 <section name="Source Code Repository" id="source.code.repository">
 
 <p>Apache UIMA uses 
-<a  class="external" rel="nofollow" target="_blank" href="http://subversion.tigris.org">
+<a  class="external" rel="nofollow" target="_blank" href="https://subversion.tigris.org">
 Subversion</a> to manage its source code.
 If you're new to Subversion, you can check out the
-<a href="http://svnbook.red-bean.com/" target="_blank">online book</a> about Subversion.
+<a href="https://svnbook.red-bean.com/" target="_blank">online book</a> about Subversion.
 </p>
 
 <p>See <a href="one-time-setup.html#svn-setup">SVN setup</a> for details on how to setup SVN.</p>
@@ -84,12 +84,12 @@ If you're new to Subversion, you can check out the
 <p>
   The code for UIMA is stored in several sections:</p>
   <ol>
-    <li>http://svn.apache.org/repos/asf/uima/uimaj - the Java code for base UIMA</li>
-    <li>http://svn.apache.org/repos/asf/uima/uima-as - the Asynchronous Scaleout add-on for base UIMA</li>
-    <li>http://svn.apache.org/repos/asf/uima/addons - a collection of add-ons for UIMA including annotators</li>
-    <li>http://svn.apache.org/repos/asf/uima/sandbox - a collection of new things for UIMA, not yet released</li>
-    <li>http://svn.apache.org/repos/asf/uima/uimacpp - the C++ framework supporting Annotators written in C++</li>
-    <li>http://svn.apache.org/repos/asf/uima/build - Build information and configurations used in building from sources</li>
+    <li>https://svn.apache.org/repos/asf/uima/uimaj - the Java code for base UIMA</li>
+    <li>https://svn.apache.org/repos/asf/uima/uima-as - the Asynchronous Scaleout add-on for base UIMA</li>
+    <li>https://svn.apache.org/repos/asf/uima/addons - a collection of add-ons for UIMA including annotators</li>
+    <li>https://svn.apache.org/repos/asf/uima/sandbox - a collection of new things for UIMA, not yet released</li>
+    <li>https://svn.apache.org/repos/asf/uima/uimacpp - the C++ framework supporting Annotators written in C++</li>
+    <li>https://svn.apache.org/repos/asf/uima/build - Build information and configurations used in building from sources</li>
   </ol>
 <p>  
   Each of these have subdirectories: trunk - for the latest, tags - for preserved copies of releases, 
@@ -108,7 +108,7 @@ commits-subscribe@uima.apache.org</a>.
 <p>
 If you just want to browse the source code, you can use the
 <a class="external" rel="nofollow" 
-href="http://svn.apache.org/viewvc/uima">
+href="https://svn.apache.org/viewvc/uima">
 viewvc web interface</a> to Subversion.  This is current at all times.
 </p>
 </subsection>
@@ -126,7 +126,7 @@ below for more information.
 
 <subsection name="Anonymous check out from Subversion" id="anonymous.checkout">
 <p>Use a command like:</p>
-  <longquote><code>% svn checkout http://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
+  <longquote><code>% svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk</code></longquote>
 <p>Once you have Apache UIMA checked out you can update your working copy
   of the checked-out sources, to pick up any changes committed since you
   checked things out, 
@@ -240,8 +240,8 @@ $&gt; svn commit --username your-username \
 Please always enter the JIRA issue key or keys (if more than one issue) and optionally, the JIRA issue link
 to the commit message. The issue key (e.g., UIMA-555) is important so that the JIRA SVN plugin can detect the
 changes automatically. Only specifying the issue link does not work correctly, for details
-please see the JIRA issue <a  class="external" rel="nofollow" href="http://jira.atlassian.com/browse/SVN-37">
-http://jira.atlassian.com/browse/SVN-37</a>.
+please see the JIRA issue <a  class="external" rel="nofollow" href="https://jira.atlassian.com/browse/SVN-37">
+https://jira.atlassian.com/browse/SVN-37</a>.
 </p>
 </subsection>
 </section>
@@ -363,8 +363,8 @@ properties">
 propdel</em> or <em>chmod</em> on each added file can use a non-cygwin 
 version of svn. The Subversion 1.2.3 Win32 binaries, downloadable from the 
 link at the bottom of <a  rel="nofollow" 
-href="http://subversion.tigris.org/project_packages.html">
-http://subversion.tigris.org/project_packages.html</a>, appear to work 
+href="https://subversion.tigris.org/project_packages.html">
+https://subversion.tigris.org/project_packages.html</a>, appear to work 
 well. After installation add the svn.exe location to your Windows PATH 
 variable. If you are switching from cygwin svn to Win32 svn </p>
 <ol type="1">

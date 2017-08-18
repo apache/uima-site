@@ -8,7 +8,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -31,8 +31,8 @@ under the License.
 <section name="UIMA Workshop at LREC 2008">
   
 <p>
-  There will be a <a href="http://watchtower.coling.uni-jena.de/~coling/uimaws_lrec2008/">workshop 
-  dedicated to UIMA</a> at <a href="http://www.lrec-conf.org/lrec2008/">LREC 2008</a> 
+  There will be a <a href="https://watchtower.coling.uni-jena.de/~coling/uimaws_lrec2008/">workshop 
+  dedicated to UIMA</a> at <a href="https://www.lrec-conf.org/lrec2008/">LREC 2008</a> 
   (the sixth international conference on Language Resources and Evaluation).  Please find the CFP below.
 </p>
 
@@ -59,7 +59,7 @@ open-platform middleware structure for dealing with unstructured
 information (text, speech, audio, video data), originally launched by 
 IBM. In the meantime, the Apache Software Foundation has established an 
 incubator project for developing UIMA-based software 
-(<a href="http://uima.apache.org/">http://uima.apache.org/</a>).  The Organization for the 
+(<a href="https://uima.apache.org/">https://uima.apache.org/</a>).  The Organization for the 
 Advancement of Structured Information Standards (OASIS) has established 
 a Technical Committee to standardize the UIMA specification. 
 Accordingly, an increasing number of NLP research institutes as well as 
@@ -67,14 +67,14 @@ HLT companies all over the world are basing their system development
 efforts on UIMA specifications to adhere to emerging standards.
 As far as NLP proper is concerned, Carnegie Mellon University's Language
 Technology Institute is hosting an UIMA Component Repository web site
-(<a href="http://uima.lti.cs.cmu.edu">http://uima.lti.cs.cmu.edu</a>), where developers can post information 
+(<a href="https://uima.lti.cs.cmu.edu">https://uima.lti.cs.cmu.edu</a>), where developers can post information 
 about their analytics components and anyone can find out more about free 
 and commercially available UIMA-compliant analytics. Additionally, free 
 analytic tools that can work with UIMA include those from the General 
-Architecture for Text Engineering (GATE - <a href="http://gate.ac.uk/">http://gate.ac.uk/</a>) and 
-OpenNLP (<a href="http://opennlp.sourceforge.net/">http://opennlp.sourceforge.net/</a>) communities, as well as Jena 
+Architecture for Text Engineering (GATE - <a href="https://gate.ac.uk/">https://gate.ac.uk/</a>) and 
+OpenNLP (<a href="https://opennlp.sourceforge.net/">https://opennlp.sourceforge.net/</a>) communities, as well as Jena 
 University&apos;s Language &amp; Information Engineering (JULIE) 
-(<a href="http://www.julielab.de">http://www.julielab.de</a>) Lab. Commercial analytics are available from 
+(<a href="https://www.julielab.de">https://www.julielab.de</a>) Lab. Commercial analytics are available from 
 IBM, as well as from other software vendors such as Attensity, 
 ClearForest, Temis and Nstein.
 In this workshop we want to bring representatives from various NLP 

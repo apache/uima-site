@@ -9,7 +9,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -65,7 +65,7 @@ This is an output directory that doesn't really need to be checked into SVN - it
 only to check ip-clearance documentation before committing it to the incubator web site
 (see the Apache IP clearance process).</li>
 <li>The DOAP file for UIMA.  See <a target="_blank" 
-href="http://projects.apache.org/doap.html">http://projects.apache.org/doap.html</a>.
+href="https://projects.apache.org/doap.html">https://projects.apache.org/doap.html</a>.
 This file at this location is registered with the Apache infrastructure so do not 
 move it without updating that.</li>
 </ul></p>
@@ -83,8 +83,8 @@ This will run for a while, but then the directories mentioned and their contents
 deleted from your working copy; this will speed up various SVN operations that have
 to scan the files for changes, etc. For more details, see
 <a target="_blank"
-href="http://svnbook.red-bean.com/en/1.6/svn.advanced.sparsedirs.html">
-http://svnbook.red-bean.com/en/1.6/svn.advanced.sparsedirs.html</a>.
+href="https://svnbook.red-bean.com/en/1.6/svn.advanced.sparsedirs.html">
+https://svnbook.red-bean.com/en/1.6/svn.advanced.sparsedirs.html</a>.
 If this doesn't work for you, check that your svn version is at least 1.6.
 </p>
 </subsection>
@@ -130,7 +130,7 @@ check that out, overwrite that with changes from the new generation, and check t
 <p>
 There is a webpage which details recommendations for how to do this: 
 <a target="_blank"
-href="http://www.apache.org/dev/project-site.html#generated">http://www.apache.org/dev/project-site.html#generated</a>.
+href="https://www.apache.org/dev/project-site.html#generated">https://www.apache.org/dev/project-site.html#generated</a>.
 </p>
 </subsection>
 <subsection name="Download CGI scripting">

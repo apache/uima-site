@@ -9,7 +9,7 @@
  "License"); you may not use this file except in compliance
  with the License.  You may obtain a copy of the License at
  
- http://www.apache.org/licenses/LICENSE-2.0
+ https://www.apache.org/licenses/LICENSE-2.0
  
  Unless required by applicable law or agreed to in writing,
  software distributed under the License is distributed on an
@@ -37,7 +37,7 @@
   <subsection name="UIMA C++ Overview">
 
    <p>
-    The UIMA C++ framework is designed to facilitate the creation of UIMA compliant Analysis Engines (AE) from analytics written in C++, or written in languages that can utilize C++ libraries. The UIMACPP SDK directly supports C++, and indirectly supports Perl, Python and Tcl languages via SWIG (http://www.swig.org/). Existing analytic programs in any of these languages can be wrapped with a UIMACPP annotator and integrated with other UIMA compliant analytics or UIMA-based applications.
+    The UIMA C++ framework is designed to facilitate the creation of UIMA compliant Analysis Engines (AE) from analytics written in C++, or written in languages that can utilize C++ libraries. The UIMACPP SDK directly supports C++, and indirectly supports Perl, Python and Tcl languages via SWIG (https://www.swig.org/). Existing analytic programs in any of these languages can be wrapped with a UIMACPP annotator and integrated with other UIMA compliant analytics or UIMA-based applications.
    </p>
    <p>
      <table width="100%"><tr><td align="center" valign="middle">
@@ -58,13 +58,13 @@
     UIMA C++ includes APIs to parse component descriptors, instantiate and call analysis engines, so that UIMA C++ compliant AE can be used in native applications. However, UIMA C++ components are primarily intended to be integrated into applications using UIMA's Java-based interfaces.
    </p>
    <p>
-    The <a href="http://uima.apache.org/downloads.cgi">UIMA Download Page</a> contains UIMACPP source and 32-bit binary SDK packages for both Linux and Windows platforms. The Linux source package has been used to build and test successfully on MacOSX and on 64-bit Linux platforms.
+    The <a href="https://uima.apache.org/downloads.cgi">UIMA Download Page</a> contains UIMACPP source and 32-bit binary SDK packages for both Linux and Windows platforms. The Linux source package has been used to build and test successfully on MacOSX and on 64-bit Linux platforms.
    </p>
 	</subsection>
 
    <subsection name="UIMACPP Sample Code">
    <p>
-    The UIMACPP package includes several sample UIMA C++ annotators and a sample C++ application that instantiates and uses a C++ annotator. Please go to the <a href="http://uima.apache.org/downloads.cgi">UIMA Download Page</a> and get the "UIMACPP Framework" package for Linux or Windows as appropriate. For best interaoperability with the Java version of UIMA, unpack into the $UIMA_HOME directory. See the README file in the top level directory for instructions on testing the package, and follow the links there to the sample code in C++, Perl, Python and Tcl.
+    The UIMACPP package includes several sample UIMA C++ annotators and a sample C++ application that instantiates and uses a C++ annotator. Please go to the <a href="https://uima.apache.org/downloads.cgi">UIMA Download Page</a> and get the "UIMACPP Framework" package for Linux or Windows as appropriate. For best interaoperability with the Java version of UIMA, unpack into the $UIMA_HOME directory. See the README file in the top level directory for instructions on testing the package, and follow the links there to the sample code in C++, Perl, Python and Tcl.
    </p>
    <p>
     A UIMA C++ annotator descriptor differs from a Java descriptor in the frameworkImplementation, specifying

@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
 
 <!-- Content Stylesheet for Site -->
 
@@ -78,10 +78,10 @@
 #end
 
 #macro ( projectanchor $name $value )
-#if ($value.startsWith("http://"))
+#if ($value.startsWith("https://"))
     &#149;&nbsp;<a href="$value">$name</a>
 #elseif ($value.startsWith("/site"))
-    &#149;&nbsp;<a href="http://jakarta.apache.org$value">$name</a>
+    &#149;&nbsp;<a href="https://jakarta.apache.org$value">$name</a>
 #else
     &#149;&nbsp;<a href="$relativePath$value">$name</a>
 #end
@@ -171,7 +171,7 @@
 #macro (getProjectImage)
 #if ($project.getChild("logo"))
 <td align="left">
-<a href="http://jakarta.apache.org"><img src="http://jakarta.apache.org/images/jakarta-logo.gif" border="0"/></a>
+<a href="https://jakarta.apache.org"><img src="https://jakarta.apache.org/images/jakarta-logo.gif" border="0"/></a>
 
 #set ( $logoString = $project.getChild("logo").getAttributeValue("href") )
 #if ( $logoString.startsWith("/") )
@@ -182,7 +182,7 @@
 </td>
 #else
 <td>
-<a href="http://jakarta.apache.org"><img src="http://jakarta.apache.org/images/jakarta-logo.gif" align="left" border="0"/></a>
+<a href="https://jakarta.apache.org"><img src="https://jakarta.apache.org/images/jakarta-logo.gif" align="left" border="0"/></a>
 </td>
 #end
 #end

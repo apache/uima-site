@@ -8,7 +8,7 @@ to you under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -214,7 +214,7 @@ under the License.
       <p>Once the Release Manager determines that testing is complete, and all showstoppers
         for the release have been resolved, the Release Manager shall call for a vote on the
         public release. Release voting is governed by the 
-        <a href="http://www.apache.org/dev/release.html#approving-a-release">ASF requirements on release voting.</a>
+        <a href="https://www.apache.org/dev/release.html#approving-a-release">ASF requirements on release voting.</a>
         
         Majority approval is required before the public release can be made.
         Voters who approve a public release (vote +1) are expected to provide ongoing

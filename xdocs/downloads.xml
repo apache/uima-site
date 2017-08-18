@@ -8,7 +8,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -39,7 +39,7 @@ of the distribution files, using the signatures and checksums listed below in sq
 
 <p>Only current recommended releases are available on the main
 distribution site and its mirrors.  Older releases are available from
-the <a href="http://archive.apache.org/dist/uima/">archive download
+the <a href="https://archive.apache.org/dist/uima/">archive download
 site.</a></p>
   
 <p>Apache UIMA is distributed as source and binary (ready-to-use) packages.
@@ -54,7 +54,7 @@ Thus they must be untarred with a GNU compatible version of
 <subsection name="Eclipse Update Site">
 
 <p>You can install the UIMA Eclipse tooling via our Eclipse update site: 
-<a href="http://www.apache.org/dist/uima/eclipse-update-site/">http://www.apache.org/dist/uima/eclipse-update-site/</a>.
+<a href="https://www.apache.org/dist/uima/eclipse-update-site/">https://www.apache.org/dist/uima/eclipse-update-site/</a>.
 If you're doing this for the first time,
 you may wish to consult the much more verbose instructions in the <a href="documentation.html">SDK 
 documentation</a>.
@@ -110,16 +110,16 @@ Other mirrors: <select name="Preferred">
     </p>
     
     <p>There are many new features, described in 
-      <a target="_blank" href="http://uima.apache.org/d/uimaj-3.0.0-alpha02/version_3_users_guide.html#uv3.overview.new">
+      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-alpha02/version_3_users_guide.html#uv3.overview.new">
       this overview</a>.  For more details, please see the documentation for version 3, which can be found 
-      <a target="_blank" href="http://uima.apache.org/d/uimaj-3.0.0-alpha02/version_3_users_guide.html">here.</a>
+      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-alpha02/version_3_users_guide.html">here.</a>
       Changes since the first alpha version are mainly involving an update to the logging framework; see
       the <a target="_blank" href="../d/uimaj-3.0.0-alpha02/RELEASE_NOTES.html">Release Notes</a> for details.
     </p>
     
     <p>A version of the Eclipse plugin tooling is available, at a special eclipse update
-       site, <a target="_blank" href="http://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production">
-       http://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production
+       site, <a target="_blank" href="https://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production">
+       https://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production
        </a>.  It's version of the JCasGen plugin will generate V3 JCas classes.
     </p>
     
@@ -219,15 +219,15 @@ Other mirrors: <select name="Preferred">
 
 
 <!--   <subsection name="Apache UIMA Version 2.3.0-incubating - Release Date: 26-Jan-2010"> -->
-<!--     <p>Note: See <a href="http://archive.apache.org/dist/incubator/uima/" target="_blank">http://archive.apache.org/dist/incubator/uima/</a> -->
+<!--     <p>Note: See <a href="https://archive.apache.org/dist/incubator/uima/" target="_blank">https://archive.apache.org/dist/incubator/uima/</a> -->
 <!--      for previous releases of UIMA SDK and UIMA-AS.</p> -->
      
 <!--     <p>For previous releases of the UIMA C++ Framework found in the incubator archives, -->
 <!--     see <ul><li> -->
-<!--     <a href="http://archive.apache.org/dist/incubator/uima/binaries/uimacpp-2.3.0-incubating/"> -->
-<!--     <code>http://archive.apache.org/dist/incubator/uima/binaries/uimacpp-2.3.0-incubating/</code></a>, and </li> -->
-<!--     <li><a href="http://archive.apache.org/dist/incubator/uima/source/uimacpp-2.3.0-incubating/"></a> -->
-<!--     <code>http://archive.apache.org/dist/incubator/uima/source/uimacpp-2.3.0-incubating/</code></li></ul> -->
+<!--     <a href="https://archive.apache.org/dist/incubator/uima/binaries/uimacpp-2.3.0-incubating/"> -->
+<!--     <code>https://archive.apache.org/dist/incubator/uima/binaries/uimacpp-2.3.0-incubating/</code></a>, and </li> -->
+<!--     <li><a href="https://archive.apache.org/dist/incubator/uima/source/uimacpp-2.3.0-incubating/"></a> -->
+<!--     <code>https://archive.apache.org/dist/incubator/uima/source/uimacpp-2.3.0-incubating/</code></li></ul> -->
 <!--     </p> -->
 <!--     insertDownloads version="2.3.0-incubating"/ -->
 <!--   </subsection> -->
@@ -246,7 +246,7 @@ Other mirrors: <select name="Preferred">
 <section name="Archived Releases">
   
   <p>Older releases of Apache UIMA artifacts can be found 
-    <a href="http://archive.apache.org/dist/uima">here</a>.  We highly
+    <a href="https://archive.apache.org/dist/uima">here</a>.  We highly
     recommend to not use those releases but upgrade to UIMA's <a
     href="[location]#Latest Official Releases">latest</a> release.</p>
 
@@ -291,8 +291,8 @@ Other mirrors: <select name="Preferred">
 <subsection name="Using GnuPG to Verify Release Files">
 
   <p>
-  Start by downloading and installing <a href="http://www.gnupg.org/download/">GnuPG</a>, an 
-  implementation of <a href="http://openpgp.org/">OpenPGP</a>.  There are many tools for verifying
+  Start by downloading and installing <a href="https://www.gnupg.org/download/">GnuPG</a>, an 
+  implementation of <a href="https://openpgp.org/">OpenPGP</a>.  There are many tools for verifying
   MD5 and SHA1 checksums, here's the GnuPG way for MD5:
   </p>
   <blockquote> <code>gpg --print-md MD5 &lt;ReleaseFile></code> </blockquote>
@@ -311,7 +311,7 @@ Other mirrors: <select name="Preferred">
   </p>
     <dl><dt /><dd>(Right click the following links, and select save link/target as ...)</dd></dl>
     <ul>
-      <li><a href="http://www.apache.org/dist/uima/KEYS">KEYS from Apache main distribution site</a></li>
+      <li><a href="https://www.apache.org/dist/uima/KEYS">KEYS from Apache main distribution site</a></li>
       <li><a href="https://svn.apache.org/repos/asf/uima/site/trunk/uima-website/docs/KEYS">
         KEYS from the main UIMA SVN repository using https security</a>
       </li>
@@ -342,15 +342,15 @@ Other mirrors: <select name="Preferred">
       On Linux or using Cygwin on Windows, this can be done using the command "md5sum" followed by the path to the artifact.  There are also 
       programs you can download from the web to do this computation.</p>
       
-      <p>Once you have the sum, go to this page at Apache: <a href="http://people.apache.org/~henkp/cgi-bin/md5.cgi">http://people.apache.org/~henkp/cgi-bin/md5.cgi</a>
+      <p>Once you have the sum, go to this page at Apache: <a href="https://people.apache.org/~henkp/cgi-bin/md5.cgi">https://people.apache.org/~henkp/cgi-bin/md5.cgi</a>
         and copy / paste the generated checksum into the box.  The script on this page will then look up that
         checksum in a table it keeps for all artifacts from Apache distributions, and verify the checksum is valid.</p>
   </subsection>
 
   <subsection name="More details on Release Signing">
   <p>Further information on how all this works can be found at
-  <a href="http://www.apache.org/dev/release-signing.html">
-    http://www.apache.org/dev/release-signing.html</a></p>
+  <a href="https://www.apache.org/dev/release-signing.html">
+    https://www.apache.org/dev/release-signing.html</a></p>
   </subsection>
  </section>
 

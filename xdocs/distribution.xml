@@ -8,7 +8,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -53,7 +53,7 @@ under the License.
   Get the code for the trunk or tag or branch (which ever one you want) from SVN:
   <pre>mkdir /builduima  
 cd /builduima
-svn export http://svn.apache.org/repos/asf/uima/uimaj/trunk uimasdk
+svn export https://svn.apache.org/repos/asf/uima/uimaj/trunk uimasdk
 </pre>
   This checks out the trunk into the directory /builduima/uimasdk.  These 
   directory and folder names are arbitrary, and can be changed. 
@@ -79,7 +79,7 @@ mvn package -Papache-release</pre>
     The build process for UIMA-AS is similar:
     <pre>mkdir /builduima
 cd /builduima
-svn export http://svn.apache.org/repos/asf/uima/uima-as/trunk uima-as
+svn export https://svn.apache.org/repos/asf/uima/uima-as/trunk uima-as
 </pre>
   This checks out the trunk into the directory /builduima/uima-as.  
   </p>
@@ -102,7 +102,7 @@ mvn package -Papache-release</pre>
     The build process for Addons is similar:
     <pre>mkdir /builduima
 cd /builduima
-svn export http://svn.apache.org/repos/asf/uima/addons/trunk addons
+svn export https://svn.apache.org/repos/asf/uima/addons/trunk addons
 </pre>
   This checks out the trunk into the directory /builduima/addons.  
   </p>

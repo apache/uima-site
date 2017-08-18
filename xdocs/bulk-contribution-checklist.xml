@@ -8,7 +8,7 @@ to you under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -162,7 +162,7 @@ scans of it's codebase, including bulk contributions, to help
 confirm code pedigree.  Prior to submitting any contribution,
 we strongly encourage you to verify that the contribution is
 acceptable.  Please see  
-  <a href="code-scan-tools.html">http://uima.apache.org/code-scan-tools.html</a>
+  <a href="code-scan-tools.html">https://uima.apache.org/code-scan-tools.html</a>
 for more information.
 
 

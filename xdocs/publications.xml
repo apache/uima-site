@@ -9,7 +9,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -50,7 +50,7 @@ parts to the Apache UIMA project.
   <li>Ferrucci, D. et al. (2009) <b>Unstructured Information Management Architecture (UIMA) Version
     1.0.</b> OASIS Standard, March 2009. 
     <br/> 
-    (<a href="http://docs.oasis-open.org/uima/v1.0/uima-v1.0.html">link</a>)
+    (<a href="https://docs.oasis-open.org/uima/v1.0/uima-v1.0.html">link</a>)
     (<a href="#UIMA:OASIS:2009">BibTex</a>)</li>
 </ul>
 
@@ -60,26 +60,26 @@ parts to the Apache UIMA project.
     application and deployment of human language technologies.</b> SEALTS '03: Proceedings of the 
     HLT-NAACL 2003 workshop on Software engineering and architecture of language technology systems.
     <br/> 
-    (<a href="http://dx.doi.org/10.3115/1119226.1119236">link</a>)
+    (<a href="https://dx.doi.org/10.3115/1119226.1119236">link</a>)
     (<a href="#UIMA:FERRUCCI:2003">BibTex</a>)</li>
 
   <li>Ferrucci, D. and Lally, A. (2004) <b>UIMA: An Architectural Approach to Unstructured Information
     Processing in the Corporate Research Environment.</b> Natural Language Engineering. Volume 10 (3-4), 
     September 2004. 
     <br/> 
-    (<a href="http://dx.doi.org/10.1017/S1351324904003523">link</a>)
+    (<a href="https://dx.doi.org/10.1017/S1351324904003523">link</a>)
     (<a href="#UIMA:FERRUCCI:2004">BibTex</a>)</li>
 
   <li>Goetz, T. and Suhre, O. (2004) <b>Design and implementation of the UIMA Common Analysis System.
     </b> IBM Systems Journal, Volume 43 (3), 2004. 
     <br/> 
-    (<a href="http://dx.doi.org/10.1147/sj.433.0476">link</a>)
+    (<a href="https://dx.doi.org/10.1147/sj.433.0476">link</a>)
     (<a href="#UIMA:CAS:2004">BibTex</a>)</li>
 
   <li>Schor, M. (2004) <b>An Effective, Java-Friendly Interface for the Unstructured Management 
     Architecture (UIMA) Common Analysis System.</b> Technical Report IBM RC23176. 
     <br/> 
-    (<a href="http://domino.research.ibm.com/library/cyberdig.nsf/1e4115aea78b6e7c85256b360066f0d4/d55875841121943e85256e78004bd826?OpenDocument">link</a>)
+    (<a href="https://domino.research.ibm.com/library/cyberdig.nsf/1e4115aea78b6e7c85256b360066f0d4/d55875841121943e85256e78004bd826?OpenDocument">link</a>)
     (<a href="#UIMA:JCAS:2004">BibTex</a>)</li>
 </ul>
 
@@ -89,7 +89,7 @@ parts to the Apache UIMA project.
     Proceedings of the Workshop on Software Engineering, Testing, and Quality Assurance for Natural
     Language Processing (SETQA-NLP 2009), June 2009.
     <br/> 
-    (<a href="http://www.aclweb.org/anthology/W/W09/W09-1501">link</a>)
+    (<a href="https://www.aclweb.org/anthology/W/W09/W09-1501">link</a>)
     (<a href="#UIMA:UIMAFIT:2009">BibTex</a>)</li>
 
   <li>Roeder, Christophe et al. (2009) <b>Simplifying UIMA Component Development and Testing with
@@ -105,7 +105,7 @@ parts to the Apache UIMA project.
   <li>Kluegl, P. et al. (2016) <b>UIMA Ruta: Rapid development of rule-based information extraction
     applications</b> Natural Language Engineering, Volume 22 (1), January 2016). 
     <br/> 
-    (<a href="http://dx.doi.org/10.1017/S1351324914000114">link</a>)
+    (<a href="https://dx.doi.org/10.1017/S1351324914000114">link</a>)
     (<a href="#UIMA:RUTA:2016">BibTex</a>)</li>
 </ul>
 </subsection>
@@ -125,7 +125,7 @@ parts to the Apache UIMA project.
     Pages = {67--74},
     Publisher = {Association for Computational Linguistics},
     Address = {Morristown, NJ, USA},
-    Doi = {http://dx.doi.org/10.3115/1119226.1119236}}
+    Doi = {https://dx.doi.org/10.3115/1119226.1119236}}
   </pre>
   
   <pre id="UIMA:FERRUCCI:2004" style="max-width:60em; overflow-x: auto;">@article{UIMA:FERRUCCI:2004,
@@ -166,7 +166,7 @@ parts to the Apache UIMA project.
     Howpublished = {OASIS Standard},
     Year = {2009},
     Month = {mar},
-    Url = {http://docs.oasis-open.org/uima/v1.0/uima-v1.0.html}}</pre>
+    Url = {https://docs.oasis-open.org/uima/v1.0/uima-v1.0.html}}</pre>
   
   <pre id="UIMA:UIMAFIT:2009" style="max-width:60em; overflow-x: auto;">@inproceedings{UIMA:UIMAFIT:2009,
     Title = {Building Test Suites for {UIMA} Components},
@@ -177,7 +177,7 @@ parts to the Apache UIMA project.
     Pages = {1--4},
     Publisher = {Association for Computational Linguistics},
     Address = {Boulder, Colorado},
-    Url = {http://www.aclweb.org/anthology/W/W09/W09-1501}}</pre>
+    Url = {https://www.aclweb.org/anthology/W/W09/W09-1501}}</pre>
 
   <pre id="UIMA:UIMAFIT:2009b" style="max-width:60em; overflow-x: auto;">@inproceedings{UIMA:UIMAFIT:2009b,
     Title = {Simplifying {UIMA} Component Development and Testing with {Java} Annotations and Dependency Injection},
@@ -201,7 +201,7 @@ parts to the Apache UIMA project.
     Pages = {1--40},
     Numpages = {40},
     Doi = {10.1017/S1351324914000114},
-    Url = {http://journals.cambridge.org/article_S1351324914000114}}</pre>  
+    Url = {https://journals.cambridge.org/article_S1351324914000114}}</pre>  
 </subsection>
 </section>
 

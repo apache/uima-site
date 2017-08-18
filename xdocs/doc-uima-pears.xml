@@ -9,7 +9,7 @@
 	"License"); you may not use this file except in compliance
 	with the License.  You may obtain a copy of the License at
 	
-	http://www.apache.org/licenses/LICENSE-2.0
+	https://www.apache.org/licenses/LICENSE-2.0
 	
 	Unless required by applicable law or agreed to in writing,
 	software distributed under the License is distributed on an
@@ -115,7 +115,7 @@
 				  Java classpath settings, UIMA datapath settings or the descriptor file that should be used to 
 				  run the PEAR package component. For more details about the installation descriptor,
 				  please refer to the UIMA documentation at 
-				  <a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear.installation_descriptor">
+				  <a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear.installation_descriptor">
 				  Documented template for the installation descriptor</a>.
 				</p>					  
 			</subsection>
@@ -134,7 +134,7 @@
 				  as shown in some of the examples below. This guarantees that in each scenario the classpath settings 
 				  are interpreted correctly since an absolute path to the jar file is used. For more details about PEAR macros, 
 				  please refer to the UIMA documentation at  
-				  <a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear.installation_descriptor">
+				  <a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/references/references.html#ugr.ref.pear.installation_descriptor">
 				  Documented template for the installation descriptor</a>.  
  				</p>
 				
@@ -144,11 +144,11 @@
 				        <h4>PearPackaging Eclipse plugin</h4>
 				        <p>
 						  The PearPackaging Eclipse plugin is automatically installed in your Eclipse environment if you have
-						  installed the <a href="http://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/overview_and_setup/overview_and_setup.html#ugr.ovv.eclipse_setup.install_uima_eclipse_plugins">
+						  installed the <a href="https://uima.apache.org/downloads/releaseDocs/2.2.2-incubating/docs/html/overview_and_setup/overview_and_setup.html#ugr.ovv.eclipse_setup.install_uima_eclipse_plugins">
 						  UIMA Eclipse plugins</a>. The PearPackaging plugin allows you to package a PEAR based on the content of 
 						  an eclipse project that has the UIMA nature. This plugin can for example be used in an analysis engine 
 						  development environment. I will not give more details here since this 
-						  is already explained in the <a href="http://uima.apache.org/doc-uima-annotator.html#Packaging the annotator">
+						  is already explained in the <a href="https://uima.apache.org/doc-uima-annotator.html#Packaging the annotator">
 						  Getting Started: Writing My First UIMA Annotator</a> guide.
 						</p>		        
 				    </li>
@@ -346,7 +346,7 @@
 			  </p>
 			  <p>	  
 			  	<table cellpadding="10" align="center"><tr><td bgcolor="lightgrey">
-					<pre>&lt;analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier"&gt;
+					<pre>&lt;analysisEngineDescription xmlns="https://uima.apache.org/resourceSpecifier"&gt;
     &lt;frameworkImplementation&gt;org.apache.uima.java&lt;/frameworkImplementation&gt;
     &lt;primitive&gt;false&lt;/primitive&gt;
     &lt;delegateAnalysisEngineSpecifiers&gt;

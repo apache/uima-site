@@ -8,7 +8,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -39,16 +39,16 @@ including documentation help, source code development and feedback.
     <a href="mail-lists.html">UIMA mailing lists</a>
     where discussions are occuring among the users and developers, and getting a 
     <a href="
-http://issues.apache.org/jira/secure/BrowseProject.jspa?id=0 ">JIRA</a>
+https://issues.apache.org/jira/secure/BrowseProject.jspa?id=0 ">JIRA</a>
     id and posting feature improvements, bug reports, etc. to the change tracking 
     system we're using.
     </p>
     <p>Anyone is invited to contribute to the project; for contributions
     beyond simple typo fixes or short patches, we request you fill out, sign, and send in
     Apache's Individual Contributer License Agreement
-    <a href="http://www.apache.org/licenses/#clas">(ICLA)</a> - and if appropriate, the 
+    <a href="https://www.apache.org/licenses/#clas">(ICLA)</a> - and if appropriate, the 
     matching Corporate Contributor License Agreement 
-    <a href="http://www.apache.org/licenses/#clas">(CCLA)</a>.  Then you can post larger
+    <a href="https://www.apache.org/licenses/#clas">(CCLA)</a>.  Then you can post larger
     patches to Jira issues you raise.
 
     </p>
@@ -70,11 +70,11 @@ available <a href="svn.html">here</a>.
 <li>
 Bugs and other issues can be posted on the project 
 <a href="
-http://issues.apache.org/jira/secure/BrowseProject.jspa?id=0 ">JIRA</a>
+https://issues.apache.org/jira/secure/BrowseProject.jspa?id=0 ">JIRA</a>
 </li>
 <li>
 Additional documentation and discussion can be found on the project
-<a href="http://cwiki.apache.org/confluence/display/UIMA/">wiki</a>
+<a href="https://cwiki.apache.org/confluence/display/UIMA/">wiki</a>
 </li>
 </ul>
 
@@ -87,16 +87,16 @@ Additional documentation and discussion can be found on the project
   access to the project SVN repositories, while contributors post their 
   contributions to Jira issues where they're first reviewed, and then committed
   by a committer to the project's SVN repository.
-  See <a href="http://www.apache.org/dev/contributors.html">http://www.apache.org/dev/contributors.html</a>
+  See <a href="https://www.apache.org/dev/contributors.html">https://www.apache.org/dev/contributors.html</a>
   for a good overview of working as a contributor.
   </p>
   
   <p>We ask contributors of significant amounts of code to fill out and
     send into Apache, an 
-    <a href="http://www.apache.org/licenses/#clas">Individual 
+    <a href="https://www.apache.org/licenses/#clas">Individual 
     Contributors License Agreement (ICLA)</a>
     (and perhaps also a 
-    <a href="http://www.apache.org/licenses/#clas">Corporate 
+    <a href="https://www.apache.org/licenses/#clas">Corporate 
     Contributors License Agreement (CCLA)</a>). 
     </p>
   
@@ -110,12 +110,12 @@ Additional documentation and discussion can be found on the project
 <li><p> You'll need to fill out some legal paperwork and go through 
 a process to get an apache committer account: See 
 <a  class="external" rel="nofollow" 
-href="http://apache.org/dev/new-committers-guide.html">
+href="https://apache.org/dev/new-committers-guide.html">
 New Committers Guide</a>, 
 <a  class="external" rel="nofollow" 
-href="http://apache.org/dev/contributors.html"> Contributors</a>, and 
+href="https://apache.org/dev/contributors.html"> Contributors</a>, and 
 <a  class="external" rel="nofollow" 
-href="http://apache.org/dev/committers.html"> Committers</a> 
+href="https://apache.org/dev/committers.html"> Committers</a> 
 for more details. </p>
 
 </li>
@@ -126,12 +126,12 @@ Login by 'ssh -l &lt;username&gt; people.apache.org';
 run 'passwd'; 
 run 'svnpasswd'.  See 
 <a  class="external" rel="nofollow" 
-href="http://apache.org/dev/version-control.html">Committer Subversion Access
+href="https://apache.org/dev/version-control.html">Committer Subversion Access
 </a>. 
 </p>
 </li>
 <li><p> Check out the UIMA sources and test your svn account: 
-<a  href="http://svn.apache.org/viewcvs.cgi/uima">
+<a  href="https://svn.apache.org/viewcvs.cgi/uima">
 SubversionRepository</a>. 
 </p>
 
@@ -143,12 +143,12 @@ SubversionRepository</a>.
     
 <li><p>Sign up for a 
 <a  class="external" rel="nofollow" 
-href="http://cwiki.apache.org/confluence/signup.action">WiKi</a> account.
+href="https://cwiki.apache.org/confluence/signup.action">WiKi</a> account.
 </p>
 </li>
 <li><p> Sign up for an 
 <a  class="external" rel="nofollow" 
-href="http://issues.apache.org/jira/">
+href="https://issues.apache.org/jira/">
 ASF JIRA</a> account. 
 </p>
 </li>

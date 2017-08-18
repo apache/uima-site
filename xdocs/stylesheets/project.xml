@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="Apache UIMA Project" 
-         href="http://uima.apache.org/">
+         href="https://uima.apache.org/">
         
   <title>Apache UIMA</title>    
   <logo href="/images/asf-logo-on-white-smallTm.png">Apache UIMA</logo>
@@ -15,11 +15,11 @@
         <item name="Publications"           href="/publications.html"/>
         
         <item spacer="true"/>
-        <item name="Issue tracker"          href="http://issues.apache.org/jira/browse/uima" />
-        <item name="Wiki"                   href="http://cwiki.apache.org/confluence/display/UIMA/" />
+        <item name="Issue tracker"          href="https://issues.apache.org/jira/browse/uima" />
+        <item name="Wiki"                   href="https://cwiki.apache.org/confluence/display/UIMA/" />
         
         <item spacer="true"/>
-        <item name="Powered By UIMA" href="http://cwiki.apache.org/confluence/display/UIMA/Powered+by+Apache+UIMA" target="_blank" />
+        <item name="Powered By UIMA" href="https://cwiki.apache.org/confluence/display/UIMA/Powered+by+Apache+UIMA" target="_blank" />
       </item>
 
       <item name="Community">
@@ -35,7 +35,7 @@
         <item name="UIMA-AS"        href="/doc-uimaas-what.html"/>
         <item name="UIMA-DUCC"      href="/doc-uimaducc-whatitam.html"/>
         <item name="..Demo Page"   href="/doc-uimaducc-demo.html"/>
-        <item name="..Demo Live"   href="http://uima-ducc-demo.apache.org:42133" target="_blank"/>
+        <item name="..Demo Live"   href="https://uima-ducc-demo.apache.org:42133" target="_blank"/>
       </item>
 
   
@@ -74,13 +74,13 @@
       </item>
       
       <item name="ASF" >
-        <item name="License"                href="http://www.apache.org/licenses/"/>
-        <item name="ASF Sponsors"           href="http://www.apache.org/foundation/thanks.html"/>
-        <item name="ASF Sponsorship"        href="http://www.apache.org/foundation/sponsorship.html"/>
+        <item name="License"                href="https://www.apache.org/licenses/"/>
+        <item name="ASF Sponsors"           href="https://www.apache.org/foundation/thanks.html"/>
+        <item name="ASF Sponsorship"        href="https://www.apache.org/foundation/sponsorship.html"/>
         <!--  next line duplicates ASF Sponsors 
-        <item name="Thanks"                 href="http://www.apache.org/foundation/thanks.html"/>
+        <item name="Thanks"                 href="https://www.apache.org/foundation/thanks.html"/>
         -->
-        <item name="Security"               href="http://www.apache.org/security"/>                             
+        <item name="Security"               href="https://www.apache.org/security"/>                             
       </item>      
         
          <!--

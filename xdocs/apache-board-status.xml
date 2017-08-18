@@ -9,7 +9,7 @@ to you under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -29,12 +29,12 @@ under the License.
     <section name="Apache UIMA Status Reports">
       <br />
             <subsection name="January, 2007">
-        <!-- required: one-line summary (see http://incubator.apache.org/guides/ppmc.html)-->
+        <!-- required: one-line summary (see https://incubator.apache.org/guides/ppmc.html)-->
         <p>UIMA is a component framework for the analysis of unstructured content such as
           text, audio and video.</p>
-        <!-- required: date of entry into the incubator (see http://incubator.apache.org/guides/ppmc.html)-->
+        <!-- required: date of entry into the incubator (see https://incubator.apache.org/guides/ppmc.html)-->
         <p>UIMA was accepted for incubation on October 10, 2006</p>
-        <!-- required: top 3 items to resolve before graduation (see http://incubator.apache.org/guides/ppmc.html)-->
+        <!-- required: top 3 items to resolve before graduation (see https://incubator.apache.org/guides/ppmc.html)-->
         <p>Top 3 things to resolve before graduation</p>
         <ol>
           <li>Complete code transition to Apache, do a release with all IP issues cleared</li>
@@ -55,8 +55,8 @@ under the License.
 
           -->
         
-        <p>UIMA's incubation status file is here: <a href="http://incubator.apache.org/projects/uima.html">
-        http://incubator.apache.org/projects/uima.html</a></p>
+        <p>UIMA's incubation status file is here: <a href="https://incubator.apache.org/projects/uima.html">
+        https://incubator.apache.org/projects/uima.html</a></p>
 
         <p>Some recent activity:</p>
         

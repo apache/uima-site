@@ -8,7 +8,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -30,7 +30,7 @@ under the License.
 
 <section name="GSCL 2013 in Darmstadt, Germany">
 <p>
-The <a href="http://gscl2013.ukp.informatik.tu-darmstadt.de/de/gscl-2013/">GSCL 2013</a>,
+The <a href="https://gscl2013.ukp.informatik.tu-darmstadt.de/de/gscl-2013/">GSCL 2013</a>,
 the bi-annual conference of the German Society for Computational Linguistics and Language Technology,
 hosts two UIMA-related events:
 </p>
@@ -53,7 +53,7 @@ hosts two UIMA-related events:
   
 <p>
   There was a <a href="https://docs.google.com/document/d/18BfopkrOuGlhqybPf4z25_FYbA5hal7YvS7hSod4_-U/pub">workshop 
-  dedicated to UIMA</a> at <a href="http://gscl2013.ukp.informatik.tu-darmstadt.de/de/gscl-2013/">GSCL 2013</a>,
+  dedicated to UIMA</a> at <a href="https://gscl2013.ukp.informatik.tu-darmstadt.de/de/gscl-2013/">GSCL 2013</a>,
   the bi-annual conference of the German Society for Computational Linguistics and Language Technology.  
   The accepted papers and slides can be found below. For further information, please visit the 
   <a href="https://docs.google.com/document/d/18BfopkrOuGlhqybPf4z25_FYbA5hal7YvS7hSod4_-U/pub">homepage of the workshop</a>.
@@ -70,55 +70,55 @@ hosts two UIMA-related events:
     <li>
       <p>
         <b>Storing UIMA CASes in a relational database</b><br/>
-        <i>Georg Fette, Martin Toepfer, Frank Puppe</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_1.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_1.pdf">pdf</a>, <a href="downloads/gscl2013/slides_1.pptx">pptx</a>)       
+        <i>Georg Fette, Martin Toepfer, Frank Puppe</i> - (<a href="https://ceur-ws.org/Vol-1038/paper_1.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_1.pdf">pdf</a>, <a href="downloads/gscl2013/slides_1.pptx">pptx</a>)       
       </p>
     </li>
     <li>
       <p>
         <b>Constraint-driven Evaluation in UIMA Ruta</b><br/>
-        <i>Andreas Wittek, Martin Toepfer, Georg Fette, Peter Kluegl, Frank Puppe</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_2.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_2.pdf">pdf</a>)       
+        <i>Andreas Wittek, Martin Toepfer, Georg Fette, Peter Kluegl, Frank Puppe</i> - (<a href="https://ceur-ws.org/Vol-1038/paper_2.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_2.pdf">pdf</a>)       
       </p>
     </li>
     <li>
       <p>
         <b>Using UIMA to Structure An Open Platform for Textual Entailment</b><br/>
-        <i>Tae-Gil Noh, Sebastian Pado</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_3.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_3.pdf">pdf</a>)       
+        <i>Tae-Gil Noh, Sebastian Pado</i> - (<a href="https://ceur-ws.org/Vol-1038/paper_3.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_3.pdf">pdf</a>)       
       </p>
     </li>
     <li>
       <p>
         <b>Sentiment Analysis and Visualization using UIMA and Solr</b><br/>
-        <i>Carlos Rodriguez-Penagos, David Garcia Narbona, Guillem Masso Sanabre, Jens Grivolla, Joan Codina</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_5.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_5.pdf">pdf</a>)       
+        <i>Carlos Rodriguez-Penagos, David Garcia Narbona, Guillem Masso Sanabre, Jens Grivolla, Joan Codina</i> - (<a href="https://ceur-ws.org/Vol-1038/paper_5.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_5.pdf">pdf</a>)       
       </p>
     </li>
     <li>
       <p>
         <b>Bluima: a UIMA-based NLP Toolkit for Neuroscience</b><br/>
-        <i>Renaud Richardet, Jean-Cedric Chappelier, Martin Telefont</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_7.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_7.pdf">pdf</a>)       
+        <i>Renaud Richardet, Jean-Cedric Chappelier, Martin Telefont</i> - (<a href="https://ceur-ws.org/Vol-1038/paper_7.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_7.pdf">pdf</a>)       
       </p>
     </li>
     <li>
       <p>
         <b>Extracting hierarchical data points and tables from scanned contracts</b><br/>
-        <i>Jan Stadermann, Stephan Symons, Ingo Thon</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_8.pdf">paper</a>)       
+        <i>Jan Stadermann, Stephan Symons, Ingo Thon</i> - (<a href="https://ceur-ws.org/Vol-1038/paper_8.pdf">paper</a>)       
       </p>
     </li>
     <li>
       <p>
         <b>A Model-driven approach to NLP programming with UIMA</b><br/>
-        <i>Alessandro Di Bari, Alessandro Faraotti, Carmela Gambardella, Guido Vetere</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_9.pdf">paper</a>)       
+        <i>Alessandro Di Bari, Alessandro Faraotti, Carmela Gambardella, Guido Vetere</i> - (<a href="https://ceur-ws.org/Vol-1038/paper_9.pdf">paper</a>)       
       </p>
     </li>
     <li>
       <p>
         <b>CSE Framework: A UIMA-based Distributed System for Configuration Space Exploration</b><br/>
-        <i>Elmer Garduno, Zi Yang, Avner Maiberg, Collin McCormack, Yan Fang, Eric Nyberg</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_10.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_10.pdf">pdf</a>, <a href="downloads/gscl2013/slides_10.pptx">pptx</a>)       
+        <i>Elmer Garduno, Zi Yang, Avner Maiberg, Collin McCormack, Yan Fang, Eric Nyberg</i> - (<a href="https://ceur-ws.org/Vol-1038/paper_10.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_10.pdf">pdf</a>, <a href="downloads/gscl2013/slides_10.pptx">pptx</a>)       
       </p>
     </li>
     <li>
       <p>
         <b>Aid to spatial navigation within a UIMA annotation index</b><br/>
-        <i>Nicolas Hernandez</i> - (<a href="http://ceur-ws.org/Vol-1038/paper_11.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_11.pdf">pdf</a>)       
+        <i>Nicolas Hernandez</i> - (<a href="https://ceur-ws.org/Vol-1038/paper_11.pdf">paper</a>, slides: <a href="downloads/gscl2013/slides_11.pdf">pdf</a>)       
       </p>
     </li>
   </ul>
@@ -133,13 +133,13 @@ The tutorial is split into two theoretic parts, followed by a hands-on session.
 </p>
 <p>
 The first part gives an introduction to doing UIMA-based natural language processing 
-using the <a href="http://www.ukp.tu-darmstadt.de/software/dkpro-core/">DKPro Core</a> 
+using the <a href="https://www.ukp.tu-darmstadt.de/software/dkpro-core/">DKPro Core</a> 
 component collection.  It will be shown how a processing pipeline 
 can be composed from existing components, such as a tokenizer, part-of-speech tagger, and parser. 
 To illustrate how such a pipeline can be used on own data and how analysis results can 
 be exported to other tools, we also show how to implement simple reader and writer components. 
 This includes a basic introduction to the underlying concepts, such as 
-<a href="http://maven.apache.org/">Maven</a> and <a href="https://code.google.com/p/uimafit/">uimaFIT</a>.
+<a href="https://maven.apache.org/">Maven</a> and <a href="https://code.google.com/p/uimafit/">uimaFIT</a>.
 </p>
 <p>
 The second part gives an introduction to <a href="https://uima.apache.org/ruta.html">Apache UIMA Ruta</a>. We will cover the syntax 

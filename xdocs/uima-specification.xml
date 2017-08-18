@@ -9,7 +9,7 @@ to you under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-http://www.apache.org/licenses/LICENSE-2.0
+https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -31,23 +31,23 @@ under the License.
       
       <p>Apache UIMA&#0153; is an Apache-licensed open source implementation of the
         <i>UIMA specification</i> being developed concurrently by a technical committee (TC) within
-        <a href="http://www.oasis-open.org" target="_blank">OASIS</a>, a standards organization. We encourage UIMA
+        <a href="https://www.oasis-open.org" target="_blank">OASIS</a>, a standards organization. We encourage UIMA
         developers to become familiar with the UIMA specification by visiting the following links.</p>
         
       <p> In March, 2009, OASIS 
           members approved the 
           Unstructured Information Management Architecture (UIMA) version 1.0 specification
           as an OASIS Standard, a status that signifies the highest level of ratification. 
-       See <a href="http://www.oasis-open.org/news/oasis-news-2009-03-19.php" target="_blank">
-        http://www.oasis-open.org/news/oasis-news-2009-03-19.php</a> for details.
+       See <a href="https://www.oasis-open.org/news/oasis-news-2009-03-19.php" target="_blank">
+        https://www.oasis-open.org/news/oasis-news-2009-03-19.php</a> for details.
       </p>
       
       <p>
         <ul>
-          <li><a href="http://www.oasis-open.org/committees/uima">
+          <li><a href="https://www.oasis-open.org/committees/uima">
             OASIS UIMA TC Homepage</a></li>
           
-          <li><a href="http://domino.research.ibm.com/library/cyberdig.nsf/papers/1898F3F640FEF47E8525723C00551250/$File/rc24122.pdf">
+          <li><a href="https://domino.research.ibm.com/library/cyberdig.nsf/papers/1898F3F640FEF47E8525723C00551250/$File/rc24122.pdf">
           White Paper describing the proposed UIMA Specification</a></li>          
         </ul>
       </p>     

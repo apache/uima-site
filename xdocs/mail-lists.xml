@@ -12,7 +12,7 @@
  "License"); you may not use this file except in compliance
  with the License.  You may obtain a copy of the License at
  
- http://www.apache.org/licenses/LICENSE-2.0
+ https://www.apache.org/licenses/LICENSE-2.0
  
  Unless required by applicable law or agreed to in writing,
  software distributed under the License is distributed on an
@@ -87,7 +87,7 @@
      <td><p><a class="external" rel="nofollow" href="mailto:user-unsubscribe@uima.apache.org">user-unsubscribe@uima.apache.org</a></p></td>
      <td>
          <p><a target="_blank" class="external" rel="nofollow" href="https://lists.apache.org/list.html?user@uima.apache.org">Forum view</a></p>
-         <p><a target="_blank" class="external" rel="nofollow" href="http://mail-archives.apache.org/mod_mbox/uima-user/">Archive at Apache</a></p>
+         <p><a target="_blank" class="external" rel="nofollow" href="https://mail-archives.apache.org/mod_mbox/uima-user/">Archive at Apache</a></p>
      </td>
     </tr>
 
@@ -98,7 +98,7 @@
      <td><p><a class="external" rel="nofollow" href="mailto:dev-unsubscribe@uima.apache.org">dev-unsubscribe@uima.apache.org</a></p></td>
      <td>
          <p><a target="_blank" class="external" rel="nofollow" href="https://lists.apache.org/list.html?dev@uima.apache.org">Forum view</a></p>
-         <p><a target="_blank" class="external" rel="nofollow" href="http://mail-archives.apache.org/mod_mbox/uima-dev">Archive at Apache</a></p>
+         <p><a target="_blank" class="external" rel="nofollow" href="https://mail-archives.apache.org/mod_mbox/uima-dev">Archive at Apache</a></p>
      </td>
     </tr>
     
@@ -108,18 +108,18 @@
      <td><p><a class="external" rel="nofollow" href="mailto:commits-unsubscribe@uima.apache.org">commits-unsubscribe@uima.apache.org</a></p></td>
      <td>
          <p><a target="_blank" class="external" rel="nofollow" href="https://lists.apache.org/list.html?commits@uima.apache.org">Forum view</a></p>
-         <p><a target="_blank" class="external" rel="nofollow" href="http://mail-archives.apache.org/mod_mbox/uima-commits/">Archive at Apache</a></p>
+         <p><a target="_blank" class="external" rel="nofollow" href="https://mail-archives.apache.org/mod_mbox/uima-commits/">Archive at Apache</a></p>
      </td>
     </tr>
    </table>
    
-   <p>The archive at <a class="external" rel="nofollow" href="http://uima.markmail.org">uima.markmail.org</a> has good faclities for
+   <p>The archive at <a class="external" rel="nofollow" href="https://uima.markmail.org">uima.markmail.org</a> has good faclities for
     searching the messages on the list, and can display the hits in a threaded view.</p>
     
    <p>You may want to review some general information about 
-   <a href="http://www.apache.org/foundation/mailinglists.html">Apache mailing lists</a>.  In
+   <a href="https://www.apache.org/foundation/mailinglists.html">Apache mailing lists</a>.  In
    particular, please note that all UIMA mailing lists are public and that 
-   <a href="http://www.apache.org/foundation/public-archives.html">public archives</a> contain
+   <a href="https://www.apache.org/foundation/public-archives.html">public archives</a> contain
    all posts to those mailing lists.  Please do not send confidential information to those lists.
    </p>
 

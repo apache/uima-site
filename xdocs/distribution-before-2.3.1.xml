@@ -8,7 +8,7 @@ regarding copyright ownership.  The ASF licenses this file
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
 
-  http://www.apache.org/licenses/LICENSE-2.0
+  https://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
@@ -172,11 +172,11 @@ under the License.
     you need to specify the Eclipse location looks like this:
 </p>
 <pre>
-&lt;settings xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+&lt;settings xmlns="https://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation=
-     "http://maven.apache.org/POM/4.0.0
-      http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
+     "https://maven.apache.org/POM/4.0.0
+      https://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
   &lt;profiles&gt;
     &lt;profile&gt;
       &lt;id&gt;local-build-configuration&lt;/id&gt;
@@ -219,20 +219,20 @@ under the License.
 
     <p>
     Although you can follow the steps described here mechanically, it is preferable to have at least
-    a basic understanding of what it actually is you are doing.  Here is a <a href="http://www.pgpi.org/doc/pgpintro/">
+    a basic understanding of what it actually is you are doing.  Here is a <a href="https://www.pgpi.org/doc/pgpintro/">
     good introduction to PGP</a> and digital certificates.  We recommend reading this document front-to-back.
-    There is also more general information on <a href="http://www.apache.org/dev/release-signing.html">
-    signing Apache releases</a>.  More information is also available <a href="http://wiki.apache.org/incubator/SigningReleases">
+    There is also more general information on <a href="https://www.apache.org/dev/release-signing.html">
+    signing Apache releases</a>.  More information is also available <a href="https://wiki.apache.org/incubator/SigningReleases">
     on the wiki</a>.  Some of that information is outdated, though, so take with a grain of salt.
     The UIMA release signing script is based on the code from the wiki page.
     </p>
 
     <p>
-    Start by <a href="http://www.gnupg.org/download/">downloading GnuPG</a>.  For the purposes of
+    Start by <a href="https://www.gnupg.org/download/">downloading GnuPG</a>.  For the purposes of
     release signing, it is sufficient to install the command line tools.  After installing GnuPG,
     create a public/private key pair with <blockquote><code>gpg --gen-key</code></blockquote>  
     This is pretty self-explanatory,
-    some more information is <a href="http://www.apache.org/dev/release-signing.html#generate">in the
+    some more information is <a href="https://www.apache.org/dev/release-signing.html#generate">in the
     release signing FAQ</a>.  It is vital that you remember the passphrase you choose when creating the key;
     you will need it later for using your private key to sign the release.  
     </p>
@@ -259,7 +259,7 @@ mQGiBEWszKIRBACRscWnk1F408lWIZEgqx6OffiMtgApEVdl9UXXF2+DeS5WrHj0<br/>
       Don't forget to commit the KEYS file to SVN.
       </li>
       <li>
-      Upload your public key to <a href="http://pgp.mit.edu/">the MIT public key server</a> and any 
+      Upload your public key to <a href="https://pgp.mit.edu/">the MIT public key server</a> and any 
       other key server you think is appropriate (follow instructions on website).
       </li>
     </ol>

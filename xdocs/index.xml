@@ -8,7 +8,7 @@
 	"License"); you may not use this file except in compliance
 	with the License.  You may obtain a copy of the License at
 	
-	http://www.apache.org/licenses/LICENSE-2.0
+	https://www.apache.org/licenses/LICENSE-2.0
 	
 	Unless required by applicable law or agreed to in writing,
 	software distributed under the License is distributed on an
@@ -330,7 +330,7 @@
 
       <!--        
       <p>The status reports as reported to the Apache board are found on
-         the Apache <a href="http://wiki.apache.org/incubator">Incubator Wiki</a>, in section
+         the Apache <a href="https://wiki.apache.org/incubator">Incubator Wiki</a>, in section
          4 - Board Reports, for the months January, April, July, and October.  
       </p>
 		 -->
@@ -364,7 +364,7 @@
 			<p>
 			<strong>Users!</strong>
 			<blockquote>
-			We'd love to have you involved. Check out the <a href="http://cwiki.apache.org/confluence/display/UIMA/">Wiki</a>.
+			We'd love to have you involved. Check out the <a href="https://cwiki.apache.org/confluence/display/UIMA/">Wiki</a>.
 			</blockquote>
 			</p>
 			
