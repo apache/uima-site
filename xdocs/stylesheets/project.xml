@@ -35,7 +35,7 @@
         <item name="UIMA-AS"        href="/doc-uimaas-what.html"/>
         <item name="UIMA-DUCC"      href="/doc-uimaducc-whatitam.html"/>
         <item name="..Demo Page"   href="/doc-uimaducc-demo.html"/>
-        <item name="..Demo Live"   href="https://uima-ducc-demo.apache.org:42133" target="_blank"/>
+        <item name="..Demo Live"   href="http://uima-ducc-demo.apache.org:42133" target="_blank"/>
       </item>
 
   

@@ -126,14 +126,14 @@
    <subsection name="What is the DUCC demo?">
    <p>
    The 
-    <a href='https://uima-ducc-demo.apache.org:42133' title='https://uima-ducc-demo.apache.org:42133'>demo</a>
+    <a href='http://uima-ducc-demo.apache.org:42133' title='http://uima-ducc-demo.apache.org:42133'>demo</a>
 	comprises a DUCC installation within the apache.org domain. 
 	A computing cluster has been configured and started, and a continually 
 	running driver simulates user work submissions.
    </p>
    <p>
    Use your browser to visit the live demo
-	<a href='https://uima-ducc-demo.apache.org:42133'>https://uima-ducc-demo.apache.org:42133</a>
+	<a href='http://uima-ducc-demo.apache.org:42133'>http://uima-ducc-demo.apache.org:42133</a>
 	which yields
 	the associated web server home page. The visitor is free to navigate and 
 	explore an actual DUCC working system as a view-only user.

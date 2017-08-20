@@ -164,7 +164,7 @@ under the License.
 #macro ( projectanchor $name $href)
   #if (!$href)
     <div class="navPartHeading">$name</div>
-  #elseif ($href.startsWith("https://") || $href.startsWith("https://"))
+  #elseif ($href.startsWith("http://") || $href.startsWith("https://"))
     <a href="$href" target="_blank">$name <img src="images/offsitelink.png"/></a>
   #else
     <a href="$relativePath$href">$name</a>
