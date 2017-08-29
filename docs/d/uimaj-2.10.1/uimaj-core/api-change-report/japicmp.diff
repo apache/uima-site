@@ -1,0 +1,3 @@
+Comparing source compatibility of C:\au\builds\uimaj-2.10.1\target\checkout\uimaj-core\target\uima-core.jar against C:\Users\IBM_ADMIN\.m2\repository\org\apache\uima\uimaj-core\2.10.0\uimaj-core-2.10.0.jar
+***  MODIFIED CLASS: PUBLIC org.apache.uima.internal.util.UIMAClassLoader  (not serializable)
+	+++  NEW METHOD: PUBLIC(+) java.net.URL getResource(java.lang.String)
