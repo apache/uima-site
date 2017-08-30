@@ -226,6 +226,13 @@
         <blockquote class="sectionBody">
                                           <table class="subsectionToc">
             <tr >
+      <td>30 Aug 2017</td>
+      <td><a href='#30 Aug 2017'>
+                  Apache UIMA DUCC 2.2.1 released
+                </a>
+      </td>
+      </tr>  
+          <tr >
       <td>29 August 2017</td>
       <td><a href='#29 Aug 2017'>
                   Apache UIMA Java SDK 2.10.1 released
@@ -654,6 +661,53 @@
       </tr>  
         </table>
                                                         <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="30 Aug 2017">
+            <h2>30 Aug 2017
+                        &ndash; Apache UIMA DUCC 2.2.1 released
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>DUCC stands for Distributed UIMA Cluster Computing. DUCC is a cluster management system providing tooling,
+management, and scheduling facilities to automate the scale-out of applications written to the UIMA framework.
+Core UIMA provides a generalized framework for applications that process unstructured information such as human
+language, but does not provide a scale-out mechanism. UIMA-AS provides a scale-out mechanism to distribute UIMA
+pipelines over a cluster of computing resources, but does not provide job or cluster management of the resources.
+DUCC defines a formal job model that closely maps to a standard UIMA pipeline. Around this job model DUCC
+provides cluster management services to automate the scale-out of UIMA pipelines over computing clusters.
+
+        </p>
+                                                <p>
+      The complete list of fixes is <a href="d/uima-ducc-2.2.1/issuesFixed/jira-report.html">here</a>.
+      </p>
+                                                <p>The major changes in this release are:</p>
+                                                <ul>
+          <li>The userid of a privileged DUCC installation does not have to be "ducc"</li>
+          <li>ducc-mon login can be used on systems where users do not have password login</li>
+	  <li>The DUCC head-node daemons may be moved to another host without breaking working applications</li>
+	  <li>The deployment descriptor for a UIMA-AS service can be loaded from the classpath</li>
+	  <li>Interactive applications run correctly with viaducc (fixed lost inputs)</li>
+	  <li>Files created by DUCC jobs inherit the permissions of the launching shell's umask.</li>
+	  <li>DUCC performance breakdown for scaled synchronous pipelines is now correct</li>
+	  <li> Fixed javadoc method headers to enable ducc build with java 8</li>
+	  <li>Fixed JP communication threads wait logic when JD returns no work</li>
+          <li>GC stats not available sometimes from remote JP</li>
+	  <li>Other bug fixes</li>
+          <li>Many DUCC webpage improvements </li>
+
+         </ul>
+                                                <p>
+      This version of UIMA-DUCC requires Java version 7 or version 8.      
+      </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
         <tr><td>
        
        
