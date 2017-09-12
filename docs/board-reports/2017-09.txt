@@ -1,0 +1,33 @@
+Board report for Apache UIMA, for September 2017.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates: 
+30 Aug 2017  (new)        last release - Apache UIMA DUCC 2.2.1
+03 May 2016  (no change)  last PMC addition 
+18 Apr 2017  (no change)  last Committer addition
+          
+Releases:
+  30 Aug 2017 Apache UIMA DUCC 2.2.1
+  29 Aug 2017 Apache Java SDK 2.10.1
+  24 Jul 2017 Apache UIMA Ruta 2.6.1
+              
+Activity:
+  Most major projects (Java SDK, DUCC, uimaFIT, RUTA) are
+  actively being worked on.  The Java SDK version 3 had another
+  release candidate for a beta version.  Testing of version 3
+  with other parts of UIMA is being done, as part of the 
+  beta version release candidate.
+  
+  Mailing list activity remains moderate, with 
+  people from the extended community helping out by answering
+  questions.         
+              
+Community:
+
+  The community continues to be moderately active.
+ 
+Issues:
+No Board level issues at this time.
