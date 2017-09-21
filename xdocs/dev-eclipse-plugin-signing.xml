@@ -36,12 +36,19 @@ Eclipse installer says you are installing unsigned artifacts, and needs permissi
 </section>
 
 <section name="Release Manager needs to have a valid code signing certificate">
+  <p>
+    For the UIMA project, contact the PMC chair for aid in obtaining a code signing certificate if you need one.</p>
 </section>
 
-<section name="Release only changed Eclipse plugins">
+<section name="Release only if 1 or more changed Eclipse plugins">
+  <p>If the release does not have any updates to Eclipse Plugin JARs, save Apache money by reusing previously released versions.
+     If the release has 1 or more JARs, these will be signed in 1 signing event. so it doesn't matter how many Jars there are.</p>
 </section>
 
 <section name="Links to Apache resources for codesigning">
+  <p>See https://reference.apache.org/pmc/codesigning for general information.
+  </p>
+  <p>See https://wiki.eclipse.org/JAR_Signing#What_gets_signed.3F for background on signing Eclipse Plugins.</p>
 </section>
 
 <section name="Release Flow">
