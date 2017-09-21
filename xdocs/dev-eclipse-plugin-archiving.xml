@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>Archiving Eclipse Plugins</title>
+<author email="dev@uima.apache.org">
+ Apache UIMA Documentation Team</author>
+</properties>
+
+<body>
+<section name="Overview">
+<p>The Eclipse Update Site holds a multi-update-site root, which, in turn, links to various subsites (for various projects).
+  Each of those subsites typically has several versions of the plugins; a release process adds fresh versions of plugins to that site.
+</p>
+
+<p>At some point, there are too many versions, and it makes sense to archive these older ones.  
+  This requires updating metadata objects, which in turn requires running special tooling.
+</p>
+</section>
+
+<section name="Goals for archiving">
+  <p>An archive approach would, ideally, have these properties</p>
+  <ul>
+    <li>Reduce the number of choices during the Eclipse install menus to just the more recent ones</li>
+    <li>Support an older "archive" site where older version could be obtained if needed, without loading the Apache Mirror system.</li>
+    <li>Have a simple mechanism for archiving older releases</li>
+  </ul>
+</section>
+
+<section name="Strategy for archiving">
+  <p></p>
+</section>
+
+<section name="Tools for archiving">
+  <p>The only tool I've found for removing releases from a p2 repository (update subsite) is documented here:
+  https://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_repositorytasks.htm .
+  It's an eclipse ant task.  These need to be run using the special eclipse ant task runner.  This is documented here:
+  https://stackoverflow.com/questions/2327393/running-p2-ant-tasks-outside-eclipse.
+   </p>
+</section>
+
+</body>
+</document>
