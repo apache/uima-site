@@ -32,8 +32,10 @@ under the License.
 </p>
 
 <p>At some point, there are too many versions, and it makes sense to archive these older ones.  
-  This requires updating metadata objects, which in turn requires running special tooling.
+   To do this you need to run Eclipse special tooling to keep the artifacts.jar and content.jar artifacts 
+   in sync with the features and plugins.
 </p>
+
 </section>
 
 <section name="Goals for archiving">
@@ -46,15 +48,54 @@ under the License.
 </section>
 
 <section name="Strategy for archiving">
-  <p></p>
+  <p>The basic strategy is to have multiple update sites:
+  <ul><li>A more-or-less current one, which has the most recent plugins, plus perhaps a few of the older releases</li>
+      <li>Older plugin site(s) (not too many) which contain ranges of plugins</li>
+  </ul>  
+  </p>
+  
+  <p>A typical imagined timeline would be
+    <ul>
+      <li>A subsite is started (e.g. ruta, or uimaj)</li>
+      <li>Releases occur, and plugins are added at some version level</li>
+      <li>After some number of releases, a decision is made that the repo is getting too big.
+         At that point, a small number (default, just the most recent) version is sliced off
+         into another repo.</li>
+      <li>The old repo is renamed with a suffix indicating the range of versions in it.  For example,
+         the "uimaj" repo might have a name uimaj-2.3.1-2.10.0.</li>
+      <li>The new slice repo, with perhaps just one (the latest version) is then deployed. 
+        A one-time update to the site
+        documentation is made to indicate where to find older eclipse plugins (the Apache archive site, following the
+        the naming conventions: uima/eclipse-update-site/---subsitename-x.x.x-y.y.y).</li> 
+      <li>After confirming that the renamed old site is visible in Archive, then it is deleted on the main release site.</li>  
+    </ul>
+  </p>
+  
+  <p>A typical new slice would have just the latest version in it, and would then be added to over time, with additional
+     releases.  When it gets too big, the same procedure is repeated, with a new named update site .../---subsitename.u.u.u-v.v.v
+     with another range set being created and archived.</p>
+     
 </section>
 
-<section name="Tools for archiving">
-  <p>The only tool I've found for removing releases from a p2 repository (update subsite) is documented here:
+<section name="Doing the slicing and updating the site">
+  <p>The eclipse ant tasks for maintaining update sites are documented here:
   https://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_repositorytasks.htm .
-  It's an eclipse ant task.  These need to be run using the special eclipse ant task runner.  This is documented here:
-  https://stackoverflow.com/questions/2327393/running-p2-ant-tasks-outside-eclipse.
-   </p>
+  </p>
+  
+  <p>This ant task is used in a Maven project, located in uima/build, named: uima-eclipse-update-site-slicing.
+    This does the slicing described above.  To use, check out this project as a maven project (it's not a Java project), and 
+    read the readme.txt, and follow the instructions.</p>
+    
+  <p>When it runs, it reads the existing subsite directly from the dist.apache.org repository, and builds the request slice
+    in the project's target/eclipse-update-site/---subsite--- directory.</p>
+    
+  <p>To complete the maintenance, do these steps in the dist.apache.org svn release eclipse-update-site:
+    <ol>
+      <li>Do a sanity test of the new subsite - try installing it into a fresh Eclipse install.</li>
+      <li>svn mv  to rename the current subsite to the versioned name.</li>
+      <li>once it appears on the archive spot, do an svn delete to remove it </li>
+      <li>import the new (pruned) subsite to the release spot.</li>
+    </ol></p>    
 </section>
 
 </body>

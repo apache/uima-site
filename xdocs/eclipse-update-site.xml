@@ -44,11 +44,18 @@ mechanisms to install whatever version a user might require.
 </p>
 
 <p>
-Because of this, the update site itself keeps "older" versions.  Every
+Because of this, the update site itself may keep some of the "older" versions.  Every
 time a new release is made which includes one or more new versions of some
 Eclipse features/plugins, the new artifacts are <em>added</em> to 
 the set of existing (and perhaps, older versions of) feature and plugins.
 </p>
+</subsection>
+
+<subsection name="Information for developers">
+  <p>See these pages <a target="_blank"
+     href="dev-eclipse-plugin-archiving">for information about archiving</a>
+     and <a target="_blank" href="dev-eclipse-plugin-signing">for information about plugin signing</a>. 
+</p> 
 </subsection>
 
 <subsection name="P2">
