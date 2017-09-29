@@ -79,10 +79,12 @@ under the License.
 
 <section name="Doing the slicing and updating the site">
   <p>The eclipse ant tasks for maintaining update sites are documented here:
-  https://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_repositorytasks.htm .
+  https://help.eclipse.org/oxygen/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_repositorytasks.htm .
   </p>
   
-  <p>This ant task is used in a Maven project, located in uima/build, named: uima-eclipse-update-site-slicing.
+  <p>This ant task is used in a Maven project, located in uima/build, named: 
+    <a target="_blank" href="http://svn.apache.org/repos/asf/uima/build/trunk/uima-eclipse-update-site-slicing/">
+    uima-eclipse-update-site-slicing</a>.
     This does the slicing described above.  To use, check out this project as a maven project (it's not a Java project), and 
     read the readme.txt, and follow the instructions.</p>
     
