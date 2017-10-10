@@ -241,17 +241,17 @@ allows the plugin installer to avoid saying it is installing unsigned artifacts,
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>We use a 2 step process, to reduce costs to Apache for signing release candidates which subsequently fail.
-       After the release vote passes, plugin Jar files are manually uploaded and signed, 
-       and then a subsequent Ant task is run to rebuild the site packaging artifacts.</p>
+       After the release vote passes, feature and plugin Jar files (but not the pack.gz files) are manually uploaded and signed, 
+       and then a subsequent maven task is run to rebuild just the site packaging artifacts.</p>
                                                 <p>The first step is to do a normal build of the update site, using mvn release:prepare.
        This produces the artifacts for voting on, without signing the
        new plugin Jars, and writes the "tag" for this into SVN for record keeping.</p>
                                                 <p>After the vote passes 
         the release manager, using their special credentials, logs onto the signing portal, and makes a signing set
-       consisting of all of the Jars in target/eus-work/plugins (not the *.pack.gz files), and signs them.  The signed Jars are down-loaded into 
-       a new directory, target/eus-work-signed/plugins/. </p>
-                                                <p>Now the finish-after-signing ant build is run.  This task does all the remaining steps, starting with the -pack 
-        step, regenerating the *.pack.gz files in the eus-work-signed/plugins directory, and adding the various
+       consisting of all of the Jars in target/eus-work/plugins and .../features (not the *.pack.gz files), and signs them.  
+       The signed Jars are down-loaded into the same directory.</p>
+                                                <p>Rebuild the site artifacts by running <code>mvn antrun:run</code>.  This does the remaining steps, 
+        including packing (regenerating the .pack.gz files in the /plugins) and adding the various
         signatures and checksums to these.  These are then re-merged with any previous contents of the update site,
         and re-published.</p>
                                                 <p>Please try installing the result to confirm nothing went wrong in this re-build process.</p>
