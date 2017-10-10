@@ -36,8 +36,8 @@ allows the plugin installer to avoid saying it is installing unsigned artifacts,
 
   <subsection name="Process Flow">
     <p>We use a 2 step process, to reduce costs to Apache for signing release candidates which subsequently fail.
-       After the release vote passes, two subsequent Ant tasks are run to rebuild the update site, from the
-       tag, with a manual (at this point) signing step for the Jars, inbetween them.</p>
+       After the release vote passes, plugin Jar files are manually uploaded and signed, 
+       and then a subsequent Ant task is run to rebuild the site packaging artifacts.</p>
        
     <p>The first step is to do a normal build of the update site, using mvn release:prepare.
        This produces the artifacts for voting on, without signing the
