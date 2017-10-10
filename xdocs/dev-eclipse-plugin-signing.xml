@@ -43,21 +43,32 @@ allows the plugin installer to avoid saying it is installing unsigned artifacts,
        This produces the artifacts for voting on, without signing the
        new plugin Jars, and writes the "tag" for this into SVN for record keeping.</p>
      
-     <p>After the vote passes, the prepare-to-sign ant build is run.  This rebuilds the update site, just like the
-        previous build, but stops at the point of doing the JAR processing for the new plugins, where before it ran
-        the Jarprocessor with the -repack and -pack options, now it runs with just the -repack options.  
-        This puts the packed/conditioned JARs into target/eus-work/plugins, named x.y.z_3.0.1.jar, for example.
-     </p>
-     
-     <p>The release manager, using their special credentials, logs onto the signing portal, and makes a signing set
-       consisting of all of the Jars in target/eus-work/plugins, and signs them.  The signed Jars are down-loaded into 
+     <p>After the vote passes 
+        the release manager, using their special credentials, logs onto the signing portal, and makes a signing set
+       consisting of all of the Jars in target/eus-work/plugins (not the *.pack.gz files), and signs them.  The signed Jars are down-loaded into 
        a new directory, target/eus-work-signed/plugins/. </p>
        
-     <p>Now the finish-after-signing ant build is run.  This task does all the remaining steps, including Apache GPG
-        signing of the artifacts.</p>
+     <p>Now the finish-after-signing ant build is run.  This task does all the remaining steps, starting with the -pack 
+        step, regenerating the *.pack.gz files in the eus-work-signed/plugins directory, and adding the various
+        signatures and checksums to these.  These are then re-merged with any previous contents of the update site,
+        and re-published.</p>
         
      <p>Please try installing the result to confirm nothing went wrong in this re-build process.</p>
        
+  </subsection>
+  <subsection name="Changes to Normal Build">
+    <p>To support signing, the normal build needs 2 small changes.
+      <ol>
+        <li>(actually a bug fix) The existing build after running the JarProcessor, copies the original (unprocessed) Jars
+            into the eus-work/plugins - accidentally overwriting the repacked/conditioned Jars.  This step should be deleted;
+            it is unnecessary.
+        </li>
+        <li>When doing the subsite build, any previous versions are combined with the new version.  This is done by 
+            downloading the previous versions into a new instance of the subsite.  Because this packaging step needs
+            to be redone, the original contents.jar and artifacts.jar files need to be saved so they can be restored
+            before the rebuild with signed artifacts.</li>
+      </ol>
+    </p>
   </subsection>
 </section>
 
