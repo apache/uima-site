@@ -32,7 +32,7 @@ to the Apache release signing.  This additional signing (with a recognized autho
 allows the plugin installer to avoid saying it is installing unsigned artifacts, and needs permission to continue.
 </p>
 
-<p>Only the plugin JARs need to be signed (to be confirmed) - that is, the Feature JARs are not signed.</p>
+<p>Both the feature jars and the plugin jars are signed.</p>
 
   <subsection name="Process Flow">
     <p>We use a 2 step process, to reduce costs to Apache for signing release candidates which subsequently fail.
