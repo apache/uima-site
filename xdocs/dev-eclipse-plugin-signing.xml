@@ -27,12 +27,38 @@ under the License.
 
 <body>
 <section name="Overview">
-<p>All released Apache artifacts are normally signed.  This signing is different from Eclipse Plugin JAR signing.
-If Eclipse Plugin JARs are not signed with a recognized authority certificate, when you install the plugin, the
-Eclipse installer says you are installing unsigned artifacts, and needs permission to continue.
+<p>All released Apache artifacts are normally signed.  Eclipse plugin jar signing is in addition 
+to the Apache release signing.  This additional signing (with a recognized authority certificate)
+allows the plugin installer to avoid saying it is installing unsigned artifacts, and needs permission to continue.
 </p>
 
-<p>This page describes how the Eclipse plugin release process is set up for JAR signing.</p>
+<p>Only the plugin JARs need to be signed (to be confirmed) - that is, the Feature JARs are not signed.</p>
+
+  <subsection name="Process Flow">
+    <p>We use a 2 step process, to reduce costs to Apache for signing release candidates which subsequently fail.
+       After the release vote passes, two subsequent Ant tasks are run to rebuild the update site, from the
+       tag, with a manual (at this point) signing step for the Jars, inbetween them.</p>
+       
+    <p>The first step is to do a normal build of the update site, using mvn release:prepare.
+       This produces the artifacts for voting on, without signing the
+       new plugin Jars, and writes the "tag" for this into SVN for record keeping.</p>
+     
+     <p>After the vote passes, the prepare-to-sign ant build is run.  This rebuilds the update site, just like the
+        previous build, but stops at the point of doing the JAR processing for the new plugins, where before it ran
+        the Jarprocessor with the -repack and -pack options, now it runs with just the -repack options.  
+        This puts the packed/conditioned JARs into target/eus-work/plugins, named x.y.z_3.0.1.jar, for example.
+     </p>
+     
+     <p>The release manager, using their special credentials, logs onto the signing portal, and makes a signing set
+       consisting of all of the Jars in target/eus-work/plugins, and signs them.  The signed Jars are down-loaded into 
+       a new directory, target/eus-work-signed/plugins/. </p>
+       
+     <p>Now the finish-after-signing ant build is run.  This task does all the remaining steps, including Apache GPG
+        signing of the artifacts.</p>
+        
+     <p>Please try installing the result to confirm nothing went wrong in this re-build process.</p>
+       
+  </subsection>
 </section>
 
 <section name="Release Manager needs to have a valid code signing certificate">
