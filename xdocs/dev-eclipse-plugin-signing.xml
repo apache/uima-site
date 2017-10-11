@@ -27,41 +27,42 @@ under the License.
 
 <body>
 <section name="Overview">
-<p>All released Apache artifacts are normally signed.  Eclipse plugin jar signing is in addition 
+<p>All released Apache artifacts are normally signed.  Eclipse jar signing is in addition 
 to the Apache release signing.  This additional signing (with a recognized authority certificate)
-allows the plugin installer to avoid saying it is installing unsigned artifacts, and needs permission to continue.
+allows the plugin installer to avoid saying it is installing unsigned artifacts and needs permission to continue.
 </p>
 
-<p>Both the feature jars and the plugin jars are signed.</p>
+<p>Both the feature jars and the plugin jars are signed.  Feature Jars might not need signing - but it doesn't hurt.</p>
 
   <subsection name="Process Flow">
     <p>We use a 2 step process, to reduce costs to Apache for signing release candidates which subsequently fail.
        After the release vote passes, feature and plugin Jar files (but not the pack.gz files) are manually uploaded and signed, 
-       and then a subsequent maven task is run to rebuild just the site packaging artifacts.</p>
+       and then a subsequent maven task is run to rebuild just the site packaging artifacts using the signed Jars.</p>
        
     <p>The first step is to do a normal build of the update site, using mvn release:prepare.
-       This produces the artifacts for voting on, without signing the
-       new plugin Jars, and writes the "tag" for this into SVN for record keeping.</p>
+       This produces the artifacts for voting on, without jar-signing the
+       new Jars, and writes the "tag" for this into SVN for record keeping.</p>
      
      <p>After the vote passes 
-        the release manager, using their special credentials, logs onto the signing portal, and makes a signing set
-       consisting of all of the Jars in target/eus-work/plugins and .../features (not the *.pack.gz files), and signs them.  
-       The signed Jars are down-loaded into the same directory.</p>
+       the release manager, using their special credentials, logs onto the signing portal, and makes a signing set
+       consisting of all of the Jars in target/eus-work (not the *.pack.gz files), and signs them.  
+       The signed Jars are down-loaded and unzipped, and replaced into the same directories.</p>
        
-     <p>Rebuild the site artifacts by running <code>mvn antrun:run</code>.  This does the remaining steps, 
+     <p>The update site is rebuilt using the signed Jars by running <code>mvn antrun:run</code>.  
+        This does the remaining steps, 
         including packing (regenerating the .pack.gz files in the /plugins) and adding the various
-        signatures and checksums to these.  These are then re-merged with any previous contents of the update site,
-        and re-published.</p>
+        signatures and checksums to these.  These are then re-published, merging with any previous contents of the update site.
+        </p>
         
      <p>Please try installing the result to confirm nothing went wrong in this re-build process.</p>
        
   </subsection>
   <subsection name="Changes to Normal Build">
-    <p>To support signing, the normal build needs 2 small changes.
+    <p>To support signing, the normal build needs some small changes.
       <ol>
         <li>(actually a bug fix) The existing build after running the JarProcessor, copies the original (unprocessed) Jars
-            into the eus-work/plugins - accidentally overwriting the repacked/conditioned Jars.  This step should be deleted;
-            it is unnecessary.
+            into the eus-work/plugins - accidentally overwriting the repacked/conditioned Jars.  This step must be deleted;
+            in order to have the processed/conditioned Jars available for signing.
         </li>
         <li>When doing the subsite build, any previous versions are combined with the new version.  This is done by 
             downloading the previous versions into a new instance of the subsite.  Because this packaging step needs
@@ -69,6 +70,8 @@ allows the plugin installer to avoid saying it is installing unsigned artifacts,
             before the rebuild with signed artifacts.</li>
       </ol>
     </p>
+    <p>Additionally, to aid in reproducing things, the pre-signed, conditioned JARs are saved; in case of need, they can
+      be restored without rebuilding them again.  This step might be removed in the future - it is not essential.</p>
   </subsection>
 </section>
 
