@@ -268,15 +268,16 @@
       <li>After some number of releases, a decision is made that the repo is getting too big.</li>
         
       <li>The old repo is renamed with a suffix indicating the range of versions in it.  For example,
-         the "uimaj" repo might have a name uimaj-2.3.1-2.10.0.</li>
-      <li>The new slice repo, with perhaps just one (the latest version) is then deployed. 
+         the "uimaj" repo might have a name uimaj-2.3.1-2.10.1.</li>
+      <li>A new repo is created, with just one (the latest version), and is deployed. 
         A one-time update to the site
         documentation is made to indicate where to find older eclipse plugins (the Apache archive site, following the
         the naming conventions: uima/eclipse-update-site/---subsitename-x.x.x-y.y.y).</li> 
       <li>After confirming that the renamed old site is visible in Archive, then it is deleted on the main release site.</li>  
     </ul>
   </p>
-                                                <p>A typical new slice would have just the latest version in it, and would then be added to over time, with additional
+                                                <p>After this is done, the new subsite will have just the latest version in it, 
+  and would then be added to over time, with additional
      releases.  When it gets too big, the same procedure is repeated, with a new named update site .../---subsitename.u.u.u-v.v.v
      with another range set being created and archived.</p>
                             </blockquote>
@@ -300,10 +301,10 @@
   </ul>
 </p>
                                                 <p>
-  After the rename has been copied to https://archive.apache.org/dist/uima/eclipse-update-site/xxxx
+  After the rename has been copied to https://archive.apache.org/dist/uima/eclipse-update-site/xxxx-a.b.c-d.e.f
   delete this from the main distribution site.
 </p>
-                                                <p>Do the renaming then deleting using svn repository commands.  SVN doesn't have a rename command, so
+                                                <p>Do the renaming then deleting using svn repository commands run against the dist.apache.org svn site.  SVN doesn't have a rename command, so
   use a copy then delete of the old one.  You can also use a GUI like TortiseSvn.
 </p>
                             </blockquote>
