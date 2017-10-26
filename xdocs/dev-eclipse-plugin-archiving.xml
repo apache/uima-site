@@ -31,9 +31,7 @@ under the License.
   Each of those subsites typically has several versions of the plugins; a release process adds fresh versions of plugins to that site.
 </p>
 
-<p>At some point, there are too many versions, and it makes sense to archive these older ones.  
-   To do this you need to run Eclipse special tooling to keep the artifacts.jar and content.jar artifacts 
-   in sync with the features and plugins.
+<p>At some point, there are too many versions, and it makes sense to archive these older ones.
 </p>
 
 </section>
@@ -58,9 +56,8 @@ under the License.
     <ul>
       <li>A subsite is started (e.g. ruta, or uimaj)</li>
       <li>Releases occur, and plugins are added at some version level</li>
-      <li>After some number of releases, a decision is made that the repo is getting too big.
-         At that point, a small number (default, just the most recent) version is sliced off
-         into another repo.</li>
+      <li>After some number of releases, a decision is made that the repo is getting too big.</li>
+        
       <li>The old repo is renamed with a suffix indicating the range of versions in it.  For example,
          the "uimaj" repo might have a name uimaj-2.3.1-2.10.0.</li>
       <li>The new slice repo, with perhaps just one (the latest version) is then deployed. 
@@ -77,7 +74,8 @@ under the License.
      
 </section>
 
-<section name="Doing the slicing and updating the site">
+<section name="Resetting the update site for a new batch of versions">
+  <!-- 
   <p>The eclipse ant tasks for maintaining update sites are documented here:
   https://help.eclipse.org/oxygen/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_repositorytasks.htm .
   </p>
@@ -89,7 +87,7 @@ under the License.
     read the readme.txt, and follow the instructions.</p>
     
   <p>When it runs, it reads the existing subsite directly from the dist.apache.org repository, and builds the request slice
-    in the project's target/eclipse-update-site/---subsite--- directory.</p>
+    in the project's target/eclipse-update-site/- - -subsite- - - directory.</p>
     
   <p>To complete the maintenance, do these steps in the dist.apache.org svn release eclipse-update-site:
     <ol>
@@ -97,7 +95,24 @@ under the License.
       <li>svn mv  to rename the current subsite to the versioned name.</li>
       <li>once it appears on the archive spot, do an svn delete to remove it </li>
       <li>import the new (pruned) subsite to the release spot.</li>
-    </ol></p>    
+    </ol></p>
+    -->
+  <p>Here is the procedure to reset the update site for a new batch of versions, going forward.   
+  <ul>
+    <li>Rename the existing update site with a suffix indicating the range of versions.  For 
+        example, uimaj would be renamed to uimaj-2.3.1-2.10.1 </li>
+    <li>generate the new site using a version of the update site pom which skips the steps
+        that copy the previous site.  This results in the new update site only having the
+        current version.</li>
+  </ul>
+</p>
+<p>
+  After the rename has been copied to https://archive.apache.org/dist/uima/eclipse-update-site/xxxx
+  delete this from the main distribution site.
+</p>
+<p>Do the renaming then deleting using svn repository commands.  SVN doesn't have a rename command, so
+  use a copy then delete of the old one.  You can also use a GUI like TortiseSvn.
+</p>        
 </section>
 
 </body>
