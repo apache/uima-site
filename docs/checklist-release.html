@@ -319,6 +319,7 @@ svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos
   <li>Send [VOTE] message to dev list.  List the staging repository that testers
     will need to add to their <code>settings.xml</code> files, and the distribution SVN repo link.</li>
   <li>Post RESULT message</li>
+  <li>For Eclipse plugins, <a href="dev-eclipse-plugin-signing.html">sign the jars</a>.</li>
   <li>Delete any artifacts from the staging repo that aren't supposed to go to Maven Central (if any).
       The uimaj build doesn't put the bin.zip or bin.tar artifacts on the staging repo, but
       other builds might need some cleanup.
