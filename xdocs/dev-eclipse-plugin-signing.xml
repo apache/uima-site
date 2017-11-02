@@ -44,11 +44,17 @@ allows the plugin installer to avoid saying it is installing unsigned artifacts 
        new Jars, and writes the "tag" for this into SVN for record keeping.</p>
      
      <p>After the vote passes 
-       the release manager, using their special credentials, logs onto the signing portal, and makes a signing set
-       consisting of all of the Jars in target/eus-work (not the *.pack.gz files), and signs them.  
-       The signed Jars are down-loaded and unzipped, and replaced into the same directories.</p>
-       
-     <p>The update site is rebuilt using the signed Jars by running <code>mvn antrun:run@make-subsite-after-signing</code>.  
+       the release manager, using their special credentials, logs onto the signing portal.  This process
+       requires a one-time code, which the portal will send to you.  (Note: I had to refresh my web browser in order to
+       get the screen showing that option).  Once signed, in, make a signing set
+       consisting of all of the Jars in target/eus-work/plugins (feature jars don't need to be signed) 
+       (not the *.pack.gz files).  Test sign these and download them.
+     </p>
+     
+     <p>For safety, make a copy of the target/eus-work/plugins directory, and then update the .jar files in that directory
+       with the signed ones, overlaying the unsigned ones.</p>  
+         
+     <p>Then rebuild the update site by running <code>mvn antrun:run@make-subsite-after-signing</code>.  
         This does the remaining steps, 
         including packing (regenerating the .pack.gz files in the /plugins) and adding the various
         signatures and checksums to these.  These are then re-published, merging with any previous contents of the update site.
