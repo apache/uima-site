@@ -125,6 +125,7 @@ svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos
   <li>Send [VOTE] message to dev list.  List the staging repository that testers
     will need to add to their <code>settings.xml</code> files, and the distribution SVN repo link.</li>
   <li>Post RESULT message</li>
+  <li>For Eclipse plugins, <a href="dev-eclipse-plugin-signing.html">sign the jars</a>.</li>
   <li>Delete any artifacts from the staging repo that aren't supposed to go to Maven Central (if any).
       The uimaj build doesn't put the bin.zip or bin.tar artifacts on the staging repo, but
       other builds might need some cleanup.
@@ -142,11 +143,30 @@ svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos
       be "binary" style files.  (The line endings (if you build on windows) will be changed upon upload to svn,
       which will result in bad signatures).
       </li>
-      <li>Eclipse update sites are already svn working copies, so you can commit these.
-      If using Windows and have tortise svn installed, cd to the eclipse-update-site/uimaj (or wherever your update site
-      was built) and right click and say commit (and click the "all" selection to upload the new files).  
+      <li>Eclipse update sites:
+        <ul>
+          <li>If you a resetting the update subsite, do these steps:
+             <ol>
+               <li>rename the update subsite to xxx-a.b.c-d.e.f  where a.b.c is the first version and d.e.f is the last
+                 version.  You do this via svn copy command in the dist.apache.org release spot.
+                 If you have a GUI tool like tortisesvn, you can use that.</li>
+               <li>after the rename, wait until you see this in the archive.apache.org spot, then delete it from the
+                   dist.apache.org release svn.  Although this will delete it on the apache mirror system, it will remain
+                   in the archive.apache.org spot.</li>
+               <li>now, checkout the dist.apache.org release subsite, and modify it by deleting items, adding items, and
+                   modifying items in the working set.  Then commit these changes so the current site reflects the new
+                   one.</li>  
+             </ol>
+          </li>
+          <li>Otherwise, the eclipse-update-sub-site project's output folder in the target directory should 
+              already be svn working copies, so you can commit these.
+              If using Windows and have tortise svn installed, cd to the target/eclipse-update-site/uimaj (or wherever your update site
+              was built) and right click and say commit (and click the "all" selection to upload the new files).  
+          </li>
+        </ul>
       </li>
-  <li>update the UIMA website docs/d with any generated docs, in a manner to 
+
+      <li>update the UIMA website docs/d with any generated docs, in a manner to 
   <a href="saving-svn-resources.html">minimize SVN space</a> use, if possible.
 This includes: PDFs, HTML versions of docbooks plus the index.html; all go on the
       website under the uima.apache.org/d/ (non-SVN source) directory.  Update the index.html

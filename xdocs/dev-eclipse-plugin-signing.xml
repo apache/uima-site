@@ -47,7 +47,7 @@ allows the plugin installer to avoid saying it is installing unsigned artifacts 
        the release manager, using their special credentials, logs onto the signing portal.  This process
        requires a one-time code, which the portal will send to you.  (Note: I had to refresh my web browser in order to
        get the screen showing that option).  Once signed, in, make a signing set
-       consisting of all of the Jars in target/eus-work/plugins (feature jars don't need to be signed) 
+       consisting of all of the Jars in target/eus-work/plugins and feature jars (feature jars must also be signed) 
        (not the *.pack.gz files).  Test sign these and download them.
      </p>
      
@@ -61,6 +61,9 @@ allows the plugin installer to avoid saying it is installing unsigned artifacts 
         </p>
         
      <p>Please try installing the result to confirm nothing went wrong in this re-build process.</p>
+     
+     <p>If all is well, repeat the above process starting with selection "production" signing for the jars, downloading 
+     those jars, replacing them into the eus-work directory, and re-running the mvn antrun:run@make-subsite-after-signing.</p>
        
   </subsection>
   <subsection name="Changes to Normal Build">
