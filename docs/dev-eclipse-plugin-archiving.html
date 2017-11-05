@@ -270,9 +270,9 @@
       <li>The old repo is renamed with a suffix indicating the range of versions in it.  For example,
          the "uimaj" repo might have a name uimaj-2.3.1-2.10.1.</li>
       <li>A new repo is created, with just one (the latest version), and is deployed. 
-        A one-time update to the site
-        documentation is made to indicate where to find older eclipse plugins (the Apache archive site, following the
-        the naming conventions: uima/eclipse-update-site/---subsitename-x.x.x-y.y.y).</li> 
+        The uima website 
+        documentation indicates where to find older eclipse plugins (the Apache archive site, following the
+        the naming conventions: uima/archive-eclipse-update-site/subsitename/subsitename-x.x.x-y.y.y).</li> 
       <li>After confirming that the renamed old site is visible in Archive, then it is deleted on the main release site.</li>  
     </ul>
   </p>
@@ -287,25 +287,72 @@
                                         <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
+        <a name="Naming convention and locations"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Naming convention and locations</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <p>The archives are stored using this naming convention:</p>
+                                                <ul>
+    <li>Root location: <br /><br /><code>uima/archive-eclipse-update-site/[particular-archive-name]</code></li>
+    <br />
+    <li>The particular-archive-name is named <br /> <br /><code>subsite-name-x.x.x-y.y.y</code>,
+      where the x.x.x is the first version in the archive, and y.y.y is the last one.</li>
+  </ul>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                        <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
         <a name="Resetting the update site for a new batch of versions"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Resetting the update site for a new batch of versions</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
                                     <p>Here is the procedure to reset the update site for a new batch of versions, going forward.   
   <ul>
-    <li>Rename the existing update site with a suffix indicating the range of versions.  For 
-        example, uimaj would be renamed to uimaj-2.3.1-2.10.1 </li>
-    <li>generate the new site using a version of the update site pom which skips the steps
-        that copy the previous site.  This results in the new update site only having the
-        current version.</li>
+    <li>In the dist.apache.org svn for release, copy the to-be-reset update subsite to the new archive spot.
+      Example: 
+      
+      <br /><br />
+      svn copy -m "create eclipse plugin archive for uimaj-2.3.1-2.10.1" 
+          https://dist.apache.org/repos/dist/release/uima/eclipse-update-site/uimaj
+          https://dist.apache.org/repos/dist/release/uima/archive-eclipse-update-site/uimaj-2.3.1-2.10.1</li>
+    
+    <li>wait for this to appear on the archive site, e.g.
+        https://archive.apache.org/dist/uima/archive-eclipse-update-site/uimaj-2.3.1-2.10.1</li>
+       
+    <li>delete from the main site. Example:
+      
+      <br /><br />
+      svn delete -m "create eclipse plugin archive for uimaj-2.3.1-2.10.1 delete in main mirror"
+          https://dist.apache.org/repos/dist/release/uima/archive-eclipse-update-site/uimaj-2.3.1-2.10.1</li>
+          
+    <li>reset the main update subsite: best way is to delete it and then re-import it.  Example:
+    
+      <br /><br />
+      svn delete -m "reset main Eclipse update subsite for uimaj - delete old one"
+          https://dist.apache.org/repos/dist/release/uima/eclipse-update-site/uimaj
+          
+      <br /><br />
+      cd to import directory, eg. uimaj-eclipse-update-site/target/eclipse-update-site/uimaj
+      svn import -m "reset main Eclipse update subsite" . https://dist.apache.org/repos/dist/release/uima/eclipse-update-site/uimaj
+  
+    </li>
+    
   </ul>
-</p>
-                                                <p>
-  After the rename has been copied to https://archive.apache.org/dist/uima/eclipse-update-site/xxxx-a.b.c-d.e.f
-  delete this from the main distribution site.
-</p>
-                                                <p>Do the renaming then deleting using svn repository commands run against the dist.apache.org svn site.  SVN doesn't have a rename command, so
-  use a copy then delete of the old one.  You can also use a GUI like TortiseSvn.
+  
+  Alternative:
+  <ul>
+    <li>do a svn "rename" (possible when using TortiseSVN) 
+      from ... eclipse-update-site/uimaj 
+        to archive-eclipse-update-site/uimaj-2.3.1-2.10.1</li>
+    <li>do an svn import of the new site:<br />
+    <code>cd to .../uimaj-eclipse-update-site/target/eclipse-update-site/uimaj</code>
+    <code>svn import -m "reset main Eclipse update subsite" . https://dist.apache.org/repos/dist/release/uima/eclipse-update-site/uimaj</code>
+       </li>
+    <li>after the archive.apache.org has the new archive, delete it from svn.</li>
+  </ul>
 </p>
                             </blockquote>
         </p>
