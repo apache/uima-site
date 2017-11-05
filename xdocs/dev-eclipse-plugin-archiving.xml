@@ -142,17 +142,6 @@ under the License.
     
   </ul>
   
-  Alternative:
-  <ul>
-    <li>do a svn "rename" (possible when using TortiseSVN) 
-      from ... eclipse-update-site/uimaj 
-        to archive-eclipse-update-site/uimaj-2.3.1-2.10.1</li>
-    <li>do an svn import of the new site:<br/>
-    <code>cd to .../uimaj-eclipse-update-site/target/eclipse-update-site/uimaj</code>
-    <code>svn import -m "reset main Eclipse update subsite" . https://dist.apache.org/repos/dist/release/uima/eclipse-update-site/uimaj</code>
-       </li>
-    <li>after the archive.apache.org has the new archive, delete it from svn.</li>
-  </ul>
 </p>
 </section>
 
