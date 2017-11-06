@@ -1,0 +1,8 @@
+Comparing source compatibility of C:\au\builds\uimaj-2.10.2\rc2\artifacts\target\checkout\uimaj-core\target\uima-core.jar against C:\Users\MarshallSchor\.m2\repository\org\apache\uima\uimaj-core\2.10.1\uimaj-core-2.10.1.jar
+***  MODIFIED CLASS: PUBLIC ABSTRACT org.apache.uima.internal.util.XMLUtils  (not serializable)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) javax.xml.parsers.DocumentBuilderFactory createDocumentBuilderFactory()
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) javax.xml.parsers.SAXParserFactory createSAXParserFactory()
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) javax.xml.transform.sax.SAXTransformerFactory createSaxTransformerFactory()
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) javax.xml.transform.TransformerFactory createTransformerFactory()
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) org.xml.sax.XMLReader createXMLReader()
+		+++  NEW EXCEPTION: org.xml.sax.SAXException
