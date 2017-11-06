@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>UIMA's Eclipse Update Site Archives</title>
+<author email="dev@uima.apache.org">Apache UIMA Documentation Team</author>
+</properties>
+
+<body>
+
+<section name="Archives for UIMA's Eclipse Update Site">
+
+<p>
+The Apache UIMA&#0153; project keeps older versions of Eclipse Update Sites
+in the Apache archive.  These are organized by subsites:
+<ul>
+  <li>uimaj - for the core UIMA Java project</li>
+  <li>others - to be added when the archive is created.</li>
+  <!--  
+  <li>ruta - for the Ruta project</li>
+  <li>uima-as - for the UIMA Asynchronous Scaleout project</li>
+   -->
+</ul>
+</p>
+ 
+<p>The naming convention is to start with the subsite's main name such as uimaj or ruta,
+and then suffix this with "-a.b.c-d.e.f" where a.b.c represents the earliest version
+and d.e.f is the last version included.
+</p>
+
+<table>
+  <tr><a href="https://archive.apache.org/dist/uima/archive-eclipse-update-site/uimaj-2.3.1-2.10.1">uimaj-2.3.1-2.10.1</a></tr>
+</table>
+</section>
+</body>
+</document>
