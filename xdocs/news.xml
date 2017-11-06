@@ -34,6 +34,24 @@
 		<section name="Apache UIMA News">
     <subsectionToc/>
 
+   <subsection name="03 Nov 2017" date = "03 November 2017" title="Apache UIMA Java SDK 2.10.2 released">
+
+      <p>This is a minor bug fix release.
+      The major changes in this release include:</p>
+
+      <ul><li>fixed a bug in xmi serialization/deserialization of 0-length string array</li>
+          <li>added a filter to the Annotation Viewer utility</li>
+          <li>Eclipse plugin jars are now Eclipse-signed.</li>
+          <li>The Eclipse examples project fixed a typo in the javadoc attachments.</li>
+          <li>The Eclipse update site was pruned of old releases; these are still available at
+             <a target="_blank" href="https://archive.apache.org/dist/uima/archive-eclipse-update-site/uimaj-2.3.1-2.10.1">
+             https://archive.apache.org/dist/uima/archive-eclipse-update-site/uimaj-2.3.1-2.10.1</a> </li>
+      </ul>                                                                                     
+      
+      <p>Please see the <a target="_blank" href="d/uimaj-2.10.2/issuesFixed/jira-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>
+    </subsection>
+
 
     <subsection name="30 Aug 2017" date = "30 Aug 2017" title="Apache UIMA DUCC 2.2.1 released">
  <p>DUCC stands for Distributed UIMA Cluster Computing. DUCC is a cluster management system providing tooling,

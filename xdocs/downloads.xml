@@ -137,12 +137,12 @@ Other mirrors: <select name="Preferred">
   <p>Note that some older releases appear under the "Latest" because they contain
      the latest release of some of the components included in that version. </p>
 
+ <subsection name="Apache UIMA Version 2.10.2">
+    <insertDownloads version="2.10.2"/>
+  </subsection>
+  
   <subsection name="Apache UIMA DUCC Version 2.2.1">
     <insertDownloads version="2.2.1"/>
-  </subsection>
-
-  <subsection name="Apache UIMA Version 2.10.1">
-    <insertDownloads version="2.10.1"/>
   </subsection>
   
   <!-- includes latest uima-as release -->
@@ -171,6 +171,10 @@ Other mirrors: <select name="Preferred">
 
 <section name="Older Releases">
 
+ <subsection name="Apache UIMA Version 2.10.1">
+    <insertDownloads version="2.10.1"/>
+  </subsection>
+  
   <subsection name="Apache UIMA Version 2.10.0">
     <insertDownloads version="2.10.0"/>
   </subsection>
