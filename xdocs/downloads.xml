@@ -108,17 +108,17 @@ Other mirrors: <select name="Preferred">
     community.  These early versions are less stable than normal releases, and should not be used for production work.
   </p>
   
-  <subsection name="Apache UIMA Version 3.0.0-alpha02">
+  <subsection name="Apache UIMA Version 3.0.0-beta">
     <p>This is the second "alpha" version.  It <b><i>requires</i></b> Java 8.  
     Several new features are integrated with Java 8 capabilities, such as the new <code>select</code> framework.
     </p>
     
     <p>There are many new features, described in 
-      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-alpha02/version_3_users_guide.html#uv3.overview.new">
+      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-beta/version_3_users_guide.html#uv3.overview.new">
       this overview</a>.  For more details, please see the documentation for version 3, which can be found 
-      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-alpha02/version_3_users_guide.html">here.</a>
+      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-beta/version_3_users_guide.html">here.</a>
       Changes since the first alpha version are mainly involving an update to the logging framework; see
-      the <a target="_blank" href="../d/uimaj-3.0.0-alpha02/RELEASE_NOTES.html">Release Notes</a> for details.
+      the <a target="_blank" href="../d/uimaj-3.0.0-beta/RELEASE_NOTES.html">Release Notes</a> for details.
     </p>
     
     <p>A version of the Eclipse plugin tooling is available, at a special eclipse update
@@ -127,7 +127,7 @@ Other mirrors: <select name="Preferred">
        </a>.  It's version of the JCasGen plugin will generate V3 JCas classes.
     </p>
     
-    <insertDownloads version="3.0.0-alpha02"/>
+    <insertDownloads version="3.0.0-beta"/>
   </subsection>
   
 </section>

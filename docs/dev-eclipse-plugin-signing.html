@@ -265,6 +265,7 @@ the uimav3 vs the v2 - looks
         including packing (regenerating the .pack.gz files in the /plugins) and adding the various
         signatures and checksums to these.  These are then re-published, merging with any previous contents of the update site.
         </p>
+                                                <p>Messages about "Artifact repository out of sync. Overwriting xxxx" are to be expected.</p>
                                                 <p>Please try installing the result to confirm nothing went wrong in this re-build process.</p>
                                                 <p>If all is well, repeat the above process starting with selection "production" signing for the jars, downloading 
      those jars, replacing them into the eus-work directory, and re-running the mvn antrun:run@make-subsite-after-signing.</p>

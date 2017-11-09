@@ -34,6 +34,39 @@
 		<section name="Apache UIMA News">
     <subsectionToc/>
 
+    <subsection name="09 Nov 2017" date = "09 Nov 2017" title="Apache UIMA Java SDK 3.0.0-beta released">
+      <p>UIMA Java SDK 3.0.0-beta is a preliminary version of core UIMA 3.0.0;  it is being released as an
+         <b>beta version</b> to encourage wider testing and to get early feedback.
+       </p>
+       <p>This version is not recommended for production.  As an beta version, the user-facing APIs should be stable
+         going forward.  We especially welcome user testing of the many new capabilities, including
+         contributing of new test cases.</p>
+       
+       <p>Requirements: Java 8 and, for any user-defined JCas cover classes, regeneration or migration of those 
+       (a migration tool is provided).</p>  
+
+       <p>
+       <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-beta/version_3_users_guide.html#uv3.overview.new">  
+       <b>Here</b></a> is a brief overview of the new features, capabilities, and migration tooling.</p>
+       
+       <p>Except for migration of user-defined JCas classes, it is designed to backwards compatible with existing
+          version 2 UIMA pipelines.  The    
+          <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-beta/version_3_users_guide.html">
+          Version 3 User's Guide</a> has more details.
+          The <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-beta/RELEASE_NOTES.html">Release Notes</a> 
+          describe what's changed since the last alpha-02 release.
+       </p>
+       
+       <p>The Eclipse update site is available, but located in a 
+          <a target="_blank" href="https://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production">different spot</a>,
+          in order to prevent accidentally installing the pre-production version,
+          and because the v3 tooling requires Java 8 and the JCasGen generates
+          v3 style classes.  If you want to use this, please install it into a 
+          newly obtained eclipse download, separate from your normal work version
+          of Eclipse.</p>
+       
+   </subsection>
+
    <subsection name="03 Nov 2017" date = "03 November 2017" title="Apache UIMA Java SDK 2.10.2 released">
 
       <p>This is a minor bug fix release.

@@ -105,7 +105,16 @@
       <source       filename="uima-ducc-2.2.0-source-release">                   <f>zip</f>    </source>
     </download>
   </downloads>
-
+  
+   <downloads version="3.0.0-beta" title="Apache UIMA Version 3.0.0-beta" withreleasedate="true">
+    <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-3.0.0-beta" releasedate="09-Nov-2017">
+      <releasenotes filename="uimaj-3.0.0-beta/RELEASE_NOTES">           <f>html</f>                </releasenotes>
+      <binary       filename="uimaj-3.0.0-beta-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
+      <source       filename="uimaj-3.0.0-beta-source-release">          <f>zip</f>  </source>
+    </download>
+  </downloads>
+  
+  <!-- 
   <downloads version="3.0.0-alpha02" title="Apache UIMA Version 3.0.0-alpha02" withreleasedate="true">
     <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-3.0.0-alpha02" releasedate="19-Mar-2017">
       <releasenotes filename="uimaj-3.0.0-alpha02/RELEASE_NOTES">           <f>html</f>                </releasenotes>
@@ -114,7 +123,6 @@
     </download>
   </downloads>
 
-  <!-- 
   <downloads version="3.0.0-alpha" title="Apache UIMA Version 3.0.0-alpha" withreleasedate="true">
     <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-3.0.0-alpha" releasedate="30-Jan-2017">
       <releasenotes filename="uimaj-3.0.0-alpha/RELEASE_NOTES">           <f>html</f>                </releasenotes>

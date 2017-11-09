@@ -421,17 +421,15 @@ A previous version of this page, with the methods we used while in the incubator
           after you've closed the Jira issues to be released with this version. -->
 		    </li>
 		    <li>Edit the POM of the top level thing being released, to add the property:
-		    <pre>&lt;jiraVersion&gt;123456&lt;/jiraVersion&gt;</pre>
-		    replacing the 123456 with the actual Jira internal version number 
-		        (or numbers, separated by a comma) for the Jira release(s) being
+		    <pre>&lt;jiraVersion&gt;2.10.2SDK&lt;/jiraVersion&gt;</pre>
+		    replacing the 2.10.2SDK with the actual Jira version name for the Jira release being
 		        done.  This value is used during release processing to automatically 
 		        generate a report of the list of Jira issues that are included in this release.
-		        Change "123456" to be the actual jira internal version number, which you can get 
-            from the Jira url (see parameter fixfor=xxxxxx or fixforversion=xxxxxx) 
+		        Change "2.10.2SDK"" to be the actual jira version name, which you can get 
+            from the Jira url  
             by going to https://issues.apache.org/jira/browse/UIMA 
-            and selecting "Releases" or "Versions" and then going to the 
-            particular version and looking in the url for
-            that version.
+            and selecting "Releases" and then going to the 
+            particular version and copying its name.
           <p>
 		        You can also generate this report manually (for instance, if you want to
 		        have a look at what it will produce) by going to top level project
@@ -449,7 +447,8 @@ A previous version of this page, with the methods we used while in the incubator
 		            right report is generated.</p>
 		        </li>
 		        
-		    <li><b>NEW !!! </b>Update the parent-pom settings for API compatibility: previous version and compat.level.</li>    
+		    <li><b>NEW !!! </b>Update the parent-pom settings for API change reports setting
+		        api_check_old_version to the correct previous version to use.</li>    
  		  </ul>
 		</p>
                             </blockquote>
@@ -498,7 +497,7 @@ A previous version of this page, with the methods we used while in the incubator
         <blockquote class="subsectionBody">
                                     <p class="note">Prior to releasing, you must do the 
       <a href="one-time-release-setup.html">one-time setup</a>
-      required for releasing.  Be sure to use a Java 1.5 level, in order to catch
+      required for releasing.  Be sure to use the correct Java level (e.g. 1.7, 1.8, etc.), in order to catch
       accidental dependencies on later Java features.
     </p>
                                                 <p>
