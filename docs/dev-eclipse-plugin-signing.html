@@ -225,9 +225,14 @@
         <blockquote class="sectionBody">
                                     <p>All released Apache artifacts are normally signed.  Eclipse jar signing is in addition 
 to the Apache release signing.  This additional signing (with a recognized authority certificate)
-allows the plugin installer to avoid saying it is installing unsigned artifacts and needs permission to continue.
+allows the Eclipse installer to avoid saying it is installing unsigned artifacts and needs permission to continue.
 </p>
-                                                <p>Both the feature jars and the plugin jars are signed.  Feature Jars might not need signing - but it doesn't hurt.</p>
+                                                <p>
+It also enables automatic notification and subsequent update (if the user chooses) of upgrades.  Because of this,
+insure your feature id's are different for versions which should not automatically update.  For instance,
+the uimav3 vs the v2 - looks 
+</p>
+                                                <p>Both the feature jars and the plugin jars need to be signed.</p>
                                                       <table class="subsectionTable">
         <tr><td>
        
@@ -332,9 +337,11 @@ allows the plugin installer to avoid saying it is installing unsigned artifacts 
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>See https://reference.apache.org/pmc/codesigning for general information.
+                                    <p>See <a target="_blank" href="https://reference.apache.org/pmc/codesigning">
+  https://reference.apache.org/pmc/codesigning</a> for general information.
   </p>
-                                                <p>See https://wiki.eclipse.org/JAR_Signing#What_gets_signed.3F for background on signing Eclipse Plugins.</p>
+                                                <p>See <a target="_blank" href="https://wiki.eclipse.org/JAR_Signing#What_gets_signed">
+  https://wiki.eclipse.org/JAR_Signing#What_gets_signed</a> for background on signing Eclipse Plugins.</p>
                             </blockquote>
         </p>
       </td></tr>
