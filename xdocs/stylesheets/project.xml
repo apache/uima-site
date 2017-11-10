@@ -80,7 +80,7 @@
         <!--  next line duplicates ASF Sponsors 
         <item name="Thanks"                 href="https://www.apache.org/foundation/thanks.html"/>
         -->
-        <item name="Security"               href="https://www.apache.org/security"/>                             
+        <item name="Security"               href="/security_report"/>                             
       </item>      
         
          <!--
