@@ -2,7 +2,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    <title>Apache uimaFIT&#8482; Guide and Reference</title><link rel="stylesheet" type="text/css" href="css/stylesheet-html.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="Apache uimaFIT&#8482; Guide and Reference" id="d5e1"><div xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h1 class="title">Apache uimaFIT&#8482; Guide and Reference</h1></div><div><div class="authorgroup">
       <h3 class="corpauthor">Written and maintained by the Apache UIMA&#8482; Development Community</h3>
-    </div></div><div><p class="releaseinfo">Version 2.3.0</p></div><div><p class="copyright">Copyright &copy; 2012, 2017 The Apache Software Foundation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
+    </div></div><div><p class="releaseinfo">Version 2.4.0</p></div><div><p class="copyright">Copyright &copy; 2012, 2017 The Apache Software Foundation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
       <p> </p>
       <p title="License and Disclaimer">
         <b>License and Disclaimer.&nbsp;</b>
@@ -35,7 +35,7 @@
         the trademark or service mark.
         
       </p>
-    </div></div><div><p class="pubdate">M&auml;rz, 2017</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#ugr.tools.uimafit.introduction">1. Introduction</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e30">1.1. Simplify Component Implementation</a></span></dt><dt><span class="section"><a href="#d5e44">1.2. Simplify Component Instantiation</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e65">1.2.1. From a class</a></span></dt><dt><span class="section"><a href="#d5e72">1.2.2. From an XML descriptor</a></span></dt></dl></dd><dt><span class="section"><a href="#d5e81">1.3. Is this cheating?</a></span></dt><dt><span class="section"><a href="#d5e100">1.4. Conclusion</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.gettingstarted">2. Getting Started</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e107">2.1. Adding uimaFIT to your project</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e110">2.1.1. Maven users</a></span></dt><dt><span class="section"><a href="#d5e115">2.1.2. Non-Maven users</a></span></dt></dl></dd><dt><span class="section"><a href="#d5e120">2.2. A simple analysis engine implementation</a></span></dt><dt><span class="section"><a href="#d5e135">2.3. Running the analysis engine</a></span></dt><dt><span class="section"><a href="#d5e148">2.4. Generate a descriptor file</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.pipelines">3. Pipelines</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.uimafit.experiments">4. Running Experiments</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.uimafit.casutil">5. CAS Utilities</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e216">5.1. Access methods</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.configurationparameters">6. Configuration Parameters</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.uimafit.externalresources">7. External Resources</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e385">7.1. Resource injection</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e387">7.1.1. Regular UIMA components</a></span></dt><dt><span class="section"><a href="#d5e407">7.1.2. uimaFIT-aware components</a></span></dt><dt><span class="section"><a href="#d5e483">7.1.3. Resources extending Resource_ImplBase</a></span></dt><dt><span class="section"><a href="#d5e493">7.1.4. Resources implementing SharedResourceObject</a></span></dt><dt><span class="section"><a href="#d5e512">7.1.5. Note on injecting resources into resources</a></span></dt></dl></dd><dt><span class="section"><a href="#d5e517">7.2. Resource locators</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.typesystem">8. Type System Detection</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e529">8.1. Making types auto-detectable</a></span></dt><dt><span class="section"><a href="#d5e554">8.2. Making index definitions and type priorities auto-detectable</a></span></dt><dt><span class="section"><a href="#d5e559">8.3. Using type auto-detection </a></span></dt><dt><span class="section"><a href="#d5e566">8.4. Multiple META-INF/org.apache.uima.fit/types.txt files</a></span></dt><dt><span class="section"><a href="#d5e589">8.5. Performance note and caching</a></span></dt><dt><span class="section"><a href="#d5e593">8.6. Potential problems</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e596">8.6.1. m2eclipse fails to copy descriptors to target/classes</a></span></dt><dt><span class="section"><a href="#d5e601">8.6.2. Class version conflicts</a></span></dt><dt><span class="section"><a href="#d5e605">8.6.3. Classes and resources in the default package</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.packaging">9. Building an executable JAR</a></span></dt><dt><span class="chapter"><a href="#tools.uimafit.maven">10. uimaFIT Maven Plugin</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e633">10.1. enhance goal</a></span></dt><dt><span class="section"><a href="#d5e645">10.2. generate goal</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.migration">11. Migration Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e657">11.1. Version 2.2.0 to 2.3.0</a></span></dt><dt><span class="section"><a href="#d5e667">11.2. Version 2.1.0 to 2.2.0</a></span></dt><dt><span class="section"><a href="#d5e674">11.3. Version 2.0.0 to 2.1.0</a></span></dt><dt><span class="section"><a href="#d5e683">11.4. Version 1.4.0 to 2.0.0</a></span></dt><dt><span class="section"><a href="#d5e765">11.5. Legacy support module</a></span></dt></dl></dd></dl></div>
+    </div></div><div><p class="pubdate">November, 2017</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#ugr.tools.uimafit.introduction">1. Introduction</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e30">1.1. Simplify Component Implementation</a></span></dt><dt><span class="section"><a href="#d5e44">1.2. Simplify Component Instantiation</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e65">1.2.1. From a class</a></span></dt><dt><span class="section"><a href="#d5e72">1.2.2. From an XML descriptor</a></span></dt></dl></dd><dt><span class="section"><a href="#d5e81">1.3. Is this cheating?</a></span></dt><dt><span class="section"><a href="#d5e100">1.4. Conclusion</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.gettingstarted">2. Getting Started</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e107">2.1. Adding uimaFIT to your project</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e110">2.1.1. Maven users</a></span></dt><dt><span class="section"><a href="#d5e115">2.1.2. Non-Maven users</a></span></dt></dl></dd><dt><span class="section"><a href="#d5e120">2.2. A simple analysis engine implementation</a></span></dt><dt><span class="section"><a href="#d5e135">2.3. Running the analysis engine</a></span></dt><dt><span class="section"><a href="#d5e148">2.4. Generate a descriptor file</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.pipelines">3. Pipelines</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.uimafit.experiments">4. Running Experiments</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.uimafit.casutil">5. CAS Utilities</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e216">5.1. Access methods</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.configurationparameters">6. Configuration Parameters</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.uimafit.externalresources">7. External Resources</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e385">7.1. Resource injection</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e387">7.1.1. Regular UIMA components</a></span></dt><dt><span class="section"><a href="#d5e407">7.1.2. uimaFIT-aware components</a></span></dt><dt><span class="section"><a href="#d5e483">7.1.3. Resources extending Resource_ImplBase</a></span></dt><dt><span class="section"><a href="#d5e493">7.1.4. Resources implementing SharedResourceObject</a></span></dt><dt><span class="section"><a href="#d5e512">7.1.5. Note on injecting resources into resources</a></span></dt></dl></dd><dt><span class="section"><a href="#d5e517">7.2. Resource locators</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.typesystem">8. Type System Detection</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e529">8.1. Making types auto-detectable</a></span></dt><dt><span class="section"><a href="#d5e554">8.2. Making index definitions and type priorities auto-detectable</a></span></dt><dt><span class="section"><a href="#d5e559">8.3. Using type auto-detection </a></span></dt><dt><span class="section"><a href="#d5e566">8.4. Multiple META-INF/org.apache.uima.fit/types.txt files</a></span></dt><dt><span class="section"><a href="#d5e589">8.5. Performance note and caching</a></span></dt><dt><span class="section"><a href="#d5e593">8.6. Potential problems</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e596">8.6.1. m2eclipse fails to copy descriptors to target/classes</a></span></dt><dt><span class="section"><a href="#d5e601">8.6.2. Class version conflicts</a></span></dt><dt><span class="section"><a href="#d5e605">8.6.3. Classes and resources in the default package</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.packaging">9. Building an executable JAR</a></span></dt><dt><span class="chapter"><a href="#tools.uimafit.maven">10. uimaFIT Maven Plugin</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e633">10.1. enhance goal</a></span></dt><dt><span class="section"><a href="#d5e645">10.2. generate goal</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.uimafit.migration">11. Migration Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e657">11.1. Version 2.3.0 to 2.4.0</a></span></dt><dt><span class="section"><a href="#d5e664">11.2. Version 2.2.0 to 2.3.0</a></span></dt><dt><span class="section"><a href="#d5e674">11.3. Version 2.1.0 to 2.2.0</a></span></dt><dt><span class="section"><a href="#d5e681">11.4. Version 2.0.0 to 2.1.0</a></span></dt><dt><span class="section"><a href="#d5e690">11.5. Version 1.4.0 to 2.0.0</a></span></dt><dt><span class="section"><a href="#d5e772">11.6. Legacy support module</a></span></dt></dl></dd></dl></div>
   
   
     
@@ -194,7 +194,7 @@ for(Token token : iterate(jCas, Token.class)){
       <pre class="programlisting">&lt;dependency&gt;
   &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
   &lt;artifactId&gt;uimafit-core&lt;/artifactId&gt;
-  &lt;version&gt;2.3.0&lt;/version&gt;
+  &lt;version&gt;2.4.0&lt;/version&gt;
 &lt;/dependency&gt;</pre>
       <p>uimaFIT distributions are hosted by Maven Central and so no repository needs to be added
         to your pom.xml file. </p>
@@ -202,7 +202,7 @@ for(Token token : iterate(jCas, Token.class)){
     <div class="section" title="2.1.2.&nbsp;Non-Maven users"><div class="titlepage"><div><div><h3 class="title" id="d5e115">2.1.2.&nbsp;Non-Maven users</h3></div></div></div>
       
       <p>If you do not build with Maven, then download uimaFIT from the <a class="ulink" href="http://uima.apache.org/downloads.cgi" target="_top">Apache UIMA downloads page</a>. The file
-        name should be uimafit-2.3.0-bin.zip. Download and unpack this file.
+        name should be uimafit-2.4.0-bin.zip. Download and unpack this file.
         The contents of the resulting upacked directory will contain a directory called
           <code class="filename">lib</code>. Add all of the files in this directory to your classpath.</p>
     </div>
@@ -1097,7 +1097,7 @@ classpath*:desc/type/Syntax.xml </pre>
     <pre class="programlisting">&lt;plugin&gt;
   &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
   &lt;artifactId&gt;uimafit-maven-plugin&lt;/artifactId&gt;
-  &lt;version&gt;2.3.0&lt;/version&gt; &lt;!-- change to latest version --&gt;
+  &lt;version&gt;2.4.0&lt;/version&gt; &lt;!-- change to latest version --&gt;
   &lt;configuration&gt;
     &lt;!-- OPTIONAL --&gt;
     &lt;!-- Override component description in generated descriptors. --&gt;
@@ -1195,7 +1195,7 @@ private MyResource resource;</pre>
     <pre class="programlisting">&lt;plugin&gt;
   &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
   &lt;artifactId&gt;uimafit-maven-plugin&lt;/artifactId&gt;
-  &lt;version&gt;2.3.0&lt;/version&gt; &lt;!-- change to latest version --&gt;
+  &lt;version&gt;2.4.0&lt;/version&gt; &lt;!-- change to latest version --&gt;
   &lt;configuration&gt;
     &lt;!-- OPTIONAL --&gt;
     &lt;!-- Path where the generated resources are written. --&gt;
@@ -1243,7 +1243,18 @@ private MyResource resource;</pre>
   <div class="chapter" title="Chapter&nbsp;11.&nbsp;Migration Guide" id="ugr.tools.uimafit.migration"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;11.&nbsp;Migration Guide</h2></div></div></div>
   
   <p>This section provides helpful information on incompatible changes between versions.</p>
-  <div class="section" title="11.1.&nbsp;Version 2.2.0 to 2.3.0"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e657">11.1.&nbsp;Version 2.2.0 to 2.3.0</h2></div></div></div>
+  <div class="section" title="11.1.&nbsp;Version 2.3.0 to 2.4.0"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e657">11.1.&nbsp;Version 2.3.0 to 2.4.0</h2></div></div></div>
+    
+    <p title="Version requirements">
+      <b>Version requirements.&nbsp;</b>
+      Depends on UIMA 2.10.2, Spring Framework 3.2.16 and Java 7.
+    </p>
+    <p>
+      Mind the updated version requirements. There should be no other potentially problematic
+      changes in this upgrade.
+    </p>
+  </div>
+  <div class="section" title="11.2.&nbsp;Version 2.2.0 to 2.3.0"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e664">11.2.&nbsp;Version 2.2.0 to 2.3.0</h2></div></div></div>
     
     <p title="CasIOUtil deprecated">
       <b>CasIOUtil deprecated.&nbsp;</b>
@@ -1261,7 +1272,7 @@ private MyResource resource;</pre>
       changes in this upgrade.
     </p>
   </div>
-  <div class="section" title="11.2.&nbsp;Version 2.1.0 to 2.2.0"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e667">11.2.&nbsp;Version 2.1.0 to 2.2.0</h2></div></div></div>
+  <div class="section" title="11.3.&nbsp;Version 2.1.0 to 2.2.0"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e674">11.3.&nbsp;Version 2.1.0 to 2.2.0</h2></div></div></div>
     
     <p title="Version requirements">
       <b>Version requirements.&nbsp;</b>
@@ -1272,7 +1283,7 @@ private MyResource resource;</pre>
       changes in this upgrade.
     </p>
   </div>
-  <div class="section" title="11.3.&nbsp;Version 2.0.0 to 2.1.0"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e674">11.3.&nbsp;Version 2.0.0 to 2.1.0</h2></div></div></div>
+  <div class="section" title="11.4.&nbsp;Version 2.0.0 to 2.1.0"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e681">11.4.&nbsp;Version 2.0.0 to 2.1.0</h2></div></div></div>
     
     <p title="Version requirements">
       <b>Version requirements.&nbsp;</b>
@@ -1284,7 +1295,7 @@ private MyResource resource;</pre>
         IDEs may complain here after upgrading to uimaFIT 2.1.0. 
     </p>
   </div>
-  <div class="section" title="11.4.&nbsp;Version 1.4.0 to 2.0.0"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e683">11.4.&nbsp;Version 1.4.0 to 2.0.0</h2></div></div></div>
+  <div class="section" title="11.5.&nbsp;Version 1.4.0 to 2.0.0"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e690">11.5.&nbsp;Version 1.4.0 to 2.0.0</h2></div></div></div>
     
     <p title="Version requirements">
       <b>Version requirements.&nbsp;</b>
@@ -1374,11 +1385,11 @@ private MyResource resource;</pre>
         The new methods in <code class="literal">CasIOUtil</code> can be used instead.
     </p>
   </div>
-  <div class="section" title="11.5.&nbsp;Legacy support module"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e765">11.5.&nbsp;Legacy support module</h2></div></div></div>
+  <div class="section" title="11.6.&nbsp;Legacy support module"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="d5e772">11.6.&nbsp;Legacy support module</h2></div></div></div>
     
-    <p>The compatibility layer should allow you to migrate to uimaFIT 2.3.0 without breaking
+    <p>The compatibility layer should allow you to migrate to uimaFIT 2.4.0 without breaking
       anything. You should then be able to gradually change the codebase to be compatible with
-      uimaFIT 2.3.0. As far as my tests go, uimaFIT 1.x and 2.3.0 can coexist peacefully on the
+      uimaFIT 2.4.0. As far as my tests go, uimaFIT 1.x and 2.4.0 can coexist peacefully on the
       classpath (and indeed both need to be on the classpath in order to use the legacy support
       module).</p>
     <p>To enable the legacy support, make sure that you have a dependency on uimaFIT 1.x and then
@@ -1391,9 +1402,9 @@ private MyResource resource;</pre>
 &lt;dependency&gt;
   &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
   &lt;artifactId&gt;uimafit-legacy-support&lt;/artifactId&gt;
-  &lt;version&gt;2.3.0&lt;/version&gt;
+  &lt;version&gt;2.4.0&lt;/version&gt;
 &lt;/dependency&gt;</pre>
-    <p>uimaFIT 2.3.0 automatically detects the presence of the legacy module and uses it - no
+    <p>uimaFIT 2.4.0 automatically detects the presence of the legacy module and uses it - no
       additional configuration is necessary.</p>
     <p>The following bash script may help to partially automatize the source code migration process.
       Please observe that it does not cover all of the necessary changes!</p>

@@ -164,7 +164,7 @@ under the License.
 &lt;dependency>
   &lt;groupId>org.apache.uima&lt;/groupId>
   &lt;artifactId>uimafit-core&lt;/artifactId>
-  &lt;version>2.2.0&lt;/version>
+  &lt;version>2.4.0&lt;/version>
 &lt;/dependency>
   </pre>
   <subsubsection>
