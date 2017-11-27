@@ -70,4 +70,4 @@ Henk Penning.
 This file and its gpg signature .asc file (which must be signed by the PMC chairperson)
 are uploaded to dist.apache.org/repos/dist/uima/META (neither the dev nor the release subdirs)
 
-Commit to https://dist.apache.org/repos/dist/release/uima/META
+Commit to https://dist.apache.org/repos/dist/release/uima  as META and META.asc
