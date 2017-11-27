@@ -63,3 +63,11 @@ How do I style the website?
 Most of the styling is in docs/stylesheets/base.css
 A bit of the styling is in xdocs/stylesheets/site.vsl
 
+What is the dist/uima/META/uima.html file?
+------------------------------------------
+This is a file used by automatic signing-checking software, maintained by
+Henk Penning.  
+This file and its gpg signature .asc file (which must be signed by the PMC chairperson)
+are uploaded to dist.apache.org/repos/dist/uima/META (neither the dev nor the release subdirs)
+
+Commit to https://dist.apache.org/repos/dist/release/uima/META
