@@ -34,6 +34,31 @@
 		<section name="Apache UIMA News">
     <subsectionToc/>
 
+    <subsection name="07 Feb 2018" date = "07 Feb 2018" title="Apache UIMA Asynchronous Scaleout (UIMA-AS) 2.10.2 released">
+      <p>UIMA AS 2.10.2 is a maintenance release that contains fixes and improvements over UIMA-AS 2.9.0.
+      </p><p>
+      The complete list of fixes is <a href="d/uima-as-2.10.2/issuesFixed/jira-report.html">here</a>.
+      </p>
+        <p>The major changes in this release are:</p>
+        <ul>
+          <li>Updated to use ActiveMQ 5.15.2  (requires Java 1.8+)</li> 
+          <li>Added dependency on UIMA SDK 2.10.2</li>
+          <li>Fixed merging of type priorities</li>  
+          <li>Added support for targeting specific service instance</li>
+          <li>Fixed per CAS Performance Metrics breakdown</li>
+          <li>Fixed eclipse examples import</li>
+          <li>Fixed dd2spring issues</li> 
+          <li>Fixed JMS listener recoverey after service restart</li>
+          <li>Other bug fixes</li>
+         </ul>
+      <p>
+      This version of UIMA-AS requires Java version 8 or later.      
+      </p>
+
+    </subsection>
+
+
+
     <subsection name="14 Nov 2017" date = "14 Nov 2017" title="Apache uimaFIT 2.4.0 released">
       <p>uimaFIT 2.4.0 is a minor feature and bugfix release to uimaFIT 2.3.0. It should should 
       serve as a drop-in replacement for previous uimaFIT 2.x versions.</p><p>
