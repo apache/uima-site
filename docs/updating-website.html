@@ -14,7 +14,7 @@
                         
             
                         
-                        <title>Apache UIMA - Updating the Apache UIMA Website</title>
+                        <title>Apache UIMA - Updating the Apache UIMA Website or Distribution-META file</title>
             
             <!-- Begin Cookie Consent plugin by Silktide - https://silktide.com/cookieconsent -->
             <script type="text/javascript">
@@ -50,7 +50,7 @@
                             </a>
                     </td>
                     <td align='CENTER'>
-                          <div class="pageBanner">Updating the Apache UIMA Website</div>
+                          <div class="pageBanner">Updating the Apache UIMA Website or Distribution-META file</div>
                     </td>
                     <td align='RIGHT'>
                                   <a href="https://www.apache.org">
@@ -219,7 +219,7 @@
                                                           <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Updating the Apache UIMA Website"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Updating the Apache UIMA Website</h1></a>
+        <a name="Updating the Apache UIMA Website or Distribution-META file"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Updating the Apache UIMA Website or Distribution-META file</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
@@ -228,6 +228,8 @@ project from time to time.  Besides normal edits to various pages,
 with every release the download page needs updating.  There are
 special procedures for effectively handling large generated documentation,
 as well.</p>
+                                                <p>The release distribution META file is a special file used by the release checker
+and is maintained by the PMC chairperson.</p>
                                                       <ul>
           <li><a href='#Kinds of Web Content'>
                   Kinds of Web Content
@@ -255,6 +257,10 @@ as well.</p>
                 </a></li>
           <li><a href='#IP-Clearance documentation'>
                   IP-Clearance documentation
+        
+                </a></li>
+          <li><a href='#Updating the release distribution META file'>
+                  Updating the release distribution META file
         
                 </a></li>
         </ul>
@@ -450,6 +456,40 @@ download page need to link to the .cgi version, to get a proper display of the w
         <blockquote class="subsectionBody">
                                     <p>We keep ip-clearance documentation for our project in /xdocs/ip-clearances, so they
 can be iteratively developed.</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Updating the release distribution META file">
+            <h2>Updating the release distribution META file
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+  Apache runs a release checker, see <a target="_blank" href="https://checker.apache.org/">https://checker.apache.org/</a>.
+  This requires that the Apache distribution SVN release spot has a META file, signed by the PMC chairperson.
+  The format of this file is described <a target="_blank" href="https://checker.apache.org/doc/README.html#ch-meta">here</a>. 
+  </p>
+                                                <p>Occasionally this file will need updating. To update this file, do the following:
+  <ul>
+    <li>"cd" to some spot to hold the svn checked-out files</li>
+    <li>Checkout just the top level files: <code>svn co --depth files https://dist.apache.org/repos/dist/release/uima</code></li>
+    <li>Edit the META file with any editor</li>
+    <li>regenerate the .asc signature file for the new META file:
+      <code>gpg -ba META</code>.  The -b says to do a detached signature, the -a says to do ascii-armor version.
+    </li>
+    <li>commit the 2 changed files:
+    <ul><li><code>svn status</code>  confirm that only the META and META.asc are changed</li>
+        <li><code>&gt;svn commit -m "commit-message, say why changed"</code></li></ul>
+    </li>
+  </ul>
+  </p>
                             </blockquote>
         </td></tr>
     </table>
