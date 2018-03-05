@@ -159,8 +159,10 @@ can be iteratively developed.</p>
   
   <p>Occasionally this file will need updating. To update this file, do the following:
   <ul>
-    <li>"cd" to some spot to hold the svn checked-out files</li>
-    <li>Checkout just the top level files: <code>svn co --depth files https://dist.apache.org/repos/dist/release/uima</code></li>
+    <li>"cd" to some spot to hold the svn checked-out of the META file</li>
+    <li>Checkout an empty dir: <code>svn co https://dist.apache.org/repos/dist/release/uima  --depth empty</code></li>
+    <li>cd to the dir just checked out: cd uima</li>
+    <li>svn up META  - should download the META file only</li>
     <li>Edit the META file with any editor</li>
     <li>regenerate the .asc signature file for the new META file:
       <code>gpg -ba META</code>.  The -b says to do a detached signature, the -a says to do ascii-armor version.

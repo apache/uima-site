@@ -53,8 +53,19 @@ Thus they must be untarred with a GNU compatible version of
   
 <subsection name="Eclipse Update Site">
 
-<p>You can install current releases of the UIMA Eclipse tooling via our Eclipse update site: 
+<p>You can install current releases of the UIMA Eclipse tooling via our Eclipse update site.  
+There are two update sites: one is for versions of plugins for UIMA version 2, the other is for version 3 plugins.
+</p>
+<ul>
+<li>Version 3:
+<a href="https://www.apache.org/dist/uima/eclipse-update-site-v3/">https://www.apache.org/dist/uima/eclipse-update-site-v3/</a>.
+</li>
+<li>Version 2:  
 <a href="https://www.apache.org/dist/uima/eclipse-update-site/">https://www.apache.org/dist/uima/eclipse-update-site/</a>.
+</li>
+</ul>
+
+<p>
 Older releases are at Apache's archive for releases, and you can find links to them 
 <a href="eclipse-update-archives.html">here</a>.
 </p>
@@ -103,56 +114,61 @@ Other mirrors: <select name="Preferred">
 
 <!-- add a subsection for the project version being released. Do not enter download info here, instead enter it in the stylesheets/project.xml file-->
 
+<!--
 <section name="Alpha and Beta levels for early adopters and testing">
   <p>Occasionally, we release alpha and beta levels of upcoming versions, in order to gain feedback from a wider
     community.  These early versions are less stable than normal releases, and should not be used for production work.
   </p>
   
-  <subsection name="Apache UIMA Version 3.0.0-beta">
-    <p>UIMA V3 is a re-implementation of the core Java version.  It represents Feature Structures as Java Objects,
-       allowing them to be Garbage Collected, for example.  It depends on and exploits many Java 8 features.
-    </p>
-    <p>This is the beta version of 3.0.0.  It requires Java 8.  This version is expected to have 
-       stabilized the user-facing APIs, and is the last planned release before the official 3.0.0 release.  
-    </p>
-    
-    <p>There are many new features, described in 
-      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-beta/version_3_users_guide.html#uv3.overview.new">
-      this overview</a>.  For more details, please see the documentation for version 3, which can be found 
-      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-beta/version_3_users_guide.html">here.</a>
-      Changes since the first alpha version are mainly involving an update to the logging framework; see
-      the <a target="_blank" href="../d/uimaj-3.0.0-beta/RELEASE_NOTES.html">Release Notes</a> for details.
-    </p>
-    
-    <p>A version of the Eclipse plugin tooling is available, at a special eclipse update
-       site, <a target="_blank" href="https://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production">
-       https://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production
-       </a>.  Its version of the JCasGen plugin will generate V3 JCas classes.
-    </p>
-    
-    <insertDownloads version="3.0.0-beta"/>
-  </subsection>
+
   
 </section>
+-->
  
 <section name="Latest Official Releases">  
 
   <p>Note that some older releases appear under the "Latest" because they contain
      the latest release of some of the components included in that version. </p>
 
+  <subsection name="Apache UIMA Version 3.0.0">
+    <p>UIMA V3 is a re-implementation of the core Java version.  It represents Feature Structures as Java Objects,
+       allowing them to be Garbage Collected, for example.  It depends on and exploits many Java 8 features.
+    </p>
+    
+    <p>The JCas implementation changed, and JCas classes (if used) will need to be migrated.  The V3 users guide describes
+      a migration tool to aid in this process.</p>
+    
+    <p>There are many new features, described in 
+      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0/version_3_users_guide.html#uv3.overview.new">
+      this overview</a>.  For more details, please see the documentation for version 3, which can be found 
+      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0/version_3_users_guide.html">here.</a>
+      Changes since the beta version are listed in the 
+      <a target="_blank" href="../d/uimaj-3.0.0/RELEASE_NOTES.html">Release Notes</a>.
+    </p>
+    
+    <p>Version 3 has updated Eclipse plugin tooling, available
+       at <a target="_blank" href="https://www.apache.org/dist/uima/eclipse-update-site-v3">
+       https://www.apache.org/dist/uima/eclipse-update-site-v3</a>.  
+       This site's version of the JCasGen plugin will generate V3 JCas classes.
+    </p>
+    
+    <p>Other components built upon the UIMA Java SDK will not (yet) run with version 3, until 
+      migrated versions of these are released.</p>
+      
+    <insertDownloads version="3.0.0"/>
+  </subsection>
+  
  <subsection name="Apache UIMA Version 2.10.2">
+   <p>This is the latest version of Version 2 of the UIMA Java SDK, and UIMA-AS. Other components built upon
+    the UIMA Java SDK are built to be compatible with this version.</p>
+   
     <insertDownloads version="2.10.2"/>
   </subsection>
   
   <subsection name="Apache UIMA DUCC Version 2.2.1">
     <insertDownloads version="2.2.1"/>
   </subsection>
-  
-  <!-- includes latest uima-as release -->
-  <subsection name="Apache UIMA Version 2.9.0">
-    <insertDownloads version="2.9.0"/>
-  </subsection>
-  
+    
   <!-- includes latest uima-c++ release -->
   <subsection name="Apache UIMA Version 2.4.0">
     <insertDownloads version="2.4.0"/>
@@ -166,10 +182,6 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="Ruta"/>
   </subsection>
 
-  <subsection name="Apache UIMA DUCC Version 2.2.0">
-    <insertDownloads version="2.2.0"/>
-  </subsection>
-
 </section> 
 
 <section name="Older Releases">
@@ -180,6 +192,11 @@ Other mirrors: <select name="Preferred">
   
   <subsection name="Apache UIMA Version 2.10.0">
     <insertDownloads version="2.10.0"/>
+  </subsection>
+
+  <!-- includes latest uima-as release -->
+  <subsection name="Apache UIMA Version 2.9.0">
+    <insertDownloads version="2.9.0"/>
   </subsection>
 
   <subsection name="Apache UIMA Version 2.8.1">
@@ -207,6 +224,9 @@ Other mirrors: <select name="Preferred">
   <p>The 2.4.1 of the UIMA Java SDK has been replaced by the 2.4.2 version above. There was no UIMA-AS version 2.4.1 released.</p>
   -->
   
+  <subsection name="Apache UIMA DUCC Version 2.2.0">
+    <insertDownloads version="2.2.0"/>
+  </subsection>
   
   <subsection name="Apache UIMA DUCC Version 2.1.0">
     <insertDownloads version="2.1.0"/>

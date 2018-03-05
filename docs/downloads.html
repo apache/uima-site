@@ -256,8 +256,18 @@ Thus they must be untarred with a GNU compatible version of
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>You can install current releases of the UIMA Eclipse tooling via our Eclipse update site: 
+                                    <p>You can install current releases of the UIMA Eclipse tooling via our Eclipse update site.  
+There are two update sites: one is for versions of plugins for UIMA version 2, the other is for version 3 plugins.
+</p>
+                                                <ul>
+<li>Version 3:
+<a href="https://www.apache.org/dist/uima/eclipse-update-site-v3/">https://www.apache.org/dist/uima/eclipse-update-site-v3/</a>.
+</li>
+<li>Version 2:  
 <a href="https://www.apache.org/dist/uima/eclipse-update-site/">https://www.apache.org/dist/uima/eclipse-update-site/</a>.
+</li>
+</ul>
+                                                <p>
 Older releases are at Apache's archive for releases, and you can find links to them 
 <a href="eclipse-update-archives.html">here</a>.
 </p>
@@ -329,20 +339,19 @@ Other mirrors: <select name="Preferred">
                                         <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Alpha and Beta levels for early adopters and testing"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Alpha and Beta levels for early adopters and testing</h1></a>
+        <a name="Latest Official Releases"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Latest Official Releases</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>Occasionally, we release alpha and beta levels of upcoming versions, in order to gain feedback from a wider
-    community.  These early versions are less stable than normal releases, and should not be used for production work.
-  </p>
+                                    <p>Note that some older releases appear under the "Latest" because they contain
+     the latest release of some of the components included in that version. </p>
                                                       <table class="subsectionTable">
         <tr><td>
        
        
        
-          <a name="Apache UIMA Version 3.0.0-beta">
-            <h2>Apache UIMA Version 3.0.0-beta
+          <a name="Apache UIMA Version 3.0.0">
+            <h2>Apache UIMA Version 3.0.0
                         </h2>
           </a>
       </td></tr>
@@ -351,21 +360,22 @@ Other mirrors: <select name="Preferred">
                                     <p>UIMA V3 is a re-implementation of the core Java version.  It represents Feature Structures as Java Objects,
        allowing them to be Garbage Collected, for example.  It depends on and exploits many Java 8 features.
     </p>
-                                                <p>This is the beta version of 3.0.0.  It requires Java 8.  This version is expected to have 
-       stabilized the user-facing APIs, and is the last planned release before the official 3.0.0 release.  
-    </p>
+                                                <p>The JCas implementation changed, and JCas classes (if used) will need to be migrated.  The V3 users guide describes
+      a migration tool to aid in this process.</p>
                                                 <p>There are many new features, described in 
-      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-beta/version_3_users_guide.html#uv3.overview.new">
+      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0/version_3_users_guide.html#uv3.overview.new">
       this overview</a>.  For more details, please see the documentation for version 3, which can be found 
-      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-beta/version_3_users_guide.html">here.</a>
-      Changes since the first alpha version are mainly involving an update to the logging framework; see
-      the <a target="_blank" href="../d/uimaj-3.0.0-beta/RELEASE_NOTES.html">Release Notes</a> for details.
+      <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0/version_3_users_guide.html">here.</a>
+      Changes since the beta version are listed in the 
+      <a target="_blank" href="../d/uimaj-3.0.0/RELEASE_NOTES.html">Release Notes</a>.
     </p>
-                                                <p>A version of the Eclipse plugin tooling is available, at a special eclipse update
-       site, <a target="_blank" href="https://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production">
-       https://www.apache.org/dist/uima/eclipse-update-site/uimaj-v3-pre-production
-       </a>.  Its version of the JCasGen plugin will generate V3 JCas classes.
+                                                <p>Version 3 has updated Eclipse plugin tooling, available
+       at <a target="_blank" href="https://www.apache.org/dist/uima/eclipse-update-site-v3">
+       https://www.apache.org/dist/uima/eclipse-update-site-v3</a>.  
+       This site's version of the JCasGen plugin will generate V3 JCas classes.
     </p>
+                                                <p>Other components built upon the UIMA Java SDK will not (yet) run with version 3, until 
+      migrated versions of these are released.</p>
                                                   
       
       
@@ -382,40 +392,40 @@ Other mirrors: <select name="Preferred">
             
       <tr>
         <td class="downloadtitle"><h3 class="downloadartifact">
-                      <a href="../d/uimaj-3.0.0-beta/RELEASE_NOTES.html">
+                      <a href="../d/uimaj-3.0.0/RELEASE_NOTES.html">
               UIMA Java framework & SDK</a></h3></td>
           
         <td>
-                                    <div class="htmltxt"><a href='../d/uimaj-3.0.0-beta/RELEASE_NOTES.html'>html</a></div>
+                                    <div class="htmltxt"><a href='../d/uimaj-3.0.0/RELEASE_NOTES.html'>html</a></div>
                               </td>
         <td>
                                 <table class="downloadentries">
               <tr>
-     <td><a href='[preferred]/uima//uimaj-3.0.0-beta/uimaj-3.0.0-beta-bin.zip'>zip</a></td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0-beta/uimaj-3.0.0-beta-bin.zip.asc'>asc</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0-beta/uimaj-3.0.0-beta-bin.zip.md5'>md5</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0-beta/uimaj-3.0.0-beta-bin.zip.sha1'>sha1</a>]</td>
+     <td><a href='[preferred]/uima//uimaj-3.0.0/uimaj-3.0.0-bin.zip'>zip</a></td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0/uimaj-3.0.0-bin.zip.asc'>asc</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0/uimaj-3.0.0-bin.zip.md5'>md5</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0/uimaj-3.0.0-bin.zip.sha1'>sha1</a>]</td>
          </tr>
               <tr>
-     <td><a href='[preferred]/uima//uimaj-3.0.0-beta/uimaj-3.0.0-beta-bin.tar.gz'>tar.gz</a></td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0-beta/uimaj-3.0.0-beta-bin.tar.gz.asc'>asc</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0-beta/uimaj-3.0.0-beta-bin.tar.gz.md5'>md5</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0-beta/uimaj-3.0.0-beta-bin.tar.gz.sha1'>sha1</a>]</td>
+     <td><a href='[preferred]/uima//uimaj-3.0.0/uimaj-3.0.0-bin.tar.gz'>tar.gz</a></td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0/uimaj-3.0.0-bin.tar.gz.asc'>asc</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0/uimaj-3.0.0-bin.tar.gz.md5'>md5</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0/uimaj-3.0.0-bin.tar.gz.sha1'>sha1</a>]</td>
          </tr>
     </table>
                           </td>
                 <td>
                                 <table class="downloadentries">
               <tr>
-     <td><a href='[preferred]/uima//uimaj-3.0.0-beta/uimaj-3.0.0-beta-source-release.zip'>zip</a></td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0-beta/uimaj-3.0.0-beta-source-release.zip.asc'>asc</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0-beta/uimaj-3.0.0-beta-source-release.zip.md5'>md5</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0-beta/uimaj-3.0.0-beta-source-release.zip.sha1'>sha1</a>]</td>
+     <td><a href='[preferred]/uima//uimaj-3.0.0/uimaj-3.0.0-source-release.zip'>zip</a></td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0/uimaj-3.0.0-source-release.zip.asc'>asc</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0/uimaj-3.0.0-source-release.zip.md5'>md5</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-3.0.0/uimaj-3.0.0-source-release.zip.sha1'>sha1</a>]</td>
          </tr>
     </table>
                           </td>
                 <td>
-          <div class="htmltxt">09-Nov-2017</div>
+          <div class="htmltxt">05-Mar-2018</div>
         </td>
               </tr>
     
@@ -446,19 +456,6 @@ Other mirrors: <select name="Preferred">
                                   </blockquote>
         </td></tr>
     </table>
-                            </blockquote>
-        </p>
-      </td></tr>
-    </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
-        <tr><td>
-        <a name="Latest Official Releases"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Latest Official Releases</h1></a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="sectionBody">
-                                    <p>Note that some older releases appear under the "Latest" because they contain
-     the latest release of some of the components included in that version. </p>
                                                       <table class="subsectionTable">
         <tr><td>
        
@@ -471,7 +468,9 @@ Other mirrors: <select name="Preferred">
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                      
+                                    <p>This is the latest version of Version 2 of the UIMA Java SDK, and UIMA-AS. Other components built upon
+    the UIMA Java SDK are built to be compatible with this version.</p>
+                                                  
       
       
       
@@ -668,149 +667,6 @@ Other mirrors: <select name="Preferred">
       
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-                                  </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable">
-        <tr><td>
-       
-       
-       
-          <a name="Apache UIMA Version 2.9.0">
-            <h2>Apache UIMA Version 2.9.0
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                      
-      
-      
-      
-      
-            <table class="downloads">
-    <tr>
-      <th>Artifact</th>
-      <th>Release <br/> Notes</th>
-      <th>Binary</th>
-      <th>Source</th>
-              <th>Release Date</th>
-          </tr>
-
-                
-            
-      <tr>
-        <td class="downloadtitle"><h3 class="downloadartifact">
-                      <a href="../d/uima-as-2.9.0/RELEASE_NOTES.html">
-              UIMA AS Asynchronous Scaleout</a></h3></td>
-          
-        <td>
-                                    <div class="htmltxt"><a href='../d/uima-as-2.9.0/RELEASE_NOTES.html'>html</a></div>
-                              </td>
-        <td>
-                                <table class="downloadentries">
-              <tr>
-     <td><a href='[preferred]/uima//uima-as-2.9.0/uima-as-2.9.0-bin.zip'>zip</a></td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-bin.zip.asc'>asc</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-bin.zip.md5'>md5</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-bin.zip.sha1'>sha1</a>]</td>
-         </tr>
-              <tr>
-     <td><a href='[preferred]/uima//uima-as-2.9.0/uima-as-2.9.0-bin.tar.gz'>tar.gz</a></td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-bin.tar.gz.asc'>asc</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-bin.tar.gz.md5'>md5</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-bin.tar.gz.sha1'>sha1</a>]</td>
-         </tr>
-    </table>
-                          </td>
-                <td>
-                                <table class="downloadentries">
-              <tr>
-     <td><a href='[preferred]/uima//uima-as-2.9.0/uima-as-2.9.0-source-release.zip'>zip</a></td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-source-release.zip.asc'>asc</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-source-release.zip.md5'>md5</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-source-release.zip.sha1'>sha1</a>]</td>
-         </tr>
-    </table>
-                          </td>
-                <td>
-          <div class="htmltxt">15-Dec-2016</div>
-        </td>
-              </tr>
-    
-  </table>  
-      
-      
-      
-      
-            <table class="downloads">
-    <tr>
-      <th>Artifact</th>
-      <th>Release <br/> Notes</th>
-      <th>Binary</th>
-      <th>Source</th>
-              <th>Release Date</th>
-          </tr>
-
-                
-            
-      <tr>
-        <td class="downloadtitle"><h3 class="downloadartifact">
-                      <a href="../d/uimaj-2.9.0/RELEASE_NOTES.html">
-              UIMA Java framework & SDK</a></h3></td>
-          
-        <td>
-                                    <div class="htmltxt"><a href='../d/uimaj-2.9.0/RELEASE_NOTES.html'>html</a></div>
-                              </td>
-        <td>
-                                <table class="downloadentries">
-              <tr>
-     <td><a href='[preferred]/uima//uimaj-2.9.0/uimaj-2.9.0-bin.zip'>zip</a></td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-bin.zip.asc'>asc</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-bin.zip.md5'>md5</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-bin.zip.sha1'>sha1</a>]</td>
-         </tr>
-              <tr>
-     <td><a href='[preferred]/uima//uimaj-2.9.0/uimaj-2.9.0-bin.tar.gz'>tar.gz</a></td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-bin.tar.gz.asc'>asc</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-bin.tar.gz.md5'>md5</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-bin.tar.gz.sha1'>sha1</a>]</td>
-         </tr>
-    </table>
-                          </td>
-                <td>
-                                <table class="downloadentries">
-              <tr>
-     <td><a href='[preferred]/uima//uimaj-2.9.0/uimaj-2.9.0-source-release.zip'>zip</a></td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-source-release.zip.asc'>asc</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-source-release.zip.md5'>md5</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-source-release.zip.sha1'>sha1</a>]</td>
-         </tr>
-    </table>
-                          </td>
-                <td>
-          <div class="htmltxt">30-Aug-2016</div>
-        </td>
-              </tr>
-    
-  </table>  
       
       
       
@@ -1207,92 +1063,6 @@ Other mirrors: <select name="Preferred">
                                   </blockquote>
         </td></tr>
     </table>
-                                                      <table class="subsectionTable">
-        <tr><td>
-       
-       
-       
-          <a name="Apache UIMA DUCC Version 2.2.0">
-            <h2>Apache UIMA DUCC Version 2.2.0
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                      
-      
-            <table class="downloads">
-    <tr>
-      <th>Artifact</th>
-      <th>Release <br/> Notes</th>
-      <th>Binary</th>
-      <th>Source</th>
-              <th>Release Date</th>
-          </tr>
-
-                
-            
-      <tr>
-        <td class="downloadtitle"><h3 class="downloadartifact">
-                      <a href="../d/uima-ducc-2.2.0/RELEASE_NOTES.html">
-              UIMA DUCC</a></h3></td>
-          
-        <td>
-                                    <div class="htmltxt"><a href='../d/uima-ducc-2.2.0/RELEASE_NOTES.html'>html</a></div>
-                              </td>
-        <td>
-                                <table class="downloadentries">
-              <tr>
-     <td><a href='[preferred]/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-bin.tar.gz'>tar.gz</a></td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-bin.tar.gz.asc'>asc</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-bin.tar.gz.md5'>md5</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-bin.tar.gz.sha1'>sha1</a>]</td>
-         </tr>
-    </table>
-                          </td>
-                <td>
-                                <table class="downloadentries">
-              <tr>
-     <td><a href='[preferred]/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-source-release.zip'>zip</a></td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-source-release.zip.asc'>asc</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-source-release.zip.md5'>md5</a>]</td>
-     <td>[<a href='https://www.apache.org/dist/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-source-release.zip.sha1'>sha1</a>]</td>
-         </tr>
-    </table>
-                          </td>
-                <td>
-          <div class="htmltxt">23-Feb-2017</div>
-        </td>
-              </tr>
-    
-  </table>  
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-                                  </blockquote>
-        </td></tr>
-    </table>
                             </blockquote>
         </p>
       </td></tr>
@@ -1468,6 +1238,149 @@ Other mirrors: <select name="Preferred">
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+                                  </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Apache UIMA Version 2.9.0">
+            <h2>Apache UIMA Version 2.9.0
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                      
+      
+      
+      
+      
+            <table class="downloads">
+    <tr>
+      <th>Artifact</th>
+      <th>Release <br/> Notes</th>
+      <th>Binary</th>
+      <th>Source</th>
+              <th>Release Date</th>
+          </tr>
+
+                
+            
+      <tr>
+        <td class="downloadtitle"><h3 class="downloadartifact">
+                      <a href="../d/uima-as-2.9.0/RELEASE_NOTES.html">
+              UIMA AS Asynchronous Scaleout</a></h3></td>
+          
+        <td>
+                                    <div class="htmltxt"><a href='../d/uima-as-2.9.0/RELEASE_NOTES.html'>html</a></div>
+                              </td>
+        <td>
+                                <table class="downloadentries">
+              <tr>
+     <td><a href='[preferred]/uima//uima-as-2.9.0/uima-as-2.9.0-bin.zip'>zip</a></td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-bin.zip.asc'>asc</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-bin.zip.md5'>md5</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-bin.zip.sha1'>sha1</a>]</td>
+         </tr>
+              <tr>
+     <td><a href='[preferred]/uima//uima-as-2.9.0/uima-as-2.9.0-bin.tar.gz'>tar.gz</a></td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-bin.tar.gz.asc'>asc</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-bin.tar.gz.md5'>md5</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-bin.tar.gz.sha1'>sha1</a>]</td>
+         </tr>
+    </table>
+                          </td>
+                <td>
+                                <table class="downloadentries">
+              <tr>
+     <td><a href='[preferred]/uima//uima-as-2.9.0/uima-as-2.9.0-source-release.zip'>zip</a></td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-source-release.zip.asc'>asc</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-source-release.zip.md5'>md5</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-as-2.9.0/uima-as-2.9.0-source-release.zip.sha1'>sha1</a>]</td>
+         </tr>
+    </table>
+                          </td>
+                <td>
+          <div class="htmltxt">15-Dec-2016</div>
+        </td>
+              </tr>
+    
+  </table>  
+      
+      
+      
+      
+            <table class="downloads">
+    <tr>
+      <th>Artifact</th>
+      <th>Release <br/> Notes</th>
+      <th>Binary</th>
+      <th>Source</th>
+              <th>Release Date</th>
+          </tr>
+
+                
+            
+      <tr>
+        <td class="downloadtitle"><h3 class="downloadartifact">
+                      <a href="../d/uimaj-2.9.0/RELEASE_NOTES.html">
+              UIMA Java framework & SDK</a></h3></td>
+          
+        <td>
+                                    <div class="htmltxt"><a href='../d/uimaj-2.9.0/RELEASE_NOTES.html'>html</a></div>
+                              </td>
+        <td>
+                                <table class="downloadentries">
+              <tr>
+     <td><a href='[preferred]/uima//uimaj-2.9.0/uimaj-2.9.0-bin.zip'>zip</a></td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-bin.zip.asc'>asc</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-bin.zip.md5'>md5</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-bin.zip.sha1'>sha1</a>]</td>
+         </tr>
+              <tr>
+     <td><a href='[preferred]/uima//uimaj-2.9.0/uimaj-2.9.0-bin.tar.gz'>tar.gz</a></td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-bin.tar.gz.asc'>asc</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-bin.tar.gz.md5'>md5</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-bin.tar.gz.sha1'>sha1</a>]</td>
+         </tr>
+    </table>
+                          </td>
+                <td>
+                                <table class="downloadentries">
+              <tr>
+     <td><a href='[preferred]/uima//uimaj-2.9.0/uimaj-2.9.0-source-release.zip'>zip</a></td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-source-release.zip.asc'>asc</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-source-release.zip.md5'>md5</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uimaj-2.9.0/uimaj-2.9.0-source-release.zip.sha1'>sha1</a>]</td>
+         </tr>
+    </table>
+                          </td>
+                <td>
+          <div class="htmltxt">30-Aug-2016</div>
+        </td>
+              </tr>
+    
+  </table>  
       
       
       
@@ -1856,6 +1769,92 @@ Other mirrors: <select name="Preferred">
               </tr>
     
   </table>  
+      
+      
+      
+      
+      
+      
+      
+      
+                                  </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Apache UIMA DUCC Version 2.2.0">
+            <h2>Apache UIMA DUCC Version 2.2.0
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                      
+      
+            <table class="downloads">
+    <tr>
+      <th>Artifact</th>
+      <th>Release <br/> Notes</th>
+      <th>Binary</th>
+      <th>Source</th>
+              <th>Release Date</th>
+          </tr>
+
+                
+            
+      <tr>
+        <td class="downloadtitle"><h3 class="downloadartifact">
+                      <a href="../d/uima-ducc-2.2.0/RELEASE_NOTES.html">
+              UIMA DUCC</a></h3></td>
+          
+        <td>
+                                    <div class="htmltxt"><a href='../d/uima-ducc-2.2.0/RELEASE_NOTES.html'>html</a></div>
+                              </td>
+        <td>
+                                <table class="downloadentries">
+              <tr>
+     <td><a href='[preferred]/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-bin.tar.gz'>tar.gz</a></td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-bin.tar.gz.asc'>asc</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-bin.tar.gz.md5'>md5</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-bin.tar.gz.sha1'>sha1</a>]</td>
+         </tr>
+    </table>
+                          </td>
+                <td>
+                                <table class="downloadentries">
+              <tr>
+     <td><a href='[preferred]/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-source-release.zip'>zip</a></td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-source-release.zip.asc'>asc</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-source-release.zip.md5'>md5</a>]</td>
+     <td>[<a href='https://www.apache.org/dist/uima//uima-ducc-2.2.0/uima-ducc-2.2.0-source-release.zip.sha1'>sha1</a>]</td>
+         </tr>
+    </table>
+                          </td>
+                <td>
+          <div class="htmltxt">23-Feb-2017</div>
+        </td>
+              </tr>
+    
+  </table>  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       

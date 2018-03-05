@@ -226,6 +226,13 @@
         <blockquote class="sectionBody">
                                           <table class="subsectionToc">
             <tr >
+      <td>05 Mar 2018</td>
+      <td><a href='#05 Mar 2018'>
+                  Apache UIMA Java SDK 3.0.0 released
+                </a>
+      </td>
+      </tr>  
+          <tr >
       <td>07 Feb 2018</td>
       <td><a href='#07 Feb 2018'>
                   Apache UIMA Asynchronous Scaleout (UIMA-AS) 2.10.2 released
@@ -689,6 +696,44 @@
       </tr>  
         </table>
                                                         <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="05 Mar 2018">
+            <h2>05 Mar 2018
+                        &ndash; Apache UIMA Java SDK 3.0.0 released
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>UIMA Java SDK 3.0.0 is a new version of the core Java UIMA SDK.
+         This version requires a migration for pre V3 versions which use JCas classes, which will take a little 
+         planning.  For those users who do not wish to migrate, please continue to use 2.10.2, which will 
+         continue to be maintained.</p>
+                                                <p>Version 3 re-implements Feature Structures as Java Objects; this allows them to be garbage collected.
+        Many of the internal data structures have been improved and several new capabilities have been added.
+       <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0/version_3_users_guide.html#uv3.overview.new">  
+       <b>Here</b></a> is a brief overview of the new features, capabilities, and migration tooling.</p>
+                                                <p>Requirements: Java 8 and, for any user-defined JCas cover classes, regeneration or migration of those 
+       (a migration tool is provided).</p>
+                                                <p>Except for migration of user-defined JCas classes, this new version is designed to backwards compatible with existing
+          version 2 UIMA pipelines.  The    
+          <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-beta/version_3_users_guide.html">
+          Version 3 User's Guide</a> has more details.
+          The <a target="_blank" href="https://uima.apache.org/d/uimaj-3.0.0-beta/RELEASE_NOTES.html">Release Notes</a> 
+          describe what's changed since the last 3.0.0-beta release.
+       </p>
+                                                <p>The Eclipse update site is available, but located in a 
+          <a target="_blank" href="https://www.apache.org/dist/uima/eclipse-update-site-v3">different spot</a>,
+          in order to prevent accidentally installing v3; this version requires Java 8 and the JCasGen generates
+          v3 style classes.  If you want to use this and also need to keep using v2 components, please install these
+          Eclipse plugins into a separate, newly obtained eclipse download.</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
         <tr><td>
        
        
