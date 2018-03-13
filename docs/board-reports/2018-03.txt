@@ -1,0 +1,36 @@
+Board report for Apache UIMA, for March 2018.
+
+Apache UIMA's mission: the creation and maintenance of open-source
+software related to the analysis of unstructured data, guided by the
+UIMA Oasis Standard.
+
+Dates: 
+05 Mar 2018  (new)        last release - UIMA Java SDK 3.0.0
+03 May 2016  (no change)  last PMC addition 
+18 Apr 2017  (no change)  last Committer addition
+          
+Releases:
+  05 Mar 2018 Apache UIMA Java SDK 3.0.0
+  07 Feb 2018 Apache UIMA Asynchronous Scaleout (UIMA-AS) 2.10.2
+              
+Activity:
+  Java SDK, UIMA-AS, DUCC, RUTA are 
+  actively being worked on.  
+  
+  The Java SDK version 3.0.0 was finally released after 
+  an extensive ramp up involving 2 alpha releases and
+  one beta release.
+  
+  Our last committer addition was William Colen, who is contributing
+  to the C++ implementation of the UIMA framework. 
+  
+  Mailing list activity remains moderate.  
+              
+Community:
+  The community continues to be moderately active.
+  There has been a bit of discussion around moving more to GIT;
+  some are in favor; others feel it would be a significant
+  workload increase for which they don't have time. 
+ 
+Issues:
+  No Board level issues at this time.
