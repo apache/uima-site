@@ -88,6 +88,15 @@
         --> 
   </menus>
 
+  <downloads version="2.2.2" title="Apache UIMA DUCC Version 2.2.2" withreleasedate="true">
+
+    <download name="UIMA DUCC" subdirectory="uima-ducc-2.2.2" releasedate="19-Mar-2018">
+      <releasenotes filename="uima-ducc-2.2.2/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
+      <binary       filename="uima-ducc-2.2.2-bin">                   <f>tar.gz</f>                </binary>   
+      <source       filename="uima-ducc-2.2.2-source-release">                   <f>zip</f>    </source>
+    </download>
+  </downloads>
+
   <downloads version="2.2.1" title="Apache UIMA DUCC Version 2.2.1" withreleasedate="true">
 
     <download name="UIMA DUCC" subdirectory="uima-ducc-2.2.1" releasedate="30-Aug-2017">
