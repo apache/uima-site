@@ -30,6 +30,12 @@
 		<section name="Welcome to the Apache UIMA project">
         <div style="float: right; width: 220px; margin-left: 10px; border: 1px solid grey; background: white;" >
         <div style="text-align: center; border-bottom: 1px solid grey; margin:0.2em;">Join us on <a href="https://www.hipchat.com/g9uWu1gfO">HipChat</a></div>
+        <div style="text-align: center; border-bottom: 1px solid grey; margin:0.2em; padding-bottom: 0.2em;">
+          <a  href="https://www.apache.org/events/current-event.html">
+            <img src="acna-sleek-standard-675.png"/>
+            <!-- img src="https://www.apache.org/events/current-event-234x60.png"/ -->
+          </a>
+        </div>
         <div style="text-align: center; border-bottom: 1px solid grey; margin:0.2em; padding-bottom: 0.2em;"><a href="https://donate.apache.org"></a><img style="width:100px" src="https://blogs.apache.org/foundation/mediaresource/d67ca611-a57c-462d-ac23-95063f81d175" title="Donate to ASF"/><a/></div>
         <a width="220" class="twitter-timeline" data-dnt="true" href="https://twitter.com/ApacheUIMA" data-widget-id="711227112531894273">Tweets by @ApacheUIMA</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
