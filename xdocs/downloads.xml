@@ -130,7 +130,16 @@ Other mirrors: <select name="Preferred">
   <p>Note that some older releases appear under the "Latest" because they contain
      the latest release of some of the components included in that version. </p>
 
-  <subsection name="Apache UIMA DUCC Version 2.2.2">
+ 
+<subsection name="Apache UIMA Version 2.10.3">
+   <p>This is the latest version of Version 2 of the UIMA Java SDK, and UIMA-AS. Other components built upon
+    the UIMA Java SDK are built to be compatible with this version.</p>
+   
+    <insertDownloads version="2.10.3"/>
+  </subsection>
+ 
+
+ <subsection name="Apache UIMA DUCC Version 2.2.2">
     <insertDownloads version="2.2.2"/>
   </subsection>
 
