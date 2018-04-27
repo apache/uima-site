@@ -332,6 +332,7 @@ svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos
       <pre>svn copy https://dist.apache.org/repos/dist/dev/uima/uimaj/2.10.0-rc1/artifacts
         https://dist.apache.org/repos/dist/release/uima/uimaj-2.10.0 -m "release uimaj-2.10.0"
       </pre>
+      <p>If adding additional new directories to the target, use the --parent parameter to tell svn to create those.</p>
       
             Do not add files like POMs which have line-endings, if they have signatures; the files added should
       be "binary" style files.  (The line endings (if you build on windows) will be changed upon upload to svn,

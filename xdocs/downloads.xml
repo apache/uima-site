@@ -172,7 +172,8 @@ Other mirrors: <select name="Preferred">
   </subsection>
   
  <subsection name="Apache UIMA Version 2.10.2">
-   <p>This is the latest version of Version 2 of the UIMA Java SDK, and UIMA-AS. Other components built upon
+   <p>This is the latest version of Version 2 of the UIMA Java SDK, UIMA-AS, and the ConceptMapper addon. 
+    Other components built upon
     the UIMA Java SDK are built to be compatible with this version.</p>
    
     <insertDownloads version="2.10.2"/>
@@ -194,7 +195,7 @@ Other mirrors: <select name="Preferred">
   <subsection name="Apache UIMA Ruta">
     <insertDownloads version="Ruta"/>
   </subsection>
-
+  
 </section> 
 
 <section name="Older Releases">
@@ -258,6 +259,7 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="1.0.0"/>
   </subsection>
   
+
   
   <subsection name="Apache UIMA Addons">
     <insertDownloads version="2.3.1"/>

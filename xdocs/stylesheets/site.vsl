@@ -496,7 +496,7 @@ under the License.
     <tr>
      <td><a href='$drmirror/$dir/$subdirectory/${filenameType}'>$ft</a></td>
      <td>[<a href='$dr/$dir/$subdirectory/${filenameType}.asc'>asc</a>]</td>
-     <td>[<a href='$dr/$dir/$subdirectory/${filenameType}.md5'>md5</a>]</td>
+##     <td>[<a href='$dr/$dir/$subdirectory/${filenameType}.md5'>md5</a>]</td>  removed per change in apache release policy 4/2018 schor
      <td>[<a href='$dr/$dir/$subdirectory/${filenameType}.sha1'>sha1</a>]</td>
      #if ($suffix.getAttributeValue("platform"))
        <td>$suffix.getAttributeValue("platform")</td>

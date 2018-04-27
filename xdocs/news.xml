@@ -35,6 +35,16 @@
 
     <subsectionToc/>
 
+   <subsection name="27 Apr 2018" date = "27 Apr 2018" title="Apache UIMA ConceptMapper addon 2.10.2 released">
+      <p>UIMA ConceptMapper 2.10.2 updates the Concept Mapper, one of the annotators in the Addons, to use the 
+      current UIMA APIs, allows configuration inputs to come from Jars on the classpath, and adds buffering to the I/O
+      for compiled dictionaries.
+      </p><p>
+      The complete list of fixes is <a href="d/addons/ConceptMapper-2.10.2/issuesFixed/jira-report.html">here</a>.
+      </p>
+
+    </subsection>
+
     <subsection name="17 Apr 2018" date = "17 Apr 2018" title="Apache UIMA Asynchronous Scaleout (UIMA-AS) 2.10.3 released">
       <p>UIMA AS 2.10.3 is a maintenance release that contains fixes and improvements over UIMA-AS 2.10.2.
       </p><p>

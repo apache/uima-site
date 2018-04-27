@@ -321,7 +321,11 @@ document; used by the FileSystemCollectionReader</dd>
       Numerous parameters can be used to specify various aspects of the lookup algorithm, input processing and output options. 
       The dictionary structure is flexible, allowing any number synonyms to be associated with an entry, 
       and any number of attributes to be associated with entries or synonyms. 
-    </p><p>
+    </p>
+    
+    <p>ConceptMapper is separately released, and available on the downloads page.</p>
+    
+    <p>
 	  Lookup and matching against dictionary entries can be performed against 
 	  contiguous or non-contiguous blocks of text, and token order independent 
 	  lookup is also allowed (for example, the tokens "A" "B" would be considered 
