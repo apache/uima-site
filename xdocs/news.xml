@@ -40,7 +40,7 @@
       current UIMA APIs, allows configuration inputs to come from Jars on the classpath, and adds buffering to the I/O
       for compiled dictionaries.
       </p><p>
-      The complete list of fixes is <a href="d/addons/ConceptMapper-2.10.2/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="d/uima-addons/ConceptMapper-2.10.2/issuesFixed/jira-report.html">here</a>.
       </p>
 
     </subsection>
