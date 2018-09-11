@@ -1,0 +1,45 @@
+Board report for Apache UIMA, for June 2018.
+
+Apache UIMA's mission: the creation and maintenance of open-source software
+related to the analysis of unstructured data, guided by the UIMA Oasis
+Standard.
+
+## PMC changes:
+
+ - Currently 16 PMC members.
+ - No new PMC members added in the last 3 months
+ - Last PMC addition was Lou DeGenaro on Mon May 02 2016
+
+## Committer base changes:
+
+ - Currently 24 committers.
+ - No new committers added in the last 3 months
+ - Last committer addition was William Colen at Wed Apr 19 2017
+
+ ## Releases:
+
+ - UIMA Asynchronous Scaleout (UIMA-AS) 2.10.3 was released on Mon Apr 16 2018
+ - UIMA-DUCC 2.2.2 was released on Sun Mar 18 2018
+ - UIMA ConceptMapper addon 2.10.2 was released 27 April 2018
+
+Activity: Java SDK, UIMA-FIT, UIMA-AS, DUCC, RUTA are actively being worked
+on.
+
+  uimaFIT moved to GIT from SVN, the first project within UIMA to do so.
+
+  Mailing list activity remains moderate.
+
+  <private>
+    We investigated GDPR impacts on our website, and decided to be prudent and
+    removed our Google Analytics which we were not using very much, and
+    changed our Twitter "widget" (which seemed to store / send various user
+    -related data) to a plain link.
+
+    This latter change was unfortunate, as the widget use to display recent
+    tweets. It would be good if Apache figures out a global
+    "it's-ok-to-do-this" set of policies/best practices for this.
+  </private>
+
+Community: The community continues to be moderately active.
+
+Issues: No Board level issues at this time.
