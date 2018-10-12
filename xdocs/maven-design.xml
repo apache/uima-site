@@ -183,10 +183,21 @@ our svn tree, in a top level directory named "build".</p>
   
 </subsection>
 
-<subsection name="Release artifacts">
+<subsection name="Release artifacts, signing, checksums">
   <p>We follow the standard release process for Maven-based artifacts at Apache,
     documented <a target="_blank" 
       href="https://www.apache.org/dev/publishing-maven-artifacts.html">here.</a></p>
+   
+  <p>There are two places artifacts go to:</p>
+  <ol>
+    <li>Apache's mirror distribution system</li>
+    <li>Maven "central" for maven-findable artifacts (typically JARs)</li>
+  </ol>
+  
+  <p>Apache's mirror distribution system is used to distribute the source-release.zip and 
+     any binary convenience packages.      
+  </p>
+  
   <p>For each artifact, the release process may build additional artifacts, and
      attach them to the main one, so they will "go along with" the main artifact during 
      Maven deployment to repositories.  Some of these are:</p>
@@ -194,21 +205,21 @@ our svn tree, in a top level directory named "build".</p>
       <li>
         sources.jar - holds the source files - this is for IDEs that want to refer to the source
       </li>
-      
-      <li><p>
-        source-release.zip. This is the same as the sources, but includes all other files 
+      <li>javadocs.jar</li>      
+    </ul>  
+    
+    <p>The source-release.zip file is a special artifact, like the sources.jar, but includes all other files 
         (such as the pom.xml) not under the /src
         directory, needed for building.  
         The intent is that this is the same as the SVN checked-in files, and once unzipped, this
         should be "buildable" by doing "mvn install", etc. in the unzipped directory.
         </p>
         <p><code>source-release.zip</code> files for multi-project aggregates (such as the main
-        UIMA SDK) are not "attached", and are not uploaded to maven for distribution; instead, 
-        these are considered the main binary artifacts for the project and are distributed
-        using Apache's own mirroring distribution system.
-        </p>
-      </li>
-    </ul>  
+        UIMA SDK) are built only at the top (root) level; the pom for that level typically specifies
+        to skip the deploy to maven-central, so the convenience packages and the source-release.zip are not deployed
+        there, but instead are distributed via Apache's mirror system.
+    </p>
+    
     <p>
     The release process happens when the commands <code>mvn release:prepare</code> followed by 
     <code>mvn release:perform</code> are executed.  The release plugin is set up by the common
@@ -218,6 +229,9 @@ our svn tree, in a top level directory named "build".</p>
     You can debug this process without doing a release, by adding the parameter 
     <code>-Papache-release</code> to the non-release Maven build commands.
   </p>
+  
+    <p>All artifacts have gpg signatures, as well as .sha512 checksums.  These are typically created during the build
+       process for the main artifact, all attached artifacts, and the pom.</p>
   
   <h2>LICENSE and NOTICE files</h2>
   <p>
