@@ -489,9 +489,8 @@ our svn tree, in a top level directory named "build".</p>
         should be "buildable" by doing "mvn install", etc. in the unzipped directory.
         </p>
                                                 <p><code>source-release.zip</code> files for multi-project aggregates (such as the main
-        UIMA SDK) are built only at the top (root) level; the pom for that level typically specifies
-        to skip the deploy to maven-central, so the convenience packages and the source-release.zip are not deployed
-        there, but instead are distributed via Apache's mirror system.
+        UIMA SDK) are built only at the top (root) level and are not "attached" so it is 
+        not uploaded to maven for distribution, but instead is distributed via Apache's mirror system.
     </p>
                                                 <p>
     The release process happens when the commands <code>mvn release:prepare</code> followed by 
@@ -502,8 +501,14 @@ our svn tree, in a top level directory named "build".</p>
     You can debug this process without doing a release, by adding the parameter 
     <code>-Papache-release</code> to the non-release Maven build commands.
   </p>
-                                                <p>All artifacts have gpg signatures, as well as .sha512 checksums.  These are typically created during the build
-       process for the main artifact, all attached artifacts, and the pom.</p>
+                                                <p>For apache-releases (triggered with the apache-release profile), all artifacts 
+       get signed with gpg signatures, as well as with .sha512 checksums.  
+       These are created during the build for the top level project, when 
+       the apache-release profile is specified, or when the mvn release plugin is run.
+       Most of the signatures happen because of the gpg plugin and the 
+       checsum-maven-plugin, but the source-release.zip artifact has its own
+       special antrun task since it's not attached.
+       </p>
                                                 <h2>LICENSE and NOTICE files</h2>
                                                 <p>
     Things that are distributed from Apache need LICENSE and NOTICE files.  We have several kinds
