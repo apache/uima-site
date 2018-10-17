@@ -131,9 +131,8 @@ Other mirrors: <select name="Preferred">
      the latest release of some of the components included in that version. </p>
 
  
-<subsection name="Apache UIMA Version 2.10.3">
-   <p>This is the latest version of Version 2 of the UIMA Java SDK, and UIMA-AS. Other components built upon
-    the UIMA Java SDK are built to be compatible with this version.</p>
+<subsection name="Apache UIMA-AS 2.10.3">
+   <p>This is the latest version of Version 2 of UIMA-AS.</p>
    
     <insertDownloads version="2.10.3"/>
   </subsection>
@@ -159,10 +158,12 @@ Other mirrors: <select name="Preferred">
       <a target="_blank" href="../d/uimaj-3.0.0/RELEASE_NOTES.html">Release Notes</a>.
     </p>
     
-    <p>Version 3 has updated Eclipse plugin tooling, available
+    <p>Version 3 also has updated Eclipse plugin tooling, available
        at <a target="_blank" href="https://www.apache.org/dist/uima/eclipse-update-site-v3">
        https://www.apache.org/dist/uima/eclipse-update-site-v3</a>.  
        This site's version of the JCasGen plugin will generate V3 JCas classes.
+       You should only install one of either version 2 or version 3 Eclipse plugin tooling, into a single Eclipse installation.
+       Should you wish to work with both, just create multiple Eclipse installations.
     </p>
     
     <p>Other components built upon the UIMA Java SDK will not (yet) run with version 3, until 
@@ -199,7 +200,7 @@ Other mirrors: <select name="Preferred">
 </section> 
 
 <section name="Older Releases">
-
+ <!--
  <subsection name="Apache UIMA Version 2.10.1">
     <insertDownloads version="2.10.1"/>
   </subsection>
@@ -208,7 +209,6 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="2.10.0"/>
   </subsection>
 
-  <!-- includes latest uima-as release -->
   <subsection name="Apache UIMA Version 2.9.0">
     <insertDownloads version="2.9.0"/>
   </subsection>
@@ -225,7 +225,7 @@ Other mirrors: <select name="Preferred">
   <subsection name="Apache UIMA Version 2.6.0">
     <insertDownloads version="2.6.0"/>
   </subsection>
-  
+  -->
   <!--
   <subsection name="Apache UIMA Version 2.5.0">
     <insertDownloads version="2.5.0"/>
