@@ -12,8 +12,8 @@
 #    limitations under the License.
 ################################################################################
 
-HOWTO build and publish the Site
-================================
+HOWTO build and publish and Archive the Site
+============================================
 
 How do I change the site content and generate ?
 ---------------------------------------------
@@ -47,7 +47,7 @@ How do I deploy site to the internet?
 -------------------------------------
 
 Deployment is done as soon as the SVN commit happens, because
-the site is setup to use svnpubsub.
+the site is setup to use svnpubsub. 
 
 How do I handle images?
 -----------------------
@@ -71,3 +71,18 @@ This file and its gpg signature .asc file (which must be signed by the PMC chair
 are uploaded to dist.apache.org/repos/dist/uima/META (neither the dev nor the release subdirs)
 
 Commit to https://dist.apache.org/repos/dist/release/uima  as META and META.asc
+
+How do I archive old release info kept in docs/d?
+-------------------------------------------------
+There is a parallel svn spot, 
+https://svn.apache.org/repos/asf/uima/site/archive/docs.
+Use the svn copy command to copy things you want to archive from the 
+site/trunk/uima-website/docs/.... to the same spot in the 
+archive.  After confirming they are successfully copied, 
+do an svn delete in the site/trunk/uima-website/docs/.... of the things you 
+want to archive.
+
+You may want to update any links from other pages in the website (e.g. 
+the download pages) if they are pointing to deleted items, to
+the archive address.  However, typically, the website should be
+pruned of items having these links.
