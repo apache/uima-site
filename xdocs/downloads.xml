@@ -65,6 +65,10 @@ There are two update sites: one is for versions of plugins for UIMA version 2, t
 </li>
 </ul>
 
+<p>The uimaj-2.10.2 version of the Eclipse plugins (not the latest version) is also separately available here:
+<a href="https://www.apache.org/dist/uima/eclipse-update-site/uimaj-2.10.2/">https://www.apache.org/dist/uima/eclipse-update-site/uimaj-2.10.2/</a>.
+</p>
+
 <p>
 Older releases are at Apache's archive for releases, and you can find links to them 
 <a href="eclipse-update-archives.html">here</a>.
@@ -131,8 +135,8 @@ Other mirrors: <select name="Preferred">
      the latest release of some of the components included in that version. </p>
 
  
-<subsection name="Apache UIMA-AS 2.10.3">
-   <p>This is the latest version of Version 2 of UIMA-AS.</p>
+  <subsection name="Apache UIMA-AS 2.10.3">
+   <p>This is the latest version of Version 2 of UIMA Java SDK, and UIMA-AS (built on UIMA Java SDK 2.10.2).</p>
    
     <insertDownloads version="2.10.3"/>
   </subsection>
@@ -173,10 +177,9 @@ Other mirrors: <select name="Preferred">
   </subsection>
   
  <subsection name="Apache UIMA Version 2.10.2">
-   <p>This is the latest version of Version 2 of the UIMA Java SDK, UIMA-AS, and the ConceptMapper addon. 
-    Other components built upon
-    the UIMA Java SDK are built to be compatible with this version.</p>
-   
+   <p>This includes the latest version of the ConceptMapper addon. 
+   </p>
+    
     <insertDownloads version="2.10.2"/>
   </subsection>
   
