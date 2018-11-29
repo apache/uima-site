@@ -35,6 +35,55 @@
 
     <subsectionToc/>
 
+    <subsection name="29 Nov 2018 " date = "29 November 2018" title="Apache UIMA Java SDK 3.0.1 released">
+      <p>UIMA Java SDK 3.0.1 is in the 3.x.x series of core Java UIMA SDK; see the news for 3.0.0 for important
+         information about migrating from 2.x.x versions of UIMA.
+      </p>
+      
+      <p>Changes include:
+         <ul><li>The code and the build was adjusted to compile using both Java 8 and Java 11.</li>
+             <li>The class loading when using the UIMA Class Loader now 
+                 will first try loading from that class loader's URL list, 
+                 and if not found will try using the Context Class Loader (if set), and if not found, 
+                 then will default to how it previously searched for classes. 
+                 Previously the Context Class Loader was never consulted.</li>
+             <li>The PEAR installation no longer lock files.</li>
+             <li>Pear Specifier parameters now passed to the wrapped Analysis Engine</li>
+             <li>A destroy() method was added to the ResourceManager which closes its UIMAClassLoader</li>
+          </ul>
+      </p>
+      <p>Specific changes in this release unique to version 3 include:
+         <ul><li>Multiple small adjustments for edge cases for the select framework, to make it match what uimaFIT does.</li>
+             <li>Bug fixes for several of the select methods, with associated documentation and javadoc updates/fixes</li>
+       </ul>
+      </p>
+
+      <p>Please see the <a target="_blank" href="d/uimaj-3.0.1/issuesFixed/jira-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>
+              
+    </subsection>
+
+   <subsection name="29 Nov 2018" date = "29 November 2018" title="Apache UIMA Java SDK 2.10.3 released">
+
+      <p>This is a minor bug fix release.
+      The major changes in this release include:</p>
+
+      <ul><li>The minimum Java version was changed from 7 to 8.  The code and the build
+              was adjusted to compile using both Java 8 and Java 11.</li>
+          <li>The class loading when using the UIMA Class Loader now will first try loading
+              from that class loader's URL list, and if not found will try using the
+              Context Class Loader (if set), and if not found, then will delegate to the parent.
+              Previously the Context Class Loader was never consulted.</li>
+          <li>Fixed some edge case performance issues.</li>
+          <li>Fixed PEAR installation to no longer lock files.</li>
+          <li>Pear Specifier parameters now passed to the wrapped Analysis Engine</li>
+          <li>Implemented a destroy() method for ResourceManager which closes its UIMAClassLoader</li>
+      </ul>                                                                                        
+      
+      <p>Please see the <a target="_blank" href="d/uimaj-2.10.3/issuesFixed/jira-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>
+    </subsection>
+
    <subsection name="27 Apr 2018" date = "27 Apr 2018" title="Apache UIMA ConceptMapper addon 2.10.2 released">
       <p>UIMA ConceptMapper 2.10.2 updates the Concept Mapper, one of the annotators in the Addons, to use the 
       current UIMA APIs, allows configuration inputs to come from Jars on the classpath, and adds buffering to the I/O
