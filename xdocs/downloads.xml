@@ -75,8 +75,7 @@ Older releases are at Apache's archive for releases, and you can find links to t
 </p>
 <p>
 If you're doing this for the first time,
-you may wish to consult the much more verbose instructions in the <a href="documentation.html">SDK 
-documentation</a>.
+you may wish to consult the much more verbose instructions on the <a href="documentation.html">UIMA Documentation page</a>.
 </p>
 
 </subsection>
@@ -135,7 +134,7 @@ Other mirrors: <select name="Preferred">
      the latest release of some of the components included in that version. </p>
 
   <subsection name="Apache UIMA Version 3.0.1">
-    <p>UIMA V3 is a re-implementation of the core Java version.  It represents Feature Structures as Java Objects,
+    <p>UIMA Java SDK, V3, is a re-implementation of the core Java version.  It represents Feature Structures as Java Objects,
        allowing them to be Garbage Collected, for example.  It depends on and exploits many Java 8 features.
     </p>
     
@@ -164,17 +163,11 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="3.0.1"/>
   </subsection>
 
-  <subsection name="Apache UIMA-AS 2.10.3">
+  <subsection name="Apache UIMA 2.10.3">
    <p>This is the latest version of Version 2 of UIMA Java SDK, and UIMA-AS (built on UIMA Java SDK 2.10.2).</p>
    
     <insertDownloads version="2.10.3"/>
-  </subsection>
-  <subsection name="Apache UIMA-AS 2.10.3">
-   <p>This is the latest version of Version 2 of UIMA Java SDK, and UIMA-AS (built on UIMA Java SDK 2.10.2).</p>
-   
-    <insertDownloads version="2.10.3"/>
-  </subsection>
- 
+  </subsection> 
 
   <subsection name="Apache UIMA DUCC Version 2.2.2">
     <insertDownloads version="2.2.2"/>
