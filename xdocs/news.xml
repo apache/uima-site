@@ -35,7 +35,7 @@
 
     <subsectionToc/>
 
-    <subsection name="29 Nov 2018 " date = "29 November 2018" title="Apache UIMA Java SDK 3.0.1 released">
+    <subsection name="29 Nov 2018a" date = "29 November 2018" title="Apache UIMA Java SDK 3.0.1 released">
       <p>UIMA Java SDK 3.0.1 is in the 3.x.x series of core Java UIMA SDK; see the news for 3.0.0 for important
          information about migrating from 2.x.x versions of UIMA.
       </p>
@@ -63,7 +63,7 @@
               
     </subsection>
 
-   <subsection name="29 Nov 2018" date = "29 November 2018" title="Apache UIMA Java SDK 2.10.3 released">
+   <subsection name="29 Nov 2018b" date = "29 November 2018" title="Apache UIMA Java SDK 2.10.3 released">
 
       <p>This is a minor bug fix release.
       The major changes in this release include:</p>
