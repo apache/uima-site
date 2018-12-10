@@ -1,0 +1,33 @@
+Board report for Apache UIMA, for December 2018.
+
+Apache UIMA's mission: the creation and maintenance of open-source software
+related to the analysis of unstructured data, guided by the UIMA Oasis
+Standard.
+
+## PMC changes:
+
+ - Currently 16 PMC members.
+ - No new PMC members added in the last 3 months
+ - Last PMC addition was Lou DeGenaro on Mon May 02 2016
+
+## Committer base changes:
+
+ - Currently 25 committers. 
+ - Last new committer: Viorel Morari was added as a committer on Thu Sep 20 2018 
+
+ ## Releases:
+
+ 2 releases of the main UIMA Java SDK were done;
+ - 2.10.3SDK was released on Wed Nov 28 2018 
+ - 3.0.1SDK was released on Wed Nov 28 2018 
+
+Activity: 
+  We updated our project-wide parent POM to current levels, and incorporated
+  changes to accommodate Apache policies on changes to SHA1 / MD5 checksums.
+  
+  We upgraded our build release process to work with Java 11, as well as Java 8.
+  The Java SDK, uimaFIT, UIMA-AS, DUCC, RUTA are actively being worked on.
+
+Community: The community continues to be moderately active.
+
+Issues: No Board level issues at this time.
