@@ -27,6 +27,10 @@ Activity:
   
   We upgraded our build release process to work with Java 11, as well as Java 8.
   The Java SDK, uimaFIT, UIMA-AS, DUCC, RUTA are actively being worked on.
+  
+  The UIMA C++ version, after a long while of no volunteers to work on it,
+  has sprung to life, with one new contributor working to upgrade it to
+  current levels and get the test cases working again.
 
 Community: The community continues to be moderately active.
 
