@@ -38,8 +38,7 @@ including documentation help, source code development and feedback.
   <p>A typical path to contributing might start with joining the 
     <a href="mail-lists.html">UIMA mailing lists</a>
     where discussions are occuring among the users and developers, and getting a 
-    <a href="
-https://issues.apache.org/jira/secure/BrowseProject.jspa?id=0 ">JIRA</a>
+    <a href="https://issues.apache.org/jira/projects/UIMA">JIRA</a>
     id and posting feature improvements, bug reports, etc. to the change tracking 
     system we're using.
     </p>
