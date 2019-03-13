@@ -1,0 +1,29 @@
+Board report for Apache UIMA, for March 2019.
+
+Apache UIMA's mission: the creation and maintenance of open-source software
+related to the analysis of unstructured data, guided by the UIMA Oasis
+Standard.
+
+## PMC changes:
+
+ - Currently 16 PMC members.
+ - No new PMC members added in the last 3 months
+ - Last PMC addition was Lou DeGenaro on Mon May 02 2016
+
+## Committer base changes:
+
+ - Currently 25 committers. 
+ - Last new committer: Viorel Morari was added as a committer on Thu Sep 20 2018 
+
+ ## Releases:
+
+ 1 releases of UIMA Ruta
+ - Ruta 2.7.0 was released on 24 February 2019
+
+Activity:
+  UIMA DUCC project has been working on a release, with several release candidates. 
+  The core UIMA Java SDK version 3.0.2 is recently posted for voting.
+  
+Community: The community continues to be moderately active.
+
+Issues: No Board level issues at this time.
