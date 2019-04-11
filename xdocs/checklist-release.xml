@@ -161,6 +161,7 @@ svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos
           </li>
           <li>Otherwise, the eclipse-update-sub-site project's output folder in the target directory should 
               already be svn working copies, so you can commit these.
+              <p>Commit the target/xxxx/yyyy/features, .../plugins, and the artifacts/content jars and signatures.</p>
               <p><b>DO NOT COPY the dist...dev site</b>, instead, use the build's update site with the signed jars, and just "commit" it.
                </p>
               If using Windows and have tortise svn installed, cd to the target/eclipse-update-site/uimaj (or wherever your update site
