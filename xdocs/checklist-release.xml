@@ -187,6 +187,8 @@ This includes: PDFs, HTML versions of docbooks plus the index.html; all go on th
   <li>Copy RELEASE_NOTES and issuesFixed, and maybe api-change-report
       from the .../target/checkout where
       the mvn release:perform was done from to the UIMA web site in doc/d/[project-version].</li>
+  <li>If using links to api change report, insert needed folders and copy api change report.  For example,
+      for uimaj: insert uimaj-core folder into .../d/uimaj-x.y.z and copy in the api change report from uimaj-core.</li>
   <li>update the current-release folder, if in use.  Do this by doing an svn copy from uima-website/docs/d/xxx-y.y.y to 
   .../docs/d/xxx-current.  It's convenient to use tortise-svn: navigate to the docs/d, select uimaxxx-y.y.y folder, and then
   right-click and pick copy to ...  and specify docs/d/uimzxxx-current folder.</li>
