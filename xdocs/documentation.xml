@@ -50,7 +50,7 @@
   
   <subsection name="UIMA Java SDK and UIMA-AS Manuals and Guides" id="manuals_and_guides">
    
-   <p>There are two "current" versions of UIMA Java SDK.  The true "current" version is version 3.0.1, which
+   <p>There are two "current" versions of UIMA Java SDK.  The true "current" version is version 3.0.2, which
       may require a migration step for existing UIMA applications.  Because of that potential migration step, we
       will also list here the latest version of UIMA version 2.</p>    
    
@@ -93,59 +93,6 @@
    </ul>
    </p>
   
-  <!--  TO BE DELETED 
-  <p>The UIMA Documentation for version 2.4.2 of the UIMA SDK is here:</p>
-   <ul>
-     <li><a href="../d/uimaj-2.4.2/overview_and_setup.pdf">Overview and Setup</a></li>
-     <li><a href="../d/uimaj-2.4.2/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
-     <li><a href="../d/uimaj-2.4.2/tools.pdf">Tools</a></li>
-     <li><a href="../d/uimaj-2.4.2/references.pdf">References</a></li>
-   </ul>
-
-   <p>The UIMA Documentation for version 2.4.0 of the UIMA SDK is here:</p>
-   <ul>
-     <li><a href="../d/uimaj-2.4.0/overview_and_setup.pdf">Overview and Setup</a></li>
-     <li><a href="../d/uimaj-2.4.0/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
-     <li><a href="../d/uimaj-2.4.0/tools.pdf">Tools</a></li>
-     <li><a href="../d/uimaj-2.4.0/references.pdf">References</a></li>
-   </ul>
-   
-   <p>The UIMA documentation for version 2.3.1 is available in two formats (HTML and PDF):
-   </p>
-   <ul>
-     <li><a href="../d/uimaj-2.3.1/index.html">HTML online version - UIMA Java SDK</a></li>
-    </ul>
-   <p>PDF version for printing:</p> 
-   <ul>
-     <li><a href="../d/uimaj-2.3.1/overview_and_setup.pdf">Overview and Setup</a></li>
-     <li><a href="../d/uimaj-2.3.1/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
-     <li><a href="../d/uimaj-2.3.1/tools.pdf">Tools</a></li>
-     <li><a href="../d/uimaj-2.3.1/references.pdf">References</a></li>
-   </ul>
-       
-   <p>
-     The documentation version for version 2.3.0-incubating is also available in two formats (HTML and PDF):
-   </p>
-   <ul>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/html/index.html">HTML online version - UIMA Java SDK</a></li>
-   </ul>
-   <p>PDF version for printing:</p> 
-   <ul>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/overview_and_setup.pdf">Overview and Setup</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/tools.pdf">Tools</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs/pdf/references.pdf">References</a></li>
-     <li><a href="downloads/releaseDocs/2.3.0-incubating/docs-uima-as/pdf/uima_async_scaleout.pdf">UIMA Asynchronous Scaleout</a></li>
-   </ul>
-
-   <p>Previous releases (HTML only)</p>
-     <ul>
-       <li><a href="downloads/releaseDocs/2.2.2-incubating/docs/html/index.html">Version 2.2.2-incubating</a></li> 
-       <li><a href="downloads/releaseDocs/2.2.1-incubating/docs/html/index.html">Version 2.2.1-incubating</a></li> 
-       <li><a href="downloads/releaseDocs/2.2.0-incubating/docs/html/index.html">Version 2.2.0-incubating</a></li>
-       <li><a href="downloads/releaseDocs/2.1.0-incubating/docs/html/index.html">Version 2.1.0-incubating</a></li>
-    </ul>
-     -->
   </subsection>
 
   

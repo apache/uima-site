@@ -187,7 +187,9 @@ This includes: PDFs, HTML versions of docbooks plus the index.html; all go on th
   <li>Copy RELEASE_NOTES and issuesFixed, and maybe api-change-report
       from the .../target/checkout where
       the mvn release:perform was done from to the UIMA web site in doc/d/[project-version].</li>
-  <li>update the current-release folder, if needed.</li>
+  <li>update the current-release folder, if in use.  Do this by doing an svn copy from uima-website/docs/d/xxx-y.y.y to 
+  .../docs/d/xxx-current.  It's convenient to use tortise-svn: navigate to the docs/d, select uimaxxx-y.y.y folder, and then
+  right-click and pick copy to ...  and specify docs/d/uimzxxx-current folder.</li>
   <li>Update the downloads page of the web site, and the xdocs/stylesheets/project.xml for the new release.</li>
   <li>Update Jira version info to reflect the release status and date</li>
   <li>Log into <a target="_blank" href="https://reporter.apache.org/addrelease.html?uima"> 
