@@ -25,7 +25,6 @@
       <item name="Community">
         <item name="Get Involved"           href="/get-involved.html"/>        
         <item name="Mailing Lists"          href="/mail-lists.html"/>
-        <item name="HipChat"                href="https://www.hipchat.com/g9uWu1gfO" />
         <item name="Contribution Policies"  href="/contribution-policy.html"/>
         <item name="FAQ"                    href="/faq.html"/>
         <item name="Project Guidelines"     href="/project-guidelines.html"/>o
@@ -420,6 +419,11 @@
   </downloads>
 
   <downloads version="uimaFIT" title="Apache UIMA uimaFIT" withreleasedate="true">
+    <download name="uimaFIT 3.0.0" subdirectory="uimafit-3.0.0" releasedate="16-Apr-2019">
+      <releasenotes filename="uimafit-3.0.0/README">           <f>txt</f>  </releasenotes>
+      <binary       filename="uimafit-3.0.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   
+      <source       filename="uimafit-3.0.0-source-release">   <f>zip</f>  </source>
+    </download>
     <download name="uimaFIT 2.4.0" subdirectory="uimafit-2.4.0" releasedate="14-Nov-2017">
       <releasenotes filename="uimafit-2.4.0/README">           <f>txt</f>  </releasenotes>
       <binary       filename="uimafit-2.4.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   

@@ -57,7 +57,7 @@ website.  It includes the project.xml, which has the left-hand menu details, and
 details, and transformation macros.  Note: we use anakia and "velocity" (vsl) macros, we do
 not use XSLT transformation.  The filel site.xsl is out of date, not maintained, etc.; see
 the file site.vsl instead.</li>
-<li>downloads - needs impovement.  It has some old generated files (should be cleaned up -
+<li>downloads - needs improvement.  It has some old generated files (should be cleaned up -
 deleted or moved to /docs/d/).  There should also not be 2 copies both in docs/ and xdocs/.  
 A reasonable design would be for this to be only in the /docs/ directory, and to contain
 non-generated files for download.  Be careful in doing changes, in that external websites

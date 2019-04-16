@@ -127,14 +127,6 @@ under the License.
       metadata and to generate XML descriptors for uimaFIT-enabled components.
     </li>
     <li>
-      <b>uimafit-legacy-support</b>
-      allows uimaFIT 2.x to use uimaFIT 1.4.x meta data like Java annotations
-      and <code>META-INF/org.uimafit/types.txt</code> files. Pipelines mixing uimaFIT 1.4.x
-      and 2.x componens MUST be created using the 2.x factories, because the
-      1.4.x factories will <b>not</b> understand how to handle uimaFIT 2.x components
-      or auto-configuration.
-    </li>
-    <li>
       <b>uimafit-spring</b>
       is an experimental module serving as a proof-of-concept for the integration of
       UIMA with the Spring Framework. It is currently not considered finished and
@@ -144,6 +136,14 @@ under the License.
       the adventurous but currently not considered stable, finished, or even a 
       proper part of the package. E.g. it is not included in the binary 
       distribution package.
+    </li>
+    <li>
+      <b>uimafit-legacy-support</b> (only uimaFIT &lt; 3.0.0)
+      allows uimaFIT 2.x to use uimaFIT 1.4.x meta data like Java annotations
+      and <code>META-INF/org.uimafit/types.txt</code> files. Pipelines mixing uimaFIT 1.4.x
+      and 2.x componens MUST be created using the 2.x factories, because the
+      1.4.x factories will <b>not</b> understand how to handle uimaFIT 2.x components
+      or auto-configuration.
     </li>
   </ul>
 </subsection>
@@ -164,13 +164,13 @@ under the License.
 &lt;dependency>
   &lt;groupId>org.apache.uima&lt;/groupId>
   &lt;artifactId>uimafit-core&lt;/artifactId>
-  &lt;version>2.4.0&lt;/version>
+  &lt;version>3.0.0&lt;/version>
 &lt;/dependency>
   </pre>
   <subsubsection>
-    For building the uimaFIT projects from sources, follow the instructions for <a href="building-uima.html">building UIMA</a>, 
-    but exchange the command for SVN checkout:<br/>
-    <code>svn checkout https://svn.apache.org/repos/asf/uima/uimafit/trunk c:/myWorkingDirectory</code>
+    To build uimaFIT from the repository, clone the git repository at 
+    <code>https://github.com/apache/uima-uimafit.git</code> and execute 
+    <code>mvn clean install</code> at the root of the cloned repository.
   </subsubsection>
    
   <p>

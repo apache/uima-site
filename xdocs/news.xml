@@ -35,6 +35,32 @@
 
     <subsectionToc/>
 
+    <subsection name="16 Apr 2019" date = "16 April 2019" title="Apache uimaFIT 3.0.0 released">
+      <p>uimaFIT 3.0.0 is a major release compatible with UIMA v3. It includes a few changes in the
+      API which do not make it a drop-in replacement - minor changes to your code may be required
+      when you upgrade.
+      </p>
+      
+      <p>The complete list of fixes is <a href="d/uimafit-3.0.0/issuesFixed/jira-report.html">here</a>.
+      </p>
+      <p>The major changes in this release are:</p>
+      <ul>
+        <li>Upgrade to UIMA 3.0.2.</li>
+        <li>Requires Java 8</li>
+        <li>New CasFactory (equivalent to JCasFactory but for the CAS API).</li>
+        <li>Added CasUtil.exists() method.</li>
+        <li>Added CasUtil.selectSingleFS() method.</li>
+        <li>Use List instead of Collection in return types where possible.</li>
+        <li>Fixed problem that different signatures of createExternalResourceDescription shadow
+            each other.</li>
+        <li>Destroy auto-created resource managers if feasible</li>
+        <li>Upgraded dependencies</li>
+       </ul>
+      <p>
+      This version of uimaFIT requires Java version 8 or later.
+      </p>
+    </subsection>
+
     <subsection name="10 Apr 2019" date = "10 April 2019" title="Apache UIMA Java SDK 3.0.2 released">
       <p>UIMA Java SDK 3.0.2 is in the 3.x.x series of core Java UIMA SDK; see the news for 3.0.0 for important
          information about migrating from 2.x.x versions of UIMA.
@@ -50,7 +76,6 @@
 
       <p>Please see the <a target="_blank" href="d/uimaj-3.0.2/issuesFixed/jira-report.html">
          the complete list of issues fixed</a> for more details of the changes.</p>
-              
     </subsection>
 
     <subsection name="24 Feb 2019" date = "24 February 2019" title="Apache UIMA Ruta 2.7.0 released">
