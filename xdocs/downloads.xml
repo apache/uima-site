@@ -133,6 +133,11 @@ Other mirrors: <select name="Preferred">
   <p>Note that some older releases appear under the "Latest" because they contain
      the latest release of some of the components included in that version. </p>
 
+  <subsection name="Apache UIMA DUCC Version 3.0.0">
+    <insertDownloads version="3.0.0"/>
+  </subsection>
+
+
   <subsection name="Apache UIMA Version 3.0.2">
     <p>UIMA Java SDK, V3, is a re-implementation of the core Java version.  It represents Feature Structures as Java Objects,
        allowing them to be Garbage Collected, for example.  It depends on and exploits many Java 8 features.
