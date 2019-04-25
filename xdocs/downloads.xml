@@ -134,7 +134,7 @@ Other mirrors: <select name="Preferred">
      the latest release of some of the components included in that version. </p>
 
   <subsection name="Apache UIMA DUCC Version 3.0.0">
-    <insertDownloads version="3.0.0"/>
+    <insertDownloads version="ducc-3.0.0"/>
   </subsection>
 
 
