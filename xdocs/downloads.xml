@@ -195,9 +195,9 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="2.10.2"/>
   </subsection>
   
-  <subsection name="Apache UIMA DUCC Version 2.2.1">
+  <!--subsection name="Apache UIMA DUCC Version 2.2.1">
     <insertDownloads version="2.2.1"/>
-  </subsection>
+  </subsection -->
     
   <!-- includes latest uima-c++ release -->
   <subsection name="Apache UIMA Version 2.4.0">
@@ -252,7 +252,11 @@ Other mirrors: <select name="Preferred">
   
   <p>The 2.4.1 of the UIMA Java SDK has been replaced by the 2.4.2 version above. There was no UIMA-AS version 2.4.1 released.</p>
   -->
-  
+
+  <subsection name="Apache UIMA DUCC Version 2.2.1">
+    <insertDownloads version="2.2.1"/>
+  </subsection>
+
   <subsection name="Apache UIMA DUCC Version 2.2.0">
     <insertDownloads version="2.2.0"/>
   </subsection>
