@@ -35,7 +35,7 @@
 
     <subsectionToc/>
 
-    <subsection name="25 Apr 2019" date = "25 Apr 2019" title="Apache UIMA DUCC 3.0.0 released">
+    <subsection name="26 Apr 2019" date = "26 Apr 2019" title="Apache UIMA DUCC 3.0.0 released">
  <p>DUCC stands for Distributed UIMA Cluster Computing. DUCC is a cluster management system providing tooling,                                                                                                                                  
 management, and scheduling facilities to automate the scale-out of applications written to the UIMA framework.                                                                                                                                  
 Core UIMA provides a generalized framework for applications that process unstructured information such as human                                                                                                                                 
