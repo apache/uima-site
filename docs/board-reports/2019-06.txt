@@ -1,0 +1,32 @@
+Board report for Apache UIMA, for June 2019.
+
+Apache UIMA's mission: the creation and maintenance of open-source software
+related to the analysis of unstructured data, guided by the UIMA Oasis
+Standard.
+
+## PMC changes:
+
+ - Currently 16 PMC members.
+ - No new PMC members added in the last 3 months
+ - Last PMC addition was Lou DeGenaro on Mon May 02 2016
+
+## Committer base changes:
+
+ - Currently 25 committers. 
+ - Last new committer: Viorel Morari was added as a committer on Thu Sep 20 2018 
+
+## Releases:
+
+ 3 releases in the last quarter:
+ - 10 April 2019: UIMA Java SDK 3.0.2 (the core component)
+ - 16 April 2019: uimaFIT 3.0.0 - the first release of uimaFIT supporting the core version 3 level
+ - 26 April 2019: DUCC 3.0.0 - a major update to the scaleout software supporting running on clusters
+
+Activity:
+  The DUCC release included a fix for a CVE issue.
+  UIMA DUCC project working on multiple fixups/cleanups following the 3.0.0 release. 
+  The core UIMA Java SDK working on minor cleanups and bug fixes for some edge cases.
+  
+Community: The community continues to be moderately active; some new contributors doing patches.
+
+Issues: No Board level issues at this time.
