@@ -42,7 +42,7 @@ under the License.
 
 <section name="One time setup for SVN" id="svn-setup">
   <p>Install an svn client (not server) to use for command line invocation of SVN from 
-    <a class="external" rel="nofollow" target="_blank" 
+    <a class="external" rel="nofollow noopener" target="_blank"
       href="https://subversion.apache.org/packages.html">https://subversion.apache.org/packages.html</a>.
     Use the 1.6.x or later version.
     For Windows platform, you may find it convenient to also install a windows shell extension for this, such 
@@ -54,13 +54,13 @@ under the License.
   
   <p class="Note">Important:</p>
   <p>Configure your SVN client to set the eol-style to native, for newly created files; see 
-     <a target="_blank" href="https://apache.org/dev/svn-eol-style.txt">https://apache.org/dev/svn-eol-style.txt</a>
+     <a target="_blank" rel="noopener" href="https://apache.org/dev/svn-eol-style.txt">https://apache.org/dev/svn-eol-style.txt</a>
      for instructions on how to do this.</p>
 </section>
 
 <section name="One time setup for Maven" id="maven-setup">
   <ol><li>Download Maven 3.0 or later from
-    <a class="external" rel="nofollow" target="_blank"
+    <a class="external" rel="nofollow noopener" target="_blank"
       href="https://maven.apache.org/download.html">https://maven.apache.org/download.html</a>.</li>
       <li>Set up your path to use this version.</li>
       <li>(Optional, but is needed for some JVM/platforms, to give the JVM enough room to build things). 
@@ -77,9 +77,9 @@ under the License.
       go into the parent-poms/parent-pom-top directory, and do the "mvn install" command.</li>
       <li>Change your maven settings.xml file to include the Apache snapshot repository in the set of repositories it
       searches for artifacts.  For general information on maven settings files, 
-      see <a class="external" rel="nofollow" target="_blank"
+      see <a class="external" rel="nofollow noopener" target="_blank" rel="noopener"
       href="https://maven.apache.org/settings.html">https://maven.apache.org/settings.html</a> and
-      <a class="external" rel="nofollow" target="_blank"
+      <a class="external" rel="nofollow noopener" target="_blank" rel="noopener"
       href="https://maven.apache.org/ref/3.0/maven-settings/settings.html">
       https://maven.apache.org/ref/3.0/maven-settings/settings.html</a>.
       <p>To follow this approach, create a settings.xml file in the right location (usually ~/.m2/) and 
@@ -115,14 +115,14 @@ under the License.
   <p>Then:
     <ol>
       <li><p>Install the SVN support plugin <code>Subclipse</code> from
-        <a class="external" rel="nofollow" target="_blank"
+        <a class="external" rel="nofollow noopener" target="_blank"
           href="https://subclipse.tigris.org/">https://subclipse.tigris.org/</a>.
         Be sure to pick the version for 1.6.x or the 1.8.x SVN client.  Either of these work with the Apache SVN,
         but you cannot mix them - pick one and stick with it for all your SVN access (e.g., Eclipse, commandline, 
         TortiseSVN Windows shell extensions, etc.)        
         </p></li>
       <li><p>Install m2e (latest recommended version) from the Eclipse update site: 
-        <a class="external" rel="nofollow" target="_blank"
+        <a class="external" rel="nofollow noopener" target="_blank"
           href="https://www.eclipse.org/m2e/">https://www.eclipse.org/m2e/</a>.
         </p> </li>
       <li><p>When checking out UIMA modules, one method known to work (others may be added) is to do the initial
@@ -137,7 +137,7 @@ under the License.
       the connectors it needs to do the m2e build of the Maven projects.</p></li>  
       <!--li>You probably also want the m2eclipse SCM integration - this adds menus to SCM such as
         <code>Checkout as Maven project</code>.  To get this, add the Eclipse update site:  
-        <a class="external" rel="nofollow" target="_blank"
+        <a class="external" rel="nofollow noopener" target="_blank" rel="noopener"
               href="https://m2eclipse.sonatype.org/sites/m2e-extras">
                     https://m2eclipse.sonatype.org/sites/m2e-extras</a>
               and then select 

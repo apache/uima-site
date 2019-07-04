@@ -171,7 +171,7 @@ svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos
       </li>
       
       <li>Check the www.apache.org/dist/uima site using 
-          <a target="_blank" href=" https://checker.apache.org/projs/uima.html"> https://checker.apache.org/projs/uima.html</a></li>
+          <a target="_blank" rel="noopener" href=" https://checker.apache.org/projs/uima.html"> https://checker.apache.org/projs/uima.html</a></li>
 
       <li>update the UIMA website docs/d with any generated docs, in a manner to 
   <a href="saving-svn-resources.html">minimize SVN space</a> use, if possible.
@@ -194,7 +194,7 @@ This includes: PDFs, HTML versions of docbooks plus the index.html; all go on th
   right-click and pick copy to ...  and specify docs/d/uimzxxx-current folder.</li>
   <li>Update the downloads page of the web site, and the xdocs/stylesheets/project.xml for the new release.</li>
   <li>Update Jira version info to reflect the release status and date</li>
-  <li>Log into <a target="_blank" href="https://reporter.apache.org/addrelease.html?uima"> 
+  <li>Log into <a target="_blank" rel="noopener" href="https://reporter.apache.org/addrelease.html?uima"> 
   https://reporter.apache.org/addrelease.html?uima</a> and add release data (e.g. uimaj-2.10.0 2017-04-04).</li>
   <li>Cleanup the SVN tag for the release candidate if needed, removing any -rcXX, to indicate the release.</li>
   <li>After release appears on maven central, post an appropriate announce letter</li>

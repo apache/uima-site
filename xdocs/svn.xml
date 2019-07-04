@@ -73,9 +73,9 @@ under the License.
 <section name="Source Code Repository" id="source.code.repository">
 
 <p>Apache UIMA uses 
-<a  class="external" rel="nofollow" target="_blank" href="https://subversion.apache.org">
+<a  class="external" rel="nofollow noopener" target="_blank" href="https://subversion.apache.org">
 Subversion</a> and
-<a class="external" rel="nofollow" target="_blank" href="https://github.com/apache">
+<a class="external" rel="nofollow noopener" target="_blank" href="https://github.com/apache">
 Git</a> 
 to manage its source code.  Most of the projects are in SVN; the uimaFIT project is in Git.
 </p>
@@ -111,7 +111,7 @@ commits-subscribe@uima.apache.org</a>.
 <subsection name="Web Access to Subversion" id="source.code.repository.web.access">
 <p>
 If you just want to browse the source code in SVN, you can use the
-<a class="external" rel="nofollow" 
+<a class="external" rel="nofollow noopener" 
 href="https://svn.apache.org/viewvc/uima">
 viewvc web interface</a> to Subversion.  This is current at all times.
 </p>
@@ -244,7 +244,7 @@ $&gt; svn commit --username your-username \
 Please always enter the JIRA issue key or keys (if more than one issue) and optionally, the JIRA issue link
 to the commit message. The issue key (e.g., UIMA-555) is important so that the JIRA SVN plugin can detect the
 changes automatically. Only specifying the issue link does not work correctly, for details
-please see the JIRA issue <a  class="external" rel="nofollow" href="https://jira.atlassian.com/browse/SVN-37">
+please see the JIRA issue <a  class="external" rel="nofollow noopener" href="https://jira.atlassian.com/browse/SVN-37">
 https://jira.atlassian.com/browse/SVN-37</a>.
 </p>
 </subsection>
@@ -366,7 +366,7 @@ properties">
 <p>Windows/cygwin users who don't want to have to think about using <em>svn 
 propdel</em> or <em>chmod</em> on each added file can use a non-cygwin 
 version of svn. The Subversion 1.2.3 Win32 binaries, downloadable from the 
-link at the bottom of <a  rel="nofollow" 
+link at the bottom of <a  rel="nofollow noopener" 
 href="https://subversion.tigris.org/project_packages.html">
 https://subversion.tigris.org/project_packages.html</a>, appear to work 
 well. After installation add the svn.exe location to your Windows PATH 

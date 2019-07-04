@@ -108,12 +108,12 @@ Additional documentation and discussion can be found on the project
 <ul>
 <li><p> You'll need to fill out some legal paperwork and go through 
 a process to get an apache committer account: See 
-<a  class="external" rel="nofollow" 
+<a  class="external" rel="nofollow noopener" 
 href="https://apache.org/dev/new-committers-guide.html">
 New Committers Guide</a>, 
-<a  class="external" rel="nofollow" 
+<a  class="external" rel="nofollow noopener" 
 href="https://apache.org/dev/contributors.html"> Contributors</a>, and 
-<a  class="external" rel="nofollow" 
+<a  class="external" rel="nofollow noopener" 
 href="https://apache.org/dev/committers.html"> Committers</a> 
 for more details. </p>
 
@@ -124,7 +124,7 @@ with your committer account information, change your initial password:
 Login by 'ssh -l &lt;username&gt; people.apache.org'; 
 run 'passwd'; 
 run 'svnpasswd'.  See 
-<a  class="external" rel="nofollow" 
+<a  class="external" rel="nofollow noopener" 
 href="https://apache.org/dev/version-control.html">Committer Subversion Access
 </a>. 
 </p>
@@ -141,12 +141,12 @@ SubversionRepository</a>.
   <ul>
     
 <li><p>Sign up for a 
-<a  class="external" rel="nofollow" 
+<a  class="external" rel="nofollow noopener" 
 href="https://cwiki.apache.org/confluence/signup.action">WiKi</a> account.
 </p>
 </li>
 <li><p> Sign up for an 
-<a  class="external" rel="nofollow" 
+<a  class="external" rel="nofollow noopener" 
 href="https://issues.apache.org/jira/">
 ASF JIRA</a> account. 
 </p>

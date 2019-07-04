@@ -45,7 +45,7 @@ check that out, overwrite that with changes from the new generation, and check t
 This way just changed files get checked in, and of those, just changed lines do.</p>
 <p>
 There is a webpage which details recommendations for how to do this: 
-<a target="_blank"
+<a target="_blank" rel="noopener"
 href="https://www.apache.org/dev/project-site.html#generated">https://www.apache.org/dev/project-site.html#generated</a>.
 </p>
     </section>

@@ -115,10 +115,10 @@ insure your feature id's are different for versions which should not automatical
 </section>
 
 <section name="Links to Apache resources for codesigning">
-  <p>See <a target="_blank" href="https://reference.apache.org/pmc/codesigning">
+  <p>See <a target="_blank" rel="noopener" href="https://reference.apache.org/pmc/codesigning">
   https://reference.apache.org/pmc/codesigning</a> for general information.
   </p>
-  <p>See <a target="_blank" href="https://wiki.eclipse.org/JAR_Signing#What_gets_signed">
+  <p>See <a target="_blank" rel="noopener" href="https://wiki.eclipse.org/JAR_Signing#What_gets_signed">
   https://wiki.eclipse.org/JAR_Signing#What_gets_signed</a> for background on signing Eclipse Plugins.</p>
 </section>
 

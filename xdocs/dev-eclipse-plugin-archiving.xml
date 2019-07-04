@@ -93,7 +93,7 @@ under the License.
   </p>
   
   <p>This ant task is used in a Maven project, located in uima/build, named: 
-    <a target="_blank" href="http://svn.apache.org/repos/asf/uima/build/trunk/uima-eclipse-update-site-slicing/">
+    <a target="_blank" rel="noopener" href="http://svn.apache.org/repos/asf/uima/build/trunk/uima-eclipse-update-site-slicing/">
     uima-eclipse-update-site-slicing</a>.
     This does the slicing described above.  To use, check out this project as a maven project (it's not a Java project), and 
     read the readme.txt, and follow the instructions.</p>

@@ -238,7 +238,7 @@ https://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>.
             Apache Tika is a toolkit for detecting and extracting metadata and
             structured text content from various documents using existing parser
             libraries. The TikaAnnotator uses
-            <a href="https://lucene.apache.org/tika/" target="_blank">Tika</a>
+            <a href="https://lucene.apache.org/tika/" target="_blank" rel="noopener">Tika</a>
             to generate annotations representing
             the original markup of a document, extract its text and metadata. It
             consists of three resources:

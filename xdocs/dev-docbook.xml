@@ -27,7 +27,7 @@ under the License.
 
 <body>
   <p>This page is for developers, and describes how we use 
-     <a href="https://www.docbook.org/" target="_blank">Docbook</a> for 
+     <a href="https://www.docbook.org/" target="_blank" rel="noopener" >Docbook</a> for 
      technical documentation.  
       Docbook files can be incorporated with projects and processed as part of the
       Maven build.</p>   

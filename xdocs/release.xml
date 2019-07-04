@@ -255,7 +255,7 @@ A previous version of this page, with the methods we used while in the incubator
     <p>You can upload to the Nexus Staging repository several independent artifacts; they will
         all get added to the same unique temporary staging repository Nexus creates.  Once all the
         artifacts are in place, you log into 
-        <a target="_blank" 
+        <a target="_blank" rel="noopener" 
           href="https://repository.apache.org">https://repository.apache.org</a> using your 
           LDAP credentials, go to your staging repository, and "close" the repository.  After that,
           nothing more can be added.  If you deploy another artifact, it will create a new 

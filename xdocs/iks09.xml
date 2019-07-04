@@ -91,42 +91,42 @@
 			</p>
 			<p>
 				[1] :
-				<a name="1" href="https://www.iks-project.eu" target="_blank">https://www.iks-project.eu
+				<a name="1" href="https://www.iks-project.eu" target="_blank" rel="noopener">https://www.iks-project.eu
 				</a>
 				<br />
 				[2] :
 				<a name="2"
 					href="https://dev.day.com/microsling/content/blogs/main/iks-pragmatic-view-update.html"
-					target="_blank">
+					target="_blank" rel="noopener">
 					https://dev.day.com/microsling/content/blogs/main/iks-pragmatic-view-update.html
 				</a>
 				<br />
 				[3] :
-				<a name="3" href="https://www.nuxeo.com/en" target="_blank">https://www.nuxeo.com/en
+				<a name="3" href="https://www.nuxeo.com/en" target="_blank" rel="noopener">https://www.nuxeo.com/en
 				</a>
 				<br />
 				[4] :
 				<a name="4"
 					href="https://blogs.nuxeo.com/dev/2009/11/iks-semantic-search-workshop-wrapup.html"
-					target="_blank">https://blogs.nuxeo.com/dev/2009/11/iks-semantic-search-workshop-wrapup.html
+					target="_blank" rel="noopener">https://blogs.nuxeo.com/dev/2009/11/iks-semantic-search-workshop-wrapup.html
 				</a>
 				<br />
 				[5] :
 				<a name="5"
 					href="https://www.slideshare.net/teofili/apache-uima-and-semantic-search"
-					target="_blank">https://www.slideshare.net/teofili/apache-uima-and-semantic-search
+					target="_blank" rel="noopener">https://www.slideshare.net/teofili/apache-uima-and-semantic-search
 				</a>
 				<br />
 				[6] :
 				<a name="6"
 					href="https://homepages.uni-paderborn.de/fabianc/iks-gam-rome09/"
-					target="_blank">https://homepages.uni-paderborn.de/fabianc/iks-gam-rome09/
+					target="_blank" rel="noopener">https://homepages.uni-paderborn.de/fabianc/iks-gam-rome09/
 				</a>
 				<br />
 				[7] :
 				<a name="7"
 					href="https://www.iks-project.eu/semantic-search-challenge-workshop-report"
-					target="_blank">https://www.iks-project.eu/semantic-search-challenge-workshop-report
+					target="_blank" rel="noopener">https://www.iks-project.eu/semantic-search-challenge-workshop-report
 				</a>
 			</p>
 		</section>

@@ -52,12 +52,12 @@ the set of existing (and perhaps, older versions of) feature and plugins.
 </subsection>
 
 <subsection name="Information for developers">
-  <p>See these pages <a target="_blank"
+  <p>See these pages <a target="_blank" rel="noopener"
      href="dev-eclipse-plugin-archiving">for information about archiving</a>
-     and <a target="_blank" href="dev-eclipse-plugin-signing">for information about plugin signing</a>. 
+     and <a target="_blank" rel="noopener" href="dev-eclipse-plugin-signing">for information about plugin signing</a>. 
 </p> 
 <p>The tooling for building and managing the top level composite website is located
-  <a target="_blank" href="https://svn.apache.org/repos/asf/uima/build/trunk/uima-eclipse-composite-update-site">here</a>.</p>
+  <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/build/trunk/uima-eclipse-composite-update-site">here</a>.</p>
 </subsection>
 
 <subsection name="P2">
@@ -73,7 +73,7 @@ version and dependency information contained in the manifest of the
 OSGi component JARs.  This is a finer-grained versioning system in which
 version information is associated with Java Packages, in contrast
 to the entire contents of a Jar being the entity which is versioned.
-<p>Some tooling, such as <a target="_blank"
+<p>Some tooling, such as <a target="_blank" rel="noopener"
 href="https://eclipse.org/tycho/">https://eclipse.org/tycho/Tycho</a>, 
 need this finer-grained information
 to resolve dependencies.</p></li>
@@ -156,7 +156,7 @@ In addition to plain files, the jars have checksums and signature files.
 <p>
 The main Eclipse update site (which only has composite pointers to subsites) 
 is kept with the general UIMA build tooling in 
-<a target="_blank"
+<a target="_blank" rel="noopener"
   href="https://svn.apache.org/repos/asf/uima/build/trunk/uima-eclipse-composite-update-site">
   https://svn.apache.org/repos/asf/uima/build/trunk/uima-eclipse-composite-update-site</a>.
 </p>
@@ -318,7 +318,7 @@ utilities that came with Java 5.</li>
 <li>A separate copy of all the metadata needed for initial processing
 by the Eclipse update mechanism - put into a compressed "digest.zip".</li>
 <p>
-See <a target="_blank"
+See <a target="_blank" rel="noopener"
 href="https://wiki.eclipse.org/Update_Site_Optimization">https://wiki.eclipse.org/Update_Site_Optimization</a>,
 which describes the design goals for this.</p>
 <p class="note">But note that the information on this page is now out of date, and has been
@@ -334,44 +334,44 @@ longer part of Eclipse releases.
 <p>Here are links to more information; there are many (partially) out-of-date
 websites which are misleading but these links (as of January, 2013, seem up to date.)</p>
 <ul>
-<li><a target="_blank"
+<li><a target="_blank" rel="noopener"
 href="https://wiki.eclipse.org/Equinox/p2/Getting_Started_for_Releng">
 https://wiki.eclipse.org/Equinox/p2/Getting_Started_for_Releng</a>
 - describes basic concepts</li>
-<li><a target="_blank"
+<li><a target="_blank" rel="noopener"
 href="https://wiki.eclipse.org/Equinox/p2/Publisher">
 https://wiki.eclipse.org/Equinox/p2/Publisher</a>
 - describes the basic methods and Ant tasks used to create and modify update sites for P2;
 includes information on generating the P2 style Category metadata.
 </li>
-<li><a target="_blank"
+<li><a target="_blank" rel="noopener"
 href="https://www.slideshare.net/PascalRapicault/understanding-and-extending-p2-for-fun-and-profit">
 https://www.slideshare.net/PascalRapicault/understanding-and-extending-p2-for-fun-and-profit</a>
 - a general presentation on P2
 </li>
-<li><a target="_blank"
+<li><a target="_blank" rel="noopener"
 href="https://wiki.eclipse.org/P2">
 https://wiki.eclipse.org/P2</a>
 - the main starting page for P2 info on the Eclipse Wiki
 </li>
-<li><a target="_blank"
+<li><a target="_blank" rel="noopener"
 href="https://wiki.eclipse.org/Update_Site_Optimization">
 https://wiki.eclipse.org/Update_Site_Optimization</a>
 - now <em>OUT OF DATE</em> information on how update sites were optimized, before P2
 </li>
-<li><a target="_blank"
+<li><a target="_blank" rel="noopener"
 href="https://wiki.eclipse.org/Equinox/p2/Composite_Repositories_(new)">
 https://wiki.eclipse.org/Equinox/p2/Composite_Repositories_(new)</a>
 - a discussion of Composite Repositories - a top level file structure that aggregates together
 other update sites 
 </li>
-<li><a target="_blank"
+<li><a target="_blank" rel="noopener"
 href="https://wiki.eclipse.org/Equinox/p2/Ant_Tasks">
 https://wiki.eclipse.org/Equinox/p2/Ant_Tasks</a>
 - Ant tasks for P2, but may be <em>out of date</em> - a good summary of the Ant tasks
 we use in the automated build of the update site.
 </li>
-<li><a target="_blank"
+<li><a target="_blank" rel="noopener"
 href="https://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_repositorytasks.htm">
 https://help.eclipse.org/juno/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_repositorytasks.htm</a>
 - a discussion of Ant tasks for P2.  These are the versions for the current Eclipse (Juno - 4.2) release.

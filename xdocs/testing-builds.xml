@@ -40,7 +40,7 @@ under the License.
 </section>
 
 <section name="Overview">
-  <p>See <a target="_blank" href="https://www.apache.org/dev/release.html#what-must-every-release-contain">"What must be included in a release".</a>
+  <p>See <a target="_blank" rel="noopener" href="https://www.apache.org/dev/release.html#what-must-every-release-contain">"What must be included in a release".</a>
   To approve a release, it is good to do the following tests:
   <ul>
     <li>svn export the SVN tag for the code, and compare this to the unzip of the source-release.  These should be the same, except for some minor things; 

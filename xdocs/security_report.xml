@@ -109,16 +109,16 @@ Credit: Joern Kottmann
   security mailing list of the ASF Security Team, before disclosing 
   them in a public forum.</p>
   
-<p>Please see the page of the <a target="_blank" href="https://www.apache.org/security/">
+<p>Please see the page of the <a target="_blank" rel="noopener" href="https://www.apache.org/security/">
   AFS Security Team</a> for further information and contact information.</p>
   
 <p><b>The Security Team cannot accept regular bug reports or other queries; please use
-the regular <a target="_blank" href="mail-lists.html">UIMA mailing lists</a> for those.</b></p>  
+the regular <a target="_blank" rel="noopener" href="mail-lists.html">UIMA mailing lists</a> for those.</b></p>  
 </section>
 
 <section name="Security Standards">
 <p>Apache UIMA vulnerabilities are labeled with 
-<a target="_blank" href="https://cve.mitre.org">CVE</a> (Common Vulnerabilities and Exposures) identifiers.</p>
+<a target="_blank" rel="noopener" href="https://cve.mitre.org">CVE</a> (Common Vulnerabilities and Exposures) identifiers.</p>
 
 </section>
 </body>

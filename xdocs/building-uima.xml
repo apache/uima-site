@@ -31,12 +31,12 @@ under the License.
 <section name="Building Apache UIMA&#0153; from sources">
 
 <p>
-  We use <a class="external" rel="nofollow" target="_blank" 
+  We use <a class="external" rel="nofollow noopener" target="_blank" 
     href="https://maven.apache.org/">Maven</a>, release 3.0 or later, for building.
   
-  Most of us use <a class="external" rel="nofollow" target="_blank"
+  Most of us use <a class="external" rel="nofollow noopener" target="_blank"
     href="">Eclipse</a> as the IDE for working with Java.  Maven has a plugin for Eclipse,
-  <a class="external" rel="nofollow" target="_blank"
+  <a class="external" rel="nofollow noopener" target="_blank"
     href="https://m2eclipse.sonatype.org/">m2eclipse</a>, that is useful in working with Maven from
     within Eclipse.
 </p>
@@ -68,7 +68,7 @@ under the License.
       <p>For UIMA-AS:<br/>
         <code>  svn checkout https://svn.apache.org/repos/asf/uima/uima-as/trunk c:\myWorkingDirectoryForUima-as</code>
       </p>
-      <p>If you have <a class="external" rel="nofollow" target="_blank" 
+      <p>If you have <a class="external" rel="nofollow noopener" target="_blank" 
     href="https://tortoisesvn.tigris.org/">tortoiseSVN</a> windows shell extensions installed, 
     you can use the <code>repo-browser</code> right-click menu option to do this.</p>
     </li>
@@ -155,7 +155,7 @@ under the License.
   <code>mvn -DpdfPaperType=A4 package</code>
   </p>
   <p>The allowed values for paper type in Docbook can be seen on this page:
-  <a class="external" target="_blank" rel="nofollow" 
+  <a class="external" target="_blank" rel="nofollow noopener" 
   href="https://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html">
   https://docbook.sourceforge.net/release/xsl/current/doc/fo/page.width.portrait.html</a>.
   </p>
