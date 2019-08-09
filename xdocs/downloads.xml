@@ -168,11 +168,12 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="3.0.2"/>
   </subsection>
 
-  <subsection name="Apache UIMA 2.10.3">
-   <p>This is the latest version of Version 2 of UIMA Java SDK, and UIMA-AS (built on UIMA Java SDK 2.10.2).</p>
-   
-    <insertDownloads version="2.10.3"/>
-  </subsection> 
+  
+  <subsection name="Apache UIMA 2.10.4">
+   <p>This is the latest version of Version 2 of UIMA Java SDK
+   </p>
+    <insertDownloads version="2.10.4"/>
+  </subsection>
 
   <subsection name="Apache UIMA DUCC Version 2.2.2">
     <insertDownloads version="2.2.2"/>
@@ -188,6 +189,12 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="3.0.0"/>
   </subsection>
   
+  <subsection name="Apache UIMA 2.10.3">
+   <p>The problem with the Eclipse plugins not running with the latest Eclipse is fixed in 2.10.4.
+   </p>   
+    <insertDownloads version="2.10.3"/>
+  </subsection> 
+
  <subsection name="Apache UIMA Version 2.10.2">
    <p>This includes the latest version of the ConceptMapper addon. 
    </p>
