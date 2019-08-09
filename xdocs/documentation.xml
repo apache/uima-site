@@ -58,7 +58,7 @@
    </p>
    <ul>
      <li><a href="../d/uimaj-current/index.html">HTML online version - UIMA Java SDK for version 3. Also includes an API Change report.</a></li>
-     <li><a href="../d/uimaj-2.10.3/index.html">HTML online version - UIMA Java SDK for version 2</a></li>
+     <li><a href="../d/uimaj-2.10.4/index.html">HTML online version - UIMA Java SDK for version 2</a></li>
      <li><a href="../d/uima-as-2.10.3/uima_async_scaleout.html">HTML online version - UIMA Asynchronous Scaleout</a></li>       
    </ul>
    <p>PDF version for printing:</p> 
@@ -73,10 +73,10 @@
      </ul>
      <li>UIMA SDK version 2</li>
      <ul>
-     <li><a href="../d/uimaj-2.10.3/overview_and_setup.pdf">Overview and Setup</a></li>
-     <li><a href="../d/uimaj-2.10.3/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
-     <li><a href="../d/uimaj-2.10.3/tools.pdf">Tools</a></li>
-     <li><a href="../d/uimaj-2.10.3/references.pdf">References</a></li>
+     <li><a href="../d/uimaj-2.10.4/overview_and_setup.pdf">Overview and Setup</a></li>
+     <li><a href="../d/uimaj-2.10.4/tutorials_and_users_guides.pdf">Tutorials and Users&apos; Guides</a></li>
+     <li><a href="../d/uimaj-2.10.4/tools.pdf">Tools</a></li>
+     <li><a href="../d/uimaj-2.10.4/references.pdf">References</a></li>
      </ul>
      <li><a href="../d/uima-as-2.10.3/uima_async_scaleout.pdf">UIMA Asynchronous Scaleout</a></li>
    </ul>
@@ -88,7 +88,7 @@
 
    <ul>
      <li><a href="../d/uimaj-current/apidocs/index.html">JavaDoc online - UIMA Java SDK current-release (version 3)</a></li>
-     <li><a href="../d/uimaj-2.10.3/apidocs/index.html">JavaDoc online - UIMA Java SDK current-release (version 2)</a></li>
+     <li><a href="../d/uimaj-2.10.4/apidocs/index.html">JavaDoc online - UIMA Java SDK current-release (version 2)</a></li>
      <li><a href="../d/uima-as-2.10.3/api-uima-as/index.html">JavaDoc online - UIMA-AS current-release</a></li>
    </ul>
    </p>
