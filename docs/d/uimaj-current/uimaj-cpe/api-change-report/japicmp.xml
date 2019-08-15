@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<japicmp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" accessModifier="PROTECTED" creationTimestamp="2019-08-06T15:44:09.588-0400" ignoreMissingClasses="false" ignoreMissingClassesByRegularExpressions="" newJar="C:\au\builds\uimaj-3.1.0\rc1\artifacts\target\checkout\uimaj-cpe\target\uima-cpe.jar" newVersion="n.a." oldJar="C:\Users\MarshallSchor\.m2\repository\org\apache\uima\uimaj-cpe\3.0.2\uimaj-cpe-3.0.2.jar" oldVersion="3.0.2" onlyBinaryIncompatibleModifications="false" onlyModifications="true" packagesExclude="n.a." packagesInclude="all" semanticVersioning="0.0.0" title="Comparing source compatibility of C:\au\builds\uimaj-3.1.0\rc1\artifacts\target\checkout\uimaj-cpe\target\uima-cpe.jar against C:\Users\MarshallSchor\.m2\repository\org\apache\uima\uimaj-cpe\3.0.2\uimaj-cpe-3.0.2.jar" xsi:noNamespaceSchemaLocation="japicmp.xsd">
+    <classes/>
+</japicmp>
