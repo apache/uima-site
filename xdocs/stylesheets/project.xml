@@ -148,6 +148,14 @@
     </download>
   </downloads>
 
+  <downloads version="3.1.0" title="Apache UIMA Version 3.1.0" withreleasedate="true">
+    <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-3.1.0" releasedate="15-Aug-2019">
+      <releasenotes filename="uimaj-3.1.0/RELEASE_NOTES">           <f>html</f>                </releasenotes>
+      <binary       filename="uimaj-3.1.0-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
+      <source       filename="uimaj-3.1.0-source-release">          <f>zip</f>  </source>
+    </download>
+  </downloads>
+
   <downloads version="3.0.2" title="Apache UIMA Version 3.0.2" withreleasedate="true">
     <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-3.0.2" releasedate="10-Apr-2019">
       <releasenotes filename="uimaj-3.0.2/RELEASE_NOTES">           <f>html</f>                </releasenotes>
