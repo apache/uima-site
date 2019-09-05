@@ -56,6 +56,7 @@
         <item name="Doing a UIMA release"   href="/release.html"/>
         <item name="Doing a CVE (Apache)"  	href="https://www.apache.org/security/committers.html"/>
         <item name="Eclipse Update Sites"   href="/eclipse-update-site.html"/>
+        <item name="GIT"                    href="/git.html"/>
         <item name="Code Conventions"       href="/codeConventions.html"/>
         <item name="UIMA Specification (OASIS)"     href="/uima-specification.html"/> 
         <item name="Project Team"           href="/team-list.html"/>

@@ -8,14 +8,12 @@
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
             <style type="text/css">@import "stylesheets/base.css";</style>
-                                          <meta name="author" value="
-   Apache UIMA Documentation Team
-  ">
+                                          <meta name="author" value=" Apache UIMA Documentation Team">
   <meta name="email" value="dev@uima.apache.org">
                         
             
                         
-                        <title>Apache UIMA - Apache UIMA Project Guidelines</title>
+                        <title>Apache UIMA - GIT Conventions for UIMA projects</title>
             
             <!-- Begin Cookie Consent plugin by Silktide - https://silktide.com/cookieconsent -->
             <!-- Commented out because implied consent is not compatible with GDPR -->
@@ -57,7 +55,7 @@
                             </a>
                     </td>
                     <td align='CENTER'>
-                          <div class="pageBanner">Apache UIMA Project Guidelines</div>
+                          <div class="pageBanner">GIT Conventions for UIMA projects</div>
                     </td>
                     <td align='RIGHT'>
                                   <a href="https://www.apache.org">
@@ -228,39 +226,26 @@
                                                           <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Communication"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Communication</h1></a>
+        <a name="Git Conventions"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Git Conventions</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <h3 align="center">
-    <font color="#FF0000">
-     <b>Note: This is a working draft document.</b>
-    </font>
-   </h3>
-                                                <p align="center">
-    Discussion of this document is occurring on the uima-dev mailing
-    list.
-   </p>
-                                                <br />
-                                                <p>
-    The Project obtains its strength from the communication of its
-    members. In order for members to easily communicate with each other,
-    the Project has a variety of mailing lists. These lists, with the
-    exception of the announcement lists, are not moderated and anybody
-    is more than welcome to join them. However, you must be subscribed
-    to post to a list.
-   </p>
-                                                <p>
-    To reduce the bandwidth demands on everyone, mail should not contain
-    attachments. It is recommended that you place interesting material
-    either within the body of the message or provide a URL for
-    retrieval. Patches are best done as attachments to a JIRA issue.
-   </p>
-                                                <p>
-    To join the mailing lists, see our
-    <a href="mail-lists.html">Mailing List</a>
-    page.
-   </p>
+                                    <p>This describes various conventions and the reasons behind them, concerning use of GIT.</p>
+                                                <h3>Branch naming</h3>
+                                                <h4>master</h4>
+                                                <p>This is the main branch where things are merged into, and from time to time, releases are made from.</p>
+                                                <p>Some project may have multiple branches.  These typically reflect on-going versions being developed together.</p>
+                                                <h4>branches for working</h4>
+                                                <p>Work is done in a branch.  This because the master(s) are protected, which means they cannot be "pushed" to, 
+        but rather, a change must be pulled from a branch via a pull request.</p>
+                                                <p>Branches for working are typically named using the Jira issue (if there is one) associated with the work, 
+        followed by a very-short-description - enough to remind you what that jira number is about.
+        In addition, the name can be prefixed with the kind of work it is, e.g. <code>feature/</code> or <code>bugfix</code>.
+        This can be useful in enabling you to more rapidly locate the right branch.</p>
+                                                <p>After merging into master, the branch is typically deleted.</p>
+                                                <h4>Git merge styles</h4>
+                                                <p>Different projects may use different merge styles.</p>
+                                                <p>See these links for references to common work patterns.</p>
                             </blockquote>
         </p>
       </td></tr>
