@@ -37,13 +37,35 @@ under the License.
     <h3>File INFRA Jira tickets for additional setup or fixups</h3>
     
     <h4>Renaming Branches</h4>
+    <p>In SVN, the main work goes into a spot under the name "trunk".  The convention in git is to name this
+    the "master".</p>
+    
+    <p>GIT renaming cannot be done directly by users if the branch is "protected"; 
+    you must instead request it be done via an INFRA issue.  This may take some time; see the kanban
+    board on the INFRA jira to get a sense of how many other requests are in front of yours.</p>
+    
+    <blockquote>Therefore, it would be good to rename things yourself (e.g. in SVN).</blockquote>
     
     <h3>Add .gitignore and .gitattributes</h3>
 	    <p>These files should be added to the top (outer-most) containing folder for the projects in your repo.
 	       They will be default apply to all subfolders.  If you need to, you can override these settings in a subfolder.</p>
 	       
 	    <p>Copy these files from some already converted repo.</p>
-	       
+	 
+    <h3>Dealing with protected branches</h3>
+    
+    <p>The default, when converting a project from svn to git is to set "protection" for 
+      the master branch and things called refs/heads/rel/ and refs/tags/rel/.  
+    </p>
+    <p>The protection is described here: 
+       <a target="_blank" rel="nofollow noopener" 
+          href="https://help.github.com/en/articles/about-protected-branches">
+          https://help.github.com/en/articles/about-protected-branches</a>.</p>	 
+
+    <p>Individual projects within UIMA may request additional branch protection settings be set, via
+       INFRA Jira issues.</p>
+       
+       	       
     </section>
     
   </body>

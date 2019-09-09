@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+<properties>
+<title>GIT SVN Notes</title>
+    <author email="dev@uima.apache.org"> Apache UIMA Documentation
+      Team</author>
+</properties>
+
+<body>
+
+  <section name="GIT SVN Notes">
+  
+    <h2>Names and IDs in Git</h2>
+    <p>Systems that hold git repos, like github.com, or gitbox.a.o, each have their own way of 
+       logging in and authenticating.  For github.com, 2 factor authentication is required in order
+       to write to Apache repos - see 
+       <a target="_blank" rel="nofollow noopener" href="https://gitbox.apache.org/">
+          https://gitbox.apache.org/</a>.</p>
+     
+     <p>The name used for logging in is separate from the name used to identify each commit in
+        git.  These crendentials are called your "identity" and are 
+        the combination of a username and "email". These can be set globally for all repos 
+        in your local machine, or locally, per repository.  
+        See <a target="_blank" rel="nofollow noopener" href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">
+          https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup</a>.</p>
+          
+     <h3>Using multiple git identities</h3>
+     <p>You may work with different organizations, and want to have different identities for each 
+        repository, depending.  You can do this; just use the local git configuration for the repo to 
+        specify this.</p>
+    
+    <h2>Recent GIT changes</h2>
+    <p><sl><li><p><code>git switch</code></p></li>
+           <li><p><code>git restore</code></p></li>
+       </sl>
+   
+    <blockquote>June 2019: git 2.23 release - has new switch/restore
+       commands, to be used in place of git checkout; see 
+       <a target="_blank" rel="nofollow noopener" href="https://github.blog/2019-08-16-highlights-from-git-2-23/">
+          https://github.blog/2019-08-16-highlights-from-git-2-23/</a>.
+    </blockquote>
+    </p>
+    <h2>GIT vs SVN</h2>
+    
+    <p>Note in this table, that the various commands usually have many options (especially git) 
+       which can change their behavior substantially.  This table frequently is only showing
+       one of the main uses of the git commands.  When in doubt, please google the command 
+       (e.g. google <code>git branch</code>) to see all the other things a git command can do.</p>
+       
+       
+    <table class="downloads">   
+      <tr>
+	      <th>Goal / Task</th>
+	      <th>SVN</th>
+	      <th>Git/GitHub</th>
+	      <th>Comments/Discussion/Comparisons</th>
+	    </tr>
+      <tr>
+        <td>checkout</td>
+        <td>svn checkout &lt;url-of-a-branch&gt;</td>
+        <td><p>git clone &lt;repo-url&gt; 
+            </p>
+            <p>git clone &lt;repo-url&gt; -branch &lt;branch-name&gt; 
+            </p>
+        </td>
+        <td><p>SVN checkout 
+             <ol><li>making a working tree of the contents of some (usually remote) repository</li>
+                 <li>updating an existing working tree to the "head" level of the repository, to 
+                     catch up with any changes made by others.</li>
+             </ol>
+            </p>
+            <p>Git has distributed repositories; to get a local working tree, you first need to have a local
+               clone of a (usually remote) repository.        
+            The clone operation creates a full (all branches, tags, etc.) copy of the remote repository 
+            onto the local machine.
+            Subsequently, the default branch (or a specific branch) is checked out into the working tree.
+            </p>
+        </td>
+            
+      </tr>
+      <tr>
+        <td>update to current</td>
+        <td>svn update</td>
+        <td>git pull</td>
+        <td><p>Update makes the working tree have the same level as the remote.</p>
+           <p>SVN update may cause merging to occur, and merge conflicts which are resolved by hand.</p>
+           <p>git pull does this in a 2 step process: 
+              <ul><li>In step 1 it does a <code> git fetch </code> which updates the part of the local git repo that
+              are tracking the remote, to matching the current data at the remote
+              (by default, it does this for all branches). </li>
+              <li>In step 2, it does a <code> git merge </code> which merges the remote-tracking branch(s) which changed with 
+                  any corresponding local branch(s).  
+                  This may result in merge conflicts which will need manual resolving.
+                   If there are conflicting changes, then there are two options: 
+            <ol><li>stash the changes, pull, then apply the stash, then resolve conflicts</li>
+                <li>commit the local changes, pull, resolve conflicts</li>
+            </ol>
+                    
+               </li></ul>
+               </p>
+           </td>
+      </tr>
+      <tr>
+        <td>commit</td>
+        <td>svn commit</td>
+        <td><p>git commit</p> 
+            <p>git push</p></td>
+        <td><p>SVN commit uploads changes from the working tree to the remote repo.
+            It fails if the remote repo's files are beyond the working-tree's checkout level; 
+            in this case an svn update is needed first before the commit can be done.
+            <ul><li>The update may create merge conflicts which will need to be resolved before the commit can happen.</li></ul>
+            </p>
+            
+            <p> 
+            A git commit commits the (staged) changes in the working tree to the local repository branch.
+            <ul><li>Eclipse team plugin for git allows you to
+            stage any unstaged items before doing the commit.</li></ul>
+            </p>
+            <p>A <code>git push</code> transfer the changes from the local repository up to the
+            the remote one, provided that those changes can be done using fast-forward.  
+            Otherwise, like SVN, this operation fails.  Fix this the same way, by doing a git pull
+            and addressing any merge issues.</p>
+            <p>
+            The local repo can be configured to talk to any number of other local or remote repositories 
+            to sync with them. 
+            However, most of the time, it is only configured to sync with a single canonical remote repo, 
+            e.g. on GitHub.
+            </p>
+            </td>
+      </tr>   
+       <tr>
+        <td>tag</td>
+        <td>svn copy &lt;url&gt;/trunk &lt;url&gt;/tags/&lt;tag-name&gt;</td>
+        <td>git tag &lt;tag-name&gt;</td>
+        <td><p>Tags are first-class citizens in git and represent a state of the repository. 
+            In SVN, tags are just another folder and a manifestation of a folder naming convention.
+            </p>
+            </td>
+            
+      </tr>
+      <tr>
+        <td>branch</td>
+        <td>svn copy &lt;url&gt;/trunk &lt;url&gt;/branches/&lt;branch-namel&gt;</td>
+        <td>git branch &lt;branch-name&gt;</td>
+        <td>Creating a branch does not "switch" the current checkout to the branch.  See switch.</td>
+      </tr>
+      <tr>
+        <td>switch</td>
+        <td>svn switch &lt;url&gt;</td>
+        <td>git switch &lt;branch&gt;</td>
+        <td><p>SVN switch updates the local working tree (or portions of it) to some remote repo spot.</p>
+        <p>git switch is at the granularity of a branch.  
+           The working tree and the git "index" of to-be-committed things are updated to match the new branch.
+           The <code>switch</code> command is a refactoring of the git checkout command; see 
+          <a target="_blank" rel="nofollow noopener" href="https://github.blog/2019-08-16-highlights-from-git-2-23/">
+          https://github.blog/2019-08-16-highlights-from-git-2-23/</a>.
+          </p>
+          <p>Switch updates the local checkout to a different branch, preserving any changes not yet checked (maybe showing conflict editor), and changing where a commit will go with the same SVN repo.  
+             git switch replaces the checkout tree (except for untracked things) with the branch/tag/revision.  
+             If this would lose data (because you have uncommitted changes), the checkout is not done (error msg).</p>
+        </td>
+      </tr>
+      <tr>
+        <td>relocate (when the URL of the remote repo has changed)</td>
+        <td>svn relocate &lt;from-url&gt; &lt;to-url&gt;</td>
+        <td>git remote set-url origin &lt;remote-url&gt;</td>
+        <td><p>The git remote set-url associates a remote with a name, such as origin, which
+            by convention is used by default for many operations involving remotes.</p></td>
+      </tr>
+      <tr>
+        <td>change the commit message</td>
+        <td>svn propset, eclipse: in team history view</td>
+        <td>git commit amend - changes the last commit message</td>
+        <td><p>In SVN, it is easy to update the properties (commit messages) of any past commit. 
+		        In git, this is possible but intentionally difficult. 
+		        The version history in git is covered by cryptographic hashes. 
+		        In order for the distributed version control to work well, 
+		        it is essential that the hashes are consistent across all clones of the repositories. 
+		        If they are not, manual intervention is necessary. 
+		        </p>
+		        <p>
+		        Rewriting the commit message is fine, as long as the commit is only to your private 
+		        local repo.  But it will cause problems if it has been "published" (that is, pushed to a 
+		        remote repo, where others might have downloaded it).  Because of this,
+		        it is highly discouraged to re-write git histories and only possible using a "force push". 
+		        For this reason, shared branches such as the "master" branch or maintenance branches 
+		        are usually "protected", meaning that force-pushes are rejected. 
+		        But since it is not uncommon that things need to be rewritten, 
+		        it is usually accepted that people force-push changes into feature branches they work on. 
+		        But it should still be avoided, in particular if there are others 
+		        contributing to the same feature branch.</p></td>
+      </tr>
+      <tr>
+        <td>submitting a patch</td>
+        <td><p>Create a Jira issue</p>
+         <p>implement changes</p>
+         <p>svn diff</p>
+         <p>attach that diff to Jira issue</p>         
+        </td>
+        <td><p>Create a Jira issue</p>
+          <p>
+          Create a branch following naming convention:<br/>
+            e.g. feature/UIMA-1234-cool-new-feature</p>
+          <p>commit any changes for the patch to that branch</p>
+          <p>push the branch to remote</p>
+          <p>create a pull request via GitHub site</p>
+          <p>wait for the CI (Continuous Integration) process to
+          finish any checking/testing of the pull request</p>
+          <p>ask for a review (if you are not a committer)</p>
+          <p>make changes (if needed) and repeat review</p>
+          <p>merge the pull request (or ask a committer to do it)</p>  
+        </td>
+        <td>
+          <p>With the SVN-based infrastructure that is in place at te ASF, diffs need to be handled manually. 
+          I.e. contributors need to create them, 
+          committers need to apply them, review them, run test builds, 
+          and the process repeats if changes need to be made.
+          </p>
+          <p>In GitHub contributions are made through pull requests;
+          these are required (vs just doing git push) when the branch being pushed to is
+          marked as "protected".  By convention, the release branches and tags, and the "master" are
+          marked this way.  This is changed/managed by filing a Jira issue with INFRA.
+          </p>
+          <p>While working on a feature or bug fix in a separate branch, simple pushes can be used.</p>
+          <p>           
+          A pull request provides the ability to 
+          discuss changes in pull requests, perform reviews, and run automated checks.          
+          </p>
+          <p>The ASF Jenkins is already set up to automatically monitor pull requests 
+          and to run automated checks on them. For security reasons, 
+          pull requests from non-committers are not built automatically but must be triggered by a committer 
+          by posting a comment such as "Jenkins, can you test this please." 
+          to the discussion thread of the pull request on the GitHub website.
+          </p>
+        </td>
+      </tr>      
+    </table>
+  
+  </section>
+    
+</body>
+</document>
