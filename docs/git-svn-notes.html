@@ -334,7 +334,11 @@
             <p>A <code>git push</code> transfer the changes from the local repository up to the
             the remote one, provided that those changes can be done using fast-forward.  
             Otherwise, like SVN, this operation fails.  Fix this the same way, by doing a git pull
-            and addressing any merge issues.</p>
+            and addressing any merge issues.
+            
+            <ul><li>Note that protected branches (such as master) cannot be "pushed" to.  Instead, you must create a 
+            "pull request" and then later merge that pull request with the protected branch.</li></ul></p>
+            
             <p>
             The local repo can be configured to talk to any number of other local or remote repositories 
             to sync with them. 
