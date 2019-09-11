@@ -1,5 +1,6 @@
 Board report for Apache UIMA, for September 2019.
 
+## Description:
 Apache UIMA's mission: the creation and maintenance of open-source software
 related to the analysis of unstructured data, guided by the UIMA Oasis
 Standard. The software provides frameworks, tools and annotators, 
