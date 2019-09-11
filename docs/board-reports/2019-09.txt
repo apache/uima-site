@@ -1,0 +1,56 @@
+Board report for Apache UIMA, for September 2019.
+
+Apache UIMA's mission: the creation and maintenance of open-source software
+related to the analysis of unstructured data, guided by the UIMA Oasis
+Standard. The software provides frameworks, tools and annotators, 
+facilitating the analysis of unstructured content such as text, audio and 
+video.
+
+## Membership Data:
+Apache UIMA was founded 2010-03-16 (9.5 years ago)
+There are currently 25 committers and 16 PMC members in this project.
+The Committer-to-PMC ratio is roughly 7:4.
+
+Community changes, past quarter:
+- No new PMC members. Last addition was Lou DeGenaro on 2016-05-02.
+- No new committers. Last addition was Viorel Morari on 2018-09-20.
+
+## Releases:
+
+2 releases in last quarter
+uimaj-3.1.0 was released on 2019-08-15.
+uimaj-2.10.4 was released on 2019-08-09.
+
+## Board question from last report: druggeri:  
+>> It's good to see new contributors. 
+>> Any prospects for new PMC members... it's been a while.
+
+We do not currently have any new PMC member prospects, 
+but we keep our eye out for some.
+
+Activity:
+  After the release of uimaj, we started the work to migrate 
+  that project from SVN to GIT.
+  This has been a slow and difficult process,   
+  due mainly to a couple of things  
+  
+  1) the documentation for GIT at apache 
+     leaves several things undocumented, and also includes 
+     apparently out-of-date information.
+     See for example, 
+     https://issues.apache.org/jira/projects/LEGAL/issues/LEGAL-478
+     (read the comments) 
+     
+  2) simple modifications for one's project's GIT repository 
+     such as renaming a branch, sometimes require filing of 
+     INFRA Jira issues, and due to current load, 
+     these appear in their KANBAN queue that's 100's of items long.
+     See https://issues.apache.org/jira/projects/INFRA, and
+     choose the KANBAN view on the left-hand navigation.
+     The result is that with the current INFRA staffing resources,
+     it can take more than a week to get these acted on.
+  
+Community Health: The community continues to be moderately active; 
+some new contributors doing patches.
+
+Issues: No Board level issues at this time.
