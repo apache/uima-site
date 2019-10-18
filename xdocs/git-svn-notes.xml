@@ -49,8 +49,8 @@ under the License.
         specify this.</p>
     
     <h2>Recent GIT changes</h2>
-    <p><sl><li><p><code>git switch</code></p></li>
-           <li><p><code>git restore</code></p></li>
+    <p><sl><li><code>git switch</code></li>
+           <li><code>git restore</code></li>
        </sl>
    
     <blockquote>June 2019: git 2.23 release - has new switch/restore
