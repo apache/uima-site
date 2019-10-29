@@ -39,10 +39,20 @@ under the License.
         <p>See  <a target="_blank" rel="noopener"
            href="git-conventions.html">git-conventions</a> for information about the GIT conventions being used.</p>
            
+      <h2>Git Work Process</h2>
+        <p>See  <a target="_blank" rel="noopener"
+           href="git-work-process.html">git-work-process</a> for information on how to work with projects in GIT and submit
+           changes and pull requests.
+        </p>
+           
       <h2>Converting a project to GIT</h2>
         <p>See  <a target="_blank" rel="noopener"
            href="convert-to-git.html">convert-to-git</a> for information on the steps to take to move / convert a project from SVN to GIT.</p>
-           
+    
+      <h2>Releasing when the source has been moved to GIT</h2>
+        <p>See <a target="_blank" rel="noopener"
+           href="git-release-notes.html">git release notes</a>.</p>       
+    
     </section>
     
   </body>

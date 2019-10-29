@@ -380,6 +380,27 @@
         </td>
       </tr>
       <tr>
+        <td>reset back to prev commit</td>
+        <td> ? </td>
+        <td>
+          <p>git reset --hard hash-of-commit</p>
+          <p>git push -f origin branch-name</p>
+        </td>
+        <td>This method is only used when no one has cloned the branch-name.  Typical use: when
+            a release:prepare has been done which needs to be rolled back.
+        </td>
+      </tr>
+      <tr>
+        <td>remove a tag</td>
+        <td> use tortiseSVN tool </td>
+        <td>
+          <p>git tag   <i>to list the tags</i></p>
+          <p>git tag -d uimaj-x.y.z   <i>to remove the tag locally</i></p>
+          <p>git push origin :refs/tags/uimaj-x.y.z  <i>to remove the tag remotely</i></p>
+        </td>
+        <td>If you have a failed release:prepare and want to roll back, you can use this to delete the tag.</td>
+      </tr>
+      <tr>
         <td>relocate (when the URL of the remote repo has changed)</td>
         <td>svn relocate &lt;from-url&gt; &lt;to-url&gt;</td>
         <td>git remote set-url origin &lt;remote-url&gt;</td>

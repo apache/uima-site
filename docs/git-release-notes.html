@@ -13,7 +13,7 @@
                         
             
                         
-                        <title>Apache UIMA - GIT</title>
+                        <title>Apache UIMA - Notes on Releases with Git</title>
             
             <!-- Begin Cookie Consent plugin by Silktide - https://silktide.com/cookieconsent -->
             <!-- Commented out because implied consent is not compatible with GDPR -->
@@ -55,7 +55,7 @@
                             </a>
                     </td>
                     <td align='CENTER'>
-                          <div class="pageBanner">GIT</div>
+                          <div class="pageBanner">Notes on Releases with Git</div>
                     </td>
                     <td align='RIGHT'>
                                   <a href="https://www.apache.org">
@@ -226,25 +226,20 @@
                                                           <div class="sectionTable">
       <table class="sectionTable">
         <tr><td>
-        <a name="Information on GIT use by UIMA projects"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Information on GIT use by UIMA projects</h1></a>
+        <a name="Tags"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Tags</h1></a>
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <h2>Git notes for SVN users</h2>
-                                                <p>
-          See  <a target="_blank" rel="noopener" href="git-svn-notes.html">git-svn-notes</a> for a brief summary of how to work
-           with git, if you're familiar with how to work with SVN.
-        </p>
-                                                <h2>Conventions</h2>
-                                                <p>See  <a target="_blank" rel="noopener" href="git-conventions.html">git-conventions</a> for information about the GIT conventions being used.</p>
-                                                <h2>Git Work Process</h2>
-                                                <p>See  <a target="_blank" rel="noopener" href="git-work-process.html">git-work-process</a> for information on how to work with projects in GIT and submit
-           changes and pull requests.
-        </p>
-                                                <h2>Converting a project to GIT</h2>
-                                                <p>See  <a target="_blank" rel="noopener" href="convert-to-git.html">convert-to-git</a> for information on the steps to take to move / convert a project from SVN to GIT.</p>
-                                                <h2>Releasing when the source has been moved to GIT</h2>
-                                                <p>See <a target="_blank" rel="noopener" href="git-release-notes.html">git release notes</a>.</p>
+                                    <p>Tags are stored in the .git folder in the subfolder /refs/tags.</p>
+                                                <p>When Apache Infra sets up a writable git project, they set 
+      <a target="_blank" rel="nofollow noopener" href="https://help.github.com/en/github/administering-a-repository/about-protected-branches">
+      github protection</a>.  The protection is set on 
+      <ul><li>refs/heads/trunk</li>
+          <li>refs/heads/master</li>
+          <li>refs/heads/rel/</li>
+          <li>refs/tags/rel/</li>
+      </ul>
+    </p>
                             </blockquote>
         </p>
       </td></tr>

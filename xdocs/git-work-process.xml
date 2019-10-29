@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+  <properties>
+    <title>GIT work process</title>
+    <author email="dev@uima.apache.org"> Apache UIMA Documentation Team</author>
+  </properties>
+
+  <body>
+
+    <section name="Git Work Process">
+    
+    <p>This describes the normal way you work on a UIMA project as a contributor.
+    </p>
+    
+    <h2>Preliminaries</h2>
+    
+    <p>You may be working on a feature or a bug fix.  These are similar, except typically, features
+       may be worked on over a longer period.</p>
+    
+    <p>A preliminary step: Sign up for a github.com account, if you don't already have one.</p>
+       
+    <h2>Fork the repo</h2>   
+    <p>The first step is to fork the project on githhub.  To do this, point your browser to the repository,
+       and press the fork button.
+       <img src="./images/git/fork.png" alt="fork button" /></p>   
+    
+    <p>This will fork (create a writable-by-you) copy of the repo, in your personal github account.
+    </p>
+    
+    <h2>Clone the fork</h2>
+    <p>Next, clone the fork to your local development machine.  After the above step, your browser should
+       be positioned at the forked repository.  Click the green clone-or-download button near the top,
+       and proceed to clone this repo.  For example you could copy the link starting with "https://github.com..."
+       to the clipboard, and then open a command line and CD to a directory where you keep your clones, and then
+       use the git command <code>git clone https://github.com...</code> (paste the address into the command).
+    </p>
+    
+    <h2>Make a branch</h2>
+    <p>Next, make a branch where you'll do the work.  Name the branch with the name of the Jira issue ticket this work
+       is being done for;  e.g. "UIMA-6455", or some other name of your choosing.  Then switch the checkout to that 
+       new branch.  The git command to do these two steps in one command is 
+       <code>git checkout -b the-new-branch-name</code></p>
+       
+    <p>The reason to work in a branch is to keep changes related to one issue separate from other
+       work. If you were also not working on a fork, but on the main project, this practice separates the
+       changes from the "production-ready" master branch, until things have been reviewed and tested.</p>   
+       
+    <h2>Make your changes</h2>
+    <p>Now make your changes.  You can commit the changes as you desire, and push them to your forked copy.</p>
+    
+    <h2>Commit / push your changes</h2>
+    <p>When you're ready to have others look at the changes and give feedback, and eventually accept them into the 
+       official project, commit the changes and push them to your fork (if not already done).
+    </p>       
+    
+    <h2>Open a pull request</h2>
+    <p>Then open a pull request.  If you don't see a Create pull request
+    <img src="./images/git/create-pull-request.png" alt="Create pull request button" /> button, click on the Pull requests tab
+    <img src="./images/git/pull-request-tab.png" alt="pull requests tab" /> and on the next screen press the 
+    New pull request button <img src="./images/git/new-pull-request.png" alt="New pull request button" />.</p>
+    
+    <p>Follow the instructions to complete and submit the pull request.  
+    
+    <h2>Iterate to resolve any issues</h2>
+    At that point, the reviewers/committers on the project
+    will take a look at your proposed changes, and perhaps give feedback.  Work with them to resolve any
+    issues.  When the change is OK, a committer will pull this change into the master branch.</p> 
+    </section>
+    
+  </body>
+</document>
