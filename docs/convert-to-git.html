@@ -231,9 +231,16 @@
       <tr><td>
         <blockquote class="sectionBody">
                                     <p>This describes the various steps needed in converting a project from SVN to GIT.</p>
-                                                <h3>Setup Read-only mirror, if not already done</h3>
                                                 <h3>File INFRA Jira ticket to convert read-only mirror to r/w</h3>
+                                                <p>Tell the dev list this is happening, so people should not make any changes until the conversion is done.
+         This may take 2-3 weeks, depending on INFRA workload.</p>
+                                                <p>Prior to doing the ticket, if you want the top level named "master" instead of "trunk", do that change
+         in SVN, and let it propogate to the read-only mirror (if one exists).  This will save time after the
+         migration, because renames involve help from INFRA.</p>
                                                 <h3>File INFRA Jira tickets for additional setup or fixups</h3>
+                                                <p>If a rename is needed at this point for master/trunk, you'll need to ask INFRA to protect master 
+         after the rename, and to set it as the default (removing trunk as the default).  Once INFRA does this,
+         you can delete the old trunk.</p>
                                                 <h4>Renaming Branches</h4>
                                                 <p>In SVN, the main work goes into a spot under the name "trunk".  The convention in git is to name this
     the "master".</p>
@@ -254,6 +261,17 @@
           https://help.github.com/en/articles/about-protected-branches</a>.</p>
                                                 <p>Individual projects within UIMA may request additional branch protection settings be set, via
        INFRA Jira issues.</p>
+                                                <h3>Updating POMs for GIT</h3>
+                                                <p>POMs have an &lt;scm&gt; element that points to svn, and it should be updated as follows:
+    </p>
+                                                <ul>
+        <li>For both the connection and developerConnection:  
+            <p><code>scm:git:https://github.com/apache/...proj-name.../...subdir...</code></p>
+        </li>
+        <li>For the url: this should point to the source code at github, e.g.
+            <p><code>https://github.com/apache/...proj-name.../tree/master/...sub-proj-name...</code></p>
+            <p>For uima-v2, replace <code>master</code> with <code>master-v2</code></p></li>
+      </ul>
                             </blockquote>
         </p>
       </td></tr>

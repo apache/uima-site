@@ -28,17 +28,80 @@ under the License.
 
     <section name="Tags">
     
-    <p>Tags are stored in the .git folder in the subfolder /refs/tags.</p>
-    
-    <p>When Apache Infra sets up a writable git project, they set 
-      <a target="_blank" rel="nofollow noopener" href="https://help.github.com/en/github/administering-a-repository/about-protected-branches">
-      github protection</a>.  The protection is set on 
-      <ul><li>refs/heads/trunk</li>
-          <li>refs/heads/master</li>
-          <li>refs/heads/rel/</li>
-          <li>refs/tags/rel/</li>
-      </ul>
-    </p>
+	    <p>Tags are stored in the .git folder in the subfolder /refs/tags.</p>
+	    
+	    <p>When Apache Infra sets up a writable git project, they set 
+	      <a target="_blank" rel="nofollow noopener" href="https://help.github.com/en/github/administering-a-repository/about-protected-branches">
+	      github protection</a>.  The protection is set on 
+	      <ul><li>refs/heads/trunk</li>
+	          <li>refs/heads/master</li>
+	          <li>refs/heads/rel/</li>
+	          <li>refs/tags/rel/</li>
+	      </ul>
+	    </p>
+	    
+	    <p>After a release passes, make a new tag for the release with the name rel/...tag-name... Here's how:</p>
+	    <ul><li><code>git tag -m "proj-name-1.2.3 rcXXX released" rel/proj-name-x.y.z proj-name-x.y.z^{}</code>
+	       The strange notation ^{} peels the annotated tag and returns a ref to the actual commit.</li>
+	       <li><code>git push origin rel/proj-name-x.y.z</code> This updates the new tag to the remote repo</li>
+	    </ul>
+   </section>
+   
+   <section name="What the maven release plugin does with GIT">
+     <h2>release:prepare</h2>
+       <p>
+       <ul>
+         <li>Take all the poms in the project which start out at some x.y.z-SNAPSHOT version, and 
+          update the versions to x.y.z (without the -SNAPSHOT).</li>
+         <li>Build the project.</li>
+       </ul>
+       </p>
+       
+       <p>
+         <ul>
+           <li>Create a commit with all the updated POMs, and commit that to whatever branch was checked out at the start.</li>
+           <li>git push</li>
+           <li>Create a tag</li>
+           <li>git push</li>
+         </ul>
+       </p>
+       
+       <p>
+         <ul>
+           <li>Update all the poms to x.y.z + 0.0.1 -SNAPSHOT, and commit them</li>
+           <li>git push</li>
+         </ul>
+       </p>
+       
+     <h2>release:perform</h2>
+       <p>This does a build using the "tag" checkout, and uploads the artifacts to the maven staging repository.</p>
+       
+       <p>(needs confirmation) the tag is checked out into a new branch, and the new branch is copied into
+          the branch being built from, in the target/checkout directory.  Then the new branch is deleted.</p>
+          
+       <p>A build is done from the target/checkout spot, with maven artifacts uploaded to repository.apache.com staging area,
+          just like before.</p>
+             
+   </section>
+   
+   <section name="How to roll back a release attempt">
+     <p>The idea is to reset the branch being used to build, back to the commit just before the maven release:prepare 
+        commit, which is identified with the message <code>[maven-release-plugin] prepare for next development iteration</code>.</p>
+        
+     <p>Do this by working in a checkout of the branch being used to build, typing <code>git log</code> and finding the hash
+        for the commit right before the prepare commit.</p>
+        
+     <p></p>
+       <ul><li><code>git log -5 --oneline</code>   shows the last 5 commits. Find the last commit before the maven prepare one.</li>
+           <li><code>git reset --hard hash-of-commit</code> where hash-of-commit is from the log </li>
+           <li><code>git push origin branch-name</code></li>
+       </ul>
+       
+     <p>Next, because the release:prepare created a tag, you need to remove it. Do this:</p>
+       <ul><li><code>git tag</code> to list the tags</li>
+           <li><code>git tag -d name-of-tag</code>  to delete, e.g. uimaj-3.1.1.  This deletes it locally only.</li>
+           <li><code>git push origin :refs/tags/name-of-tag</code>  to remove the tag in the remote.</li>
+       </ul>     
    </section>
     
   </body>

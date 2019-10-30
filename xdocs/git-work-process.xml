@@ -41,7 +41,8 @@ under the License.
     <h2>Fork the repo</h2>   
     <p>The first step is to fork the project on githhub.  To do this, point your browser to the repository,
        and press the fork button.
-       <img src="./images/git/fork.png" alt="fork button" /></p>   
+    </p>
+    <img src="./images/git/fork.png" alt="fork button" />
     
     <p>This will fork (create a writable-by-you) copy of the repo, in your personal github account.
     </p>
@@ -61,7 +62,7 @@ under the License.
        <code>git checkout -b the-new-branch-name</code></p>
        
     <p>The reason to work in a branch is to keep changes related to one issue separate from other
-       work. If you were also not working on a fork, but on the main project, this practice separates the
+       work. If you were also not working on a fork, but on the main project, this practice would also separate the
        changes from the "production-ready" master branch, until things have been reviewed and tested.</p>   
        
     <h2>Make your changes</h2>

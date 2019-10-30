@@ -386,7 +386,7 @@
           <p>git reset --hard hash-of-commit</p>
           <p>git push -f origin branch-name</p>
         </td>
-        <td>This method is only used when no one has cloned the branch-name.  Typical use: when
+        <td>The "-f" is needed to move the remote HEAD backwards. This method is only used when no one has cloned the branch-name.  Typical use: when
             a release:prepare has been done which needs to be rolled back.
         </td>
       </tr>
