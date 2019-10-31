@@ -26,6 +26,24 @@ under the License.
 
   <body>
 
+    <section name="Suggested basic release flow">
+      <ol><li><p>Update the master in preparation for the release, including things like the Readme, release-notes,
+                 the Jira release pointer for ISSUES Fixed, API compatibility: previous version.
+                 See <a target="_blank" rel="nofollow noopener" 
+                    href="checklist-release.html">checklist-release</a>
+              </p></li>
+          <li><p>(optional) If others might be continuing to update master, make a release branch, and do all the work
+                 on that branch.  Once the release is out, merge the branch back into the master (should have
+                 very little change, other than new pom SNAPSHOT version levels).</p></li>
+                 
+          <li><p>Checkout the release branch, and run the normal maven release prepare / perform cycles.</p></li>
+          <li><p>Once the vote passes, retag the last rc with the rel/tag-name (see below).</p></li>
+          <li><p>If branched, merge the release branch back into the master (updating the pom SNAPSHOT version numbers).</p></li>    
+      </ol>
+    
+    </section>
+    
+    
     <section name="Tags">
     
 	    <p>Tags are stored in the .git folder in the subfolder /refs/tags.</p>

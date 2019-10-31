@@ -110,13 +110,13 @@ dl dd {
   margin-left: 6em;
 }
 pre, code {
-  font-size: 115%;
+  font-size: 108%;
   *font-size: 100%;
   font-family: Courier, "Courier New";
 }
 
 pre code {
-  font-size: 100%
+  font-size: 108%
 }
 
 pre {
