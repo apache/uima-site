@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+
+
+    <!-- ====================================================================== -->
+    <!-- GENERATED FILE, DO NOT EDIT, EDIT THE XML FILE IN xdocs INSTEAD! -->
+    <!-- ====================================================================== -->
+    <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+            <style type="text/css">@import "stylesheets/base.css";</style>
+                                          <meta name="author" value=" Apache UIMA Documentation Team">
+  <meta name="email" value="dev@uima.apache.org">
+                        
+            
+                        
+                        <title>Apache UIMA - Git notes</title>
+            
+            <!-- Begin Cookie Consent plugin by Silktide - https://silktide.com/cookieconsent -->
+            <!-- Commented out because implied consent is not compatible with GDPR -->
+            <!--
+            <script type="text/javascript">
+                window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"https://uima.apache.org/privacy-policy.html","theme":"dark-bottom"};
+            </script>
+            
+            <script type="text/javascript" src="/cookieconsent2/cookieconsent.min.js"></script>
+            -->
+            <!-- End Cookie Consent plugin -->
+            
+            <!-- Begin Google Analytics -->
+            <!-- Commented out because GA requires consent according to GDPR -->
+            <!--
+            <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            
+              ga('create', 'UA-70846351-1', 'auto');
+              ga('set', 'anonymizeIp', true);
+              ga('send', 'pageview');
+            
+            </script>
+            -->
+            <!-- End Google Analytics -->
+        </head>
+
+        <body>
+          <div class="topLogos">        
+            <table border="0" width="100%" cellspacing="0">
+                <!-- TOP IMAGE -->
+                <tr>
+                    <td align='LEFT'>
+                      <a href="index.html">
+                                    <img style="border: 1px solid black;" src="./images/UIMA_banner2tlpTm.png" alt="UIMA project logo" border="0"/>
+                            </a>
+                    </td>
+                    <td align='CENTER'>
+                          <div class="pageBanner">Git notes</div>
+                    </td>
+                    <td align='RIGHT'>
+                                  <a href="https://www.apache.org">
+        <img src="./images/asf-logo-on-white-smallTm.png" alt="Apache UIMA" border="0"/>
+      </a>
+                          </td>
+                </tr>
+            </table>
+            <hr noshade="" size="1"/>
+            </div>
+            <table border="0" width="100%" cellspacing="4">
+              <tr>
+                <td align='RIGHT' colspan="2">
+                  <form method="get" action="https://www.google.com/search">
+                    Search the site
+                    <input type="text"   name="q" size="25" maxlength="255" value="" />
+                    <input type="hidden" name="sitesearch" value="https://uima.apache.org/" />
+                    <input name="Search" value="Search Site" type="submit"/>
+                  </form>
+                </td>
+              </tr>
+              <tr> <!-- LEFT SIDE NAVIGATION -->
+                <td width="20%" valign="top">
+
+
+
+
+
+
+                   <!-- regular menu -->
+                      <div class="navBar">
+                  <br/>
+            <div class="navBarItem">      <div class="navPartHeading">General</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./index.html">Home</a>
+                </div>
+                          <div class="navBarItem">      <a href="./downloads.cgi">Downloads</a>
+                </div>
+                          <div class="navBarItem">      <a href="./documentation.html">Documentation</a>
+                </div>
+                          <div class="navBarItem">      <a href="./news.html">News</a>
+                </div>
+                          <div class="navBarItem">      <a href="./publications.html">Publications</a>
+                </div>
+                    <br style="line-height: .5em"/>
+                          <div class="navBarItem">      <a href="https://issues.apache.org/jira/browse/uima" target="_blank" rel="noopener">Issue tracker <img src="images/offsitelink.png"/></a>
+                </div>
+                          <div class="navBarItem">      <a href="https://cwiki.apache.org/confluence/display/UIMA/" target="_blank" rel="noopener">Wiki <img src="images/offsitelink.png"/></a>
+                </div>
+                    <br style="line-height: .5em"/>
+                          <div class="navBarItem">      <a href="https://cwiki.apache.org/confluence/display/UIMA/Powered+by+Apache+UIMA" target="_blank" rel="noopener">Powered By UIMA <img src="images/offsitelink.png"/></a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Community</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./get-involved.html">Get Involved</a>
+                </div>
+                          <div class="navBarItem">      <a href="./mail-lists.html">Mailing Lists</a>
+                </div>
+                          <div class="navBarItem">      <a href="./contribution-policy.html">Contribution Policies</a>
+                </div>
+                          <div class="navBarItem">      <a href="./faq.html">FAQ</a>
+                </div>
+                          <div class="navBarItem">      <a href="./project-guidelines.html">Project Guidelines</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Scaleout Frameworks</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./doc-uimaas-what.html">UIMA-AS</a>
+                </div>
+                          <div class="navBarItem">      <a href="./doc-uimaducc-whatitam.html">UIMA-DUCC</a>
+                </div>
+                          <div class="navBarItem">      <a href="./doc-uimaducc-demo.html">..Demo Page</a>
+                </div>
+                          <div class="navBarItem">      <a href="http://uima-ducc-demo.apache.org:42133" target="_blank" rel="noopener">..Demo Live <img src="images/offsitelink.png"/></a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Components & Tools</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./sandbox.html#uima-addons-annotators">Annotators</a>
+                </div>
+                          <div class="navBarItem">      <a href="./toolsServers.html">Tools & Servers</a>
+                </div>
+                          <div class="navBarItem">      <a href="./sandbox.html">Addons and Sandbox</a>
+                </div>
+                          <div class="navBarItem">      <a href="./ruta.html">UIMA Ruta</a>
+                </div>
+                          <div class="navBarItem">      <a href="./uimafit.html">uimaFIT</a>
+                </div>
+                          <div class="navBarItem">      <a href="./external-resources.html">External Resources</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Development</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./dev-quick.html">Quick Start: building</a>
+                </div>
+                          <div class="navBarItem">      <a href="./building-uima.html">Building from Source</a>
+                </div>
+                          <div class="navBarItem">      <a href="./one-time-setup.html">One-time setups</a>
+                </div>
+                          <div class="navBarItem">      <a href="./svn.html">Source Code</a>
+                </div>
+                          <div class="navBarItem">      <a href="./distribution.html">Creating a Distribution</a>
+                </div>
+                          <div class="navBarItem">      <a href="./release.html">Doing a UIMA release</a>
+                </div>
+                          <div class="navBarItem">      <a href="https://www.apache.org/security/committers.html" target="_blank" rel="noopener">Doing a CVE (Apache) <img src="images/offsitelink.png"/></a>
+                </div>
+                          <div class="navBarItem">      <a href="./eclipse-update-site.html">Eclipse Update Sites</a>
+                </div>
+                          <div class="navBarItem">      <a href="./git.html">GIT</a>
+                </div>
+                          <div class="navBarItem">      <a href="./codeConventions.html">Code Conventions</a>
+                </div>
+                          <div class="navBarItem">      <a href="./uima-specification.html">UIMA Specification (OASIS)</a>
+                </div>
+                          <div class="navBarItem">      <a href="./team-list.html">Project Team</a>
+                </div>
+                          <div class="navBarItem">      <a href="./maven-design.html">Maven Use</a>
+                </div>
+                          <div class="navBarItem">      <a href="./updating-website.html">Updating this Website</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">Events and Conferences</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="./coling14.html">COLING 2014</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gscl13.html">GSCL 2013</a>
+                </div>
+                          <div class="navBarItem">      <a href="./iks09.html">IKS 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gscl09.html">GSCL 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./lsm09.html">LSM 2009</a>
+                </div>
+                          <div class="navBarItem">      <a href="./lrec08.html">LREC 2008</a>
+                </div>
+                          <div class="navBarItem">      <a href="./gldv07.html">GLDV 2007</a>
+                </div>
+            </div>
+                      <br/>
+            <div class="navBarItem">      <div class="navPartHeading">ASF</div>
+                </div>
+                <div class="navBar">
+                  <div class="navBarItem">      <a href="https://www.apache.org/licenses/" target="_blank" rel="noopener">License <img src="images/offsitelink.png"/></a>
+                </div>
+                          <div class="navBarItem">      <a href="https://www.apache.org/foundation/thanks.html" target="_blank" rel="noopener">ASF Sponsors <img src="images/offsitelink.png"/></a>
+                </div>
+                          <div class="navBarItem">      <a href="https://www.apache.org/foundation/sponsorship.html" target="_blank" rel="noopener">ASF Sponsorship <img src="images/offsitelink.png"/></a>
+                </div>
+                          <div class="navBarItem">      <a href="./security_report">Security</a>
+                </div>
+            </div>
+        </div>
+                </td>
+                <td width="80%" align="left" valign="top">
+                                                          <div class="sectionTable">
+      <table class="sectionTable">
+        <tr><td>
+        <a name="Frequently used git actions"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Frequently used git actions</h1></a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="sectionBody">
+                                    <h2>Working with two branches in one repo</h2>
+                                                <p>It may be best to have two separate local directories, each with a separate clone.
+      because if you just have one clone and switch between branches, the switch operation
+      the working tree might have "extra files" from the other branch, which you'll need to be 
+      careful to ignore.  In Eclipse these extra folders will look like they're waiting to be added.</p>
+                                                <p>To clone and then check-out a non-default branch, use 
+        <pre>git clone https://... -b branch-name</pre></p>
+                                                <h3>Alternative: Have one clone, switch between branches</h3>
+                                                <p>For example, if you have both master, and master-v2 (as is the case for core uima).
+      </p>
+                                                <table class="downloads">   
+	      <tr>
+	        <th>Goal / Task</th>
+	        <th>Git command</th>
+	        <th>Comments</th>
+	      </tr>
+	      <tr>
+	        <td>Switch between branches</td>
+	        <td><p>git status  (to confirm things are clean)</p>
+	            <p>git checkout &lt;branch-name&gt;</p> 
+	        </td>
+	        <td><p>The checkout switches to the other branch.  Before you do this, please insure the working tree
+	               has no local modifications. Otherwise the checkout command will complain.
+	            </p>
+	            <p>The checkout operation may not remove directories or files that are present in one branch but not in the other.
+	               Don't remove these (Eclipse gets confused if you remove them); just don't stage them or otherwise change them.  	               
+	            </p>
+	        </td>            
+	      </tr>
+	      <tr>
+	        <td>Create new branches for bug-fixing or features</td>
+	        <td>see below, but do for each version</td>
+	        <td>This is if you are independently committing changes to each branch</td>
+	      </tr>
+      </table>
+                                                <h2>Common situations</h2>
+                                                <table class="downloads">   
+        <tr>
+          <th>Goal / Task</th>
+          <th>Git command</th>
+          <th>Comments</th>
+        </tr>
+        <tr>
+          <td>Creating a new branch for a feature or Jira issue</td>
+          <td><p>git clone https:... -b master-v2</p>
+              <p>git checkout -t -b new-branch-name</p> 
+              <p>git push -u origin new-branch-name</p>  
+          </td>
+          <td><p>The first operation sets the base from which you will branch.
+                 If no <code>-b branch-name</code> is specified, the default branch is used (typically master).</p>
+              <p>The checkout with -b will create a new branch and switch to it.  The -t will 
+                 sets up the configuration so that <code>git pull</code> (with no arguments) will
+                 pull from the starting branch (in this example, the local master-v2).
+              </p>
+              <p>The push will update the remote with the new branch. The -u operation creates the remote tracking branch,
+                 so that <code>git push</code> will go to the corresponding new remote for this new branch.
+              </p>                
+          </td>            
+        </tr>
+        <tr>
+          <td>Undo some commits</td>
+          <td><p>git log --oneline</p>
+              <p>git reset --hard the-hash-or-ref</p>
+              <p>or</p>
+              <p>git revert the-hash-or-ref</p>
+           </td>
+          <td><p>The log command shows you the hashes for the commits, so you can find the last one you want preserved.</p>
+              <p>The reset should only be used if this is a local commit and hasn't been pushed.</p>
+              <p>The revert applies the changes needed to revert.  Use it when the commit has been pushed to some public spot.</p>
+          </td>
+        </tr>
+      </table>
+                            </blockquote>
+        </p>
+      </td></tr>
+    </table>
+                                  </td>
+                </tr>
+                <!-- FOOTER -->
+                <tr><td colspan="2">
+                  <hr noshade="" size="1"/>
+                </td></tr>
+                <tr><td colspan="2"> 
+                  <table class="pageFooter">
+                    <tr>
+                      <td><a href="index.html">Home</a></td>
+                      <td><a href="privacy-policy.html">Privacy Policy</a></td>
+                      <td style="font-size:75%">
+                Copyright &#169; 2006-2013, The Apache Software Foundation.<br/>
+                Apache UIMA, UIMA, the Apache UIMA logo and the Apache Feather logo are trademarks of The Apache Software Foundation.<br/>
+                All other marks mentioned may be trademarks or registered trademarks of their respective owners.
+                      </td>
+                      <td><a href="mailto:dev@uima.apache.org">Contact us</a></td>
+                    </tr>
+                  </table>                    
+                </td></tr>
+            </table>
+        </body>
+    </html>
+
