@@ -240,12 +240,22 @@
         but rather, a change must be pulled from a branch via a pull request.</p>
                                                 <p>Branches for working are typically named using the Jira issue (if there is one) associated with the work, 
         followed by a very-short-description - enough to remind you what that jira number is about.
-        In addition, the name can be prefixed with the kind of work it is, e.g. <code>feature/</code> or <code>bugfix</code>.
+        In addition, the name can be prefixed with the kind of work it is, e.g. 
+        <code>feature/</code> or <code>bugfix</code> or <code>refactor</code>.
         This can be useful in enabling you to more rapidly locate the right branch.</p>
                                                 <p>After merging into master, the branch is typically deleted.</p>
+                                                <h3>Commit messages</h3>
+                                                <p>Example: <code>[UIMA-1234] Add missing foo to bar</code></p>
+                                                <p>Git has a two-section commit message.  The first line should be a one-line id and summary.  
+       Following that is an optional section of multiple lines that are details about the commit.</p>
+                                                <p>The first line should start with the jira issue number including UIMA- prefix.  Automatic scanners
+       use this to connect this to the Jira issue.  You may put multiple issues if applicable.  The issues may
+       be written with surrounding square brackets, e.g. <code>[UIMA-1234]</code>.</p>
+                                                <p>Following that should be short title of the issue, since looking back at it a reader probably won't remember
+       what the issue was all about.  Following that can be a summary of what this particular commit does.</p>
                                                 <h4>Git merge styles</h4>
                                                 <p>Different projects may use different merge styles.</p>
-                                                <p>See these links for references to common work patterns.</p>
+                                                <p>See these links for references to common work patterns.  TBD</p>
                             </blockquote>
         </p>
       </td></tr>
