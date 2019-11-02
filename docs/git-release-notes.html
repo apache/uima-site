@@ -234,7 +234,7 @@
                  the Jira release pointer for ISSUES Fixed, API compatibility: previous version.
                  See <a target="_blank" rel="nofollow noopener" href="checklist-release.html">checklist-release</a>
               </p></li>
-          <li><p>(optional) If others might be continuing to update master, make a release branch, and do all the work
+          <li><p>(optional, but recommended) Make a release branch, and do all the work
                  on that branch.  Once the release is out, merge the branch back into the master (should have
                  very little change, other than new pom SNAPSHOT version levels).</p></li>
                  
@@ -304,8 +304,7 @@
                                                 <h2>release:perform</h2>
                                                 <p>This does a build using the "tag" checkout, and uploads the artifacts to the maven staging repository.</p>
                                                 <p>The tag is cloned into the target/checkout directory</p>
-                                                <p>A build is done from the target/checkout spot, with maven artifacts uploaded to repository.apache.com staging area,
-          just like before.</p>
+                                                <p>A build is done from the target/checkout spot, with maven artifacts uploaded to repository.apache.com staging area.</p>
                             </blockquote>
         </p>
       </td></tr>
@@ -319,14 +318,16 @@
         <blockquote class="sectionBody">
                                     <h2>(Optional) Reset the branch to last commit before release:prepare</h2>
                                                 <p>If you don't do this, when you do the release:prepare again, it will increment the SNAPSHOT and release numbers,
-        and you'll need to override those.
+        and you'll need to override those.  It's fine to work this way, as long as you remember to override the release 
+        and SNAPSHOT numbers.
      </p>
                                                 <p>The idea is to reset the branch being used to build, back to the commit just before the maven release:prepare 
         commit, which is identified with the message <code>[maven-release-plugin] prepare for next development iteration</code>.</p>
-                                                <p>Do this by working in a checkout of the branch being used to build, typing <code>git log</code> and finding the hash
+                                                <p>Do this by working in a checkout of the branch being used to build, typing <code>git log ...</code> and finding the hash
         for the commit right before the prepare commit.</p>
                                                 <p>Don't do this next step unless you know no one has fetched the previously pushed maven release changes.
-        This is typically true, because only you are working on the release.</p>
+        This is typically true, because only you are working on the release, and you typically will be working in 
+        a branch made just for this, which others are unlikely to access.</p>
                                                 <ul><li><code>git log -5 --oneline</code>  # shows the last 5 commits. Find the last commit before the maven prepare one.</li>
            <li><code>git reset --hard hash-of-commit</code> where hash-of-commit is from the log </li>
            <li><code>git push -f origin branch-name   # force needed because removing history</code></li>
