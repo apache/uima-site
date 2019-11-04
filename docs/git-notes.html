@@ -276,7 +276,13 @@
           <td>Creating a new branch for a feature or Jira issue</td>
           <td><p>git clone https:... -b master-v2</p>
               <p>git checkout -t -b new-branch-name</p> 
-              <p>git push -u origin new-branch-name</p>  
+              <p>git push -u origin new-branch-name</p>
+              <p><b>OR</b></p>
+              <p>create the branch on the github.com website, from the desired master (e.g. use</p>
+                 the github pulldowns to switch the branch first to the one to branch from,
+                 e.g. "master-v2").
+              <p>git checkout -b new-branch-name</p>
+              <p>(no push is needed, the remote already has the new branch)</p>  
           </td>
           <td><p>The first operation sets the base from which you will branch.
                  If no <code>-b branch-name</code> is specified, the default branch is used (typically master).</p>
@@ -299,7 +305,10 @@
           <td><p>The log command shows you the hashes for the commits, so you can find the last one you want preserved.</p>
               <p>The reset should only be used if this is a local commit and hasn't been pushed.</p>
               <p>The revert applies the changes needed to revert.  Use it when the commit has been pushed to some public spot.</p>
+              <p> </p>
+              <p>If the remote as been updated, use "revert" and push the change to the remote.</p>
           </td>
+          
         </tr>
       </table>
                             </blockquote>

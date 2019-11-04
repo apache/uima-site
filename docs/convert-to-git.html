@@ -265,13 +265,18 @@
                                                 <p>POMs have an &lt;scm&gt; element that points to svn, and it should be updated as follows:
     </p>
                                                 <ul>
-        <li>For both the connection and developerConnection:  
+        <li>For the connection:  
             <p><code>scm:git:https://github.com/apache/...proj-name.../...subdir...</code></p>
         </li>
+        <li>For the developerConnection:  This must point to the entire repository (no subdirs)  
+            <p><code>scm:git:https://github.com/apache/...proj-name.../</code></p>
+        </li>
+       
         <li>For the url: this should point to the source code at github, e.g.
             <p><code>https://github.com/apache/...proj-name.../tree/master/...sub-proj-name...</code></p>
-            <p>For uima-v2, replace <code>master</code> with <code>master-v2</code></p></li>
+            <p>For other versions, e.g. uima-v2, replace <code>master</code> with <code>master-v2</code> (or the other version name)</p></li>
       </ul>
+                                                <h3>Update the website docs to refer to the source at github.com/apache.</h3>
                             </blockquote>
         </p>
       </td></tr>

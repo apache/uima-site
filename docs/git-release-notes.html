@@ -242,6 +242,16 @@
           <li><p>Once the vote passes, retag the last rc with the rel/tag-name (see below).</p></li>
           <li><p>If branched, merge the release branch back into the master (updating the pom SNAPSHOT version numbers).</p></li>    
       </ol>
+                                                <h2>Git Commands to use</h2>
+                                                <h3>Make new Release branch</h3>
+                                                <p>On github.com/apache/uima-xxx, use the website to create a new branch, suggested name rc/uimaxxx.x.y.z.
+           Don't use a name starting with rel/ because those branches are "protected".</p>
+                                                <p>First switch to the particular "master" (e.g. master or master-v2 or ... ).  Then create the new branch,
+           which will start by being a copy of whatever branch github was on.</p>
+                                                <h3>Check out the new release branch</h3>
+                                                <p>Checkout a new release branch to a specific spot. </p>
+                                                <p>cd to your build spot; mkdir build-directory-rcX</p>
+                                                <p><code>git clone -b rc/uimaxxx.x.y.z https://github.com/apache/uima-uimaj build-directory-rcX</code></p>
                             </blockquote>
         </p>
       </td></tr>

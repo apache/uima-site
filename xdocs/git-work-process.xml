@@ -38,7 +38,7 @@ under the License.
     
     <p>A preliminary step: Sign up for a github.com account, if you don't already have one.</p>
        
-    <h2>Fork the repo</h2>   
+    <h2>Fork the repo (if not a committer)</h2>   
     <p>The first step is to fork the project on githhub.  To do this, point your browser to the repository,
        and press the fork button.
     </p>
@@ -47,6 +47,9 @@ under the License.
     <p>This will fork (create a writable-by-you) copy of the repo, in your personal github account.
     </p>
     
+    <p>If you are a committer, skip ahead to Make a branch.  You can make the branch on the github.com website by
+       first switching (if needed) the branch you'll be branching from (e.g. master, or master-v2, etc.), and then
+       typing the name of the new branch in the Branch pulldown.</p>
     <h2>Clone the fork</h2>
     <p>Next, clone the fork to your local development machine.  After the above step, your browser should
        be positioned at the forked repository.  Click the green clone-or-download button near the top,

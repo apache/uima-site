@@ -234,28 +234,37 @@
                                                 <h3>Branch naming</h3>
                                                 <h4>master</h4>
                                                 <p>This is the main branch where things are merged into, and from time to time, releases are made from.</p>
-                                                <p>Some project may have multiple branches.  These typically reflect on-going versions being developed together.</p>
+                                                <p>Some project may have multiple branches e.g., master and master-v2.  
+      These typically reflect on-going versions being developed together.</p>
                                                 <h4>branches for working</h4>
-                                                <p>Work is done in a branch.  This because the master(s) are protected, which means they cannot be "pushed" to, 
+                                                <p>Work is typically done in a branch.  This because the master(s) are protected, which means they cannot be "pushed" to, 
         but rather, a change must be pulled from a branch via a pull request.</p>
+                                                <p style="margin-left: 2rem">
+         Exception: trivial changes, or changes not needing review.  These can be made on the master, which corresponds
+         to how we worked in SVN.  Depending on the particular Repository protection scheme, committers may be able
+         to push to the branch without a pull-request.
+         </p>
                                                 <p>Branches for working are typically named using the Jira issue (if there is one) associated with the work, 
         followed by a very-short-description - enough to remind you what that jira number is about.
         In addition, the name can be prefixed with the kind of work it is, e.g. 
         <code>feature/</code> or <code>bugfix</code> or <code>refactor</code>.
         This can be useful in enabling you to more rapidly locate the right branch.</p>
                                                 <p>After merging into master, the branch is typically deleted.</p>
+                                                <h4>Branches for releasing</h4>
+                                                <p>
+      These are typically named <code>rc/uimaXXXXX-x.y.z</code>.
+       (rc stands for Release Candidate).
+      See <a target="_blank" rel="nofollow noopener" href="git-release-notes.html">git-release-notes.hmtl</a>.
+      </p>
                                                 <h3>Commit messages</h3>
-                                                <p>Example: <code>[UIMA-1234] Add missing foo to bar</code></p>
-                                                <p>Git has a two-section commit message.  The first line should be a one-line id and summary.  
-       Following that is an optional section of multiple lines that are details about the commit.</p>
+                                                <p>Example: <code>[UIMA-1234] summary-of-Jira  summary-of-change</code></p>
+                                                <p>Git has a two-section commit message.  The first line should be a one-line id with summaries.  
+       Following that is an optional section of multiple lines that can have more details about the commit.</p>
                                                 <p>The first line should start with the jira issue number including UIMA- prefix.  Automatic scanners
        use this to connect this to the Jira issue.  You may put multiple issues if applicable.  The issues may
        be written with surrounding square brackets, e.g. <code>[UIMA-1234]</code>.</p>
                                                 <p>Following that should be short title of the issue, since looking back at it a reader probably won't remember
        what the issue was all about.  Following that can be a summary of what this particular commit does.</p>
-                                                <h4>Git merge styles</h4>
-                                                <p>Different projects may use different merge styles.</p>
-                                                <p>See these links for references to common work patterns.  TBD</p>
                             </blockquote>
         </p>
       </td></tr>

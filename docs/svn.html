@@ -232,13 +232,12 @@
       <tr><td>
         <blockquote class="sectionBody">
                                     <p>
-      <ul>
+  <ul>
 		<li><a href="#source.code.repository">Source Code Repository</a>
-			<ul>
-				<li><a href="#source.code.repository.web.access">Web Access to Subversion</a></li>
-			</ul>
+			
 		<br />
 		</li>
+		<li><a href="#git-projs">Using Git</a></li>
 		<li><a href="#checkout.code">Checking Out Code Using Subversion</a>
 			<ul>
 				<li><a href="#anonymous.checkout">Anonymous check out from Subversion</a></li>
@@ -254,8 +253,8 @@
 				<li><a href="#submitting.patch">Submitting a patch</a></li>
 				<li><a href="#committing.changes">Committing changes to subversion</a></li>
 			</ul>
-		<br />
-		</li>
+    </li>
+        <li><a href="#source.code.repository.web.access">Web Access to Subversion</a></li>
      <!-- 
         <li><a href="#building.with.maven">Building UIMA from Source</a>
 			<ul>
@@ -267,6 +266,7 @@
 			</ul>
         </li>
        -->
+    
       </ul>
 </p>
                             </blockquote>
@@ -285,24 +285,21 @@
 Subversion</a> and
 <a class="external" rel="nofollow noopener" target="_blank" href="https://github.com/apache">
 Git</a> 
-to manage its source code.  Most of the projects are in SVN; the uimaFIT project is in Git.
+to manage its source code.  uimaj, uimaFIT, and uima-cpp have moved to GIT, the other projects are in SVN.
 </p>
-                                                <p>See <a href="one-time-setup.html#svn-setup">SVN setup</a> for details on how to setup SVN.</p>
                                                 <p>
-  The code for UIMA in SVN is stored in several sections:</p>
+  The code for UIMA is stored in several repositories:</p>
                                                 <ol>
-    <li>https://svn.apache.org/repos/asf/uima/uimaj - the Java code for base UIMA</li>
-    <li>https://svn.apache.org/repos/asf/uima/uima-as - the Asynchronous Scaleout add-on for base UIMA</li>
-    <li>https://svn.apache.org/repos/asf/uima/addons - a collection of add-ons for UIMA including annotators</li>
-    <li>https://svn.apache.org/repos/asf/uima/sandbox - a collection of new things for UIMA, not yet released</li>
-    <li>https://svn.apache.org/repos/asf/uima/uimacpp - the C++ framework supporting Annotators written in C++</li>
-    <li>https://svn.apache.org/repos/asf/uima/build - Build information and configurations used in building from sources</li>
+    <li>uimaj - the Java code for base UIMA</li>
+    <li>uima-as - the Asynchronous Scaleout add-on for base UIMA</li>
+    <li>addons - a collection of add-ons for UIMA including annotators</li>
+    <li>sandbox - a collection of new things for UIMA, not yet released</li>
+    <li>uimacpp - the C++ framework supporting Annotators written in C++</li>
+    <li>build - Build information and configurations used in building from sources</li>
   </ol>
                                                 <p>  
-  Each of these have subdirectories: trunk - for the latest, tags - for preserved copies of releases, 
-  and (sometimes) branches - for special development efforts. 
-</p>
-                                                <p>The UIMA projects at github are in the apache subdirectory, and start with "uima-".
+  Each of these have multiple branches: trunk or master - for the latest, tags - for preserved copies of releases, 
+  and branches for special development efforts. 
 </p>
                                                 <p>
 To receive notice of commits to the repository subscribe to 
@@ -310,6 +307,14 @@ To receive notice of commits to the repository subscribe to
 commits@uima.apache.org</a> by sending email to 
 <a href="mailto:commits-subscribe@uima.apache.org">
 commits-subscribe@uima.apache.org</a>. 
+</p>
+                                                <h2 id="git-projs">UIMA projects in GIT</h2>
+                                                <p>The UIMA projects 
+  <a class="external" rel="nofollow noopener" target="_blank" href="https://github.com/apache/uima-uimaj">uimaj</a>,
+  <a class="external" rel="nofollow noopener" target="_blank" href="https://github.com/apache/uima-uimacpp">uimacpp</a>, and
+  <a class="external" rel="nofollow noopener" target="_blank" href="https://github.com/apache/uima-uimafit">uimaFIT</a>
+  are at github in the apache organization.  More information
+  on GIT use is <a rel="nofollow noopener" target="_blank" href="git.html">git.html</a>.
 </p>
                                                       <table class="subsectionTable" id='source.code.repository.web.access'>
         <tr><td>
@@ -323,7 +328,8 @@ commits-subscribe@uima.apache.org</a>.
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>
+                                    <p>See <a href="one-time-setup.html#svn-setup">SVN setup</a> for details on how to setup SVN.</p>
+                                                <p>
 If you just want to browse the source code in SVN, you can use the
 <a class="external" rel="nofollow noopener" href="https://svn.apache.org/viewvc/uima">
 viewvc web interface</a> to Subversion.  This is current at all times.

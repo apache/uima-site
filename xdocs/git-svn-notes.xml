@@ -37,7 +37,7 @@ under the License.
           https://gitbox.apache.org/</a>.</p>
      
      <p>The name used for logging in is separate from the name used to identify each commit in
-        git.  These crendentials are called your "identity" and are 
+        git.  The crendentials used to identify each commit are called your "identity" and are 
         the combination of a username and "email". These can be set globally for all repos 
         in your local machine, or locally, per repository.  
         See <a target="_blank" rel="nofollow noopener" href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">
@@ -59,6 +59,7 @@ under the License.
           https://github.blog/2019-08-16-highlights-from-git-2-23/</a>.
     </blockquote>
     </p>
+    
     <h2>GIT vs SVN</h2>
     
     <p>Note in this table, that the various commands usually have many options (especially git) 
