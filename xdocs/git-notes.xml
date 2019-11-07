@@ -25,6 +25,19 @@ under the License.
   </properties>
 
   <body>
+  
+    <section name="Configuring some aspects of Git Repo">
+    
+      <p>You may create a special file in a branch, at the top level, named
+      <code>.asf.yaml</code> which controls some automation at Apache.</p>
+      
+      <p>For some settings, this file must be in the "master" branch.</p>
+      
+      <p>See <a target="_blank" rel="nofollow noopener" 
+        href="https://cwiki.apache.org/confluence/display/INFRA/.asf.yaml+features+for+git+repositories">this page</a>
+        for details.</p>
+    </section>
+    
     <section name="Frequently used git actions">
     
       <h2>Working with two branches in one repo</h2>
