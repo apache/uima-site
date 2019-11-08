@@ -398,7 +398,22 @@ This includes: PDFs, HTML versions of docbooks plus the index.html; all go on th
   <li>Update Jira version info to reflect the release status and date</li>
   <li>Log into <a target="_blank" rel="noopener" href="https://reporter.apache.org/addrelease.html?uima"> 
   https://reporter.apache.org/addrelease.html?uima</a> and add release data (e.g. uimaj-2.10.0 2017-04-04).</li>
-  <li>Cleanup the SVN tag for the release candidate if needed, removing any -rcXX, to indicate the release.</li>
+  <li>Fixup the tag.  
+    <ul><li>SVN: Fix the SVN tag for the release candidate if needed, removing any -rcXX, to indicate the release.</li>
+        <li>GIT: make a new tag for the release with the name rel/...tag-name.
+          <ul><li><code>git tag -m "proj-name-1.2.3 rcXXX released" rel/proj-name-x.y.z proj-name-x.y.z^{}</code>
+         The strange notation ^{} peels the annotated tag and returns a ref to the actual commit.</li>
+         <li><code>git push origin rel/proj-name-x.y.z</code> This updates the remote repo with the new tag.</li>
+         <li><p>Merge the release branch (if one was made) into the main branch.  You can use the github.com site 
+         to do this: make a pull request targeting the master, from the release branch, and after checks pass, 
+         accept the pull.   Alternatively, you can pull from the release branch into the master 
+         in a local checkout, and push the result.</p>
+         <p>If no release branch was made, then the maven release prepare/perform will have already updated 
+         the master to the next snapshot level.</p></li>
+         </ul>
+        </li> 
+    </ul>
+  </li>
   <li>After release appears on maven central, post an appropriate announce letter</li>
   <li>Add a news item for the release</li>
   <li>Tweet about the release</li>
