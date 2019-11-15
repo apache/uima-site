@@ -252,7 +252,15 @@
                                                 <p>After merging into master, the branch is typically deleted.</p>
                                                 <h4>Branches for releasing</h4>
                                                 <p>
-      These are typically named <code>rc/uimaXXXXX-x.y.z</code>.
+      When you are about to make a release, you typically will create a branch for the release; this branch
+      will be checked out and the maven release prepare / perform will run on it, and in the process create
+      commits to the branch updating the various "versions", first by removing the -SNAPSHOT, and then by updating them
+      to the next SNAPSHOT version.
+      </p>
+                                                <p>The maven release prepare/perform operations include "pushing" to the remote. 
+      </p>
+                                                <p>
+      The branches used for the release work are typically named <code>rc/uimaXXXXX-x.y.z</code>.
        (rc stands for Release Candidate).
       See <a target="_blank" rel="nofollow noopener" href="git-release-notes.html">git-release-notes.hmtl</a>.
       </p>
