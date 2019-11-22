@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+	Licensed to the Apache Software Foundation (ASF) under one
+	or more contributor license agreements.  See the NOTICE file
+	distributed with this work for additional information
+	regarding copyright ownership.  The ASF licenses this file
+	to you under the Apache License, Version 2.0 (the
+	"License"); you may not use this file except in compliance
+	with the License.  You may obtain a copy of the License at
+	
+	https://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing,
+	software distributed under the License is distributed on an
+	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	KIND, either express or implied.  See the License for the
+	specific language governing permissions and limitations
+	under the License.
+-->
+
+<document>
+
+	<properties>
+		<title>Cookbook: addressing some typical use-cases</title>
+		<author email="dev@uima.apache.org">
+			Apache UIMA Team
+		</author>
+	</properties>
+
+	<body>
+	
+	  <section name="Working with Feature Structures">
+	    <p>These work with all kinds of Feature Structures, Annotations and non-Annotations, both.</p>
+	   
+	    <subsection name="Remove all Feature Structures of a particular type">
+        <p>There are built-in methods to do this, over all indexes in a particular view.  There are 2 variations:
+          <ul><li>remove all including the subtypes of the type
+               <pre>myJCasView.removeAllIncludingSubtypes(Foo.type)</pre>
+          </li>
+          <li>remove all excluding the subtypes of the type
+              <pre>myJCasView.removeAllExcludingSubtypes(Foo.type)</pre></li></ul>
+        </p>
+        <p>Both of these are much faster than iterating over the Feature Structures; they directly clear the associated indexes.</p>
+      </subsection>
+      
+      <subsection name="General suggestions: working with iterators">
+
+            
+      <p>Many times code will iterate over all instances of a type, and only do something with a subset.
+         Frequently, the iteration can be cut short, by starting near the spot of interest and stopping as soon
+         as it can be determined that no further iteration will find interesting Annotations.</p>
+         
+      <p>Example: Let's say you have a "token" annotation, and want to find the "sentence" that contains it.
+         You could write an iterator over all sentences.  
+      </p>
+      <h3>Stop early</h3>
+        <p>
+         When you find the first sentence that overlaps the token, you can use extra knowledge that you might have,
+         such as: there's only one sentence per token, to conclude that having found it, there's no need to do any
+         further iteration, so you can stop the iteration. 
+       </p>
+       
+       <p>Furthermore, if the token appears outside of any sentence, you can similarly stop the iteration, and return
+          an "empty" result, as soon as the test sentence begins after the token's "begin".
+          This is because, at that point, due to the sorting of the returned values, no future sentences could
+          start before or equal to the token's begin.
+       </p>
+       
+       <h3>Begin closer to the right spot, maybe iterate backwards</h3>
+       
+       <p>But you can do better.</p>
+       <p>You can start the iteration, instead of at the beginning, at the position of the token, and iterate backwards.
+       Iterators have a moveTo() method which takes a feature structure argument, so you can moveTo(the-token), 
+       and then perhaps with some edge adjustment for equality, start iterating backwards, looking for the sentence at that
+       position that covers the token.  
+       </p>
+       
+       <p>If you are iterating backwards, and looking for a "covering" annotation, and know the largest span for that
+       covering type, then you can stop iterating as soon as the start position you reach, + the largest span, is less than
+       the start of the annotation you're trying to cover.</p>
+       
+       <p style="margin-left:1rem">This is used internally in version 3's 
+           <a target="_blank" rel="noopener"
+           href="http://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select.annot.subselect">select framework</a>
+       to speed up 
+       the <code>covering</code> kind of iteration.</p>
+       
+       <p>There are many other examples, but the principle is the same: start the iteration "close to" the right spot, 
+          perhaps moving backwards instead of forwards, and end the iteration as soon as you can logically say that
+          no more suitable feature structures would be found. </p>
+      
+       <h3>Use UIMA Version 3's select framework</h3>
+       <p>The <a target="_blank" rel="noopener"
+           href="http://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select">select framework</a> 
+           incorporates many of the popular use cases for doing iterations that we've seen, into a Java friendly approach that
+           automatically uses optimized iterators and can produce Java Streams, as well.</p>    
+      </subsection>
+      
+	  </section>
+		
+		<section
+			name="Working with Annotations">
+			
+			    <subsectionToc/>
+			<p>
+				The CAS holds Feature Structures (FSs).  There is special support for FSs which are a subtype of Annotation;
+				these have an associated Subject of Analysis (Sofa) and <code>begin</code> and <code>end</code> offsets. 
+			</p>
+			
+			<h3>Annotations are not required in all cases</h3>
+			  <p>If your application deals with a different kind of unstructured data, say, for instance, images, then
+			     Annotations may not be the appropriate supertype for your types, because they're designed for 
+			     things having a linear begin / end meaningful demarcations. </p>
+			  <p>You can have your feature structures inherit from TOP, or from some other appropriate supertype, other
+			     than Annotation.</p>
+			
+			<h3>Making use of the built-in Annotation index</h3>        
+			<p>Annotations are special in UIMA in that there is a "built-in" index, the AnnotationIndex, which can be used
+			   to rapidly access these in a sorted order.  The ordering is by <code>begin</code> (ascending), then by
+			   <code>end</code> (descending), and then by type-priorities.</p>
+			<p style="margin-left:1rem"><i>This is really a set of indexes, one for each subtype of Annotation.</i></p>
+			<p style="margin-left:1rem"><i>Although the index has type-priorities, in UIMA v3, the <code>select-framework</code>
+			  by default ignores these; this behavior can be overridden.</i></p>  
+			  
+			<subsection name="Watch out for type-priorites">
+			  <p>When 2 annotations have the same start and end, but different types, then one comes before the other,
+			     according to type priorites.  This is intended to allow you to say if you have a Sentence annotation, and a 
+			     Foo annotation, both covering the same span, to declare that the Sentence logically contains Foo, and not the 
+			     other way around.</p>
+			     
+			  <p>To make this work, you need to specify the type priorities. This is a global setting for your application.
+			     See 
+			     <a target="_blank" rel="noopener"
+			       href="http://uima.apache.org/d/uimaj-current/references.html#ugr.ref.xml.component_descriptor.aes.primitive">
+			       type priorities</a> (scroll down to find it) for how to specify this.</p>
+			       
+			  <h3>Avoiding type priorities</h3>
+			  <p>Often, the use of type priorities gets in the way.  With UIMA Version 3, the 
+			     <a target="_blank" rel="noopener"
+           href="http://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select">select framework</a>
+           by default ignores type priorites when doing its operations; but this can be overridden as needed.</p>        
+			</subsection>  
+     
+      <subsection name="Annotation containment">
+        <h3>a contains b</h3>
+        <ul><li>Ignoring type priorities:</li></ul>
+        <pre>a != null &amp;&amp; b != null &amp;&amp;       // null check
+a.getBegin() &lt;= b.getBegin() &amp;&amp; // a starts before (or equal to) b 
+a.getEnd() &gt;= b.getEnd()        // a ends after (or equal to) b</pre>
+        
+        <h3>a and b overlap (have at least one char in common)</h3>
+        <pre>
+                                    // ((omitted) check for non-null)
+if (a.getBegin() &lt;= b.getBegin()) { // if a starts before (or equal to) b
+  return a.getEnd() &gt; b.getBegin(); // then it overlaps if a's end is after b's begin
+} else {                            // otherwise, b's begin is before a's begin
+  return b.getEnd() &gt; a.getBegin(); // so it overlaps if b's end is after a's begin.
+</pre>    
+			</subsection>
+			
+			
+			<subsection name="Adjusting an existing annotation's begin and end">
+			  <p>Sometimes, your code may want to adjust an annotations begin and end values.
+			     If the annotation is not indexed, there's no issue - just change the value.
+			     But if it is indexed, it's in index(es) in a position determined by its begin and end position, so if you 
+			     change these, the item needs to be reindexed (in all the indexes holding it).  Typically, only one index
+			     (the Annotation Index for a particular CAS View) is involved, but in general, there could be multiple
+			     indexes involved.</p>
+			     
+			  <p>If you are using UIMA version 2.7.0 or later, the UIMA 
+			     <a target="_blank" rel="nopener"
+			        href="https://uima.apache.org/d/uimaj-current/references.html#ugr.ref.cas.updating_indexed_feature_structures">framework</a> 
+			        detects updates that would need this re-indexing, and
+			        automatically removes the Feature Structure from all involved index(es), updates the Feature, and then adds the Feature Structure back to the index(es).
+			   </p> 
+			   
+			   <p>You can improve the efficiency of this, if you are updating, say, both the begin and end value of an annotation, by
+			      doing this yourself, in your code.
+			     <ul><li>Removing the item from the index(es)</li>
+			         <li>Doing both updates</li>
+			         <li>Adding the item back into the index(es)</li></ul>.
+	        More details <a target="_blank" rel="nopener"
+              href="https://uima.apache.org/d/uimaj-current/references.html#ugr.ref.cas.updating_indexed_feature_structures">here</a>.
+	  		         </p> 
+	  		         
+	  		 <p>Example: if you know a particular annotation is only indexed in one view, 
+	  		    then you can update it's begin and end features using
+	  		    <pre>a.<b>removeFsFromIndexes</b>();
+	  		    
+  a.setBegin(new_value_begin);
+  a.setEnd(new_value_end);
+  
+a.<b>addToIndexes</b>();</pre>
+This is the most efficient way to do this.
+	  		    </p>         
+ 			         
+			   <p>There's a couple of special forms you can use to protect indexes while you're updating features used as keys.
+			   This is useful when you're not sure what feature values might be used as keys in some index.
+			   <pre>
+try (AutoCloseable ac = my_cas.<b>protectIndexes</b>()) {
+   // ...  arbitrary user code which updates features 
+   //      which may be "keys" in one or more indexes, e.g.
+   
+   a.setBegin(new_value_begin);
+   a.setEnd(new_value_end); 
+}</pre>
+or
+<pre>
+my_cas.<b>protectIndexes</b>(() -> {
+   // ... arbitrary user code updating "key" features, 
+   //     but no checked exceptions are permitted
+   //     (because inside a lambda)
+   
+   a.setBegin(new_value_begin);
+   a.setEnd(new_value_end);
+   });</pre>
+   These use the frameworks automatic detection mechanism, and removes Feature Structures from all involved indexes
+   if needed, but delays adding them back, until the end of the protected section.
+			       </p>      
+			      
+			</subsection>
+			
+			<subsection name="Avoid where possible, copying sets of Feature Structures">
+			
+			  <p>Operations which iterate over Feature Structures, and put them into a Collection or List, and then 
+			     iterate over that list to do some other operations, can often be done directly on the Feature Structures in the CAS,
+			     omitting the first copying of them into a list.
+			  </p>
+			  
+			  <p>A frequent speedup can happen when the particular logic can detect when no further items in a (sorted) index
+			     are needed, and the iteration can be stopped early.</p>
+			  
+			  <p>For example, you might have code which iterates over all feature structures of a particular type, and puts these into a list,
+			     and then goes thru the list, and picks out certain ones and put those into another list, which is then returned.
+			  </p>
+			  
+			  <p>The first copying can be omitted, by moving the logic of what to include into the first iteration, and producing the second
+			     list directly.</p>
+			     
+			  <p>In UIMA Version 3, you can make use of the <a target="_blank" rel="noopener"
+           href="http://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select">select framework</a>.
+			     It already has many of the use-cases where you might want to start or exit an iteration, accounted for.
+			     You can also use its ability to produce streams, and combine that with Java's takeWhile method, to exit a stream early.
+			  </p>     
+			     
+			</subsection>
+		</section>
+	</body>
+
+</document>
+
