@@ -169,14 +169,24 @@
 a.getBegin() &lt;= b.getBegin() &amp;&amp; // a starts before (or equal to) b 
 a.getEnd() &gt;= b.getEnd()        // a ends after (or equal to) b</pre>
         
-        <h3>a and b overlap (have at least one char in common)</h3>
+        <h3>a and b overlap (have at least one char position in common)</h3>
         <pre>
                                     // ((omitted) check for non-null)
 if (a.getBegin() &lt;= b.getBegin()) { // if a starts before (or equal to) b
   return a.getEnd() &gt; b.getBegin(); // then it overlaps if a's end is after b's begin
 } else {                            // otherwise, b's begin is before a's begin
   return b.getEnd() &gt; a.getBegin(); // so it overlaps if b's end is after a's begin.
-</pre>    
+</pre>
+    <p> 
+      An alternative, where overlap includes the edge case when the annotations just touch each other, but have no char position in common:
+      </p>   
+        <pre>
+                                     // ((omitted) check for non-null)
+if (a.getBegin() &lt;= b.getBegin()) {  // if a starts before (or equal to) b
+  return a.getEnd() &gt;= b.getBegin(); // then it overlaps or abuts if a's end is after or equal to b's begin
+} else {                             // otherwise, b's begin is before a's begin
+  return b.getEnd() &gt;= a.getBegin(); // so it overlaps or abuts if b's end is after or equal to a's begin.
+</pre> 
 			</subsection>
 			
 			
