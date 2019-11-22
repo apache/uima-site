@@ -121,7 +121,7 @@
 			   <code>end</code> (descending), and then by type-priorities.</p>
 			<p style="margin-left:1rem"><i>This is really a set of indexes, one for each subtype of Annotation.</i></p>
 			<p style="margin-left:1rem"><i>Although the index has type-priorities, in UIMA v3, the <code>select-framework</code>
-			  by default ignores these; this behavior can be overridden.</i></p>  
+			  by default ignores these; this behavior can be overridden on an as-needed basis.</i></p>  
 			  
 			<subsection name="Watch out for type-priorites">
 			  <p>When 2 annotations have the same start and end, but different types, then one comes before the other,
