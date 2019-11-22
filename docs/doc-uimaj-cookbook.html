@@ -357,15 +357,23 @@
 			     Annotations may not be the appropriate supertype for your types, because they're designed for 
 			     things having a linear begin / end meaningful demarcations. </p>
                                                 <p>You can have your feature structures inherit from TOP, or from some other appropriate supertype, other
-			     than Annotation. E.g. if you want to define a new kind of annotation (e.g. a rectangular 
-           region if your subject of analysis is an image), inherit from AnnotationBase. Types which
-           inherit from AnnotationBase are bound to a particular subject of analysis (aka view).
-           If you have any information which is not directly related to a subject of analysis
+			     than Annotation.
+			     <ul>
+			       <li><p>For example, if you want to define a new kind of annotation (e.g. a rectangular 
+           region if your subject of analysis is an image), 
+           you should write a new type which inherits from AnnotationBase. Types which
+           inherit from AnnotationBase are bound to a particular subject of analysis (aka view).</p>
+			       </li>
+			       <li><p>On the other hand, if you have information which is not directly related to a subject of analysis
            (e.g. a Date type with day/month/year fields which would be used as a value rather
-           than as an annotation) then consider inheriting from TOP instead. Mind that it is also
-           not necessary to add all feature structures/annotations to the indexes. E.g. if the
+           than as an annotation) then consider inheriting from TOP instead.</p>
+			       </li>
+			       <li><p>It is also
+           not necessary to add all feature structures or annotations to the indexes. For example, if the
            Date type just described is used as a feature value, it may well be sufficient to be 
-           able to reach it through the feature.</p>
+           able to reach it through the feature.</p></li>
+			     </ul>
+			  </p>
                                                 <h3>Making use of the built-in Annotation index</h3>
                                                 <p>Annotations are special in UIMA in that there is a "built-in" index, the AnnotationIndex, which can be used
 			   to rapidly access these in a sorted order.  The ordering is by <code>begin</code> (ascending), then by
