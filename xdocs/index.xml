@@ -138,7 +138,11 @@
            href="https://github.com/apache/uima-uimaj/network/dependents?package_id=UGFja2FnZS0xNzk4MzkxNTI%3D">900 repositories</a> that have dependencies on 
            the UIMA Java SDK core.
       </p>
-        
+      
+      <p>An extensive rule-based scripting language
+        (<a href="ruta.html">RUTA</a>), an associated analysis engine built on top of UIMA, and an Eclipse-based tooling (Workbench) for interactively
+        developing the rules, is part of this project.
+      </p>
       <p>
         Additional infrastructure support components include a <a href="sandbox.html#simple-server">simple
         server</a> that can receive REST requests and return annotation results,
