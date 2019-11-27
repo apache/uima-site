@@ -31,14 +31,14 @@
         <div style="float: right; width: 220px; margin-left: 10px; border: 1px solid grey; background: white;" >
         <div style="text-align: center; border-bottom: 1px solid grey; margin:0.2em; padding-bottom: 0.2em;">
           <a  href="https://www.apache.org/events/current-event.html">
-          <img style="width: 210px" src="http://www.apachecon.com/images/landingpage/events/acna19.png"/>
+          <img style="width: 210px" src="https://www.apachecon.com/images/landingpage/events/acna19.png"/>
             <!-- img src="https://www.apache.org/events/current-event-234x60.png"/ -->
           </a>
         </div>
         <div style="text-align: center; border-bottom: 1px solid grey; margin:0.2em; padding-bottom: 0.2em;"><a href="https://donate.apache.org"></a><img style="width:100px" src="https://blogs.apache.org/foundation/mediaresource/d67ca611-a57c-462d-ac23-95063f81d175" title="Donate to ASF"/><a/></div>
         <!-- Commented out because Twitter set an awful amount of cookies / potential GDPR problems -->
         <!--  
-        <a width="220" class="twitter-timeline" data-dnt="true" href="https://twitter.com/ApacheUIMA" data-widget-id="711227112531894273">Tweets by @ApacheUIMA</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <a width="220" class="twitter-timeline" data-dnt="true" href="https://twitter.com/ApacheUIMA" data-widget-id="711227112531894273">Tweets by @ApacheUIMA</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         -->
         <div><a href="https://twitter.com/ApacheUIMA" target="_blank" rel="noopener" title="Twitter: @ApacheUIMA">Follow us on Twitter</a></div>
         </div>
@@ -138,6 +138,15 @@
            href="https://github.com/apache/uima-uimaj/network/dependents?package_id=UGFja2FnZS0xNzk4MzkxNTI%3D">900 repositories</a> that have dependencies on 
            the UIMA Java SDK core.
       </p>
+      
+      <p>In 2018, the internals of the UIMA Java framework were redesigned for a tighter integration with Java 
+         including for example, 
+         <a target="_blank" rel="nofollow noopener"
+            href="https://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select.terminal_form_actions.streams">Java Streams</a>
+         support for working with annotations, and for 
+         supporting higher performance on modern processors with memory caches.  This is available as Version 3.x.x
+         of the UIMA Java SDK, and associated components.  Version 2 continues to be supported, but new work should
+         use version 3.  </p>
       
       <p>An extensive rule-based scripting language
         (<a href="ruta.html">RUTA</a>), an associated analysis engine built on top of UIMA, and an Eclipse-based tooling workbench for interactively

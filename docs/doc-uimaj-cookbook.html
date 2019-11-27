@@ -306,14 +306,14 @@
        covering type, then you can stop iterating as soon as the start position you reach, + the largest span, is less than
        the start of the annotation you're trying to cover.</p>
                                                 <p style="margin-left:1rem">This is used internally in version 3's 
-           <a target="_blank" rel="noopener" href="http://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select.annot.subselect">select framework</a>
+           <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select.annot.subselect">select framework</a>
        to speed up 
        the <code>covering</code> kind of iteration.</p>
                                                 <p>There are many other examples, but the principle is the same: start the iteration "close to" the right spot, 
           perhaps moving backwards instead of forwards, and end the iteration as soon as you can logically say that
           no more suitable feature structures would be found. </p>
                                                 <h3>Use UIMA Version 3's select framework</h3>
-                                                <p>The <a target="_blank" rel="noopener" href="http://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select">select framework</a> 
+                                                <p>The <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select">select framework</a> 
            incorporates many of the popular use cases for doing iterations that we've seen, into a Java friendly approach that
            automatically uses optimized iterators and can produce Java Streams, as well.</p>
                             </blockquote>
@@ -399,11 +399,11 @@
 			     other way around.</p>
                                                 <p>To make this work, you need to specify the type priorities. This is a global setting for your application.
 			     See 
-			     <a target="_blank" rel="noopener" href="http://uima.apache.org/d/uimaj-current/references.html#ugr.ref.xml.component_descriptor.aes.primitive">
+			     <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-current/references.html#ugr.ref.xml.component_descriptor.aes.primitive">
 			       type priorities</a> (scroll down to find it) for how to specify this.</p>
                                                 <h3>Avoiding type priorities</h3>
                                                 <p>Often, the use of type priorities gets in the way.  With UIMA Version 3, the 
-			     <a target="_blank" rel="noopener" href="http://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select">select framework</a>
+			     <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select">select framework</a>
            by default ignores type priorites when doing its operations; but this can be overridden as needed.</p>
                             </blockquote>
         </td></tr>
@@ -535,7 +535,7 @@ my_cas.<b>protectIndexes</b>(() -&gt; {
 			  </p>
                                                 <p>The first copying can be omitted, by moving the logic of what to include into the first iteration, and producing the second
 			     list directly.</p>
-                                                <p>In UIMA Version 3, you can make use of the <a target="_blank" rel="noopener" href="http://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select">select framework</a>.
+                                                <p>In UIMA Version 3, you can make use of the <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-current/version_3_users_guide.html#uv3.select">select framework</a>.
 			     It already has many of the use-cases where you might want to start or exit an iteration, accounted for.
 			     You can also use its ability to produce streams, and combine that with Java's takeWhile method, to exit a stream early.
 			  </p>
