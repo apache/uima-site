@@ -285,7 +285,7 @@
         <a href="https://www.apache.org/dist/uima/eclipse-update-site/">https://www.apache.org/dist/uima/eclipse-update-site/</a>
       </p> 
       <p>
-        The UIMA Ruta Workbench 2.8.0 is tested with Eclipse 2019-9 (older versions but Mars may still supported). The UIMA Ruta Workbench 2.3.0 - 2.4.0 is tested with Eclipse 4.3 (Kepler) and Eclipse 4.4 (Luna). The UIMA Ruta Workbench 2.2.1 requires Eclipse 4.3.2
+        The UIMA Ruta Workbench 3.0.0/2.8.0 is tested with Eclipse 2019-9 (older versions but Mars may still supported). The UIMA Ruta Workbench 2.3.0 - 2.4.0 is tested with Eclipse 4.3 (Kepler) and Eclipse 4.4 (Luna). The UIMA Ruta Workbench 2.2.1 requires Eclipse 4.3.2
       </p> 
     </li>     
   </ul>
@@ -410,7 +410,16 @@
         <blockquote class="subsectionBody">
                                     <p>The latest version of UIMA Ruta is available via <a href="https://search.maven.org/#search%7Cga%7C1%7Cruta">Maven Central</a>. 
   If you use Maven as your build tool, then you can add the basic UIMA Ruta functionality as a dependency 
-  in your pom.xml file (additionally to other UIMA dependencies):</p>
+  in your pom.xml file (additionally to other UIMA dependencies)</p>
+                                                <p>For UIMA v3 compatibility:</p>
+                                                <pre>
+&lt;dependency&gt;
+  &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
+  &lt;artifactId&gt;ruta-core&lt;/artifactId&gt;
+  &lt;version&gt;3.0.0&lt;/version&gt;
+&lt;/dependency&gt;
+  </pre>
+                                                <p>For UIMA v2 compatibility:</p>
                                                 <pre>
 &lt;dependency&gt;
   &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
