@@ -35,7 +35,7 @@
 
     <subsectionToc/>
     
-    <subsection name="09 Dec 2019" date = "09 Deczember 2019" title="Apache UIMA Ruta 3.0.0 released">
+    <subsection name="09 Dec 2019" date = "09 December 2019" title="Apache UIMA Ruta 3.0.0 released">
       <p>Apache UIMA Ruta is a rule-based script language supported by
 		Eclipse-based tooling. The language is designed to enable rapid
 		development of text processing applications within UIMA. A special focus
