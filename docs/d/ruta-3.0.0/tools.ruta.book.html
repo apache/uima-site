@@ -2,7 +2,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    <title>Apache UIMA Ruta&#8482; Guide and Reference</title><link rel="stylesheet" type="text/css" href="css/stylesheet-html.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="Apache UIMA Ruta&#8482; Guide and Reference" id="d5e1"><div xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h1 class="title">Apache UIMA Ruta&#8482; Guide and Reference</h1></div><div><div class="authorgroup">
       <h3 class="corpauthor">Written and maintained by the Apache UIMA Development Community</h3>
-    </div></div><div><p class="releaseinfo">Version 2.8.0</p></div><div><p class="copyright">Copyright &copy; 2011, 2019 The Apache Software Foundation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
+    </div></div><div><p class="releaseinfo">Version 3.0.0</p></div><div><p class="copyright">Copyright &copy; 2011, 2019 The Apache Software Foundation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
       <p> </p>
       <p title="License and Disclaimer">
         <b>License and Disclaimer.&nbsp;</b>
@@ -2239,8 +2239,9 @@ Document{-&gt; EXEC(AnotherEngine, {SomeType})};</pre><p>
         </h4></div></div></div>
         
         <p>
-</p><pre class="programlisting">TypeExpression  -&gt;  AnnotationType | TypeVariable</pre><p>
-                    | AnnotationExpression.type</p>
+</p><pre class="programlisting">TypeExpression  -&gt;  AnnotationType | TypeVariable
+                    | AnnotationExpression.type</pre><p>
+        </p>
       </div>
       <div class="section" title="2.6.1.2.&nbsp; Examples:"><div class="titlepage"><div><div><h4 class="title" id="d5e1221">2.6.1.2.&nbsp;
           <span class="bold"><strong>Examples:</strong></span>
@@ -7848,7 +7849,7 @@ The|DT rabbit|NN made|VBD up|RP this|DT story|NN .|.</pre>
 			the more efficient structures, tree word list and multi tree word
 			list. The usage and configuration is shortly summarized in the
 			following. An exemplary maven project for UIMA Ruta is given here:
-			<code class="code">https://svn.apache.org/repos/asf/uima/ruta/trunk/example-projects/ruta-maven-example</code>
+			<code class="code">https://svn.apache.org/repos/asf/uima/uv3/ruta-v3/trunk/example-projects/ruta-maven-example</code>
 		</p>
 		<div class="section" title="4.3.1.&nbsp;generate goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3530">4.3.1.&nbsp;generate goal</h3></div></div></div>
 		
@@ -7859,7 +7860,7 @@ The|DT rabbit|NN made|VBD up|RP this|DT story|NN .|.</pre>
 		<pre class="programlisting">&lt;plugin&gt;
 &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
 &lt;artifactId&gt;ruta-maven-plugin&lt;/artifactId&gt;
-&lt;version&gt;2.3.0&lt;/version&gt;
+&lt;version&gt;3.0.0&lt;/version&gt;
 &lt;configuration&gt;
 
  &lt;!-- This is a exemplary configuration, which explicitly specifies the 
@@ -7993,12 +7994,12 @@ The|DT rabbit|NN made|VBD up|RP this|DT story|NN .|.</pre>
     or the configuration of the generated analysis engine descriptor, e.g., 
     the values of the configuration parameter scriptPaths.
     However, there are also other parameters: addRutaNature and buildPaths. 
-    Both can be utilzed to configure the current Eclipse project (due to the missing m2e connector).
-    This is required if the functionality of the UIMA Ruta Workbench, e.g., syntax checking or auto-completeion,
+    Both can be utilized to configure the current Eclipse project (due to the missing m2e connector).
+    This is required if the functionality of the UIMA Ruta Workbench, e.g., syntax checking or auto-completion,
      should be available in the maven project. If the parameter addRutaNature is set to true, then
      the UIMA Ruta Workbench will recognize the project as a script project. Only then, 
      the buildpath of the UIMA Ruta project can be configured using the buildPaths parameter, which specifies 
-     the three important source folders of the UIMA Ruta project. In normal UIMA Ruta Workbnech projects, 
+     the three important source folders of the UIMA Ruta project. In normal UIMA Ruta Workbench projects, 
      these are script, descriptor and resources.
     </p>
 		</div>
@@ -8012,7 +8013,7 @@ The|DT rabbit|NN made|VBD up|RP this|DT story|NN .|.</pre>
     <pre class="programlisting">&lt;plugin&gt;
 &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
 &lt;artifactId&gt;ruta-maven-plugin&lt;/artifactId&gt;
-&lt;version&gt;2.3.0&lt;/version&gt;
+&lt;version&gt;3.0.0&lt;/version&gt;
 &lt;configuration&gt;&lt;/configuration&gt;
 &lt;executions&gt;
 &lt;execution&gt;
@@ -8065,7 +8066,7 @@ The|DT rabbit|NN made|VBD up|RP this|DT story|NN .|.</pre>
     <pre class="programlisting">&lt;plugin&gt;
 &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
 &lt;artifactId&gt;ruta-maven-plugin&lt;/artifactId&gt;
-&lt;version&gt;2.3.0&lt;/version&gt;
+&lt;version&gt;3.0.0&lt;/version&gt;
 &lt;configuration&gt;&lt;/configuration&gt;
 &lt;executions&gt;
 &lt;execution&gt;
@@ -8136,7 +8137,7 @@ The|DT rabbit|NN made|VBD up|RP this|DT story|NN .|.</pre>
     </p>  
     
     <pre class="programlisting">mvn archetype:generate -DarchetypeGroupId=org.apache.uima 
-    -DarchetypeArtifactId=ruta-maven-archetype -DarchetypeVersion=2.6.0
+    -DarchetypeArtifactId=ruta-maven-archetype -DarchetypeVersion=3.0.0
     -DgroupId=my.domain -DartifactId=my-ruta-project</pre>
     
     <p>
