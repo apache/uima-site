@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<document>
+
+	<properties>
+	  <title>How To information for the UIMA project</title>
+	  <author email="dev@uima.apache.org"> Apache UIMA Documentation Team</author>
+	</properties>
+
+  <body>
+
+    <section name="How To's for the UIMA project">
+    
+      <p>Here are collected information on how to do things, that are not otherwise documented elsewhere (e.g., making a release).</p>
+    <subsectionToc/>
+    
+      <subsection name="How to do a board report">
+        <p>Board reports are kept in the website project, under docs/board-reports.
+           The naming convention is the year-month.txt, e.g. 2019-05.txt.</p>
+        <p>A service is available that collects various statistics that can be included in the report:
+           <a target="_blank" rel="noopener" href="https://reporter.apache.org">reporter.apache.org.</a>
+           This service is offered by the ComDev PMC, source at <a target="_blank" rel="noopener" 
+             href="https://svn.apache.org/repos/asf/comdev/reporter.apache.org">svn.apache.org/repos/asf/comdev/reporter.apache.org.</a>
+           dev@community.apache.org is the place to engage and send patches for this tool.</p>          
+        <p>Requirements for the contents of a board report are documented here - 
+           <a target="_blank" rel="noopener" href="https://www.apache.org/foundation/board/reporting">https://www.apache.org/foundation/board/reporting</a>.</p>
+        <p>The board members want the reports to reflect the health of the community; so the report should be written
+           by a person, not by the reporting tool, in order to have the best insight into the health of our community.</p>
+           
+     
+      </subsection>
+    
+     
+    </section>
+    
+  </body>
+</document>
