@@ -46,6 +46,9 @@ A previous version of this page, with the methods we used while in the incubator
     <ul><li>The UIMA SDK</li>
       <li>UIMA-AS add-on</li>
       <li>UIMA-CPP</li>
+      <li>uimaFIT</li>
+      <li>RUTA</li>
+      <li>DUCC</li>
       <li>Individual Annotators, tooling, and other useful components (like the Simple Server)</li></ul>
     In addition, it releases some Maven build tooling components that 
     need to be in the Maven repositories to support our Maven processes.
@@ -149,7 +152,7 @@ A previous version of this page, with the methods we used while in the incubator
 		        <pre>mvn changes:jira-report -N </pre></p>
 		        
 		         <p>Each time this plugin is run, it creates an updated report in the
-		            top level of this project.  This report doesn't need to be checked into SVN.
+		            top level of this project.  This report doesn't need to be checked into source control.
 		            It will be regenerated and copied into the distribution archives (source and binary)
 		            during a release.  The RELEASE_NOTES.html files have been updated to
 		            refer to this generated report.</p>
@@ -191,7 +194,7 @@ A previous version of this page, with the methods we used while in the incubator
 		<p>
       We use the maven-release-plugin to do the releasing.  In the prepare phase, it updates the
       trunk artifacts to remove the -SNAPSHOT suffix, commits it to trunk, and then does an
-      SVN copy of the trunk to create the tag.  Then it updates the trunk artifacts to the next
+      SVN copy or GIT Branch of the trunk or master to create the tag.  Then it updates the trunk artifacts to the next
       version-SNAPSHOT, and commits that.
     </p>
       
@@ -205,22 +208,22 @@ A previous version of this page, with the methods we used while in the incubator
     <p class="note">In the past, we added a suffix representing the release candidate to the tag,
         e.g. "-rc1" for release candidate 1, etc. However, the URL for this tag becomes part
         of the released POM. After a successful vote, we would have  upgraded the release candidate to
-        the final release by renaming the tag in SVN. At that point, the URL in the
+        the final release by renaming the tag in source control. At that point, the URL in the
         POM would have become invalid. For this reason, it was decided not to add the -rc1 to the
         tag anymore.
     </p>
     <p>The release plugin automatically signs everything that needs signing using gpg.  It also
       builds the sources.jar, and one overall (for multi-module projects) source-release.zip file, 
       which can be later obtained and 
-      should be an (approximate) copy of the SVN tag for that artifact, and once unzipped, should be buildable,
+      should be an (approximate) copy of the tag for that artifact, and once unzipped, should be buildable,
       using <code>mvn install</code>.
     </p>
     
     <p>Steps:
     <ul>
-           <li>Make sure all changes are checked into SVN.  Then checkout (not export) from SVN the project(s)
+           <li>Make sure all changes are checked into source control.  Then checkout (not export) from source control the project(s)
         you'll be building, into a new "build" location, and do all the building from there.</li>
-        <li>If you instead choose to build from your "working" SVN checkout, insure it's up-to-date with
+        <li>If you instead choose to build from your "working" source control checkout, insure it's up-to-date with
         all changes that others may have checked into trunk.</li>
         <li>Purge your local maven repository of artifacts being built by running in the 
         top level directory you'll be building from:
@@ -302,7 +305,7 @@ A previous version of this page, with the methods we used while in the incubator
     </p>
     <p style="margin-left:3em"><code>[mvn release:prepare]</code> If you've just done release:prepare,
     you can reset things back to as they were before that command by issuing
-    <code>mvn release:rollback</code>.  Check to confirm that the svn tag for the
+    <code>mvn release:rollback</code>.  Check to confirm that the source control tag for the
     release candidate is deleted; if not, remove it manually.
     </p>
     <p style="margin-left:3em"><code>[mvn release:perform]</code> If you've done a release:perform, to
@@ -349,15 +352,9 @@ A previous version of this page, with the methods we used while in the incubator
   Note that any JARs, Zips, Tars, tar.gz artifacts must be signed by the Release Manager.
   </p>
   <p>
-  Although we have a spot in the distribution SVN under dev/uima for all the artifacts to be released
-  via the Apache mirror system, you probably should not use this for
-  release candidates, unless you suspect there won't be many of these (or they're small).  This is because
-  SVN retains forever all the files you put into it, so if we go through 8 release candidates, each having 
-  several multi-megabyte zip/tar files, these will just waste space in SVN. 
-  </p>
-  <p>
-  The alternative is to copy the release candidate for voting into your personal people.apache.org/~[user-id] space, and
-  let testers/voters pull it from there.
+  We have a spot in the distribution SVN under dev/uima for all the artifacts to be released
+  via the Apache mirror system.  This is where you put the 
+  release candidates. 
   </p>
   
     <p>Be sure to copy artifacts from the build-from tag spot, which should have a path like:
@@ -365,12 +362,13 @@ A previous version of this page, with the methods we used while in the incubator
       Doing this will guarantee that you're posting the artifacts built from the tag (which could be 
       different from the release:prepare build in /target if someone snuck in a svn commit at the right moment.)</p>  
  
- <p>If you do use the distribution SVN for the release candidates, 
-  follow the 
-  <a href="saving-svn-resources.html">saving-svn-space</a> tricks if reasonable. 
-  Typically, for each release, we create a new directory for that, and place
-  all files pertaining to that release underneath that directory.
-  </p>
+  <p>Copy any artifacts (together with their signings) to the staging spot.  
+  A suggested approach: Make a new dir in the build project, called svnUpload (or whatever), and 
+      copy the artifacts (<b>from the build/target/checkout/target directory</b>)(typically the
+      bin/zip/tar and the source release and all the signature/checksums) into this dir.  Then do the svn command:
+      <pre>cd the-svnUpload-directory
+svn import -m "commit msg, e.g. uimaj-2.8.0 rc5" . https://dist.apache.org/repos/dist/dev/uima/uimaj/n.n.n-rc1/artifacts
+</pre></p>
   </subsection>
 
   <!--  
@@ -461,7 +459,7 @@ A previous version of this page, with the methods we used while in the incubator
   <subsection name='Doing The Release Vote'>
     <p>The release candidate typically consists of 
       <ul><li>assembly source and binary distributions,</li>
-          <li>the associated SVN tag, and</li>
+          <li>the associated source control tag, and</li>
           <li>the individual Maven module artifacts.</li>
       </ul>
       </p>
@@ -475,7 +473,7 @@ A previous version of this page, with the methods we used while in the incubator
 		<p>
       After things are staged, you write a note to the dev list, asking for an approval vote.
       You need to provide the url(s) of the closed staging repository in the note so the approvers
-      can find the code to check, the SVN tag corresponding to the release, and
+      can find the code to check, the source control tag corresponding to the release, and
       if needed, and the place in the distribution SVN where the source and binary
       distributions being proposed are found.  
       The [VOTE] email should be based on similar previous votes, and

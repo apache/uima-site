@@ -238,11 +238,12 @@
   <li>Update the READMEs and RELEASE-NOTES.</li>
   <li>Announce on the dev list that you're doing a release so others can get any changes in, and also
       know not to be committing to trunk while you're in the middle of doing the release.</li>
-  <li>Make a new build directory for this release, and svn checkout the trunk (svn "export" instead of checkout 
+  <li>Make a new build directory for this release, and source control checkout the trunk or git clone the repo and switch to the branch (if needed).
+      (svn "export" instead of checkout 
       fails at a later commit step by the release plugin). This is so you can
       preserve the build for later upload of selected artifacts to the distribution spot. 
       <p>
-      If instead you are building from an existing checkout, do a svn update to be sure the workspace is up-to-date.
+      If instead you are building from an existing checkout, do a source control update to be sure the workspace is up-to-date.
       </p>
             </li>
   <li>Purge your local maven repository of artifacts being built by running in the 
@@ -255,7 +256,7 @@
       So, instead, just go to the .m2 .../uima/ node and consider deleting that directory.</p> 
     </li>
   <li>Do a full build with deploy of the (last) snapshot before release: mvn clean deploy -Papache-release</li>
-  <li>If retrying a release candidate, delete the old rc-xxx in svn xxx/tags/</li>
+  <li>If retrying a release candidate, delete the old rc-xxx in svn xxx/tags/ or the git branch for the tag.</li>
   <li>If retrying a release candidate, <code><b>close</b></code> (and <code><b>drop</b></code> as appropriate) any previous repository.apache.org staging repo</li>
   <!--li>(If remerging a branch:  Note- best to do these if possible at the root of aggregations, 
     outside of Eclipse, so svn "batching" can work - will be quite a bit fraster)
@@ -284,7 +285,7 @@
           <code>mvn release:prepare -DdryRun -DautoVersionSubmodules</code>.
         <li><code>mvn release:clean</code> to restore projects</li>
         <li><code>mvn release:prepare [-DautoVersionSubmodules]</code>. 
-        Try to accept the default suggestions for names; you might change the SVN tag to include a "-rc1"
+        Try to accept the default suggestions for names; you might change the source control tag to include a "-rc1"
         suffix indicating a release candidate number.</li>
         <li><code>mvn release:perform</code></li>      
       </ol>
@@ -303,9 +304,8 @@
     depend on the release version of previous steps.  When you're done, you will have 1 or more
     "closed" staging repositories, each having a unique URL.
   </li-->
-  <li>If necessary, run mvn release:prepare on the eclipse update site.  This will create the svn tag,
-      and create the needed artifacts in the target/eclipse-update-site.  Or, you can create the tag 
-      yourself, and run mvn install -Papache-release.
+  <li>If necessary, run mvn release:prepare on the eclipse update site.  This will create the source control tag,
+      and create the needed artifacts in the target/eclipse-update-site.  
       No need to run release:perform because no artifacts from this are going to Maven central distribution.
       <p>Note that the target/eclipse-update-site will have .svn files - don't delete these - they're needed when
       you decide to "publish" via comitting these to the release svn.</p></li>
