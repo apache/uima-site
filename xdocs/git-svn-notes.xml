@@ -35,16 +35,19 @@ under the License.
        to write to Apache repos - see 
        <a target="_blank" rel="nofollow noopener" href="https://gitbox.apache.org/">
           https://gitbox.apache.org/</a>.</p>
+    <p>When "pushing" to github.com, you need to use a "Personal Access Token" when it asks for a password.
+       Set one up if needed, by logging into your github.com account, and clicking on your user picture
+       in the upper right corner -> Settings -> Developer settings -> Personal Access Tokens.</p>
      
-     <p>The name used for logging in is separate from the name used to identify each commit in
-        git.  The crendentials used to identify each commit are called your "identity" and are 
+    <p>The name used for logging in is separate from the name used to identify each commit in
+        git.  The credentials used to identify each commit are called your "identity" and are 
         the combination of a username and "email". These can be set globally for all repos 
         in your local machine, or locally, per repository.  
         See <a target="_blank" rel="nofollow noopener" href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">
           https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup</a>.</p>
           
-     <h3>Using multiple git identities</h3>
-     <p>You may work with different organizations, and want to have different identities for each 
+    <h3>Using multiple git identities</h3>
+    <p>You may work with different organizations, and want to have different identities for each 
         repository, depending.  You can do this; just use the local git configuration for the repo to 
         specify this.</p>
     
