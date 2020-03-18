@@ -40,7 +40,7 @@ This guide is intended to be a user oriented overview of Apache UIMA&#0153; DUCC
 DUCC is a Linux cluster controller designed to scale out any UIMA pipeline
 for high throughput collection processing jobs as well as for low latency
 real-tme applications.
-Building on UIMA-AS, DUCC is particularly well suited to run large memory Java 
+DUCC is particularly well suited to run large memory Java 
 analytics in multiple threads in order to fully utilize multicore machines.
 DUCC manages the life cycle of all processes deployed across the cluster, including
 non-UIMA processes such as tomcat servers or VNC sessions.
@@ -223,6 +223,15 @@ by adding a single parameter to the Job submission.
    </p>
    <p>
    </p>
+  </subsection>
+
+  <subsection name="DUCC on Clouds">
+  <p>
+    DUCC has been running in various cloud deployments.  
+    The documentation for this is still in-progress, but some information is 
+    available <a target="_blank" rel="nofollow noopener"
+      href="doc-ducc-cloud">here</a>.
+  </p>
   </subsection>
   
    <subsection name="DUCC - What next?">
