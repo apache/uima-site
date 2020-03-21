@@ -27,6 +27,13 @@ under the License.
 <body>
 
 <section name="Building Apache UIMA distributions">
+
+  <p style="font-size:125%">
+  This page is out of date, not updated since 2017, and predates some major changes
+  such as switching many projects to GIT from SVN.  Please see the release.html 
+  page for current information.
+  </p>
+
   <p style="font-size:125%">
   This page describes how we build distributions for the 2.3.1 and later releases.  
   See <a href="distribution-before-2.3.1.html">this page</a> for information on 

@@ -128,7 +128,7 @@ We currently have sub-sites for
 
 <p>The update site looks like:
 <pre>
-.../dist/uima/eclipse-update-site
+.../uima/eclipse-update-site
                                  /compositeArtifacts.jar
                                  /compositeContent.jar
                                  /uimaj
