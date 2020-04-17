@@ -21,10 +21,10 @@
    -->
 
 <head>
-  <title>Apache UIMA Ruta v3.0.0 Release Notes</title>
+  <title>Apache UIMA Ruta v3.0.1 Release Notes</title>
 </head>
 <body>
-<h1>Apache UIMA Ruta&#8482; v3.0.0 Release Notes</h1>
+<h1>Apache UIMA Ruta&#8482; v3.0.1 Release Notes</h1>
 
 <h2>Contents</h2>
 <p>
@@ -47,25 +47,20 @@
 </p>
 
 <h2><a name="major.changes">2. Major Changes in this Release</a></h2>
+
 <p>
   This release provides compatibility to UIMA v3. An upgrade from UIMA Ruta v2 to this version requires 
   also an update to UIMA v3 of the overall application or Eclipse installation. Please refer to the 
   UIMA v3 user's guide for detailed information: https://uima.apache.org/d/uimaj-3.0.0/version_3_users_guide.html
 </p>
 <p>
-  This release contains changed in the analysis engine descriptor and the type system descriptors 
-  and therefore requires an update of the Ruta projects. This can be accomplished, for example, by 
-  right-clicking on the Ruta project, selecting "UIMA Ruta" and then "Update Project".
-</p>
-<p>
   <p>UIMA Ruta Language and Analysis Engine:</p>
   <ul>
-    <li>Depends on UIMA 3.1.1 and uimaFIT 3.0.0</li>
-    <li>Provides compatibility to UIMA v3</li>
-  </ul>
-  <p>UIMA Ruta Workbench:</p>
-  <ul>
-    <li>Depends on UIMA v3 and provides compatibility to UIMA v3</li>
+  	<li>Fixed broken literal string matching.</li>
+  	<li>Fixed variable initialization with other variables.</li>
+  	<li>Fixed assignment of lists to variables.</li>
+  	<li>Fixed assignment of annotation comparison expression to variables.</li>
+    <li>PARSE condition supports additional argument that represents the string to be parsed.</li>
   </ul>
 </p>
  
@@ -75,22 +70,21 @@
 The Apache UIMA Ruta project really needs and appreciates any contributions, 
 including documentation help, source code and feedback.  If you are interested
 in contributing, please visit 
-<a href="http://uima.apache.org/get-involved.html">
-  http://uima.apache.org/get-involved.html</a>.
+<a href="https://uima.apache.org/get-involved.html">
+  https://uima.apache.org/get-involved.html</a>.
 </p>
   
 <h2><a name="report.issues">4. How to Report Issues</a></h2>
 <p>
 The Apache UIMA project uses JIRA for issue tracking.  Please report any 
 issues you find at 
-<a href="http://issues.apache.org/jira/browse/uima">http://issues.apache.org/jira/browse/uima</a>
+<a href="https://issues.apache.org/jira/browse/uima">https://issues.apache.org/jira/browse/uima</a>
 </p>
   
 <h2><a name="list.issues">5. List of JIRA Issues Fixed in this Release</a></h2>
 
 Click <a href="issuesFixed/jira-report.html">issuesFixed/jira-report.html</a> for the list of 
-issues fixed in this release. This list contains all issues that have been fixed to prepare the synchronous releases
-of UIMA Ruta 2.8.0 and UIMA Ruta 3.0.0.
+issues fixed in this release.
 
 </body>
 </html>
