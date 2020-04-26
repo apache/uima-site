@@ -475,12 +475,17 @@
       <binary       filename="uimafit-3.0.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   
       <source       filename="uimafit-3.0.0-source-release">   <f>zip</f>  </source>
     </download>
+    <download name="uimaFIT 2.5.0" subdirectory="uimafit-2.5.0" releasedate="26-Apr-2020">
+      <releasenotes filename="uimafit-2.5.0/README">           <f>txt</f>  </releasenotes>
+      <binary       filename="uimafit-2.5.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   
+      <source       filename="uimafit-2.5.0-source-release">   <f>zip</f>  </source>
+    </download>
+    <!-- 
     <download name="uimaFIT 2.4.0" subdirectory="uimafit-2.4.0" releasedate="14-Nov-2017">
       <releasenotes filename="uimafit-2.4.0/README">           <f>txt</f>  </releasenotes>
       <binary       filename="uimafit-2.4.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   
       <source       filename="uimafit-2.4.0-source-release">   <f>zip</f>  </source>
     </download>
-    <!-- 
     <download name="uimaFIT 2.3.0" subdirectory="uimafit-2.3.0" releasedate="29-Mar-2017">
       <releasenotes filename="uimafit-2.3.0/README">           <f>txt</f>  </releasenotes>
       <binary       filename="uimafit-2.3.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   

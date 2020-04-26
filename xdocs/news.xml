@@ -35,7 +35,33 @@
 
     <subsectionToc/>
     
-    
+    <subsection name="26 Apr 2020" date = "26 Apr 2020" title="Apache uimaFIT 2.5.0 released">
+      <p>uimaFIT 2.5.0 is a minor feature and bugfix release to uimaFIT 2.4.0. It should should 
+      serve as a drop-in replacement for previous uimaFIT 2.x versions.</p><p>
+      The complete list of fixes is <a href="d/uimafit-2.5.0/issuesFixed/jira-report.html">here</a>.
+      </p>
+      <p>Notable changes in this release include:</p>
+      <ul>
+        <li>Added support for PEARs in AnalysisEngineFactory;</li>
+        <li>Added support for destroying auto-created resource managers if feasible;</li>
+        <li>Added CasFactory;</li>
+        <li>Added CasUtil.exists(...) method;</li>
+        <li>Added support for Charset-typed parameters in components;</li>
+        <li>Added ExternalResourceFactory.createResource(...) methods for instantiating resources;</li>
+        <li>Added ability to set number of threads in CpePipeline.runPipeline(...);</li>
+        <li>Fixed FSUtil.getFeature(...) failing when called with Object.class on multi-valued features;</li>
+        <li>Fixed issue with non-XML 1.0 characters in parameter values when running CPEs;</li>
+        <li>Fixed JCasIterable.iterator() destroying the ResourceManager before it is even used;</li>
+        <li>Fixed CollectionReaderFactory.createReaderDescription(...) not discovering type prios and indexes;</li>
+        <li>Fixed issue causing component parameters to be used when initializing resources;</li>
+        <li>Upgraded to UIMA 2.10.4;</li>
+        <li>Upgraded to Spring 4.3.26.</li>
+      </ul>
+      <p>
+      This version of uimaFIT requires Java version 8 or later.
+      </p>
+    </subsection>
+        
     <subsection name="17 Apr 2020" date = "17 April 2020" title="Apache UIMA Ruta 3.0.1 released">
       <p>Apache UIMA Ruta is a rule-based script language supported by
         Eclipse-based tooling. The language is designed to enable rapid
@@ -269,8 +295,6 @@ commons.math v.3.2, netty v.4.0.44, snappy v.1.1.1.7 </li>
       This version of UIMA-DUCC requires Java version 8.                                                                                                                                                                                        
       </p>
     </subsection>
-
-
 
     <subsection name="16 Apr 2019" date = "16 April 2019" title="Apache uimaFIT 3.0.0 released">
       <p>uimaFIT 3.0.0 is a major release compatible with UIMA v3. It includes a few changes in the
