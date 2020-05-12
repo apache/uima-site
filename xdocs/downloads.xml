@@ -167,17 +167,12 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="ducc-3.0.0"/>
   </subsection>
 
-
-
-  
   <subsection name="Apache UIMA 2.10.4">
    <p>This is the latest version of Version 2 of UIMA Java SDK
    </p>
     <insertDownloads version="2.10.4"/>
   </subsection>
   
-    
-
   <subsection name="Apache UIMA uimaFIT">
     <insertDownloads version="uimaFIT"/>
   </subsection>
@@ -201,79 +196,19 @@ Other mirrors: <select name="Preferred">
 </section> 
 
 <section name="Older Releases">
- <!--
- <subsection name="Apache UIMA Version 2.10.1">
-    <insertDownloads version="2.10.1"/>
-  </subsection>
-  
-  <subsection name="Apache UIMA Version 2.10.0">
-    <insertDownloads version="2.10.0"/>
-  </subsection>
-
-  <subsection name="Apache UIMA Version 2.9.0">
-    <insertDownloads version="2.9.0"/>
-  </subsection>
-
-  <subsection name="Apache UIMA Version 2.8.1">
-    <p>Note: This version replaces 2.8.0 with bug fixes, and 2.8.0 is only available in the archives.</p>
-    <insertDownloads version="2.8.1"/>
-  </subsection>
-
-  <subsection name="Apache UIMA Version 2.7.0">
-    <insertDownloads version="2.7.0"/>
-  </subsection>
-
-  <subsection name="Apache UIMA Version 2.6.0">
-    <insertDownloads version="2.6.0"/>
-  </subsection>
-  -->
-  <!--
-  <subsection name="Apache UIMA Version 2.5.0">
-    <insertDownloads version="2.5.0"/>
-  </subsection>
-
-  <subsection name="Apache UIMA Version 2.4.2">
-    <insertDownloads version="2.4.2"/>
-  </subsection>
-  
-  <p>The 2.4.1 of the UIMA Java SDK has been replaced by the 2.4.2 version above. There was no UIMA-AS version 2.4.1 released.</p>
-  -->
-
   <subsection name="Apache UIMA Version 3.1.0">
     <insertDownloads version="3.1.0"/>
   </subsection>
-
-  <subsection name="Apache UIMA Version 3.0.2">    
-    <insertDownloads version="3.0.2"/>
-  </subsection>
-  
 
   <subsection name="Apache UIMA DUCC Version 2.2.2">
     <insertDownloads version="2.2.2"/>
   </subsection>
 
-  <subsection name="Apache UIMA Version 3.0.1">
-    <p>Please use version 3.0.2; it has important bug fixes.</p>     
-    <insertDownloads version="3.0.1"/>
-  </subsection>
-
-  <subsection name="Apache UIMA Version 3.0.0">
-    <p>Please use version 3.0.1.</p>
-    <insertDownloads version="3.0.0"/>
+  <subsection name="Apache UIMA Version 2.10.2">
+   <p>This includes the latest version of the ConceptMapper addon. If you need this version,
+   look in the archived releases linked below.</p>
   </subsection>
   
- <subsection name="Apache UIMA Version 2.10.2">
-   <p>This includes the latest version of the ConceptMapper addon. 
-   </p>
-    
-    <insertDownloads version="2.10.2"/>
-  </subsection>
-  
-  <!--subsection name="Apache UIMA DUCC Version 2.2.1">
-    <insertDownloads version="2.2.1"/>
-  </subsection -->
-
-
   <subsection name="Apache UIMA DUCC Version 2.2.1">
     <insertDownloads version="2.2.1"/>
   </subsection>
@@ -299,42 +234,9 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="1.0.0"/>
   </subsection>
   
-
-  
   <subsection name="Apache UIMA Addons">
     <insertDownloads version="2.3.1"/>
   </subsection>
-  
-  
-<!--   <subsection name="Apache UIMA Version 2.3.1 - Release Date: UIMA Java SDK: 10-Dec-2010    UIMA AS: 22-Mar-2011   UIMA Addons: 29-Aug-2011"> -->
-<!--     <insertDownloads version="2.3.1"/> -->
-<!--   </subsection> -->
-
-
-
-<!--   <subsection name="Apache UIMA Version 2.3.0-incubating - Release Date: 26-Jan-2010"> -->
-<!--     <p>Note: See <a href="https://archive.apache.org/dist/incubator/uima/" target="_blank" rel="noopener">https://archive.apache.org/dist/incubator/uima/</a> -->
-<!--      for previous releases of UIMA SDK and UIMA-AS.</p> -->
-     
-<!--     <p>For previous releases of the UIMA C++ Framework found in the incubator archives, -->
-<!--     see <ul><li> -->
-<!--     <a href="https://archive.apache.org/dist/incubator/uima/binaries/uimacpp-2.3.0-incubating/"> -->
-<!--     <code>https://archive.apache.org/dist/incubator/uima/binaries/uimacpp-2.3.0-incubating/</code></a>, and </li> -->
-<!--     <li><a href="https://archive.apache.org/dist/incubator/uima/source/uimacpp-2.3.0-incubating/"></a> -->
-<!--     <code>https://archive.apache.org/dist/incubator/uima/source/uimacpp-2.3.0-incubating/</code></li></ul> -->
-<!--     </p> -->
-<!--     insertDownloads version="2.3.0-incubating"/ -->
-<!--   </subsection> -->
-
-<!-- 
-	<subsection name="Apache UIMA Version 2.2.2-incubating">
-    <insertDownloads version="2.2.2-incubating"/>
-  </subsection>
-
-	<subsection name="Apache UIMA Version 2.2.1-incubating - Release Date: 21-Dec-2007">
-    <insertDownloads version="2.2.1-incubating"/>
-  </subsection>
- -->
 </section>
   
 <section name="Archived Releases">
