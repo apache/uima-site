@@ -232,6 +232,13 @@
         <blockquote class="sectionBody">
                                           <table class="subsectionToc">
             <tr >
+      <td>12 May 2020</td>
+      <td><a href='#12 May 2020'>
+                  Apache uimaFIT 3.1.0 released
+                </a>
+      </td>
+      </tr>  
+          <tr >
       <td>26 Apr 2020</td>
       <td><a href='#26 Apr 2020'>
                   Apache uimaFIT 2.5.0 released
@@ -821,6 +828,47 @@
       </tr>  
         </table>
                                                         <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="12 May 2020">
+            <h2>12 May 2020
+                        &ndash; Apache uimaFIT 3.1.0 released
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>uimaFIT 3.1.0 is a minor feature and bugfix release. On supported platforms, it serves
+      mostly as a drop-in replacement for previous uimaFIT 3.x versions. However, due to a clash in
+      method signatures, you may notice incompatible changes in the methods provided 
+      ExternalResourceFactory. For details, please refer to the migration section in the 
+      documentation.</p>
+                                                <p>
+      The complete list of fixes is <a href="d/uimafit-3.1.0/issuesFixed/jira-report.html">here</a>.
+      </p>
+                                                <p>Notable changes in this release include:</p>
+                                                <ul>
+        <li>Added support for PEARs in AnalysisEngineFactory</li>
+        <li>Added ExternalResourceFactory.createResource(...) methods for instantiating resources</li>
+        <li>Added support for Charset-typed parameters in components</li>
+        <li>Added ability to set number of threads in CpePipeline.runPipeline(...)</li>
+        <li>Fixed issue with non-XML 1.0 characters in parameter values when running CPEs</li>
+        <li>Fixed JCasIterable.iterator() destroying the ResourceManager before it is even used</li>
+        <li>Fixed issue causing component parameters to be used when initializing resources</li>
+        <li>Fixed CollectionReaderFactory.createReaderDescription(...) not discovering type prios and indexes</li>
+        <li>Fixed clashing method signatures of ExternalResourceFactory.bindResource(...)</li>
+        <li>Upgraded to UIMA 3.1.1</li>
+        <li>Upgraded to Spring 4.3.26</li>
+      </ul>
+                                                <p>
+      This version of uimaFIT requires Java version 8 or later.
+      </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
         <tr><td>
        
        
