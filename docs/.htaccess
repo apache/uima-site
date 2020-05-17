@@ -1,0 +1,2 @@
+Redirect 301 /d/uimafit-2.4.0/.*$ /d/uimafit-2.5.0
+Redirect 301 /d/uimafit-3.0.0/.*$ /d/uimafit-current
