@@ -196,9 +196,6 @@ Other mirrors: <select name="Preferred">
 </section> 
 
 <section name="Older Releases">
-  <subsection name="Apache UIMA Version 3.1.0">
-    <insertDownloads version="3.1.0"/>
-  </subsection>
 
   <subsection name="Apache UIMA DUCC Version 2.2.2">
     <insertDownloads version="2.2.2"/>
