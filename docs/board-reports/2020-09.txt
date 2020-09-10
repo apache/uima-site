@@ -1,0 +1,41 @@
+Board report for Apache UIMA, for September 2020.
+
+## Description:
+Apache UIMA's mission: the creation and maintenance of open-source software
+related to the analysis of unstructured data, guided by the UIMA Oasis
+Standard. The software provides frameworks, tools and annotators, 
+facilitating the analysis of unstructured content such as text, audio and 
+video.
+
+## Issues: No Board level issues at this time.
+
+## Membership Data: 
+Apache UIMA was founded 2010-03-16 (10 years ago)
+There are currently 25 committers and 17 PMC members in this project.
+The Committer-to-PMC ratio is roughly 7:5.
+
+Community changes, past quarter:
+- No new PMC members. Last addition was Viorel Morari on 2019-11-18.
+- No new committers. Last addition was Viorel Morari on 2018-09-20.
+
+## Project Activity:
+### Releases:
+
+0 releases in last quarter
+
+4 releases previous quarter
+11 April 2020: Apache UIMA Ruta 2.8.1
+17 April 2020: Apache UIMA Ruta 3.0.1
+26 April 2020: Apache uimaFIT 2.5.0
+12 May 2020: Apache uimaFIT 3.1.0
+
+## Activity:
+UIMA AS completed the process of switching to GIT.
+
+Work was done as to switch our Jenkins automation to the new build infrastructure, for several projects.
+
+Issues at a slow/moderate pace are continuing to be reported 
+and fixed mainly in uimaFIT and Ruta.  
+Work on other projects slowed during this last quarter.
+  
+## Community Health: The community continues to be moderately active. 
