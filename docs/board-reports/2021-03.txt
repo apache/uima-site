@@ -1,0 +1,36 @@
+Board report for Apache UIMA, for March 2021.
+
+## Description:
+Apache UIMA's mission: the creation and maintenance of open-source software
+related to the analysis of unstructured data, guided by the UIMA Oasis
+Standard. The software provides frameworks, tools and annotators,
+facilitating the analysis of unstructured content such as text, audio and
+video.
+
+## Issues:
+No Board level issues at this time.
+
+## Membership Data:
+Apache UIMA was founded 2010-03-17 (11 years ago)
+There are currently 25 committers and 17 PMC members in this project.
+The Committer-to-PMC ratio is roughly 7:5.
+
+Community changes, past quarter:
+- No new PMC members. Last addition was Viorel Morari on 2019-11-19.
+- No new committers. Last addition was Viorel Morari on 2018-09-20.
+
+## Project Activity:
+- Cleaning up backlog on Jira
+- Moving more of the project's code repositories from the 
+ASF SVN to GitHub/GitBox
+- Implementation of new features and bug fixes
+- Towards new releases of the UIMA Java SDK, uimaFIT and Ruta sub-projects
+
+- Recent releases:
+-- UIMA Build Resources 6 was released on 2021-02-17
+-- UIMA Parent POM 14 was released on 2021-03-10
+
+## Community Health:
+The community continues to be moderately active and provides bug reports
+and PRs at times. The recent switch to GitHub repos facilitates the
+contribution process.
