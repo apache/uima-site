@@ -1,0 +1,3423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.12">
+<meta name="author" content="Apache UIMA™ Development Community">
+<title>Apache UIMA™</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:50%;border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<h1>Apache UIMA™</h1>
+<div class="details">
+<span id="author" class="author">Apache UIMA™ Development Community</span><br>
+<span id="revnumber">version 3.2.0</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">UIMA 3 User's Guide</div>
+<ul class="sectlevel1">
+<li><a href="#_uv3.overview">Overview of UIMA Version 3</a>
+<ul class="sectlevel2">
+<li><a href="#_uv3.overview.new">What&#8217;s new in UIMA 3</a></li>
+<li><a href="#_uv3.overview.java8">Java 8 is required</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.backwards_compatibility">Backwards Compatibility</a>
+<ul class="sectlevel2">
+<li><a href="#_uv3.backwards_compatibility.jcas">JCas and non-JCas APIs</a>
+<ul class="sectlevel3">
+<li><a href="#_uv3.backwards_compatibility.jcas.names">Additional reserved names in the JCas generated classes</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.backwards_compatibility.serialization">Serialization forms</a>
+<ul class="sectlevel3">
+<li><a href="#_uv3.backwards_compatibility.serialization.deltas">Delta CAS Version 2 Binary deserialization not supported</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.backwards_compatibility.low_level_apis">APIs for creating and modifying Feature Structures</a></li>
+<li><a href="#_uv3.backwards_compatibility.preserve_v2_ids">Preserving V2 ids, with low level CAS Api accessibility</a></li>
+<li><a href="#_uv3.backwards_compatibility.pears">PEAR support</a></li>
+<li><a href="#_uv3.backwards_compatibility.tostring">toString()</a></li>
+<li><a href="#_uv3.backwards_compatibility.logging">Logging configuration is somewhat different</a></li>
+<li><a href="#_uv3.backwards_compatibility.typesystem_sharing">Type System sharing</a></li>
+<li><a href="#_uv3.backwards_compatibility.checking">Some checks moved to native Java</a></li>
+<li><a href="#_uv3.backwards_compatibility.class_hierarchy">Some class hierarchies have been modified</a></li>
+<li><a href="#_uv3.backwards_compatibility.multiple_type_systems_with_common_jcas">Enabling multiple versions of type systems to work with a single common JCas class</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.new_extended_apis">New and Extended APIs</a>
+<ul class="sectlevel2">
+<li><a href="#_uv3.new_extended_apis.index_and_iterator_improvements">UIMA FSIndex and FSIterators improvements</a></li>
+<li><a href="#_uv3.new_extended_apis.select">New Select API</a></li>
+<li><a href="#_uv3.new_extended_apis.custom_java_objects">New custom Java objects in the CAS framework</a></li>
+<li><a href="#_uv3.new_extended_apis.lists_and_arrays">Built-in lists and arrays</a>
+<ul class="sectlevel3">
+<li><a href="#_uv3.new_extended_apis.reorganized.lists_and_arrays">Built-in lists and arrays have common super classes / interfaces</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.new_extended_apis.collections">Many UIMA objects implement Stream or Collection</a></li>
+<li><a href="#_uv3.new_extended_apis.reorganized">Reorganized APIs</a></li>
+<li><a href="#_uv3.new_extended_apis.class">Use of JCas Class to specify a UIMA type</a></li>
+<li><a href="#_uv3.new_extended_apis.jcasgen">JCasGen changes</a>
+<ul class="sectlevel3">
+<li><a href="#_uv3.new_extended_apis.jcas_static_fields">JCas additional static fields</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.new_extended_apis.generics">Generics added</a></li>
+<li><a href="#_uv3.new_extended_apis.other">Other changes</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.select">SelectFS CAS data access</a>
+<ul class="sectlevel2">
+<li><a href="#_uv3.select.builder_pattern">Select&#8217;s use of the builder pattern</a></li>
+<li><a href="#_uv3.select.sources">Sources of Feature Structures</a>
+<ul class="sectlevel3">
+<li><a href="#_uv3.select.sources.type">Use of Type in selection of sources</a></li>
+<li><a href="#_uv3.select.sources.generics">Sources and generic typing</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.select.selection_and_ordering">Selection and Ordering</a>
+<ul class="sectlevel3">
+<li><a href="#_uv3.select.boolean_properties">Boolean properties</a></li>
+<li><a href="#_uv3.select.any_source">Configuration for any source</a></li>
+<li><a href="#_uv3.select.any_index">Configuration for any index</a></li>
+<li><a href="#_uv3.select.ordered_index">Configuration for sort-ordered indexes</a></li>
+<li><a href="#_uv3.select.annot.follow_precede">Following or Preceding</a></li>
+<li><a href="#_uv3.select.annot.subselect">Bounded sub-selection within an Annotation Index</a></li>
+<li><a href="#_uv3.select.annot.variations">Variations in Bounded sub-selection within an Annotation Index</a></li>
+<li><a href="#_uv3.select.annot.subselect.defaults">Defaults for bounded selects</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.select.terminal_form_actions">Terminal Form actions</a>
+<ul class="sectlevel3">
+<li><a href="#_uv3.select.terminal_form_actions.iterators">Iterators</a></li>
+<li><a href="#_uv3.select.terminal_form_actions.arrays_lists">Arrays and Lists</a></li>
+<li><a href="#_uv3.select.terminal_form_actions.single_items">Single Items</a></li>
+<li><a href="#_uv3.select.terminal_form_actions.streams">Streams</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_uv3.annotation_relation_predicates">Annotation relation predicates</a></li>
+<li><a href="#_uv3.custom_java_objects">CAS-transported custom Java objects</a>
+<ul class="sectlevel2">
+<li><a href="#_uv3.custom_java_objects.tutorial">Tutorial example</a></li>
+<li><a href="#_uv3.custom_java_objects.new_semibuiltins">Additional semi-built-in UIMA Types for some common Java Objects</a>
+<ul class="sectlevel3">
+<li><a href="#_uv3.custom_java_objects.semibuiltin_fsarraylist">FSArrayList</a></li>
+<li><a href="#_uv3.custom_java_objects.semibuiltin_integerarraylists">IntegerArrayList</a></li>
+<li><a href="#_uv3.custom_java_objects.semibuiltin_fshashset">FSHashSet and FSLinkedHashSet</a></li>
+<li><a href="#_uv3.custom_java_objects.semibuiltin_int2fs">Int2FS Int to Feature Structure map</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.custom_java_objects.design">Design for reuse</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.logging">Logging</a>
+<ul class="sectlevel2">
+<li><a href="#_uv3.logging.levels">Logging Levels</a></li>
+<li><a href="#_uv3.logging.new_recorded_context_data">Context Data</a></li>
+<li><a href="#_uv3.logging.markers">Markers used in UIMA Java core logging</a></li>
+<li><a href="#_uv3.logging.defaults_configuration">Defaults and Configuration</a>
+<ul class="sectlevel3">
+<li><a href="#_uv3.logging.throttling_annotator_logging">Throttling logging from Annotators</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_uv3.migration">Migrating to UIMA Version 3</a>
+<ul class="sectlevel2">
+<li><a href="#_uv3.migration.big_picture">Migrating: the big picture</a></li>
+<li><a href="#_uv3.migration.migrating_pipeline">How to migrate an existing UIMA pipeline to V3</a></li>
+<li><a href="#_uv3.migration.jcas">Migrating JCas classes</a>
+<ul class="sectlevel3">
+<li><a href="#_uv3.migration.tool_guide.running">Running the migration tool</a>
+<ul class="sectlevel4">
+<li><a href="#_uv3.migration.tool_guide.running.eclipse">Using Eclipse to run the migration tool</a></li>
+<li><a href="#_uv3.migration.tool_guide.running.cmd_line">Running from the command line</a>
+<ul class="sectlevel5">
+<li><a href="#_uv3.migration.tool_guide.running.inputs">Command line: Specifying input sources</a></li>
+<li><a href="#_uv3.migration.tool_guide.classpath">Command line: Specifying a classpath for the migration</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.migration.tool_guide.duplicates">Handling duplicate definitions</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.migration.tool_guide.reports">Understanding the reports</a></li>
+<li><a href="#_uv3.migration.tool_guide.cookbook">Examples</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.migration.consuming">Consuming V3 Maven artifacts</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.pears">PEAR support</a>
+<ul class="sectlevel2">
+<li><a href="#_uv3.pears.jcas">JCas issues</a></li>
+<li><a href="#_uv3.pears.java_objects">Custom Java Objects</a></li>
+</ul>
+</li>
+<li><a href="#_uv3.migration.aids">Migration aids</a>
+<ul class="sectlevel2">
+<li><a href="#_uv3.migration.aids.property_table">Properties Table</a></li>
+<li><a href="#_trading_off_runtime_checks_for_speed">Trading off runtime checks for speed</a></li>
+<li><a href="#_reporting">Reporting</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The document is a manual for users of Apache UIMA, specifically focussing on the new
+features introduced in version 3.</p>
+</div>
+<div class="paragraph">
+<p>Copyright © 2006, 2021 The Apache Software Foundation</p>
+</div>
+<div class="paragraph">
+<p>Copyright © 2004, 2006 International Business Machines Corporation</p>
+</div>
+<h4 id="_license_and_disclaimer" class="discrete">License and Disclaimer</h4>
+<div class="paragraph">
+<p>The ASF licenses this documentation to you under the Apache License, Version 2.0 (the "License");
+you may not use this documentation except in compliance with the License.  You may obtain a copy of
+the License at</p>
+</div>
+<div class="paragraph text-center">
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0" class="bare">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+</div>
+<div class="paragraph">
+<p>Unless required by applicable law or agreed to in writing, this documentation and its contents are
+distributed under the License on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied.  See the License for the specific language governing permissions and
+limitations under the License.</p>
+</div>
+<h4 id="_trademarks" class="discrete">Trademarks</h4>
+<div class="paragraph">
+<p>All terms mentioned in the text that are known to be trademarks or service marks have been
+appropriately capitalized.  Use of such terms in this book should not be regarded as affecting the
+validity of the the trademark or service mark.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uv3.overview"><a class="anchor" href="#_uv3.overview"></a>Overview of UIMA Version 3</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>UIMA Version 3 adds significant new functionality for the Java SDK, while remaining  backward compatible with Version 2.
+Much of this new function is enabled by a shift in the  internal details of how Feature Structures are represented.
+In Version 3, these are represented internally as ordinary Java objects, and subject to garbage collection.</p>
+</div>
+<div class="paragraph">
+<p>In contrast, version 2 stored Feature Structure data in special internal arrays of <code>ints</code> and other data types.
+Any Java object representation of Feature Structures in version 2 was merely forwarding references to these internal data representations.</p>
+</div>
+<div class="paragraph">
+<p>If JCas is being used in an application, the JCas classes must be migrated, but this can often be done automatically.
+In Version 3, the JCas classes ending in "_Type" are no longer used, and the  main JCas class definitions are much simplified.</p>
+</div>
+<div class="paragraph">
+<p>If an application doesn&#8217;t use JCas classes, then nothing need be done for migration.
+Otherwise, the JCas classes can be migrated in several ways:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>generating during build</strong></dt>
+<dd>
+<p>If the project is built by Maven, it&#8217;s possible the JCas classes are built from the type descriptions,  using UIMA&#8217;s Maven JCasGen plugin.
+If so, you can just rebuild the project; the JCasGen plugin for V3 generates the new JCas classes.</p>
+</dd>
+<dt class="hdlist1"><strong>running the migration utility</strong></dt>
+<dd>
+<p>This is the recommended way if you can&#8217;t regenerate the classes from the type descriptions.</p>
+<div class="paragraph">
+<p>This does the work of migrating and produces new versions of the JCas classes, which need to replace the existing ones.
+It allows complex existing JCas classes to migrated, perhaps with developer assistance as needed.
+Once done, the application has no migration startup cost.</p>
+</div>
+<div class="paragraph">
+<p>The migration tool is capable of using existing source or compiled JCas classes as input, and  can migrate classes contained within Jars or PEARs.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>regenerating the JCas classes using the JCasGen tool</strong></dt>
+<dd>
+<p>The JCasGen tool (available as a Eclipse or Maven plugin, or a stand-alone application)  generates Version 3 JCas classes from the XML descriptors.</p>
+<div class="paragraph">
+<p>This is perfectly adequate for migrating non-customized JCas classes.
+When run from the UIMA Eclipse plugin for editing XML component descriptors, it will attempt to merge customizations with generated code.
+However, its approach is not as comprehensive as the migration tool, which parses the Java source code.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Migration of JCas classes is the first step needed to start using UIMA version 3.
+See the later chapter on migration for details on using the migration tool.</p>
+</div>
+<div class="sect2">
+<h3 id="_uv3.overview.new"><a class="anchor" href="#_uv3.overview.new"></a>What&#8217;s new in UIMA 3</h3>
+<div class="paragraph">
+<p>The major improvements in version 3 include:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Support for arbitrary Java objects, transportable in the CAS</strong></dt>
+<dd>
+<p>Support is added to allow users to define additional UIMA Types whose JCas implementation may  include Java objects, with serialization and deserialization performed using normal CAS transportable data.
+A following chapter on Custom Java Objects describes this new facility.</p>
+</dd>
+<dt class="hdlist1"><strong>New UIMA semi-built-in types, built using the custom Java object support</strong></dt>
+<dd>
+<p>The new support that allows custom serialization of arbitrary Java objects so they can be transported in the CAS (above) is used to implement several new semi-built-in UIMA types.</p>
+</dd>
+<dt class="hdlist1"><strong>FSArrayList</strong></dt>
+<dd>
+<p>a Java ArrayList of Feature Structures.
+The JCas class implements the List API.</p>
+</dd>
+<dt class="hdlist1"><strong>IntegerArrayList</strong></dt>
+<dd>
+<p>a variable length int array.
+Supports OfInt iterators.</p>
+</dd>
+<dt class="hdlist1"><strong>FSHashSet, FSLinkedHashSet</strong></dt>
+<dd>
+<p>a Java HashSet or LinkedHashSet containing Feature Structures.
+This JCas class implements the Set API.</p>
+</dd>
+<dt class="hdlist1"><strong>Select framework for accessing Feature Structures</strong></dt>
+<dd>
+<p>A new <em>select framework</em> provides a concise way to work with Feature Structure data stored in the CAS or other collections.
+It is integrated with the Java 8 <em>stream</em> framework, while providing additional capabilities supported by UIMA, such as the ability to move both forwards and backwards while iterating, moving to specific positions, and doing various kinds of specialized Annotation selection such as working with Annotations spanned by another annotation.</p>
+<div class="paragraph">
+<p>By default, when sorted iterators are set up by the select framework, they ignore typePriorities; this addresses a need of many use cases, and makes operation when there are many annotations spanning the same begin and end more reliable.
+Each select can specify to use typePriority as part of the ordering when required.</p>
+</div>
+<div class="paragraph">
+<p>This user&#8217;s guide has a chapter devoted to this new framework.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Elimination of ConcurrentModificationException while iterating over UIMA indexes</strong></dt>
+<dd>
+<p>The index and iteration mechanisms are improved; it is now allowed to modify the indexes while iterating over them (the iteration will be unaffected by the modification).</p>
+<div class="paragraph">
+<p>Note that the automatic index corruption avoidance introduced in more recent versions of UIMA could be automatically removing Feature Structures from indexes and adding them back, if the user was updating some Feature of a Feature Structure that was part of an index specification for inclusion or ordering purposes.</p>
+</div>
+<div class="paragraph">
+<p>In version 2, you would accomplish this using a two pass scheme: Pass 1 would iterate and merely collect the Feature Structures to be updated into a Java collection of some kind.
+Pass 2 would use a plain Java iterator over that collection and modify the Feature Structures and/or the UIMA indexes.
+This is no longer needed in version 3; UIMA iterators use a copy-on-write technique to allow index updating, while doing whatever minimal copying is needed to continue iteration over the original index.</p>
+</div>
+<div class="paragraph">
+<p>In both version 2 and 3, there are 3 iterator movement APIs which have a side effect of insuring the iterator is operating correctly over the current index contents.
+These are the <code>moveToFirst,
+moveToLast, and moveTo(some_feature_structure)</code> API calls.
+In version 3, using these will reinitialize the iterator (if needed) so that it is iterating over the current index contents; if the index has not been modified, no reinitialization is needed (or done).</p>
+</div>
+<div class="paragraph">
+<p>CAS reset and index removeAll operations clear the index without preserving any existing iteration.
+If you try to continue an iteration over an index cleared by these operations, the results are undefined, and may throw exceptions.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Logging updated</strong></dt>
+<dd>
+<p>The UIMA logger is a facade that can be hooked up at deploy time to one of several logging backends.
+It has been extended to implement all of the Logger API calls provided in the SLF4j <code>Logger</code> interface, and has been changed to use SLF4j as its back-end.
+SLF4j, in turn,  requires a logging back-end which it  determines by examining what&#8217;s available in the classpath, at deploy time.
+This design allows UIMA to be more easily embedded in other systems which have their own logging frameworks.</p>
+<div class="paragraph">
+<p>Modern loggers support MDC/NDC and Markers; these are supported now via the slf4j facade.
+UIMA itself is extended to use these to provide contexts around logging.</p>
+</div>
+<div class="paragraph">
+<p>See the following chapter on logging for details.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Automatic garbage collection of unreferenced Feature Structures</strong></dt>
+<dd>
+<p>This allows creating of temporary Feature Structures, and automatically reclaiming  space resources when they are no longer needed.
+In version 2, space was reclaimed only when a  CAS was reset at the end of processing.</p>
+</dd>
+<dt class="hdlist1"><strong>better performance</strong></dt>
+<dd>
+<p>The internal design details have been extensively reworked to align with  recent trends in computer hardware  over the last 10-15 years.
+In particular, space and time tradeoffs are adjusted in favor of using more memory for better locality-of-reference, which improves performance.
+In addition, the many internal algorithms (such as managing Feature Structure indexes) have been improved.</p>
+<div class="paragraph">
+<p>Type system implementations are reused where possible, reducing the footprint in many scaled-out cases.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Backwards compatible</strong></dt>
+<dd>
+<p>Version 3 is intended to be binary backwards compatible - the goal is that you should be able to run  existing applications without recompiling them, except for the need to migrate or regenerate  any User supplied JCas Classes.
+Utilities are provided to help do the necessary JCas migration mostly automatically.</p>
+</dd>
+<dt class="hdlist1"><strong>Integration with Java 8</strong></dt>
+<dd>
+<p>Version 3 requires Java 8 as the minimum level.
+Some of version 3&#8217;s new facilities, such as the <code>select</code> framework for accessing Feature Structures from CASs or other collections,  integrate with the new Java 8 language constructs, such as <code>Streams</code> and <code>Spliterators</code>.</p>
+</dd>
+<dt class="hdlist1"><strong>Programming convenience</strong></dt>
+<dd>
+<p>Many APIs have been made more consistent and better integrated; see the chapter on new and extended APIs.
+Examples:  UIMA Indexes now implement Iterable, so you can use the Java "extended for" construct directly; UIMA Lists have new push and pushNode methods to create and link a new node onto the front of a list; there are new methods on the CAS and JCas to get a shared instance of common immutable objects, like 0-length arrays and empty lists.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Just to give a small taste of the kinds of things Java 8 integration provides,  here&#8217;s an example of using the new <code>select</code> framework, where the task is to compute a Set of all the found types</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>in a UIMA index</p>
+</li>
+<li>
+<p>under some top-most type "MyType"</p>
+</li>
+<li>
+<p>occurring as Annotations within a particular bounding Annotation</p>
+</li>
+<li>
+<p>that are nonOverlapping</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here is the Java code using the new <code>select</code> framework together with Java 8 streaming functions:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">Set&lt;Type&gt; foundTypes =
+   myIndex.select(MyType.class)
+   .coveredBy(myBoundingAnnotation)
+   .nonOverlapping()
+   .map(fs -&gt; fs.getType())
+   .collect(Collectors.toCollection(TreeSet::new));</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Another example: to collect, by category, the average length of the annotations having that category.
+Here we assume that <code>MyType</code> is an <code>Annotation</code> and that it has a feature called <code>category</code> which returns a String denoting the category:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">Map&lt;String, Double&gt; freqByCategory =
+   myIndex.select(MyType.class)
+   .collect(Collectors
+     .groupingBy(MyType::getCategory,
+                 Collectors.averagingDouble(f -&gt;
+                   (double)(f.getEnd() - f.getBegin()))));</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.overview.java8"><a class="anchor" href="#_uv3.overview.java8"></a>Java 8 is required</h3>
+<div class="paragraph">
+<p>The UIMA Java SDK Version 3 requires Java 8.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uv3.backwards_compatibility"><a class="anchor" href="#_uv3.backwards_compatibility"></a>Backwards Compatibility</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Because users have made substantial investment in developing applications using the UIMA framework, a goal of version 3 is to protect this investment, by enabling Annotators and applications developed under previous versions to be able to be used in  subsequent versions of the framework.</p>
+</div>
+<div class="paragraph">
+<p>To this end, version 3 is designed to be backwards compatible,  except for needing:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>possibly a recompilation (due to some rearrangements of many classes and interfaces)</p>
+</li>
+<li>
+<p>a new set of User-defined JCas classes (if these were previously being used). The creation of these CAS classes can be done by regenerating them using JCasGen, or by  using a migration tool that handles converting the existing JCas classes. A later chapter covers how to upgrade the JCas classes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There are some additional exceptions, described in the following sections.</p>
+</div>
+<div class="sect2">
+<h3 id="_uv3.backwards_compatibility.jcas"><a class="anchor" href="#_uv3.backwards_compatibility.jcas"></a>JCas and non-JCas APIs</h3>
+<div class="paragraph">
+<p>The JCas class changes include no longer needing or using the <code>Xyz_Type</code> sister classes for each main JCas class.
+User code is unlikely to access these sister classes.
+The JCas API method to access this sister class now throws a UnsupportedOperation exception.</p>
+</div>
+<div class="paragraph">
+<p>The non-JCas Java cover classes for the built-in UIMA types remain, for backwards compatibility.
+So, if you have code that casts a Feature Structure instance to AnnotationImpl (a now deprecated  version 2 non-JCas Java cover class), that will continue to work.</p>
+</div>
+<div class="sect3">
+<h4 id="_uv3.backwards_compatibility.jcas.names"><a class="anchor" href="#_uv3.backwards_compatibility.jcas.names"></a>Additional reserved names in the JCas generated classes</h4>
+<div class="paragraph">
+<p>Names beginning with "_" (underscore) are being used by the new JCas implementation, so you should not name things with this convention.
+If you do, please insure your names are not colliding with the names being used by the generated JCas files.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.backwards_compatibility.serialization"><a class="anchor" href="#_uv3.backwards_compatibility.serialization"></a>Serialization forms</h3>
+<div class="paragraph">
+<p>The backwards compatibility extends to the serialized forms, so that it should be possible to have a UIMA-AS services working with a client, where the client is a version 3 instance, but the server is still a version 2 (or vice versa).</p>
+</div>
+<div class="sect3">
+<h4 id="_uv3.backwards_compatibility.serialization.deltas"><a class="anchor" href="#_uv3.backwards_compatibility.serialization.deltas"></a>Delta CAS Version 2 Binary deserialization not supported</h4>
+<div class="paragraph">
+<p>The binary serialization forms, including Compressed Binary Form 4, build an internal model of the v2 CAS in order to be able to deserialize v2 generated versions.
+For <strong>delta</strong> CAS, this model cannot be accurately built, because version 3 excludes from the model all unreachable Feature Structures, so in most cases it won&#8217;t match the version 2 layout.</p>
+</div>
+<div class="paragraph">
+<p>Version 3 will throw an exception if delta CAS deserialization of a version 2 binary delta CAS is attempted.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.backwards_compatibility.low_level_apis"><a class="anchor" href="#_uv3.backwards_compatibility.low_level_apis"></a>APIs for creating and modifying Feature Structures</h3>
+<div class="paragraph">
+<p>There are 3 sets of APIs for creating and modifying Feature Structures; all are supported in V3.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Using the JCas classes</p>
+</li>
+<li>
+<p>Using the normal CAS interface with Type and Feature objects</p>
+</li>
+<li>
+<p>Using the low level CAS interface with int codes for Types and Features</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Version 3 retains all 3 sets, to enable backward compatibility.</p>
+</div>
+<div class="paragraph">
+<p>The low level CAS interface was originally provided to enable a extra-high-performance (but without compile-time type safety checks) mode.
+In Version 3, this mode is actually somewhat slower than the others, and no longer has any advantages.</p>
+</div>
+<div class="paragraph">
+<p>Using the low level CAS interface also sometimes blocks one of the new features of Version 3 -  namely, automatic garbage collection of unreachable Feature Structures.
+This is because creating a Feature Structure using the low level API creates the Java object for that Feature Structure, but returns an "int" handle to it.
+In order to be able to find the Feature Structure, given that int handle, an entry is made in an internal map.
+This map holds a reference to this Feature Structure, which prevents it from being garbage collected (until of course, the CAS is reset).</p>
+</div>
+<div class="paragraph">
+<p>The normal CAS APIs allow writing Annotators where the type system is unknown at compile time; these  are fully supported.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.backwards_compatibility.preserve_v2_ids"><a class="anchor" href="#_uv3.backwards_compatibility.preserve_v2_ids"></a>Preserving V2 ids, with low level CAS Api accessibility</h3>
+<div class="paragraph">
+<p>Some V2 applications make use of the Feature Structure address, using these as an integer identifier and using the low level CAS APIs to access the Feature Structure, given this integer.
+These applications  also often use the stability of these ids across some serialization/deserializations.</p>
+</div>
+<div class="paragraph">
+<p>Normally in V3, deserialization of CASs having these IDs occurs without preserving the IDs, and without setting up the low level CAS APIs to be able to access these using them.
+If an existing application depends on the low level access via the address, a special mode, called <code>V2IdRefs</code>, can be specified, which will support this.
+It comes at a cost however, which is that all new Feature Structures created (or deserialized) will be added to an internal table to enable the low level CAS <code>getFSForRef(int)</code> method to work.
+As a result, these Feature Structures are not eligible for garbage collection.</p>
+</div>
+<div class="paragraph">
+<p>This mode is set on individual CASs via a new API; a default value may optionally be specified.
+Once set on a CAS, it remains until set to a different value; CAS Reset does not affect the setting, nor does checking it into / out of a CAS Pool.</p>
+</div>
+<div class="paragraph">
+<p>When a new CAS is created, this mode is set according to two sources:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a <code>-Duima.default_v2_id_references</code> system property, read once when the  UIMA framework classes are loaded.</p>
+</li>
+<li>
+<p>A run-time value kept per thread, managed by an API on the LowLevelCAS interface. The  setting is inherited by any child threads the thread creates, and  overrides the system property if used.</p>
+</li>
+<li>
+<p>If neither of these are used, then the default is to not be in the sepcial v2-mode.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The APIs for this are part of the LowLevelCAS.
+The controlling APIs all return an instance of <code>AutoClosableNoException</code>, which can be used to reset the setting to its previous value.
+A recommended way of using these is with the Java <code>try with resources</code> construct:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>try (AutoClosableNoException w = llcas.ll_enableV2IdRefs) {
+  ... some operations
+} // automatically restores previous value</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>LowLevelCas instance APIs for enabling/disabling this mode on a particular CAS:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>// set the mode
+AutoClosable ll_enableV2IdRefs()
+
+// same, but with explicit set or reset of the mode
+AutoClosableNoException ll_enableV2IdRefs(true/false)
+
+// return true if the mode is enabled
+boolean is_ll_enableV2IdRefs()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Static LowLevelCas APIs for setting the default value for this mode for new CASs on a particular thread:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>// set the default
+AutoClosableNoException LowLeveCas.ll_defaultV2IdRefs()
+
+// same, but with explicit set or reset of the mode
+AutoClosableNoException LowLeveCas.ll_defaultV2IdRefs(true/false)
+
+// return true if the mode is enabled
+boolean LowLeveCas.is_ll_defaultV2IdRefs()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This mode modifies multiple things in the operation of UIMA V3.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Newly created Feature structures have IDs which match what UIMA V2 references (the "addresses") would be. For serialized forms (except Xmi), these IDs match the (imputed) v2 IDs of the serialized form.</p>
+<div class="paragraph">
+<p>Newly created Feature Structures, including those created when deserializing, are added to an internal map which maps the ID to the Feature Structure instance.
+Feature Structures may be located by ID using the LowLevelCAS API <code>getFSForRef().</code></p>
+</div>
+<div class="paragraph">
+<p>In order for this to work correctly, the mode must be set while the CAS is empty.
+If the mode is attempted to be set on a non-empty CAS, an IllegalStateException is thrown.</p>
+</div>
+</li>
+<li>
+<p>This mode modifies serialization (except for XCas, XMI, and Compressed form 6, which in V2 are implemented to just serialize reachable Feature Structures) to include non-reachable FSs.</p>
+</li>
+<li>
+<p>Note: This does not affect the <code>select</code> framework results - unreachable Feature Structures are not included.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.backwards_compatibility.pears"><a class="anchor" href="#_uv3.backwards_compatibility.pears"></a>PEAR support</h3>
+<div class="paragraph">
+<p>Pears are supported in Version 3.
+If they use JCas, their JCas classes need to be migrated.</p>
+</div>
+<div class="paragraph">
+<p>When a PEAR contains a JCas class definition different from the surrounding non-PEAR context, each Feature Structure instance within that PEAR has a lazily-created "dual" representation using the PEAR&#8217;s JCas class definition.
+The UIMA framework things storing references to Feature Structures are modified to store the non-PEAR version of the Feature Structure, but to return (when in  a particular PEAR component in the pipeline) the dual version.
+The intent is that this be  "invisible" to the PEAR&#8217;s annotators.
+Both of these representations share the same  underlying CAS data, so modifications to one are seen in the other.</p>
+</div>
+<div class="paragraph">
+<p>If a user builds code that holds onto Feature Structure references, outside of annotators (e.g., as a shared External Resource), and sets and references these from both outside and inside one (or more) PEARs, they should adopt a strategy of storing the non-PEAR form.
+To get the non-PEAR form from a Feature Structure, use the method <code>myFeatureStructure._maybeGetBaseForPearFs()</code>.</p>
+</div>
+<div class="paragraph">
+<p>Similarly, if code running in an Annotator within a PEAR wants to work with a Feature Structure extracted from non-UIMA managed data outside of annotators (e.g., such as a shared External Resource) where the form stored is the non-PEAR form, you can convert to the PEAR form using the method <code>myFeatureStructure.__maybeGetPearFs()</code>.
+This method checks to see if the processing context of the pipeline is currently within a PEAR, and if that PEAR has a different definition for that JCas class, and if so, it returns that version of the Feature Structure.</p>
+</div>
+<div class="paragraph">
+<p>The new Java Object support does not support multiple,  different JCas class definitions for the same  UIMA Type, inside and outside of the PEAR context.
+If this is detected, a runtime exception is thrown.</p>
+</div>
+<div class="paragraph">
+<p>The workaround for this is to manually merge any JCas class definitions for the same class.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.backwards_compatibility.tostring"><a class="anchor" href="#_uv3.backwards_compatibility.tostring"></a>toString()</h3>
+<div class="paragraph">
+<p>The formatting of various UIMA artifacts, including Feature Structures, has changed somewhat, to be more informative.
+This may impact  situations such as testing, where the exact string representations are being compared.</p>
+</div>
+<div class="paragraph">
+<p>A special global Java property, -Duima.v2_pretty_print_format can be set to have the toString() operation for Feature Sructures print in the V2 style.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.backwards_compatibility.logging"><a class="anchor" href="#_uv3.backwards_compatibility.logging"></a>Logging configuration is somewhat different</h3>
+<div class="paragraph">
+<p>The default logging configuration in v2 was to use Java Util Logging (the logger built into Java). For v3, the default is to use SLF4J which, in turn, picks a back-end logger, depending on what it finds in the class path.</p>
+</div>
+<div class="paragraph">
+<p>This change was done to permit easier integration of UIMA as a library running within other frameworks.</p>
+</div>
+<div class="paragraph">
+<p>V3 UIMA logger includes the APIs like info(..), warn(..) etc., that are part of the  SLF4j APIs.
+In addition, these are augmented with the Java 8 style lambda arguments that were introduced in log4j-2, for more concise and efficient log message computation.</p>
+</div>
+<div class="paragraph">
+<p>The new UIMA Logger APIs (e.g.
+logger.info(&#8230;&#8203;), logger.warn(&#8230;&#8203;))  use the SLF4j and other modern logger substitutable notation of "{}", as opposed to the style adopted by the original Java logger, of "{nnn}".  All modern loggers have switched to this.</p>
+</div>
+<div class="paragraph">
+<p>The technique for (optionally) reporting the class and method (and sometimes, line number)  was changed to conform to current logger conventions - whereby the loggers themselves obtain this information from the call stack.
+The V2 calls which pass in the sourceClass and sourceMethod information have this information ignored, but replaced with what the loggers obtain from the stack track.
+In some cases, where the callers in V2 were not actually passing in the correct class/method information, this will result in a different log record.</p>
+</div>
+<div class="paragraph">
+<p>For more details, please see the logging chapter.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.backwards_compatibility.typesystem_sharing"><a class="anchor" href="#_uv3.backwards_compatibility.typesystem_sharing"></a>Type System sharing</h3>
+<div class="paragraph">
+<p>Type System definitions are shared when they are equal.
+After type systems  have been built up from type definitions, at "commit" time, a check is made to see if an identical type system already exists (same types and features).   This is often the case when a UIMA application is scaling up by adding multiple pipelines, all using the same type system.</p>
+</div>
+<div class="paragraph">
+<p>If an identical committed type system already exists, then the commit operation returns  it, and the one just built is discarded.
+Normally, this is not an issue.
+However, some application code may save references to the type system object or to defined types and features.
+These references end up pointing to the discarded version, when the commit operation finds an already  committed equal version.</p>
+</div>
+<div class="paragraph">
+<p>Application code may code around this by re-acquiring references to the type system object, and to any type and feature objects, if the type system instance object returned from <code>commit</code> is not identical (==) to the one being committed.
+The type system commit APIs are changed to return the type system - either the one being committed, or an already existing equal committed type system.
+So when coding <code>myTypesystem.commit();</code> if you later refer to <code>myTypesystem</code>, change this to <code>myTypesystem = myTypesystem.commit();</code>, to keep the variable <code>myTypesystem</code> always referring to to the committed type system.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.backwards_compatibility.checking"><a class="anchor" href="#_uv3.backwards_compatibility.checking"></a>Some checks moved to native Java</h3>
+<div class="paragraph">
+<p>In the interest of performance, some duplicate checks, such as whether an array index is within bounds,  have been removed from UIMA when they are already being checked by the underlying Java runtime.
+This has affected some of the internal APIs, such as the JCas&#8217;s <code>checkArrayBounds</code> which was removed because it was no longer being used.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.backwards_compatibility.class_hierarchy"><a class="anchor" href="#_uv3.backwards_compatibility.class_hierarchy"></a>Some class hierarchies have been modified</h3>
+<div class="paragraph">
+<p>The various JCas Classes implementing the built-ins for arrays have some additional interfaces added, grouping them into <code>CommonPrimitiveArray</code> or <code>CommonArray</code>.
+These changes are internal, and should not affect users.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.backwards_compatibility.multiple_type_systems_with_common_jcas"><a class="anchor" href="#_uv3.backwards_compatibility.multiple_type_systems_with_common_jcas"></a>Enabling multiple versions of type systems to work with a single common JCas class</h3>
+<div class="paragraph">
+<p>Some applications may use a JCas class definition, defining for type T features f1, f2, f3 (for example), in a mode where under a single class loader (for example, in one Java application), multiple CASs are loaded and processed, where each CAS might have other versions of the type system, defining for type T a subset of the features in the JCas.</p>
+</div>
+<div class="paragraph">
+<p>In order to make this scenario possible, v3 takes an extra step, right before type system commit time, of  loading the JCas classes corresponding to the types, and then augmenting the type definitions with additional features defined in the JCas but not in the type description.
+After this is done, the type system is committed,  and offsets are assigned to the JCas class that are constant, even when a subsequent type system is loaded that defines more features (provided that no new features are introduced).</p>
+</div>
+<div class="paragraph">
+<p>This feature represents a trade-off between highly efficient, locked-down offsets for features, and  some limited flexibility to handle a somewhat common use case where additional features exist in the JCas.
+The JCas loading code always checks to insure compatibility between the offsets in the JCas classes, as first set up, and any subsequent type system being used with that JCas.</p>
+</div>
+<div class="paragraph">
+<p>This accommodation doesn&#8217;t handle many possible scenarios.
+Some of these include situations where a supertype might subsequently add extra feature slots, or the features end up after merging to have a different ordering.</p>
+</div>
+<div class="paragraph">
+<p>For cases where this accommodation is insufficient, the workaround is to run separate UIMA applications, each under its own class loader, for the incompatible situations.</p>
+</div>
+<div class="paragraph">
+<p>PEARs, because they are loaded lazily after the type system has been committed, do not support this kind of augmentation of types from the Pear-specific JCas class definition.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uv3.new_extended_apis"><a class="anchor" href="#_uv3.new_extended_apis"></a>New and Extended APIs</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_uv3.new_extended_apis.index_and_iterator_improvements"><a class="anchor" href="#_uv3.new_extended_apis.index_and_iterator_improvements"></a>UIMA FSIndex and FSIterators improvements</h3>
+<div class="paragraph">
+<p>The FSIndex interface implements Collection, so you can now write <code>for (MyType item : myIndex)</code> to iterate over an index.</p>
+</div>
+<div class="paragraph">
+<p>Because it implements Collection, the FSIndex interface includes a <code>stream()</code> method, so you can now write <code>myIndex.stream().any-stream-operations</code>, which will use the items in the index as the source of the stream.</p>
+</div>
+<div class="paragraph">
+<p>The FSIterator interface now implements the Java ListIterator Interface, and supports the methods there except for add, nextIndex, previousIndex, and set; the remove() method&#8217;s meaning is changed to remove the item from all of the UIMA indexes.</p>
+</div>
+<div class="paragraph">
+<p>The iterators over indexes no longer throw concurrent modification exceptions if the index is modified while it is being iterated over.
+Instead, the iterators use a lazily-created copy-on-write approach that, when some portion of the index is updated, prior to the update, copies the original state of that portion, and continues to iterate over that.
+While this is helpful if you are explicitly modifying the indexes in a loop, it  can be especially helpful when modifying Feature Structures as you iterate, because the UIMA support for detecting and avoiding possible index corruption if you modify some feature being used by  some index as a key, is automatically (under the covers) temporarily removing the Feature Structure from indexes,  doing the modification, and then adding it back.</p>
+</div>
+<div class="paragraph">
+<p>Similarly to version 2, iterator methods <code>moveToFirst, moveToLast, and moveTo(a_positioning_Feature_Structure)</code> "reset" the iterator to be able to "see" the current state of the indexes.
+This corresponds to resetting the concurrent modification detection sensing in version 2, when these methods are used.</p>
+</div>
+<div class="paragraph">
+<p>Note that the phrase <em>Concurrent Modification</em> is being used here in a single threading to the indexes.
+UIMA does not support multi-threaded write access to the CAS; it does support multi-threaded read access to a set of CAS Views, concurrent with one thread having write access (to different views).</p>
+</div>
+<div class="paragraph">
+<p>The <code>remove()</code> API for iterators is now implemented for FSIterators.
+Its meaning is slightly different from the normal Java meaning - it doesn&#8217;t remove the item from the collection being iterated over; rather it removes the Feature Structure returned by <code>get()</code> from all indexes in the view.</p>
+</div>
+<div class="paragraph">
+<p>The FSIterator methods that normally check for iterator validity have versions which skip that check.
+This may be a performance optimization in cases where you can guarantee the iterator is valid, for example if you have a loop which is checking <code>hasNext()</code> and following it with a <code>next()</code>,  which is only executed if the <code>hasNext()</code> was true.
+The non-checking versions are suffixed with Nvc (stands for No Validity Check).</p>
+</div>
+<div class="paragraph">
+<p>The FSIndex API has a new method, <code>subType(type-spec)</code>, which returns an FSIndex for the same index, but specialized to elements which are a subtype of the original index.
+The type-spec can be either a  JCas class, e.g. <code>MyToken.class</code>, or a UIMA type instance.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.new_extended_apis.select"><a class="anchor" href="#_uv3.new_extended_apis.select"></a>New Select API</h3>
+<div class="paragraph">
+<p>A versatile new Select framework for accessing and acting on Feature Structures  selected from the CAS or from Indexes or from other collection objects is documented in a separate chapter.
+This API is integrated with Java 8&#8217;s Stream facility.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.new_extended_apis.custom_java_objects"><a class="anchor" href="#_uv3.new_extended_apis.custom_java_objects"></a>New custom Java objects in the CAS framework</h3>
+<div class="paragraph">
+<p>There is a new framework that supports allowing you to add your own custom Java objects as objects transportable in the CAS.
+A following chapter describes this facility, and some new semi-built-in types that make use of it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.new_extended_apis.lists_and_arrays"><a class="anchor" href="#_uv3.new_extended_apis.lists_and_arrays"></a>Built-in lists and arrays</h3>
+<div class="paragraph">
+<p>The built-in FSArray JCas class is now parameterized with the type of its elements.</p>
+</div>
+<div class="paragraph">
+<p>UIMA Array and List types implement Iterable, so you can use them like this: <code>for (MyType item : myArray) &#8230;&#8203;</code>.</p>
+</div>
+<div class="paragraph">
+<p>UIMA Arrays and Lists support <code>contains(element)</code> and <code>isEmpty()</code>.</p>
+</div>
+<div class="paragraph">
+<p>UIMA Array and List types support a <code>stream()</code> method returning a Stream or a type-specialized sub interface of Stream for primitives  (IntStream, LongStream, DoubleStream)  over the objects in the collection.
+Omitted are stream types where boxing would occur - Arrays of Byte, Short, Float, Boolean.</p>
+</div>
+<div class="paragraph">
+<p>The <code>iterator()</code> methods for <code>IntegerList
+      IntegerArrayList, IntegerArray,
+      DoubleArray,</code> and <code>LongArray</code> return an <code>OfInt / OfDouble / OfLong</code> instances.
+These are subtypes of <code>Iterator</code> with an additional methods nextInt / nextLong / nextDouble which avoid the boxing of the normal iterator.</p>
+</div>
+<div class="paragraph">
+<p>The new <code>select</code> framework supports stream operations; see the "select" chapter for details.</p>
+</div>
+<div class="paragraph">
+<p>A new set of methods on UIMA built-in lists, <code>createNonEmptyNode() and emptyList()</code>,  creates a non-empty node of the type, or retrieves a (shared) empty node of the type.
+These methods are not static, and create or get the instance in the same CAS as the object instance.
+These methods are callable on both the empty and non-empty node instances, or on their shared super interface, for example, on NonEmptyFloatList, EmptyFloatList, and FloatList (the common super interface).</p>
+</div>
+<div class="paragraph">
+<p>A new set of static methods on UIMA built-in lists and arrays, <code>create(jcas, array_source)</code> take a Java array of items, and creates a corresponding UIMA built-in list or array populated with items from the array_source.</p>
+</div>
+<div class="paragraph">
+<p>For UIMA Lists and Arrays, the CAS and JCas has emptyXXXList/Array methods, which return a shared instance of the immutable empty object.
+The Cas and JCas have generic emptyArray/List, taking an argument JCas class identifying the type,  e.g.
+FloatArray.class, StringList.class, etc.</p>
+</div>
+<div class="paragraph">
+<p>For lists, there are some new common APIs for all list kinds.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>push(item)</code> pushes the item onto an existing list node, creates a new non-empty node, setting its head to <code>item</code> and its tail to the existing list node. This allows easy construction of a list in backwards order.</p>
+</li>
+<li>
+<p><code>pushNode()</code> creates and links in a new node in front of this node.</p>
+</li>
+<li>
+<p><code>insertNode()</code> creates and links in a new node following this node.</p>
+</li>
+<li>
+<p><code>createNonEmptyNode()</code> creates a node of the  same type, in the same CAS, without linking it.</p>
+</li>
+<li>
+<p><code>getCommonTail()</code> gets the tail of the node</p>
+</li>
+<li>
+<p><code>setTail()</code> sets the tail of the node</p>
+</li>
+<li>
+<p><code>walkList()</code> walks the list applying a consumer to each item</p>
+</li>
+<li>
+<p><code>getLength()</code> walks the list to compute its length</p>
+</li>
+<li>
+<p><code>emptyList</code> returns a shared instance of the empty list of the same type, in the same CAS</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_uv3.new_extended_apis.reorganized.lists_and_arrays"><a class="anchor" href="#_uv3.new_extended_apis.reorganized.lists_and_arrays"></a>Built-in lists and arrays have common super classes / interfaces</h4>
+<div class="paragraph">
+<p>Some methods common to multiple implements were moved to the super classes, some classes were made abstract (to prevent them from being instantiated, which would be an error). For arrays, a new method common to all arrays, <code>copyValuesFrom()</code> copies values from arrays of the same type.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.new_extended_apis.collections"><a class="anchor" href="#_uv3.new_extended_apis.collections"></a>Many UIMA objects implement Stream or Collection</h3>
+<div class="paragraph">
+<p>In Java 8, classes which implement Collection can be converted to streams using the <code>xxx.sream()</code> method.
+To better integrate with Java 8, the following UIMA classes and interfaces now implement Stream or Collection:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>FSIndex (implements Collection)</p>
+</li>
+<li>
+<p>all of the built-in Arrays, e.g. FloatArray implement Stream, the Integer/long/double arrays implement the non-boxing version</p>
+</li>
+<li>
+<p>all of the built-in Lists implement Stream, the IntegerList implements the non boxing version</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.new_extended_apis.reorganized"><a class="anchor" href="#_uv3.new_extended_apis.reorganized"></a>Reorganized APIs</h3>
+<div class="paragraph">
+<p>Some APIs were reorganized.
+Some of the reorganizations include altering the super class and implements hierarchies, making some classes abstract, making use of Java 8&#8217;s new <code>default</code> mechanisms to supply default implementations in interfaces,  and moving methods to more common places.
+Users of the non-internal UIMA APIs should not be affected by these reorganizations.</p>
+</div>
+<div class="paragraph">
+<p>As an example, version 2 had two different Java objects representing particular Feature Structures, such as "Annotation".  One was used (<code>org.apache.uima.jcas.tcas.Annotation</code>) if the JCas was enabled;  the other (<code>org.apache.uima.cas.impl.AnnotationImpl</code>)otherwise.
+In version 3, there&#8217;s only one implementation; the other (AnnotationImpl) is converted to an interface.
+Annotation now "implements AnnotationImpl.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.new_extended_apis.class"><a class="anchor" href="#_uv3.new_extended_apis.class"></a>Use of JCas Class to specify a UIMA type</h3>
+<div class="paragraph">
+<p>Several APIs require a UIMA type to be specified.
+For instance, the API to remove all Feature Structures of a particular type requires the type to be specified.
+Instead of a UIMA Type object, if there is a JCas cover class for that type, you can pass that as well, as (for example) <code>Annotation.class</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.new_extended_apis.jcasgen"><a class="anchor" href="#_uv3.new_extended_apis.jcasgen"></a>JCasGen changes</h3>
+<div class="paragraph">
+<p>JCasgen is modified to generate the v3 style of JCas cover classes.
+It no longer generates the the xxx_Type.java classes, as these are  not used by UIMA Version 3.</p>
+</div>
+<div class="sect3">
+<h4 id="_uv3.new_extended_apis.jcas_static_fields"><a class="anchor" href="#_uv3.new_extended_apis.jcas_static_fields"></a>JCas additional static fields</h4>
+<div class="paragraph">
+<p>Static final string fields are declared for each JCas cover class and for each feature that is part of that UIMA type.
+The fields look like this example, taken from the Sofa class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public final static String _TypeName = "org.apache.uima.jcas.cas.Sofa";
+public final static String _FeatName_sofaNum    = "sofaNum";
+public final static String _FeatName_sofaID     = "sofaID";
+public final static String _FeatName_mimeType   = "mimeType";
+public final static String _FeatName_sofaArray  = "sofaArray";
+public final static String _FeatName_sofaString = "sofaString";
+public final static String _FeatName_sofaURI    = "sofaURI";</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Each string has a generated name corresponding to the name of the type or the feature, and a string value constant which of the type or feature name.
+These can be useful in Java Annotations.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.new_extended_apis.generics"><a class="anchor" href="#_uv3.new_extended_apis.generics"></a>Generics added</h3>
+<div class="paragraph">
+<p>Version 3 adds generic typing to several structures, and makes use of this to enable users to unclutter their code by taking advantage of Java&#8217;s type inferencing, in many cases.</p>
+</div>
+<div class="paragraph">
+<p>Generic types are added to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>FSIndex</em> &lt;T extends FeatureStructure&gt; the type the index is over.</p>
+</li>
+<li>
+<p><em>FSArray</em> &lt;T extends FeatureStructure&gt; the type the FSArray holds.</p>
+</li>
+<li>
+<p><em>FSList</em> &lt;T extends TOP&gt; the type the FSList holds.</p>
+</li>
+<li>
+<p><em>SelectFSs</em> &lt;T extends FeatureStructure&gt; the type the select is producing.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.new_extended_apis.other"><a class="anchor" href="#_uv3.new_extended_apis.other"></a>Other changes</h3>
+<div class="paragraph">
+<p>The convenience methods in the JCas have been duplicated in the CAS, e.g. <code>getAllIndexFS</code>.</p>
+</div>
+<div class="paragraph">
+<p>New methods <code>getIndexedFSs(myUimaType)</code> and <code>getIndexedFSs(MyJCas.class)</code> return  unmodifiable, unordered Collections of all indexed Feature Structures of the specified type and its subtypes in  this CAS&#8217;s view.
+This collection can be used in a Java extended-for loop construction. <code>getIndexedFSs()</code> is the same but is for all Feature Structures, regardless of type.
+These are methods on the CAS, JCas, FSIndexRepository interfaces, and return the Feature Structures of the specified type (including subtypes).</p>
+</div>
+<div class="paragraph">
+<p>The TypeSystemMgr Interface has a variation of the <code>commit</code> method, which has a parameter  that specifies the class loader to be used when loading JCas class.
+This should be used whenever there are user-specified JCas classes associated with the type system.
+If not specified, it defaults to the class loader used to load the UIMA framework.</p>
+</div>
+<div class="paragraph">
+<p>The utility class <code>org.apache.uima.util.FileUtils</code> has a new method <code>writeToFile(path, string)</code>, which efficiently writes a string using UTF-8 encoding to <code>path</code>.</p>
+</div>
+<div class="paragraph">
+<p>The StringArray class has a new <code>contains(a_string)</code> method.</p>
+</div>
+<div class="paragraph">
+<p>The CAS <code>protectIndexes</code> method returns an instance of AutoClosableNoException which is  a subtype where the close method doesn&#8217;t throw an exception.
+This allows writing the try-with-resources form without a catch block for Exception.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes Annotators may log excessively, causing problems in production settings.
+Although this could be controlled using logging configuration, sometimes when UIMA is embedded into other applications, you may not have easy access to modify those.</p>
+</div>
+<div class="paragraph">
+<p>For this case, the produceAnalysisEngine&#8217;s "additionalParameters" map supports a new key,   AnalysisEngine.PARAM_THROTTLE_EXCESSIVE_ANNOTATOR_LOGGING.
+This key specifies that throttling should be applied to messages produced by annotators using loggers obtained by Annotator code using the getLogger() API.</p>
+</div>
+<div class="paragraph">
+<p>The value specified must be an Integer, and is the number of messages allowed before logging is suppressed.
+This number is applied to each logging level, separately.
+To suppress all logging, use 0.</p>
+</div>
+<div class="paragraph">
+<p>The Type interface has new methods <code>subsumes(another_type), isStringOrStringSubtype()</code>,  and <code>isStringSubtype().</code></p>
+</div>
+<div class="paragraph">
+<p>The FlowController_ImplBase supports a getLogger() API, which is shorthand for getContext().getLogger().</p>
+</div>
+<div class="paragraph">
+<p>Many error messages were changed or added, causing changes to localization classes.
+For coding efficiency, some of the structure of the internal error reporting calls was changed to make use of Java&#8217;s variable number of arguments syntax.</p>
+</div>
+<div class="paragraph">
+<p>The UIMA Logger implementation has been extended with both the SLF4J logger APIs and the  Log4j APIs which support Java 8&#8217;s <code>Supplier</code> Functional Interfaces.</p>
+</div>
+<div class="paragraph">
+<p>The TypeSystem and Type object implementations implement <code>Iterable</code> and will iterate over all the defined types, or, for a type, all the defined Features for that type.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uv3.select"><a class="anchor" href="#_uv3.select"></a>SelectFS CAS data access</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <em>select</em> framework provides a concise way to work with Feature Structure data stored in the CAS.
+It is integrated with the Java 8 <em>stream</em> framework, and provides additional capabilities supported by the underlying  UIMA framework, including the ability to move both forwards and backwards while iterating, moving to specific positions, and doing various kinds of specialized Annotation  selection such as working with Annotations spanned by another annotation (think of a Paragraph annotation, and the Sentences or Tokens within that).</p>
+</div>
+<div class="paragraph">
+<p>There are 3 main parts to this framework:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The source</p>
+</li>
+<li>
+<p>what to select, ordering</p>
+</li>
+<li>
+<p>what to do</p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/version_3_users_guide/select/select_big_pic.png" alt="Select composed of sources, what to select, and what to do">
+</div>
+<div class="title">Figure 1. Select - the big picture</div>
+</div>
+<div class="paragraph">
+<p>These are described in code using a builder pattern to specify the many options and parameters.
+Some of the very common parameters are also available as positional arguments in some contexts.
+Most of the variations are defaulted so that in the common use cases, they may be omitted.</p>
+</div>
+<div class="sect2">
+<h3 id="_uv3.select.builder_pattern"><a class="anchor" href="#_uv3.select.builder_pattern"></a>Select&#8217;s use of the builder pattern</h3>
+<div class="paragraph">
+<p>The various options and specifications are specified using the builder pattern.
+Each specification has a name, which is a Java method name, sometimes having further parameters.
+These methods return an instance of SelectFSs; this instance is updated by each builder method.</p>
+</div>
+<div class="paragraph">
+<p>A common approach is to chain these methods together.
+When this is done, each subsequent method updates the SelectFSs instance.
+This means that the last method in case there are  multiple method calls specifying the same specification is the one that is used.</p>
+</div>
+<div class="paragraph">
+<p>For example,</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>a_cas.select().typePriority(true).typePriority(false).typePriority(true)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>would configure the select to be using typePriority (described later).</p>
+</div>
+<div class="paragraph">
+<p>Some parameters are specified as positional parameters, for example, a UIMA Type, or a starting position or shift-offset.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.select.sources"><a class="anchor" href="#_uv3.select.sources"></a>Sources of Feature Structures</h3>
+<div class="paragraph">
+<p>Feature Structures are kept in the CAS, and may be accessed using UIMA Indexes.
+Note that not all Feature Structures in the CAS are in the UIMA indexes; only those that the  user had "added to the indexes" are.
+Feature Structures not in the indexes are not included when using the CAS as the source for the select framework.</p>
+</div>
+<div class="paragraph">
+<p>Feature Structures may, additionally, be kept in <code>FSArrays</code>, <code>FSLists</code>, and many additional collection-style objects that implement <code>SelectViaCopyToArray</code> interface.
+This interface is implemented by the new semi-built-in types <code>FSArrayList</code>, <code>FSHashSet</code> and <code>FSLinkedHashSet</code>; user-defined JCas classes for user types may also choose to implement this.
+All of these sources may be used with <code>select</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/version_3_users_guide/select/select_source_type.png" alt="Sources have select method, which has optional type argument">
+</div>
+<div class="title">Figure 2. select method with type</div>
+</div>
+<div class="paragraph">
+<p>For CAS sources, if Views are being used, there is a separate set of indexes per CAS view.
+When there are multiple views, only one view&#8217;s set of indexed Feature Structures is accessed - the view implied by the CAS being used.
+Note that there is a way to specify aggregating over all views; see <code>allViews</code> described later.</p>
+</div>
+<div class="paragraph">
+<p>For CAS sources, users may specify all Feature Structures in a view, or restrict this in two ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>specifying an index: Users may define their own indexes, in additional to the built in ones, and  then specify which index to use.</p>
+</li>
+<li>
+<p>specifying a type: Only Feature Structures of this type (or its subtypes) are included.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is possible to specify both of these, using the form <code>myIndex.select(myType)</code>;  in that case the type must be the type or a subtype of the index&#8217;s top most type.</p>
+</div>
+<div class="paragraph">
+<p>If no index is specified, the default is</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>to use all Feature Structures in a CAS View, or</p>
+</li>
+<li>
+<p>to use all Feature Structures in the view&#8217;s AnnotationIndex, if the selection and ordering specifications require an AnnotationIndex.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note that the non-CAS collection sources (e.g.
+the FSArray and FSList sources are considered ordered, but non-sorted,  and therefore cannot be used for an operations which require a sorted order.</p>
+</div>
+<div class="paragraph">
+<p>There are 4 kinds of sources of Feature Structures supported:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a CAS view: all the FSs that were added to the indexes for this view.</p>
+</li>
+<li>
+<p>an Index over a CAS view. Note that the AnnotationIndex is often implied by other <code>select</code> specifications, so it is often not necessary to supply this.</p>
+</li>
+<li>
+<p>Feature Structures from a (semi) built-in UIMA Collection instance, such as instances of the types <code>FSArray, FSArrayList, FSHashSet,</code> etc.</p>
+</li>
+<li>
+<p>Feature Structures from a user-defined UIMA Collection instance.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>UIMA Collection sources have somewhat limited configurability, because they are considered non-sorted,  and therefore cannot be used for an operations which require a sorted order, such as the various bounding selections (e.g. <code>coveredBy</code>)  or positioning operations (e.g. <code>startAt</code>).</p>
+</div>
+<div class="paragraph">
+<p>Each of these sources has a new API method, <code>select(&#8230;&#8203;)</code>, which initiates the select specification.
+The select method can take an optional parameter, specifying the UIMA type to return.
+If supplied, the type must must be the type or subtype of the index  (if one is specified or implied); it serves to further restrict the types selected beyond whatever the  index (if specified) has as its top-most type.</p>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.sources.type"><a class="anchor" href="#_uv3.select.sources.type"></a>Use of Type in selection of sources</h4>
+<div class="paragraph">
+<p>The optional type argument for <code>select(&#8230;&#8203;)</code> specifies a UIMA type.
+This restricts the Feature Structures to just those of the specified type or any of its subtypes.
+If omitted, if an index is used as a source,  its type specification is used; otherwise all types are included.</p>
+</div>
+<div class="paragraph">
+<p>Type specifications may be specified in multiple ways.
+The best practice, if you have a JCas cover class defined for the type, is to use the form <code>MyJCasClass.class</code>.
+This has the advantage of setting the  expected generic type of the select to that Java type.</p>
+</div>
+<div class="paragraph">
+<p>The type may also be specified by using the actual UIMA type instance (useful if not using the  JCas), using a fully qualified type name as a string, or using the JCas class static <code>type</code> field.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.sources.generics"><a class="anchor" href="#_uv3.select.sources.generics"></a>Sources and generic typing</h4>
+<div class="paragraph">
+<p>The select method results in a generically typed object, which is used to have subsequent operations make use of the generic type, which may reduce the need for casting.</p>
+</div>
+<div class="paragraph">
+<p>The generic type can come from arguments or from where a value is being assigned,  if that target has a generic type.
+This latter source is only partially available in Java, as it does not propagate past the first object in a chain of calls; this becomes a problem when using <code>select</code> with generically typed index variables.</p>
+</div>
+<div class="paragraph">
+<p>There is also a static version of the <code>select</code> method which takes a  generically typed index as an argument.</p>
+</div>
+<div class="paragraph">
+<p>The best practice is to pass the JCas class representing the type you want, to the select statement.
+This enables the generic typing mechanism to be set to that type.
+In the example below, we use <code>Token</code> as the type, and <code>fsIterator()</code> just as an example of some terminal form action.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>// Best practice, when possible
+// the generic type for Token is passed as an argument to select
+FSIterator&lt;Token&gt; token_it = cas.select(Token.class).fsIterator();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A compile-time generic type can be specified after the select, if the class argument form of <code>select</code>  is not used.
+In these two examples, the generic type is being specified at compile time, explicitly:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>// ... myCas.select(myType).&lt;Token&gt;fsIterator() ...
+// ... myIndexOversomeType.select().&lt;Token&gt;further-operators-of-select-etc</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Java 8&#8217;s type inference doesn&#8217;t take the generic type past the first object in a build chain, so you can use these techniques to overcome that.
+In these examples, tkn_idx is a generically typed variable:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>FSIndex&lt;Token&gt; tkn_idx = ... ; // generically typed variable</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We show a straight-forward syntax that doesn&#8217;t work, followed by 3 alternatives that do work.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>// this next fails because the Token generic type from the
+// index variable being assigned doesn't get passed to the select().
+
+FSIterator&lt;Token&gt; token_iterator = tkn_idx.select().fsIterator();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can overcome this in three ways:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>// pass in the type as an argument to select using the JCas cover type.
+
+FSIterator&lt;Token&gt; token_iterator =
+    tkn_idx.select(Token.class).fsIterator();
+
+// Or use the static form of select (avoids repeating the type info)
+
+FSIterator&lt;Token&gt; token_iterator =
+    SelectFSs.select(tkn_idx).fsIterator();
+
+// Or you can also explicitly set the generic type
+// that select() should use, like this:
+
+FSIterator&lt;Token&gt; token_iterator =
+    tkn_idx.&lt;Token&gt;select().fsIterator();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note: the static <code>select</code> method may be statically imported into code that uses it, to avoid repeatedly  qualifying this with its class, <code>SelectFSs</code>.</p>
+</div>
+<div class="paragraph">
+<p>Any specification of an index may be further restricted to just a subType (including that subtype&#8217;s subtypes, if any) of that index&#8217;s type.
+For example, an AnnotationIndex may be specialized to just <code>Token</code>s (and their subtypes):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>FSIterator&lt;Token&gt; token_iterator =
+    annotation_index.select(Token.class).fsIterator();</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.select.selection_and_ordering"><a class="anchor" href="#_uv3.select.selection_and_ordering"></a>Selection and Ordering</h3>
+<div class="paragraph">
+<p>There are four sets of sub-selection and ordering specifications, grouped  by what they apply to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>all sources</p>
+</li>
+<li>
+<p>Indexes or FSArrays or FSLists</p>
+</li>
+<li>
+<p>Ordered Indexes</p>
+</li>
+<li>
+<p>The Annotation Index</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>With some exceptions, configuration items to the left also apply to items on the right.</p>
+</div>
+<div class="paragraph">
+<p>When the same configuration item is specified multiple times, the last one specified is the one that is used.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/version_3_users_guide/select/select_selection_and_ordering.png" alt="Selection and Ordering configuration">
+</div>
+<div class="title">Figure 3. Selection and Ordering</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.boolean_properties"><a class="anchor" href="#_uv3.select.boolean_properties"></a>Boolean properties</h4>
+<div class="paragraph">
+<p>Many configuration items specify a boolean property.
+These are named so the default (if you don&#8217;t specify them) is generally what is desired, and the specification of the method with null parameter switches the property to the  other (non-default) value.</p>
+</div>
+<div class="paragraph">
+<p>For example, normally, when working with bounded limits within Annotation Indexes, type priorities are ignored when computing the bound positions.
+Specifying typePriority() says to use type priorities.</p>
+</div>
+<div class="paragraph">
+<p>Additionally, the boolean configuration methods have an optional form where they take a boolean value; true sets the property.
+So, for example typePriority(true) is equivalent to typePriority(), and typePriority(false) is equivalent to omitting this configuration.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.any_source"><a class="anchor" href="#_uv3.select.any_source"></a>Configuration for any source</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>limit</strong></dt>
+<dd>
+<p>a limit to the number of Feature Structures that will be produced or iterated over.</p>
+</dd>
+<dt class="hdlist1"><strong>nullOK</strong></dt>
+<dd>
+<p>changes the behavior for the terminal_form actions <code>get(&#8230;&#8203;) and single(&#8230;&#8203;)</code>, which would otherwise throw an exception if a null result happened.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.any_index"><a class="anchor" href="#_uv3.select.any_index"></a>Configuration for any index</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>allViews</strong></dt>
+<dd>
+<p>Normally, only Feature Structures belonging to the particular CAS view are included in the selection.
+If you want, instead, to include Feature Structures from all views, you can specify <code>allViews()</code>.</p>
+<div class="paragraph">
+<p>When this is specified, it acts  as an aggregation of the underlying selections, one per view in the CAS.
+The ordering among the views is arbitrary; the ordering within each view is the same as if this setting wasn&#8217;t in force.
+Because of this implementation, the items in the selection may not be unique&#8201;&#8212;&#8201; Feature Structures in the underlying selections that are in multiple views will appear multiple times.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.ordered_index"><a class="anchor" href="#_uv3.select.ordered_index"></a>Configuration for sort-ordered indexes</h4>
+<div class="paragraph">
+<p>When an index is sort-ordered, there are additional capabilities that can be configured, in particular positioning to particular Feature Structures, and running various iterations backwards.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>orderNotNeeded</strong></dt>
+<dd>
+<p>relaxes any iteration by allowing it to proceed in an unordered manner.
+Specifying this may improve performance in some cases.
+When this is specified,  the current implementation skips the work of keeping multiple iterators for a type and all of its subtypes in the proper synchronization.</p>
+</dd>
+<dt class="hdlist1"><strong>startAt</strong></dt>
+<dd>
+<p>position the starting point of any iteration. <code>startAt(&#8230;&#8203;)</code> can be used for general sorted indexes, and also has special formats only usable for Annotation Indexes.</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>// Forms for any sorted index
+startAt(fs);          // fs specifies a feature structure
+                      // indicating the starting position
+
+startAt(fs, shifted); // same as above, but after positioning,
+                      // shift to the right or left by the shift
+                      // amount which can be positive or negative
+
+// Forms for AnnotationIndex sources
+
+startAt(begin);       // sets no TypePriorities, and starts at the
+                      //   leftmost annotation whose begin is &gt;= begin
+startAt(begin, end);  // start at the position indicated by begin/end
+
+startAt(begin, end, shifted) // same as above,
+                             // but with a subsequent shift.
+                             // which can be positive or negative</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The use of <code>startAt</code> in conjunction with <code>following</code> or <code>prededing</code> or any of the bounded sub-selection operators is <strong>not</strong> supported.
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>backwards</strong></dt>
+<dd>
+<p>specifies that the result is returned the opposite order than normal. It does not
+matter at which point in the selection this method is invoked. So e.g.
+<code>&#8230;&#8203;backwards().limit(5)</code> returns the same result as <code>&#8230;&#8203;limit(5).backwards()</code>. Also, invoking
+this method twice does not "un-reverse" the results.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.annot.follow_precede"><a class="anchor" href="#_uv3.select.annot.follow_precede"></a>Following or Preceding</h4>
+<div class="paragraph">
+<p>For an Annotation Index, you can specify all Feature Structures following or preceding a position.
+The position can be specified either as an Annotation or by specifying an annotation begin index.
+Both of these can have an additional shift offset amount as a 2nd parameter.
+Note that the positioning arguments differ from the <code>startAt</code> specification,  which uses both begin and end values.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>following</strong></dt>
+<dd>
+<p>Position the iterator according to the argument,  and then move the iterator forwards until the Annotation at that position has its begin value &gt;= to the positioning annotation&#8217;s end value.</p>
+<div class="paragraph">
+<p>If the position is specified as an int, move the iterator forwards until the Annotation at that position has its begin value &gt;= the specified int.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>preceding</strong></dt>
+<dd>
+<p>Position the iterator according to the argument,  and then move it backwards until the Annotation&#8217;s (at that position) <code>end</code> value is &#8656; to  the positioning Annotation&#8217;s <code>begin</code> value.</p>
+<div class="paragraph">
+<p>If the position is specified as an int, treat this as the begin value.</p>
+</div>
+<div class="paragraph">
+<p>Once positioned, the actual iteration starts at the beginning and ends at the last position.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>The <code>preceding</code> iteration skips over annotations whose <code>end</code> values are &gt;  the positioning annotation&#8217;s begin value, or the positioning int&#8217;s value.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When using following/preceding in combination with <code>limit</code>, <code>backwards</code>, <code>shifted</code> and <code>non-overlappin</code>, the order in which these operations are internally applied is as follows.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>unambiguous - first, ambiguous annotations are skipped. The shift amount does not affect which which of the ambiguous annotations are skipped.</p>
+</li>
+<li>
+<p>shifted - after removing the ambiguous annotations, items in the result set can be skipped in the  direction of the selection. A negative shift is implicitly capped to 0. E.g. consider you have <code>[10, 20] [20, 30]</code> and <code>select().preceding([30, 40])</code>, the result would be <code>[10, 20] [20, 30]</code> (in this order). Because the shift skips away from the reference point, the result of <code>select().preceding([30, 40]).shifted(1)</code> is  <code>[10, 20]</code> and not <code>[20, 30]</code>.</p>
+</li>
+<li>
+<p>limit - the limit is applied after shifting. Thus, the amount of shifting has no effect on the limit.</p>
+</li>
+<li>
+<p>backwards - finally, the result set may be reversed.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.annot.subselect"><a class="anchor" href="#_uv3.select.annot.subselect"></a>Bounded sub-selection within an Annotation Index</h4>
+<div class="paragraph">
+<p>When selecting Annotations, frequently you may want to select only those which have a relation to a bounding Annotation.
+A commonly done selection is to select all Annotations  (of a particular type including its subtypes) within the span of another bounding Annotation,  for example, all <code>Tokens</code> within a <code>Sentence</code>.</p>
+</div>
+<div class="paragraph">
+<p>There are four varieties of sub-selection within an annotation index.
+They all are based on a  bounding Annotation (except the <code>between</code> which is based on two bounding Annotations).</p>
+</div>
+<div class="paragraph">
+<p>The bounding Annotations are specified using either a Annotation (or a subtype), or by specifying the begin and end offsets that would be for the bounding Annotation.</p>
+</div>
+<div class="paragraph">
+<p>Leaving aside <code>between</code> as a special case, the bounding Annotation&#8217;s <code>begin</code> and <code>end</code> (and sometimes, its <code>type</code>) is used to specify where an iteration would start, where it would end,  and possibly, which Annotations within those bounds would be filtered out.
+There are many variations possible; these are described in the next section.</p>
+</div>
+<div class="paragraph">
+<p>The returned Annotations exclude the one(s) which are <code>equal</code> to the bounding FS.
+There are several variations of how this <code>equal</code> test is done, discussed in the next section.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>coveredBy</strong></dt>
+<dd>
+<p>iterates over Annotations within the bound</p>
+</dd>
+<dt class="hdlist1"><strong>covering</strong></dt>
+<dd>
+<p>iterates over Annotations that span the bound.</p>
+</dd>
+<dt class="hdlist1"><strong>at</strong></dt>
+<dd>
+<p>iterates over Annotations that have the same span (i.e., begin and end) as the bound.</p>
+</dd>
+<dt class="hdlist1"><strong>between</strong></dt>
+<dd>
+<p>uses two Annotations, and returns Annotations that are in between the two bounds, specified by Annotations. If the bounds are backwards, then they are automatically used in reverse order.
+The meaning of between is that an included Annotation&#8217;s begin has to be &gt;= the earlier bound&#8217;s <code>end</code>,  and the Annotation&#8217;s end has to be &#8656; the later bound&#8217;s <code>begin</code>.</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>When using following/preceding in combination with <code>limit</code>, <code>backwards</code>, <code>shifted</code> and <code>non-overlappin</code>, the order in which these operations are internally applied is as follows.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>unambiguous - first, ambiguous annotations are skipped. The shift amount does not affect which which of the ambiguous annotations are skipped.</p>
+</li>
+<li>
+<p>backwards - if requested, reversal is applied before shift and limit.</p>
+</li>
+<li>
+<p>shifted - after removing the ambiguous annotations, items in the result set can be skipped.
+the end of the. A negative shift is implicitly capped to 0.</p>
+</li>
+<li>
+<p>limit - the limit is applied after shifting. Thus, the amount of shifting has no effect on the limit.</p>
+</li>
+</ol>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.annot.variations"><a class="anchor" href="#_uv3.select.annot.variations"></a>Variations in Bounded sub-selection within an Annotation Index</h4>
+<div class="paragraph">
+<p>There are five variations you can specify.
+Two affect how the starting bound position is set;  the other three affect skipping of some Annotations while iterating.
+The defaults (summarized following) are designed to fit the popular use cases.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>typePriority</strong></dt>
+<dd>
+<p>The default is to ignore type priorities when setting the starting position, and just use the begin / end position to locate the left-most equal spot.
+If you want to respect type priorities, specify this variant.</p>
+</dd>
+<dt class="hdlist1"><strong>nonOverlapping</strong></dt>
+<dd>
+<p>Normally, all Annotations satisfying the bounds are returned.
+If this is set,  annotations whose <code>begin</code> position is not &gt;= the previous annotation&#8217;s (going forwards) <code>end</code> position are skipped.
+This is also called <em>unambiguous</em> iteration.
+If the iterator is run backwards, it is first run forwards to locate all the items that would be in the forward iteration following the rules; and then those are traversed backwards.
+This variant is ignored for <code>covering</code> selection.</p>
+</dd>
+<dt class="hdlist1"><strong>includeAnnotationsWithEndBeyondBounds</strong></dt>
+<dd>
+<p>The Subiterator <em>strict</em> configuration is equivalent to the opposite of this.
+This only applied to the <code>coveredBy</code> selection;  if specified, then any Annotations whose <code>end</code> position is &gt; the end position of the bounding Annotation are included; normally they are skipped.</p>
+</dd>
+<dt class="hdlist1"><strong>skipSameBeginEndType</strong></dt>
+<dd>
+<p>While doing bounded iteration, if the Annotation being returned is identical (has the same _id()) with the bounding Annotation, it is always skipped.</p>
+<div class="paragraph">
+<p>Other annotations, which might  have the same begin, end, and type values, are not skipped, but instead, included, by default.</p>
+</div>
+<div class="paragraph">
+<p>When this configuration is specified, any Annotation which has the same begin, end, and type is also skipped.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you do not want any of the indexed annotations to be skipped, you can achieve  this by</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>insuring you haven&#8217;t set <code>skipWhenSameBeginEndType()</code></p>
+</li>
+<li>
+<p>making a bounding annotation with the begin / end / type you want for the bound</p>
+</li>
+<li>
+<p>Don&#8217;t add this bounding annotation to the index</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Because the bounding annotation will not be equal (have the same Feature Structure ID) as any  annotations in the index (because you haven&#8217;t indexed it), it will never match any annotations found in the index while iterating.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.annot.subselect.defaults"><a class="anchor" href="#_uv3.select.annot.subselect.defaults"></a>Defaults for bounded selects</h4>
+<div class="paragraph">
+<p>The ordinary core UIMA Subiterator implementation defaults to using type order as part of the bounds determination.
+uimaFIT, in contrast, doesn&#8217;t use type order, and sets bounds according to  the begin and end positions.</p>
+</div>
+<div class="paragraph">
+<p>This <code>select</code> implementation mostly follows the uimaFIT approach by default, but provides the above configuration settings to flexibly alter this to the user&#8217;s preferences.
+For reference, here are the default settings, with some comparisons to the defaults for <code>Subiterators</code>:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>typePriority</strong></dt>
+<dd>
+<p>default: false; type priorities are not used when moving to left-most among equal items.
+Subiterators created using the AnnotationIndex, in contrast, use type priorities.</p>
+</dd>
+<dt class="hdlist1"><strong>nonOverlapping</strong></dt>
+<dd>
+<p>default: false; no Annotations are skipped because they overlap.
+This corresponds to the "ambiguous" mode in Subiterators.</p>
+</dd>
+<dt class="hdlist1"><strong>includeAnnotationsWithEndBeyondBounds</strong></dt>
+<dd>
+<p>default: (only applies to <code>coveredBy</code> selections;  The default is to skip Annotations whose end position lies outside of the bounds;  this corresponds to Subiterator&#8217;s "strict" option.</p>
+</dd>
+<dt class="hdlist1"><strong>skipSameBeginEndType</strong></dt>
+<dd>
+<p>default: only the single Annotation with the same _id() is skipped when using  a bounded iteration.
+Use this setting to expand the set of skipped Annotations to include all those equal to the  bound&#8217;s begin, end and type.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.select.terminal_form_actions"><a class="anchor" href="#_uv3.select.terminal_form_actions"></a>Terminal Form actions</h3>
+<div class="paragraph">
+<p>After the sources and selection and ordering options have been specified, one  terminal form action may be specified.
+This can be an getting an iterator, array or list, or a single value with various extra checks, or a Java stream.
+Specifying any stream operation (except limit) converts the object to a stream; from that point on, any stream operation may be used.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/version_3_users_guide/select/select_terminal_form_actions.png" alt="Terminal form actions for select">
+</div>
+<div class="title">Figure 4. Select Terminal Form Actions</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.terminal_form_actions.iterators"><a class="anchor" href="#_uv3.select.terminal_form_actions.iterators"></a>Iterators</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>(Iterable)</strong></dt>
+<dd>
+<p>The <code>SelectFSs</code> object directly implements <code>Iterable</code>, so it may be  used in the extended Java <code>for</code> loop.</p>
+</dd>
+<dt class="hdlist1"><strong>fsIterator</strong></dt>
+<dd>
+<p>returns a configured fsIterator or subIterator.
+This iterator implements <code>ListIterator</code> as well (which, in turn, implements Java <code>Iterator</code>). Modifications to the list using <code>add</code> or <code>set</code> are not supported.</p>
+</dd>
+<dt class="hdlist1"><strong>iterator</strong></dt>
+<dd>
+<p>This is just the plain Java iterator, for convenience.</p>
+</dd>
+<dt class="hdlist1"><strong>spliterator</strong></dt>
+<dd>
+<p>This returns a spliterator, which can be marginally more efficient to use than a normal iterator.
+It is configured to be sequential (not parallel), and has other characteristics set according to  the sources and selection/ordering configuration.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.terminal_form_actions.arrays_lists"><a class="anchor" href="#_uv3.select.terminal_form_actions.arrays_lists"></a>Arrays and Lists</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>asArray</strong></dt>
+<dd>
+<p>This takes 1 argument, the class of the returned array type, which must be the type or subtype of the select.</p>
+</dd>
+<dt class="hdlist1"><strong>asList</strong></dt>
+<dd>
+<p>Returns a Java list, configured from the sources and selection and ordering specifications.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.terminal_form_actions.single_items"><a class="anchor" href="#_uv3.select.terminal_form_actions.single_items"></a>Single Items</h4>
+<div class="paragraph">
+<p>These methods return just a single item, according to the previously specified select configuration.
+Variations may throw exceptions on empty or more than one item situations.</p>
+</div>
+<div class="paragraph">
+<p>These have no-argument forms as well as argument forms identical to <code>startAt</code> (see above). When arguments are specified, they adjust the item returned by positioning within the index  according to the arguments.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Positioning arguments with a Annotation or begin and end require an Annotation Index.
+Positioning using a Feature Structure, by contrast, only require that the index being use be sorted.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>get</strong></dt>
+<dd>
+<p>If no argument is specified, then returns the first item.
+If there is no item, then an exception is thrown unless <code>nullOK</code> is set.</p>
+<div class="paragraph">
+<p>If any positioning arguments are specified, then this returns the item at that position unless there is no item at that position, in which case it throws an exception unless <code>nullOK</code> is set.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>single</strong></dt>
+<dd>
+<p>returns the item at the position, but throws exceptions  if there are more than one item in the selection, or if there are no items in the selection.</p>
+</dd>
+<dt class="hdlist1"><strong>singleOrNull</strong></dt>
+<dd>
+<p>returns the item at the position, but throws an exception  if there are more than one item in the selection.</p>
+</dd>
+<dt class="hdlist1"><strong>isEmpty</strong></dt>
+<dd>
+<p>returns true if the selection is empty.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.select.terminal_form_actions.streams"><a class="anchor" href="#_uv3.select.terminal_form_actions.streams"></a>Streams</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>any stream method</strong></dt>
+<dd>
+<p>Select supports all the stream methods.
+The first occurrance of a stream method converts the select into a stream, using <code>spliterator</code>, and from then on, it behaves just like a stream object.</p>
+<div class="paragraph">
+<p>For example, here&#8217;s a somewhat contrived example: you could do the following to collect the set of types appearing within some bounding annotation, when considered in nonOverlapping style:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>// items of MyType or subtypes
+Set&lt;Type&gt; foundTypes = myIndex.select(MyType.class)
+   .coveredBy(myBoundingAnnotation)
+   .nonOverlapping()
+   .map(fs -&gt; fs.getType())
+   .collect(Collectors.toCollection(TreeSet::new));</code></pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>Or, to collect by category a set of frequency values:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Map&lt;Category, Integer&gt; freqByCategory = myIndex.select(MyType.class)
+     .collect(Collectors
+     .groupingBy(MyType::getCategory,
+                 Collectors.summingInt(MyType::getFreq)));</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uv3.annotation_relation_predicates"><a class="anchor" href="#_uv3.annotation_relation_predicates"></a>Annotation relation predicates</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When working with annotations, it is often necessary to express how two annotations related
+to each other. This happens for example when using the Select framework to say "select all
+annotations of type T that follow a given annotation X". So there are a number of possible
+relationships which two annotations can have with each other such as "following", "preceding",
+"being colocated", "being covered by", "covering", etc. This chapter provides specification of
+these relationships which are also available as a set of predicate functions. The Select framework
+is also consistent with these definitions. In order to query the CAS for annotations that exist
+in a certain relationship to each other, it is possible to e.g. stream an entire annotation index
+or CAS and filtering the annotations using the provided predicate functions. However, using the
+corresponding selector functions of the Select framework is generally much faster than filtering
+using the predicates as Select knows more efficient way of finding the starting point for a
+particular query in the annotation index and also knows when a search can be aborted without
+having to scan an entire index and also without missing any matches. The predicates are
+implemented as static functions in the <code>org.apache.uima.cas.text.AnnotationPredicates</code>
+class.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/version_3_users_guide/annotation_predicates/annotation-relations-table.png" alt="Matrix showing possible annotation relations and the cases where they apply.">
+</div>
+<div class="title">Figure 5. Annotation relation types</div>
+</div>
+<div class="paragraph">
+<p>As shown below, all of the relations can be expressed in terms of the "covered by" relation.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/version_3_users_guide/annotation_predicates/annotation-relations-definition.png" alt="Definition of the relations.">
+</div>
+<div class="title">Figure 6. Annotation relation types</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uv3.custom_java_objects"><a class="anchor" href="#_uv3.custom_java_objects"></a>CAS-transported custom Java objects</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One of the goals of v3 is to support more of the Java collection framework within the CAS, to enable users to conveniently build more complex models that could be transported by the CAS.
+For example, a user might want to store a Java "Set" object, representing a set of Feature Structures.
+Or a user might want to use an adjustable array, like Java&#8217;s ArrayList.</p>
+</div>
+<div class="paragraph">
+<p>With the current version 2 implementation of JCas, users already may add arbitrary Java objects to their JCas class definitions as fields, but these do not get transported with the CAS (for instance, during  serialization).  Furthermore, in version 2, the actual JCas instance you get when accessing a Feature Structure in some edge cases may be a fresh instance, losing any previously computed value held as a Java field.
+In contrast, each Feature Structure in a CAS is represented as the same unique Java Object  (because that&#8217;s the only way a Feature Structure is stored).</p>
+</div>
+<div class="paragraph">
+<p>Version 3 has a new a capability that enables converting arbitrary Java objects  that might be part of a  JCas class definition, into "ordinary" CAS values that can be transported with the CAS.
+This is done using a set of conventions which the framework follows, and which developers writing these classes make use of; they include two kinds of marker Java interfaces, and 2 methods that are called when serializing and deserializing.</p>
+</div>
+<div class="paragraph">
+<p>The marker interfaces identify those JCas classes which need these extra methods called.
+The extra methods are  methods implemented by the creator of these JCas classes, which marshal/unmarshal CAS feature data to/from the  Java Object this class is supporting.</p>
+</div>
+<div class="paragraph">
+<p>Storing the Java Object data as the value of a normal CAS Feature means that they get "transported" in a portable way with the CAS - they can be saved to external storage and read back in later, or sent to remote services, etc.</p>
+</div>
+<div class="sect2">
+<h3 id="_uv3.custom_java_objects.tutorial"><a class="anchor" href="#_uv3.custom_java_objects.tutorial"></a>Tutorial example</h3>
+<div class="paragraph">
+<p>Here&#8217;s a tutorial example on how to design and implement your own special Java object.
+For this example, we&#8217;ll imagine we need to implement a map from FeatureStructures to FeatureStructures.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/version_3_users_guide/custom_java_objects/5_steps.png" alt="5 steps to creating a custom CAS transportable Java Object">
+</div>
+<div class="title">Figure 7. Creating a custom Java CAS-stored Object</div>
+</div>
+<div class="paragraph">
+<p>Step 1 is deciding on the Java Object implementation to use.
+We can define a special class, but in this case, we&#8217;ll just use the ordinary Java HashMap&lt;TOP, TOP&gt; for this.</p>
+</div>
+<div class="paragraph">
+<p>Step 2 is deciding on the CAS Feature Structure representation of this.
+For this example, let&#8217;s design this to represent the serialized form of the hashmap as 2 FSArrays, one for the keys, and one for the values.
+We could also use just one array and intermingle the keys and values.
+It&#8217;s up to the designer of this new JCas class to decide how to do this.</p>
+</div>
+<div class="paragraph">
+<p>Step 3 is defining the UIMA Type for this.
+Let&#8217;s call it FS2FSmap.
+It will have 2 Features: an FSArray for the keys, and another FSArray for the values.
+Let&#8217;s name those features "keys" and "values". Notice that there&#8217;s no mention of the Java object in the UIMA Type definition.</p>
+</div>
+<div class="paragraph">
+<p>Step 4 is to run JCasGen on this class to get an initial version of the class.
+Of course, it will be missing the Java HashMap, but we&#8217;ll add that in the next step.</p>
+</div>
+<div class="paragraph">
+<p>Step 5: modify 3 aspects of the generated JCas class.:</p>
+</div>
+<div class="paragraph">
+<p>+
+1. Mark the class with one of two interfaces::</p>
+</div>
+<div class="paragraph">
+<p>+
+* <code>UimaSerializable</code>
+* <code>UimaSerializableFSs</code> These identify this JCas class a needing the calls to marshal/unmarshal the data to/from the Java Object and the normal CAS data features.
+Use the second form if the data includes any Feature Structure references.
+In our example, the data does include Feature Structure references,  so we add <code>implements UimaSerializableFSs</code> to our JCas class.</p>
+</div>
+<div class="paragraph">
+<p>+
+2. Add the Java Object as a field to the class::
+We&#8217;ll define a new field:</p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>final private Map&lt;TOP, TOP&gt; fs2fsMap = new HashMap&lt;&gt;();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>+
+3. Implement two methods to marshal/unmarshal the Java Object data to the CAS Data Features::
+::Now, we need to add the code that translates between the two UIMA Features  "keys" and "values" and the map, and vice-versa.
+We put this code into two methods,  called <code>\_init_from_cas_data</code> and <code>\_save_to_cas_data</code>.
+These are special methods that are part of this new framework extension;  they are called by the framework at critical times during deserialization and serialization.
+Their purpose is to encapsulate all that is needed to convert from transportable  normal CAS data, and the Java Object(s).</p>
+</div>
+<div class="paragraph">
+<p>+
+In this example, the <code>\_init_from_cas_data</code> method would iterate over the two Features, together, and add each key value pair to the Java Object.
+Likewise, the <code>\_save_to_cas_data</code> would first create two FSArray objects for the keys and values,  and then iterate over the hash map and extract these and set them into the key and value arrays.</p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public void _init_from_cas_data() {
+  FSArray keys = getKeys();
+  FSArray values = getValues();
+  fs2fsMap.clear();
+  for (int i = keys.size() - 1; i &gt;=0; i--) {
+    fs2fsMap.put(keys.get(i), values.get(i));
+  }
+}
+
+public void _save_to_cas_data() {
+  int i = 0;
+  FSArray keys = new FSArray(this, fs2fsMap.size());
+  FSArray values = new FSArray(this, fs2fsMap.size());
+  for (Entry&lt;TOP, TOP&gt; entry : fs2fsMap.entrySet()) {
+    keys.set(i, entry.getKey());
+    values.set(i, entry.getValues());
+    i++;
+  }
+  setKeys(keys);
+  setValues(values);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>+
+Beyond this simple implementation, various optimization can be done.
+One typical one is to treat the use case where no updates were done as a special case (but one which might occur frequently), and in that case having the _save_to_cas_data operation do nothing, since the original CAS data is still valid.</p>
+</div>
+<div class="paragraph">
+<p>+
+One additional "boilerplate" method is required for all of these classes:</p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>public FeatureStructureImplC _superClone() {return clone();}`</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>+
+For custom types which hold collections of Feature Structures, you can have those participate in the <code>Select</code> framework, by implementing the optional Interface <code>SelectViaCopyToArray</code>.</p>
+</div>
+<div class="paragraph">
+<p>For more examples, please see the implementations of the semi-built-in classes described in the following section.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.custom_java_objects.new_semibuiltins"><a class="anchor" href="#_uv3.custom_java_objects.new_semibuiltins"></a>Additional semi-built-in UIMA Types for some common Java Objects</h3>
+<div class="paragraph">
+<p>Some additional semi-built-in UIMA types are defined in Version 3 using this new mechanism.
+They work fully in Java, and are serialized or transported to non-Java frameworks as ordinary CAS objects.</p>
+</div>
+<div class="paragraph">
+<p>Semi-built-in means that the JCas cover classes for these are defined as part of the core Java classes, but the types themselves are not "built-in".  They may be added to any tyupe system by importing them by name using the import statement:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;import name="org.apache.uima.semibuiltins"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you have a Java project whose classpath includes uimaj-core, and you run the Component Descriptor Editor Eclipse plugin tool on a descriptor which includes a type system, you can configure this import by selecting the Add on the Import type system subpanel, and import by name, and selecting org.apache.uima.semibuiltins.
+(Note: this will not show up if your project doesn&#8217;t include uimaj-core on its build path.)</p>
+</div>
+<div class="sect3">
+<h4 id="_uv3.custom_java_objects.semibuiltin_fsarraylist"><a class="anchor" href="#_uv3.custom_java_objects.semibuiltin_fsarraylist"></a>FSArrayList</h4>
+<div class="paragraph">
+<p><code>org.apache.uima.jcas.cas.FSArrayList</code> is like the current FSArray, except that it implements the List API and supports  adding to the array, with automatic resizing, like an ArrayList in Java.
+It is implemented internally using a Java ArrayList.</p>
+</div>
+<div class="paragraph">
+<p>The CAS data form is held in a plain FSArray feature.</p>
+</div>
+<div class="paragraph">
+<p>The <code>equals()</code> method is true if both FSArrayList objects have the same size, and contents are <code>equal</code> item by item.
+The list of supported operations includes all of the operations of  the Java <code>List</code> interface.
+This object also includes the <code>select</code> methods, so it can be used as a source for the <code>select</code> framework.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.custom_java_objects.semibuiltin_integerarraylists"><a class="anchor" href="#_uv3.custom_java_objects.semibuiltin_integerarraylists"></a>IntegerArrayList</h4>
+<div class="paragraph">
+<p><code>org.apache.uima.jcas.cas.IntegerArrayList</code> is like the current IntegerArray, except that it implements the List API and supports  adding to the array, with automatic resizing, like an ArrayList in Java.</p>
+</div>
+<div class="paragraph">
+<p>The CAS data form is held in a plain IntegerArray feature.</p>
+</div>
+<div class="paragraph">
+<p>The <code>equals()</code> method is true if both IntegerArrayList objects have  the same size, and contents are <code>equal</code> item by item.
+The list of supported operations includes a subset of the operations of  the Java <code>List</code> interface, where certain values are changed to Java primitive <code>ints</code>.
+To support the <code>Iterable</code> interface, there is  a version of <code>iterator()</code> where the result is "boxed" into an Integer.
+For efficiency, there&#8217;s also a method intListIterator, which returns an instance of IntListIterator, which permits iterating forwards and backwards, without boxing.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.custom_java_objects.semibuiltin_fshashset"><a class="anchor" href="#_uv3.custom_java_objects.semibuiltin_fshashset"></a>FSHashSet and FSLinkedHashSet</h4>
+<div class="paragraph">
+<p><code>org.apache.uima.jcas.cas.FSHashSet</code> and <code>org.apache.uima.jcas.cas.FSLinkedHashSet</code> store Feature Structures in a (Linked) HashSet, using whatever is defined as the Feature Structure&#8217;s <code>equals</code> and <code>hashcode</code>.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+You may customize the particular equals and hashcode by creating a wrapper class that is a subclass of the type of interest which forwards to the underlying Feature Structure, but has its own definition of <code>equals</code> and <code>hashcode</code>.
+</blockquote>
+</div>
+<div class="paragraph">
+<p>The CAS data form is held in an FSArray consisting of the members of the set.</p>
+</div>
+<div class="paragraph">
+<p>If you want a predictable iteration order, use FSLinkedHashSet instead of FSHashSet.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.custom_java_objects.semibuiltin_int2fs"><a class="anchor" href="#_uv3.custom_java_objects.semibuiltin_int2fs"></a>Int2FS Int to Feature Structure map</h4>
+<div class="paragraph">
+<p>Some applications find it convenient to have a map from ints to Feature Structures.
+In UIMA V2, they made use of the low level CAS APIs that allowed getting an Feature Structure from an int id using <code>ll_getFSForRef(int)</code>.</p>
+</div>
+<div class="paragraph">
+<p>In v3, use of the low level APIs in this manner  can be enabled, but is discouraged, because it prevents garbage collection of non-reachable Feature Structures.</p>
+</div>
+<div class="paragraph">
+<p><code>org.apache.uima.jcas.cas.Int2FS&lt;T&gt;</code> maps from <code>int</code>s to <code>Feature Structure</code>s of type T.
+This provides an alternative way to have int &#8594; FS maps,  under user control of what exactly gets added to them,  supporting removes and clearing, under application control</p>
+</div>
+<div class="paragraph">
+<p>The <code>iterator()</code> method returns an Iterator over <code>IntEntry&lt;T&gt;</code> objects - these are like java <code>Entry&lt;K, V&gt;</code> objects except the key is an int.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.custom_java_objects.design"><a class="anchor" href="#_uv3.custom_java_objects.design"></a>Design for reuse</h3>
+<div class="paragraph">
+<p>While it is possible to have a single custom JCas class implement multiple Java Objects, this is  typically not a good design practice, as it reduces reusability.
+It is usually better to  implement one custom Java object per JCas class, with an associated UIMA type, and have that as the reusable entity.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uv3.logging"><a class="anchor" href="#_uv3.logging"></a>Logging</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Logging has evolved; two major changes now supported by V3 are</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>using a popular open-source standard logging facade, SLF4j,  that can at run time discover and hook to  a user specified logging framework.</p>
+</li>
+<li>
+<p>Support for both old-style and new style substitutable parameter specification.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For backwards compatibilit, V3 retains the existing V2 logging facade, so existing code will continue to work.
+The APIs have been augmented by the methods available in the SLF4j <code>Logger</code> API, plus the Java 8 enabled APIs from the Log4j implementation that support the <code>Supplier</code> Functional Interface.</p>
+</div>
+<div class="paragraph">
+<p>The old APIs support messages using the standard Java Util Logging style of writing substitutable parameters using an integer, e.g., {0}, {1}, etc.
+The new APIs support messages using the modern substitutable parameters without an integer, e.g.
+{}.</p>
+</div>
+<div class="paragraph">
+<p>The implementation of this facade in V2 was the built-in-to-Java (java.util) logging framework.
+For V3, this is changed to be the SLF4j facade.
+This is an open source, standard facade which allows deferring until deployment time, the specific logging back end to use.</p>
+</div>
+<div class="paragraph">
+<p>If, at initialization time, SLF4J gets configured to use a back end which is either the  built-in Java logger, or Log4j-2, then the UIMA logger implementation is switched to UIMA&#8217;s implementation of those APIs (bypassing SLF4j, for efficiency).</p>
+</div>
+<div class="paragraph">
+<p>The SLF4j and other documentation (e.g., <a href="https://logging.apache.org/log4j/2.x/log4j-slf4j-impl/index.html" class="bare">https://logging.apache.org/log4j/2.x/log4j-slf4j-impl/index.html</a> for log4j-2) describe  how to connect various logging back ends to SLF4j, by  putting logging back-end implementations into the classpath at run time.
+For example,  to use the back end logger built into Java,  you would include the <code>slf4j-jdk14</code> Jar.
+This Jar is included in the UIMA binary distribution, so that out-of-the-box, logging is available and configured the same as it was for V2.</p>
+</div>
+<div class="paragraph">
+<p>The Eclipse UIMA Runtime plugin bundle excludes the slf4j api Jar and back ends, but will  "hook up" the needed implementations from other bundles.</p>
+</div>
+<div class="sect2">
+<h3 id="_uv3.logging.levels"><a class="anchor" href="#_uv3.logging.levels"></a>Logging Levels</h3>
+<div class="paragraph">
+<p>There are 2 logging level schemes, and there is a mapping between them.
+Either of them may be used when using the UIMA logger.
+One of the schemes is the original UIMA v2 level set, which is the same  as the built-in-to-java logger levels.
+The other is the scheme adopted by SLF4J and many of its back ends.</p>
+</div>
+<div class="paragraph">
+<p>Log statements are "filtered" according to the logging configuration, by Level, and sometimes by additional indicators, such as Markers.
+Levels work in a hierarchy.
+A given level of  filtering passes that level and all higher levels.
+Some levels have two names, due to the  way the different logger back-ends name things.
+Most levels are also used as method names on  the logger, to indicate logging for that level.
+For example, you could say <code>aLogger.log(Level.INFO, message)</code> but you can also say <code>aLogger.info(message)</code>). The level ordering, highest to lowest,  and the associated method names are as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>SEVERE or ERROR; error(&#8230;&#8203;)</p>
+</li>
+<li>
+<p>WARN or WARNING; warn(&#8230;&#8203;)</p>
+</li>
+<li>
+<p>INFO; info(&#8230;&#8203;)</p>
+</li>
+<li>
+<p>CONFIG; info(UIMA_MARKER_CONFIG, &#8230;&#8203;)</p>
+</li>
+<li>
+<p>FINE or DEBUG; debug(&#8230;&#8203;)</p>
+</li>
+<li>
+<p>FINER or TRACE; trace(&#8230;&#8203;)</p>
+</li>
+<li>
+<p>FINEST; trace(UIMA_MARKER_FINEST, &#8230;&#8203;)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The CONFIG and FINEST levels are merged with other levels, but distinguished by having <code>Markers</code>.
+If the filtering is configured to pass CONFIG level, then it will pass  the higher levels (i.e., the INFO/WARN/ERROR or their alternative names WARNING/SEVERE) levels as well.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.logging.new_recorded_context_data"><a class="anchor" href="#_uv3.logging.new_recorded_context_data"></a>Context Data</h3>
+<div class="paragraph">
+<p>Context data is kept in SLF4j MDC maps; there is a separate map per thread.
+This information is set before calling Annotator&#8217;s process or initialize methods.
+The following table lists the keys and the values recorded in the contexts; these can be retrieved by the logging layouts and included in log messages.</p>
+</div>
+<div class="paragraph">
+<p>Because the keys for context data are global, the ones UIMA uses internally are prefixed with "uima_".</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Key Name</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uima_annotator</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the annotator implementation name.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uima_annotator_context_name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">the fully qualified annotator context name within the pipeline.
+A top level (not contained within any aggregate) annotator will have a context of "/".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uima_root_context_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A unique id representing the pipeline being run.
+This is unique within a class-loader for the UIMA-framework.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uima_cas_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A unique id representing the CAS being currently processed in the pipeline.
+This is unique within a class-loader for the UIMA-framework.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_uv3.logging.markers"><a class="anchor" href="#_uv3.logging.markers"></a>Markers used in UIMA Java core logging</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><strong>Not (yet) implemented; for planning purposes only.</strong></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.logging.defaults_configuration"><a class="anchor" href="#_uv3.logging.defaults_configuration"></a>Defaults and Configuration</h3>
+<div class="paragraph">
+<p>By default, UIMA is configured so that the UIMA logger is hooked up to the SLF4j facade, which may or may not have a logging back-end.
+If it doesn&#8217;t, then any use of the UIMA logger will produce  one warning message stating that SLF4j has no back-end logger configured, and so no logging will be done.</p>
+</div>
+<div class="paragraph">
+<p>When UIMA is run as an embedded library in other applications, slf4j will use those other application&#8217;s logging frameworks.</p>
+</div>
+<div class="paragraph">
+<p>Each logging back-end has its own way of being configured;  please consult the proper back-end documentation for details.</p>
+</div>
+<div class="paragraph">
+<p>For backwards compatibility, the binary distribution of UIMA includes the slf4j back-end  which hooks to the standard built-in Java logging framework, so out-of-the-box, UIMA should be configured and log by default as V2 did.</p>
+</div>
+<div class="sect3">
+<h4 id="_uv3.logging.throttling_annotator_logging"><a class="anchor" href="#_uv3.logging.throttling_annotator_logging"></a>Throttling logging from Annotators</h4>
+<div class="paragraph">
+<p>Sometimes, in production, you may find annotators are logging excessively, and you wish to throttle  this.
+But you may not have access to logging settings to control this, perhaps because UIMA is running as a library component within another framework.
+For this special case, you can limit logging done by Annotators by passing an additional parameter to the UIMA Framework&#8217;s  produceAnalysisEngine API, using the key name <code>AnalysisEngine.PARAM_THROTTLE_EXCESSIVE_ANNOTATOR_LOGGING</code> and setting the value to an Integer object equal to the the limit.
+Using 0 will suppress all logging.
+Any positive number allows that many log records to be logged, per level.
+A limit of 10 would allow  10 Errors, 10 Warnings, etc.
+The limit is enforced separately, per logger instance.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This only works if the logger used by Annotators is obtained from the  Annotator base implementation class via the <code>getLogger()</code> method.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uv3.migration"><a class="anchor" href="#_uv3.migration"></a>Migrating to UIMA Version 3</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_uv3.migration.big_picture"><a class="anchor" href="#_uv3.migration.big_picture"></a>Migrating: the big picture</h3>
+<div class="paragraph">
+<p>Although UIMA V3 is designed to be backwards compatible with UIMA V2, there are some migration steps needed.
+These fall into two broad use cases:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>if you have an existing UIMA pipeline / application you wish to upgrade to use V3</p>
+</li>
+<li>
+<p>if you are "consuming" the Maven artifacts for the core SDK, as part of another project</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.migration.migrating_pipeline"><a class="anchor" href="#_uv3.migration.migrating_pipeline"></a>How to migrate an existing UIMA pipeline to V3</h3>
+<div class="paragraph">
+<p>UIMA V3 is designed to be binary compatible with existing UIMA V2 pipelines, so compiled and/or JAR-ed up classes  representing a V2 pipeline should run with UIMA v3, with three changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java 8 is required. (If you&#8217;re already using Java 8, nothing need be done.)</p>
+</li>
+<li>
+<p>Any defined JCas cover classes must be migrated or regenerated, and used instead. (If you do not define any JCas classes or don&#8217;t use JCas in your pipeline, then nothing need be done.) A quick way to do this is to create a Jar with the migrated JCas classes, and put it into the classpath ahead of the other JCas class definitions.</p>
+</li>
+<li>
+<p>The runtime classpath needs to include the slf4j-api Jar, and an appropriate slf4j bridging Jar, for details, see next.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some adjustments may need to be made to logging setup, typically by including additional Jars  (provided in the UIMA Binary distribution) in your  application&#8217;s classpath.
+If you are using the standard UIMA Launch scripts, this is already done.
+For custom application setups, insure that the classpath includes the (now) required jar  "slf4j-api-xxxx.jar" (replace xxxx with the version).   If you were using the standard UIMA based logging, to get the similar behavior, include the slf4j-jdk14-xxxx.jar; this  enables the standard Java Utility Logging facility.</p>
+</div>
+<div class="paragraph">
+<p>Some Maven projects use the JCasGen maven plugin; these projects' JCasGen maven plugin, if switched to UIMA V3, automatically generate the V3 versions.
+For proper operation, please run maven clean install; the clean operation ought to remove the previously generated JCas class, including the UIMA V2 <code>xxx_Type</code> classes.
+These are no longer used, and won&#8217;t compile in V3.</p>
+</div>
+<div class="paragraph">
+<p>You can use any of the methods of invoking JCasGen to generate the new V3 versions.
+If using the Eclipse plugins (i.e., pushing the <code>JCasGen</code>) button in the  configuration editor, etc.), the V3 version of the plugin must be the one installed into Eclipse.</p>
+</div>
+<div class="paragraph">
+<p>If you have the source or class files, you can also migrate those using the migration tool described in this section.
+This approach is useful when you&#8217;ve customized the JCas class, and wish to preserve those customizations, while converting the v2 style to the v3 style.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.migration.jcas"><a class="anchor" href="#_uv3.migration.jcas"></a>Migrating JCas classes</h3>
+<div class="paragraph">
+<p>If you have customized JCasGen classes, these can be migrated by running the migration tool, which is available as a stand-alone command line tool (<code>runV3migrateJCas.sh</code> or <code>&#8230;&#8203;bat</code>), or  as Eclipse launch configurations.</p>
+</div>
+<div class="paragraph">
+<p>This tool can migrate either sets of</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java source files (xxx.java) or</p>
+</li>
+<li>
+<p>Compiled Java class files (including those contained in JARs or PEARs)</p>
+<div class="literalblock">
+<div class="content">
+<pre> Usually, if you have the source code it is best to migrate the sources.
+Otherwise, you can migrate the compiled classes.
+The compiled classes are run through a decompiler, and then the derived sources are migrated.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When migrating <strong>source</strong> files, you specify one or more "roots" - places in a file directory, or a single java JCas source file (the one not ending in "_Type").  When directories are specified,   the tool scans those  directories recursively (including inside Jars and PEARs), looking for JCas source files.
+If just one source file is specified,  it work on just that one source file.
+When a source file is processed, it is copied to the output spot  and migrated.
+The output is arranged in parallel directories (before and after migration),  for easy side-by-side comparing in a tool such as Eclipse file compare.</p>
+</div>
+<div class="paragraph">
+<p>After checking the migration results, including comparing the files, you replace the original source with the migrated versions.
+Also, the original V2 source would contain a source file for each JCas class ending in "_Type"; these are not used in version 3 and should be deleted.</p>
+</div>
+<div class="paragraph">
+<p>You may also migrate <strong>class</strong> files; this can be used when the source files are not available.
+This option has a decompilation step, to produce the source to be migrated and requires a classpath (passed as the <code>migrationClasspath</code> parameter); this classpath is used to resolve symbols during the decompilation, and should be the classpath used when running those classes.
+For class files, the migration tool  attempts to compile the results and, for Jars and PEARs, to update those migrated classes  in a copy of the original packaging (meaning, within Jars or PEARs):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <strong>classesRoots</strong> are used to locate .class files, perhaps within Jars and PEARs.</p>
+</li>
+<li>
+<p>These are decompiled, using special versions of the migrateClasspath.</p>
+</li>
+<li>
+<p>The resultant sources are migrated.</p>
+</li>
+<li>
+<p>The migrated sources are compiled.</p>
+</li>
+<li>
+<p>If the original classes came from Jars or PEARs, copies of these are made with the  migrated classes replaced.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When scanning directories from source or class roots, if a Jar or a PEAR is encountered, it is recursively scanned.</p>
+</div>
+<div class="paragraph">
+<p>When migrating from compiled classes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The class is decompiled, and the resulting source is migrated.</p>
+</li>
+<li>
+<p>The next 2 steps are skipped if no Java compiler is available. A compiler is available if the migrate utility is being run using a JDK (as opposed to a JRE version of Java).</p>
+</li>
+<li>
+<p>The migrated classes are compiled. During this processes, the classpath used is the same as the decompile classpath, except that the uima-core Jar for version 3 (from the classpath used to run the migration tool) is prepended so that the migrated version can be compiled.</p>
+</li>
+<li>
+<p>Finally, if the original "packaging" of the class files is a Jar or PEAR, it  is copied and updated with the migrated classes (provided there was no compile error).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The results of the migration include the migrated files, a set of logs, and for classesRoots: the  compiled classes, and repackaging of them into copies of original Jars and/or PEARs.
+The migration operation is summarized in the console output, detailing anything that might need inspection to verify the migration was done correctly.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+If all is OK, the migration will say that it "finished with no unusual conditions", at the end.
+</blockquote>
+</div>
+<div class="paragraph">
+<p>To complete the migration, fix any reported issues that need fixing, and then  update your UIMA application to use these classes/Jars/PEARs  in place of the version 2 ones.</p>
+</div>
+<div class="paragraph">
+<p>The actual migration step is a source-to-source transformation, done using a parse of the source files.
+The parts in the source which are version 2 specific are replaced with the equivalent version 3 code.
+Only those parts which need updating are modified; other code and comments which are part of the source file are left unchanged.
+This is intended to preserve any user customization that may have been done.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>After running the tool, it is important to examining the console output and logs.
+You can confirm that the migration completed without any unusual conditions, or, if something  unusual was encountered, you can take corrective action.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_uv3.migration.tool_guide.running"><a class="anchor" href="#_uv3.migration.tool_guide.running"></a>Running the migration tool</h4>
+<div class="paragraph">
+<p>The tool can be run as a stand-alone command, using the launcher scripts <code>runV3migrateJCas</code>;  there are two versions of this&#8201;&#8212;&#8201;one for windows (ending it <code>.bat</code>)  and one for linux / mac (ending in <code>.sh</code>). If you run this without any arguments, it will show a brief help for the arguments.</p>
+</div>
+<div class="paragraph">
+<p>There are also a pair of Eclipse launch configurations  (one for migrating source file(s), the other for compiled classes and JARs and PEARs),  which are available if you have the uimaj-examples project (included in the binary distribution of UIMA) in your Eclipse workspace.</p>
+</div>
+<div class="sect4">
+<h5 id="_uv3.migration.tool_guide.running.eclipse"><a class="anchor" href="#_uv3.migration.tool_guide.running.eclipse"></a>Using Eclipse to run the migration tool</h5>
+<div class="paragraph">
+<p>There are two Eclipse launch configurations; one works with source code, the other with compiled classes or Jars or PEARs.
+The launch configurations are named:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>UIMA Run V3 migrate JCas from sources roots</p>
+</li>
+<li>
+<p>UIMA Run V3 migrate JCas from classes roots</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When running from class directory roots, the classes must not have compile errors, and may contain Jars and PEARs.
+Both launchers write their output to a temporary directory, whose name is printed in the Eclipse console log.</p>
+</div>
+<div class="paragraph">
+<p>To use the Eclipse launcher to migrate from source code,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>First select the eclipse project containing the source code to transform;  this project&#8217;s "build path" will also supply the  classpath used during migration.</p>
+<div class="paragraph">
+<p>Alternatively, you may select just one source file to migrate.</p>
+</div>
+</li>
+<li>
+<p>run the migrate-from-sources launcher.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This will scan the directory tree of the project, looking for source files which are JCas files, and  migrate them, or alternatively, just work on the single selected source file.
+No existing files are modified; everything is written to the output directory.</p>
+</div>
+<div class="paragraph">
+<p>To use the launcher for compiled code,</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>First select the eclipse project that provides the classpath for the compiled code. This is required for proper "decompiling" of the classes and recompiling the transformed results.</p>
+</li>
+<li>
+<p>The launcher will additionally prompt you for another directory  which the migration tool will use as the top of a tree to scan for compiled Java JCas classes to be migrated.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_uv3.migration.tool_guide.running.cmd_line"><a class="anchor" href="#_uv3.migration.tool_guide.running.cmd_line"></a>Running from the command line</h5>
+<div class="sect5">
+<h6 id="_uv3.migration.tool_guide.running.inputs"><a class="anchor" href="#_uv3.migration.tool_guide.running.inputs"></a>Command line: Specifying input sources</h6>
+<div class="paragraph">
+<p>Input is specified using these arguments:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>"-sourcesRoots"</strong></dt>
+<dd>
+<p>a list of one or more directories, separated by the a path separator character (";" for Windows, ":" for others), or a single source file</p>
+<div class="paragraph">
+<p>Migrates each candidate source file found in any of the file tree roots, skipping over non-JCas classes.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>"-classesRoots"</strong></dt>
+<dd>
+<p>a list of one or more directories containing class files or Jars or PEARs, separated by the a path separator character (";" for Windows, ":" for others).</p>
+<div class="paragraph">
+<p>Decompiles, then migrates each candidate class file found in any of the file tree roots (skipping over non-JCas classes). You can specify either of these, but not both.</p>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_uv3.migration.tool_guide.classpath"><a class="anchor" href="#_uv3.migration.tool_guide.classpath"></a>Command line: Specifying a classpath for the migration</h6>
+<div class="paragraph">
+<p>When migrating from compiled classes, a classpath is required to locate and decompile the JCas classes to be migrated.
+This classpath should include the JCas classes  to be decompiled.
+The compiled classes must not have compile errors.</p>
+</div>
+<div class="paragraph">
+<p>When migrating from sourcesRoots, this argument is required only if the JCas classes have references to other non-migrated classes (other than core UIMA classes).  For example, if your JCas class had a reference to a user defined Utility class, that would need to be in the classpath.
+For plain, non-customized JCas classes, this argument is unnecessary.</p>
+</div>
+<div class="paragraph">
+<p>To specify this parameter, use the argument <code>-migrateClasspath</code>.
+The Eclipse launcher "UIMA run V3 migrate JCas from classes roots" sets this argument using the selected Eclipse project&#8217;s classpath.
+When migrating within a PEAR, the migration tool automatically adds the  classpath specified by the PEAR (if any) to the classpath.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_uv3.migration.tool_guide.duplicates"><a class="anchor" href="#_uv3.migration.tool_guide.duplicates"></a>Handling duplicate definitions</h5>
+<div class="paragraph">
+<p>Sometimes, a classpath or directory tree may contain multiple instances of the same JCas class.
+These might be identical, or they might be different versions.</p>
+</div>
+<div class="paragraph">
+<p>The migration utility handles this by migrating each instance. The migrated forms are  stored in the output directory prefixed by the root-id (see above), as the parent directory.
+The different versions can then be conveniently compared using tooling such as Eclipse&#8217;s file compare.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.migration.tool_guide.reports"><a class="anchor" href="#_uv3.migration.tool_guide.reports"></a>Understanding the reports</h4>
+<div class="paragraph">
+<p>The output directory contains a logs directory with additional information.
+A summary is also written to System.out.</p>
+</div>
+<div class="paragraph">
+<p>Each file translated has both a v2 source and a v3 source.
+When the input is ".class" files,  the v2 source is the result of the decompilation step, prior to any migration.</p>
+</div>
+<div class="paragraph">
+<p>The process of scanning directories to find JCas class to migrate may come across multiple instances of the same class.
+There are two subcases:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The instances are the same.</p>
+</li>
+<li>
+<p>The instances are different (two non-identical definitions for the same class). Sometimes these arise when migrating from compiled classes, where the compilation was done by different versions of the Java compiler, and the resulting decompilations are logically equal but have some fields or methods in a different order.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This diagram illustrates some of the potentials for identical and non-identical duplicate definitions for the same classname, that the tool may encounter.
+The blue boxes represent ordinary file directories or Jars, and the other boxes with labels Cn1 and Cn2 represent the definitions for a classes named Cn1  and Cn2; the different colors represent non-identical definitions, as an example.
+Note that a definition for a class might appear sometimes not within a Jar (or a PEAR, not shown here), as well as with that.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/version_3_users_guide/migrate/multiples.png" alt="Example of some possible duplicate class definitions">
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> The migration tool allows for all of these variants.
+It will  migrate all versions, and will (when migrating from compiled Jars and PEARs) compile and reassemble these.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output directories prefix the package/classname holding the source code with a prefix of  "a0", "a1", etc.
+The "a" stands for alternative, and the 0 is for the first alternative, and the 1, 2, &#8230;&#8203; are for other non-equal alternatives.</p>
+</div>
+<div class="paragraph">
+<p>When the migration is run from compiled classes, then, if possible, the resulting migrated classes are recompiled and if from Jars or PEARs, reassembled into copies of those artifacts.
+The compilation for the same classname, with the same sourcecode, could be different for different containers because each compilation is done with that container&#8217;s classpath (e.g.
+Jar or Pear) and with respect to the compilation units of that container.</p>
+</div>
+<div class="paragraph">
+<p>Because of this, the compiled results for a given source instance, are done separately, and kept in output directories, indexed additionally by the container number, as "c0", "c1", &#8230;&#8203; . A list of all container numbers and the migrated       classes within those containers, is printed out to enable correlating these by hand when necessary.</p>
+</div>
+<div class="paragraph">
+<p>The overall directory output directory tree looks like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Directory structure, starting at -outputDirectory
+   converted/
+     v2/
+       a0/pkg/name.../Classname.java
+                           /Classname2.java etc.
+       a1/pkg/name.../Classname.java  if there are multiple
+                                              different versions
+       ...
+     v3/
+       a0/pkg/name.../Classname.java
+                     /Classname2.java etc.
+       a1/pkg/name.../Classname.java  if there are multiple
+                                              different versions
+       ...
+
+     v3-classes/   for Jars and PEARs, the compiled class
+       // xyz is the path in the container to the
+       //       start of the pkg/name.../Classname.class
+       // the "a0", "a1", ... is extra but serves to
+       //      identify which alternative of the source
+       23/a0/xyz/pkg/name.../Classname.class
+       33/a0/xyz/pkg/name.../Classname.class
+       42/a0/xyz/pkg/name.../Classname.class
+         ...
+
+     pears/
+       // xyz_updated_pear_copy is the path
+       //    relative to the container, of the PEAR
+       33/xyz_updated_pear_copy.pear
+         ...
+
+     jars/
+       // xyz_updated_jar_copy is the path
+       //    relative to the container, of the Jar
+       42/xyz_updated_jar_copy.jar
+         ...
+
+   not-converted/
+
+   logs/
+     processed.txt
+     failed.txt
+     skippedBuiltins.txt
+     nonJCasFiles.txt
+     workaroundDir.txt
+     deletedCheckModified.txt
+     manualInspection.txt
+     pearFileUpdates.txt
+     jarFileUpdates.txt
+
+     ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The converted subtree holds all the sources and migrated versions that were successfully migrated.
+The not-converted subtree hold the sources that failed in some way the migration.
+The logs contain many kinds of entries for different issues encountered:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>processed.txt</strong></dt>
+<dd>
+<p>List of successfully processed classes</p>
+</dd>
+<dt class="hdlist1"><strong>failed.txt</strong></dt>
+<dd>
+<p>List of classes that failed to migrate</p>
+</dd>
+<dt class="hdlist1"><strong>skippedBuiltins.txt</strong></dt>
+<dd>
+<p>List of classes representing built-ins that were skipped.
+These need manual inspection to see how to merge with new v3 built-ins.</p>
+</dd>
+<dt class="hdlist1"><strong>NonJCasFiles.txt</strong></dt>
+<dd>
+<p>List of files that were thought to be JCas classes but  upon further analysis appear to not be.
+These need  manual inspection to confirm.</p>
+</dd>
+<dt class="hdlist1"><strong>deletedCheckModified.txt</strong></dt>
+<dd>
+<p>List of class where a version 2 if statement doing the "featOkTst" was apparently modified.
+In the migrated code, this statement was deleted, perhaps incorrectly.
+These need manual inspection to confirm.</p>
+</dd>
+<dt class="hdlist1"><strong>manualInspection.txt</strong></dt>
+<dd>
+<p>List of files where the migration found a get or set method, where the version 2 code was accessing a casFeatCode with the  feature name not matching.
+These need manual inspection.</p>
+</dd>
+<dt class="hdlist1"><strong>jarsFileUpdates.txt</strong></dt>
+<dd>
+<p>List of Jar files and classes which were replace in them.</p>
+</dd>
+<dt class="hdlist1"><strong>pearsFileUpdates.txt</strong></dt>
+<dd>
+<p>List of Pear files and classes which were replace in them.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_uv3.migration.tool_guide.cookbook"><a class="anchor" href="#_uv3.migration.tool_guide.cookbook"></a>Examples</h4>
+<div class="paragraph">
+<p>Run the command line tool:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cd $UIMA_HOME
+
+bin/runV3migrateJCas.sh
+
+  -migrateClasspath /home/me/myproj/xyz.jar:$UIMA_HOME/lib/uima-core.jar
+
+  -classesRoots /home/me/myproj/xyz.jar:/home/me/myproj/target/classes
+
+  -outputDirectory /temp/migratejcas</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Run the Eclipse launcher:</p>
+</div>
+<div class="paragraph">
+<p>First, make sure you&#8217;ve installed the V3 UIMA plugins into Eclipse!</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Startup an Eclipse workspace containing the project
+with JCas source files to be migrated.
+
+Select the Java project with the JCas sources to be migrated.
+
+Eclipse -&gt; menu -&gt; Run -&gt; Run configurations
+  Use the search box to find
+  "UIMA run V3 migrate JCas from sources" launcher.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Please read the console output summarization to see where the output went, and about any  conditions found during migration which need manual inspection and fixup.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.migration.consuming"><a class="anchor" href="#_uv3.migration.consuming"></a>Consuming V3 Maven artifacts</h3>
+<div class="paragraph">
+<p>Projects may have tests which write to the UIMA log.
+Because V3 switched to SLF4J as the default logger, unless SLF4J can find an adapter to some back-end logger, it will issue a message and substitute a "NO-OP"  back-end logger.
+If your test cases depend on having the V2 default logger (which is the one built into Java),  you need to add a "test" dependency that specifies the SLF4J-to-JDK14 adapter to your POM.
+Here&#8217;s the xml for that:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;dependency&gt;
+  &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+  &lt;artifactId&gt;slf4j-jdk14&lt;/artifactId&gt;
+  &lt;version&gt;1.7.24&lt;/version&gt;  &lt;!-- or some version you need --&gt;
+  &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uv3.pears"><a class="anchor" href="#_uv3.pears"></a>PEAR support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PEARs continue to be supported in Version 3, with the same  capabilities as in version 2.
+Here&#8217;s a brief review.</p>
+</div>
+<div class="paragraph">
+<p>PEARs are both a packaging facility, and an isolation facility.
+The packaging facility allows putting together into one PEAR file all the parts needed for a particular (reusable) UIMA pipeline, including annotators and other data resources, and a classpath to use.
+PEARs are loaded using special class loaders that load first from whatever classpath is specified by the PEAR; this serves to isolate dependencies and insure that the PEAR makes use of whatever versions of classes it depends on (and specifies in its  classpath).</p>
+</div>
+<div class="paragraph">
+<p>PEARs establish a boundary within a UIMA pipeline&#8201;&#8212;&#8201;annotator code is running either inside a PEAR, or not.
+Note that PEARs cannot be nested.
+The CAS, flowing through a pipeline, is dynamically updated with the current PEAR context (if any).</p>
+</div>
+<div class="sect2">
+<h3 id="_uv3.pears.jcas"><a class="anchor" href="#_uv3.pears.jcas"></a>JCas issues</h3>
+<div class="paragraph">
+<p>JCas classes defining Java implementations for UIMA Types may be defined within a PEAR.
+These are loaded using the isolating Classloader, just like all the other PEAR resources.
+As a result, this may cause some issues if the same JCas class is also defined outside  the PEAR boundary, and loaded with the normal UIMA classloader.
+The result of having the  same JCas class both on the PEAR classloader and outside that classloader will be that Java  will have both classes loaded, and code within the PEAR will be linked with one of them, and code outside the PEAR will be linked with the other.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes, this is exactly what you might want.
+For example, you might have in the pear, a special JCas definition of a UIMA type "Token" which the PEAR uses, while you might have another JCas  definition for that same UIMA type outside of the PEAR.
+Note that UIMA will always merge Type  definitions from inside and outside of PEARs, when it sets up a pipeline - it merges all type  definitions found for the whole pipeline.</p>
+</div>
+<div class="paragraph">
+<p>A consequence of having two loaded class definitions in two contexts for the same UIMA type means that the classes have the same names, but are different (because of different loading classloaders),  and assigning one to the other in Java will produce a ClassCast exception.</p>
+</div>
+<div class="paragraph">
+<p>Othertimes, you may not want different classes.
+For instance, the class definitions might be identical, and you want to create some "Token" annotations within the PEAR, and have them  used by JCas references outside of the PEAR.</p>
+</div>
+<div class="paragraph">
+<p>In this case, the simplest thing to do is to install the PEAR, but then update its classpath so it no longer includes the JCas classes that came with the PEAR.
+When classes are not found with the special PEAR class loader, that loader delegates to its parent, which is the normal UIMA class loader.
+This action will cause the PEAR to use the identically same JCas class within the PEAR as is used outside of the PEAR, and no Class Cast Exception issues will arise.
+This is the most efficient way to run with PEARs that use JCas classes where you want to share results inside and outside of PEARs.</p>
+</div>
+<div class="paragraph">
+<p>Version 3 has special support for the case where there are different definitions of JCas classes  for the same UIMA type, inside and outside the PEAR.
+It does this using what are called PEAR Trampolines.
+When there are multiple JCas definitions, the one defined outside of the PEAR is the one stored internally in UIMA&#8217;s indexes and types that have references to Feature Structures.
+Accessing the Feature Structures checks (by asking the CAS) to see if its in a particular PEAR context (there may be several in one pipeline), and if so, a trampoline instance of the Feature Structure is created / used / accessed.
+The trampoline instance shares internally the CAS data with the base instance, but is a separate instance of the PEAR&#8217;s JCas class definition.
+This allows seamless access both inside and outside of the PEAR context to the particular JCas class definition needed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uv3.pears.java_objects"><a class="anchor" href="#_uv3.pears.java_objects"></a>Custom Java Objects</h3>
+<div class="paragraph">
+<p>Custom Java Objects may store references to Feature Structures.
+If it is desired to create  these inside a PEAR, and yet have the references work outside a PEAR, the implementor of these must insure that the actual stored JCas class for a Feature Structure is the base version, not the PEAR version, and also insure that any references are properly converted (while within a PEAR context).</p>
+</div>
+<div class="paragraph">
+<p>Refer to the implementation of <code>FSHashSet</code> and <code>FSArrayList</code> to see what needs to be done to make these "Pear aware".</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uv3.migration.aids"><a class="anchor" href="#_uv3.migration.aids"></a>Migration aids</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To aid migration, some features of UIMA V3 which might cause migration difficulties  can be disabled.
+Users may initially want to disable these, and get their pipelines working, and then over time, re-enable these while fixing any issues that may come up, one feature at a time.</p>
+</div>
+<div class="paragraph">
+<p>Global JVM properties for UIMA V3 that control these are described in the table below.</p>
+</div>
+<div class="sect2">
+<h3 id="_uv3.migration.aids.property_table"><a class="anchor" href="#_uv3.migration.aids.property_table"></a>Properties Table</h3>
+<div class="paragraph">
+<p>This table describes the various JVM defined properties; specify these on the Java command line using <code>-Dxxxxxx</code>, where the <code>xxxxxx</code> is one of the properties starting with <code>uima.</code> from the table below.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Title</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Property Name &amp; Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use UIMA V2 format for toString() for Feature Structures</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uima.v2_pretty_print_format</code></p>
+<p class="tableblock">The native v3 format for pretty printing feature structures includes an id number with each FS, and some other minor improvements.
+If you have code which depends on the exact format that v2 UIMA produced for the toString() operation on Feature Structures, then include this flag to revert to that format.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disable Type System consolidation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uima.disable_typesystem_consolidation</code></p>
+<p class="tableblock">Default: equal Type Systems are consolidated.</p>
+<p class="tableblock">When type systems are committed, the resulting Type System (Java object)  is considered read-only, and is compared to already existing Type Systems.
+Existing type systems, if found, are reused.
+Besides saving storage, this can sometimes improve locality of reference, and therefore, performance.
+Setting this property disables this consolidation.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enable strict type source checking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uima.enable_strict_type_source_check</code></p>
+<p class="tableblock">Default: checking whether the type actually belongs to the index/CAS is performed but only logs a warning, no exception.</p>
+<p class="tableblock">When creating a new feature structure or when adding or removing a feature structure to/from an index, it is checked that the
+type system the type belongs to is exactly the same instance as the type system of the CAS it is created in or the index it
+is added to. Due to the type system consolidation feature, this should always be the case. Setting this property causes an
+exception to be thrown - otherwise a warning is logged.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disable subtype of FSArray creation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uima.disable_subtype_fsarray_creation</code></p>
+<p class="tableblock">Default: Subtypes of FSArrays can be created and are created when deserializing CASes.</p>
+<p class="tableblock">UIMA has some limited support for typed arrays.
+These are declared in type system descriptors by including an  elementType specification for a feature whose range is FSArray.
+See &amp;uima_docs_ref;
+.</p>
+<p class="tableblock">The XCAS and the Xmi serialization forms serialize these as FSArray, with no element type specification included in the serialized form.
+The deserialization code, when deserializing these,  looks at the type system&#8217;s feature declaration to see if it has an elementType, and if so,  changes the type of the Feature Structure to that type.</p>
+<p class="tableblock">UIMA Version 2&#8217;s CAS API did not have the ability to create typed FSArrays.
+This was added in V3, but will be disabled if this flag is set.</p>
+<p class="tableblock">Setting this flag will cause all FSArray creations to be untyped.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default CASs to support V2 ID references</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uima.default_v2_id_references</code></p>
+<p class="tableblock">In version 3, Feature Structures are managed somewhat differently from V2.</p>
+<p class="tableblock">* Feature Structure creation doesn&#8217;t remember a map from the id to the FS, so the LowLevelCas method getFSForRef(int) isn&#8217;t supported. (Exception: Feature Structures created with the low level API calls are findable using this).
+* Creation of Feature Structures assign "ids" as incrementing integers. In V2, the  "id" is the address of the Feature Structure in the v2 Heap; these ids increment by  the size of the Feature Structure on the heap.
+* Serialization only serializes "reachable" Feature Structures.</p>
+<p class="tableblock">When this mode is set, the behavior is modified to emulate V2&#8217;s.</p>
+<p class="tableblock">* Feature Structures are added to an id-to-featureStructure map.
+* IDs are assign incrementing by the size of what the Feature Structure would have been in V2.
+* Serialization includes unreachable Feature Structures (except for Xmi and XCAS - because this is how V2 operates))</p>
+<p class="tableblock">This property sets the default value, per CAS, for that CAS&#8217;s <code>ll_enableV2IdRefs</code> mode to true.
+This mode is is also programmatically settable, which overrides this default.</p>
+<p class="tableblock">For more details on how this setting operates and interacts with the associated APIs, <a href="#_uv3.backwards_compatibility.preserve_v2_ids">Preserving V2 ids, with low level CAS Api accessibility</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_trading_off_runtime_checks_for_speed"><a class="anchor" href="#_trading_off_runtime_checks_for_speed"></a>Trading off runtime checks for speed</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Title</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Property Name &amp; Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disabling runtime feature validation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uima.disable_runtime_feature_validation</code></p>
+<p class="tableblock">Once code is running correctly, you may remove this check for performance reasons by setting this property.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disabling runtime feature <em>value</em> validation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uima.disable_runtime_feature_value_validation</code></p>
+<p class="tableblock">Default: features being set into FS features which are FSs are checked for proper type subsumption.</p>
+<p class="tableblock">Once code is running correctly, you may remove this check for performance reasons by setting this property.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_reporting"><a class="anchor" href="#_reporting"></a>Reporting</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Title</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Property Name &amp; Description</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Report feature structure pinning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>uima.report.fs.pinning="nnn"</code></p>
+<p class="tableblock">Default: not enabled; nnn is the maximum number of reports to produce.
+If nnn is  omitted, it defaults to 10.</p>
+<p class="tableblock">When enabled, this flag will cause reports to System.out with call traces for the first nnn instances of actions which lead to pinning Feature Structures in memory.</p>
+<p class="tableblock">Typically, this should not happen, and no-longer-reachable Feature Structures are  garbage collected.</p>
+<p class="tableblock">But some operations (such as using the CAS low level APIs, which return integer handles representing Feature Structures) pin the Feature Structures, in case  code in the future uses those integer handles to access the Feature Structure.</p>
+<p class="tableblock">It is recommended that code be improved over time to use JCas access methods, instead of low-level CAS APIs, to avoid pinning unreachable Feature Structures.
+This report enables finding those parts of the code that are pinning Feature Structures.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 3.2.0<br>
+Last updated 2021-04-28 19:10:02 +0200
+</div>
+</div>
+</body>
+</html>
