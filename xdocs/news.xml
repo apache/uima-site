@@ -1,39 +1,61 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!--
-	Licensed to the Apache Software Foundation (ASF) under one
-	or more contributor license agreements.  See the NOTICE file
-	distributed with this work for additional information
-	regarding copyright ownership.  The ASF licenses this file
-	to you under the Apache License, Version 2.0 (the
-	"License"); you may not use this file except in compliance
-	with the License.  You may obtain a copy of the License at
-	
-	https://www.apache.org/licenses/LICENSE-2.0
-	
-	Unless required by applicable law or agreed to in writing,
-	software distributed under the License is distributed on an
-	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-	KIND, either express or implied.  See the License for the
-	specific language governing permissions and limitations
-	under the License.
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+  
+  https://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
 -->
 
 <document>
 
-	<properties>
-		<title>News</title>
-		<author email="dev@uima.apache.org">
-			Apache UIMA Documentation Team
-		</author>
-	</properties>
+  <properties>
+    <title>News</title>
+    <author email="dev@uima.apache.org">
+      Apache UIMA Documentation Team
+    </author>
+  </properties>
 
-	<body>
-	
-
-		<section name="Apache UIMA News">
+  <body>
+    <section name="Apache UIMA News">
 
     <subsectionToc/>
+    
+    <subsection name="03 May 2021" date = "03 May 2021" title="Apache UIMA Java SDK 3.2.0 released">
+      <p>UIMA Java SDK 3.2.0 is in the 3.x.x series of core Java UIMA SDK; see the news for 3.0.0 for important
+         information about migrating from 2.x.x versions of UIMA.
+      </p>
+      
+      <p>Changes include:
+        <ul>
+          <li>Added AnnotationPredicates utility class providing various predicates testing how annotations
+              relate to each other (e.g. covering, being covered by, following, preceding, etc.)</li>
+          <li>Added single-int arg version of select.startAt()</li>
+          <li>Added trim method to AnnotationFS</li>
+          <li>Added ability to serialize as XMIs as XML 1.1</li>
+          <li>Added ability to serialize as XMIs pretty-printed using CasIOUtils</li>
+          <li>Added typed parameter support to PEARs</li>
+          <li>Improve performance of setting up JCas classes by reducing sync lock contention</li>
+          <li>Improved speed of constructing aggregate engines</li>
+          <li>Many additional bug fixes</li>
+        </ul>
+      </p>
+
+      <p>Please see the <a target="_blank" rel="noopener" href="d/uimaj-3.2.0/issuesFixed/jira-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>
+    </subsection>
     
     <subsection name="12 May 2020" date = "12 May 2020" title="Apache uimaFIT 3.1.0 released">
       <p>uimaFIT 3.1.0 is a minor feature and bugfix release. On supported platforms, it serves
@@ -61,6 +83,7 @@
       This version of uimaFIT requires Java version 8 or later.
       </p>
     </subsection>
+    
     <subsection name="26 Apr 2020" date = "26 Apr 2020" title="Apache uimaFIT 2.5.0 released">
       <p>uimaFIT 2.5.0 is a minor feature and bugfix release to uimaFIT 2.4.0. It should should 
       serve as a drop-in replacement for previous uimaFIT 2.x versions.</p><p>
@@ -140,13 +163,13 @@
         smoothly with Apache UIMA. 
       </p>
       <p>Major Changes in this Release</p>
-	  <ul>
-	    <li>Fixed broken literal string matching.</li>
-	    <li>Fixed variable initialization with other variables.</li>
-	    <li>Fixed assignment of lists to variables.</li>
-	    <li>Fixed assignment of annotation comparison expression to variables.</li>
-	    <li>PARSE condition supports additional argument that represents the string to be parsed.</li>
-	  </ul>
+    <ul>
+      <li>Fixed broken literal string matching.</li>
+      <li>Fixed variable initialization with other variables.</li>
+      <li>Fixed assignment of lists to variables.</li>
+      <li>Fixed assignment of annotation comparison expression to variables.</li>
+      <li>PARSE condition supports additional argument that represents the string to be parsed.</li>
+    </ul>
  
       <p>
       The UIMA Ruta Workbench and in particular the launching of UIMA Ruta
@@ -163,14 +186,14 @@
     
     <subsection name="09 Dec 2019" date = "09 December 2019" title="Apache UIMA Ruta 3.0.0 released">
       <p>Apache UIMA Ruta is a rule-based script language supported by
-		Eclipse-based tooling. The language is designed to enable rapid
-		development of text processing applications within UIMA. A special focus
-		lies on the intuitive and flexible domain specific language for defining
-		patterns of annotations. The Eclipse-based tooling,
-		called the Apache UIMA Ruta Workbench, supports the
-		user and facilitates every step when writing rules. Both
-		the rule language and the workbench integrate
-		smoothly with Apache UIMA.
+    Eclipse-based tooling. The language is designed to enable rapid
+    development of text processing applications within UIMA. A special focus
+    lies on the intuitive and flexible domain specific language for defining
+    patterns of annotations. The Eclipse-based tooling,
+    called the Apache UIMA Ruta Workbench, supports the
+    user and facilitates every step when writing rules. Both
+    the rule language and the workbench integrate
+    smoothly with Apache UIMA.
       </p>
       <p>Major Changes in this Release</p>
       <p>
@@ -239,8 +262,7 @@
       </p>
     </subsection>
     
-    
-       <subsection name="08 Nov 2019" date = "08 Nov 2019" title="Apache UIMA Java SDK 3.1.1 released">
+    <subsection name="08 Nov 2019" date = "08 Nov 2019" title="Apache UIMA Java SDK 3.1.1 released">
       <p>UIMA Java SDK 3.1.1 is in the 3.x.x series of core Java UIMA SDK; see the news for 3.0.0 for important
          information about migrating from 2.x.x versions of UIMA.
       </p>
@@ -378,37 +400,37 @@ commons.math v.3.2, netty v.4.0.44, snappy v.1.1.1.7 </li>
       </p>
       <p>Major Changes in this Release</p>
       <p>UIMA Ruta Language and Analysis Engine:</p>
-	  <ul>
-	  	<li>Requires Java 8</li>
-	    <li>New language feature: label expressions at actions for directly assigning/reusing newly created annotations. Example: Document{-> a:T1, CREATE(T2, "ref" = a)};</li>
-	    <li>New language feature: new type of rule element for completely optional match which does not require an existing annotation and therefore also works at the boundary of a window/document. Example: NUM _{-PARTOF(CW)};</li>
-	    <li>Type lists can be used as matching condition.</li>
-	    <li>Initial default value of string and annotations variables is now null.</li>
-	    <li>Comparison of annotation and annotation list are now supported.</li>
-	    <li>New configuration parameter 'inferenceVisitors'.</li>
-	    <li>New configuration parameter 'maxRuleMatches'.</li>
-	    <li>New configuration parameter 'maxRuleElementMatches'.</li>
-	    <li>New configuration parameter 'rulesScriptName'.</li>
-	    <li>Inlined rules as condition are only evaluated if the rule element match was successful.</li>
-	    <li>Multiple inlined rule blocks are allowed at one rule element.</li>
-	    <li>String features with allowed values are supported.</li>
-	    <li>PlainTextAnnotator supports vertical tabs.</li>
-	    <li>Various improvements for WORDTABLE.</li>
-	    <li>Thrown exceptions include script name.</li>
-	    <li>Fixed values of label for failed matches.</li>
-	    <li>Fixed inlined rules as condition at wildcards.</li>
-	    <li>Fixed resetting of annotation-based variables.</li>
-	    <li>Fixed various bugs of wildcards.</li>
-	    <li>Fixed CONTAINS condition for annotations overlapping the window.</li>
-	    <li>Fixed COUNT condition.</li>
-	    <li>Fixed setting variables by configuration parameter.</li>
-	  </ul>
-	  <p>UIMA Ruta Workbench:</p>
-	  <ul>
-	  	<li>Query View support more CAS formats.</li>
-	    <li>Fixed order of scripts in Applied Rules view.</li>
-	    <li>Fixed reporting of non-existing problems in editor.</li>
-	  </ul>
+    <ul>
+      <li>Requires Java 8</li>
+      <li>New language feature: label expressions at actions for directly assigning/reusing newly created annotations. Example: Document{-> a:T1, CREATE(T2, "ref" = a)};</li>
+      <li>New language feature: new type of rule element for completely optional match which does not require an existing annotation and therefore also works at the boundary of a window/document. Example: NUM _{-PARTOF(CW)};</li>
+      <li>Type lists can be used as matching condition.</li>
+      <li>Initial default value of string and annotations variables is now null.</li>
+      <li>Comparison of annotation and annotation list are now supported.</li>
+      <li>New configuration parameter 'inferenceVisitors'.</li>
+      <li>New configuration parameter 'maxRuleMatches'.</li>
+      <li>New configuration parameter 'maxRuleElementMatches'.</li>
+      <li>New configuration parameter 'rulesScriptName'.</li>
+      <li>Inlined rules as condition are only evaluated if the rule element match was successful.</li>
+      <li>Multiple inlined rule blocks are allowed at one rule element.</li>
+      <li>String features with allowed values are supported.</li>
+      <li>PlainTextAnnotator supports vertical tabs.</li>
+      <li>Various improvements for WORDTABLE.</li>
+      <li>Thrown exceptions include script name.</li>
+      <li>Fixed values of label for failed matches.</li>
+      <li>Fixed inlined rules as condition at wildcards.</li>
+      <li>Fixed resetting of annotation-based variables.</li>
+      <li>Fixed various bugs of wildcards.</li>
+      <li>Fixed CONTAINS condition for annotations overlapping the window.</li>
+      <li>Fixed COUNT condition.</li>
+      <li>Fixed setting variables by configuration parameter.</li>
+    </ul>
+    <p>UIMA Ruta Workbench:</p>
+    <ul>
+      <li>Query View support more CAS formats.</li>
+      <li>Fixed order of scripts in Applied Rules view.</li>
+      <li>Fixed reporting of non-existing problems in editor.</li>
+    </ul>
       
       <p>For a complete list of bugs and improvements included in this release please see
       <a href="https://uima.apache.org/d/ruta-2.7.0/issuesFixed/jira-report.html">issue report</a>.
@@ -517,7 +539,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           <li>Job and managed reservation specs now saved in DB</li>
           <li>DUCC Web Server (WS) queries DB too often</li>
           <li>DUCC Web Server (WS) should use Resource Manager (RM) calculated value for machine's memory available</li>
-	  <li>Other bug fixes</li>
+    <li>Other bug fixes</li>
 
          </ul>
       <p>
@@ -668,15 +690,15 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         <ul>
           <li>The userid of a privileged DUCC installation does not have to be "ducc"</li>
           <li>ducc-mon login can be used on systems where users do not have password login</li>
-	  <li>The DUCC head-node daemons may be moved to another host without breaking working applications</li>
-	  <li>The deployment descriptor for a UIMA-AS service can be loaded from the classpath</li>
-	  <li>Interactive applications run correctly with viaducc (fixed lost inputs)</li>
-	  <li>Files created by DUCC jobs inherit the permissions of the launching shell's umask.</li>
-	  <li>DUCC performance breakdown for scaled synchronous pipelines is now correct</li>
-	  <li> Fixed javadoc method headers to enable ducc build with java 8</li>
-	  <li>Fixed JP communication threads wait logic when JD returns no work</li>
+    <li>The DUCC head-node daemons may be moved to another host without breaking working applications</li>
+    <li>The deployment descriptor for a UIMA-AS service can be loaded from the classpath</li>
+    <li>Interactive applications run correctly with viaducc (fixed lost inputs)</li>
+    <li>Files created by DUCC jobs inherit the permissions of the launching shell's umask.</li>
+    <li>DUCC performance breakdown for scaled synchronous pipelines is now correct</li>
+    <li> Fixed javadoc method headers to enable ducc build with java 8</li>
+    <li>Fixed JP communication threads wait logic when JD returns no work</li>
           <li>GC stats not available sometimes from remote JP</li>
-	  <li>Other bug fixes</li>
+    <li>Other bug fixes</li>
           <li>Many DUCC webpage improvements </li>
 
          </ul>
@@ -1008,25 +1030,25 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 
       <p>The UIMA core Java SDK adds some new capabilities and fixes some bugs.
       <ul>
-					<li>Two new features were added.
-					<ul><li>CasIOUtls - a collection of general-purpose CAS load/save utilities, with support for
-					including the type system and index definition information along with the Feature Structures.</li>
-					<li>A new set of APIs allowing use of the external shared settings files to be used directly, rather than only by 
-					overriding UIMA configuration parameters. These APIs give direct access by the external settings file's key names to the 
-					key values.</li>
-					</ul>
-					</li>
-					<li>Many bugs were fixed, including:
-					<ul>
-					<li>A regression (since version 2.8.0) which broke the unambiguous AnnotationIndex iterator in some cases.</li>
-					<li>fixes for the Eclipse tooling plugins to work with the latest Eclipse (4.6, Neon) version.</li>
-					<li>Sofa mapping support for flow controllers.</li>
-					<li>Fixing a stack overflow error in AnnotationViewer when switching Sofas.</li>
-					<li>Fixing 2 JSON serialization issues: mishandling of arrays of FeatureStructures having null entries,
-					and mishandling of namespaces for uninstantiated types found as supertypes.</li>
-					</ul>
-					</li>
-					</ul></p>
+          <li>Two new features were added.
+          <ul><li>CasIOUtls - a collection of general-purpose CAS load/save utilities, with support for
+          including the type system and index definition information along with the Feature Structures.</li>
+          <li>A new set of APIs allowing use of the external shared settings files to be used directly, rather than only by 
+          overriding UIMA configuration parameters. These APIs give direct access by the external settings file's key names to the 
+          key values.</li>
+          </ul>
+          </li>
+          <li>Many bugs were fixed, including:
+          <ul>
+          <li>A regression (since version 2.8.0) which broke the unambiguous AnnotationIndex iterator in some cases.</li>
+          <li>fixes for the Eclipse tooling plugins to work with the latest Eclipse (4.6, Neon) version.</li>
+          <li>Sofa mapping support for flow controllers.</li>
+          <li>Fixing a stack overflow error in AnnotationViewer when switching Sofas.</li>
+          <li>Fixing 2 JSON serialization issues: mishandling of arrays of FeatureStructures having null entries,
+          and mishandling of namespaces for uninstantiated types found as supertypes.</li>
+          </ul>
+          </li>
+          </ul></p>
       <p>Please see the <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-2.9.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
       for a summary of the changes.</p>
     </subsection>
@@ -1160,20 +1182,20 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       </subsection>
  
      <subsection name="26 Oct 2015" date = "26 October 2015" title="Apache UIMA Ducc 2.0.1 released">
-	
-	        <p>This is a bug fix release addressing bugs found since ducc 2.0.0 release.</p>
+  
+          <p>This is a bug fix release addressing bugs found since ducc 2.0.0 release.</p>
         <p>Please see the <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uima-ducc-2.0.1/RELEASE_NOTES.html">RELEASE_NOTES</a>
         for a summary of the changes.</p>
-	    </subsection>
+      </subsection>
 
      <subsection name="25 Aug 2015" date = "25 August 2015" title="Apache UIMA Ruta 2.3.1 released">
-	
-	        <p>This is a bugfix release. It fixes diverse problems of the rule inference, 
-	          the ruta-maven-plugin and the UIMA Ruta Workbench.</p>
-	        <p>For a complete list of bugs and improvements included in this release please see
-	        <a href="https://uima.apache.org/d/ruta-2.3.1/issuesFixed/jira-report.html">issue report</a>.
-	        </p>
-	    </subsection>
+  
+          <p>This is a bugfix release. It fixes diverse problems of the rule inference, 
+            the ruta-maven-plugin and the UIMA Ruta Workbench.</p>
+          <p>For a complete list of bugs and improvements included in this release please see
+          <a href="https://uima.apache.org/d/ruta-2.3.1/issuesFixed/jira-report.html">issue report</a>.
+          </p>
+      </subsection>
 
      <subsection name="11 Aug 2015" date = "11 August 2015" title="Apache UIMA DUCC 2.0.0 released">
         <p>DUCC stands for Distributed UIMA Cluster Computing. DUCC is a cluster management system providing tooling,
@@ -1216,28 +1238,28 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       <subsection name="22 July 2015" date = "22 July 2015" title="Apache UIMA Java SDK 2.8.0 released">
         <p>Note: this version has been replaced by 2.8.1 (above), and has been removed
         from the download page (but is available on the archives, if needed).</p>
-	      <p>This release is a bug fix release, plus one enhancement.  The version number incremented because
-	      we restored some APIs that were accidentally dropped in 2.7.0.  
-	      </p>
-	      <p>An improvement was made to the performance of iterators over sorted indexes, such as the 
-	      built-in Annotation index.  This improvement may be significant when iterating over types where the type has
-	      many subtypes.</p>
-	      
-	      <p>Index usage by iterators in this situation is now monitored, and when it is determined 
-	      that a particular index is no longer being updated and is experiencing poor performance due to merging of 
-	      subindexes for the subtypes being iterated over, a one-time conversion of this index to a "flattened" version is done; 
-	      the flattened form incurs the cost of merging subindexes once, and for subsequent uses, 
-	      iteration overhead is reduced. Any update that affects this flattened index will cause it to be discarded 
+        <p>This release is a bug fix release, plus one enhancement.  The version number incremented because
+        we restored some APIs that were accidentally dropped in 2.7.0.  
+        </p>
+        <p>An improvement was made to the performance of iterators over sorted indexes, such as the 
+        built-in Annotation index.  This improvement may be significant when iterating over types where the type has
+        many subtypes.</p>
+        
+        <p>Index usage by iterators in this situation is now monitored, and when it is determined 
+        that a particular index is no longer being updated and is experiencing poor performance due to merging of 
+        subindexes for the subtypes being iterated over, a one-time conversion of this index to a "flattened" version is done; 
+        the flattened form incurs the cost of merging subindexes once, and for subsequent uses, 
+        iteration overhead is reduced. Any update that affects this flattened index will cause it to be discarded 
         and not used for subsequent iterations.</p>
-	      
-	      <p>Performance improvement may be seen for use cases 
-	      where one annotator creates and indexes instances of a type and its subtypes, and subsequent annotators 
-	      read and perhaps update these, but don't add or remove entries of this type/subtypes from the index. 
-	      For more details, see Jira issue 
-	      <a target="_blank" rel="noopener" href="https://issues.apache.org/jira/browse/UIMA-4357">UIMA-4357</a>. 
-	      </p>
-	      <p>For more details, please see the <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-2.8.0/RELEASE_NOTES.html">RELEASE_NOTES</a>.</p>
-	    </subsection>
+        
+        <p>Performance improvement may be seen for use cases 
+        where one annotator creates and indexes instances of a type and its subtypes, and subsequent annotators 
+        read and perhaps update these, but don't add or remove entries of this type/subtypes from the index. 
+        For more details, see Jira issue 
+        <a target="_blank" rel="noopener" href="https://issues.apache.org/jira/browse/UIMA-4357">UIMA-4357</a>. 
+        </p>
+        <p>For more details, please see the <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-2.8.0/RELEASE_NOTES.html">RELEASE_NOTES</a>.</p>
+      </subsection>
       
       <subsection name="08 June 2015" date = "08 June 2015" title="Apache UIMA Ruta 2.3.0 released">
         <p>Apache UIMA Ruta is a rule-based script language supported by
@@ -1251,28 +1273,28 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           smoothly with Apache UIMA. 
         </p>
         <p>Major Changes in this Release</p>
-				<p>
-				  This release requires an update of script projects and its descriptors in the UIMA Ruta Workbench, 
-				  e.g, by deleting all descriptors and updating the script project.
-				  Right-click on a project and select "UIMA Ruta -> Convert to UIMA Ruta project
-				</p>
-				<p>
-				<p>UIMA Ruta Language and Analysis Engine:</p>
-				<ul>
-				  <li>Requires Java 7</li>
-				  <li>Maven Plugin for UIMA Ruta</li>
-				  <li>Extensions and simplifications of the language (external resources, null values, more syntactic sugar)</li>
-				  <li>Improvements to Analysis Engines (RutaEngine, HtmlConverter)</li>
-				  <li>More exemplary script projects</li>
-				  <li>Many, many bug fixes</li>
-				 </ul>
-				<p>UIMA Ruta Workbench:</p>
-				 <ul>
-				  <li>Requires Java 7</li>
-				  <li>Works now also in other project structures (Maven projects)</li>
-				  <li>Bug fixes</li>
-				 </ul>
-				</p>
+        <p>
+          This release requires an update of script projects and its descriptors in the UIMA Ruta Workbench, 
+          e.g, by deleting all descriptors and updating the script project.
+          Right-click on a project and select "UIMA Ruta -> Convert to UIMA Ruta project
+        </p>
+        <p>
+        <p>UIMA Ruta Language and Analysis Engine:</p>
+        <ul>
+          <li>Requires Java 7</li>
+          <li>Maven Plugin for UIMA Ruta</li>
+          <li>Extensions and simplifications of the language (external resources, null values, more syntactic sugar)</li>
+          <li>Improvements to Analysis Engines (RutaEngine, HtmlConverter)</li>
+          <li>More exemplary script projects</li>
+          <li>Many, many bug fixes</li>
+         </ul>
+        <p>UIMA Ruta Workbench:</p>
+         <ul>
+          <li>Requires Java 7</li>
+          <li>Works now also in other project structures (Maven projects)</li>
+          <li>Bug fixes</li>
+         </ul>
+        </p>
         
         <p>For a complete list of bugs and improvements included in this release please see
         <a href="https://uima.apache.org/d/ruta-2.3.0/issuesFixed/jira-report.html">issue report</a>.
@@ -1301,9 +1323,9 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       The complete list of fixes is <a href="d/uimaj-2.7.0/issuesFixed/jira-report.html">here</a>.
       </p>
     </subsection>
-	 
-	 <subsection name="23 October 2014" date = "23 October 2014" title="Apache UIMA DUCC 1.1.0 released">
-		      <p>UIMA DUCC 1.1.0 is a maintenance release that contains fixes and improvements over UIMA-DUCC 1.0.0.</p>
+   
+   <subsection name="23 October 2014" date = "23 October 2014" title="Apache UIMA DUCC 1.1.0 released">
+          <p>UIMA DUCC 1.1.0 is a maintenance release that contains fixes and improvements over UIMA-DUCC 1.0.0.</p>
                                     
         <p>DUCC stands for Distributed UIMA Cluster Computing. DUCC is a cluster management system providing tooling,
 management, and scheduling facilities to automate the scale-out of applications written to the UIMA framework.
@@ -1319,7 +1341,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       </p>
               
     </subsection> 
-	  
+    
      <subsection name="23 September 2014" date = "23 September 2014" title="Apache UIMA Ruta 2.2.1 released">
         <p>Apache UIMA Ruta is a rule-based script language supported by
           Eclipse-based tooling. The language is designed to enable rapid
@@ -1362,16 +1384,16 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       
     <subsection name="12 May 2014" date = "12 May 2014" title="Apache UIMA Java SDK 2.6.0 released">
       <p>The UIMA framework has been enhanced to support large memory/ large multi-core machines,
-		  with various improvements to synchronization, lock contention, and locality of reference to optimize
-		  memory bandwidth in the presence of non-uniform memory access speeds.  In addition, embedders of the framework
-		  can now choose to run initialization of UIMA components that share a common Resource Manager 
-		  and/or common UIMA Context, on multiple threads, concurrently.  CASes which are not being modified can
-		  be accessed (read-only) by multiple threads, simultaneously.  Along the way, many subtle bugs were fixed.
-		  </p><p>
-		  The complete list of fixes is <a href="d/uimaj-2.6.0/issuesFixed/jira-report.html">here</a>.
-		  </p><p>
-		  This version of UIMA requires Java version 6 or later.      
-		  </p>
+      with various improvements to synchronization, lock contention, and locality of reference to optimize
+      memory bandwidth in the presence of non-uniform memory access speeds.  In addition, embedders of the framework
+      can now choose to run initialization of UIMA components that share a common Resource Manager 
+      and/or common UIMA Context, on multiple threads, concurrently.  CASes which are not being modified can
+      be accessed (read-only) by multiple threads, simultaneously.  Along the way, many subtle bugs were fixed.
+      </p><p>
+      The complete list of fixes is <a href="d/uimaj-2.6.0/issuesFixed/jira-report.html">here</a>.
+      </p><p>
+      This version of UIMA requires Java version 6 or later.      
+      </p>
     </subsection>
       
 
@@ -1389,19 +1411,19 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         <p>The major changes in this release are:</p>
         <p>UIMA Ruta Language and Analysis Engine:</p>
           <ul>
-	          <li>Major performance improvements (3-17 times faster in test use cases)</li>
-						<li>Improved import type functionality and handling of ambiguous short names</li>
-						<li>Support of block extensions for rule inference adaptions</li>
-						<li>Options to determine where the next match should start</li>
-						<li>Requires at least Java 6</li>
-						<li>Many bug fixes</li>
-					</ul>
-					<p>UIMA Ruta Workbench:</p>
-					<ul>
-						<li>Smaller improvements in many views</li>
-						<li>Support of mixin Java/Ruta projects</li>
-						<li>Many bug fixes</li>
-					</ul>
+            <li>Major performance improvements (3-17 times faster in test use cases)</li>
+            <li>Improved import type functionality and handling of ambiguous short names</li>
+            <li>Support of block extensions for rule inference adaptions</li>
+            <li>Options to determine where the next match should start</li>
+            <li>Requires at least Java 6</li>
+            <li>Many bug fixes</li>
+          </ul>
+          <p>UIMA Ruta Workbench:</p>
+          <ul>
+            <li>Smaller improvements in many views</li>
+            <li>Support of mixin Java/Ruta projects</li>
+            <li>Many bug fixes</li>
+          </ul>
         <p>For a complete list of bugs and improvements included in this release please see
         <a href="https://uima.apache.org/d/ruta-2.2.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
@@ -1417,7 +1439,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         </p>
               
   </subsection>
-	<subsection name="30 January 2014" date = "30 January 2014" title="Apache UIMA DUCC 1.0.0 released">
+  <subsection name="30 January 2014" date = "30 January 2014" title="Apache UIMA DUCC 1.0.0 released">
          <p>This is the first release of the sandbox project UIMA DUCC.</p>
                                     
         <p>DUCC stands for Distributed UIMA Cluster Computing. DUCC is a cluster management system providing tooling,
@@ -1535,12 +1557,12 @@ provides cluster management services to automate the scale-out of UIMA pipelines
               multi-valued external resources</li>  
           </ul>
 
-		<p>Note on compatibility and migration: Apache uimaFIT 2.0.0 is not a drop-in replacement 
-		  for uimaFIT 1.4.x, although, it was tried to keep the migration effort minimal. Please 
+    <p>Note on compatibility and migration: Apache uimaFIT 2.0.0 is not a drop-in replacement 
+      for uimaFIT 1.4.x, although, it was tried to keep the migration effort minimal. Please 
           refer to the <a href="d/uimafit-2.0.0/tools.uimafit.book.html#d5e617">
           migration guide</a> for all the details on incompatible changes between uimaFIT 1.4.0 and
           Apache uimaFIT 2.0.0.
-		</p>
+    </p>
           
         <p>
           Additionally, there have been more bug fixes and minor improvements. For a full list of 
@@ -1749,78 +1771,78 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         <p>See <a href="https://www.oasis-open.org/news/oasis-news-2009-03-19.php" target="_blank" rel="noopener">https://www.oasis-open.org/news/oasis-news-2009-03-19.php</a></p>
       </subsection>     
 
-			<subsection name='29 December 2008' date="29 December 2008" title="UIMA C++ Framework Released">
-				<p>				
-					The UIMA C++ Framework enables creation of UIMA compliant Analysis Engines 
-					from programs written in C++, Perl, Python and Tcl. These components can be
+      <subsection name='29 December 2008' date="29 December 2008" title="UIMA C++ Framework Released">
+        <p>        
+          The UIMA C++ Framework enables creation of UIMA compliant Analysis Engines 
+          from programs written in C++, Perl, Python and Tcl. These components can be
                                         developed and tested without any Java programming.
                                         See a short introduction on <a href="doc-uimacpp-huh.html">Getting Started: UIMA C++ Framework</a>.
-				</p>
-			</subsection>
+        </p>
+      </subsection>
 
-			<subsection name='12 August 2008' date="12 August 2008" title="UIMA CAS Editor Released">
-				<p>
-					UIMA Cas Editor is an annotation tool which supports manual and automatic 
-					                    annotation (via running UIMA annotators) of CAS files. 
-										Downloads of the project can be found on
-										<a href="downloads.cgi">
-											our download page.
-										</a>
-				</p>
-			</subsection>
-			
-			<subsection name='24 July 2008' date="24 July 2008" title="UIMA Asynchronous Scaleout (UIMA-AS) Released">
-				<p>  
-					UIMA AS is the next generation scalability replacement for the Collection Processing Manager (CPM).
+      <subsection name='12 August 2008' date="12 August 2008" title="UIMA CAS Editor Released">
+        <p>
+          UIMA Cas Editor is an annotation tool which supports manual and automatic 
+                              annotation (via running UIMA annotators) of CAS files. 
+                    Downloads of the project can be found on
+                    <a href="downloads.cgi">
+                      our download page.
+                    </a>
+        </p>
+      </subsection>
+      
+      <subsection name='24 July 2008' date="24 July 2008" title="UIMA Asynchronous Scaleout (UIMA-AS) Released">
+        <p>  
+          UIMA AS is the next generation scalability replacement for the Collection Processing Manager (CPM).
                                         UIMA AS provides more flexible and powerful scaleout capability, and extends support
                                         to the UIMA components not supported by the CPM,
                                         the flow controller and CAS multiplier. UIMA components can be run within UIMA AS
                                         with no code or component descriptor changes.
                                         See more on the documentation page <a href="doc-uimaas-what.html">Getting Started: UIMA Asynchronous Scaleout</a>.
-				</p>
-			</subsection>
+        </p>
+      </subsection>
 
-			<subsection name='16 July 2008' date='16 July 2008' title='Hotfix-1 for UIMA core 2.2.2-incubating Released'>
-				<p>
-					This fixes memory issues with the UIMA CAS noted in 
-					<a href="https://issues.apache.org/jira/browse/UIMA-1067">Jira issue 1067</a> and
-					<a href="https://issues.apache.org/jira/browse/UIMA-1068">Jira issue 1068</a>.
-          			The hotfix consists of one zip file, which contains a replacement for the 
-          			uima-core.jar and a README with some install and usage instructions.
-				</p>
-			</subsection>
+      <subsection name='16 July 2008' date='16 July 2008' title='Hotfix-1 for UIMA core 2.2.2-incubating Released'>
+        <p>
+          This fixes memory issues with the UIMA CAS noted in 
+          <a href="https://issues.apache.org/jira/browse/UIMA-1067">Jira issue 1067</a> and
+          <a href="https://issues.apache.org/jira/browse/UIMA-1068">Jira issue 1068</a>.
+                The hotfix consists of one zip file, which contains a replacement for the 
+                uima-core.jar and a README with some install and usage instructions.
+        </p>
+      </subsection>
 
-			<subsection name='07 May 2008' date='07 May 2008' title='Version 2.2.2-incubating Released'>
-				<p>
-					The Apache UIMA version 2.2.2-incubating has been released!
-					For a list of all fixed issues, please refer to the 
-					<a href="https://downloads.apache.org/uima/RELEASE_NOTES-uimaj-2.2.2-incubating.html">Release Notes</a>.
-					Downloads of the bugfix release can be found on
-					<a href="downloads.cgi">our download page.</a>
-				</p>
-			</subsection>
+      <subsection name='07 May 2008' date='07 May 2008' title='Version 2.2.2-incubating Released'>
+        <p>
+          The Apache UIMA version 2.2.2-incubating has been released!
+          For a list of all fixed issues, please refer to the 
+          <a href="https://downloads.apache.org/uima/RELEASE_NOTES-uimaj-2.2.2-incubating.html">Release Notes</a>.
+          Downloads of the bugfix release can be found on
+          <a href="downloads.cgi">our download page.</a>
+        </p>
+      </subsection>
 
-			<subsection name='19 December 2007' date='19 December 2007' title='Version 2.2.1-incubating Released'>
-				<p>
-					The Apache UIMA version 2.2.1-incubating has been released!
-					Downloads of the bugfix release can be found on
-					<a href="downloads.cgi">
-						our download page.
-					</a>
-				</p>
-			</subsection>
+      <subsection name='19 December 2007' date='19 December 2007' title='Version 2.2.1-incubating Released'>
+        <p>
+          The Apache UIMA version 2.2.1-incubating has been released!
+          Downloads of the bugfix release can be found on
+          <a href="downloads.cgi">
+            our download page.
+          </a>
+        </p>
+      </subsection>
 
-			<subsection name='23 August 2007' date='23 August 2007' title='Version 2.2.0-incubating Released'>
-				<p>
-					Version 2.2.0-incubating has been released!
-					Downloads of the project can be found on
-					<a href="downloads.cgi">
-						our download page.
-					</a>
-				</p>
-			</subsection>
+      <subsection name='23 August 2007' date='23 August 2007' title='Version 2.2.0-incubating Released'>
+        <p>
+          Version 2.2.0-incubating has been released!
+          Downloads of the project can be found on
+          <a href="downloads.cgi">
+            our download page.
+          </a>
+        </p>
+      </subsection>
 
-			<subsection name='7 April 2007' date='7 April 2007' title='Hotfix-1 for 2.1.0 Component Description Editor (CDE) Released'>
+      <subsection name='7 April 2007' date='7 April 2007' title='Hotfix-1 for 2.1.0 Component Description Editor (CDE) Released'>
         <p>
           A "hotfix" for the Component Descriptor Editor, an Eclipse plugin used when editing UIMA descriptors,
           has been released.  This fixes functionality problems noted in 
@@ -1830,48 +1852,47 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         </p>
       </subsection>
       
- 			<subsection name='14 March 2007' date='14 March 2007' title='Version 2.1.0-incubating Released'>
-				<p>
+       <subsection name='14 March 2007' date='14 March 2007' title='Version 2.1.0-incubating Released'>
+        <p>
           Version 2.1.0-incubating has been released!
           Downloads of the project can be found at 
           <a href="downloads.cgi">https://uima.apache.org/downloads.cgi</a>
-				</p>
-			</subsection>
+        </p>
+      </subsection>
       
-			<subsection name='20 December 2006' date='20 December 2006' title='GLDV conference workshop (Germany)'>
-				<p>We are pleased announce a UIMA workshop at the <a href="https://www.sfb441.uni-tuebingen.de/gldv2007/index.en.html">GLDV 2007 spring conference</a>
-				in beautiful <a href="https://www.tuebingen.de/en/1559.html">Tübingen</a>, Germany.  
-				Please see the <a href="gldv07.html">full announcement</a>
-				for further details.
-				</p>
-			</subsection>
-			
-			<subsection name='13 December 2006' date='13 December 2006' title='ApacheCon 2007 Europe coming up'>
-				<p><a href="https://apachecon.com/2007/EU/index.html/e=MjAwNy9FVQ">ApacheCon 2007 Europe</a>
-				is coming up.  We are hoping to have some UIMA attendance
-				there, although we have no concrete plans as of now.  Watch this space.  If you would
-				like to meet with
-				UIMA folks there, drop us a line on uima-dev!
-				</p>
-			</subsection>
-			
-			<subsection name='07 December 2006' date='7 December 2006' title='UIMA Sandbox established'>
-				<p> 
-				  The UIMA sandbox is a workspace that is open to all UIMA committers and developers who would 
-				  like to contribute code and join the UIMA developer community on Apache. Details about the 
-				  sandbox can be found <a href="sandbox.html">here</a>.
-				</p>
-			</subsection>
-			
-			<subsection name='05 October 2006' date='5 October 2006' title='UIMA enters Apache Incubator'>
-				<p>
-				  UIMA has been accepted into the Apache Incubator by the Apache Inbubator PMC. Work begins on 
-				  converting the previous code base to Apache standards.
-				</p>
-			</subsection>
+      <subsection name='20 December 2006' date='20 December 2006' title='GLDV conference workshop (Germany)'>
+        <p>We are pleased announce a UIMA workshop at the <a href="https://www.sfb441.uni-tuebingen.de/gldv2007/index.en.html">GLDV 2007 spring conference</a>
+        in beautiful <a href="https://www.tuebingen.de/en/1559.html">Tübingen</a>, Germany.  
+        Please see the <a href="gldv07.html">full announcement</a>
+        for further details.
+        </p>
+      </subsection>
+      
+      <subsection name='13 December 2006' date='13 December 2006' title='ApacheCon 2007 Europe coming up'>
+        <p><a href="https://apachecon.com/2007/EU/index.html/e=MjAwNy9FVQ">ApacheCon 2007 Europe</a>
+        is coming up.  We are hoping to have some UIMA attendance
+        there, although we have no concrete plans as of now.  Watch this space.  If you would
+        like to meet with
+        UIMA folks there, drop us a line on uima-dev!
+        </p>
+      </subsection>
+      
+      <subsection name='07 December 2006' date='7 December 2006' title='UIMA Sandbox established'>
+        <p> 
+          The UIMA sandbox is a workspace that is open to all UIMA committers and developers who would 
+          like to contribute code and join the UIMA developer community on Apache. Details about the 
+          sandbox can be found <a href="sandbox.html">here</a>.
+        </p>
+      </subsection>
+      
+      <subsection name='05 October 2006' date='5 October 2006' title='UIMA enters Apache Incubator'>
+        <p>
+          UIMA has been accepted into the Apache Incubator by the Apache Inbubator PMC. Work begins on 
+          converting the previous code base to Apache standards.
+        </p>
+      </subsection>
 
-		</section>
-
-	</body>
+    </section>
+  </body>
 </document>
 

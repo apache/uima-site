@@ -133,7 +133,7 @@ Other mirrors: <select name="Preferred">
   <p>Note that some older releases appear under the "Latest" because they contain
      the latest release of some of the components included in that version. </p>
 
-  <subsection name="Apache UIMA Version 3.1.1">
+  <subsection name="Apache UIMA Version 3.2.0">
     <p>UIMA Java SDK, V3, is a re-implementation of the core Java version.  It represents Feature Structures as Java Objects,
        allowing them to be Garbage Collected, for example.  It depends on and exploits many Java 8 features.
     </p>
@@ -142,11 +142,11 @@ Other mirrors: <select name="Preferred">
       a migration tool to aid in this process.</p>
     
     <p>There are many new features, described in 
-      <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.1.1/version_3_users_guide.html#uv3.overview.new">
+      <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.2.0/version_3_users_guide.html#uv3.overview.new">
       this overview</a>.  For more details, please see the documentation for version 3, which can be found 
-      <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.1.1/version_3_users_guide.html">here.</a>
+      <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.2.0/version_3_users_guide.html">here.</a>
       Changes since the beta version are listed in the 
-      <a target="_blank" rel="noopener" href="../d/uimaj-3.1.1/RELEASE_NOTES.html">Release Notes</a>.
+      <a target="_blank" rel="noopener" href="../d/uimaj-3.2.0/RELEASE_NOTES.html">Release Notes</a>.
     </p>
     
     <p>Version 3 also has updated Eclipse plugin tooling, available
@@ -160,7 +160,7 @@ Other mirrors: <select name="Preferred">
     <p>Other components built upon the UIMA Java SDK may not (yet) run with version 3, until 
       migrated versions of these are released.</p>
       
-    <insertDownloads version="3.1.1"/>
+    <insertDownloads version="3.2.0"/>
   </subsection>
 
   <subsection name="Apache UIMA DUCC Version 3.0.0">

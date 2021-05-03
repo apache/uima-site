@@ -1,2 +1,88 @@
-Comparing source compatibility of C:\au\builds\uimaj-3.1.1\rc2\artifacts\target\checkout\uimaj-core\target\uima-core.jar against C:\Users\MarshallSchor\.m2\repository\org\apache\uima\uimaj-core\3.1.0\uimaj-core-3.1.0.jar
-No changes.
+Comparing source compatibility of /Users/bluefire/git/uima-uimaj/target/checkout/uimaj-core/target/uima-core.jar against /Users/bluefire/.m2/repository/org/apache/uima/uimaj-core/3.1.1/uimaj-core-3.1.1.jar
+WARNING: You have ignored certain classes, i.e. superclasses and interfaces that could not be found on the classpath are ignored. Hence changes caused by these superclasses and interfaces are not reflected in the output.
+**** MODIFIED INTERFACE: PUBLIC ABSTRACT org.apache.uima.cas.SelectFSs  (not serializable)
+	===  CLASS FILE FORMAT VERSION: 52.0 <- 52.0
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) org.apache.uima.cas.FeatureStructure get(org.apache.uima.cas.FeatureStructure)
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) org.apache.uima.cas.FeatureStructure get(org.apache.uima.cas.FeatureStructure, int)
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) org.apache.uima.cas.FeatureStructure single(org.apache.uima.cas.FeatureStructure)
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) org.apache.uima.cas.FeatureStructure single(org.apache.uima.cas.FeatureStructure, int)
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) org.apache.uima.cas.FeatureStructure singleOrNull(org.apache.uima.cas.FeatureStructure)
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) org.apache.uima.cas.FeatureStructure singleOrNull(org.apache.uima.cas.FeatureStructure, int)
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) org.apache.uima.cas.SelectFSs startAt(org.apache.uima.cas.FeatureStructure)
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) org.apache.uima.cas.SelectFSs startAt(int)
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) org.apache.uima.cas.SelectFSs startAt(org.apache.uima.cas.FeatureStructure, int)
+***  MODIFIED ENUM: PUBLIC FINAL org.apache.uima.cas.SerialFormat  (compatible)
+	===  CLASS FILE FORMAT VERSION: 52.0 <- 52.0
+	+++  NEW FIELD: PUBLIC(+) STATIC(+) FINAL(+) org.apache.uima.cas.SerialFormat XMI_PRETTY
+	+++  NEW FIELD: PUBLIC(+) STATIC(+) FINAL(+) org.apache.uima.cas.SerialFormat XMI_1_1
+	+++  NEW FIELD: PUBLIC(+) STATIC(+) FINAL(+) org.apache.uima.cas.SerialFormat XMI_1_1_PRETTY
+	+++  NEW FIELD: PUBLIC(+) STATIC(+) FINAL(+) org.apache.uima.cas.SerialFormat XCAS_1_1
+***! MODIFIED INTERFACE: PUBLIC ABSTRACT org.apache.uima.cas.text.AnnotationFS  (not serializable)
+	===  CLASS FILE FORMAT VERSION: 52.0 <- 52.0
+	+++! NEW METHOD: PUBLIC(+) boolean coveredBy(int, int)
+	+++! NEW METHOD: PUBLIC(+) boolean coveredBy(org.apache.uima.cas.text.AnnotationFS)
+	+++! NEW METHOD: PUBLIC(+) boolean covering(int, int)
+	+++! NEW METHOD: PUBLIC(+) boolean covering(org.apache.uima.cas.text.AnnotationFS)
+	+++! NEW METHOD: PUBLIC(+) boolean following(int, int)
+	+++! NEW METHOD: PUBLIC(+) boolean following(org.apache.uima.cas.text.AnnotationFS)
+	+++! NEW METHOD: PUBLIC(+) boolean overlapping(int, int)
+	+++! NEW METHOD: PUBLIC(+) boolean overlapping(org.apache.uima.cas.text.AnnotationFS)
+	+++! NEW METHOD: PUBLIC(+) boolean overlappingAtBegin(int, int)
+	+++! NEW METHOD: PUBLIC(+) boolean overlappingAtBegin(org.apache.uima.cas.text.AnnotationFS)
+	+++! NEW METHOD: PUBLIC(+) boolean overlappingAtEnd(int, int)
+	+++! NEW METHOD: PUBLIC(+) boolean overlappingAtEnd(org.apache.uima.cas.text.AnnotationFS)
+	+++! NEW METHOD: PUBLIC(+) boolean preceding(int, int)
+	+++! NEW METHOD: PUBLIC(+) boolean preceding(org.apache.uima.cas.text.AnnotationFS)
+	+++! NEW METHOD: PUBLIC(+) void trim()
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) void trim(java.util.function.IntPredicate)
++++  NEW CLASS: PUBLIC(+) FINAL(+) org.apache.uima.cas.text.AnnotationPredicates  (not serializable)
+	+++  CLASS FILE FORMAT VERSION: 52.0 <- n.a.
+	+++  NEW SUPERCLASS: java.lang.Object
+	+++  NEW CONSTRUCTOR: PUBLIC(+) AnnotationPredicates()
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean beginningWith(int, int, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean beginningWith(org.apache.uima.cas.text.AnnotationFS, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean beginningWith(org.apache.uima.cas.text.AnnotationFS, org.apache.uima.cas.text.AnnotationFS)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean colocated(int, int, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean colocated(org.apache.uima.cas.text.AnnotationFS, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean colocated(org.apache.uima.cas.text.AnnotationFS, org.apache.uima.cas.text.AnnotationFS)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean coveredBy(int, int, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean coveredBy(org.apache.uima.cas.text.AnnotationFS, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean coveredBy(org.apache.uima.cas.text.AnnotationFS, org.apache.uima.cas.text.AnnotationFS)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean covering(int, int, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean covering(org.apache.uima.cas.text.AnnotationFS, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean covering(org.apache.uima.cas.text.AnnotationFS, org.apache.uima.cas.text.AnnotationFS)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean endingWith(int, int, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean endingWith(org.apache.uima.cas.text.AnnotationFS, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean endingWith(org.apache.uima.cas.text.AnnotationFS, org.apache.uima.cas.text.AnnotationFS)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean following(int, int, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean following(org.apache.uima.cas.text.AnnotationFS, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean following(org.apache.uima.cas.text.AnnotationFS, org.apache.uima.cas.text.AnnotationFS)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean overlapping(int, int, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean overlapping(org.apache.uima.cas.text.AnnotationFS, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean overlapping(org.apache.uima.cas.text.AnnotationFS, org.apache.uima.cas.text.AnnotationFS)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean overlappingAtBegin(int, int, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean overlappingAtBegin(org.apache.uima.cas.text.AnnotationFS, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean overlappingAtBegin(org.apache.uima.cas.text.AnnotationFS, org.apache.uima.cas.text.AnnotationFS)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean overlappingAtEnd(int, int, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean overlappingAtEnd(org.apache.uima.cas.text.AnnotationFS, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean overlappingAtEnd(org.apache.uima.cas.text.AnnotationFS, org.apache.uima.cas.text.AnnotationFS)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean preceding(int, int, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean preceding(org.apache.uima.cas.text.AnnotationFS, int, int)
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) boolean preceding(org.apache.uima.cas.text.AnnotationFS, org.apache.uima.cas.text.AnnotationFS)
+***  MODIFIED CLASS: PUBLIC org.apache.uima.jcas.tcas.Annotation  (not serializable)
+	===  CLASS FILE FORMAT VERSION: 52.0 <- 52.0
+	===* UNCHANGED INTERFACE: org.apache.uima.cas.impl.AnnotationImpl
+	===! UNCHANGED INTERFACE: org.apache.uima.cas.text.AnnotationFS
+	+++  NEW METHOD: PUBLIC(+) void trim(java.util.function.IntPredicate)
+**** MODIFIED INTERFACE: PUBLIC ABSTRACT org.apache.uima.resource.PearSpecifier  (default serialVersionUID changed)
+	===  CLASS FILE FORMAT VERSION: 52.0 <- 52.0
+	===  UNCHANGED METHOD: PUBLIC ABSTRACT org.apache.uima.resource.Parameter[] getParameters()
+		+++  NEW ANNOTATION: java.lang.Deprecated
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) org.apache.uima.resource.metadata.NameValuePair[] getPearParameters()
+	===  UNCHANGED METHOD: PUBLIC ABSTRACT void setParameters(org.apache.uima.resource.Parameter[])
+		+++  NEW ANNOTATION: java.lang.Deprecated
+	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) void setPearParameters(org.apache.uima.resource.metadata.NameValuePair[])
+***  MODIFIED CLASS: PUBLIC org.apache.uima.util.CasCreationUtils  (not serializable)
+	===  CLASS FILE FORMAT VERSION: 52.0 <- 52.0
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) org.apache.uima.cas.CAS createCas()
+		+++  NEW EXCEPTION: org.apache.uima.resource.ResourceInitializationException
