@@ -1,5 +1,0 @@
-org.apache.uima.ducc
-org.apache.uima.ducc.cli
-org.apache.uima.ducc.common
-org.apache.uima.ducc.common.utils.id
-org.apache.uima.ducc.transport.event.sm
