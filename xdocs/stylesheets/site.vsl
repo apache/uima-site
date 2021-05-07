@@ -405,7 +405,7 @@ under the License.
 #end
 ##
 #macro (insertDownload2 $downloads)
-  #set ( $rn = "../d")
+  #set ( $rn = "https://svn.apache.org/repos/asf/uima/site/archive/docs/d")
   <table class="downloads">
     <tr>
       <th>Artifact</th>
