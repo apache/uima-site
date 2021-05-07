@@ -42,11 +42,11 @@
         <item name="Annotators"               href="/sandbox.html#uima-addons-annotators"/>
         <item name="Tools &amp; Servers"      href="/toolsServers.html"/>
         <item name="Addons and Sandbox"       href="/sandbox.html"/>
-        <item name="UIMA Ruta"                  href="/ruta.html"/>
+        <item name="UIMA Ruta"                href="/ruta.html"/>
         <item name="uimaFIT"                  href="/uimafit.html"/>
-        <item name="External Resources"       href="/external-resources.html"/>        
+        <item name="External Resources"       href="/external-resources.html"/>
       </item>
-                                                
+
       <item name="Development">
         <item name="Quick Start: building"  href="/dev-quick.html"/>
         <item name="Building from Source"   href="/building-uima.html"/>
@@ -81,7 +81,7 @@
         <!--  next line duplicates ASF Sponsors 
         <item name="Thanks"                 href="https://www.apache.org/foundation/thanks.html"/>
         -->
-        <item name="Security"               href="/security_report"/>                             
+        <item name="Security"               href="/security_report"/>
       </item>      
         
          <!--
@@ -90,7 +90,6 @@
   </menus>
 
   <downloads version="ducc-3.0.0" title="Apache UIMA DUCC Version 3.0.0" withreleasedate="true">
-
     <download name="UIMA DUCC" subdirectory="uima-ducc-3.0.0" releasedate="26-Apr-2019">
       <releasenotes filename="uima-ducc-3.0.0/RELEASE_NOTES">         <f>html</f>                              </releasenotes>
       <binary       filename="uima-ducc-3.0.0-bin">                   <f>tar.gz</f>                </binary>
@@ -106,22 +105,19 @@
     </download>
   </downloads>
 
-  <downloads version="2.10.3" title="Apache UIMA Version 2.10.3" withreleasedate="true">
+  <downloads version="2.10.3" title="Apache UIMA + UIMA-AS Version 2.10.3" withreleasedate="true">
     <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-2.10.3" releasedate="29-Nov-2018">
       <releasenotes filename="uimaj-2.10.3/RELEASE_NOTES">           <f>html</f>                </releasenotes>
       <binary       filename="uimaj-2.10.3-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
       <source       filename="uimaj-2.10.3-source-release">          <f>zip</f>  </source>
     </download>
-  </downloads>
-  
-  <downloads version="2.10.3" title="Apache UIMA-AS 2.10.3" withreleasedate="true">
     <download name="UIMA AS Asynchronous Scaleout" subdirectory="uima-as-2.10.3" releasedate="17-Apr-2018">
-      <releasenotes filename="uima-as-2.10.3/RELEASE_NOTES">         <f>html</f>                              </releasenotes> 
-      <binary       filename="uima-as-2.10.3-bin">                   <f>zip</f>  <f>tar.gz</f>                </binary>   
-      <source       filename="uima-as-2.10.3-source-release">                   <f>zip</f>    </source>
+      <releasenotes filename="uima-as-2.10.3/RELEASE_NOTES">         <f>html</f>                </releasenotes> 
+      <binary       filename="uima-as-2.10.3-bin">                   <f>zip</f>  <f>tar.gz</f>  </binary>
+      <source       filename="uima-as-2.10.3-source-release">        <f>zip</f>    </source>
     </download>
   </downloads>
-
+  
   <downloads version="2.2.2" title="Apache UIMA DUCC Version 2.2.2" withreleasedate="true">
 
     <download name="UIMA DUCC" subdirectory="uima-ducc-2.2.2" releasedate="19-Mar-2018">
@@ -141,7 +137,6 @@
   </downloads>
 
   <downloads version="2.2.0" title="Apache UIMA DUCC Version 2.2.0" withreleasedate="true">
-
     <download name="UIMA DUCC" subdirectory="uima-ducc-2.2.0" releasedate="23-Feb-2017">
       <releasenotes filename="uima-ducc-2.2.0/RELEASE_NOTES">       <f>html</f>                </releasenotes> 
       <binary       filename="uima-ducc-2.2.0-bin">                 <f>tar.gz</f> </binary>   
@@ -380,7 +375,6 @@
   </downloads>
   
   <downloads version="2.4.0" title="Apache UIMA Version 2.4.0" withreleasedate="true">
-      
     <download name="UIMA Java framework &amp; SDK" subdirectory="uimaj-2.4.0" releasedate="7-Dec-2011" archived="true">
       <releasenotes filename="uimaj-2.4.0/RELEASE_NOTES">           <f>html</f>                </releasenotes>
       <binary       filename="uimaj-2.4.0-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
@@ -478,10 +472,10 @@
   </downloads>
 
   <downloads version="uimaFIT" title="Apache UIMA uimaFIT" withreleasedate="true">
-    <download name="uimaFIT 3.1.0" subdirectory="uimafit-3.1.0" releasedate="12 May 2020">
-      <releasenotes filename="uimafit-3.1.0/README">           <f>txt</f>  </releasenotes>
-      <binary       filename="uimafit-3.1.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   
-      <source       filename="uimafit-3.1.0-source-release">   <f>zip</f>  </source>
+    <download name="uimaFIT 3.2.0" subdirectory="uimafit-3.2.0" releasedate="06-May-2021">
+      <releasenotes filename="uimafit-3.2.0/README">           <f>txt</f>  </releasenotes>
+      <binary       filename="uimafit-3.2.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   
+      <source       filename="uimafit-3.2.0-source-release">   <f>zip</f>  </source>
     </download>
     <download name="uimaFIT 2.5.0" subdirectory="uimafit-2.5.0" releasedate="26-Apr-2020">
       <releasenotes filename="uimafit-2.5.0/README">           <f>txt</f>  </releasenotes>
@@ -489,6 +483,11 @@
       <source       filename="uimafit-2.5.0-source-release">   <f>zip</f>  </source>
     </download>
     <!-- 
+    <download name="uimaFIT 3.1.0" subdirectory="uimafit-3.1.0" releasedate="12 May 2020">
+      <releasenotes filename="uimafit-3.1.0/README">           <f>txt</f>  </releasenotes>
+      <binary       filename="uimafit-3.1.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   
+      <source       filename="uimafit-3.1.0-source-release">   <f>zip</f>  </source>
+    </download>
     <download name="uimaFIT 3.0.0" subdirectory="uimafit-3.0.0" releasedate="16-Apr-2019">
       <releasenotes filename="uimafit-3.0.0/README">           <f>txt</f>  </releasenotes>
       <binary       filename="uimafit-3.0.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   
@@ -590,7 +589,5 @@
       <source       filename="uimacpp-2.3.0-incubating-src">                   <f platform="Windows"  >zip</f>  
                                                                                <f platform="Linux x86">tgz</f>                   </source>
     </download>
-        
   </downloads>
-
 </project>

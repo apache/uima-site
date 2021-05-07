@@ -10,3 +10,4 @@ org.apache.uima.fit.pipeline
 org.apache.uima.fit.testing.factory
 org.apache.uima.fit.testing.util
 org.apache.uima.fit.util
+org.apache.uima.fit.validation

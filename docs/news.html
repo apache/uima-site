@@ -232,6 +232,13 @@
         <blockquote class="sectionBody">
                                           <table class="subsectionToc">
             <tr >
+      <td>06 May 2021</td>
+      <td><a href='#06 May 2021'>
+                  Apache uimaFIT 3.2.0 released
+                </a>
+      </td>
+      </tr>  
+          <tr >
       <td>03 May 2021</td>
       <td><a href='#03 May 2021'>
                   Apache UIMA Java SDK 3.2.0 released
@@ -386,13 +393,6 @@
       </td>
       </tr>  
           <tr >
-      <td>09 Nov 2017</td>
-      <td><a href='#09 Nov 2017'>
-                  Apache UIMA Java SDK 3.0.0-beta released
-                </a>
-      </td>
-      </tr>  
-          <tr >
       <td>03 November 2017</td>
       <td><a href='#03 Nov 2017'>
                   Apache UIMA Java SDK 2.10.2 released
@@ -435,13 +435,6 @@
       </td>
       </tr>  
           <tr >
-      <td>19 Mar 2017</td>
-      <td><a href='#19 Mar 2017'>
-                  Apache UIMA Java SDK 3.0.0-alpha02 released
-                </a>
-      </td>
-      </tr>  
-          <tr >
       <td>10 March 2017</td>
       <td><a href='#10 Mar 2017'>
                   Apache UIMA Ruta 2.6.0 released
@@ -452,13 +445,6 @@
       <td>23 Feb 2017</td>
       <td><a href='#23 Feb 2017'>
                   Apache UIMA DUCC 2.2.0 released
-                </a>
-      </td>
-      </tr>  
-          <tr >
-      <td>30 Jan 2017</td>
-      <td><a href='#30 Jan 2017'>
-                  Apache UIMA Java SDK 3.0.0-alpha released
                 </a>
       </td>
       </tr>  
@@ -839,6 +825,45 @@
        
        
        
+          <a name="06 May 2021">
+            <h2>06 May 2021
+                        &ndash; Apache uimaFIT 3.2.0 released
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+        uimaFIT 3.2.0 is a feature and bugfix release. On supported platforms, it serves mostly as 
+        a drop-in replacement for previous uimaFIT 3.x versions. However, the behavior of the various
+        select methods was slightly adapted in edge cases to align with the update behavior of the
+        UIMA Java SDK SelectFS API.  For details, please refer to the migration section in the
+        documentation in the Apache UIMA Java SDK 3.2.0.
+      </p>
+                                                <p>Changes include:
+        <ul>
+          <li>Added pluggable CAS validation support</li>
+          <li>Added selectOverlapping to (J)CasUtil</li>
+          <li>Added ability to Maven plugin to add generated resource folder as Maven resource folder</li>
+          <li>Added typed PEAR parameter support</li>
+          <li>Improved overhead of createTypeSystemDescription() and friends</li>
+          <li>Improved compatibiltiy of the uimaFIT select-methods with the UIMA Java SDK SelectFS API</li>
+          <li>Improved performance of selectCovering</li>
+          <li>Fixed Maven plugin failing to import type systems from dependencies</li>
+          <li>Fixed detection and usage of proper classloader e.g. for resolving imports</li>
+          <li>Several additional bug fixes</li>
+        </ul>
+      </p>
+                                                <p>Please see the <a target="_blank" rel="noopener" href="ttps://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-3.2.0/issuesFixed/jira-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
           <a name="03 May 2021">
             <h2>03 May 2021
                         &ndash; Apache UIMA Java SDK 3.2.0 released
@@ -864,7 +889,7 @@
           <li>Many additional bug fixes</li>
         </ul>
       </p>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="d/uimaj-3.2.0/issuesFixed/jira-report.html">
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.2.0/issuesFixed/jira-report.html">
          the complete list of issues fixed</a> for more details of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -888,7 +913,7 @@
       ExternalResourceFactory. For details, please refer to the migration section in the 
       documentation.</p>
                                                 <p>
-      The complete list of fixes is <a href="d/uimafit-3.1.0/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-3.1.0/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>Notable changes in this release include:</p>
                                                 <ul>
@@ -926,7 +951,7 @@
                                     <p>uimaFIT 2.5.0 is a minor feature and bugfix release to uimaFIT 2.4.0. It should should 
       serve as a drop-in replacement for previous uimaFIT 2.x versions.</p>
                                                 <p>
-      The complete list of fixes is <a href="d/uimafit-2.5.0/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-2.5.0/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>Notable changes in this release include:</p>
                                                 <ul>
@@ -997,7 +1022,7 @@
         workarounds.
       </p>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-      <a href="https://uima.apache.org/d/ruta-3.0.1/issuesFixed/jira-report.html">issue report</a>.
+      <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-3.0.1/issuesFixed/jira-report.html">issue report</a>.
       </p>
                             </blockquote>
         </td></tr>
@@ -1040,7 +1065,7 @@
         workarounds.
       </p>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-      <a href="https://uima.apache.org/d/ruta-2.8.1/issuesFixed/jira-report.html">issue report</a>.
+      <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.8.1/issuesFixed/jira-report.html">issue report</a>.
       </p>
                             </blockquote>
         </td></tr>
@@ -1091,7 +1116,7 @@
         <li>Depends on UIMA v3 and provides compatibility to UIMA v3</li>
       </ul>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-      <a href="https://uima.apache.org/d/ruta-3.0.0/issuesFixed/jira-report.html">issue report</a>.
+      <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-3.0.0/issuesFixed/jira-report.html">issue report</a>.
       </p>
                             </blockquote>
         </td></tr>
@@ -1142,7 +1167,7 @@
         <li>Fixed bugs.</li>
       </ul>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-      <a href="https://uima.apache.org/d/ruta-2.8.0/issuesFixed/jira-report.html">issue report</a>.
+      <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.8.0/issuesFixed/jira-report.html">issue report</a>.
       </p>
                             </blockquote>
         </td></tr>
@@ -1169,7 +1194,7 @@
             <li>Fixed a performance issue when running with 100's of CASes using the same type system.</li>
          </ul>
       </p>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="d/uimaj-3.1.1/issuesFixed/jira-report.html">
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.1.1/issuesFixed/jira-report.html">
          the complete list of issues fixed</a> for more details of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -1198,7 +1223,7 @@
             <li>Improved support of 0-length typed FSArrays</li>
           </ul>
       </p>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="d/uimaj-3.1.0/issuesFixed/jira-report.html">
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.1.0/issuesFixed/jira-report.html">
          the complete list of issues fixed</a> for more details of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -1225,7 +1250,7 @@
           <li>An override was added to enable using External DTDs in XML descriptors.</li>
           <li>The destroy cleanups around PEARs was improved.</li>
       </ul>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="d/uimaj-2.10.4/issuesFixed/jira-report.html">
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.10.4/issuesFixed/jira-report.html">
          the complete list of issues fixed</a> for more details of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -1252,7 +1277,7 @@ DUCC defines a formal job model that closely maps to a standard UIMA pipeline. A
 provides cluster management services to automate the scale-out of UIMA pipelines over computing clusters.                                                                                                                                       
  </p>
                                                 <p>                                                                                                                                                                                                                                       
-      The complete list of fixes is <a href="d/uima-ducc-3.0.0/issuesFixed/jira-report.html">here</a>.                                                                                                                                          
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-ducc-3.0.0/issuesFixed/jira-report.html">here</a>.                                                                                                                                          
       </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
@@ -1290,7 +1315,7 @@ commons.math v.3.2, netty v.4.0.44, snappy v.1.1.1.7 </li>
       API which do not make it a drop-in replacement - minor changes to your code may be required
       when you upgrade.
       </p>
-                                                <p>The complete list of fixes is <a href="d/uimafit-3.0.0/issuesFixed/jira-report.html">here</a>.
+                                                <p>The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-3.0.0/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
@@ -1334,7 +1359,7 @@ commons.math v.3.2, netty v.4.0.44, snappy v.1.1.1.7 </li>
              <li>Some bug fixes, especially around the subiterator, for edge cases.</li>
           </ul>
       </p>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="d/uimaj-3.0.2/issuesFixed/jira-report.html">
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.0.2/issuesFixed/jira-report.html">
          the complete list of issues fixed</a> for more details of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -1396,7 +1421,7 @@ commons.math v.3.2, netty v.4.0.44, snappy v.1.1.1.7 </li>
       <li>Fixed reporting of non-existing problems in editor.</li>
     </ul>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-      <a href="https://uima.apache.org/d/ruta-2.7.0/issuesFixed/jira-report.html">issue report</a>.
+      <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.7.0/issuesFixed/jira-report.html">issue report</a>.
       </p>
                             </blockquote>
         </td></tr>
@@ -1434,7 +1459,7 @@ commons.math v.3.2, netty v.4.0.44, snappy v.1.1.1.7 </li>
              <li>Bug fixes for several of the select methods, with associated documentation and javadoc updates/fixes</li>
        </ul>
       </p>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="d/uimaj-3.0.1/issuesFixed/jira-report.html">
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.0.1/issuesFixed/jira-report.html">
          the complete list of issues fixed</a> for more details of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -1465,7 +1490,7 @@ commons.math v.3.2, netty v.4.0.44, snappy v.1.1.1.7 </li>
           <li>Pear Specifier parameters now passed to the wrapped Analysis Engine</li>
           <li>Implemented a destroy() method for ResourceManager which closes its UIMAClassLoader</li>
       </ul>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="d/uimaj-2.10.3/issuesFixed/jira-report.html">
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.10.3/issuesFixed/jira-report.html">
          the complete list of issues fixed</a> for more details of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -1488,7 +1513,7 @@ commons.math v.3.2, netty v.4.0.44, snappy v.1.1.1.7 </li>
       for compiled dictionaries.
       </p>
                                                 <p>
-      The complete list of fixes is <a href="d/uima-addons/ConceptMapper-2.10.2/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-addons/ConceptMapper-2.10.2/issuesFixed/jira-report.html">here</a>.
       </p>
                             </blockquote>
         </td></tr>
@@ -1509,7 +1534,7 @@ commons.math v.3.2, netty v.4.0.44, snappy v.1.1.1.7 </li>
                                     <p>UIMA AS 2.10.3 is a maintenance release that contains fixes and improvements over UIMA-AS 2.10.2.
       </p>
                                                 <p>
-      The complete list of fixes is <a href="d/uima-as-2.10.3/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-as-2.10.3/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
@@ -1545,7 +1570,7 @@ DUCC defines a formal job model that closely maps to a standard UIMA pipeline. A
 provides cluster management services to automate the scale-out of UIMA pipelines over computing clusters.
         </p>
                                                 <p>
-      The complete list of fixes is <a href="d/uima-ducc-2.2.2/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-ducc-2.2.2/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
@@ -1587,15 +1612,15 @@ provides cluster management services to automate the scale-out of UIMA pipelines
          continue to be maintained.</p>
                                                 <p>Version 3 re-implements Feature Structures as Java Objects; this allows them to be garbage collected.
         Many of the internal data structures have been improved and several new capabilities have been added.
-       <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.0.0/version_3_users_guide.html#uv3.overview.new">  
+       <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.0.0/version_3_users_guide.html#uv3.overview.new">  
        <b>Here</b></a> is a brief overview of the new features, capabilities, and migration tooling.</p>
                                                 <p>Requirements: Java 8 and, for any user-defined JCas cover classes, regeneration or migration of those 
        (a migration tool is provided).</p>
                                                 <p>Except for migration of user-defined JCas classes, this new version is designed to backwards compatible with existing
           version 2 UIMA pipelines.  The    
-          <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.0.0-beta/version_3_users_guide.html">
+          <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.0.0/version_3_users_guide.html">
           Version 3 User's Guide</a> has more details.
-          The <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.0.0-beta/RELEASE_NOTES.html">Release Notes</a> 
+          The <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.0.0/RELEASE_NOTES.html">Release Notes</a> 
           describe what's changed since the last 3.0.0-beta release.
        </p>
                                                 <p>The Eclipse update site is available, but located in a 
@@ -1622,7 +1647,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
                                     <p>UIMA AS 2.10.2 is a maintenance release that contains fixes and improvements over UIMA-AS 2.9.0.
       </p>
                                                 <p>
-      The complete list of fixes is <a href="d/uima-as-2.10.2/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-as-2.10.2/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
@@ -1637,7 +1662,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           <li>Other bug fixes</li>
          </ul>
                                                 <p>
-      This version of UIMA-AS requires Java version 8 or later.      
+      This version of UIMA-AS requires Java version 8 or later.
       </p>
                             </blockquote>
         </td></tr>
@@ -1658,7 +1683,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
                                     <p>uimaFIT 2.4.0 is a minor feature and bugfix release to uimaFIT 2.3.0. It should should 
       serve as a drop-in replacement for previous uimaFIT 2.x versions.</p>
                                                 <p>
-      The complete list of fixes is <a href="d/uimafit-2.4.0/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-2.4.0/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
@@ -1671,47 +1696,6 @@ provides cluster management services to automate the scale-out of UIMA pipelines
                                                 <p>
       This version of uimaFIT requires Java version 7 or later.      
       </p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable">
-        <tr><td>
-       
-       
-       
-          <a name="09 Nov 2017">
-            <h2>09 Nov 2017
-                        &ndash; Apache UIMA Java SDK 3.0.0-beta released
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>UIMA Java SDK 3.0.0-beta is a preliminary version of core UIMA 3.0.0;  it is being released as an
-         <b>beta version</b> to encourage wider testing and to get early feedback.
-       </p>
-                                                <p>This version is not recommended for production.  As an beta version, the user-facing APIs should be stable
-         going forward.  We especially welcome user testing of the many new capabilities, including
-         contributing of new test cases.</p>
-                                                <p>Requirements: Java 8 and, for any user-defined JCas cover classes, regeneration or migration of those 
-       (a migration tool is provided).</p>
-                                                <p>
-       <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.0.0-beta/version_3_users_guide.html#uv3.overview.new">  
-       <b>Here</b></a> is a brief overview of the new features, capabilities, and migration tooling.</p>
-                                                <p>Except for migration of user-defined JCas classes, it is designed to backwards compatible with existing
-          version 2 UIMA pipelines.  The    
-          <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.0.0-beta/version_3_users_guide.html">
-          Version 3 User's Guide</a> has more details.
-          The <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.0.0-beta/RELEASE_NOTES.html">Release Notes</a> 
-          describe what's changed since the last alpha-02 release.
-       </p>
-                                                <p>The Eclipse update site is available, but located in a 
-          <a target="_blank" rel="noopener" href="https://downloads.apache.org/uima/eclipse-update-site/uimaj-v3-pre-production">different spot</a>,
-          in order to prevent accidentally installing the pre-production version,
-          and because the v3 tooling requires Java 8 and the JCasGen generates
-          v3 style classes.  If you want to use this, please install it into a 
-          newly obtained eclipse download, separate from your normal work version
-          of Eclipse.</p>
                             </blockquote>
         </td></tr>
     </table>
@@ -1738,7 +1722,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
              <a target="_blank" rel="noopener" href="https://archive.apache.org/dist/uima/archive-eclipse-update-site/uimaj-2.3.1-2.10.1">
              https://archive.apache.org/dist/uima/archive-eclipse-update-site/uimaj-2.3.1-2.10.1</a> </li>
       </ul>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="d/uimaj-2.10.2/issuesFixed/jira-report.html">
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.10.2/issuesFixed/jira-report.html">
          the complete list of issues fixed</a> for more details of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -1756,36 +1740,37 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>DUCC stands for Distributed UIMA Cluster Computing. DUCC is a cluster management system providing tooling,
-management, and scheduling facilities to automate the scale-out of applications written to the UIMA framework.
-Core UIMA provides a generalized framework for applications that process unstructured information such as human
-language, but does not provide a scale-out mechanism. UIMA-AS provides a scale-out mechanism to distribute UIMA
-pipelines over a cluster of computing resources, but does not provide job or cluster management of the resources.
-DUCC defines a formal job model that closely maps to a standard UIMA pipeline. Around this job model DUCC
-provides cluster management services to automate the scale-out of UIMA pipelines over computing clusters.
-
-        </p>
+                                    <p>
+        DUCC stands for Distributed UIMA Cluster Computing. DUCC is a cluster management system 
+        providing tooling, management, and scheduling facilities to automate the scale-out of 
+        applications written to the UIMA framework. Core UIMA provides a generalized framework for
+        applications that process unstructured information such as human language, but does not
+        provide a scale-out mechanism. UIMA-AS provides a scale-out mechanism to distribute UIMA
+        pipelines over a cluster of computing resources, but does not provide job or cluster
+        management of the resources. DUCC defines a formal job model that closely maps to a standard
+        UIMA pipeline. Around this job model DUCC provides cluster management services to automate
+        the scale-out of UIMA pipelines over computing clusters.
+      </p>
                                                 <p>
-      The complete list of fixes is <a href="d/uima-ducc-2.2.1/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-ducc-2.2.1/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
           <li>The userid of a privileged DUCC installation does not have to be "ducc"</li>
           <li>ducc-mon login can be used on systems where users do not have password login</li>
-    <li>The DUCC head-node daemons may be moved to another host without breaking working applications</li>
-    <li>The deployment descriptor for a UIMA-AS service can be loaded from the classpath</li>
-    <li>Interactive applications run correctly with viaducc (fixed lost inputs)</li>
-    <li>Files created by DUCC jobs inherit the permissions of the launching shell's umask.</li>
-    <li>DUCC performance breakdown for scaled synchronous pipelines is now correct</li>
-    <li> Fixed javadoc method headers to enable ducc build with java 8</li>
-    <li>Fixed JP communication threads wait logic when JD returns no work</li>
+          <li>The DUCC head-node daemons may be moved to another host without breaking working applications</li>
+          <li>The deployment descriptor for a UIMA-AS service can be loaded from the classpath</li>
+          <li>Interactive applications run correctly with viaducc (fixed lost inputs)</li>
+          <li>Files created by DUCC jobs inherit the permissions of the launching shell's umask.</li>
+          <li>DUCC performance breakdown for scaled synchronous pipelines is now correct</li>
+          <li> Fixed javadoc method headers to enable ducc build with java 8</li>
+          <li>Fixed JP communication threads wait logic when JD returns no work</li>
           <li>GC stats not available sometimes from remote JP</li>
-    <li>Other bug fixes</li>
+          <li>Other bug fixes</li>
           <li>Many DUCC webpage improvements </li>
-
          </ul>
                                                 <p>
-      This version of UIMA-DUCC requires Java version 7 or version 8.      
+        This version of UIMA-DUCC requires Java version 7 or version 8.      
       </p>
                             </blockquote>
         </td></tr>
@@ -1803,15 +1788,17 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>This is a minor bug fix release.
-      The major changes in this release include:</p>
-                                                <ul><li>https://issues.apache.org/jira/browse/UIMA-5411 - for external override values,
+                                    <p>
+        This is a minor bug fix release. The major changes in this release include:
+      </p>
+                                                <ul>
+        <li>https://issues.apache.org/jira/browse/UIMA-5411 - for external override values,
             make the class/data path search for external settings explicit by requiring a path: prefix.
             This is a syntax change for this feature introduced in 2.10.0.</li>
-          <li>https://issues.apache.org/jira/browse/UIMA-5532 fixed some edge case issues around
-            xmi and JSON serialization of Feature values marked as multiple-references-allowed.</li>
+        <li>https://issues.apache.org/jira/browse/UIMA-5532 fixed some edge case issues around
+          xmi and JSON serialization of Feature values marked as multiple-references-allowed.</li>
       </ul>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="d/uimaj-2.10.1/issuesFixed/jira-report.html">
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.10.1/issuesFixed/jira-report.html">
          the complete list of issues fixed</a> for more details of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -1859,7 +1846,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           <li>Fixed error reporting in editor</li>
         </ul>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-        <a href="https://uima.apache.org/d/ruta-2.6.1/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.6.1/issuesFixed/jira-report.html">issue report</a>.
         </p>
                             </blockquote>
         </td></tr>
@@ -1889,18 +1876,17 @@ provides cluster management services to automate the scale-out of UIMA pipelines
               to make a clearer distinction between file and classpath resources 
               in order to avoid the ambiguity of the current design; note   
               that this change will not be backwards-compatible.</li>
-          
           <li>to improve integration with Java, the JCas cover classes 
               for the built-in UIMA types FSArray, FSList,
               StringArray, and StringList now support the Iterable interface.</li>
-          <li>a new report on API changes, <a target="_blank" rel="noopener" href="d/uimaj-2.10.0/api-change-report.html">api-change-report.html</a>,
+          <li>a new report on API changes, <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.10.0/api-change-report.html">api-change-report.html</a>,
               is included as part of the release.</li>
-          <li>several bugs were fixed; please see <a target="_blank" rel="noopener" href="d/uimaj-2.10.0/issuesFixed/jira-report.html">
+          <li>several bugs were fixed; please see <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.10.0/issuesFixed/jira-report.html">
               issuesFixed</a> for a list of changes.</li>
           </ul>
           
         </p>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="d/uimaj-2.10.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.10.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
       for a summary of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -1921,7 +1907,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
                                     <p>uimaFIT 2.3.0 is a minor feature and bugfix release to uimaFIT 2.2.0. It should should 
       serve as a drop-in replacement for previous uimaFIT 2.x versions.</p>
                                                 <p>
-      The complete list of fixes is <a href="d/uimafit-2.3.0/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-2.3.0/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
@@ -1932,47 +1918,8 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         <li>Fixed calling typeSystemInit on readers and other life-cycle methods;</li>
        </ul>
                                                 <p>
-      This version of uimaFIT requires Java version 7 or later.      
+      This version of uimaFIT requires Java version 7 or later.
       </p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable">
-        <tr><td>
-       
-       
-       
-          <a name="19 Mar 2017">
-            <h2>19 Mar 2017
-                        &ndash; Apache UIMA Java SDK 3.0.0-alpha02 released
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>UIMA Java SDK 3.0.0-alpha02 is a preliminary version of core UIMA 3.0.0;  it is being released as an
-         <b>alpha version</b> to encourage wider testing and to get early feedback.
-       </p>
-                                                <p>This version is not recommended for production.  As an alpha version, some APIs may change 
-         going forward if issues are discovered.  We especially welcome user testing of the many new capabilities, including
-         contributing of new test cases.</p>
-                                                <p>Requirements: Java 8 and, for any user-defined JCas cover classes, regeneration or migration of those 
-       (a migration tool is provided).</p>
-                                                <p>
-       <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.0.0-alpha02/version_3_users_guide.html#uv3.overview.new">  
-       <b>Here</b></a> is a brief overview of the new features, capabilities, and migration tooling.</p>
-                                                <p>Except for migration of user-defined JCas classes, it is designed to backwards compatible with existing
-          version 2 UIMA pipelines.  The    
-          <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.0.0-alpha02/version_3_users_guide.html">
-          Version 3 User's Guide</a> has more details.
-       </p>
-                                                <p>The Eclipse update site is available, but located in a 
-          <a target="_blank" rel="noopener" href="https://downloads.apache.org/uima/eclipse-update-site/uimaj-v3-pre-production">different spot</a>,
-          in order to prevent accidentally installing the pre-production version,
-          and because the v3 tooling requires Java 8 and the JCasGen generates
-          v3 style classes.  If you want to use this, please install it into a 
-          newly obtained eclipse download, separate from your normal work version
-          of Eclipse.</p>
                             </blockquote>
         </td></tr>
     </table>
@@ -2028,7 +1975,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           Projects built with the UIMA Ruta Maven Plugin require no manual effort.
         </p>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-        <a href="https://uima.apache.org/d/ruta-2.6.0/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.6.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
                             </blockquote>
         </td></tr>
@@ -2046,21 +1993,22 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       </td></tr>
       <tr><td>
         <blockquote class="subsectionBody">
-                                    <p>DUCC stands for Distributed UIMA Cluster Computing. DUCC is a cluster management system providing tooling,
-management, and scheduling facilities to automate the scale-out of applications written to the UIMA framework.
-Core UIMA provides a generalized framework for applications that process unstructured information such as human
-language, but does not provide a scale-out mechanism. UIMA-AS provides a scale-out mechanism to distribute UIMA
-pipelines over a cluster of computing resources, but does not provide job or cluster management of the resources.
-DUCC defines a formal job model that closely maps to a standard UIMA pipeline. Around this job model DUCC
-provides cluster management services to automate the scale-out of UIMA pipelines over computing clusters.
-
-        </p>
+                                    <p>
+        DUCC stands for Distributed UIMA Cluster Computing. DUCC is a cluster management system
+        providing tooling, management, and scheduling facilities to automate the scale-out of
+        applications written to the UIMA framework. Core UIMA provides a generalized framework for
+        applications that process unstructured information such as human language, but does not
+        provide a scale-out mechanism. UIMA-AS provides a scale-out mechanism to distribute UIMA
+        pipelines over a cluster of computing resources, but does not provide job or cluster
+        management of the resources. DUCC defines a formal job model that closely maps to a standard
+        UIMA pipeline. Around this job model DUCC provides cluster management services to automate
+        the scale-out of UIMA pipelines over computing clusters.
+      </p>
                                                 <p>
-      The complete list of fixes is <a href="d/uima-ducc-2.2.0/issuesFixed/jira-report.html">here</a>.
+        The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-ducc-2.2.0/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
-
           <li>Ships with the latest UIMA-AS v2.9.0 and UIMA SDK 2.9.0</li>
           <li>Ships with ActiveMQ v5.14.0 </li>
           <li>Added support for static failover and capability to move the head node</li>
@@ -2075,45 +2023,10 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           <li>Added duplicate daemon detector to prevent starting duplicate DUCC daemon</li>
           <li>Many DUCC Database improvements </li>
           <li>Many DUCC webpage improvements </li>
-
          </ul>
                                                 <p>
-      This version of UIMA-DUCC requires Java version 7 or version 8.      
+      This version of UIMA-DUCC requires Java version 7 or version 8.
       </p>
-                            </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable">
-        <tr><td>
-       
-       
-       
-          <a name="30 Jan 2017">
-            <h2>30 Jan 2017
-                        &ndash; Apache UIMA Java SDK 3.0.0-alpha released
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p><b>NOTICE: The eclipse update site for this is down temporarily, but should be restored in a few days.
-         This notice will be removed when it's restored.</b></p>
-                                                <p>UIMA Java SDK 3.0.0-alpha is a preliminary version of core UIMA 3.0.0;  it is being released as an
-         <b>alpha version</b> to encourage wider testing and to get early feedback.
-       </p>
-                                                <p>This version is not recommended for production.  As an alpha version, some APIs may change 
-         going forward if issues are discovered.  We especially welcome user testing of the many new capabilities, including
-         contributing of new test cases.</p>
-                                                <p>Requirements: Java 8 and, for any user-defined JCas cover classes, regeneration or migration of those 
-       (a migration tool is provided).</p>
-                                                <p>
-       <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.0.0-alpha/version_3_users_guide.html#uv3.overview.new">  
-       <b>Here</b></a> is a brief overview of the new features, capabilities, and migration tooling.</p>
-                                                <p>Except for migration of user-defined JCas classes, it is designed to backwards compatible with existing
-          version 2 UIMA pipelines.  The    
-          <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-3.0.0-alpha/version_3_users_guide.html#uv3.overview.new">
-          Version 3 User's Guide</a> has more details.
-       </p>
                             </blockquote>
         </td></tr>
     </table>
@@ -2133,7 +2046,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
                                     <p>UIMA AS 2.9.0 is a maintenance release that contains fixes and improvements over UIMA-AS 2.8.1.
       </p>
                                                 <p>
-      The complete list of fixes is <a href="d/uima-as-2.9.0/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-as-2.9.0/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
@@ -2215,7 +2128,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           Projects built with the UIMA Ruta Maven Plugin require no manual effort.
         </p>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-        <a href="https://uima.apache.org/d/ruta-2.5.0/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.5.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
                             </blockquote>
         </td></tr>
@@ -2254,7 +2167,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           </ul>
           </li>
           </ul></p>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-2.9.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.9.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
       for a summary of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -2282,7 +2195,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 
         </p>
                                                 <p>
-      The complete list of fixes is <a href="d/uima-ducc-2.1.0/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-ducc-2.1.0/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
@@ -2333,7 +2246,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
                                     <p>UIMA AS 2.8.1 is a maintenance release that contains fixes and improvements over UIMA-AS 2.6.0.
       </p>
                                                 <p>
-      The complete list of fixes is <a href="d/uima-as-2.8.1/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-as-2.8.1/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
@@ -2365,7 +2278,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
                                     <p>uimaFIT 2.2.0 is a minor feature and bugfix release to uimaFIT 2.1.0. It should should 
         serve as a drop-in replacement for previous uimaFIT 2.x versions.</p>
                                                 <p>
-        The complete list of fixes is <a href="d/uimafit-2.2.0/issuesFixed/jira-report.html">here</a>.
+        The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-2.2.0/issuesFixed/jira-report.html">here</a>.
         </p>
                                                 <p>The major changes in this release are:</p>
                                                 <ul>
@@ -2432,7 +2345,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           Projects built with the UIMA Ruta Maven Plugin require no manual effort.
         </p>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-        <a href="https://uima.apache.org/d/ruta-2.4.0/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.4.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
                             </blockquote>
         </td></tr>
@@ -2451,7 +2364,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>This is a bug fix release addressing bugs found since ducc 2.0.0 release.</p>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uima-ducc-2.0.1/RELEASE_NOTES.html">RELEASE_NOTES</a>
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-ducc-2.0.1/RELEASE_NOTES.html">RELEASE_NOTES</a>
         for a summary of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -2472,7 +2385,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
                                     <p>This is a bugfix release. It fixes diverse problems of the rule inference, 
             the ruta-maven-plugin and the UIMA Ruta Workbench.</p>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-          <a href="https://uima.apache.org/d/ruta-2.3.1/issuesFixed/jira-report.html">issue report</a>.
+          <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.3.1/issuesFixed/jira-report.html">issue report</a>.
           </p>
                             </blockquote>
         </td></tr>
@@ -2506,7 +2419,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
                                                 <p>Extended CGROUPS support by adding CPU control</p>
                                                 <p>Changed DUCC flow controller typesystem location</p>
                                                 <p>Added support for queueing resource requests that were previously unfulfillable</p>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uima-ducc-2.0.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-ducc-2.0.0/RELEASE_NOTES.html">RELEASE_NOTES</a>
         for a summary of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -2526,7 +2439,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         <blockquote class="subsectionBody">
                                     <p>This release is a bug fix release; replacing 2.8.0, and addressing a few issues reported
         after the 2.8.0 release.</p>
-                                                <p>Please see the <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-2.8.1/RELEASE_NOTES.html">RELEASE_NOTES</a>
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.8.1/RELEASE_NOTES.html">RELEASE_NOTES</a>
         for a summary of the changes.</p>
                             </blockquote>
         </td></tr>
@@ -2564,7 +2477,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         For more details, see Jira issue 
         <a target="_blank" rel="noopener" href="https://issues.apache.org/jira/browse/UIMA-4357">UIMA-4357</a>. 
         </p>
-                                                <p>For more details, please see the <a target="_blank" rel="noopener" href="https://uima.apache.org/d/uimaj-2.8.0/RELEASE_NOTES.html">RELEASE_NOTES</a>.</p>
+                                                <p>For more details, please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.8.0/RELEASE_NOTES.html">RELEASE_NOTES</a>.</p>
                             </blockquote>
         </td></tr>
     </table>
@@ -2615,7 +2528,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
          </ul>
         </p>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-        <a href="https://uima.apache.org/d/ruta-2.3.0/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.3.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
                             </blockquote>
         </td></tr>
@@ -2636,17 +2549,17 @@ provides cluster management services to automate the scale-out of UIMA pipelines
                                     <p>The UIMA Java SDK now requires Java 7.  There are significant changes in this release.  
       Some of these may break backwards compatibility; we have included some new JVM properties
       to aid in gradually adapting to these changes.  See the 
-      <a href="d/uimaj-2.7.0/README">README</a> file for a description of these properties.
+      <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.7.0/README">README</a> file for a description of these properties.
       </p>
                                                 <p>There is a new capability that detects operations which change feature values used as keys
       in sorted and set indexes; by default, the Framework now insures that the indexes
       are properly updated when this happens.  A new report can be generated to show the user when this is happening,
       so they may improve their code.</p>
                                                 <p>This release supports a new JSON serialization of the CAS and of UIMA descriptors.  This is
-      described in the <a href="d/uimaj-2.7.0/references.html#ugr.ref.json">reference manual</a>.</p>
+      described in the <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.7.0/references.html#ugr.ref.json">reference manual</a>.</p>
                                                 <p>Many performance improvements have been made.</p>
                                                 <p>
-      The complete list of fixes is <a href="d/uimaj-2.7.0/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.7.0/issuesFixed/jira-report.html">here</a>.
       </p>
                             </blockquote>
         </td></tr>
@@ -2675,7 +2588,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
 
         </p>
                                                 <p>
-      The complete list of fixes is <a href="d/uima-ducc-1.1.0/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-ducc-1.1.0/issuesFixed/jira-report.html">here</a>.
       </p>
                             </blockquote>
         </td></tr>
@@ -2704,7 +2617,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           smoothly with Apache UIMA. 
         </p>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-        <a href="https://uima.apache.org/d/ruta-2.2.1/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.2.1/issuesFixed/jira-report.html">issue report</a>.
         </p>
                                                 <p> The UIMA Ruta Workbench 2.2.1 requires a newer version of Eclipse (&gt;4.0) due to the CAS Editor. It has been tested with Eclipse 4.3.2.
         </p>
@@ -2727,7 +2640,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
                                     <p>UIMA AS 2.6.0 is a maintenance release that contains fixes and improvements over UIMA-AS 2.4.2.
       </p>
                                                 <p>
-      The complete list of fixes is <a href="d/uima-as-2.6.0/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-as-2.6.0/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>
       This version of UIMA-AS requires Java version 6 or later.      
@@ -2753,7 +2666,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       Java SDK 2.6.0. Otherwise, this version should serve as a drop-in replacement for uimaFIT 
       2.0.0.</p>
                                                 <p>
-      The complete list of fixes is <a href="d/uimafit-2.1.0/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-2.1.0/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>
       This version of uimaFIT requires Java version 6 or later.      
@@ -2782,7 +2695,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       be accessed (read-only) by multiple threads, simultaneously.  Along the way, many subtle bugs were fixed.
       </p>
                                                 <p>
-      The complete list of fixes is <a href="d/uimaj-2.6.0/issuesFixed/jira-report.html">here</a>.
+      The complete list of fixes is <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.6.0/issuesFixed/jira-report.html">here</a>.
       </p>
                                                 <p>
       This version of UIMA requires Java version 6 or later.      
@@ -2830,7 +2743,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
             <li>Many bug fixes</li>
           </ul>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-        <a href="https://uima.apache.org/d/ruta-2.2.0/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.2.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
                             </blockquote>
         </td></tr>
@@ -2896,7 +2809,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>This is a bug-fix only release.
-      The fixes are listed <a href="d/uimaj-2.5.0/issuesFixed/jira-report.html">here</a>.</p>
+      The fixes are listed <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.5.0/issuesFixed/jira-report.html">here</a>.</p>
                             </blockquote>
         </td></tr>
     </table>
@@ -2982,7 +2895,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
             <li>Many bug fixes</li>
           </ul>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-        <a href="https://uima.apache.org/d/ruta-2.1.0/issuesFixed/jira-report.html">issue report</a>.
+        <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.1.0/issuesFixed/jira-report.html">issue report</a>.
         </p>
                             </blockquote>
         </td></tr>
@@ -3029,13 +2942,13 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           </ul>
                                                 <p>Note on compatibility and migration: Apache uimaFIT 2.0.0 is not a drop-in replacement 
       for uimaFIT 1.4.x, although, it was tried to keep the migration effort minimal. Please 
-          refer to the <a href="d/uimafit-2.0.0/tools.uimafit.book.html#d5e617">
+          refer to the <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-2.0.0/tools.uimafit.book.html#d5e617">
           migration guide</a> for all the details on incompatible changes between uimaFIT 1.4.0 and
           Apache uimaFIT 2.0.0.
     </p>
                                                 <p>
           Additionally, there have been more bug fixes and minor improvements. For a full list of 
-          the changes, please refer to the <a href="d/uimafit-2.0.0/issuesFixed/jira-report.html">
+          the changes, please refer to the <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-2.0.0/issuesFixed/jira-report.html">
           issue report</a>.
         </p>
                             </blockquote>
@@ -3055,7 +2968,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       <tr><td>
         <blockquote class="subsectionBody">
                                     <p>This is a bug-fix only release, and effectively replaces the 2.4.1 release.
-        The fixes are listed <a href="d/uimaj-2.4.2/issuesFixed/jira-report.html">here</a>.</p>
+        The fixes are listed <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.4.2/issuesFixed/jira-report.html">here</a>.</p>
                             </blockquote>
         </td></tr>
     </table>
@@ -3120,7 +3033,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           The language is designed to enable rapid development of text processing applications within UIMA.
         </p>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-        <a href="https://uima.apache.org/d/ruta-2.0.1/RELEASE_NOTES.html">release-notes</a>.
+        <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-2.0.1/RELEASE_NOTES.html">release-notes</a>.
         </p>
                             </blockquote>
         </td></tr>
@@ -3163,7 +3076,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
                                                 <p>Notable updates included in this release: standardization of Linux build process and packaging, updates to ActiveMQ service wrapper to support failover,
           many bug fixes.</p>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-        <a href="https://uima.apache.org/d/uimacpp-2.4.0/RELEASE_NOTES.html">release-notes</a>.
+        <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimacpp-2.4.0/RELEASE_NOTES.html">release-notes</a>.
         </p>
                             </blockquote>
         </td></tr>
@@ -3188,7 +3101,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         a client to expose bottlenecks, extended callback API to include info where a CAS is being processed (ip,pid,thread id),  
         improved stability and error handling, many bug fixes.</p>
                                                 <p>For a complete list of bugs and improvements included in this release please see
-        <a href="https://uima.apache.org/d/uima-as-2.4.0/issuesFixed/jira-report.html">jira-report</a>.
+        <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-as-2.4.0/issuesFixed/jira-report.html">jira-report</a>.
         </p>
                             </blockquote>
         </td></tr>
@@ -3211,9 +3124,9 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           JMX tooling, and a redesign of the Eclipse plugin for editing CASes.
           </p>
                                                 <p>Besides some bug fixes, there is some tooling enhancement.  A new Eclipse plugin hooks into Eclipse's "launching" capability to support launching
-          annotators more easily from Eclipse; see the <a href="../d/uimaj-2.4.0/tools.html">Tools</a> manual for information.
+          annotators more easily from Eclipse; see the <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.4.0/tools.html">Tools</a> manual for information.
           
-          The Cas Editor Eclipse plugin has been substantially enhanced; please see the <a href="../d/uimaj-2.4.0/tools.html">Tools</a> manual
+          The Cas Editor Eclipse plugin has been substantially enhanced; please see the <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.4.0/tools.html">Tools</a> manual
           for more information.</p>
                                                 <p>
            
@@ -3269,7 +3182,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
         Notable updates included in this release: upgrade to ActiveMQ 5.4.1, inclusion of base UIMA 
         2.3.1 jars, improved stability and error handling, many bug fixes.
         For a complete list of bugs and improvements included in this release please see
-        <a href="https://uima.apache.org/d/uima-as-2.3.1/issuesFixed/jira-report.html">jira-report</a>.
+        <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uima-as-2.3.1/issuesFixed/jira-report.html">jira-report</a>.
         </p>
                             </blockquote>
         </td></tr>
