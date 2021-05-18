@@ -232,6 +232,13 @@
         <blockquote class="sectionBody">
                                           <table class="subsectionToc">
             <tr >
+      <td>18 May 2020</td>
+      <td><a href='#18 May 2020'>
+                  Apache UIMA Ruta 3.1.0 released
+                </a>
+      </td>
+      </tr>  
+          <tr >
       <td>06 May 2021</td>
       <td><a href='#06 May 2021'>
                   Apache uimaFIT 3.2.0 released
@@ -821,6 +828,67 @@
       </tr>  
         </table>
                                                         <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="18 May 2020">
+            <h2>18 May 2020
+                        &ndash; Apache UIMA Ruta 3.1.0 released
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>Apache UIMA Ruta is a rule-based script language supported by
+        Eclipse-based tooling. The language is designed to enable rapid
+        development of text processing applications within UIMA. A special focus
+        lies on the intuitive and flexible domain specific language for defining
+        patterns of annotations. The Eclipse-based tooling,
+        called the Apache UIMA Ruta Workbench, supports the
+        user and facilitates every step when writing rules. Both
+        the rule language and the workbench integrate
+        smoothly with Apache UIMA.
+      </p>
+                                                <p>Major Changes in this Release</p>
+                                                <p>
+        This release provides compatibility to UIMA v3. 
+        An upgrade from UIMA Ruta v2 to this version 
+        requires also an update to UIMA v3 of the overall application and/or Eclipse installation. 
+        Please refer to the UIMA v3 user's guide for detailed information: 
+        https://uima.apache.org/d/uimaj-3.2.0/version_3_users_guide.html
+      </p>
+                                                <p>
+        <p>UIMA Ruta Language and Analysis Engine:</p>
+        <ul>
+          <li>New config parameter for internal indexing strategy.</li>
+          <li>New config parameter for indexing all debug information.</li>
+          <li>New config parameter for type disambiguation.</li>
+          <li>TextSeeder is the new default seeder (faster, no MARKUP annotations).</li>
+          <li>Improved null check using label expression.</li>
+          <li>Improved conjunctive and disjunctive rule elements.</li>
+          <li>Improved conjunct rules.</li>
+          <li>Improved implementation of SPLIT, FILL, ADD, REMOVE, AFTER.</li>
+          <li>Improved documentation.</li>
+        </ul>
+        <p>UIMA Ruta Workbench:</p>
+        <ul>
+          <li>Fixed problems launching script using newer Java versions (LayerInstantiationException).</li>
+          <li>Fixed console logging when launching scripts.</li>
+          <li>Improved compatibility with dark mode.</li>
+        </ul>
+        <p>UIMA Ruta Maven Plugin:</p>
+        <ul>
+          <li>Fail on error by default.</li>
+        </ul>
+      </p>
+                                                <p>For a complete list of bugs and improvements included in this release please see
+      <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-3.1.0/issuesFixed/jira-report.html">issue report</a>.
+      </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
         <tr><td>
        
        

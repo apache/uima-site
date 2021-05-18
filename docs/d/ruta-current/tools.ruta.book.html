@@ -2,7 +2,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    <title>Apache UIMA Ruta&#8482; Guide and Reference</title><link rel="stylesheet" type="text/css" href="css/stylesheet-html.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="Apache UIMA Ruta&#8482; Guide and Reference" id="d5e1"><div xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h1 class="title">Apache UIMA Ruta&#8482; Guide and Reference</h1></div><div><div class="authorgroup">
       <h3 class="corpauthor">Written and maintained by the Apache UIMA Development Community</h3>
-    </div></div><div><p class="releaseinfo">Version 3.0.1</p></div><div><p class="copyright">Copyright &copy; 2011, 2020 The Apache Software Foundation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
+    </div></div><div><p class="releaseinfo">Version 3.1.0</p></div><div><p class="copyright">Copyright &copy; 2011, 2021 The Apache Software Foundation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
       <p> </p>
       <p title="License and Disclaimer">
         <b>License and Disclaimer.&nbsp;</b>
@@ -35,8 +35,8 @@
         the trademark or service mark.
         
       </p>
-    </div></div><div><p class="pubdate">March, 2020</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#ugr.tools.ruta.overview">1. Apache UIMA Ruta Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.overview.intro">1.1. What is Apache UIMA Ruta?</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.overview.gettingstarted">1.2. Getting started</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.overview.coreconcepts">1.3. Core Concepts</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.overview.examples">1.4. Learning by Example</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae">1.5. UIMA Analysis Engines</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.ae.basic">1.5.1. Ruta Engine</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.annotationwriter">1.5.2. Annotation Writer</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.plaintext">1.5.3. Plain Text Annotator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.modifier">1.5.4. Modifier</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.html">1.5.5. HTML Annotator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.htmlconverter">1.5.6. HTML Converter</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.stylemap">1.5.7. Style Map Creator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.cutter">1.5.8. Cutter</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.view">1.5.9. View Writer</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.xmi">1.5.10. XMI Writer</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ruta.language.language">2. Apache UIMA Ruta Language</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.syntax">2.1. Syntax</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.anchoring">2.2. Rule elements and their matching order</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.seeding">2.3. Basic annotations and tokens</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier">2.4. Quantifiers</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.sg">2.4.1. * Star Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.sr">2.4.2. *? Star Reluctant</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.pg">2.4.3. + Plus Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.pr">2.4.4. +? Plus Reluctant</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.qg">2.4.5. ? Question Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.qr">2.4.6. ?? Question Reluctant</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.mmg">2.4.7. [x,y] Min Max Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.mmr">2.4.8. [x,y]? Min Max Reluctant</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations">2.5. Declarations</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.type">2.5.1. Types</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.variable">2.5.2. Variables</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.ressource">2.5.3. Resources</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.scripts">2.5.4. Scripts</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.components">2.5.5. Components</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions">2.6. Expressions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.type">2.6.1. Type Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.annotation">2.6.2. Annotation Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.number">2.6.3. Number Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.string">2.6.4. String Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.boolean">2.6.5. Boolean Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.lists">2.6.6. List Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.features">2.6.7. Feature Expressions</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions">2.7. Conditions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.after">2.7.1. AFTER</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.and">2.7.2. AND</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.before">2.7.3. BEFORE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.contains">2.7.4. CONTAINS</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.contextcount">2.7.5. CONTEXTCOUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.count">2.7.6. COUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.currentcount">2.7.7. CURRENTCOUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.endswith">2.7.8. ENDSWITH</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.feature">2.7.9. FEATURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.if">2.7.10. IF</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.inlist">2.7.11. INLIST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.is">2.7.12. IS</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.last">2.7.13. LAST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.mofn">2.7.14. MOFN</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.near">2.7.15. NEAR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.not">2.7.16. NOT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.or">2.7.17. OR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.parse">2.7.18. PARSE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.partof">2.7.19. PARTOF</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.partofneq">2.7.20. PARTOFNEQ</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.position">2.7.21. POSITION</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.regexp">2.7.22. REGEXP</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.score">2.7.23. SCORE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.size">2.7.24. SIZE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.startswith">2.7.25. STARTSWITH</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.totalcount">2.7.26. TOTALCOUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.vote">2.7.27. VOTE</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.actions">2.8. Actions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.add">2.8.1. ADD</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.addfiltertype">2.8.2. ADDFILTERTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.addretaintype">2.8.3. ADDRETAINTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.assign">2.8.4. ASSIGN</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.call">2.8.5. CALL</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.clear">2.8.6. CLEAR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.color">2.8.7. COLOR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.configure">2.8.8. CONFIGURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.create">2.8.9. CREATE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.del">2.8.10. DEL</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.dynamicanchoring">2.8.11. DYNAMICANCHORING</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.exec">2.8.12. EXEC</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.fill">2.8.13. FILL</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.filtertype">2.8.14. FILTERTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.gather">2.8.15. GATHER</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.get">2.8.16. GET</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.getfeature">2.8.17. GETFEATURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.getlist">2.8.18. GETLIST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.greedyanchoring">2.8.19. GREEDYANCHORING</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.log">2.8.20. LOG</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.mark">2.8.21. MARK</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markfast">2.8.22. MARKFAST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markfirst">2.8.23. MARKFIRST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.marklast">2.8.24. MARKLAST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markonce">2.8.25. MARKONCE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markscore">2.8.26. MARKSCORE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.marktable">2.8.27. MARKTABLE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.matchedtext">2.8.28. MATCHEDTEXT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.merge">2.8.29. MERGE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.remove">2.8.30. REMOVE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.removeduplicate">2.8.31. REMOVEDUPLICATE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.removefiltertype">2.8.32. REMOVEFILTERTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.removeretaintype">2.8.33. REMOVERETAINTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.replace">2.8.34. REPLACE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.retaintype">2.8.35. RETAINTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.setfeature">2.8.36. SETFEATURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.shift">2.8.37. SHIFT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.split">2.8.38. SPLIT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.transfer">2.8.39. TRANSFER</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.trie">2.8.40. TRIE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.trim">2.8.41. TRIM</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.unmark">2.8.42. UNMARK</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.unmarkall">2.8.43. UNMARKALL</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.filtering">2.9. Robust extraction using filtering</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.wildcard">2.10. Wildcard #</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.optional">2.11. Optional match _</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.labels">2.12. Label expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.blocks">2.13. Blocks</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.blocks.block">2.13.1. BLOCK</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.blocks.foreach">2.13.2. FOREACH</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.inlined">2.14. Inlined rules</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.macro">2.15. Macros for conditions and actions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.score">2.16. Heuristic extraction using scoring rules</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.modification">2.17. Modification</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.external_resources">2.18. External resources</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e2598">2.18.1. WORDLISTs</a></span></dt><dt><span class="section"><a href="#d5e2620">2.18.2. WORDTABLEs</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.regexprule">2.19. Simple Rules based on Regular Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.extensions">2.20. Language Extensions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.extensions.core-ext">2.20.1. Provided Extensions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.extensions.new">2.20.2. Adding new Language Elements</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ruta.workbench">3. Apache UIMA Ruta Workbench</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.install">3.1. Installation</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.overview">3.2. UIMA Ruta Workbench Overview</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.projects">3.3. UIMA Ruta Projects</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.projects.create_projects">3.3.1. UIMA Ruta create project wizard</a></span></dt></dl></dd><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_perspective">3.4. UIMA Ruta Perspective</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_perspective.annotation_browser">3.4.1. Annotation Browser</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_perspective.selection">3.4.2. Selection</a></span></dt></dl></dd><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective">3.5. UIMA Ruta Explain Perspective</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.applied_rules">3.5.1. Applied Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.matched_and_failed_rules">3.5.2. Matched Rules and Failed Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.rule_elements">3.5.3. Rule Elements</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.inlined_rules">3.5.4. Inlined Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.covering_rules">3.5.5. Covering Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.rule_list">3.5.6. Rule List</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.created_by">3.5.7. Created By</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.statistics">3.5.8. Statistics</a></span></dt></dl></dd><dt><span class="section"><a href="#section.tools.ruta.workbench.cde">3.6. UIMA Ruta CDE perspective</a></span></dt><dd><dl><dt><span class="section"><a href="#section.tools.ruta.workbench.cde.documents">3.6.1. CDE Documents view</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.cde.constraints">3.6.2. CDE Constraints view</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.cde.result">3.6.3. CDE Result view</a></span></dt></dl></dd><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_query">3.7. Ruta Query View</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.testing">3.8. Testing</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.testing.usage">3.8.1. Usage</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.testing.evaluators">3.8.2. Evaluators</a></span></dt></dl></dd><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler">3.9. TextRuler</a></span></dt><dd><dl><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler.learner">3.9.1. Included rule learning algorithms</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler.ui">3.9.2. The TextRuler view</a></span></dt></dl></dd><dt><span class="section"><a href="#section.tools.ruta.workbench.check">3.10. Check Annotations view</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.create_dictionaries">3.11. Creation of Tree Word Lists</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.workbench.apply">3.12. Apply a UIMA Ruta script to a folder</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ruta.howtos">4. Apache UIMA Ruta HowTos</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.ae.basic.apply">4.1. Apply UIMA Ruta Analysis Engine in plain Java</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.integration">4.2. Integrating UIMA Ruta in an existing UIMA Annotator</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.ae.integration.mvn">4.2.1. Adding Ruta to our Annotator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.integration.loading">4.2.2. Developing Ruta rules and applying them from inside Java code
-			</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.maven">4.3. UIMA Ruta Maven Plugin</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e3530">4.3.1. generate goal</a></span></dt><dt><span class="section"><a href="#d5e3535">4.3.2. twl goal</a></span></dt><dt><span class="section"><a href="#d5e3539">4.3.3. mtwl goal</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.archetype">4.4. UIMA Ruta Maven Archetype</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler.example">4.5. Induce rules with the TextRuler framework</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.howto.html">4.6. HTML annotations in plain text</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.howto.sorter">4.7. Sorting files with UIMA Ruta</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.howto.xml">4.8. Converting XML documents with UIMA Ruta</a></span></dt></dl></dd></dl></div>
+    </div></div><div><p class="pubdate">May, 2021</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#ugr.tools.ruta.overview">1. Apache UIMA Ruta Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.overview.intro">1.1. What is Apache UIMA Ruta?</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.overview.gettingstarted">1.2. Getting started</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.overview.coreconcepts">1.3. Core Concepts</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.overview.examples">1.4. Learning by Example</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae">1.5. UIMA Analysis Engines</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.ae.basic">1.5.1. Ruta Engine</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.annotationwriter">1.5.2. Annotation Writer</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.plaintext">1.5.3. Plain Text Annotator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.modifier">1.5.4. Modifier</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.html">1.5.5. HTML Annotator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.htmlconverter">1.5.6. HTML Converter</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.stylemap">1.5.7. Style Map Creator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.cutter">1.5.8. Cutter</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.view">1.5.9. View Writer</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.xmi">1.5.10. XMI Writer</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ruta.language.language">2. Apache UIMA Ruta Language</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.syntax">2.1. Syntax</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.anchoring">2.2. Rule elements and their matching order</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.seeding">2.3. Basic annotations and tokens</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier">2.4. Quantifiers</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.sg">2.4.1. * Star Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.sr">2.4.2. *? Star Reluctant</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.pg">2.4.3. + Plus Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.pr">2.4.4. +? Plus Reluctant</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.qg">2.4.5. ? Question Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.qr">2.4.6. ?? Question Reluctant</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.mmg">2.4.7. [x,y] Min Max Greedy</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.quantifier.mmr">2.4.8. [x,y]? Min Max Reluctant</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations">2.5. Declarations</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.type">2.5.1. Types</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.variable">2.5.2. Variables</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.ressource">2.5.3. Resources</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.scripts">2.5.4. Scripts</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.declarations.components">2.5.5. Components</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions">2.6. Expressions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.type">2.6.1. Type Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.annotation">2.6.2. Annotation Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.number">2.6.3. Number Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.string">2.6.4. String Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.boolean">2.6.5. Boolean Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.lists">2.6.6. List Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.expressions.features">2.6.7. Feature Expressions</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions">2.7. Conditions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.after">2.7.1. AFTER</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.and">2.7.2. AND</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.before">2.7.3. BEFORE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.contains">2.7.4. CONTAINS</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.contextcount">2.7.5. CONTEXTCOUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.count">2.7.6. COUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.currentcount">2.7.7. CURRENTCOUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.endswith">2.7.8. ENDSWITH</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.feature">2.7.9. FEATURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.if">2.7.10. IF</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.inlist">2.7.11. INLIST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.is">2.7.12. IS</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.last">2.7.13. LAST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.mofn">2.7.14. MOFN</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.near">2.7.15. NEAR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.not">2.7.16. NOT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.or">2.7.17. OR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.parse">2.7.18. PARSE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.partof">2.7.19. PARTOF</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.partofneq">2.7.20. PARTOFNEQ</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.position">2.7.21. POSITION</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.regexp">2.7.22. REGEXP</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.score">2.7.23. SCORE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.size">2.7.24. SIZE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.startswith">2.7.25. STARTSWITH</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.totalcount">2.7.26. TOTALCOUNT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.conditions.vote">2.7.27. VOTE</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.actions">2.8. Actions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.add">2.8.1. ADD</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.addfiltertype">2.8.2. ADDFILTERTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.addretaintype">2.8.3. ADDRETAINTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.assign">2.8.4. ASSIGN</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.call">2.8.5. CALL</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.clear">2.8.6. CLEAR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.color">2.8.7. COLOR</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.configure">2.8.8. CONFIGURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.create">2.8.9. CREATE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.del">2.8.10. DEL</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.dynamicanchoring">2.8.11. DYNAMICANCHORING</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.exec">2.8.12. EXEC</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.fill">2.8.13. FILL</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.filtertype">2.8.14. FILTERTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.gather">2.8.15. GATHER</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.get">2.8.16. GET</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.getfeature">2.8.17. GETFEATURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.getlist">2.8.18. GETLIST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.greedyanchoring">2.8.19. GREEDYANCHORING</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.log">2.8.20. LOG</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.mark">2.8.21. MARK</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markfast">2.8.22. MARKFAST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markfirst">2.8.23. MARKFIRST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.marklast">2.8.24. MARKLAST</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markonce">2.8.25. MARKONCE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.markscore">2.8.26. MARKSCORE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.marktable">2.8.27. MARKTABLE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.matchedtext">2.8.28. MATCHEDTEXT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.merge">2.8.29. MERGE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.remove">2.8.30. REMOVE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.removeduplicate">2.8.31. REMOVEDUPLICATE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.removefiltertype">2.8.32. REMOVEFILTERTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.removeretaintype">2.8.33. REMOVERETAINTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.replace">2.8.34. REPLACE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.retaintype">2.8.35. RETAINTYPE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.setfeature">2.8.36. SETFEATURE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.shift">2.8.37. SHIFT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.split">2.8.38. SPLIT</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.transfer">2.8.39. TRANSFER</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.trie">2.8.40. TRIE</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.trim">2.8.41. TRIM</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.unmark">2.8.42. UNMARK</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.actions.unmarkall">2.8.43. UNMARKALL</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.filtering">2.9. Robust extraction using filtering</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.wildcard">2.10. Wildcard #</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.optional">2.11. Optional match _</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.labels">2.12. Label expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.blocks">2.13. Blocks</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.blocks.block">2.13.1. BLOCK</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.blocks.foreach">2.13.2. FOREACH</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.inlined">2.14. Inlined rules</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.macro">2.15. Macros for conditions and actions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.score">2.16. Heuristic extraction using scoring rules</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.modification">2.17. Modification</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.external_resources">2.18. External resources</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e2662">2.18.1. WORDLISTs</a></span></dt><dt><span class="section"><a href="#d5e2684">2.18.2. WORDTABLEs</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.regexprule">2.19. Simple Rules based on Regular Expressions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.extensions">2.20. Language Extensions</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.extensions.core-ext">2.20.1. Provided Extensions</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.extensions.new">2.20.2. Adding new Language Elements</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.language.internal_indxexing">2.21. Internal indexing and reindexing</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.language.internal_indxexing.why">2.21.1. Why additional indexing?</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.internal_indxexing.how">2.21.2. How is it stored, created and updated?</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.language.internal_indxexing.optimize">2.21.3. How to optimize the performance?</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ruta.workbench">3. Apache UIMA Ruta Workbench</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.install">3.1. Installation</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.overview">3.2. UIMA Ruta Workbench Overview</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.projects">3.3. UIMA Ruta Projects</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.projects.create_projects">3.3.1. UIMA Ruta create project wizard</a></span></dt></dl></dd><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_perspective">3.4. UIMA Ruta Perspective</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_perspective.annotation_browser">3.4.1. Annotation Browser</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_perspective.selection">3.4.2. Selection</a></span></dt></dl></dd><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective">3.5. UIMA Ruta Explain Perspective</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.applied_rules">3.5.1. Applied Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.matched_and_failed_rules">3.5.2. Matched Rules and Failed Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.rule_elements">3.5.3. Rule Elements</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.inlined_rules">3.5.4. Inlined Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.covering_rules">3.5.5. Covering Rules</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.rule_list">3.5.6. Rule List</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.created_by">3.5.7. Created By</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.explain_perspective.statistics">3.5.8. Statistics</a></span></dt></dl></dd><dt><span class="section"><a href="#section.tools.ruta.workbench.cde">3.6. UIMA Ruta CDE perspective</a></span></dt><dd><dl><dt><span class="section"><a href="#section.tools.ruta.workbench.cde.documents">3.6.1. CDE Documents view</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.cde.constraints">3.6.2. CDE Constraints view</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.cde.result">3.6.3. CDE Result view</a></span></dt></dl></dd><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.ruta_query">3.7. Ruta Query View</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.testing">3.8. Testing</a></span></dt><dd><dl><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.testing.usage">3.8.1. Usage</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.testing.evaluators">3.8.2. Evaluators</a></span></dt></dl></dd><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler">3.9. TextRuler</a></span></dt><dd><dl><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler.learner">3.9.1. Included rule learning algorithms</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler.ui">3.9.2. The TextRuler view</a></span></dt></dl></dd><dt><span class="section"><a href="#section.tools.ruta.workbench.check">3.10. Check Annotations view</a></span></dt><dt><span class="section"><a href="#section.ugr.tools.ruta.workbench.create_dictionaries">3.11. Creation of Tree Word Lists</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.workbench.apply">3.12. Apply a UIMA Ruta script to a folder</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ruta.howtos">4. Apache UIMA Ruta HowTos</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.ae.basic.apply">4.1. Apply UIMA Ruta Analysis Engine in plain Java</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.integration">4.2. Integrating UIMA Ruta in an existing UIMA Annotator</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.ruta.ae.integration.mvn">4.2.1. Adding Ruta to our Annotator</a></span></dt><dt><span class="section"><a href="#ugr.tools.ruta.ae.integration.loading">4.2.2. Developing Ruta rules and applying them from inside Java code
+			</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.maven">4.3. UIMA Ruta Maven Plugin</a></span></dt><dd><dl><dt><span class="section"><a href="#d5e3623">4.3.1. generate goal</a></span></dt><dt><span class="section"><a href="#d5e3628">4.3.2. twl goal</a></span></dt><dt><span class="section"><a href="#d5e3632">4.3.3. mtwl goal</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.ruta.archetype">4.4. UIMA Ruta Maven Archetype</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.workbench.textruler.example">4.5. Induce rules with the TextRuler framework</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.howto.html">4.6. HTML annotations in plain text</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.howto.sorter">4.7. Sorting files with UIMA Ruta</a></span></dt><dt><span class="section"><a href="#section.tools.ruta.howto.xml">4.8. Converting XML documents with UIMA Ruta</a></span></dt></dl></dd></dl></div>
   
   
     
@@ -786,18 +786,36 @@ Document{-&gt; EXEC(MyAnalysisEngine, {MyType1, MyType2})};
                     <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.removeBasics" title="removeBasics">removeBasics</a>
                   </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to remove all inference annotations after execution of the rule script.
                   </td><td style="border-bottom: 0.5pt solid black; ">Single Boolean</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
-                    <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.reindexOnly" title="reindexOnly">reindexOnly</a>
-                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to select annotation types that should be reindex internally in ruta.
+                    <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.indexOnly" title="indexOnly">indexOnly</a>
+                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to select annotation types that should be indexed internally in ruta.
                   </td><td style="border-bottom: 0.5pt solid black; ">Multi String</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
-                    <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.reindexOnlyMentionedTypes" title="reindexOnlyMentionedTypes">reindexOnlyMentionedTypes</a>
-                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to reindex only mentioned types internally in ruta.
-                  </td><td style="border-bottom: 0.5pt solid black; ">Single Boolean</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+                    <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.indexSkipTypes" title="indexSkipTypes">indexSkipTypes</a>
+                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to skip annotation types in the internal indexing.
+                  </td><td style="border-bottom: 0.5pt solid black; ">Multi String</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
                     <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.indexOnlyMentionedTypes" title="indexOnlyMentionedTypes">indexOnlyMentionedTypes</a>
                   </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to index only mentioned types internally in ruta.
                   </td><td style="border-bottom: 0.5pt solid black; ">Single Boolean</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
                     <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.indexAdditionally" title="indexAdditionally">indexAdditionally</a>
-                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to index types additional to the mentioned ones internally in ruta.
+                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to index types additionally to the mentioned ones internally in ruta.
                   </td><td style="border-bottom: 0.5pt solid black; ">Multi String</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+                    <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.reindexOnly" title="reindexOnly">reindexOnly</a>
+                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to select annotation types that should be reindexed internally in ruta.
+                  </td><td style="border-bottom: 0.5pt solid black; ">Multi String</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+                    <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.reindexSkipTypes" title="reindexSkipTypes">reindexSkipTypes</a>
+                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to skip annotation types in the internal reindexing.
+                  </td><td style="border-bottom: 0.5pt solid black; ">Multi String</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+                    <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.reindexOnlyMentionedTypes" title="reindexOnlyMentionedTypes">reindexOnlyMentionedTypes</a>
+                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to reindex only mentioned types internally in ruta.
+                  </td><td style="border-bottom: 0.5pt solid black; ">Single Boolean</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+                    <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.reindexAdditionally" title="reindexAdditionally">reindexAdditionally</a>
+                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to reindex types additionally to the mentioned ones internally in ruta.
+                  </td><td style="border-bottom: 0.5pt solid black; ">Multi String</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+                    <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.indexUpdateMode" title="indexUpdateMode">indexUpdateMode</a>
+                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Mode how internal indexing should be applied.
+                  </td><td style="border-bottom: 0.5pt solid black; ">Single String</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+                    <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.indexUpdateMode" title="indexUpdateMode">validateInternalIndexing</a>
+                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to validate the internal indexing.
+                  </td><td style="border-bottom: 0.5pt solid black; ">Single String</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
                     <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.emptyIsInvisible" title="emptyIsInvisible">emptyIsInvisible</a>
                   </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to define empty text positions as invisible.
                   </td><td style="border-bottom: 0.5pt solid black; ">Single Boolean</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
@@ -807,6 +825,9 @@ Document{-&gt; EXEC(MyAnalysisEngine, {MyType1, MyType2})};
                     <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.strictImports" title="strictImports">strictImports</a>
                   </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to restrict short type names resolution to those in the declared typesystems.
                   </td><td style="border-bottom: 0.5pt solid black; ">Single Boolean</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+                    <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.typeIgnorePattern" title="typeIgnorePattern">typeIgnorePattern</a>
+                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to ignore types even if they are available in the typesystem/CAS.
+                  </td><td style="border-bottom: 0.5pt solid black; ">Single String</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
                     <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.dynamicAnchoring" title="dynamicAnchoring">dynamicAnchoring</a>
                   </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to allow rule matches to start at any rule element.</td><td style="border-bottom: 0.5pt solid black; ">Single Boolean</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
                     <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.lowMemoryProfile" title="lowMemoryProfile">lowMemoryProfile</a>
@@ -817,6 +838,8 @@ Document{-&gt; EXEC(MyAnalysisEngine, {MyType1, MyType2})};
                   </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to add debug information to the CAS.</td><td style="border-bottom: 0.5pt solid black; ">Single Boolean</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
                     <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.debugWithMatches" title="debugWithMatches">debugWithMatches</a>
                   </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to add information about the rule matches to the CAS.</td><td style="border-bottom: 0.5pt solid black; ">Single Boolean</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+                    <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.debugAddToIndexes" title="debugAddToIndexes">debugAddToIndexes</a>
+                  </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option to add all debug information to the indexes.</td><td style="border-bottom: 0.5pt solid black; ">Single Boolean</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
                     <a class="link" href="#ugr.tools.ruta.ae.basic.parameter.debugOnlyFor" title="debugOnlyFor">debugOnlyFor</a>
                   </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">List of rule ids. If provided, then debug information is only created for
                     those rules.
@@ -961,8 +984,8 @@ Document{-&gt; EXEC(MyAnalysisEngine, {MyType1, MyType2})};
           
           <p>
             This list of string values refers to implementations of the interface "org.apache.uima.ruta.seed.RutaAnnotationSeeder", 
-            which can be used to automatically add annotations to the CAS. The default value of the parameter is a single seeder, namely "org.apache.uima.ruta.seed.DefaultSeeder"
-            that adds annotations for token classes like CW, MARKUP or SEMICOLON. Remember that additional annotations can also be added with 
+            which can be used to automatically add annotations to the CAS. The default value of the parameter is a single seeder, namely "org.apache.uima.ruta.seed.TextSeeder"
+            that adds annotations for token classes like CW, NUM and SEMICOLON, but not MARKUP. Remember that additional annotations can also be added with 
             an additional engine that is executed by a UIMA Ruta rule.
           </p>
         </div>
@@ -982,22 +1005,21 @@ Document{-&gt; EXEC(MyAnalysisEngine, {MyType1, MyType2})};
             The default value is set to false.
           </p>
         </div>
-        <div class="section" title="reindexOnly"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.reindexOnly">reindexOnly</h5></div></div></div>
+        <div class="section" title="indexOnly"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.indexOnly">indexOnly</h5></div></div></div>
           
           <p>
-            This parameter specifies the annotation types which should be reindex for ruta's internal annotations
-            All annotation types that changed since the last call of a ruta script need to be listed here. 
-            The value of this parameter needs only be adapted for performance optimization in pipelines that 
-            contains several ruta analysis engines.
-            Default value is uima.tcas.Annotation
+            This parameter specifies the annotation types which should be indexed for ruta's internal
+            annotations. All annotation types that are relevant need to be listed here. The value of this
+            parameter needs only be adapted for performance and memory optimization in pipelines that
+            contains several ruta analysis engines. Default value is uima.tcas.Annotation
           </p>
         </div>
-        <div class="section" title="reindexOnlyMentionedTypes"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.reindexOnlyMentionedTypes">reindexOnlyMentionedTypes</h5></div></div></div>
+        <div class="section" title="indexSkipTypes"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.indexSkipTypes">indexSkipTypes</h5></div></div></div>
           
           <p>
-           If this parameter is activated, then only annotations of types are internally reindexed at
-           beginning that are mentioned with in the rules. This parameter overrides the values of the parameter
-           'reindexOnly' with the types that are mentioned in the rules. Default value is false.
+            This parameter specifies annotation types that should not be indexed at all. These types
+            normally include annotations that provide no meaningful semantics for text processing, e.g.,
+            types concerning ruta debug information.
           </p>
         </div>
         <div class="section" title="indexOnlyMentionedTypes"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.indexOnlyMentionedTypes">indexOnlyMentionedTypes</h5></div></div></div>
@@ -1013,11 +1035,64 @@ Document{-&gt; EXEC(MyAnalysisEngine, {MyType1, MyType2})};
         <div class="section" title="indexAdditionally"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.indexAdditionally">indexAdditionally</h5></div></div></div>
           
           <p>
-           This parameter specifies annotation types (resolvable mentions are also supported) that should
+           This parameter specifies annotation types that should
            be index additionally to types mentioned in the rules. This parameter is only used if the
            parameter 'indexOnlyMentionedTypes' is activated.
           </p>
         </div>
+        <div class="section" title="reindexOnly"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.reindexOnly">reindexOnly</h5></div></div></div>
+          
+          <p>
+            This parameter specifies the annotation types which should be reindexed for ruta's internal annotations
+            All annotation types that changed since the last call of a ruta script need to be listed here. 
+            The value of this parameter needs only be adapted for performance optimization in pipelines that 
+            contains several ruta analysis engines.
+            Default value is uima.tcas.Annotation
+          </p>
+        </div>
+        <div class="section" title="reindexSkipTypes"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.reindexSkipTypes">reindexSkipTypes</h5></div></div></div>
+          
+          <p>
+            This parameter specifies annotation types that should not be reindexed. These types normally
+            include annotations that are added once and are not changed in the following pipeline, e.g.,
+            Tokens or TokenSeed (like CW).
+          </p>
+        </div>
+        <div class="section" title="reindexOnlyMentionedTypes"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.reindexOnlyMentionedTypes">reindexOnlyMentionedTypes</h5></div></div></div>
+          
+          <p>
+           If this parameter is activated, then only annotations of types are internally reindexed at
+           beginning that are mentioned with in the rules. This parameter overrides the values of the parameter
+           'reindexOnly' with the types that are mentioned in the rules. Default value is false.
+          </p>
+        </div>
+        <div class="section" title="reindexAdditionally"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.reindexAdditionally">reindexAdditionally</h5></div></div></div>
+          
+          <p>
+            This parameter specifies annotation types that should be reindexed additionally to types
+            mentioned in the rules. This parameter is only used if the parameter
+            'reindexOnlyMentionedTypes' is activated.
+          </p>
+        </div>
+        <div class="section" title="indexUpdateMode"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.indexUpdateMode">indexUpdateMode</h5></div></div></div>
+          
+          <p>
+           This parameter specifies the mode for updating the internal indexing in RutaBasic annotations.
+           This is a technical parameter for optimizing the runtime performance/speed of RutaEngines.
+           Available modes are: COMPLETE, ADDITIVE, SAFE_ADDITIVE, NONE.
+           Default value is ADDITIVE.
+          </p>
+        </div>
+        <div class="section" title="validateInternalIndexing"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.validateInternalIndexing">validateInternalIndexing</h5></div></div></div>
+          
+          <p>
+            Option to validate the internal indexing in RutaBasic with the current CAS after the indexing
+            and reindexing is performed. Annotations that are not correctly indexing in RutaBasics cause
+            Exceptions. Annotations of types listed in parameter 'indexSkipTypes' and 'reindexSkipTypes'
+            are ignored. Default value is false.
+          </p>
+        </div>
+        validateInternalIndexing
         <div class="section" title="emptyIsInvisible"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.emptyIsInvisible">emptyIsInvisible</h5></div></div></div>
           
           <p>
@@ -1037,6 +1112,14 @@ Document{-&gt; EXEC(MyAnalysisEngine, {MyType1, MyType2})};
           <p>
             This parameter specifies whether short type names should be resolved against the typesystems declared in the script (true) or at runtime in the CAS typesystem (false).
             The default value is set to false.
+          </p>
+        </div>
+        <div class="section" title="typeIgnorePattern"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.typeIgnorePattern">typeIgnorePattern</h5></div></div></div>
+          
+          <p>
+            An optional pattern (regular expression) which defined types that should be ignored. These 
+            types will not be resolved even if strictImports is set to false. This parameter can be used to 
+            ignore complete namespaces of type that could contain ambiguous short names.
           </p>
         </div>
         <div class="section" title="dynamicAnchoring"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.dynamicAnchoring">dynamicAnchoring</h5></div></div></div>
@@ -1076,6 +1159,13 @@ Document{-&gt; EXEC(MyAnalysisEngine, {MyType1, MyType2})};
           <p>
             This parameter specifies whether the match information (covered text) of the rules should be stored in the CAS.
             The default value of this parameter is set to false.
+          </p>
+        </div>
+        <div class="section" title="debugAddToIndexes"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.debugAddToIndexes">debugAddToIndexes</h5></div></div></div>
+          
+          <p>
+            This parameter specifies whether all debug annotation should be added to the indexes. By
+            default this parameter is deactivated and only the root script apply is added.
           </p>
         </div>
         <div class="section" title="debugOnlyFor"><div class="titlepage"><div><div><h5 class="title" id="ugr.tools.ruta.ae.basic.parameter.debugOnlyFor">debugOnlyFor</h5></div></div></div>
@@ -1954,7 +2044,7 @@ Matched:  small Big Big Big small</pre><p>
       Type declarations define new kinds of annotation types and
       optionally their features.
     </p>
-      <div class="section" title="2.5.1.1.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1115">2.5.1.1.&nbsp;
+      <div class="section" title="2.5.1.1.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1179">2.5.1.1.&nbsp;
           <span class="bold"><strong>Example:</strong></span>
         </h4></div></div></div>
         
@@ -2050,7 +2140,7 @@ DECLARE ParentType NewType (SomeType feature1, INT feature2);
           </p>
         </li></ul></div><p>
     </p>
-      <div class="section" title="2.5.2.1.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1153">2.5.2.1.&nbsp;
+      <div class="section" title="2.5.2.1.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1217">2.5.2.1.&nbsp;
           <span class="bold"><strong>Example:</strong></span>
         </h4></div></div></div>
         
@@ -2092,7 +2182,7 @@ ANNOTATIONLIST newAnnotationList;</pre><p>
           </p>
         </li></ul></div><p>
     </p>
-      <div class="section" title="2.5.3.1.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1166">2.5.3.1.&nbsp;
+      <div class="section" title="2.5.3.1.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1230">2.5.3.1.&nbsp;
           <span class="bold"><strong>Example:</strong></span>
         </h4></div></div></div>
         
@@ -2110,7 +2200,7 @@ WORDTABLE tableName = 'someTable.csv';</pre><p>
       is not necessary to import the Type System of the additional rule
       script.
     </p>
-      <div class="section" title="2.5.4.1.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1174">2.5.4.1.&nbsp;
+      <div class="section" title="2.5.4.1.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1238">2.5.4.1.&nbsp;
           <span class="bold"><strong>Example:</strong></span>
         </h4></div></div></div>
         
@@ -2152,7 +2242,7 @@ Document{-&gt;CALL(AnotherScript)}; // &lt;- rule executes "AnotherScript.ruta"<
           </p>
         </li></ul></div><p>
     </p>
-      <div class="section" title="2.5.5.1.&nbsp; Type System Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1190">2.5.5.1.&nbsp;
+      <div class="section" title="2.5.5.1.&nbsp; Type System Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1254">2.5.5.1.&nbsp;
           <span class="bold"><strong>Type System Example:</strong></span>
         </h4></div></div></div>
         
@@ -2185,7 +2275,7 @@ IMPORT PACKAGE * FROM my.package.ExternalTypeSystem AS p2;</pre><p>
         </p>
       </div>
 
-      <div class="section" title="2.5.5.2.&nbsp; Analysis Engine Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1195">2.5.5.2.&nbsp;
+      <div class="section" title="2.5.5.2.&nbsp; Analysis Engine Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1259">2.5.5.2.&nbsp;
           <span class="bold"><strong>Analysis Engine Example:</strong></span>
         </h4></div></div></div>
         
@@ -2234,7 +2324,7 @@ Document{-&gt; EXEC(AnotherEngine, {SomeType})};</pre><p>
           ).
         </li></ol></div><p>
     </p>
-      <div class="section" title="2.6.1.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1216">2.6.1.1.&nbsp;
+      <div class="section" title="2.6.1.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1280">2.6.1.1.&nbsp;
           <span class="bold"><strong>Definition:</strong></span>
         </h4></div></div></div>
         
@@ -2243,7 +2333,7 @@ Document{-&gt; EXEC(AnotherEngine, {SomeType})};</pre><p>
                     | AnnotationExpression.type</pre><p>
         </p>
       </div>
-      <div class="section" title="2.6.1.2.&nbsp; Examples:"><div class="titlepage"><div><div><h4 class="title" id="d5e1221">2.6.1.2.&nbsp;
+      <div class="section" title="2.6.1.2.&nbsp; Examples:"><div class="titlepage"><div><div><h4 class="title" id="d5e1285">2.6.1.2.&nbsp;
           <span class="bold"><strong>Examples:</strong></span>
         </h4></div></div></div>
         
@@ -2286,7 +2376,7 @@ Document{-&gt;ASSIGN(typeVar, Author)};</pre><p>
           ).
         </li></ol></div><p>
     </p>
-      <div class="section" title="2.6.2.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1240">2.6.2.1.&nbsp;
+      <div class="section" title="2.6.2.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1304">2.6.2.1.&nbsp;
           <span class="bold"><strong>Definition:</strong></span>
         </h4></div></div></div>
         
@@ -2295,7 +2385,7 @@ Document{-&gt;ASSIGN(typeVar, Author)};</pre><p>
                           | TypeExpression | FeatureExpression</pre><p>
         </p>
       </div>
-      <div class="section" title="2.6.2.2.&nbsp; Examples:"><div class="titlepage"><div><div><h4 class="title" id="d5e1245">2.6.2.2.&nbsp;
+      <div class="section" title="2.6.2.2.&nbsp; Examples:"><div class="titlepage"><div><div><h4 class="title" id="d5e1309">2.6.2.2.&nbsp;
           <span class="bold"><strong>Examples:</strong></span>
         </h4></div></div></div>
         
@@ -2323,7 +2413,7 @@ e:EmplRelation.employer; // this feature expression represents the
       a complete overview, have a look at the following syntax definition
       of number expressions.
       </p>
-      <div class="section" title="2.6.3.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1253">2.6.3.1.&nbsp;
+      <div class="section" title="2.6.3.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1317">2.6.3.1.&nbsp;
           <span class="bold"><strong>Definition:</strong></span>
         </h4></div></div></div>
         
@@ -2353,7 +2443,7 @@ Digit                 -&gt; ('0'..'9') </pre><p>
         <a class="xref" href="#ugr.tools.ruta.language.declarations.variable" title="2.5.2.&nbsp;Variables">Section&nbsp;2.5.2, &#8220;Variables&#8221;</a>
         .
       </p>
-      <div class="section" title="2.6.3.2.&nbsp; Examples:"><div class="titlepage"><div><div><h4 class="title" id="d5e1260">2.6.3.2.&nbsp;
+      <div class="section" title="2.6.3.2.&nbsp; Examples:"><div class="titlepage"><div><div><h4 class="title" id="d5e1324">2.6.3.2.&nbsp;
           <span class="bold"><strong>Examples:</strong></span>
         </h4></div></div></div>
         
@@ -2390,7 +2480,7 @@ Document{-&gt;ASSIGN(intVar1, 12 * intVar1 - SIN(intVar2))};</pre><p>
          </p>
         </li></ol></div><p>
       </p>
-      <div class="section" title="2.6.4.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1276">2.6.4.1.&nbsp;
+      <div class="section" title="2.6.4.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1340">2.6.4.1.&nbsp;
           <span class="bold"><strong>Definition:</strong></span>
         </h4></div></div></div>
         
@@ -2400,7 +2490,7 @@ SimpleStringExpression  -&gt;  StringLiteral ("+" StringExpression)*
                             | StringVariable</pre><p>
         </p>
       </div>
-      <div class="section" title="2.6.4.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1281">2.6.4.2.&nbsp;
+      <div class="section" title="2.6.4.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1345">2.6.4.2.&nbsp;
           <span class="bold"><strong>Example:</strong></span>
         </h4></div></div></div>
         
@@ -2421,7 +2511,7 @@ Document{-&gt;ASSIGN(strVar, "strLiteral" + strVar)};</pre><p>
       true or false. To get a complete overview, have a look at the
       following syntax definition of boolean expressions.
       </p>
-      <div class="section" title="2.6.5.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1289">2.6.5.1.&nbsp;
+      <div class="section" title="2.6.5.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1353">2.6.5.1.&nbsp;
           <span class="bold"><strong>Definition:</strong></span>
         </h4></div></div></div>
         
@@ -2445,7 +2535,7 @@ BooleanLiteral    -&gt;  "true" | "false"</pre><p>
           .
         </p>
       </div>
-      <div class="section" title="2.6.5.2.&nbsp; Examples:"><div class="titlepage"><div><div><h4 class="title" id="d5e1296">2.6.5.2.&nbsp;
+      <div class="section" title="2.6.5.2.&nbsp; Examples:"><div class="titlepage"><div><div><h4 class="title" id="d5e1360">2.6.5.2.&nbsp;
           <span class="bold"><strong>Examples:</strong></span>
         </h4></div></div></div>
         
@@ -2511,7 +2601,7 @@ BooleanLiteral    -&gt;  "true" | "false"</pre><p>
     <p>
       List expression are a rather simple kind of expression.
       </p>
-      <div class="section" title="2.6.6.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1314">2.6.6.1.&nbsp;
+      <div class="section" title="2.6.6.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1378">2.6.6.1.&nbsp;
           <span class="bold"><strong>Definition:</strong></span>
         </h4></div></div></div>
         
@@ -2590,7 +2680,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       type. If a list of types is passed, this has to be true for at least
       one of them.
     </p>
-    <div class="section" title="2.7.1.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1335">2.7.1.1.&nbsp;
+    <div class="section" title="2.7.1.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1399">2.7.1.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -2598,7 +2688,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">AFTER(Type|TypeListExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.1.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1340">2.7.1.2.&nbsp;
+    <div class="section" title="2.7.1.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1404">2.7.1.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -2618,7 +2708,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       The AND condition is a composed condition and evaluates true, if
       all contained conditions evaluate true.
     </p>
-    <div class="section" title="2.7.2.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1349">2.7.2.1.&nbsp;
+    <div class="section" title="2.7.2.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1413">2.7.2.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -2626,7 +2716,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">AND(Condition1,...,ConditionN)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.2.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1354">2.7.2.2.&nbsp;
+    <div class="section" title="2.7.2.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1418">2.7.2.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -2650,7 +2740,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       type. If a list of types is passed, this has to be true for at least
       one of them.
     </p>
-    <div class="section" title="2.7.3.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1363">2.7.3.1.&nbsp;
+    <div class="section" title="2.7.3.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1427">2.7.3.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -2658,7 +2748,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">BEFORE(Type|TypeListExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.3.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1368">2.7.3.2.&nbsp;
+    <div class="section" title="2.7.3.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1432">2.7.3.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -2688,7 +2778,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       occurrence of the
       passed type.
     </p>
-    <div class="section" title="2.7.4.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1377">2.7.4.1.&nbsp;
+    <div class="section" title="2.7.4.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1441">2.7.4.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -2696,7 +2786,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">CONTAINS(Type(,NumberExpression,NumberExpression(,BooleanExpression)?)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.4.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1382">2.7.4.2.&nbsp;
+    <div class="section" title="2.7.4.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1446">2.7.4.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -2740,7 +2830,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       the index of the matched annotation is within a passed interval. If
       no interval is passed, the condition always evaluates true.
     </p>
-    <div class="section" title="2.7.5.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1398">2.7.5.1.&nbsp;
+    <div class="section" title="2.7.5.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1462">2.7.5.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -2748,7 +2838,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">CONTEXTCOUNT(Type(,NumberExpression,NumberExpression)?(,Variable)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.5.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1403">2.7.5.2.&nbsp;
+    <div class="section" title="2.7.5.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1467">2.7.5.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -2783,7 +2873,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       amount is within a specified interval. If no interval is passed, the
       condition always evaluates true.
     </p>
-    <div class="section" title="2.7.6.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1412">2.7.6.1.&nbsp;
+    <div class="section" title="2.7.6.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1476">2.7.6.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -2795,7 +2885,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
           (,NumberExpression,NumberExpression)?(,NumberVariable)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.6.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1419">2.7.6.2.&nbsp;
+    <div class="section" title="2.7.6.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1483">2.7.6.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -2831,7 +2921,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       specified interval. If no interval is passed, the condition always
       evaluates true.
     </p>
-    <div class="section" title="2.7.7.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1431">2.7.7.1.&nbsp;
+    <div class="section" title="2.7.7.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1495">2.7.7.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -2839,7 +2929,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">CURRENTCOUNT(Type(,NumberExpression,NumberExpression)?(,Variable)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.7.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1436">2.7.7.2.&nbsp;
+    <div class="section" title="2.7.7.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1500">2.7.7.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -2862,7 +2952,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       annotation. If a list of types is passed, this has to be true for at
       least one of them.
     </p>
-    <div class="section" title="2.7.8.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1445">2.7.8.1.&nbsp;
+    <div class="section" title="2.7.8.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1509">2.7.8.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -2870,7 +2960,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">ENDSWITH(Type|TypeListExpression) </pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.8.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1450">2.7.8.2.&nbsp;
+    <div class="section" title="2.7.8.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1514">2.7.8.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -2890,7 +2980,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       The FEATURE condition compares a feature of the matched
       annotation with the second argument.
     </p>
-    <div class="section" title="2.7.9.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1459">2.7.9.1.&nbsp;
+    <div class="section" title="2.7.9.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1523">2.7.9.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -2898,7 +2988,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">FEATURE(StringExpression,Expression) </pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.9.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1464">2.7.9.2.&nbsp;
+    <div class="section" title="2.7.9.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1528">2.7.9.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -2919,7 +3009,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       The IF condition evaluates true, if the contained boolean
       expression evaluates true.
     </p>
-    <div class="section" title="2.7.10.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1473">2.7.10.1.&nbsp;
+    <div class="section" title="2.7.10.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1537">2.7.10.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -2927,7 +3017,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">IF(BooleanExpression) </pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.10.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1478">2.7.10.2.&nbsp;
+    <div class="section" title="2.7.10.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1542">2.7.10.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -2949,7 +3039,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       in a given word or string list. If an optional agrument is given, then 
       the value of the argument is used instead of the covered text of the matched annotation
     </p>
-    <div class="section" title="2.7.11.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1487">2.7.11.1.&nbsp;
+    <div class="section" title="2.7.11.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1551">2.7.11.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -2960,7 +3050,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">INLIST(StringList(,StringExpression)?) </pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.11.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1494">2.7.11.2.&nbsp;
+    <div class="section" title="2.7.11.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1558">2.7.11.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -2992,7 +3082,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       evaluates true,
       if at least one of them fulfills the former condition.
     </p>
-    <div class="section" title="2.7.12.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1506">2.7.12.1.&nbsp;
+    <div class="section" title="2.7.12.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1570">2.7.12.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3000,7 +3090,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">IS(Type|TypeListExpression) </pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.12.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1511">2.7.12.2.&nbsp;
+    <div class="section" title="2.7.12.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1575">2.7.12.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3020,7 +3110,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       The LAST condition evaluates true, if the type of the last token
       within the window of the matched annotation is of the given type.
     </p>
-    <div class="section" title="2.7.13.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1520">2.7.13.1.&nbsp;
+    <div class="section" title="2.7.13.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1584">2.7.13.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3028,7 +3118,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">LAST(TypeExpression) </pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.13.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1525">2.7.13.2.&nbsp;
+    <div class="section" title="2.7.13.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1589">2.7.13.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3049,7 +3139,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       the number of containing conditions evaluating true is within a given
       interval.
     </p>
-    <div class="section" title="2.7.14.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1534">2.7.14.1.&nbsp;
+    <div class="section" title="2.7.14.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1598">2.7.14.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3057,7 +3147,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">MOFN(NumberExpression,NumberExpression,Condition1,...,ConditionN) </pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.14.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1539">2.7.14.2.&nbsp;
+    <div class="section" title="2.7.14.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1603">2.7.14.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3084,7 +3174,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       parameter can be set to true to get the condition being evaluated on
       a filtered index.
     </p>
-    <div class="section" title="2.7.15.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1548">2.7.15.1.&nbsp;
+    <div class="section" title="2.7.15.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1612">2.7.15.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3093,7 +3183,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
           (,BooleanExpression(,BooleanExpression)?)?) </pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.15.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1553">2.7.15.2.&nbsp;
+    <div class="section" title="2.7.15.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1617">2.7.15.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3113,7 +3203,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       The NOT condition negates the result of its contained
       condition.
     </p>
-    <div class="section" title="2.7.16.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1562">2.7.16.1.&nbsp;
+    <div class="section" title="2.7.16.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1626">2.7.16.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3121,7 +3211,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">"-"Condition</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.16.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1567">2.7.16.2.&nbsp;
+    <div class="section" title="2.7.16.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1631">2.7.16.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3141,7 +3231,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       The OR Condition is a composed condition and evaluates true, if
       at least one contained condition is evaluated true.
     </p>
-    <div class="section" title="2.7.17.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1576">2.7.17.1.&nbsp;
+    <div class="section" title="2.7.17.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1640">2.7.17.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3149,7 +3239,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">OR(Condition1,...,ConditionN)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.17.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1581">2.7.17.2.&nbsp;
+    <div class="section" title="2.7.17.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1645">2.7.17.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3177,7 +3267,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
       <span class="quote">&#8220;<span class="quote">en</span>&#8221;</span> to the value 23.
       
     </p>
-    <div class="section" title="2.7.18.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1592">2.7.18.1.&nbsp;
+    <div class="section" title="2.7.18.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1656">2.7.18.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3185,7 +3275,7 @@ FeatureAssignmentExpression -&gt; FeatureExpression "=" Expression
         </p><pre class="programlisting">PARSE((stringExpression,)? variable(, stringExpression)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.18.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1597">2.7.18.2.&nbsp;
+    <div class="section" title="2.7.18.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1661">2.7.18.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3211,7 +3301,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       the former described condition for a single type is fulfilled for at
       least one of the types in the list.
     </p>
-    <div class="section" title="2.7.19.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1606">2.7.19.1.&nbsp;
+    <div class="section" title="2.7.19.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1670">2.7.19.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3219,7 +3309,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">PARTOF(Type|TypeListExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.19.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1611">2.7.19.2.&nbsp;
+    <div class="section" title="2.7.19.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1675">2.7.19.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3243,7 +3333,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       evaluates true if the former described condition is fulfilled for at
       least one of the types in the list.
     </p>
-    <div class="section" title="2.7.20.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1620">2.7.20.1.&nbsp;
+    <div class="section" title="2.7.20.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1684">2.7.20.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3251,7 +3341,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">PARTOFNEQ(Type|TypeListExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.20.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1625">2.7.20.2.&nbsp;
+    <div class="section" title="2.7.20.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1689">2.7.20.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3273,7 +3363,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       NumberExpression. If the additional boolean paramter is set to false,
       then k counts the occurrences of of the minimal annotations.
     </p>
-    <div class="section" title="2.7.21.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1635">2.7.21.1.&nbsp;
+    <div class="section" title="2.7.21.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1699">2.7.21.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3281,7 +3371,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">POSITION(Type,NumberExpression(,BooleanExpression)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.21.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1640">2.7.21.2.&nbsp;
+    <div class="section" title="2.7.21.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1704">2.7.21.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3322,7 +3412,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       initialized with the flags DOTALL and MULTILINE, and if the optional parameter is set to true, 
       then additionally with the flags CASE_INSENSITIVE and UNICODE_CASE.
     </p>
-    <div class="section" title="2.7.22.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1653">2.7.22.1.&nbsp;
+    <div class="section" title="2.7.22.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1717">2.7.22.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3330,7 +3420,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">REGEXP((StringVariable,)? StringExpression(,BooleanExpression)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.22.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1658">2.7.22.2.&nbsp;
+    <div class="section" title="2.7.22.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1722">2.7.22.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3355,7 +3445,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       given interval. Optionally, the score can be stored in a
       variable.
     </p>
-    <div class="section" title="2.7.23.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1667">2.7.23.1.&nbsp;
+    <div class="section" title="2.7.23.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1731">2.7.23.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3363,7 +3453,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">SCORE(NumberExpression,NumberExpression(,Variable)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.23.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1672">2.7.23.2.&nbsp;
+    <div class="section" title="2.7.23.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1736">2.7.23.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3386,7 +3476,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       is within the interval. The counted number can be stored in an
       optionally passed numeral variable.
     </p>
-    <div class="section" title="2.7.24.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1681">2.7.24.1.&nbsp;
+    <div class="section" title="2.7.24.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1745">2.7.24.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3394,7 +3484,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">SIZE(ListExpression(,NumberExpression,NumberExpression)?(,Variable)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.24.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1686">2.7.24.2.&nbsp;
+    <div class="section" title="2.7.24.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1750">2.7.24.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3417,7 +3507,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       annotation. If a type list is given, the condition evaluates true, if
       the former is true for at least one of the given types in the list.
     </p>
-    <div class="section" title="2.7.25.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1696">2.7.25.1.&nbsp;
+    <div class="section" title="2.7.25.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1760">2.7.25.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3425,7 +3515,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">STARTSWITH(Type|TypeListExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.25.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1701">2.7.25.2.&nbsp;
+    <div class="section" title="2.7.25.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1765">2.7.25.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3449,15 +3539,15 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       is within the passed interval. If no interval is passed, the
       condition always evaluates true.
     </p>
-    <div class="section" title="2.7.26.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1710">2.7.26.1.&nbsp;
+    <div class="section" title="2.7.26.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1774">2.7.26.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
       <p>
-        </p><pre class="programlisting">TOTALCOUNT(Type(,NumberExpression,NumberExpression(,Variable)?)?)</pre><p>
+        </p><pre class="programlisting">TOTALCOUNT(Type(,NumberExpression,NumberExpression)?(,NumberVariable)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.26.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1715">2.7.26.2.&nbsp;
+    <div class="section" title="2.7.26.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1779">2.7.26.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3481,7 +3571,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       if it
       finds more annotations of the first type.
     </p>
-    <div class="section" title="2.7.27.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1724">2.7.27.1.&nbsp;
+    <div class="section" title="2.7.27.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1788">2.7.27.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3489,7 +3579,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">VOTE(TypeExpression,TypeExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.7.27.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1729">2.7.27.2.&nbsp;
+    <div class="section" title="2.7.27.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1793">2.7.27.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3515,7 +3605,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       complete overview on UIMA Ruta expressions see
       <a class="xref" href="#ugr.tools.ruta.language.expressions" title="2.6.&nbsp;Expressions">Section&nbsp;2.6, &#8220;Expressions&#8221;</a>.
     </p>
-    <div class="section" title="2.8.1.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1741">2.8.1.1.&nbsp;
+    <div class="section" title="2.8.1.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1805">2.8.1.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3523,7 +3613,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">ADD(ListVariable,(RutaExpression)+)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.1.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1746">2.8.1.2.&nbsp;
+    <div class="section" title="2.8.1.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1810">2.8.1.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3543,7 +3633,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       The ADDFILTERTYPE action adds its arguments to the list of filtered types, 
       which restrict the visibility of the rules.
     </p>
-    <div class="section" title="2.8.2.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1755">2.8.2.1.&nbsp;
+    <div class="section" title="2.8.2.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1819">2.8.2.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3551,7 +3641,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">ADDFILTERTYPE(TypeExpression(,TypeExpression)*)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.2.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1760">2.8.2.2.&nbsp;
+    <div class="section" title="2.8.2.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1824">2.8.2.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3570,7 +3660,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       The ADDFILTERTYPE action adds its arguments to the list of retained types, 
       which extend the visibility of the rules.
     </p>
-    <div class="section" title="2.8.3.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1769">2.8.3.1.&nbsp;
+    <div class="section" title="2.8.3.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1833">2.8.3.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3578,7 +3668,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">ADDRETAINTYPE(TypeExpression(,TypeExpression)*)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.3.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1774">2.8.3.2.&nbsp;
+    <div class="section" title="2.8.3.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1838">2.8.3.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3598,7 +3688,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       The ASSIGN action assigns the value of the passed expression to
       a variable of the same type.
     </p>
-    <div class="section" title="2.8.4.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1783">2.8.4.1.&nbsp;
+    <div class="section" title="2.8.4.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1847">2.8.4.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3615,7 +3705,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">ASSIGN(TypeVariable,TypeExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.4.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1794">2.8.4.2.&nbsp;
+    <div class="section" title="2.8.4.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1858">2.8.4.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3635,7 +3725,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       file or script block. Currently, only complete script files are
       supported.
     </p>
-    <div class="section" title="2.8.5.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1803">2.8.5.1.&nbsp;
+    <div class="section" title="2.8.5.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1867">2.8.5.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3646,7 +3736,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">CALL(Block)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.5.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1810">2.8.5.2.&nbsp;
+    <div class="section" title="2.8.5.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1874">2.8.5.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3666,7 +3756,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       The CLEAR action removes all elements of the given list. If the list was initialized as it was declared, 
       then it is reset to its initial value.
     </p>
-    <div class="section" title="2.8.6.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1819">2.8.6.1.&nbsp;
+    <div class="section" title="2.8.6.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1883">2.8.6.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3674,7 +3764,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">CLEAR(ListVariable)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.6.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1824">2.8.6.2.&nbsp;
+    <div class="section" title="2.8.6.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1888">2.8.6.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3698,7 +3788,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       navy, blue, aqua, lightblue, lightgreen, orange, pink, salmon, cyan,
       violet, tan, brown, white and mediumpurple.
     </p>
-    <div class="section" title="2.8.7.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1833">2.8.7.1.&nbsp;
+    <div class="section" title="2.8.7.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1897">2.8.7.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3707,7 +3797,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
           (, BooleanExpression)?)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.7.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1838">2.8.7.2.&nbsp;
+    <div class="section" title="2.8.7.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1902">2.8.7.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3732,7 +3822,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
       name-value
       pairs.
     </p>
-    <div class="section" title="2.8.8.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1847">2.8.8.1.&nbsp;
+    <div class="section" title="2.8.8.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1911">2.8.8.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3740,7 +3830,7 @@ n:NUM{PARSE(n.ct,var,"de")};</pre><p>
         </p><pre class="programlisting">CONFIGURE(AnalysisEngine(,StringExpression = Expression)+)</pre><p>
       </p>
     </div>
-     <div class="section" title="2.8.8.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1852">2.8.8.2.&nbsp;
+     <div class="section" title="2.8.8.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1916">2.8.8.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3763,7 +3853,7 @@ Document{-&gt;CONFIGURE(HtmlAnnotator, "onlyContent" = false)};</pre><p>
       additionally assigns values to a chosen subset of the type's feature
       elements.
     </p>
-    <div class="section" title="2.8.9.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1862">2.8.9.1.&nbsp;
+    <div class="section" title="2.8.9.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1926">2.8.9.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3772,7 +3862,7 @@ Document{-&gt;CONFIGURE(HtmlAnnotator, "onlyContent" = false)};</pre><p>
                          (,StringExpression = Expression)+)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.9.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1867">2.8.9.2.&nbsp;
+    <div class="section" title="2.8.9.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1931">2.8.9.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3795,7 +3885,7 @@ Document{-&gt;CONFIGURE(HtmlAnnotator, "onlyContent" = false)};</pre><p>
       The DEL action deletes the matched text fragments in the
       modified view. For removing annotations see UNMARK.
     </p>
-    <div class="section" title="2.8.10.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1876">2.8.10.1.&nbsp;
+    <div class="section" title="2.8.10.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1940">2.8.10.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3803,7 +3893,7 @@ Document{-&gt;CONFIGURE(HtmlAnnotator, "onlyContent" = false)};</pre><p>
         </p><pre class="programlisting">DEL</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.10.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1881">2.8.10.2.&nbsp;
+    <div class="section" title="2.8.10.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1945">2.8.10.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3824,7 +3914,7 @@ Document{-&gt;CONFIGURE(HtmlAnnotator, "onlyContent" = false)};</pre><p>
       (first parameter) and assigns the anchoring parameters penalty
       (second parameter) and factor (third parameter).
     </p>
-    <div class="section" title="2.8.11.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1890">2.8.11.1.&nbsp;
+    <div class="section" title="2.8.11.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1954">2.8.11.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3833,7 +3923,7 @@ Document{-&gt;CONFIGURE(HtmlAnnotator, "onlyContent" = false)};</pre><p>
               (,NumberExpression(,NumberExpression)?)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.11.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1895">2.8.11.2.&nbsp;
+    <div class="section" title="2.8.11.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1959">2.8.11.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3865,7 +3955,7 @@ Document{-&gt;CONFIGURE(HtmlAnnotator, "onlyContent" = false)};</pre><p>
       The types of these annotations need to be provided in the second argument in order to be visible to the Ruta rules.
     </p>
     </div>
-    <div class="section" title="2.8.12.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1906">2.8.12.1.&nbsp;
+    <div class="section" title="2.8.12.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1970">2.8.12.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3873,7 +3963,7 @@ Document{-&gt;CONFIGURE(HtmlAnnotator, "onlyContent" = false)};</pre><p>
         </p><pre class="programlisting">EXEC((StringExpression,)? DifferentFile(, TypeListExpression)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.12.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1911">2.8.12.2.&nbsp;
+    <div class="section" title="2.8.12.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1975">2.8.12.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3894,7 +3984,7 @@ Document{-&gt;EXEC(NamedEntities, {Person, Location})};</pre><p>
       The FILL action fills a chosen subset of the given type's
       feature elements.
     </p>
-    <div class="section" title="2.8.13.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1920">2.8.13.1.&nbsp;
+    <div class="section" title="2.8.13.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1984">2.8.13.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3902,7 +3992,7 @@ Document{-&gt;EXEC(NamedEntities, {Person, Location})};</pre><p>
         </p><pre class="programlisting">FILL(TypeExpression(,StringExpression = Expression)+)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.13.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1925">2.8.13.2.&nbsp;
+    <div class="section" title="2.8.13.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1989">2.8.13.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3938,7 +4028,7 @@ Document{-&gt;EXEC(NamedEntities, {Person, Location})};</pre><p>
         overrides FILTERTYPE.
       </p>
     </div>
-    <div class="section" title="2.8.14.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1943">2.8.14.1.&nbsp;
+    <div class="section" title="2.8.14.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2007">2.8.14.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3946,7 +4036,7 @@ Document{-&gt;EXEC(NamedEntities, {Person, Location})};</pre><p>
         </p><pre class="programlisting">FILTERTYPE((TypeExpression(,TypeExpression)*))?</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.14.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1948">2.8.14.2.&nbsp;
+    <div class="section" title="2.8.14.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2012">2.8.14.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -3976,7 +4066,7 @@ Document{-&gt;EXEC(NamedEntities, {Person, Location})};</pre><p>
       collected using the indexes of the rule elements of the complete
       rule.
     </p>
-    <div class="section" title="2.8.15.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1960">2.8.15.1.&nbsp;
+    <div class="section" title="2.8.15.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2024">2.8.15.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -3985,7 +4075,7 @@ Document{-&gt;EXEC(NamedEntities, {Person, Location})};</pre><p>
           (,StringExpression = NumberExpression)+)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.15.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1965">2.8.15.2.&nbsp;
+    <div class="section" title="2.8.15.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2029">2.8.15.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4012,12 +4102,12 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
     <p>
       The GET action retrieves an element of the given list dependent on a
       given strategy.
-      </p><div class="table"><a name="d5e1974"></a><p class="title"><b>Table&nbsp;2.3.&nbsp;Currently supported strategies</b></p><div class="table-contents">
+      </p><div class="table"><a name="d5e2038"></a><p class="title"><b>Table&nbsp;2.3.&nbsp;Currently supported strategies</b></p><div class="table-contents">
         
         <table summary="Currently supported strategies" style="border-collapse: collapse;border-top: 0.5pt solid black; border-bottom: 0.5pt solid black; border-left: 0.5pt solid black; border-right: 0.5pt solid black; "><colgroup><col><col></colgroup><thead><tr><th style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">Strategy</th><th style="border-bottom: 0.5pt solid black; " align="left">Functionality</th></tr></thead><tbody><tr><td style="border-right: 0.5pt solid black; " align="left">dominant</td><td style="" align="left">finds the most occurring element</td></tr></tbody></table>
       </div></div><p><br class="table-break">
     </p>
-    <div class="section" title="2.8.16.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1985">2.8.16.1.&nbsp;
+    <div class="section" title="2.8.16.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2049">2.8.16.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4025,7 +4115,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
         </p><pre class="programlisting">GET(ListExpression, Variable, StringExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.16.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e1990">2.8.16.2.&nbsp;
+    <div class="section" title="2.8.16.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2054">2.8.16.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4046,7 +4136,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
       annotation's feature (first paramter) in the given variable (second
       parameter).
     </p>
-    <div class="section" title="2.8.17.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e1999">2.8.17.1.&nbsp;
+    <div class="section" title="2.8.17.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2063">2.8.17.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4054,7 +4144,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
         </p><pre class="programlisting">GETFEATURE(StringExpression, Variable)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.17.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2004">2.8.17.2.&nbsp;
+    <div class="section" title="2.8.17.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2068">2.8.17.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4072,7 +4162,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
     
     <p>
       This action retrieves a list of types dependent on a given strategy.
-      </p><div class="table"><a name="d5e2013"></a><p class="title"><b>Table&nbsp;2.4.&nbsp;Currently supported strategies</b></p><div class="table-contents">
+      </p><div class="table"><a name="d5e2077"></a><p class="title"><b>Table&nbsp;2.4.&nbsp;Currently supported strategies</b></p><div class="table-contents">
         
         <table summary="Currently supported strategies" style="border-collapse: collapse;border-top: 0.5pt solid black; border-bottom: 0.5pt solid black; border-left: 0.5pt solid black; border-right: 0.5pt solid black; "><colgroup><col><col></colgroup><thead><tr><th style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">Strategy</th><th style="border-bottom: 0.5pt solid black; " align="left">Functionality</th></tr></thead><tbody><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">Types</td><td style="border-bottom: 0.5pt solid black; " align="left">get all types within the matched annotation</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">Types:End</td><td style="border-bottom: 0.5pt solid black; " align="left">get all types that end at the same offset as the matched
                 annotation
@@ -4082,7 +4172,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
               </td></tr></tbody></table>
       </div></div><p><br class="table-break">
     </p>
-    <div class="section" title="2.8.18.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2030">2.8.18.1.&nbsp;
+    <div class="section" title="2.8.18.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2094">2.8.18.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4090,7 +4180,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
         </p><pre class="programlisting">GETLIST(ListVariable, StringExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.18.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2035">2.8.18.2.&nbsp;
+    <div class="section" title="2.8.18.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2099">2.8.18.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4112,7 +4202,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
       occurs mostly for rules that start with a quantifier. The second optional parameter activates greedy acnhoring for the complete rule.
       Later rule matches are only possible after previous matches.
     </p>
-    <div class="section" title="2.8.19.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2044">2.8.19.1.&nbsp;
+    <div class="section" title="2.8.19.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2108">2.8.19.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4120,7 +4210,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
         </p><pre class="programlisting">GREEDYANCHORING(BooleanExpression(,BooleanExpression)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.19.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2049">2.8.19.2.&nbsp;
+    <div class="section" title="2.8.19.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2113">2.8.19.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4142,7 +4232,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
     <p>
       The LOG action writes a log message.
     </p>
-    <div class="section" title="2.8.20.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2058">2.8.20.1.&nbsp;
+    <div class="section" title="2.8.20.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2122">2.8.20.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4150,7 +4240,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
         </p><pre class="programlisting">LOG(StringExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.20.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2063">2.8.20.2.&nbsp;
+    <div class="section" title="2.8.20.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2127">2.8.20.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4172,7 +4262,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
       used to create an annotation that spanns the matched information of
       several rule elements.
     </p>
-    <div class="section" title="2.8.21.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2072">2.8.21.1.&nbsp;
+    <div class="section" title="2.8.21.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2136">2.8.21.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4180,7 +4270,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
         </p><pre class="programlisting">MARK(TypeExpression(,NumberExpression)*)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.21.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2077">2.8.21.2.&nbsp;
+    <div class="section" title="2.8.21.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2141">2.8.21.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4216,7 +4306,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
       Additionally to external word lists, string lists variables can be
       used.
     </p>
-    <div class="section" title="2.8.22.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2087">2.8.22.1.&nbsp;
+    <div class="section" title="2.8.22.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2151">2.8.22.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4227,7 +4317,7 @@ A B{-&gt; GATHER(C, 1, 2, "a" = 1, "b" = 2)};</pre><p>
           (,NumberExpression,(BooleanExpression)?)?)?)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.22.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2093">2.8.22.2.&nbsp;
+    <div class="section" title="2.8.22.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2157">2.8.22.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4251,7 +4341,7 @@ Document{-&gt; MARKFAST(FirstName, FirstNameList, true, 2)};</pre><p>
       The MARKFIRST action annotates the first token (basic annotation) of the matched
       annotation with the given type.
     </p>
-    <div class="section" title="2.8.23.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2102">2.8.23.1.&nbsp;
+    <div class="section" title="2.8.23.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2166">2.8.23.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4259,7 +4349,7 @@ Document{-&gt; MARKFAST(FirstName, FirstNameList, true, 2)};</pre><p>
         </p><pre class="programlisting">MARKFIRST(TypeExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.23.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2107">2.8.23.2.&nbsp;
+    <div class="section" title="2.8.23.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2171">2.8.23.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4279,7 +4369,7 @@ Document{-&gt; MARKFAST(FirstName, FirstNameList, true, 2)};</pre><p>
       The MARKLAST action annotates the last token of the matched
       annotation with the given type.
     </p>
-    <div class="section" title="2.8.24.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2116">2.8.24.1.&nbsp;
+    <div class="section" title="2.8.24.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2180">2.8.24.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4287,7 +4377,7 @@ Document{-&gt; MARKFAST(FirstName, FirstNameList, true, 2)};</pre><p>
         </p><pre class="programlisting">MARKLAST(TypeExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.24.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2121">2.8.24.2.&nbsp;
+    <div class="section" title="2.8.24.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2185">2.8.24.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4308,7 +4398,7 @@ Document{-&gt; MARKFAST(FirstName, FirstNameList, true, 2)};</pre><p>
       action, but creates a new annotation only, 
       if each part of the matched annotation is not yet part of the given type.
     </p>
-    <div class="section" title="2.8.25.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2130">2.8.25.1.&nbsp;
+    <div class="section" title="2.8.25.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2194">2.8.25.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4316,7 +4406,7 @@ Document{-&gt; MARKFAST(FirstName, FirstNameList, true, 2)};</pre><p>
         </p><pre class="programlisting">MARKONCE(NumberExpression,TypeExpression(,NumberExpression)*)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.25.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2135">2.8.25.2.&nbsp;
+    <div class="section" title="2.8.25.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2199">2.8.25.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4347,7 +4437,7 @@ Document{-&gt; MARKFAST(FirstName, FirstNameList, true, 2)};</pre><p>
       <a class="xref" href="#ugr.tools.ruta.language.score" title="2.16.&nbsp;Heuristic extraction using scoring rules">Section&nbsp;2.16, &#8220;Heuristic extraction using scoring rules&#8221;</a>
       .
     </p>
-    <div class="section" title="2.8.26.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2145">2.8.26.1.&nbsp;
+    <div class="section" title="2.8.26.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2209">2.8.26.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4355,7 +4445,7 @@ Document{-&gt; MARKFAST(FirstName, FirstNameList, true, 2)};</pre><p>
         </p><pre class="programlisting">MARKSCORE(NumberExpression,TypeExpression(,NumberExpression)*)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.26.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2150">2.8.26.2.&nbsp;
+    <div class="section" title="2.8.26.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2214">2.8.26.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4388,7 +4478,7 @@ Document{-&gt; MARKFAST(FirstName, FirstNameList, true, 2)};</pre><p>
       more information on tables see
       <a class="xref" href="#ugr.tools.ruta.language.declarations.ressource" title="2.5.3.&nbsp;Resources">Section&nbsp;2.5.3, &#8220;Resources&#8221;</a>. Additionally, several configuration parameters are possible. (See example.)
     </p>
-    <div class="section" title="2.8.27.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2160">2.8.27.1.&nbsp;
+    <div class="section" title="2.8.27.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2224">2.8.27.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4399,7 +4489,7 @@ Document{-&gt; MARKFAST(FirstName, FirstNameList, true, 2)};</pre><p>
           (,StringExpression = NumberExpression)+)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.27.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2165">2.8.27.2.&nbsp;
+    <div class="section" title="2.8.27.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2229">2.8.27.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4428,7 +4518,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       in a passed String variable. The optionally passed indexes can be
       used to match the text of several rule elements.
     </p>
-    <div class="section" title="2.8.28.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2174">2.8.28.1.&nbsp;
+    <div class="section" title="2.8.28.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2238">2.8.28.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4436,7 +4526,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">MATCHEDTEXT(StringVariable(,NumberExpression)*)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.28.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2179">2.8.28.2.&nbsp;
+    <div class="section" title="2.8.28.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2243">2.8.28.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4459,7 +4549,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       union (true). The second parameter is the list variable that will
       contain the result.
     </p>
-    <div class="section" title="2.8.29.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2188">2.8.29.1.&nbsp;
+    <div class="section" title="2.8.29.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2252">2.8.29.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4467,7 +4557,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">MERGE(BooleanExpression, ListVariable, ListExpression, (ListExpression)+)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.29.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2193">2.8.29.2.&nbsp;
+    <div class="section" title="2.8.29.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2257">2.8.29.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4487,7 +4577,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       The REMOVE action removes lists or single values from a given
       list.
     </p>
-    <div class="section" title="2.8.30.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2202">2.8.30.1.&nbsp;
+    <div class="section" title="2.8.30.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2266">2.8.30.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4495,7 +4585,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">REMOVE(ListVariable,(Argument)+)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.30.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2207">2.8.30.2.&nbsp;
+    <div class="section" title="2.8.30.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2271">2.8.30.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4514,7 +4604,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
     <p>
       This action removes all duplicates within a given list.
     </p>
-    <div class="section" title="2.8.31.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2216">2.8.31.1.&nbsp;
+    <div class="section" title="2.8.31.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2280">2.8.31.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4522,7 +4612,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">REMOVEDUPLICATE(ListVariable)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.31.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2221">2.8.31.2.&nbsp;
+    <div class="section" title="2.8.31.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2285">2.8.31.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4541,7 +4631,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       The REMOVEFILTERTYPE action removes its arguments from the list of filtered types, 
       which restrict the visibility of the rules.
     </p>
-    <div class="section" title="2.8.32.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2230">2.8.32.1.&nbsp;
+    <div class="section" title="2.8.32.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2294">2.8.32.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4549,7 +4639,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">REMOVEFILTERTYPE(TypeExpression(,TypeExpression)*)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.32.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2235">2.8.32.2.&nbsp;
+    <div class="section" title="2.8.32.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2299">2.8.32.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4568,7 +4658,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       The REMOVEFILTERTYPE action removes its arguments from the list of retained types, 
       which extend the visibility of the rules.
     </p>
-    <div class="section" title="2.8.33.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2244">2.8.33.1.&nbsp;
+    <div class="section" title="2.8.33.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2308">2.8.33.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4576,7 +4666,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">REMOVERETAINTYPE(TypeExpression(,TypeExpression)*)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.33.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2249">2.8.33.2.&nbsp;
+    <div class="section" title="2.8.33.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2313">2.8.33.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4598,7 +4688,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       matched annotations and shows them in the modified view (see
       <a class="xref" href="#ugr.tools.ruta.language.modification" title="2.17.&nbsp;Modification">Section&nbsp;2.17, &#8220;Modification&#8221;</a>).
     </p>
-    <div class="section" title="2.8.34.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2259">2.8.34.1.&nbsp;
+    <div class="section" title="2.8.34.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2323">2.8.34.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4606,7 +4696,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">REPLACE(StringExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.34.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2264">2.8.34.2.&nbsp;
+    <div class="section" title="2.8.34.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2328">2.8.34.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4639,7 +4729,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         overrides FILTERTYPE.
       </p>
     </div>
-    <div class="section" title="2.8.35.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2282">2.8.35.1.&nbsp;
+    <div class="section" title="2.8.35.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2346">2.8.35.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4647,7 +4737,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">RETAINTYPE((TypeExpression(,TypeExpression)*))?</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.35.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2287">2.8.35.2.&nbsp;
+    <div class="section" title="2.8.35.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2351">2.8.35.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4673,7 +4763,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       matched
       complex structure.
     </p>
-    <div class="section" title="2.8.36.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2299">2.8.36.1.&nbsp;
+    <div class="section" title="2.8.36.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2363">2.8.36.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4681,7 +4771,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">SETFEATURE(StringExpression,Expression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.36.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2304">2.8.36.2.&nbsp;
+    <div class="section" title="2.8.36.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2368">2.8.36.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4705,7 +4795,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         In either way, this means that the action 
         has to be placed at a matching condition, which will be used to specify the annotations to be changed.
       </p>
-      <div class="section" title="2.8.37.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2313">2.8.37.1.&nbsp;
+      <div class="section" title="2.8.37.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2377">2.8.37.1.&nbsp;
           <span class="bold"><strong>Definition:</strong></span>
         </h4></div></div></div>
         
@@ -4713,7 +4803,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
           </p><pre class="programlisting">SHIFT(TypeExpression,NumberExpression,NumberExpression,BooleanExpression?)</pre><p>
         </p>
       </div>
-      <div class="section" title="2.8.37.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2318">2.8.37.2.&nbsp;
+      <div class="section" title="2.8.37.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2382">2.8.37.2.&nbsp;
           <span class="bold"><strong>Example:</strong></span>
         </h4></div></div></div>
         
@@ -4745,7 +4835,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         The latter two are only utilized if the first one is set to true..
         If omitted, the first argument is true and the other two arguments are false by default.
       </p>
-      <div class="section" title="2.8.38.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2332">2.8.38.1.&nbsp;
+      <div class="section" title="2.8.38.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2396">2.8.38.1.&nbsp;
           <span class="bold"><strong>Definition:</strong></span>
         </h4></div></div></div>
         
@@ -4754,7 +4844,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
           (BooleanExpression, BooleanExpression)? )?</pre><p>
         </p>
       </div>
-      <div class="section" title="2.8.38.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2337">2.8.38.2.&nbsp;
+      <div class="section" title="2.8.38.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2401">2.8.38.2.&nbsp;
           <span class="bold"><strong>Example:</strong></span>
         </h4></div></div></div>
         
@@ -4774,7 +4864,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       The TRANSFER action creates a new feature structure and adds all
       compatible features of the matched annotation.
     </p>
-    <div class="section" title="2.8.39.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2347">2.8.39.1.&nbsp;
+    <div class="section" title="2.8.39.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2411">2.8.39.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4782,7 +4872,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">TRANSFER(TypeExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.39.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2352">2.8.39.2.&nbsp;
+    <div class="section" title="2.8.39.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2416">2.8.39.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4805,7 +4895,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       annotate the matched annotation and provides several configuration
       parameters.
     </p>
-    <div class="section" title="2.8.40.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2362">2.8.40.1.&nbsp;
+    <div class="section" title="2.8.40.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2426">2.8.40.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4815,7 +4905,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
           BooleanExpression,NumberExpression,StringExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.40.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2367">2.8.40.2.&nbsp;
+    <div class="section" title="2.8.40.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2431">2.8.40.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4854,7 +4944,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       The TRIM action changes the offsets on the matched annotations by removing annotations, whose
       types are specified by the given parameters.
     </p>
-    <div class="section" title="2.8.41.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2379">2.8.41.1.&nbsp;
+    <div class="section" title="2.8.41.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2443">2.8.41.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4863,7 +4953,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">TRIM(TypeListExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.41.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2385">2.8.41.2.&nbsp;
+    <div class="section" title="2.8.41.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2449">2.8.41.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4886,7 +4976,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       If instead a boolean is given as an additional argument, then all annotations of the given type are removed
       that start at the matched position.
     </p>
-    <div class="section" title="2.8.42.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2394">2.8.42.1.&nbsp;
+    <div class="section" title="2.8.42.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2458">2.8.42.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4897,7 +4987,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">UNMARK(TypeExpression, BooleanExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.42.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2402">2.8.42.2.&nbsp;
+    <div class="section" title="2.8.42.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2466">2.8.42.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -4935,7 +5025,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
       type and all of its descendants overlapping the matched annotation,
       except the annotation is of at least one type in the passed list.
     </p>
-    <div class="section" title="2.8.43.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2421">2.8.43.1.&nbsp;
+    <div class="section" title="2.8.43.1.&nbsp; Definition:"><div class="titlepage"><div><div><h4 class="title" id="d5e2485">2.8.43.1.&nbsp;
         <span class="bold"><strong>Definition:</strong></span>
       </h4></div></div></div>
       
@@ -4943,7 +5033,7 @@ Document{-&gt; MARKTABLE(Struct, 1, TestTable,
         </p><pre class="programlisting">UNMARKALL(TypeExpression, TypeListExpression)</pre><p>
       </p>
     </div>
-    <div class="section" title="2.8.43.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2426">2.8.43.2.&nbsp;
+    <div class="section" title="2.8.43.2.&nbsp; Example:"><div class="titlepage"><div><div><h4 class="title" id="d5e2490">2.8.43.2.&nbsp;
         <span class="bold"><strong>Example:</strong></span>
       </h4></div></div></div>
       
@@ -5669,7 +5759,7 @@ Document{-&gt; EXEC(Modifier)};
       solve such tasks more
       easily: WORDLISTs and WORDTABLEs.
     </p>
-    <div class="section" title="2.18.1.&nbsp;WORDLISTs"><div class="titlepage"><div><div><h3 class="title" id="d5e2598">2.18.1.&nbsp;WORDLISTs</h3></div></div></div>
+    <div class="section" title="2.18.1.&nbsp;WORDLISTs"><div class="titlepage"><div><div><h3 class="title" id="d5e2662">2.18.1.&nbsp;WORDLISTs</h3></div></div></div>
       
       <p>
         A WORDLIST is a list of text items. There are three
@@ -5776,7 +5866,7 @@ Document{-&gt;MARKFAST(FirstName, FirstNameList)};
       </p>
       
     </div>
-    <div class="section" title="2.18.2.&nbsp;WORDTABLEs"><div class="titlepage"><div><div><h3 class="title" id="d5e2620">2.18.2.&nbsp;WORDTABLEs</h3></div></div></div>
+    <div class="section" title="2.18.2.&nbsp;WORDTABLEs"><div class="titlepage"><div><div><h3 class="title" id="d5e2684">2.18.2.&nbsp;WORDTABLEs</h3></div></div></div>
       
       <p>
         WORDLISTs have been used to annotate all occurrences of any list
@@ -5964,7 +6054,7 @@ FeatureAssignment -&gt; "(" StringExpression "=" Expression
         have been added.
         They will all be presented with a short example demonstrating their use.
       </p>
-      <div class="section" title="firstCharToUpperCase(IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2668">firstCharToUpperCase(IStringExpression expr)</h5></div></div></div>
+      <div class="section" title="firstCharToUpperCase(IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2732">firstCharToUpperCase(IStringExpression expr)</h5></div></div></div>
         
         <pre class="programlisting">STRING s;
 STRINGLIST sl;
@@ -5988,7 +6078,7 @@ CW{INLIST(sl) -&gt; Test};</pre>
           Annotation.
         </p>
       </div>
-      <div class="section" title="replaceFirst(IStringExpression expr, IStringExpression searchTerm, IStringExpression replacement)"><div class="titlepage"><div><div><h5 class="title" id="d5e2672">replaceFirst(IStringExpression expr, IStringExpression
+      <div class="section" title="replaceFirst(IStringExpression expr, IStringExpression searchTerm, IStringExpression replacement)"><div class="titlepage"><div><div><h5 class="title" id="d5e2736">replaceFirst(IStringExpression expr, IStringExpression
           searchTerm,
           IStringExpression
           replacement)
@@ -6009,7 +6099,7 @@ CW{INLIST(sl) -&gt; Test};</pre>
           Annotation if a match occurs.
         </p>
       </div>
-      <div class="section" title="replaceAll(IStringExpression expr, IStringExpression searchTerm, IStringExpression replacement)"><div class="titlepage"><div><div><h5 class="title" id="d5e2676">replaceAll(IStringExpression expr, IStringExpression
+      <div class="section" title="replaceAll(IStringExpression expr, IStringExpression searchTerm, IStringExpression replacement)"><div class="titlepage"><div><div><h5 class="title" id="d5e2740">replaceAll(IStringExpression expr, IStringExpression
           searchTerm,
           IStringExpression
           replacement)
@@ -6033,7 +6123,7 @@ CW{INLIST(sl) -&gt; Test};</pre>
         </p>
       </div>
 
-      <div class="section" title="substring(IStringExpression expr, INumberExpression from, INumberExpression to)"><div class="titlepage"><div><div><h5 class="title" id="d5e2680">substring(IStringExpression expr, INumberExpression from,
+      <div class="section" title="substring(IStringExpression expr, INumberExpression from, INumberExpression to)"><div class="titlepage"><div><div><h5 class="title" id="d5e2744">substring(IStringExpression expr, INumberExpression from,
           INumberExpression to)
         </h5></div></div></div>
         
@@ -6055,7 +6145,7 @@ SW{INLIST(sl) -&gt; Test};</pre>
         </p>
       </div>
 
-      <div class="section" title="toLowerCase(IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2684">toLowerCase(IStringExpression expr)</h5></div></div></div>
+      <div class="section" title="toLowerCase(IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2748">toLowerCase(IStringExpression expr)</h5></div></div></div>
         
         <pre class="programlisting">STRING s;
 STRINGLIST sl;
@@ -6078,7 +6168,7 @@ SW{INLIST(sl) -&gt; Test};</pre>
 
         </p>
       </div>
-      <div class="section" title="toUpperCase(IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2688">toUpperCase(IStringExpression expr)</h5></div></div></div>
+      <div class="section" title="toUpperCase(IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2752">toUpperCase(IStringExpression expr)</h5></div></div></div>
         
         <pre class="programlisting">STRING s;
 STRINGLIST sl;
@@ -6100,7 +6190,7 @@ SW{INLIST(sl) -&gt; T1};</pre>
       </div>
 
 
-      <div class="section" title="contains(IStringExpression expr,IStringExpression contains)"><div class="titlepage"><div><div><h5 class="title" id="d5e2692">contains(IStringExpression expr,IStringExpression contains)
+      <div class="section" title="contains(IStringExpression expr,IStringExpression contains)"><div class="titlepage"><div><div><h5 class="title" id="d5e2756">contains(IStringExpression expr,IStringExpression contains)
         </h5></div></div></div>
         
         <pre class="programlisting">w:W{contains(w.ct, "er")-&gt; Test};</pre>
@@ -6117,7 +6207,7 @@ SW{INLIST(sl) -&gt; T1};</pre>
         </p>
       </div>
 
-      <div class="section" title="endsWith(IStringExpression expr,IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2696">endsWith(IStringExpression expr,IStringExpression expr)
+      <div class="section" title="endsWith(IStringExpression expr,IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2760">endsWith(IStringExpression expr,IStringExpression expr)
         </h5></div></div></div>
         
         <pre class="programlisting">w:W{endsWith(w.ct, "str")-&gt; Test};</pre>
@@ -6132,7 +6222,7 @@ SW{INLIST(sl) -&gt; T1};</pre>
         </p>
       </div>
 
-      <div class="section" title="startsWith(IStringExpression expr,IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2700">startsWith(IStringExpression expr,IStringExpression expr)
+      <div class="section" title="startsWith(IStringExpression expr,IStringExpression expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2764">startsWith(IStringExpression expr,IStringExpression expr)
         </h5></div></div></div>
         
         <pre class="programlisting">w:W{startsWith(w.ct, "sprech")-&gt; Test};</pre>
@@ -6144,7 +6234,7 @@ SW{INLIST(sl) -&gt; T1};</pre>
         </p>
       </div>
 
-      <div class="section" title="equals(IStringExpression expr,IStringExpression expr) and equalsIgnoreCase(expr,expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2704">equals(IStringExpression expr,IStringExpression expr) and equalsIgnoreCase(expr,expr)
+      <div class="section" title="equals(IStringExpression expr,IStringExpression expr) and equalsIgnoreCase(expr,expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2768">equals(IStringExpression expr,IStringExpression expr) and equalsIgnoreCase(expr,expr)
         </h5></div></div></div>
         
         <pre class="programlisting">STRING s;
@@ -6163,7 +6253,7 @@ BLOCK(forEACH) W{}{
         </p>
       </div>
 
-      <div class="section" title="isEmpty(IStringExpression expr) and equalsIgnoreCase(expr,expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2708">isEmpty(IStringExpression expr) and equalsIgnoreCase(expr,expr)
+      <div class="section" title="isEmpty(IStringExpression expr) and equalsIgnoreCase(expr,expr)"><div class="titlepage"><div><div><h5 class="title" id="d5e2772">isEmpty(IStringExpression expr) and equalsIgnoreCase(expr,expr)
         </h5></div></div></div>
         
         <pre class="programlisting">STRING s;
@@ -6273,6 +6363,135 @@ BLOCK(forEACH) W{}{
       </p>
     </div>
   </div>
+  
+  <div class="section" title="2.21.&nbsp;Internal indexing and reindexing"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.ruta.language.internal_indxexing">2.21.&nbsp;Internal indexing and reindexing</h2></div></div></div>
+  
+  <p>
+   UIMA Ruta, or to be more precise the main analysis engine RutaEngine, creates, 
+   stores and updates additional indexing information directly in the CAS. 
+   This indexing is not related to the annotation indexes of UIMA itself. 
+   The internal indexing provides additional information, which is only utilized 
+   by the Ruta rules. This section provides an overview on why and how it is integrated in
+   UIMA Ruta, and how Ruta can be configured in order to optimize its performance.
+  </p>
+  <div class="section" title="2.21.1.&nbsp;Why additional indexing?"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.ruta.language.internal_indxexing.why">2.21.1.&nbsp;Why additional indexing?</h3></div></div></div>
+    
+    <p>
+	  The internal indexing plays a an essential role in different parts of functionality within Ruta.
+	  The need for the indexing is motivated by two main and important features. 
+	</p>
+	<p>
+	  Ruta provides different language elements like conditions, which are fulfilled 
+	  depending on some investigation of the CAS annotation indexes. There are several 
+	  conditions like PARTOF, which require many index operations in the worst case. Here, potentially
+	  the complete index needs to be iterated in order to validate if a specific annotation 
+	  is part of another annotation of a specific type. This check needs to be performed 
+	  for each considered annotation, for each rule match and for each rule where a PARTOF 
+	  condition is used. Without additional internal indexing, Ruta would be too slow to 
+	  actually be useful. With this feature, the process is just a fast lookup. This situation applies also for many other language elements and 
+	  conditions like STARTSWITH and ENDSWITH.
+    </p>
+    <p>
+      A second necessity is the coverage-based visibility concept of Ruta.
+      Annotations and any text spans are invisible if their begin or end is covered by some 
+      invisible annotation, i.e., an annotation of a type that is configured to be invisible.
+      This is a powerful feature that enables many different engineering approaches and makes the
+      rules more maintainable as well. For a (reasonably fast) implementation of this feature, 
+      it is necessary to know for each position, if it is covered by annotations of specific types.
+    </p>
+    <p>
+      The internal indexing comes, however, at some costs. The indexing requires time and memory.
+      The information needs to be collected and/or updated for every Ruta script (RutaEngine) 
+      in a pipeline. This may be expensive operation-wise, if the scripts consist of many annotations to be checked.
+      Straightforward, the storage of this information at potentially all text positions 
+      requires a lot memory. Nevertheless, the advantages outweigh the disadvantages considerably. 
+    </p>
+  </div>
+  <div class="section" title="2.21.2.&nbsp;How is it stored, created and updated?"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.ruta.language.internal_indxexing.how">2.21.2.&nbsp;How is it stored, created and updated?</h3></div></div></div>
+    
+    <p>
+      The internal indexing refers to three types of information that is additionally stored:
+    </p>
+    <div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+    <p>
+      All annotations of all relevant types that begin at a position.
+    </p>
+    </li><li class="listitem">
+    <p>
+      All annotations of all relevant types that end at a position.
+    </p>
+    </li><li class="listitem">
+    <p>
+      All types of annotations that cover a position.
+    </p>
+    </li></ol></div>
+    <p>
+      The information is stored in additional annotations of the type RutaBasic, 
+      which provides by implementation, and not by features, additional fields for
+      these three kinds of information. RutaBasic types provide a complete disjunct 
+      partitioning of the document. They begin and end at every position where an 
+      annotation starts and ends. This also includes, for examples, one RutaBasic for each 
+      SPACE annotation, registering which annotation start and end at these offsets.
+      They are automatically created and also extended if new smaller annotations are added.
+      Their initial creation is called <span class="quote">&#8220;<span class="quote">indexing</span>&#8221;</span> and their updating,
+      if RutaBasics are available, while other Java analysis engines potentially added or
+      removed annotations, is called <span class="quote">&#8220;<span class="quote">reindexing</span>&#8221;</span>. 
+    </p>
+    <p> 
+      There are several configuration 
+      parameters (see parameters with INDEX and REINDEX in their name) that can influence what types and annotations are indexed and reindexed.
+      In the default configuration, all annotations are indexed, but only new annotations 
+      are reindexed (ReindexUpdateMode ADDITIVE). This means that if an analysis engine in between
+      two RutaEngine removes some annotations, the second RutaEngine will not be up to date.
+      A rule which relies on the internal indexing will match differently for these annotations,
+      e.g., a PARTOF condition is still fulfilled although the annotation is not present in the 
+      UIMA indexes anymore. This problem can be avoided (if necessary) either by switching to a more costly
+      ReindexUpdateMode COMPLETE, or by updating the internal indexing directly in the Java analysis
+      engine by using the class RutaBasicUtils.
+    </p>
+  </div>
+  <div class="section" title="2.21.3.&nbsp;How to optimize the performance?"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.ruta.language.internal_indxexing.optimize">2.21.3.&nbsp;How to optimize the performance?</h3></div></div></div>
+    
+    <p>
+      The are many different options and possibilities to optimize the runtime performance and
+      memory footprint of a Ruta script, by configuring the RutaEngine. The most useful configuration, 
+      however, depends on the actual situation: How much information is available about the pipeline
+      and the types of annotations and their update operations? In the following, a selection 
+      of optimizations are discussed.
+    </p>
+    <p>
+      If there is a RutaEngine in a pipeline, and either the previous analysis engine was also 
+      a RutaEngine or it is known that the analysis engines before (until the last RutaEngine) did not
+      modify any (relevant) annotations, then the ReindexUpdateMode NONE can be applied, which simply 
+      skips the internal reindexing. This can improve the runtime performance.
+    </p>
+    <p>
+      The configuration parameters indexOnly can be restricted to relevant types.
+      The parameter indexSkipTypes can be utilized to specify types of annotations that are not relevant. 
+      These types can include more technical annotations for metadata, logging or debug information.
+      Thus, the set of types that need to be considered for internal indexing can be restricted, which
+      makes the indexing faster and requires less memory.
+    </p>
+      For a reindexing/updating step, the corresponding reindex parameters need to be considered.
+      Even relevant annotations do not need to be reindexed/updated all the time.
+      The updating can, for example, be restricted to
+      types that have been potentially modified by previous Java analysis engines according to their capabilities.
+      Additionally, some types are rather final considering their offsets. They are only create once 
+      and are not modified by later analysis engines. These types commonly include 
+      Tokens and similar annotations. They do not need to be reindexed, which can be configured using the
+      reindexSkipTypes parameter.
+    <p>
+      An extension to this is the parameter indexOnlyMentionedTypes/reindexOnlyMentionedTypes. 
+      Here, the relevant types are collected using the
+      actual script:  the types that are actually used in the rules and thus their internal indexing needs
+      to be up to date. This can increase the indexing speed. This feature is highlighted in the following example:
+      Considering a larger pipeline with many annotations of different types, and also with many 
+      modifications since the last RutaEngine, a script with one rule does not require much reindexing,
+      except the exclusive types used in this rule.
+    </p>
+  </div>
+</div>
+  
 </div>
   
   <div class="chapter" title="Chapter&nbsp;3.&nbsp;Apache UIMA Ruta Workbench" id="ugr.tools.ruta.workbench"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;3.&nbsp;Apache UIMA Ruta Workbench</h2></div></div></div>
@@ -7851,9 +8070,9 @@ The|DT rabbit|NN made|VBD up|RP this|DT story|NN .|.</pre>
 			the more efficient structures, tree word list and multi tree word
 			list. The usage and configuration is shortly summarized in the
 			following. An exemplary maven project for UIMA Ruta is given here:
-			<code class="code">https://svn.apache.org/repos/asf/uima/uv3/ruta-v3/trunk/example-projects/ruta-maven-example</code>
+			<code class="code">https://github.com/apache/uima-ruta/tree/master/example-projects/ruta-maven-example</code>
 		</p>
-		<div class="section" title="4.3.1.&nbsp;generate goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3530">4.3.1.&nbsp;generate goal</h3></div></div></div>
+		<div class="section" title="4.3.1.&nbsp;generate goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3623">4.3.1.&nbsp;generate goal</h3></div></div></div>
 		
 		<p>
 		The generate goal can be utilized to create xml descriptors for the UIMA Ruta script files. 
@@ -8006,7 +8225,7 @@ The|DT rabbit|NN made|VBD up|RP this|DT story|NN .|.</pre>
     </p>
 		</div>
 		
-		<div class="section" title="4.3.2.&nbsp;twl goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3535">4.3.2.&nbsp;twl goal</h3></div></div></div>
+		<div class="section" title="4.3.2.&nbsp;twl goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3628">4.3.2.&nbsp;twl goal</h3></div></div></div>
 		
     <p>
     The twl goal can be utilized to create .twl files from .txt files.
@@ -8059,7 +8278,7 @@ The|DT rabbit|NN made|VBD up|RP this|DT story|NN .|.</pre>
        </pre>
 		</div>
 		
-		<div class="section" title="4.3.3.&nbsp;mtwl goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3539">4.3.3.&nbsp;mtwl goal</h3></div></div></div>
+		<div class="section" title="4.3.3.&nbsp;mtwl goal"><div class="titlepage"><div><div><h3 class="title" id="d5e3632">4.3.3.&nbsp;mtwl goal</h3></div></div></div>
     
     <p>
     The mtwl goal can be utilized to create a .mtwl file from multiple .txt files.
