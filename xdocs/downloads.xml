@@ -160,7 +160,7 @@ Other mirrors: <select name="Preferred">
     <p>Other components built upon the UIMA Java SDK may not (yet) run with version 3, until 
       migrated versions of these are released.</p>
       
-    <insertDownloads version="uimaj-v3"/>
+    <insertDownloads version="uimaj"/>
   </subsection>
 
   <subsection name="Apache UIMA (latest v2.x.x version)">
