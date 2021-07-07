@@ -31,6 +31,28 @@
 
     <subsectionToc/>
     
+    <subsection name="02 July 2021" date="02 July 2021" title="Apache UIMA Java SDK 2.11.0 released">
+      <p>UIMA Java SDK 2.11.0 is in the 2.x.x series of core Java UIMA SDK; the latest series is 3.x.x; 
+        see the news for 3.0.0 for important information about migrating from 2.x.x versions of UIMA.
+      </p>
+      
+      <p>Changes include:
+        <ul>
+          <li>Added ability to serialize as XMIs as XML 1.1</li>
+          <li>Added typed parameter support to PEARs</li>
+          <li>Improved speed of constructing aggregate engines</li>
+          <li>Fixed deep cloning of AnalysisEngineDescription</li>
+          <li>Fixed bug causing Annotation to be returned when asking JCas for a specific type</li>
+          <li>Fixed ability to install PEARs into directories containing XML special characters in the name</li>
+          <li>Fixed index protection for cases that no FSes were indexed</li>
+          <li>No longer ship Pack200-compressed versions of the Eclipse plugins</li>
+        </ul>
+      </p>
+
+      <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.11.0/issuesFixed/jira-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>
+    </subsection>    
+    
     <subsection name="18 May 2020" date = "18 May 2020" title="Apache UIMA Ruta 3.1.0 released">
       <p>Apache UIMA Ruta is a rule-based script language supported by
         Eclipse-based tooling. The language is designed to enable rapid
