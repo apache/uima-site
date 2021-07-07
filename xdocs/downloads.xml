@@ -133,7 +133,7 @@ Other mirrors: <select name="Preferred">
   <p>Note that some older releases appear under the "Latest" because they contain
      the latest release of some of the components included in that version. </p>
 
-  <subsection name="Apache UIMA Version 3.2.0">
+  <subsection name="Apache UIMA Version (current version)">
     <p>UIMA Java SDK, V3, is a re-implementation of the core Java version.  It represents Feature Structures as Java Objects,
        allowing them to be Garbage Collected, for example.  It depends on and exploits many Java 8 features.
     </p>
@@ -160,44 +160,41 @@ Other mirrors: <select name="Preferred">
     <p>Other components built upon the UIMA Java SDK may not (yet) run with version 3, until 
       migrated versions of these are released.</p>
       
-    <insertDownloads version="3.2.0"/>
+    <insertDownloads version="uimaj-v3"/>
   </subsection>
 
-  <subsection name="Apache UIMA DUCC Version 3.0.0">
-    <insertDownloads version="ducc-3.0.0"/>
-  </subsection>
-
-  <subsection name="Apache UIMA 2.10.4">
+  <subsection name="Apache UIMA (latest v2.x.x version)">
    <p>This is the latest version of Version 2 of UIMA Java SDK
    </p>
-    <insertDownloads version="2.10.4"/>
+    <insertDownloads version="uimaj-v2"/>
   </subsection>
   
   <subsection name="Apache UIMA uimaFIT">
-    <insertDownloads version="uimaFIT"/>
+    <insertDownloads version="uimafit"/>
   </subsection>
 
   <subsection name="Apache UIMA Ruta">
-    <insertDownloads version="Ruta"/>
+    <insertDownloads version="ruta"/>
   </subsection>
   
-  <subsection name="Apache UIMA 2.10.3">
-   <p>Includes the latest UIMA-AS release.
-   </p>   
-    <insertDownloads version="2.10.3"/>
-  </subsection> 
-
-  <!-- includes latest uima-c++ release -->
-  <subsection name="Apache UIMA Version 2.4.0">
-    <p>Includes the latest uima c++ release.</p>
-    <insertDownloads version="2.4.0"/>
+  <subsection name="Apache UIMA DUCC">
+    <insertDownloads version="ducc"/>
   </subsection>
-  
 </section> 
 
 <section name="Older Releases">
   <subsection name="Apache UIMA Addons">
     <insertDownloads version="2.3.1"/>
+  </subsection>
+
+  <subsection name="Apache UIMA Asynchronous Scaleout">
+    <insertDownloads version="2.10.3"/>
+  </subsection>
+  
+  <!-- includes latest uima-c++ release -->
+  <subsection name="Apache UIMA C++ SDK">
+    <p>Includes the latest uima c++ release.</p>
+    <insertDownloads version="2.4.0"/>
   </subsection>
 </section>
   
