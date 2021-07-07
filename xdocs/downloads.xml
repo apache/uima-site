@@ -133,7 +133,7 @@ Other mirrors: <select name="Preferred">
   <p>Note that some older releases appear under the "Latest" because they contain
      the latest release of some of the components included in that version. </p>
 
-  <subsection name="Apache UIMA Version (current version)">
+  <subsection name="Apache UIMA Java SDK">
     <p>UIMA Java SDK, V3, is a re-implementation of the core Java version.  It represents Feature Structures as Java Objects,
        allowing them to be Garbage Collected, for example.  It depends on and exploits many Java 8 features.
     </p>
@@ -161,14 +161,12 @@ Other mirrors: <select name="Preferred">
       migrated versions of these are released.</p>
       
     <insertDownloads version="uimaj"/>
-  </subsection>
-
-  <subsection name="Apache UIMA (latest v2.x.x version)">
-   <p>This is the latest version of Version 2 of UIMA Java SDK
-   </p>
+    
+    <p>This is the latest version of Version 2 of UIMA Java SDK</p>
+    
     <insertDownloads version="uimaj-v2"/>
   </subsection>
-  
+
   <subsection name="Apache UIMA uimaFIT">
     <insertDownloads version="uimafit"/>
   </subsection>
