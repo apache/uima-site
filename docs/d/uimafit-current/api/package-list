@@ -1,0 +1,13 @@
+org.apache.uima.fit.component
+org.apache.uima.fit.component.initialize
+org.apache.uima.fit.cpe
+org.apache.uima.fit.descriptor
+org.apache.uima.fit.factory
+org.apache.uima.fit.factory.initializable
+org.apache.uima.fit.factory.locator
+org.apache.uima.fit.internal
+org.apache.uima.fit.pipeline
+org.apache.uima.fit.testing.factory
+org.apache.uima.fit.testing.util
+org.apache.uima.fit.util
+org.apache.uima.fit.validation
