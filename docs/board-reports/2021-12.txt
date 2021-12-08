@@ -1,0 +1,30 @@
+## Description:
+Apache UIMA's mission: the creation and maintenance of open-source software
+related to the analysis of unstructured data, guided by the UIMA Oasis
+Standard. The software provides frameworks, tools and annotators,
+facilitating the analysis of unstructured content such as text, audio and
+video.
+
+## Issues:
+No Board level issues at this time.
+
+## Membership Data:
+Apache UIMA was founded 2010-03-17 (12 years ago)
+There are currently 25 committers and 17 PMC members in this project.
+The Committer-to-PMC ratio is roughly 7:5.
+
+Community changes, past quarter:
+- No new PMC members. Last addition was Viorel Morari on 2019-11-19.
+- No new committers. Last addition was Viorel Morari on 2018-09-20.
+
+## Project Activity:
+No releases in this reporting period. A uimaFIT 2.6.0 RC1 was already up 
+for voting but cancelled due to a bug having been discovered. Releases of
+uimaFIT 2.6.0 and UIMA Java SDK 3.2.1 expected for the next reporting period.
+Inclusion of the new JSON format hinted at in the last report scheduled
+for UIMA Java SDK 3.3.0.
+
+## Community Health:
+The community continues to be moderately active. Activity is shifting from
+the users mailing list more towards GitHub PRs and StackOverflow though.
+
