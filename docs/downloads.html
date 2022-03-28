@@ -298,16 +298,11 @@
       <code>zip</code>, <code>tar.gz</code> and sometimes, <code>tar.bz2</code> archive formats.
       Please note that the <code>tar.*</code> archives contain file names longer than 100 characters
       and have been created using GNU tar extensions. Thus they must be untarred with a GNU compatible
-      version of <code>tar</code>.
-    </p>
-                                                <p>
-      You are currently using <b>[preferred]</b>.  If you encounter a problem with this mirror, please
-      select another mirror. If all mirrors are failing, there are <i>backup</i> mirrors (at the end
-      of the mirrors list) that should be available. It is good practice to 
+      version of <code>tar</code>. It is good practice to 
       <a href="[location]#VerifyDownload">verify the integrity</a> of the distribution files.
     </p>
                                                 <form action="[location]" method="get" id="SelectMirror">
-      Other mirrors: <select name="Preferred">
+      Current mirror: <select name="Preferred">
       [if-any http]
         [for http]<option value="[http]">[http]</option>[end]
       [end]
