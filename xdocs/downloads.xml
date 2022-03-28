@@ -174,23 +174,23 @@ Other mirrors: <select name="Preferred">
     <insertDownloads version="ruta"/>
   </subsection>
   
-  <subsection name="Apache UIMA DUCC">
-    <insertDownloads version="ducc"/>
-  </subsection>
 </section> 
 
 <section name="Older Releases">
-  <subsection name="Apache UIMA Addons">
-    <insertDownloads version="2.3.1"/>
+  <subsection name="Apache UIMA DUCC">
+    <insertDownloads version="ducc"/>
   </subsection>
 
   <subsection name="Apache UIMA Asynchronous Scaleout">
     <insertDownloads version="2.10.3"/>
   </subsection>
+
+  <subsection name="Apache UIMA Addons">
+    <insertDownloads version="2.3.1"/>
+  </subsection>
   
   <!-- includes latest uima-c++ release -->
   <subsection name="Apache UIMA C++ SDK">
-    <p>Includes the latest uima c++ release.</p>
     <insertDownloads version="2.4.0"/>
   </subsection>
 </section>
