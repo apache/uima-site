@@ -57,9 +57,18 @@ under the License.
  
   <subsection name="Release packages incl. documentation and examples">
     <p>
+      Apache UIMA is distributed as source and binary (ready-to-use) packages. These are available in
+      <code>zip</code>, <code>tar.gz</code> and sometimes, <code>tar.bz2</code> archive formats.
+      Please note that the <code>tar.*</code> archives contain file names longer than 100 characters
+      and have been created using GNU tar extensions. Thus they must be untarred with a GNU compatible
+      version of <code>tar</code>.
+    </p>
+  
+    <p>
       You are currently using <b>[preferred]</b>.  If you encounter a problem with this mirror, please
       select another mirror. If all mirrors are failing, there are <i>backup</i> mirrors (at the end
-      of the mirrors list) that should be available.
+      of the mirrors list) that should be available. It is good practice to 
+      <a href="[location]#VerifyDownload">verify the integrity</a> of the distribution files.
     </p>
       
     <form action="[location]" method="get" id="SelectMirror">
@@ -76,20 +85,6 @@ under the License.
       </select>
       <input type="submit" value="Change" />
     </form>
-  
-    <p>
-      Use the links below to download Apache UIMA from one of our mirrors.  It is good practice to
-      <a href="[location]#VerifyDownload">verify the integrity</a> of the distribution files, using 
-      the signatures and checksums listed below in square brackets as asc, md5, or sha1.
-    </p>
-  
-    <p>
-      Apache UIMA is distributed as source and binary (ready-to-use) packages. These are available in
-      <code>zip</code>, <code>tar.gz</code> and sometimes, <code>tar.bz2</code> archive formats. 
-      Please note that the <code>tar.*</code> archives contain file names longer than 100 characters
-      and have been created using GNU tar extensions. Thus they must be untarred with a GNU compatible
-      version of <code>tar</code>.
-    </p>
   </subsection>
 
   <subsection name="Apache UIMA v3">
