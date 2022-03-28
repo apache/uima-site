@@ -31,21 +31,23 @@ under the License.
     Go directly to the <a href="[location]#Latest Official Releases">Latest Official Releases</a>.
   </p>
   
-  <p>
-    Use the links below to download Apache UIMA from one of our mirrors.  It is good practice to
-    <a href="[location]#VerifyDownload">verify the integrity</a> of the distribution files, using 
-    the signatures and checksums listed below in square brackets as asc, md5, or sha1.
-  </p>
-
-  <p>
-    Apache UIMA is distributed as source and binary (ready-to-use) packages. These are available in
-    <code>zip</code>, <code>tar.gz</code> and sometimes, <code>tar.bz2</code> archive formats. 
-    Please note that the <code>tar.*</code> archives contain file names longer than 100 characters
-    and have been created using GNU tar extensions. Thus they must be untarred with a GNU compatible
-    version of <code>tar</code>.
-  </p>
+    <subsection name="Maven Repository">
+    <p>
+      Most people use Apache UIMA through the artifacts we distribute on Maven Central. A dependency
+      on the Apache UIMA Java SDK Core artifact looks like this:
+    </p>
+    <code><pre>
+&lt;dependency>
+  &lt;groupId>org.apache.uima&lt;/groupId>
+  &lt;artifactId>uimaj-core&lt;/artifactId>
+  &lt;version>3.2.0&lt;/version>
+&lt;/dependency></pre></code>
+    <p>
+      Here you can find an <a href="https://search.maven.org/search?q=g:org.apache.uima">
+      overview of the artifacts on Maven Central</a>.
+    </p>
+  </subsection>
 </section>
-
 
 <!-- 
   Add a subsection for the project version being released. Do not enter download info here, instead
@@ -61,25 +63,6 @@ under the License.
 -->
  
 <section name="Latest Official Releases">
-
-  <subsection name="Maven Repository">
-    <p>
-      Most people use Apache UIMA through the artifacts we distribute on Maven Central. A dependency
-      on the Apache UIMA Java SDK Core artifact looks like this:
-    </p>
-    <code><pre>
-      &lt;dependency>
-        &lt;groupId>org.apache.uima&lt;/groupId>
-        &lt;artifactId>uimaj-core&lt;/artifactId>
-        &lt;version>3.2.0&lt;/version>
-      &lt;/dependency>
-    </pre></code>
-    <p>
-      Here you can find an <a href="https://search.maven.org/search?q=g:org.apache.uima">
-      overview of the artifacts on Maven Central</a>.
-    </p>
-  </subsection>
-
   <p>
     You are currently using <b>[preferred]</b>.  If you encounter a problem with this mirror, please
     select another mirror. If all mirrors are failing, there are <i>backup</i> mirrors (at the end
@@ -100,6 +83,20 @@ under the License.
     </select>
     <input type="submit" value="Change" />
   </form>
+
+  <p>
+    Use the links below to download Apache UIMA from one of our mirrors.  It is good practice to
+    <a href="[location]#VerifyDownload">verify the integrity</a> of the distribution files, using 
+    the signatures and checksums listed below in square brackets as asc, md5, or sha1.
+  </p>
+
+  <p>
+    Apache UIMA is distributed as source and binary (ready-to-use) packages. These are available in
+    <code>zip</code>, <code>tar.gz</code> and sometimes, <code>tar.bz2</code> archive formats. 
+    Please note that the <code>tar.*</code> archives contain file names longer than 100 characters
+    and have been created using GNU tar extensions. Thus they must be untarred with a GNU compatible
+    version of <code>tar</code>.
+  </p>
 
   <subsection name="Apache UIMA Java SDK v3">
     <insertDownloads version="uimaj"/>
