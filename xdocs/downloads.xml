@@ -27,94 +27,30 @@ under the License.
 <body>
 
 <section name="Downloading Apache UIMA&#0153;">
-  
   <p>
     Go directly to the <a href="[location]#Latest Official Releases">Latest Official Releases</a>.
   </p>
-  <p>Use the links below to download Apache UIMA from
-one of our mirrors.  It is good practice to
-<a href="[location]#VerifyDownload">verify the integrity</a>
-of the distribution files, using the signatures and checksums listed below in square brackets as asc, md5, or sha1.
-</p>
-
-<p>Only current recommended releases are available on the main
-distribution site and its mirrors.  Older releases are available from
-the <a href="https://archive.apache.org/dist/uima/">archive download
-site.</a></p>
   
-<p>Apache UIMA is distributed as source and binary (ready-to-use) packages.
-  These are available in
-  <code>zip</code>, <code>tar.gz</code> and sometimes,
-<code>tar.bz2</code> archive formats.  Please
-note that the <code>tar.*</code> archives contain file names longer
-than 100 characters and have been created using GNU tar extensions.
-Thus they must be untarred with a GNU compatible version of
-<code>tar</code>.</p>  
-  
-<subsection name="Eclipse Update Site">
+  <p>
+    Use the links below to download Apache UIMA from one of our mirrors.  It is good practice to
+    <a href="[location]#VerifyDownload">verify the integrity</a> of the distribution files, using 
+    the signatures and checksums listed below in square brackets as asc, md5, or sha1.
+  </p>
 
-<p>You can install current releases of the UIMA Eclipse tooling via our Eclipse update site.  
-There are two update sites: one is for versions of plugins for UIMA version 2, the other is for version 3 plugins.
-</p>
-<ul>
-<li>Version 3:
-<a href="https://downloads.apache.org/uima/eclipse-update-site-v3/">https://downloads.apache.org/uima/eclipse-update-site-v3/</a>.
-</li>
-<li>Version 2:  
-<a href="https://downloads.apache.org/uima/eclipse-update-site/">https://downloads.apache.org/uima/eclipse-update-site/</a>.
-</li>
-</ul>
-
-<p>The uimaj-2.10.2 version of the Eclipse plugins (not the latest version) is also separately available here:
-<a href="https://downloads.apache.org/uima/eclipse-update-site/uimaj-2.10.2/">https://downloads.apache.org/uima/eclipse-update-site/uimaj-2.10.2/</a>.
-</p>
-
-<p>
-Older releases are at Apache's archive for releases, and you can find links to them 
-<a href="eclipse-update-archives.html">here</a>.
-</p>
-<p>
-If you're doing this for the first time,
-you may wish to consult the much more verbose instructions on the <a href="documentation.html">UIMA Documentation page</a>.
-</p>
-
-</subsection>
-
-<subsection name="Maven Repository">
-
-<p>If you're using Maven to build your projects, you can use the UIMA Maven artifacts that are
-deployed to the Maven central repository.  
-See some of the Addons POMs for examples on how to reference the UIMA jars in Maven.
-</p>
-
-</subsection>
-  
-<subsection name="Mirror">
-
-<p>You are currently using <b>[preferred]</b>.  If you encounter a
-problem with this mirror, please select another mirror.  If all
-mirrors are failing, there are <i>backup</i> mirrors (at the end of
-the mirrors list) that should be available.</p>
-
-<form action="[location]" method="get" id="SelectMirror">
-Other mirrors: <select name="Preferred">
-[if-any http]
-  [for http]<option value="[http]">[http]</option>[end]
-[end]
-[if-any ftp]
-  [for ftp]<option value="[ftp]">[ftp]</option>[end]
-[end]
-[if-any backup]
-  [for backup]<option value="[backup]">[backup] (backup)</option>[end]
-[end]
-</select>
-<input type="submit" value="Change" />
-</form>
-</subsection>
+  <p>
+    Apache UIMA is distributed as source and binary (ready-to-use) packages. These are available in
+    <code>zip</code>, <code>tar.gz</code> and sometimes, <code>tar.bz2</code> archive formats. 
+    Please note that the <code>tar.*</code> archives contain file names longer than 100 characters
+    and have been created using GNU tar extensions. Thus they must be untarred with a GNU compatible
+    version of <code>tar</code>.
+  </p>
 </section>
 
 
-<!-- add a subsection for the project version being released. Do not enter download info here, instead enter it in the stylesheets/project.xml file-->
+<!-- 
+  Add a subsection for the project version being released. Do not enter download info here, instead
+  enter it in the stylesheets/project.xml file
+-->
 
 <!--
 <section name="Alpha and Beta levels for early adopters and testing">
@@ -124,21 +60,71 @@ Other mirrors: <select name="Preferred">
 </section>
 -->
  
-<section name="Latest Official Releases">  
-  <subsection name="Apache UIMA Java SDK">
+<section name="Latest Official Releases">
+
+  <subsection name="Maven Repository">
+    <p>
+      Most people use Apache UIMA through the artifacts we distribute on Maven Central. A dependency
+      on the Apache UIMA Java SDK Core artifact looks like this:
+    </p>
+    <code><pre>
+      &lt;dependency>
+        &lt;groupId>org.apache.uima&lt;/groupId>
+        &lt;artifactId>uimaj-core&lt;/artifactId>
+        &lt;version>3.2.0&lt;/version>
+      &lt;/dependency>
+    </pre></code>
+    <p>
+      Here you can find an <a href="https://search.maven.org/search?q=g:org.apache.uima">
+      overview of the artifacts on Maven Central</a>.
+    </p>
+  </subsection>
+
+  <p>
+    You are currently using <b>[preferred]</b>.  If you encounter a problem with this mirror, please
+    select another mirror. If all mirrors are failing, there are <i>backup</i> mirrors (at the end
+    of the mirrors list) that should be available.
+  </p>
+    
+  <form action="[location]" method="get" id="SelectMirror">
+    Other mirrors: <select name="Preferred">
+    [if-any http]
+      [for http]<option value="[http]">[http]</option>[end]
+    [end]
+    [if-any ftp]
+      [for ftp]<option value="[ftp]">[ftp]</option>[end]
+    [end]
+    [if-any backup]
+      [for backup]<option value="[backup]">[backup] (backup)</option>[end]
+    [end]
+    </select>
+    <input type="submit" value="Change" />
+  </form>
+
+  <subsection name="Apache UIMA Java SDK v3">
     <insertDownloads version="uimaj"/>
   </subsection>
 
-  <subsection name="Apache UIMA uimaFIT">
+  <subsection name="Apache UIMA uimaFIT v3">
     <insertDownloads version="uimafit"/>
   </subsection>
 
-  <subsection name="Apache UIMA Ruta">
+  <subsection name="Apache UIMA Ruta v3">
     <insertDownloads version="ruta"/>
   </subsection>
   
-  <subsection name="Apache UIMA DUCC">
+  <subsection name="Apache UIMA DUCC v3">
     <insertDownloads version="ducc"/>
+  </subsection>
+  
+  <subsection name="Apache UIMA Eclipse Tooling Update Site v3">
+    <p>
+    <a href="https://downloads.apache.org/uima/eclipse-update-site-v3/">https://downloads.apache.org/uima/eclipse-update-site-v3/</a>.
+    </p>
+    <p>
+    If you're doing this for the first time, you may wish to consult the much more verbose
+    instructions on the <a href="documentation.html">UIMA Documentation page</a>.
+    </p>
   </subsection>
 </section> 
 
@@ -189,6 +175,10 @@ Other mirrors: <select name="Preferred">
   <subsection name="Apache UIMA C++ SDK v2">
     <insertDownloads version="2.4.0"/>
   </subsection>
+  
+  <subsection name="Apache UIMA Eclipse Tooling Update Site v2">
+    <a href="https://downloads.apache.org/uima/eclipse-update-site/">https://downloads.apache.org/uima/eclipse-update-site/</a>.
+  </subsection>
 </section>
   
 <section name="Archived Releases">
@@ -198,6 +188,9 @@ Other mirrors: <select name="Preferred">
     recommend to not use those releases but upgrade to UIMA's <a
     href="[location]#Latest Official Releases">latest</a> release.</p>
 
+  <p>Older update sites for UIMA Eclipse tooling are at Apache's archive for releases, and you can find links to them 
+  <a href="eclipse-update-archives.html">here</a>.
+  </p>
 </section>
 
 <section name="Verifying a Release Download" id="VerifyDownload">
