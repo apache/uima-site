@@ -84,8 +84,7 @@ you may wish to consult the much more verbose instructions on the <a href="docum
 
 <p>If you're using Maven to build your projects, you can use the UIMA Maven artifacts that are
 deployed to the Maven central repository.  
-See some of the Addons POMs for
-examples on how to reference the UIMA jars in Maven.
+See some of the Addons POMs for examples on how to reference the UIMA jars in Maven.
 </p>
 
 </subsection>
