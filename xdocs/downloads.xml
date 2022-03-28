@@ -92,20 +92,8 @@ under the License.
     </p>
   </subsection>
 
-  <subsection name="Apache UIMA Java SDK v3">
+  <subsection name="Apache UIMA v3">
     <insertDownloads version="uimaj"/>
-  </subsection>
-
-  <subsection name="Apache UIMA uimaFIT v3">
-    <insertDownloads version="uimafit"/>
-  </subsection>
-
-  <subsection name="Apache UIMA Ruta v3">
-    <insertDownloads version="ruta"/>
-  </subsection>
-  
-  <subsection name="Apache UIMA DUCC v3">
-    <insertDownloads version="ducc"/>
   </subsection>
 </section> 
 
@@ -140,7 +128,7 @@ under the License.
     </p>
   </subsection>
 
-  <subsection name="Apache UIMA Java SDK v2">
+  <subsection name="Apache UIMA v2">
     <insertDownloads version="uimaj-v2"/>
   </subsection>
   
