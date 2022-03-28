@@ -27,11 +27,7 @@ under the License.
 <body>
 
 <section name="Downloading Apache UIMA&#0153;">
-  <p>
-    Go directly to the <a href="[location]#Latest Official Releases">Latest Official Releases</a>.
-  </p>
-  
-    <subsection name="Maven Repository">
+  <subsection name="Using via Maven dependency">
     <p>
       Most people use Apache UIMA through the artifacts we distribute on Maven Central. A dependency
       on the Apache UIMA Java SDK Core artifact looks like this:
@@ -44,59 +40,57 @@ under the License.
 &lt;/dependency></pre></code>
     <p>
       Here you can find an <a href="https://search.maven.org/search?q=g:org.apache.uima">
-      overview of the artifacts on Maven Central</a>.
+      overview of all the artifacts on Maven Central</a>.
     </p>
   </subsection>
-</section>
 
-<!-- 
-  Add a subsection for the project version being released. Do not enter download info here, instead
-  enter it in the stylesheets/project.xml file
--->
-
-<!--
-<section name="Alpha and Beta levels for early adopters and testing">
-  <p>Occasionally, we release alpha and beta levels of upcoming versions, in order to gain feedback from a wider
-    community.  These early versions are less stable than normal releases, and should not be used for production work.
-  </p>
-</section>
--->
+  <subsection name="Eclipse Tooling Update Site">
+    <p>
+    <a href="https://downloads.apache.org/uima/eclipse-update-site-v3/">https://downloads.apache.org/uima/eclipse-update-site-v3/</a>.
+    </p>
+    <p>
+    If you're doing this for the first time, you may wish to consult the much more verbose
+    instructions on the <a href="documentation.html">UIMA Documentation page</a>.
+    </p>
+  </subsection>
+  
  
-<section name="Latest Official Releases">
-  <p>
-    You are currently using <b>[preferred]</b>.  If you encounter a problem with this mirror, please
-    select another mirror. If all mirrors are failing, there are <i>backup</i> mirrors (at the end
-    of the mirrors list) that should be available.
-  </p>
-    
-  <form action="[location]" method="get" id="SelectMirror">
-    Other mirrors: <select name="Preferred">
-    [if-any http]
-      [for http]<option value="[http]">[http]</option>[end]
-    [end]
-    [if-any ftp]
-      [for ftp]<option value="[ftp]">[ftp]</option>[end]
-    [end]
-    [if-any backup]
-      [for backup]<option value="[backup]">[backup] (backup)</option>[end]
-    [end]
-    </select>
-    <input type="submit" value="Change" />
-  </form>
-
-  <p>
-    Use the links below to download Apache UIMA from one of our mirrors.  It is good practice to
-    <a href="[location]#VerifyDownload">verify the integrity</a> of the distribution files, using 
-    the signatures and checksums listed below in square brackets as asc, md5, or sha1.
-  </p>
-
-  <p>
-    Apache UIMA is distributed as source and binary (ready-to-use) packages. These are available in
-    <code>zip</code>, <code>tar.gz</code> and sometimes, <code>tar.bz2</code> archive formats. 
-    Please note that the <code>tar.*</code> archives contain file names longer than 100 characters
-    and have been created using GNU tar extensions. Thus they must be untarred with a GNU compatible
-    version of <code>tar</code>.
-  </p>
+  <subsection name="Release packages incl. documentation and examples">
+    <p>
+      You are currently using <b>[preferred]</b>.  If you encounter a problem with this mirror, please
+      select another mirror. If all mirrors are failing, there are <i>backup</i> mirrors (at the end
+      of the mirrors list) that should be available.
+    </p>
+      
+    <form action="[location]" method="get" id="SelectMirror">
+      Other mirrors: <select name="Preferred">
+      [if-any http]
+        [for http]<option value="[http]">[http]</option>[end]
+      [end]
+      [if-any ftp]
+        [for ftp]<option value="[ftp]">[ftp]</option>[end]
+      [end]
+      [if-any backup]
+        [for backup]<option value="[backup]">[backup] (backup)</option>[end]
+      [end]
+      </select>
+      <input type="submit" value="Change" />
+    </form>
+  
+    <p>
+      Use the links below to download Apache UIMA from one of our mirrors.  It is good practice to
+      <a href="[location]#VerifyDownload">verify the integrity</a> of the distribution files, using 
+      the signatures and checksums listed below in square brackets as asc, md5, or sha1.
+    </p>
+  
+    <p>
+      Apache UIMA is distributed as source and binary (ready-to-use) packages. These are available in
+      <code>zip</code>, <code>tar.gz</code> and sometimes, <code>tar.bz2</code> archive formats. 
+      Please note that the <code>tar.*</code> archives contain file names longer than 100 characters
+      and have been created using GNU tar extensions. Thus they must be untarred with a GNU compatible
+      version of <code>tar</code>.
+    </p>
+  </subsection>
 
   <subsection name="Apache UIMA Java SDK v3">
     <insertDownloads version="uimaj"/>
@@ -112,16 +106,6 @@ under the License.
   
   <subsection name="Apache UIMA DUCC v3">
     <insertDownloads version="ducc"/>
-  </subsection>
-  
-  <subsection name="Apache UIMA Eclipse Tooling Update Site v3">
-    <p>
-    <a href="https://downloads.apache.org/uima/eclipse-update-site-v3/">https://downloads.apache.org/uima/eclipse-update-site-v3/</a>.
-    </p>
-    <p>
-    If you're doing this for the first time, you may wish to consult the much more verbose
-    instructions on the <a href="documentation.html">UIMA Documentation page</a>.
-    </p>
   </subsection>
 </section> 
 

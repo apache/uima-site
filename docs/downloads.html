@@ -230,16 +230,13 @@
       </td></tr>
       <tr><td>
         <blockquote class="sectionBody">
-                                    <p>
-    Go directly to the <a href="[location]#Latest Official Releases">Latest Official Releases</a>.
-  </p>
-                                                      <table class="subsectionTable">
+                                          <table class="subsectionTable">
         <tr><td>
        
        
        
-          <a name="Maven Repository">
-            <h2>Maven Repository
+          <a name="Using via Maven dependency">
+            <h2>Using via Maven dependency
                         </h2>
           </a>
       </td></tr>
@@ -257,53 +254,79 @@
 &lt;/dependency&gt;</pre></code>
                                                 <p>
       Here you can find an <a href="https://search.maven.org/search?q=g:org.apache.uima">
-      overview of the artifacts on Maven Central</a>.
+      overview of all the artifacts on Maven Central</a>.
     </p>
                             </blockquote>
         </td></tr>
     </table>
-                            </blockquote>
-        </p>
-      </td></tr>
-    </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
+                                                      <table class="subsectionTable">
         <tr><td>
-        <a name="Latest Official Releases"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Latest Official Releases</h1></a>
+       
+       
+       
+          <a name="Eclipse Tooling Update Site">
+            <h2>Eclipse Tooling Update Site
+                        </h2>
+          </a>
       </td></tr>
       <tr><td>
-        <blockquote class="sectionBody">
+        <blockquote class="subsectionBody">
                                     <p>
-    You are currently using <b>[preferred]</b>.  If you encounter a problem with this mirror, please
-    select another mirror. If all mirrors are failing, there are <i>backup</i> mirrors (at the end
-    of the mirrors list) that should be available.
-  </p>
+    <a href="https://downloads.apache.org/uima/eclipse-update-site-v3/">https://downloads.apache.org/uima/eclipse-update-site-v3/</a>.
+    </p>
+                                                <p>
+    If you're doing this for the first time, you may wish to consult the much more verbose
+    instructions on the <a href="documentation.html">UIMA Documentation page</a>.
+    </p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="Release packages incl. documentation and examples">
+            <h2>Release packages incl. documentation and examples
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+      You are currently using <b>[preferred]</b>.  If you encounter a problem with this mirror, please
+      select another mirror. If all mirrors are failing, there are <i>backup</i> mirrors (at the end
+      of the mirrors list) that should be available.
+    </p>
                                                 <form action="[location]" method="get" id="SelectMirror">
-    Other mirrors: <select name="Preferred">
-    [if-any http]
-      [for http]<option value="[http]">[http]</option>[end]
-    [end]
-    [if-any ftp]
-      [for ftp]<option value="[ftp]">[ftp]</option>[end]
-    [end]
-    [if-any backup]
-      [for backup]<option value="[backup]">[backup] (backup)</option>[end]
-    [end]
-    </select>
-    <input type="submit" value="Change" />
-  </form>
+      Other mirrors: <select name="Preferred">
+      [if-any http]
+        [for http]<option value="[http]">[http]</option>[end]
+      [end]
+      [if-any ftp]
+        [for ftp]<option value="[ftp]">[ftp]</option>[end]
+      [end]
+      [if-any backup]
+        [for backup]<option value="[backup]">[backup] (backup)</option>[end]
+      [end]
+      </select>
+      <input type="submit" value="Change" />
+    </form>
                                                 <p>
-    Use the links below to download Apache UIMA from one of our mirrors.  It is good practice to
-    <a href="[location]#VerifyDownload">verify the integrity</a> of the distribution files, using 
-    the signatures and checksums listed below in square brackets as asc, md5, or sha1.
-  </p>
+      Use the links below to download Apache UIMA from one of our mirrors.  It is good practice to
+      <a href="[location]#VerifyDownload">verify the integrity</a> of the distribution files, using 
+      the signatures and checksums listed below in square brackets as asc, md5, or sha1.
+    </p>
                                                 <p>
-    Apache UIMA is distributed as source and binary (ready-to-use) packages. These are available in
-    <code>zip</code>, <code>tar.gz</code> and sometimes, <code>tar.bz2</code> archive formats. 
-    Please note that the <code>tar.*</code> archives contain file names longer than 100 characters
-    and have been created using GNU tar extensions. Thus they must be untarred with a GNU compatible
-    version of <code>tar</code>.
-  </p>
+      Apache UIMA is distributed as source and binary (ready-to-use) packages. These are available in
+      <code>zip</code>, <code>tar.gz</code> and sometimes, <code>tar.bz2</code> archive formats. 
+      Please note that the <code>tar.*</code> archives contain file names longer than 100 characters
+      and have been created using GNU tar extensions. Thus they must be untarred with a GNU compatible
+      version of <code>tar</code>.
+    </p>
+                            </blockquote>
+        </td></tr>
+    </table>
                                                       <table class="subsectionTable">
         <tr><td>
        
@@ -661,28 +684,6 @@
       
       
                                   </blockquote>
-        </td></tr>
-    </table>
-                                                      <table class="subsectionTable">
-        <tr><td>
-       
-       
-       
-          <a name="Apache UIMA Eclipse Tooling Update Site v3">
-            <h2>Apache UIMA Eclipse Tooling Update Site v3
-                        </h2>
-          </a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="subsectionBody">
-                                    <p>
-    <a href="https://downloads.apache.org/uima/eclipse-update-site-v3/">https://downloads.apache.org/uima/eclipse-update-site-v3/</a>.
-    </p>
-                                                <p>
-    If you're doing this for the first time, you may wish to consult the much more verbose
-    instructions on the <a href="documentation.html">UIMA Documentation page</a>.
-    </p>
-                            </blockquote>
         </td></tr>
     </table>
                             </blockquote>
