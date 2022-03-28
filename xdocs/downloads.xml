@@ -54,8 +54,7 @@ under the License.
     </p>
   </subsection>
   
- 
-  <subsection name="Release packages incl. documentation and examples">
+  <subsection name="Apache UIMA v3 release packages">
     <p>
       Apache UIMA is distributed as source and binary (ready-to-use) packages. These are available in
       <code>zip</code>, <code>tar.gz</code> and sometimes, <code>tar.bz2</code> archive formats.
@@ -85,9 +84,7 @@ under the License.
       </select>
       <input type="submit" value="Change" />
     </form>
-  </subsection>
 
-  <subsection name="Apache UIMA v3">
     <insertDownloads version="uimaj"/>
   </subsection>
 </section> 
