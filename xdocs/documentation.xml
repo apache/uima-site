@@ -174,7 +174,7 @@
                 faster response time, and to develop applications utilizing UIMA Flow Controllers,
                 CAS Multipliers and advanced error handling capability.</li>
 	<br></br>
-	<li><a href="doc-uimacpp-huh.html">Getting Started: UIMA C++ Framework</a><br></br>
+	<li><a href="https://github.com/apache/uima-uimacpp">Getting Started: UIMA C++ Framework</a><br></br>
 		For UIMA users who want to create UIMA compliant Analysis Engines from programs written in C++,
                 Perl, Python or Tcl.</li>
 

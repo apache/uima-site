@@ -1874,7 +1874,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
           The UIMA C++ Framework enables creation of UIMA compliant Analysis Engines 
           from programs written in C++, Perl, Python and Tcl. These components can be
                                         developed and tested without any Java programming.
-                                        See a short introduction on <a href="doc-uimacpp-huh.html">Getting Started: UIMA C++ Framework</a>.
+                                        See a short introduction on <a href="https://github.com/apache/uima-uimacpp">Getting Started: UIMA C++ Framework</a>.
         </p>
       </subsection>
 
@@ -1960,7 +1960,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       
       <subsection name='20 December 2006' date='20 December 2006' title='GLDV conference workshop (Germany)'>
         <p>We are pleased announce a UIMA workshop at the <a href="https://www.sfb441.uni-tuebingen.de/gldv2007/index.en.html">GLDV 2007 spring conference</a>
-        in beautiful <a href="https://www.tuebingen.de/en/1559.html">Tübingen</a>, Germany.  
+        in beautiful <a href="https://www.tuebingen.de/en/1559.html">Tï¿½bingen</a>, Germany.  
         Please see the <a href="gldv07.html">full announcement</a>
         for further details.
         </p>
