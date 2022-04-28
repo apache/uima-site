@@ -93,7 +93,7 @@ spelling correction, grammar checking, and  support for reading and writing vari
 file and corpus formats.
 </p>
 <p>
-DKPro Core relies heavily on <a href="../uimafit.html">uimaFIT</a>. DKPro Core is meant to be used with Apache Maven. The main components
+DKPro Core relies heavily on <a href="https://github.com/apache/uima-uimafit">uimaFIT</a>. DKPro Core is meant to be used with Apache Maven. The main components
 are hosted on <a href="https://search.maven.org/#search%7Cga%7C1%7Cde.tudarmstadt.ukp.dkpro.core" 
 target="_blank" rel="noopener">Maven Central</a> while distributable models are available from the
 public <a href="https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/simple/public-model-releases-local/de/tudarmstadt/ukp/dkpro/core/" 
@@ -144,7 +144,7 @@ uimaFIT (legacy)</a>
 is a library that provides factories, injection, 
 and testing utilities for UIMA. It provides a convenient Java API 
 for using UIMA in Java projects without having to deal with XML descriptors.
-</p><p><a href="../uimafit.html">Apache uimaFIT&#0153;</a> supersedes this project.</p>
+</p><p><a href="https://github.com/apache/uima-uimafit">Apache uimaFIT&#0153;</a> supersedes this project.</p>
 </subsection>
 
 <subsection name="UIMA French portal">

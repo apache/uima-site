@@ -41,7 +41,7 @@
         <item name="Tools &amp; Servers"      href="/toolsServers.html"/>
         <item name="Addons and Sandbox"       href="/sandbox.html"/>
         <item name="UIMA Ruta"                href="/ruta.html"/>
-        <item name="uimaFIT"                  href="/uimafit.html"/>
+        <item name="uimaFIT"                  href="https://github.com/apache/uima-uimafit"/>
         <item name="External Resources"       href="/external-resources.html"/>
       </item>
 
