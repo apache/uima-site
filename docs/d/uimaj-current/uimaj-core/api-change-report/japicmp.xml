@@ -1,706 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<japicmp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" accessModifier="PROTECTED" creationTimestamp="2021-04-28T19:18:28.334+0200" ignoreMissingClasses="false" ignoreMissingClassesByRegularExpressions="org\.apache\.logging\.log4j\..*" newJar="/Users/bluefire/git/uima-uimaj/target/checkout/uimaj-core/target/uima-core.jar" newVersion="n.a." oldJar="/Users/bluefire/.m2/repository/org/apache/uima/uimaj-core/3.1.1/uimaj-core-3.1.1.jar" oldVersion="3.1.1" onlyBinaryIncompatibleModifications="false" onlyModifications="true" packagesExclude="n.a." packagesInclude="all" semanticVersioning="1.0.0" title="Comparing source compatibility of /Users/bluefire/git/uima-uimaj/target/checkout/uimaj-core/target/uima-core.jar against /Users/bluefire/.m2/repository/org/apache/uima/uimaj-core/3.1.1/uimaj-core-3.1.1.jar" xsi:noNamespaceSchemaLocation="japicmp.xsd">
+<japicmp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" accessModifier="PROTECTED" creationTimestamp="2022-04-29T18:39:51.375+0200" ignoreMissingClasses="false" ignoreMissingClassesByRegularExpressions="org\.apache\.logging\.log4j\..*" newJar="/Users/bluefire/git/uima-uimaj/target/checkout/uimaj-core/target/uima-core.jar" newVersion="n.a." oldJar="/Users/bluefire/.m2/repository/org/apache/uima/uimaj-core/3.2.0/uimaj-core-3.2.0.jar" oldVersion="3.2.0" onlyBinaryIncompatibleModifications="false" onlyModifications="true" packagesExclude="n.a." packagesInclude="all" semanticVersioning="1.0.0" title="Comparing source compatibility of /Users/bluefire/git/uima-uimaj/target/checkout/uimaj-core/target/uima-core.jar against /Users/bluefire/.m2/repository/org/apache/uima/uimaj-core/3.2.0/uimaj-core-3.2.0.jar" xsi:noNamespaceSchemaLocation="japicmp.xsd">
     <classes>
-        <class binaryCompatible="true" changeStatus="MODIFIED" fullyQualifiedName="org.apache.uima.cas.SelectFSs" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="false">
-            <annotations/>
-            <attributes>
-                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-            </attributes>
-            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
-            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
-            <compatibilityChanges/>
-            <constructors/>
-            <fields/>
-            <interfaces/>
-            <methods>
-                <method binaryCompatible="true" changeStatus="NEW" name="get" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.FeatureStructure"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="org.apache.uima.cas.FeatureStructure" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="get" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.FeatureStructure"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="org.apache.uima.cas.FeatureStructure" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="single" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.FeatureStructure"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="org.apache.uima.cas.FeatureStructure" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="single" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.FeatureStructure"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="org.apache.uima.cas.FeatureStructure" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="singleOrNull" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.FeatureStructure"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="org.apache.uima.cas.FeatureStructure" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="singleOrNull" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.FeatureStructure"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="org.apache.uima.cas.FeatureStructure" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="startAt" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.FeatureStructure"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="org.apache.uima.cas.SelectFSs" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="startAt" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="org.apache.uima.cas.SelectFSs" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="startAt" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.FeatureStructure"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="org.apache.uima.cas.SelectFSs" oldValue="n.a."/>
-                </method>
-            </methods>
-            <modifiers>
-                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
-                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
-                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
-                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
-                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-            </modifiers>
-            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
-            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
-                <compatibilityChanges/>
-            </superclass>
-        </class>
-        <class binaryCompatible="true" changeStatus="MODIFIED" fullyQualifiedName="org.apache.uima.cas.SerialFormat" javaObjectSerializationCompatible="SERIALIZABLE_COMPATIBLE" javaObjectSerializationCompatibleAsString="compatible" sourceCompatible="true">
-            <annotations/>
-            <attributes>
-                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-            </attributes>
-            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
-            <classType changeStatus="UNCHANGED" newType="ENUM" oldType="ENUM"/>
-            <compatibilityChanges/>
-            <constructors/>
-            <fields>
-                <field binaryCompatible="true" changeStatus="NEW" name="XMI_PRETTY" sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
+        <class binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.analysis_component.CasProcessor" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="true">
+            <annotations>
+                <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.FunctionalInterface" sourceCompatible="true">
                     <compatibilityChanges/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <type changeStatus="NEW" newValue="org.apache.uima.cas.SerialFormat" oldValue="n.a."/>
-                </field>
-                <field binaryCompatible="true" changeStatus="NEW" name="XMI_1_1" sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <type changeStatus="NEW" newValue="org.apache.uima.cas.SerialFormat" oldValue="n.a."/>
-                </field>
-                <field binaryCompatible="true" changeStatus="NEW" name="XMI_1_1_PRETTY" sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <type changeStatus="NEW" newValue="org.apache.uima.cas.SerialFormat" oldValue="n.a."/>
-                </field>
-                <field binaryCompatible="true" changeStatus="NEW" name="XCAS_1_1" sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <type changeStatus="NEW" newValue="org.apache.uima.cas.SerialFormat" oldValue="n.a."/>
-                </field>
-            </fields>
-            <interfaces/>
-            <methods/>
-            <modifiers>
-                <modifier changeStatus="UNCHANGED" newValue="FINAL" oldValue="FINAL"/>
-                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
-                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
-                <modifier changeStatus="UNCHANGED" newValue="NON_ABSTRACT" oldValue="NON_ABSTRACT"/>
-                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-            </modifiers>
-            <serialVersionUid serialVersionUidDefaultNew="-6893055576112360323" serialVersionUidDefaultOld="-7655724186317214888" serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="true" serializableOld="true"/>
-            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Enum" superclassOld="java.lang.Enum">
-                <compatibilityChanges/>
-            </superclass>
-        </class>
-        <class binaryCompatible="false" changeStatus="MODIFIED" fullyQualifiedName="org.apache.uima.cas.text.AnnotationFS" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="false">
-            <annotations/>
-            <attributes>
-                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-            </attributes>
-            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
-            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
-            <compatibilityChanges/>
-            <constructors/>
-            <fields/>
-            <interfaces/>
-            <methods>
-                <method binaryCompatible="false" changeStatus="NEW" name="coveredBy" newLineNumber="113" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="coveredBy" newLineNumber="121" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="covering" newLineNumber="97" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="covering" newLineNumber="105" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="following" newLineNumber="177" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="following" newLineNumber="185" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="overlapping" newLineNumber="129" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="overlapping" newLineNumber="137" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="overlappingAtBegin" newLineNumber="145" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="overlappingAtBegin" newLineNumber="153" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="overlappingAtEnd" newLineNumber="161" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="overlappingAtEnd" newLineNumber="169" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="preceding" newLineNumber="193" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="preceding" newLineNumber="201" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="false" changeStatus="NEW" name="trim" newLineNumber="80" oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters/>
-                    <returnType changeStatus="NEW" newValue="void" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="trim" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="java.util.function.IntPredicate"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="void" oldValue="n.a."/>
-                </method>
-            </methods>
-            <modifiers>
-                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
-                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
-                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
-                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
-                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-            </modifiers>
-            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
-            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
-                <compatibilityChanges/>
-            </superclass>
-        </class>
-        <class binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.cas.text.AnnotationPredicates" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="true">
-            <annotations/>
+                    <elements/>
+                </annotation>
+            </annotations>
             <attributes>
                 <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
             </attributes>
             <classFileFormatVersion changeStatus="NEW" majorVersionNew="52" majorVersionOld="-1" minorVersionNew="0" minorVersionOld="-1"/>
-            <classType changeStatus="NEW" newType="CLASS" oldType="n.a."/>
+            <classType changeStatus="NEW" newType="INTERFACE" oldType="n.a."/>
             <compatibilityChanges/>
-            <constructors>
-                <constructor binaryCompatible="true" changeStatus="NEW" name="AnnotationPredicates" newLineNumber="21" oldLineNumber="n.a." sourceCompatible="true">
+            <constructors/>
+            <fields/>
+            <interfaces/>
+            <methods>
+                <method binaryCompatible="true" changeStatus="NEW" name="andThen" newLineNumber="54" oldLineNumber="n.a." sourceCompatible="true">
                     <annotations/>
                     <attributes>
                         <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
@@ -715,738 +33,39 @@
                         <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
                         <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
                     </modifiers>
-                    <parameters/>
-                </constructor>
-            </constructors>
-            <fields/>
-            <interfaces/>
-            <methods>
-                <method binaryCompatible="true" changeStatus="NEW" name="beginningWith" newLineNumber="207" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
                     <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
+                        <parameter type="org.apache.uima.analysis_component.CasProcessor"/>
                     </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
+                    <returnType changeStatus="NEW" newValue="org.apache.uima.analysis_component.CasProcessor" oldValue="n.a."/>
                 </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="beginningWith" newLineNumber="211" oldLineNumber="n.a." sourceCompatible="true">
+                <method binaryCompatible="true" changeStatus="NEW" name="process" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="true">
                     <annotations/>
                     <attributes>
                         <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
                     </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
+                    <compatibilityChanges/>
+                    <exceptions>
+                        <exception changeStatus="NEW" name="java.lang.Throwable"/>
+                    </exceptions>
                     <modifiers>
                         <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
                         <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
                         <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
                         <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
                     </modifiers>
                     <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
+                        <parameter type="org.apache.uima.cas.CAS"/>
                     </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="beginningWith" newLineNumber="215" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="colocated" newLineNumber="67" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="colocated" newLineNumber="71" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="colocated" newLineNumber="84" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="coveredBy" newLineNumber="23" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="coveredBy" newLineNumber="27" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="coveredBy" newLineNumber="41" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="covering" newLineNumber="45" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="covering" newLineNumber="49" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="covering" newLineNumber="63" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="endingWith" newLineNumber="219" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="endingWith" newLineNumber="222" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="endingWith" newLineNumber="226" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="following" newLineNumber="165" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="following" newLineNumber="169" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="following" newLineNumber="182" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="overlapping" newLineNumber="88" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="overlapping" newLineNumber="92" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="overlapping" newLineNumber="109" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="overlappingAtBegin" newLineNumber="117" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="overlappingAtBegin" newLineNumber="121" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="overlappingAtBegin" newLineNumber="135" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="overlappingAtEnd" newLineNumber="141" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="overlappingAtEnd" newLineNumber="145" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="overlappingAtEnd" newLineNumber="159" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="preceding" newLineNumber="186" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="preceding" newLineNumber="190" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="int"/>
-                        <parameter type="int"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="preceding" newLineNumber="203" oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                        <parameter type="org.apache.uima.cas.text.AnnotationFS"/>
-                    </parameters>
-                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
+                    <returnType changeStatus="NEW" newValue="void" oldValue="n.a."/>
                 </method>
             </methods>
             <modifiers>
-                <modifier changeStatus="NEW" newValue="FINAL" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
                 <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
                 <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
                 <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
             </modifiers>
             <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
@@ -1454,35 +73,24 @@
                 <compatibilityChanges/>
             </superclass>
         </class>
-        <class binaryCompatible="true" changeStatus="MODIFIED" fullyQualifiedName="org.apache.uima.jcas.tcas.Annotation" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="true">
+        <class binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.analysis_component.CasProcessorAnnotator" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="false">
             <annotations/>
             <attributes>
-                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
             </attributes>
-            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
-            <classType changeStatus="UNCHANGED" newType="CLASS" oldType="CLASS"/>
+            <classFileFormatVersion changeStatus="NEW" majorVersionNew="52" majorVersionOld="-1" minorVersionNew="0" minorVersionOld="-1"/>
+            <classType changeStatus="NEW" newType="CLASS" oldType="n.a."/>
             <compatibilityChanges>
-                <compatibilityChange>METHOD_DEFAULT_ADDED_IN_IMPLEMENTED_INTERFACE</compatibilityChange>
+                <compatibilityChange>INTERFACE_ADDED</compatibilityChange>
+                <compatibilityChange>METHOD_ABSTRACT_ADDED_IN_IMPLEMENTED_INTERFACE</compatibilityChange>
             </compatibilityChanges>
-            <constructors/>
-            <fields/>
-            <interfaces>
-                <interface binaryCompatible="true" changeStatus="UNCHANGED" fullyQualifiedName="org.apache.uima.cas.impl.AnnotationImpl" sourceCompatible="false">
-                    <compatibilityChanges/>
-                </interface>
-                <interface binaryCompatible="false" changeStatus="UNCHANGED" fullyQualifiedName="org.apache.uima.cas.text.AnnotationFS" sourceCompatible="false">
-                    <compatibilityChanges/>
-                </interface>
-            </interfaces>
-            <methods>
-                <method binaryCompatible="true" changeStatus="NEW" name="trim" newLineNumber="249" oldLineNumber="n.a." sourceCompatible="true">
+            <constructors>
+                <constructor binaryCompatible="true" changeStatus="NEW" name="CasProcessorAnnotator" newLineNumber="36" oldLineNumber="n.a." sourceCompatible="true">
                     <annotations/>
                     <attributes>
                         <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
                     </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
-                    </compatibilityChanges>
+                    <compatibilityChanges/>
                     <exceptions/>
                     <modifiers>
                         <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
@@ -1493,155 +101,61 @@
                         <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
                     </modifiers>
                     <parameters>
-                        <parameter type="java.util.function.IntPredicate"/>
+                        <parameter type="org.apache.uima.analysis_component.CasProcessor"/>
                     </parameters>
-                    <returnType changeStatus="NEW" newValue="void" oldValue="n.a."/>
-                </method>
-            </methods>
-            <modifiers>
-                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
-                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
-                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
-                <modifier changeStatus="UNCHANGED" newValue="NON_ABSTRACT" oldValue="NON_ABSTRACT"/>
-                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-            </modifiers>
-            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
-            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="org.apache.uima.jcas.cas.AnnotationBase" superclassOld="org.apache.uima.jcas.cas.AnnotationBase">
-                <compatibilityChanges/>
-            </superclass>
-        </class>
-        <class binaryCompatible="true" changeStatus="MODIFIED" fullyQualifiedName="org.apache.uima.resource.PearSpecifier" javaObjectSerializationCompatible="SERIALIZABLE_INCOMPATIBLE_DEFAULT_SERIALVERSIONUID_CHANGED" javaObjectSerializationCompatibleAsString="default serialVersionUID changed" sourceCompatible="false">
-            <annotations/>
-            <attributes>
-                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-            </attributes>
-            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
-            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
-            <compatibilityChanges/>
-            <constructors/>
+                </constructor>
+            </constructors>
             <fields/>
-            <interfaces/>
+            <interfaces>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.analysis_engine.TextAnalysisEngine" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.collection.CasConsumer" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.collection.base_cpm.CasObjectProcessor" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.analysis_engine.AnalysisEngine" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.resource.Resource" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.collection.base_cpm.CasProcessor" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.resource.ConfigurableResource" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+            </interfaces>
             <methods>
-                <method binaryCompatible="true" changeStatus="UNCHANGED" name="getParameters" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations>
-                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
-                            <compatibilityChanges/>
-                            <elements/>
-                        </annotation>
-                    </annotations>
-                    <attributes>
-                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
-                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
-                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
-                        <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
-                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
-                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-                    </modifiers>
-                    <parameters/>
-                    <returnType changeStatus="UNCHANGED" newValue="org.apache.uima.resource.Parameter[]" oldValue="org.apache.uima.resource.Parameter[]"/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="getPearParameters" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
+                <method binaryCompatible="true" changeStatus="NEW" name="initialize" newLineNumber="44" oldLineNumber="n.a." sourceCompatible="true">
                     <annotations/>
                     <attributes>
                         <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
                     </attributes>
                     <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
+                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
                     </compatibilityChanges>
-                    <exceptions/>
+                    <exceptions>
+                        <exception changeStatus="NEW" name="org.apache.uima.resource.ResourceInitializationException"/>
+                    </exceptions>
                     <modifiers>
                         <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
                         <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
                         <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </modifiers>
-                    <parameters/>
-                    <returnType changeStatus="NEW" newValue="org.apache.uima.resource.metadata.NameValuePair[]" oldValue="n.a."/>
-                </method>
-                <method binaryCompatible="true" changeStatus="UNCHANGED" name="setParameters" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="true">
-                    <annotations>
-                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
-                            <compatibilityChanges/>
-                            <elements/>
-                        </annotation>
-                    </annotations>
-                    <attributes>
-                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
-                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
-                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
-                        <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
-                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
-                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-                    </modifiers>
-                    <parameters>
-                        <parameter type="org.apache.uima.resource.Parameter[]"/>
-                    </parameters>
-                    <returnType changeStatus="UNCHANGED" newValue="void" oldValue="void"/>
-                </method>
-                <method binaryCompatible="true" changeStatus="NEW" name="setPearParameters" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
-                    <annotations/>
-                    <attributes>
-                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
-                    </attributes>
-                    <compatibilityChanges>
-                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
-                    </compatibilityChanges>
-                    <exceptions/>
-                    <modifiers>
-                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
-                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
                         <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
                         <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
                     </modifiers>
                     <parameters>
-                        <parameter type="org.apache.uima.resource.metadata.NameValuePair[]"/>
+                        <parameter type="org.apache.uima.resource.ResourceSpecifier"/>
+                        <parameter type="java.util.Map"/>
                     </parameters>
-                    <returnType changeStatus="NEW" newValue="void" oldValue="n.a."/>
+                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
                 </method>
-            </methods>
-            <modifiers>
-                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
-                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
-                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
-                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
-                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-            </modifiers>
-            <serialVersionUid serialVersionUidDefaultNew="5060878452360364327" serialVersionUidDefaultOld="3898905679043248080" serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="true" serializableOld="true"/>
-            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
-                <compatibilityChanges/>
-            </superclass>
-        </class>
-        <class binaryCompatible="true" changeStatus="MODIFIED" fullyQualifiedName="org.apache.uima.util.CasCreationUtils" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="true">
-            <annotations/>
-            <attributes>
-                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
-            </attributes>
-            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
-            <classType changeStatus="UNCHANGED" newType="CLASS" oldType="CLASS"/>
-            <compatibilityChanges/>
-            <constructors/>
-            <fields/>
-            <interfaces/>
-            <methods>
-                <method binaryCompatible="true" changeStatus="NEW" name="createCas" newLineNumber="103" oldLineNumber="n.a." sourceCompatible="true">
+                <method binaryCompatible="true" changeStatus="NEW" name="of" newLineNumber="73" oldLineNumber="n.a." sourceCompatible="true">
                     <annotations/>
                     <attributes>
                         <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
@@ -1660,15 +174,1098 @@
                         <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
                         <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
                     </modifiers>
+                    <parameters>
+                        <parameter type="org.apache.uima.analysis_component.CasProcessor"/>
+                    </parameters>
+                    <returnType changeStatus="NEW" newValue="org.apache.uima.analysis_component.CasProcessorAnnotator" oldValue="n.a."/>
+                </method>
+            </methods>
+            <modifiers>
+                <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="true" changeStatus="NEW" sourceCompatible="true" superclassNew="org.apache.uima.analysis_engine.impl.AnalysisEngineProcessorAdapter" superclassOld="n.a.">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.analysis_component.JCasProcessor" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="true">
+            <annotations>
+                <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.FunctionalInterface" sourceCompatible="true">
+                    <compatibilityChanges/>
+                    <elements/>
+                </annotation>
+            </annotations>
+            <attributes>
+                <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+            </attributes>
+            <classFileFormatVersion changeStatus="NEW" majorVersionNew="52" majorVersionOld="-1" minorVersionNew="0" minorVersionOld="-1"/>
+            <classType changeStatus="NEW" newType="INTERFACE" oldType="n.a."/>
+            <compatibilityChanges/>
+            <constructors/>
+            <fields/>
+            <interfaces/>
+            <methods>
+                <method binaryCompatible="true" changeStatus="NEW" name="andThen" newLineNumber="54" oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges/>
+                    <exceptions/>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="org.apache.uima.analysis_component.JCasProcessor"/>
+                    </parameters>
+                    <returnType changeStatus="NEW" newValue="org.apache.uima.analysis_component.JCasProcessor" oldValue="n.a."/>
+                </method>
+                <method binaryCompatible="true" changeStatus="NEW" name="process" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges/>
+                    <exceptions>
+                        <exception changeStatus="NEW" name="java.lang.Throwable"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="org.apache.uima.jcas.JCas"/>
+                    </parameters>
+                    <returnType changeStatus="NEW" newValue="void" oldValue="n.a."/>
+                </method>
+            </methods>
+            <modifiers>
+                <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="true" changeStatus="NEW" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="n.a.">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.analysis_component.JCasProcessorAnnotator" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="false">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+            </attributes>
+            <classFileFormatVersion changeStatus="NEW" majorVersionNew="52" majorVersionOld="-1" minorVersionNew="0" minorVersionOld="-1"/>
+            <classType changeStatus="NEW" newType="CLASS" oldType="n.a."/>
+            <compatibilityChanges>
+                <compatibilityChange>INTERFACE_ADDED</compatibilityChange>
+                <compatibilityChange>METHOD_ABSTRACT_ADDED_IN_IMPLEMENTED_INTERFACE</compatibilityChange>
+            </compatibilityChanges>
+            <constructors>
+                <constructor binaryCompatible="true" changeStatus="NEW" name="JCasProcessorAnnotator" newLineNumber="38" oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges/>
+                    <exceptions/>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="org.apache.uima.analysis_component.JCasProcessor"/>
+                    </parameters>
+                </constructor>
+            </constructors>
+            <fields/>
+            <interfaces>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.analysis_engine.TextAnalysisEngine" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.collection.CasConsumer" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.collection.base_cpm.CasObjectProcessor" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.analysis_engine.AnalysisEngine" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.resource.Resource" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.collection.base_cpm.CasProcessor" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+                <interface binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="org.apache.uima.resource.ConfigurableResource" sourceCompatible="true">
+                    <compatibilityChanges/>
+                </interface>
+            </interfaces>
+            <methods>
+                <method binaryCompatible="true" changeStatus="NEW" name="initialize" newLineNumber="46" oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="NEW" name="org.apache.uima.resource.ResourceInitializationException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="org.apache.uima.resource.ResourceSpecifier"/>
+                        <parameter type="java.util.Map"/>
+                    </parameters>
+                    <returnType changeStatus="NEW" newValue="boolean" oldValue="n.a."/>
+                </method>
+                <method binaryCompatible="true" changeStatus="NEW" name="of" newLineNumber="81" oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>METHOD_ADDED_TO_PUBLIC_CLASS</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="NEW" name="org.apache.uima.resource.ResourceInitializationException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="org.apache.uima.analysis_component.JCasProcessor"/>
+                    </parameters>
+                    <returnType changeStatus="NEW" newValue="org.apache.uima.analysis_component.JCasProcessorAnnotator" oldValue="n.a."/>
+                </method>
+            </methods>
+            <modifiers>
+                <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="NON_ABSTRACT" oldValue="n.a."/>
+                <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="true" changeStatus="NEW" sourceCompatible="true" superclassNew="org.apache.uima.analysis_engine.impl.AnalysisEngineProcessorAdapter" superclassOld="n.a.">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="true" changeStatus="UNCHANGED" fullyQualifiedName="org.apache.uima.analysis_engine.AnalysisEngine" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="true">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
+            <compatibilityChanges/>
+            <constructors/>
+            <fields>
+                <field binaryCompatible="true" changeStatus="UNCHANGED" name="PARAM_CONFIG_PARAM_SETTINGS" sourceCompatible="true">
+                    <annotations>
+                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                            <compatibilityChanges/>
+                            <elements/>
+                        </annotation>
+                    </annotations>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
+                    </compatibilityChanges>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="STATIC" oldValue="STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="FINAL" oldValue="FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <type changeStatus="UNCHANGED" newValue="java.lang.String" oldValue="java.lang.String"/>
+                </field>
+                <field binaryCompatible="true" changeStatus="UNCHANGED" name="PARAM_RESOURCE_MANAGER" sourceCompatible="true">
+                    <annotations>
+                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                            <compatibilityChanges/>
+                            <elements/>
+                        </annotation>
+                    </annotations>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
+                    </compatibilityChanges>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="STATIC" oldValue="STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="FINAL" oldValue="FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <type changeStatus="UNCHANGED" newValue="java.lang.String" oldValue="java.lang.String"/>
+                </field>
+            </fields>
+            <interfaces/>
+            <methods/>
+            <modifiers>
+                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="false" changeStatus="MODIFIED" fullyQualifiedName="org.apache.uima.analysis_engine.AnalysisEngineServiceStub" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="false">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
+            <compatibilityChanges/>
+            <constructors/>
+            <fields/>
+            <interfaces>
+                <interface binaryCompatible="false" changeStatus="UNCHANGED" fullyQualifiedName="org.apache.uima.resource.ResourceServiceStub" sourceCompatible="false">
+                    <compatibilityChanges/>
+                </interface>
+            </interfaces>
+            <methods>
+                <method binaryCompatible="false" changeStatus="MODIFIED" name="callBatchProcessComplete" newLineNumber="48" oldLineNumber="n.a." sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>METHOD_ABSTRACT_NOW_DEFAULT</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="UNCHANGED" name="org.apache.uima.resource.ResourceServiceException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="MODIFIED" newValue="NON_ABSTRACT" oldValue="ABSTRACT"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
                     <parameters/>
-                    <returnType changeStatus="NEW" newValue="org.apache.uima.cas.CAS" oldValue="n.a."/>
+                    <returnType changeStatus="UNCHANGED" newValue="void" oldValue="void"/>
+                </method>
+                <method binaryCompatible="false" changeStatus="MODIFIED" name="callCollectionProcessComplete" newLineNumber="59" oldLineNumber="n.a." sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>METHOD_ABSTRACT_NOW_DEFAULT</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="UNCHANGED" name="org.apache.uima.resource.ResourceServiceException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="MODIFIED" newValue="NON_ABSTRACT" oldValue="ABSTRACT"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters/>
+                    <returnType changeStatus="UNCHANGED" newValue="void" oldValue="void"/>
                 </method>
             </methods>
             <modifiers>
                 <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
                 <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
                 <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="true" changeStatus="UNCHANGED" fullyQualifiedName="org.apache.uima.Constants" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="true">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="CLASS" oldType="CLASS"/>
+            <compatibilityChanges/>
+            <constructors/>
+            <fields>
+                <field binaryCompatible="true" changeStatus="UNCHANGED" name="PROTOCOL_SOAP_WITH_ATTACHMENTS" sourceCompatible="true">
+                    <annotations>
+                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                            <compatibilityChanges/>
+                            <elements/>
+                        </annotation>
+                    </annotations>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
+                    </compatibilityChanges>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="STATIC" oldValue="STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="FINAL" oldValue="FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <type changeStatus="UNCHANGED" newValue="java.lang.String" oldValue="java.lang.String"/>
+                </field>
+                <field binaryCompatible="true" changeStatus="UNCHANGED" name="PROTOCOL_SOAP" sourceCompatible="true">
+                    <annotations>
+                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                            <compatibilityChanges/>
+                            <elements/>
+                        </annotation>
+                    </annotations>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
+                    </compatibilityChanges>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="STATIC" oldValue="STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="FINAL" oldValue="FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <type changeStatus="UNCHANGED" newValue="java.lang.String" oldValue="java.lang.String"/>
+                </field>
+            </fields>
+            <interfaces/>
+            <methods/>
+            <modifiers>
+                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="true" changeStatus="MODIFIED" fullyQualifiedName="org.apache.uima.resource.metadata.ConfigurationParameter" javaObjectSerializationCompatible="SERIALIZABLE_INCOMPATIBLE_DEFAULT_SERIALVERSIONUID_CHANGED" javaObjectSerializationCompatibleAsString="default serialVersionUID changed" sourceCompatible="true">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
+            <compatibilityChanges/>
+            <constructors/>
+            <fields>
+                <field binaryCompatible="true" changeStatus="NEW" name="TYPE_DOUBLE" sourceCompatible="true">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges/>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <type changeStatus="NEW" newValue="java.lang.String" oldValue="n.a."/>
+                </field>
+                <field binaryCompatible="true" changeStatus="NEW" name="TYPE_LONG" sourceCompatible="true">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges/>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <type changeStatus="NEW" newValue="java.lang.String" oldValue="n.a."/>
+                </field>
+            </fields>
+            <interfaces/>
+            <methods/>
+            <modifiers>
+                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="4873541602871753740" serialVersionUidDefaultOld="2766170673021584169" serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="true" serializableOld="true"/>
+            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="true" changeStatus="UNCHANGED" fullyQualifiedName="org.apache.uima.resource.metadata.FsIndexCollection" javaObjectSerializationCompatible="SERIALIZABLE_COMPATIBLE" javaObjectSerializationCompatibleAsString="compatible" sourceCompatible="true">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
+            <compatibilityChanges/>
+            <constructors/>
+            <fields/>
+            <interfaces/>
+            <methods>
+                <method binaryCompatible="true" changeStatus="UNCHANGED" name="resolveImports" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations>
+                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                            <compatibilityChanges/>
+                            <elements/>
+                        </annotation>
+                    </annotations>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="UNCHANGED" name="org.apache.uima.util.InvalidXMLException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="java.util.Collection"/>
+                        <parameter type="org.apache.uima.resource.ResourceManager"/>
+                    </parameters>
+                    <returnType changeStatus="UNCHANGED" newValue="void" oldValue="void"/>
+                </method>
+            </methods>
+            <modifiers>
+                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="6794156217124939681" serialVersionUidDefaultOld="6794156217124939681" serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="true" serializableOld="true"/>
+            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="true" changeStatus="UNCHANGED" fullyQualifiedName="org.apache.uima.resource.metadata.TypePriorities" javaObjectSerializationCompatible="SERIALIZABLE_COMPATIBLE" javaObjectSerializationCompatibleAsString="compatible" sourceCompatible="true">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
+            <compatibilityChanges/>
+            <constructors/>
+            <fields/>
+            <interfaces/>
+            <methods>
+                <method binaryCompatible="true" changeStatus="UNCHANGED" name="resolveImports" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations>
+                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                            <compatibilityChanges/>
+                            <elements/>
+                        </annotation>
+                    </annotations>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="UNCHANGED" name="org.apache.uima.util.InvalidXMLException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="java.util.Collection"/>
+                        <parameter type="org.apache.uima.resource.ResourceManager"/>
+                    </parameters>
+                    <returnType changeStatus="UNCHANGED" newValue="void" oldValue="void"/>
+                </method>
+            </methods>
+            <modifiers>
+                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="-71155035185334626" serialVersionUidDefaultOld="-71155035185334626" serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="true" serializableOld="true"/>
+            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="true" changeStatus="UNCHANGED" fullyQualifiedName="org.apache.uima.resource.metadata.TypeSystemDescription" javaObjectSerializationCompatible="SERIALIZABLE_COMPATIBLE" javaObjectSerializationCompatibleAsString="compatible" sourceCompatible="true">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
+            <compatibilityChanges/>
+            <constructors/>
+            <fields/>
+            <interfaces/>
+            <methods>
+                <method binaryCompatible="true" changeStatus="UNCHANGED" name="resolveImports" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations>
+                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                            <compatibilityChanges/>
+                            <elements/>
+                        </annotation>
+                    </annotations>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="UNCHANGED" name="org.apache.uima.util.InvalidXMLException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="java.util.Collection"/>
+                        <parameter type="org.apache.uima.resource.ResourceManager"/>
+                    </parameters>
+                    <returnType changeStatus="UNCHANGED" newValue="void" oldValue="void"/>
+                </method>
+            </methods>
+            <modifiers>
+                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="3038911426525244266" serialVersionUidDefaultOld="3038911426525244266" serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="true" serializableOld="true"/>
+            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="true" changeStatus="MODIFIED" fullyQualifiedName="org.apache.uima.resource.RelativePathResolver" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="false">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
+            <compatibilityChanges/>
+            <constructors/>
+            <fields/>
+            <interfaces/>
+            <methods>
+                <method binaryCompatible="true" changeStatus="UNCHANGED" name="getDataPath" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations>
+                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                            <compatibilityChanges/>
+                            <elements/>
+                        </annotation>
+                    </annotations>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions/>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters/>
+                    <returnType changeStatus="UNCHANGED" newValue="java.lang.String" oldValue="java.lang.String"/>
+                </method>
+                <method binaryCompatible="true" changeStatus="NEW" name="getDataPathElements" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions/>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <parameters/>
+                    <returnType changeStatus="NEW" newValue="java.util.List" oldValue="n.a."/>
+                </method>
+                <method binaryCompatible="true" changeStatus="UNCHANGED" name="setDataPath" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations>
+                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                            <compatibilityChanges/>
+                            <elements/>
+                        </annotation>
+                    </annotations>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="UNCHANGED" name="java.net.MalformedURLException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="java.lang.String"/>
+                    </parameters>
+                    <returnType changeStatus="UNCHANGED" newValue="void" oldValue="void"/>
+                </method>
+                <method binaryCompatible="true" changeStatus="NEW" name="setDataPathElements" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="NEW" name="java.net.MalformedURLException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="java.lang.String[]"/>
+                    </parameters>
+                    <returnType changeStatus="NEW" newValue="void" oldValue="n.a."/>
+                </method>
+                <method binaryCompatible="true" changeStatus="NEW" name="setDataPathElements" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="NEW" name="java.net.MalformedURLException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="java.io.File[]"/>
+                    </parameters>
+                    <returnType changeStatus="NEW" newValue="void" oldValue="n.a."/>
+                </method>
+            </methods>
+            <modifiers>
+                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="true" changeStatus="MODIFIED" fullyQualifiedName="org.apache.uima.resource.ResourceManager" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="false">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
+            <compatibilityChanges/>
+            <constructors/>
+            <fields/>
+            <interfaces/>
+            <methods>
+                <method binaryCompatible="true" changeStatus="UNCHANGED" name="getDataPath" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations>
+                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                            <compatibilityChanges/>
+                            <elements/>
+                        </annotation>
+                    </annotations>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions/>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters/>
+                    <returnType changeStatus="UNCHANGED" newValue="java.lang.String" oldValue="java.lang.String"/>
+                </method>
+                <method binaryCompatible="true" changeStatus="NEW" name="getDataPathElements" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions/>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <parameters/>
+                    <returnType changeStatus="NEW" newValue="java.util.List" oldValue="n.a."/>
+                </method>
+                <method binaryCompatible="true" changeStatus="UNCHANGED" name="setDataPath" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations>
+                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                            <compatibilityChanges/>
+                            <elements/>
+                        </annotation>
+                    </annotations>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="UNCHANGED" name="java.net.MalformedURLException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="java.lang.String"/>
+                    </parameters>
+                    <returnType changeStatus="UNCHANGED" newValue="void" oldValue="void"/>
+                </method>
+                <method binaryCompatible="true" changeStatus="NEW" name="setDataPathElements" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="NEW" name="java.net.MalformedURLException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="java.lang.String[]"/>
+                    </parameters>
+                    <returnType changeStatus="NEW" newValue="void" oldValue="n.a."/>
+                </method>
+                <method binaryCompatible="true" changeStatus="NEW" name="setDataPathElements" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>METHOD_ADDED_TO_INTERFACE</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions>
+                        <exception changeStatus="NEW" name="java.net.MalformedURLException"/>
+                    </exceptions>
+                    <modifiers>
+                        <modifier changeStatus="NEW" newValue="NON_FINAL" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_STATIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="PUBLIC" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="ABSTRACT" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_BRIDGE" oldValue="n.a."/>
+                        <modifier changeStatus="NEW" newValue="NON_SYNTHETIC" oldValue="n.a."/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="java.io.File[]"/>
+                    </parameters>
+                    <returnType changeStatus="NEW" newValue="void" oldValue="n.a."/>
+                </method>
+            </methods>
+            <modifiers>
+                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="true" changeStatus="UNCHANGED" fullyQualifiedName="org.apache.uima.resource.ResourceManagerPearWrapper" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="false">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
+            <compatibilityChanges>
+                <compatibilityChange>METHOD_ABSTRACT_ADDED_IN_IMPLEMENTED_INTERFACE</compatibilityChange>
+            </compatibilityChanges>
+            <constructors/>
+            <fields/>
+            <interfaces>
+                <interface binaryCompatible="true" changeStatus="UNCHANGED" fullyQualifiedName="org.apache.uima.resource.ResourceManager" sourceCompatible="false">
+                    <compatibilityChanges/>
+                </interface>
+            </interfaces>
+            <methods/>
+            <modifiers>
+                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="false" changeStatus="MODIFIED" fullyQualifiedName="org.apache.uima.resource.ResourceServiceStub" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="false">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
+            <compatibilityChanges/>
+            <constructors/>
+            <fields/>
+            <interfaces/>
+            <methods>
+                <method binaryCompatible="false" changeStatus="MODIFIED" name="destroy" newLineNumber="41" oldLineNumber="n.a." sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>METHOD_ABSTRACT_NOW_DEFAULT</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions/>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="MODIFIED" newValue="NON_ABSTRACT" oldValue="ABSTRACT"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters/>
+                    <returnType changeStatus="UNCHANGED" newValue="void" oldValue="void"/>
+                </method>
+            </methods>
+            <modifiers>
+                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="false" changeStatus="MODIFIED" fullyQualifiedName="org.apache.uima.UimaContextHolder" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="false">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="CLASS" oldType="CLASS"/>
+            <compatibilityChanges/>
+            <constructors>
+                <constructor binaryCompatible="false" changeStatus="MODIFIED" name="UimaContextHolder" newLineNumber="57" oldLineNumber="30" sourceCompatible="false">
+                    <annotations/>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>CONSTRUCTOR_LESS_ACCESSIBLE</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions/>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                        <modifier changeStatus="MODIFIED" newValue="PRIVATE" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_ABSTRACT" oldValue="NON_ABSTRACT"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters/>
+                </constructor>
+            </constructors>
+            <fields/>
+            <interfaces/>
+            <methods/>
+            <modifiers>
+                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
                 <modifier changeStatus="UNCHANGED" newValue="NON_ABSTRACT" oldValue="NON_ABSTRACT"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </modifiers>
+            <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>
+            <superclass binaryCompatible="true" changeStatus="UNCHANGED" sourceCompatible="true" superclassNew="java.lang.Object" superclassOld="java.lang.Object">
+                <compatibilityChanges/>
+            </superclass>
+        </class>
+        <class binaryCompatible="true" changeStatus="UNCHANGED" fullyQualifiedName="org.apache.uima.util.Logger" javaObjectSerializationCompatible="NOT_SERIALIZABLE" javaObjectSerializationCompatibleAsString="not serializable" sourceCompatible="true">
+            <annotations/>
+            <attributes>
+                <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+            </attributes>
+            <classFileFormatVersion changeStatus="UNCHANGED" majorVersionNew="52" majorVersionOld="52" minorVersionNew="0" minorVersionOld="0"/>
+            <classType changeStatus="UNCHANGED" newType="INTERFACE" oldType="INTERFACE"/>
+            <compatibilityChanges/>
+            <constructors/>
+            <fields/>
+            <interfaces/>
+            <methods>
+                <method binaryCompatible="true" changeStatus="UNCHANGED" name="setResourceManager" newLineNumber="n.a." oldLineNumber="n.a." sourceCompatible="true">
+                    <annotations>
+                        <annotation binaryCompatible="true" changeStatus="NEW" fullyQualifiedName="java.lang.Deprecated" sourceCompatible="true">
+                            <compatibilityChanges/>
+                            <elements/>
+                        </annotation>
+                    </annotations>
+                    <attributes>
+                        <attribute changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </attributes>
+                    <compatibilityChanges>
+                        <compatibilityChange>ANNOTATION_DEPRECATED_ADDED</compatibilityChange>
+                    </compatibilityChanges>
+                    <exceptions/>
+                    <modifiers>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                        <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_BRIDGE" oldValue="NON_BRIDGE"/>
+                        <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
+                    </modifiers>
+                    <parameters>
+                        <parameter type="org.apache.uima.resource.ResourceManager"/>
+                    </parameters>
+                    <returnType changeStatus="UNCHANGED" newValue="void" oldValue="void"/>
+                </method>
+            </methods>
+            <modifiers>
+                <modifier changeStatus="UNCHANGED" newValue="NON_FINAL" oldValue="NON_FINAL"/>
+                <modifier changeStatus="UNCHANGED" newValue="NON_STATIC" oldValue="NON_STATIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="PUBLIC" oldValue="PUBLIC"/>
+                <modifier changeStatus="UNCHANGED" newValue="ABSTRACT" oldValue="ABSTRACT"/>
                 <modifier changeStatus="UNCHANGED" newValue="NON_SYNTHETIC" oldValue="NON_SYNTHETIC"/>
             </modifiers>
             <serialVersionUid serialVersionUidDefaultNew="n.a." serialVersionUidDefaultOld="n.a." serialVersionUidInClassNew="n.a." serialVersionUidInClassOld="n.a." serializableNew="false" serializableOld="false"/>

@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--
-	Licensed to the Apache Software Foundation (ASF) under one
-	or more contributor license agreements.  See the NOTICE file
-	distributed with this work for additional information
-	regarding copyright ownership.  The ASF licenses this file
-	to you under the Apache License, Version 2.0 (the
-	"License"); you may not use this file except in compliance
-	with the License.  You may obtain a copy of the License at
-	
-	https://www.apache.org/licenses/LICENSE-2.0
-	
-	Unless required by applicable law or agreed to in writing,
-	software distributed under the License is distributed on an
-	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-	KIND, either express or implied.  See the License for the
-	specific language governing permissions and limitations
-	under the License.
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+  
+  https://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
 -->
 <document>
 
-	<properties>
-		<title>Apache UIMA</title>
-		<author email="dev@uima.apache.org">
-			Apache UIMA Documentation Team 
-		</author>
-	</properties>
+  <properties>
+    <title>Apache UIMA</title>
+    <author email="dev@uima.apache.org">
+      Apache UIMA Documentation Team 
+    </author>
+  </properties>
 
-	<body>
-		<section name="Welcome to the Apache UIMA project">
+  <body>
+    <section name="Welcome to the Apache UIMA project">
         <div style="float: right; width: 220px; margin-left: 10px; border: 1px solid grey; background: white;" >
         <div style="text-align: center; border-bottom: 1px solid grey; margin:0.2em; padding-bottom: 0.2em;">
           <a  href="https://www.apache.org/events/current-event.html">
@@ -43,14 +43,14 @@
         <div><a href="https://twitter.com/ApacheUIMA" target="_blank" rel="noopener" title="Twitter: @ApacheUIMA">Follow us on Twitter</a></div>
         </div>
 
-			<p>
-				Welcome to the Apache UIMA&#0153; project. Our goal is to support a thriving community of users and
-				developers of UIMA frameworks, tools, and annotators,        
+      <p>
+        Welcome to the Apache UIMA&#0153; project. Our goal is to support a thriving community of users and
+        developers of UIMA frameworks, tools, and annotators,        
         facilitating the analysis of unstructured content such as text, audio and
-				video.
-			</p>
+        video.
+      </p>
 
-			<h2>What is UIMA?</h2>
+      <h2>What is UIMA?</h2>
       
        <p>
         Unstructured Information Management applications are
@@ -115,16 +115,16 @@
         <a href="doc-uimacpp-huh.html">C++ framework</a>, besides
         supporting annotators written in C/C++, also supports Perl, Python, and 
         TCL annotators. The <a href="doc-uimaas-what.html">UIMA-AS</a> and 
-		<a href="doc-uimaducc-whatitam.html">UIMA-DUCC</a> are both Scaleout Frameworks and are 
-		addons to the base Java framework. The UIMA-AS supports very flexible scaleout 
-		capability based on JMS (Java Messaging Services) and ActiveMQ. The UIMA-DUCC extends UIMA-AS
+    <a href="doc-uimaducc-whatitam.html">UIMA-DUCC</a> are both Scaleout Frameworks and are 
+    addons to the base Java framework. The UIMA-AS supports very flexible scaleout 
+    capability based on JMS (Java Messaging Services) and ActiveMQ. The UIMA-DUCC extends UIMA-AS
         by providing cluster management services to automate the scale-out of UIMA pipelines over 
-		computing clusters.
-		Visit the UIMA-DUCC live
-		<a href="doc-uimaducc-demo.html">demo description</a>
-		and the UIMA-DUCC
-		<a href="http://uima-ducc-demo.apache.org:42133">live demo</a>
-		itself.
+    computing clusters.
+    Visit the UIMA-DUCC live
+    <a href="doc-uimaducc-demo.html">demo description</a>
+    and the UIMA-DUCC
+    <a href="http://uima-ducc-demo.apache.org:42133">live demo</a>
+    itself.
       </p>
         
       <p>The frameworks support configuring and running pipelines of
@@ -162,54 +162,12 @@
         a place where new ideas are developed for potential incorporation into the project.
       </p>
       
-		</section>
-
-		<section name="UIMA News">
-
-		<p>Click <a href="news.html">News</a> for a listing of releases and other news.</p>
-      <!--        
-      <p>The status reports as reported to the Apache board are found on
-         the Apache <a href="https://wiki.apache.org/incubator">Incubator Wiki</a>, in section
-         4 - Board Reports, for the months January, April, July, and October.  
-      </p>
-		 -->
-		 
-		<!--subsection name="Incubator Notice and Disclaimer">
-			<p>
-				Apache UIMA is an effort undergoing incubation at the
-				Apache Software Foundation (ASF). Incubation is required
-				of all newly accepted projects until a further review
-				indicates that the infrastructure, communications, and
-				decision making process have stabilized in a manner
-				consistent with other successful ASF projects. While
-				incubation status is not necessarily a reflection of the
-				completeness or stability of the code, it does indicate
-				that the project has yet to be fully endorsed by the
-				ASF.
-			</p>
-
-		</subsection-->
     </section>
-		<!--  
-			<section name="UIMA News">
-			
-			<p>
-			<strong>UIMA has been accepted into the Apache Incubator.</strong>
-			</p>
-			
-			</section>
-			
-			<section name="UIMA Community">
-			<p>
-			<strong>Users!</strong>
-			<blockquote>
-			We'd love to have you involved. Check out the <a href="https://cwiki.apache.org/confluence/display/UIMA/">Wiki</a>.
-			</blockquote>
-			</p>
-			
-			</section>
-		-->
-	</body>
+
+    <section name="UIMA News">
+      <p>Click <a href="news.html">News</a> for a listing of releases and other news.</p>
+    </section>
+  </body>
 </document>
 
 

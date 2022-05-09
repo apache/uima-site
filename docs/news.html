@@ -232,6 +232,13 @@
         <blockquote class="sectionBody">
                                           <table class="subsectionToc">
             <tr >
+      <td>09 May 2022</td>
+      <td><a href='#09 May 2022'>
+                  Apache UIMA Java SDK 3.3.0 released
+                </a>
+      </td>
+      </tr>  
+          <tr >
       <td>02 July 2021</td>
       <td><a href='#02 July 2021'>
                   Apache UIMA Java SDK 2.11.0 released
@@ -835,6 +842,51 @@
       </tr>  
         </table>
                                                         <table class="subsectionTable">
+        <tr><td>
+       
+       
+       
+          <a name="09 May 2022">
+            <h2>09 May 2022
+                        &ndash; Apache UIMA Java SDK 3.3.0 released
+                        </h2>
+          </a>
+      </td></tr>
+      <tr><td>
+        <blockquote class="subsectionBody">
+                                    <p>
+        The Apache UIMA team is happy to announce the release of UIMA Java SDK 3.3.0.
+      </p>
+                                                <p>Changes include:
+        <ul>
+          <li>[UIMA-6418] Added support for component parameters of type "long" and "double"</li>
+          <li>[UIMA-6358] Added platform-independent methods for setting the datapath in a resource manager</li>
+          <li>[UIMA-6374] Added an extensive CAS (de)serialization test suit</li>
+          <li>[UIMA-6431] Added support for using lambda functions as CAS processors</li>
+          <li>[UIMA-6412] Changed CPMEngine from using a thread group to using an executor service</li>
+          <li>[UIMA-6389] Fixed exceptions being swallowed when using Log4J2 through its SLF4J API</li>
+          <li>[UIMA-6386] Fixed wrong UIMA session being set on the ConfigurationManager in aggregates</li>
+          <li>[UIMA-6390] Fixed NPE when trying to access config names of fresh context</li>
+          <li>[UIMA-6378] Fixed build on Java 16</li>
+          <li>[UIMA-6393] Fixed circular imports in descriptors breaking the resource manager cache</li>
+          <li>[UIMA-6367] Fixed JCas cover annotation created in PEAR context being replaced by index operations</li>
+          <li>[UIMA-6388] Fixed CAS.select(null) returning all annotations instead of throwing an exception</li>
+          <li>[UIMA-6423] Fixed selecting a non-existing type returning all types instead of throwing an exception</li>
+          <li>[UIMA-6421] Fixed range check when injecting a String value into StringArray slot to throw an exception</li>
+          <li>[UIMA-6400] Fixed leaking ThreadLocal in UimaContextHolder</li>
+          <li>[UIMA-6398] Fixed memory leak in UIMA loggers and loggers using the wrong classloader for i18n messages</li>
+          <li>[UIMA-6413] Fixed memory leak in FSClassRegistry</li>
+          <li>[UIMA-6377] Fixed spurious multipleReferencesAllowed warning when serializing empty arrays</li>
+          <li>[UIMA-6372] Upgraded to JUnit 5</li>
+          <li>[UIMA-6373] Format UIMA Core Java SDK codebase</li>
+        </ul>
+      </p>
+                                                <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.3.0/issuesFixed/jira-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>
+                            </blockquote>
+        </td></tr>
+    </table>
+                                                      <table class="subsectionTable">
         <tr><td>
        
        

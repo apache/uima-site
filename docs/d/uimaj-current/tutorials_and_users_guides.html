@@ -2,7 +2,7 @@
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    <title>UIMA Tutorial and Developers' Guides</title><link rel="stylesheet" type="text/css" href="css/stylesheet-html.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="UIMA Tutorial and Developers' Guides" id="d5e1"><div xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h1 class="title">UIMA Tutorial and Developers' Guides</h1></div><div><div class="authorgroup">
       <h3 class="corpauthor">Written and maintained by the Apache UIMA&#8482; Development Community</h3>
-    </div></div><div><p class="releaseinfo">Version 3.2.0</p></div><div><p class="copyright">Copyright &copy; 2006, 2021 The Apache Software Foundation</p></div><div><p class="copyright">Copyright &copy; 2004, 2006 International Business Machines Corporation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
+    </div></div><div><p class="releaseinfo">Version 3.3.0</p></div><div><p class="copyright">Copyright &copy; 2006, 2022 The Apache Software Foundation</p></div><div><p class="copyright">Copyright &copy; 2004, 2006 International Business Machines Corporation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
       <p> </p>
       <p title="License and Disclaimer">
         <b>License and Disclaimer.&nbsp;</b>
@@ -35,9 +35,9 @@
         the trademark or service mark.
         
       </p>
-    </div></div><div><p class="pubdate">April, 2021</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#ugr.tug.aae">1. Annotator &amp; AE Developer's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aae.getting_started">1.1. Getting Started</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aae.defining_types">1.1.1. Defining Types</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.generating_jcas_sources">1.1.2. Generating Java Source Files for CAS Types</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.developing_annotator_code">1.1.3. Developing Your Annotator Code</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.creating_xml_descriptor">1.1.4. Creating the XML Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.testing_your_annotator">1.1.5. Testing Your Annotator</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aae.configuration_logging">1.2. Configuration and Logging</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aae.configuration_parameters">1.2.1. Configuration Parameters</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.logging">1.2.2. Logging</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aae.building_aggregates">1.3. Building Aggregate Analysis Engines</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aae.combining_annotators">1.3.1. Combining Annotators</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.aaes_can_contain_cas_consumers">1.3.2. AAEs can also contain CAS Consumers</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.reading_results_previous_annotators">1.3.3. Reading the Results of Previous Annotators</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aae.other_examples">1.4. Other examples</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.additional_topics">1.5. Additional Topics</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aae.contract_for_annotator_methods">1.5.1. Annotator Methods</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.reporting_errors_from_annotators">1.5.2. Reporting errors from Annotators</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.throwing_exceptions_from_annotators">1.5.3. Throwing Exceptions from Annotators</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.accessing_external_resource_files">1.5.4. Accessing External Resources</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.result_specification_setting">1.5.5. Result Specifications</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.classpath_when_using_jcas">1.5.6. Class path setup when using JCas</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.using_shell_scripts">1.5.7. Using the Shell Scripts</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aae.common_pitfalls">1.6. Common Pitfalls</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.viewing_UIMA_objects_in_eclipse_debugger">1.7. UIMA Objects in Eclipse Debugger</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.xml_intro_ae_descriptor">1.8. Analysis Engine XML Descriptor</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aae.header_annotator_class_identification">1.8.1. Header and Annotator Class Identification</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.xml_intro_simple_metadata_attributes">1.8.2. Simple Metadata Attributes</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.xml_intro_type_system_definition">1.8.3. Type System Definition</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.xml_intro_capabilities">1.8.4. Capabilities</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.xml_intro.configuration_parameters">1.8.5. Configuration Parameters (Optional)</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tug.cpe">2. CPE Developer's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cpe.concepts">2.1. CPE Concepts</a></span></dt><dt><span class="section"><a href="#ugr.tug.cpe.configurator_and_viewer">2.2. CPE Configurator and CAS viewer</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cpe.cpe_configurator">2.2.1. Using the CPE Configurator</a></span></dt><dt><span class="section"><a href="#ugr.tug.cpe.running_cpe_configurator_from_eclipse">2.2.2. Running the CPE Configurator from Eclipse</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.cpe.running_cpe_from_application">2.3. Running a CPE from Your Own Java Application</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cpe.using_listeners">2.3.1. Using Listeners</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.cpe.developing_collection_processing_components">2.4. Developing Collection Processing Components</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cpe.collection_reader.developing">2.4.1. Developing Collection Readers</a></span></dt><dt><span class="section"><a href="#ugr.tug.cpe.cas_initializer.developing">2.4.2. Developing CAS
+    </div></div><div><p class="pubdate">April, 2022</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#ugr.tug.aae">1. Annotator &amp; AE Developer's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aae.getting_started">1.1. Getting Started</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aae.defining_types">1.1.1. Defining Types</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.generating_jcas_sources">1.1.2. Generating Java Source Files for CAS Types</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.developing_annotator_code">1.1.3. Developing Your Annotator Code</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.creating_xml_descriptor">1.1.4. Creating the XML Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.testing_your_annotator">1.1.5. Testing Your Annotator</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aae.configuration_logging">1.2. Configuration and Logging</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aae.configuration_parameters">1.2.1. Configuration Parameters</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.logging">1.2.2. Logging</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aae.building_aggregates">1.3. Building Aggregate Analysis Engines</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aae.combining_annotators">1.3.1. Combining Annotators</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.aaes_can_contain_cas_consumers">1.3.2. AAEs can also contain CAS Consumers</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.reading_results_previous_annotators">1.3.3. Reading the Results of Previous Annotators</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aae.other_examples">1.4. Other examples</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.additional_topics">1.5. Additional Topics</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aae.contract_for_annotator_methods">1.5.1. Annotator Methods</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.reporting_errors_from_annotators">1.5.2. Reporting errors from Annotators</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.throwing_exceptions_from_annotators">1.5.3. Throwing Exceptions from Annotators</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.accessing_external_resource_files">1.5.4. Accessing External Resources</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.result_specification_setting">1.5.5. Result Specifications</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.classpath_when_using_jcas">1.5.6. Class path setup when using JCas</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.using_shell_scripts">1.5.7. Using the Shell Scripts</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aae.common_pitfalls">1.6. Common Pitfalls</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.viewing_UIMA_objects_in_eclipse_debugger">1.7. UIMA Objects in Eclipse Debugger</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.xml_intro_ae_descriptor">1.8. Analysis Engine XML Descriptor</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aae.header_annotator_class_identification">1.8.1. Header and Annotator Class Identification</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.xml_intro_simple_metadata_attributes">1.8.2. Simple Metadata Attributes</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.xml_intro_type_system_definition">1.8.3. Type System Definition</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.xml_intro_capabilities">1.8.4. Capabilities</a></span></dt><dt><span class="section"><a href="#ugr.tug.aae.xml_intro.configuration_parameters">1.8.5. Configuration Parameters (Optional)</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tug.cpe">2. CPE Developer's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cpe.concepts">2.1. CPE Concepts</a></span></dt><dt><span class="section"><a href="#ugr.tug.cpe.configurator_and_viewer">2.2. CPE Configurator and CAS viewer</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cpe.cpe_configurator">2.2.1. Using the CPE Configurator</a></span></dt><dt><span class="section"><a href="#ugr.tug.cpe.running_cpe_configurator_from_eclipse">2.2.2. Running the CPE Configurator from Eclipse</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.cpe.running_cpe_from_application">2.3. Running a CPE from Your Own Java Application</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cpe.using_listeners">2.3.1. Using Listeners</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.cpe.developing_collection_processing_components">2.4. Developing Collection Processing Components</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cpe.collection_reader.developing">2.4.1. Developing Collection Readers</a></span></dt><dt><span class="section"><a href="#ugr.tug.cpe.cas_initializer.developing">2.4.2. Developing CAS
       Initializers</a></span></dt><dt><span class="section"><a href="#ugr.tug.cpe.cas_consumer.developing">2.4.3. Developing CAS
-      Consumers</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.cpe.deploying_a_cpe">2.5. Deploying a CPE</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cpe.managed_deployment">2.5.1. Deploying Managed CAS Processors</a></span></dt><dt><span class="section"><a href="#ugr.tug.cpe.deploying_nonmanaged_cas_processors">2.5.2. Deploying Non-managed CAS Processors</a></span></dt><dt><span class="section"><a href="#ugr.tug.cpe.integrated_deployment">2.5.3. Deploying Integrated CAS Processors</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.cpe.collection_processing_examples">2.6. Collection Processing Examples</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tug.application">3. Application Developer's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.appication.uimaframework_class">3.1. The UIMAFramework Class</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.using_aes">3.2. Using Analysis Engines</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.application.instantiating_an_ae">3.2.1. Instantiating an Analysis Engine</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.analyzing_text_documents">3.2.2. Analyzing Text Documents</a></span></dt><dt><span class="section"><a href="#ugr.tug.applications.analyzing_non_text_artifacts">3.2.3. Analyzing Non-Text Artifacts</a></span></dt><dt><span class="section"><a href="#ugr.tug.applications.accessing_analysis_results">3.2.4. Accessing Analysis Results</a></span></dt><dt><span class="section"><a href="#ugr.tug.applications.multi_threaded">3.2.5. Multi-threaded Applications</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.using_multiple_aes">3.2.6. Multiple AEs &amp; Creating Shared CASes</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.saving_cases_to_file_systems">3.2.7. Saving CASes to file systems or general Streams</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.application.using_cpes">3.3. Using Collection Processing Engines</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.application.running_a_cpe_from_a_descriptor">3.3.1. Running a CPE from a Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.configuring_a_cpe_descriptor_programmatically">3.3.2. Configuring a CPE Descriptor Programmatically</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.application.setting_configuration_parameters">3.4. Setting Configuration Parameters</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.integrating_text_analysis_and_search">3.5. Integrating Text Analysis and Search</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.application.building_an_index">3.5.1. Building an Index</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.application.remote_services">3.6. Working with Remote Services</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.application.how_to_deploy_as_soap">3.6.1. Deploying as SOAP Service</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.how_to_deploy_a_vinci_service">3.6.2. Deploying as a Vinci Service</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.how_to_call_a_uima_service">3.6.3. Calling a UIMA Service</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.restrictions_on_remotely_deployed_services">3.6.4. Restrictions on remotely deployed services</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.vns">3.6.5. The Vinci Naming Services (VNS)</a></span></dt><dt><span class="section"><a href="#ugr.tug.configuring_timeout_settings">3.6.6. Configuring Timeout Settings</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.application.increasing_performance_using_parallelism">3.7. Increasing performance using parallelism</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.jmx">3.8. Monitoring AE Performance using JMX</a></span></dt><dt><span class="section"><a href="#tug.application.pto">3.9. Performance Tuning Options</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tug.fc">4. Flow Controller Developer's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.fc.developing_fc_code">4.1. Developing the Flow Controller Code</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.fc.fc_interface_overview">4.1.1. Flow Controller Interface Overview</a></span></dt><dt><span class="section"><a href="#ugr.tug.fc.example_code">4.1.2. Example Code</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.fc.creating_fc_descriptor">4.2. Creating the Flow Controller Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tug.fc.adding_fc_to_aggregate">4.3. Adding Flow Controller to an Aggregate</a></span></dt><dt><span class="section"><a href="#ugr.tug.fc.adding_fc_to_cpe">4.4. Adding Flow Controller to CPE</a></span></dt><dt><span class="section"><a href="#ugr.tug.fc.using_fc_with_cas_multipliers">4.5. Using Flow Controllers with CAS Multipliers</a></span></dt><dt><span class="section"><a href="#ugr.tug.fc.continuing_when_exceptions_occur">4.6. Continuing the Flow When Exceptions Occur</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tug.aas">5. Annotations, Artifacts &amp; Sofas</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aas.terminology">5.1. Terminology</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aas.artifact">5.1.1. Artifact</a></span></dt><dt><span class="section"><a href="#ugr.tug.aas.sofa">5.1.2. Subject of Analysis &#8212; Sofa</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aas.sofa_data_formats">5.2. Formats of Sofa Data</a></span></dt><dt><span class="section"><a href="#ugr.tug.aas.setting_accessing_sofa_data">5.3. Setting and Accessing Sofa Data</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aas.setting_sofa_data">5.3.1. Setting Sofa Data</a></span></dt><dt><span class="section"><a href="#ugr.tug.aas.accessing_sofa_data">5.3.2. Accessing Sofa Data</a></span></dt><dt><span class="section"><a href="#ugr.tug.aas.accessing_sofa_data_using_java_stream">5.3.3. Accessing Sofa Data using a Java Stream</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aas.sofa_fs">5.4. The Sofa Feature Structure</a></span></dt><dt><span class="section"><a href="#ugr.tug.aas.annotations">5.5. Annotations</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aas.built_in_annotation_types">5.5.1. Built-in Annotation types</a></span></dt><dt><span class="section"><a href="#ugr.tug.aas.annotations_associated_sofa">5.5.2. Annotations have an associated Sofa</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aas.annotationbase">5.6. AnnotationBase</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tug.mvs">6. Multiple CAS Views</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.mvs.cas_views_and_sofas">6.1. CAS Views and Sofas</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.mvs.naming_views_sofas">6.1.1. Naming CAS Views and Sofas</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.multi_view_and_single_view">6.1.2. Multi/Single View parts in Applications</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.mvs.multi_view_components">6.2. Multi-View Components</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.mvs.deciding_multi_view">6.2.1. Deciding: Multi-View</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.additional_capabilities">6.2.2. Multi-View: additional capabilities</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.component_xml_metadata">6.2.3. Component XML metadata</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.mvs.sofa_capabilities_and_apis_for_apps">6.3. Sofa Capabilities &amp; APIs for Apps</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.sofa_name_mapping">6.4. Sofa Name Mapping</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.mvs.name_mapping_aggregate">6.4.1. Name Mapping in an Aggregate Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.name_mapping_cpe">6.4.2. Name Mapping in a CPE
+      Consumers</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.cpe.deploying_a_cpe">2.5. Deploying a CPE</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cpe.managed_deployment">2.5.1. Deploying Managed CAS Processors</a></span></dt><dt><span class="section"><a href="#ugr.tug.cpe.deploying_nonmanaged_cas_processors">2.5.2. Deploying Non-managed CAS Processors</a></span></dt><dt><span class="section"><a href="#ugr.tug.cpe.integrated_deployment">2.5.3. Deploying Integrated CAS Processors</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.cpe.collection_processing_examples">2.6. Collection Processing Examples</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tug.application">3. Application Developer's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.appication.uimaframework_class">3.1. The UIMAFramework Class</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.using_aes">3.2. Using Analysis Engines</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.application.instantiating_an_ae">3.2.1. Instantiating an Analysis Engine</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.analyzing_text_documents">3.2.2. Analyzing Text Documents</a></span></dt><dt><span class="section"><a href="#ugr.tug.applications.analyzing_non_text_artifacts">3.2.3. Analyzing Non-Text Artifacts</a></span></dt><dt><span class="section"><a href="#ugr.tug.applications.accessing_analysis_results">3.2.4. Accessing Analysis Results</a></span></dt><dt><span class="section"><a href="#ugr.tug.applications.multi_threaded">3.2.5. Multi-threaded Applications</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.using_multiple_aes">3.2.6. Multiple AEs &amp; Creating Shared CASes</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.saving_cases_to_file_systems">3.2.7. Saving CASes to file systems or general Streams</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.application.using_cpes">3.3. Using Collection Processing Engines</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.application.running_a_cpe_from_a_descriptor">3.3.1. Running a CPE from a Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.configuring_a_cpe_descriptor_programmatically">3.3.2. Configuring a CPE Descriptor Programmatically</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.application.setting_configuration_parameters">3.4. Setting Configuration Parameters</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.integrating_text_analysis_and_search">3.5. Integrating Text Analysis and Search</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.application.building_an_index">3.5.1. Building an Index</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.application.remote_services">3.6. Working with Remote Services</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.application.how_to_deploy_a_vinci_service">3.6.1. Deploying as a Vinci Service</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.how_to_call_a_uima_service">3.6.2. Calling a UIMA Service</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.restrictions_on_remotely_deployed_services">3.6.3. Restrictions on remotely deployed services</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.vns">3.6.4. The Vinci Naming Services (VNS)</a></span></dt><dt><span class="section"><a href="#ugr.tug.configuring_timeout_settings">3.6.5. Configuring Timeout Settings</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.application.increasing_performance_using_parallelism">3.7. Increasing performance using parallelism</a></span></dt><dt><span class="section"><a href="#ugr.tug.application.jmx">3.8. Monitoring AE Performance using JMX</a></span></dt><dt><span class="section"><a href="#tug.application.pto">3.9. Performance Tuning Options</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tug.fc">4. Flow Controller Developer's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.fc.developing_fc_code">4.1. Developing the Flow Controller Code</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.fc.fc_interface_overview">4.1.1. Flow Controller Interface Overview</a></span></dt><dt><span class="section"><a href="#ugr.tug.fc.example_code">4.1.2. Example Code</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.fc.creating_fc_descriptor">4.2. Creating the Flow Controller Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tug.fc.adding_fc_to_aggregate">4.3. Adding Flow Controller to an Aggregate</a></span></dt><dt><span class="section"><a href="#ugr.tug.fc.adding_fc_to_cpe">4.4. Adding Flow Controller to CPE</a></span></dt><dt><span class="section"><a href="#ugr.tug.fc.using_fc_with_cas_multipliers">4.5. Using Flow Controllers with CAS Multipliers</a></span></dt><dt><span class="section"><a href="#ugr.tug.fc.continuing_when_exceptions_occur">4.6. Continuing the Flow When Exceptions Occur</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tug.aas">5. Annotations, Artifacts &amp; Sofas</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aas.terminology">5.1. Terminology</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aas.artifact">5.1.1. Artifact</a></span></dt><dt><span class="section"><a href="#ugr.tug.aas.sofa">5.1.2. Subject of Analysis &#8212; Sofa</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aas.sofa_data_formats">5.2. Formats of Sofa Data</a></span></dt><dt><span class="section"><a href="#ugr.tug.aas.setting_accessing_sofa_data">5.3. Setting and Accessing Sofa Data</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aas.setting_sofa_data">5.3.1. Setting Sofa Data</a></span></dt><dt><span class="section"><a href="#ugr.tug.aas.accessing_sofa_data">5.3.2. Accessing Sofa Data</a></span></dt><dt><span class="section"><a href="#ugr.tug.aas.accessing_sofa_data_using_java_stream">5.3.3. Accessing Sofa Data using a Java Stream</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aas.sofa_fs">5.4. The Sofa Feature Structure</a></span></dt><dt><span class="section"><a href="#ugr.tug.aas.annotations">5.5. Annotations</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.aas.built_in_annotation_types">5.5.1. Built-in Annotation types</a></span></dt><dt><span class="section"><a href="#ugr.tug.aas.annotations_associated_sofa">5.5.2. Annotations have an associated Sofa</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.aas.annotationbase">5.6. AnnotationBase</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tug.mvs">6. Multiple CAS Views</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.mvs.cas_views_and_sofas">6.1. CAS Views and Sofas</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.mvs.naming_views_sofas">6.1.1. Naming CAS Views and Sofas</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.multi_view_and_single_view">6.1.2. Multi/Single View parts in Applications</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.mvs.multi_view_components">6.2. Multi-View Components</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.mvs.deciding_multi_view">6.2.1. Deciding: Multi-View</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.additional_capabilities">6.2.2. Multi-View: additional capabilities</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.component_xml_metadata">6.2.3. Component XML metadata</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.mvs.sofa_capabilities_and_apis_for_apps">6.3. Sofa Capabilities &amp; APIs for Apps</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.sofa_name_mapping">6.4. Sofa Name Mapping</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.mvs.name_mapping_aggregate">6.4.1. Name Mapping in an Aggregate Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.name_mapping_cpe">6.4.2. Name Mapping in a CPE
       Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.specifying_cas_view_for_process">6.4.3. CAS View received by Process</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.name_mapping_application">6.4.4. Name Mapping in a UIMA Application</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.name_mapping_remote_services">6.4.5. Name Mapping for Remote Services</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.mvs.jcas_extensions_for_multi_views">6.5. JCas extensions for Multiple Views</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.sample_application">6.6. Sample Multi-View Application</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.mvs.sample_application.descriptor">6.6.1. Annotator Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.sample_application.setup">6.6.2. Application Setup</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.sample_application.annotator_processing">6.6.3. Annotator Processing</a></span></dt><dt><span class="section"><a href="#ugr.tug.mvs.sample_application.accessing_results">6.6.4. Accessing the results of analysis</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.mvs.views_api_summary">6.7. Views API Summary</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tug.cm">7. CAS Multiplier</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cm.developing_multiplier_code">7.1. Developing the CAS Multiplier Code</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cm.cm_interface_overview">7.1.1. CAS Multiplier Interface Overview</a></span></dt><dt><span class="section"><a href="#ugr.tug.cm.how_to_get_empty_cas_instance">7.1.2. Getting an empty CAS Instance</a></span></dt><dt><span class="section"><a href="#ugr.tug.cm.example_code">7.1.3. Example Code</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.cm.creating_cm_descriptor">7.2. CAS Multiplier Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tug.cm.using_cm_in_aae">7.3. Using CAS Multipliers in Aggregates</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cm.adding_cm_to_aggregate">7.3.1. Aggregate: Adding the CAS Multiplier</a></span></dt><dt><span class="section"><a href="#ugr.tug.cm.cm_and_fc">7.3.2. CAS Multipliers and Flow Control</a></span></dt><dt><span class="section"><a href="#ugr.tug.cm.aggregate_cms">7.3.3. Aggregate CAS Multipliers</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.cm.using_cm_in_cpe">7.4. CAS Multipliers in CPE's</a></span></dt><dt><span class="section"><a href="#ugr.tug.cm.calling_cm_from_app">7.5. Applications: Calling CAS Multipliers</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cm.retrieving_output_cases">7.5.1. Output CASes</a></span></dt><dt><span class="section"><a href="#ugr.tug.cm.using_cm_with_other_aes">7.5.2. CAS Multipliers with other AEs</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tug.cm.using_cm_to_merge_cases">7.6. Merging with CAS Multipliers</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.cm.overview_of_how_to_merge_cases">7.6.1. CAS Merging Overview</a></span></dt><dt><span class="section"><a href="#ugr.tug.cm.example_cas_merger">7.6.2. Example CAS Merger</a></span></dt><dt><span class="section"><a href="#ugr.tug.cm.using_the_simple_text_merger_in_an_aggregate_ae">7.6.3. SimpleTextMerger in an Aggregate</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tug.xmi_emf">8. XMI &amp; EMF</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.xmi_emf.overview">8.1. Overview</a></span></dt><dt><span class="section"><a href="#ugr.tug.xmi_emf.converting_ecore_to_from_uima_type_system">8.2. Converting an Ecore Model to or from a UIMA Type System</a></span></dt><dt><span class="section"><a href="#ugr.tug.xmi_emf.using_xmi_cas_serialization">8.3. Using XMI CAS Serialization</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.xmi_emf.xml_character_issues">8.3.1. Character Encoding Issues with XML Serialization</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tug.type_mapping">9. Managing different TypeSystems</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tug.type_mapping.type_merging">9.1. Annotators, Type Merging, and Remotes</a></span></dt><dt><span class="section"><a href="#ugr.tug.type_mapping.remote_support">9.2. Supporting Remote Annotators</a></span></dt><dt><span class="section"><a href="#ugr.tug.type_mapping.allowed_differences">9.3. Type filtering support in Binary Compressed Serialization/Deserialization</a></span></dt><dt><span class="section"><a href="#ugr.tug.type_mapping.compressed">9.4. Remote Services support with Compressed Binary Serialization</a></span></dt><dt><span class="section"><a href="#ugr.tug.type_filtering.compressed_file">9.5. Compressed Binary serialization to/from files</a></span></dt></dl></dd></dl></div>
   
   
@@ -1141,7 +1141,7 @@ public void initialize(UimaContext aContext)
         button and search for an Analysis Engine in your Eclipse workspace.
         </p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The <span class="quote">&#8220;<span class="quote">AddRemote</span>&#8221;</span> button is used for adding components
         which run remotely (for example, on another machine using a remote networking
-        connection). This capability is described in section <a href="tutorials_and_users_guides.html#ugr.tug.application.how_to_call_a_uima_service" class="olink">Section&nbsp;3.6.3, &#8220;Calling a UIMA Service&#8221;</a>,</p>
+        connection). This capability is described in section <a href="tutorials_and_users_guides.html#ugr.tug.application.how_to_call_a_uima_service" class="olink">Section&nbsp;3.6.2, &#8220;Calling a UIMA Service&#8221;</a>,</p>
         </div><p> </p>
       
       <p>The order of the components in the left pane does not imply an order of
@@ -2086,7 +2086,7 @@ documentAnalyzer</pre><p>
                   (see <a class="xref" href="#ugr.tug.aae.configuration_logging" title="1.2.&nbsp;Configuration and Logging">Section&nbsp;1.2, &#8220;Configuration and Logging&#8221;</a>)</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">UIMA_JVM_OPTS</td><td style="border-bottom: 0.5pt solid black; ">(Optional) if specified, the JVM arguments to be used when the Java
                   process is started.  This can be used for example to set the maximum Java
                   heap size or to define system properties.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">VNS_PORT</td><td style="border-bottom: 0.5pt solid black; ">(Optional) if specified, the network IP port number of the Vinci
-                  Name Server (VNS) (see <a href="tutorials_and_users_guides.html#ugr.tug.application.vns" class="olink">Section&nbsp;3.6.5, &#8220;The Vinci Naming Services (VNS)&#8221;</a>)</td></tr><tr><td style="border-right: 0.5pt solid black; ">ECLIPSE_HOME</td><td style="">(Optional) Needs to be set to the root of your Eclipse installation
+                  Name Server (VNS) (see <a href="tutorials_and_users_guides.html#ugr.tug.application.vns" class="olink">Section&nbsp;3.6.4, &#8220;The Vinci Naming Services (VNS)&#8221;</a>)</td></tr><tr><td style="border-right: 0.5pt solid black; ">ECLIPSE_HOME</td><td style="">(Optional) Needs to be set to the root of your Eclipse installation
                   when using shell scripts that invoke Eclipse (e.g.
                   jcasgen_merge)</td></tr></tbody></table>
           
@@ -3417,15 +3417,11 @@ mCPE.process();</pre>
       between separate processes and possibly between separate computers. This is
       accomplished using <span class="emphasis"><em>Vinci</em></span>, a communication protocol used by
       the CPM and which is provided as a part of Apache UIMA. Vinci handles service naming and
-      location and data transport (see <a href="tutorials_and_users_guides.html#ugr.tug.application.how_to_deploy_a_vinci_service" class="olink">Section&nbsp;3.6.2, &#8220;Deploying as a Vinci Service&#8221;</a>&nbsp; for more
+      location and data transport (see <a href="tutorials_and_users_guides.html#ugr.tug.application.how_to_deploy_a_vinci_service" class="olink">Section&nbsp;3.6.1, &#8220;Deploying as a Vinci Service&#8221;</a>&nbsp; for more
       information). Service naming and location are provided by a <span class="emphasis"><em>Vinci Naming
       Service</em></span>, or <span class="emphasis"><em>VNS</em></span>. For managed CAS Processors, the
       CPE uses its own internal VNS. For non-managed CAS Processors, a separate VNS must be
-      running.</p> <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The UIMA SDK also supports using unmanaged remote
-    services via the web-standard SOAP communications protocol (see <a href="tutorials_and_users_guides.html#ugr.tug.application.how_to_deploy_as_soap" class="olink">Section&nbsp;3.6.1, &#8220;Deploying as SOAP Service&#8221;</a>. This approach is
-    based on a proxy implementation, where the proxy is essentially running in an integrated
-    mode. To use this approach with the CPM, use the Integrated mode, with the component being
-    an Aggregate which, in turn, connects to a remote service. </p></div>
+      running.</p>
     
     <p>The CPE Configurator tool currently only supports constructing CPEs that deploy
       CAS Processors in integrated mode. To deploy CAS Processors in any other mode, the CPE
@@ -3525,7 +3521,7 @@ mCPE.process();</pre>
       
       <p>Non-managed CAS Processors also require a separate Vinci Naming Service
         running on the network. This VNS must be manually started and monitored by the end user
-        or application. Instructions for running a VNS can be found in <a href="tutorials_and_users_guides.html#ugr.tug.application.vns.starting" class="olink">Section&nbsp;3.6.5.1, &#8220;Starting VNS&#8221;</a>.</p>
+        or application. Instructions for running a VNS can be found in <a href="tutorials_and_users_guides.html#ugr.tug.application.vns.starting" class="olink">Section&nbsp;3.6.4.1, &#8220;Starting VNS&#8221;</a>.</p>
       
       <p>To deploy a non-managed CAS Processor, the CPE deployer must change the CPE
         descriptor. The following is a section from the CPE descriptor that shows an example
@@ -4001,7 +3997,7 @@ ae.destroy();</pre>
       
       <p>There is not much more code required here than in the previous example. First, there is one additional
         parameter to the AnalysisEngine producer, specifying the number of annotator instances to
-        create<sup>[<a name="d5e1793" href="#ftn.d5e1793" class="footnote">7</a>]</sup>. Then, instead of creating a
+        create<sup>[<a name="d5e1790" href="#ftn.d5e1790" class="footnote">7</a>]</sup>. Then, instead of creating a
         single CAS in the constructor, we now create a CasPool containing 3 instances. In the analyze method, we check
         out a CAS, use it, and then release it.</p> <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
       <p>Frequently, the two numbers (number of CASes, and the number of AEs) will be the same. It would not make
@@ -4612,158 +4608,30 @@ consumerParamSettings.setParameterValue(
       Analysis Engine or CAS Consumer can then be called from a remote machine using various network
       protocols.</p>
     
-    <p>The UIMA SDK provides support for two communications protocols:
+    <p>The UIMA SDK provides support for the following communications protocols:
       
       </p><div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem">
-          <p>SOAP, the standard Web Services protocol</p>
-        </li><li class="listitem">
-          <p>Vinci, a lightweight version of SOAP, included as a part of Apache UIMA. </p>
+          <p>Vinci, a lightweight protocol, included as a part of Apache UIMA.</p>
         </li></ul></div>
     
     <p>The UIMA framework can make use of these services in two different ways:
       
       </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
           <p>An Analysis Engine can create a proxy to a remote service; this proxy acts like a local component, but
-            connects to the remote. The proxy has limited error handling and retry capabilities. Both Vinci and SOAP
-            are supported.</p>
+            connects to the remote. The proxy has limited error handling and retry capabilities. The Vinci protocol is supported.</p>
         </li><li class="listitem">
           <p>A Collection Processing Engine can specify non-Integrated mode (see <a href="tutorials_and_users_guides.html#ugr.tug.cpe.deploying_a_cpe" class="olink">Section&nbsp;2.5, &#8220;Deploying a CPE&#8221;</a>. The
             CPE provides more extensive error recovery capabilities. This mode only supports the Vinci
             communications protocol. </p>
         </li></ol></div>
     
-    <div class="section" title="3.6.1.&nbsp;Deploying a UIMA Component as a SOAP Service"><div class="titlepage"><div><div><h3 class="title" id="ugr.tug.application.how_to_deploy_as_soap">3.6.1.&nbsp;Deploying a UIMA Component as a SOAP Service</h3></div></div></div>
-      
-      
-      
-      <p>To deploy a UIMA component as a SOAP Web Service, you need to first install the following software
-        components:
-        
-        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem">
-            <p>Apache Tomcat 5.0 or 5.5 ( <a class="ulink" href="http://jakarta.apache.org/tomcat/" target="_top">http://jakarta.apache.org/tomcat/</a>) </p>
-          </li><li class="listitem">
-            <p>Apache Axis 1.3 or 1.4 (<a class="ulink" href="http://ws.apache.org/axis/" target="_top">http://ws.apache.org/axis/</a>) </p>
-          </li></ul></div>
-      
-      <p>Later versions of these components will likely also work, but have not been tested.</p>
-      
-      <p>Next, you need to do the following setup steps:
-        
-        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-            <p>Set the CATALINA_HOME environment variable to the location where Tomcat is installed.</p>
-          </li><li class="listitem">
-            <p>Copy all of the JAR files from <code class="literal">%UIMA_HOME%/lib</code> to the
-              <code class="literal">%CATALINA_HOME%/webapps/axis/WEB-INF/lib</code> in your installation.</p>
-          </li><li class="listitem">
-            <p>Copy your JAR files for the UIMA components that you wish to
-              <code class="literal">%CATALINA_HOME%/webapps/axis/WEB-INF/lib</code> in your installation.</p>
-          </li><li class="listitem">
-            <p><span class="bold-italic">IMPORTANT</span>: any time you add JAR files to Tomcat (for
-              instance, in the above 2 steps), you must shutdown and restart Tomcat before it
-              <span class="quote">&#8220;<span class="quote">notices</span>&#8221;</span> this. So now, please shutdown and restart Tomcat.</p>
-          </li><li class="listitem">
-            <p>All the Java classes for the UIMA Examples are packaged in the
-              <code class="literal">uima-examples.jar</code> file which is included in the
-              <code class="literal">%UIMA_HOME%/lib</code> folder.</p>
-          </li><li class="listitem">
-            <p>In addition, if an annotator needs to locate resource files in the classpath, those resources
-              must be available in the Axis classpath, so copy these also to
-              <code class="literal">%CATALINA_HOME%/webapps/axis/WEB-INF/classes</code> .</p>
-            
-            <p>As an example, if you are deploying the GovernmentTitleRecognizer (found in
-              <code class="literal">examples/descriptors/analysis_engine/
-              GovernmentOfficialRecognizer_RegEx_TAE</code>) as a SOAP service, you need to copy the file
-              <code class="literal">examples/resources/GovernmentTitlePatterns.dat</code> into
-              <code class="literal">.../WEB-INF/classes</code>. </p>
-          </li></ul></div>
-      
-      <p>Test your installation of Tomcat and Axis by starting Tomcat and going to
-        <code class="literal">http://localhost:8080/axis/happyaxis.jsp</code> in your browser. Check to be sure that
-        this reports that all of the required Axis libraries are present. One common missing file may be
-        activation.jar, which you can get from java.sun.com.</p>
-      
-      <p>After completing these setup instructions, you can deploy Analysis Engines or CAS Consumers as SOAP web
-        services by using the <code class="literal">deploytool</code> utility, with is located in the
-        <code class="literal">/bin</code> directory of the UIMA SDK. <code class="literal">deploytool</code> is a command line
-        program utility that takes as an argument a web services deployment descriptors (WSDD file); example WSDD
-        files are provided in the <code class="literal">examples/deploy/soap</code> directory of the UIMA SDK. Deployment
-        Descriptors have been provided for deploying and undeploying some of the example Analysis Engines that come
-        with the SDK.</p>
-      
-      <p>As an example, the WSDD file for deploying the example Person Title annotator looks like this (important
-        parts are in bold italics):
-        
-        
-        </p><pre class="programlisting">&lt;deployment name="<span class="bold-italic">PersonTitleAnnotator</span>" 
-            xmlns="http://xml.apache.org/axis/wsdd/" 
-            xmlns:java="http://xml.apache.org/axis/wsdd/providers/java"&gt;
-
-  &lt;service name="<span class="bold-italic">urn:PersonTitleAnnotator</span>" provider="java:RPC"&gt;
-
-    &lt;parameter name="scope" value="Request"/&gt;
-
-    &lt;parameter name="className" 
-      value="org.apache.uima.reference_impl.analysis_engine
-                .service.soap.AxisAnalysisEngineService_impl"/&gt;
-
-    &lt;parameter name="allowedMethods" value="getMetaData process"/&gt;
-    &lt;parameter name="allowedRoles" value="*"/&gt;
-    &lt;parameter name="resourceSpecifierPath" 
-      value="<span class="bold-italic">C:/Program Files/apache/uima/examples/
-           descriptors/analysis_engine/PersonTitleAnnotator.xml</span>"/&gt;
-
-    &lt;parameter name="numInstances" value="3"/&gt;
-
-    &lt;!-- Type Mappings omitted from this document; 
-          you will not need to edit them. --&gt;
-
-    &lt;typeMapping .../&gt;
-    &lt;typeMapping .../&gt;
-    &lt;typeMapping .../&gt;
-
-  &lt;/service&gt;
-
-&lt;/deployment&gt;</pre>
-      
-      <p>To modify this WSDD file to deploy your own Analysis Engine or CAS Consumer, just replace the areas
-        indicated in bold italics (deployment name, service name, and resource specifier path) with values
-        appropriate for your component.</p>
-      
-      <p>The <code class="literal">numInstances</code> parameter specifies how many instances of your Analysis Engine
-        or CAS Consumer will be created. This allows your service to support multiple clients concurrently. When a
-        new request comes in, if all of the instances are busy, the new request will wait until an instance becomes
-        available.</p>
-      
-      <p>To deploy the Person Title annotator service, issue the following command:
-        
-        
-        </p><pre class="programlisting">C:/Program Files/apache/uima/bin&gt;deploytool 
-../examples/deploy/soap/Deploy_PersonTitleAnnotator.wsdd</pre>
-      
-      <p>Test if the deployment was successful by starting up a browser, pointing it to your Tomcat
-        installation's <span class="quote">&#8220;<span class="quote">axis</span>&#8221;</span> webpage (e.g., <code class="literal">http://localhost:8080/axis</code>)
-        and clicking on the List link. This should bring up a page which shows the deployed services, where you should
-        see the service you just deployed.</p>
-      
-      <p>The other components can be deployed by replacing
-        <code class="literal">Deploy_PersonTitleAnnotator.wsdd</code> with one of the other Deploy descriptors in the
-        deploy directory. The deploytool utility can also undeploy services when passed one of the Undeploy
-        descriptors.</p> <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
-      <p>The <code class="literal">deploytool</code> shell script assumes that the web services are to be installed at
-        <code class="literal">http://localhost:8080/axis</code>. If this is not the case, you will need to update the shell
-        script appropriately.</p> </div>
-      
-      <p>Once you have deployed your component as a web service, you may call it from a remote machine. See <a class="xref" href="#ugr.tug.application.how_to_call_a_uima_service" title="3.6.3.&nbsp;How to Call a UIMA Service">Section&nbsp;3.6.3, &#8220;Calling a UIMA Service&#8221;</a> for instructions.</p>
-      
-    </div>
-    
-    <div class="section" title="3.6.2.&nbsp;Deploying a UIMA Component as a Vinci Service"><div class="titlepage"><div><div><h3 class="title" id="ugr.tug.application.how_to_deploy_a_vinci_service">3.6.2.&nbsp;Deploying a UIMA Component as a Vinci Service</h3></div></div></div>
+    <div class="section" title="3.6.1.&nbsp;Deploying a UIMA Component as a Vinci Service"><div class="titlepage"><div><div><h3 class="title" id="ugr.tug.application.how_to_deploy_a_vinci_service">3.6.1.&nbsp;Deploying a UIMA Component as a Vinci Service</h3></div></div></div>
       
       
       
       <p>There are no software prerequisites for deploying a Vinci service. The necessary libraries are part of
         the UIMA SDK. However, before you can use Vinci services you need to deploy the Vinci Naming Service (VNS), as
-        described in section <a class="xref" href="#ugr.tug.application.vns" title="3.6.5.&nbsp;The Vinci Naming Services (VNS)">Section&nbsp;3.6.5, &#8220;The Vinci Naming Services (VNS)&#8221;</a>.</p>
+        described in section <a class="xref" href="#ugr.tug.application.vns" title="3.6.4.&nbsp;The Vinci Naming Services (VNS)">Section&nbsp;3.6.4, &#8220;The Vinci Naming Services (VNS)&#8221;</a>.</p>
       
       <p>To deploy a service, you have to insure any components you want to include can be found on the class path.
         One way to do this is to set the environment variable UIMA_CLASSPATH to the set of class paths you need for any
@@ -4824,11 +4692,11 @@ consumerParamSettings.setParameterValue(
         service to be started on one server; they will all register with the Vinci name service and be made available to
         client requests.</p>
       
-      <p>Once you have deployed your component as a web service, you may call it from a remote machine. See <a class="xref" href="#ugr.tug.application.how_to_call_a_uima_service" title="3.6.3.&nbsp;How to Call a UIMA Service">Section&nbsp;3.6.3, &#8220;Calling a UIMA Service&#8221;</a> for instructions.</p>
+      <p>Once you have deployed your component as a web service, you may call it from a remote machine. See <a class="xref" href="#ugr.tug.application.how_to_call_a_uima_service" title="3.6.2.&nbsp;How to Call a UIMA Service">Section&nbsp;3.6.2, &#8220;Calling a UIMA Service&#8221;</a> for instructions.</p>
       
     </div>
     
-    <div class="section" title="3.6.3.&nbsp;How to Call a UIMA Service"><div class="titlepage"><div><div><h3 class="title" id="ugr.tug.application.how_to_call_a_uima_service">3.6.3.&nbsp;How to Call a UIMA Service</h3></div></div></div>
+    <div class="section" title="3.6.2.&nbsp;How to Call a UIMA Service"><div class="titlepage"><div><div><h3 class="title" id="ugr.tug.application.how_to_call_a_uima_service">3.6.2.&nbsp;How to Call a UIMA Service</h3></div></div></div>
       
       
       
@@ -4840,52 +4708,10 @@ consumerParamSettings.setParameterValue(
       <p>To do this, you use a <span class="emphasis"><em>service client descriptor</em></span> in place of the usual Analysis
         Engine or CAS Consumer Descriptor. A service client descriptor is a simple XML file that indicates the
         location of the remote service and a few parameters. Example service client descriptors are provided in the
-        UIMA SDK under the directories <code class="literal">examples/descriptors/soapService</code> and
-        <code class="literal">examples/descriptors/vinciService</code>. The contents of these descriptors are
-        explained below.</p>
+        UIMA SDK under the directories <code class="literal">examples/descriptors/vinciService</code>. The 
+        contents of these descriptors are explained below.</p>
       
-      <p>Also, before you can call a SOAP service, you need to have the necessary Axis JAR files in your classpath.
-        If you use any of the scripts in the <code class="literal">bin</code> directory of the UIMA installation to launch your
-        application, such as documentAnalyzer, these JARs are added to the classpath, automatically, using the
-        <code class="literal">CATALINA_HOME</code> environment variable. The required files are the following (all part
-        of the Apache Axis download)
-        
-        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem">
-            <p>activation.jar</p>
-          </li><li class="listitem">
-            <p>axis.jar</p>
-          </li><li class="listitem">
-            <p>commons-discovery.jar</p>
-          </li><li class="listitem">
-            <p>commons-logging.jar</p>
-          </li><li class="listitem">
-            <p>jaxrpc.jar</p>
-          </li><li class="listitem">
-            <p>saaj.jar</p>
-          </li></ul></div>
-      
-      <div class="section" title="3.6.3.1.&nbsp;SOAP Service Client Descriptor"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.application.soap_service_client_descriptor">3.6.3.1.&nbsp;SOAP Service Client Descriptor</h4></div></div></div>
-        
-        
-        <p>The descriptor used to call the PersonTitleAnnotator SOAP service from the example above is:
-          
-          
-          </p><pre class="programlisting">&lt;uriSpecifier xmlns="http://uima.apache.org/resourceSpecifier"&gt;
-   &lt;resourceType&gt;AnalysisEngine&lt;/resourceType&gt;
-   &lt;uri&gt;http://localhost:8080/axis/services/urn:PersonTitleAnnotator&lt;/uri&gt;
-    &lt;protocol&gt;SOAP&lt;/protocol&gt;
-    &lt;timeout&gt;60000&lt;/timeout&gt;           
-&lt;/uriSpecifier&gt;</pre>
-        
-        <p>The &lt;resourceType&gt; element must contain either AnalysisEngine or CasConsumer. This
-          specifies what type of component you expect to be at the specified service address.</p>
-        
-        <p>The &lt;uri&gt; element describes which service to call. It specifies the host (localhost, in this
-          example) and the service name (urn:PersonTitleAnnotator), which must match the name specified in the
-          deployment descriptor used to deploy the service.</p>
-        
-      </div>
-      <div class="section" title="3.6.3.2.&nbsp;Vinci Service Client Descriptor"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.application.vinci_service_client_descriptor">3.6.3.2.&nbsp;Vinci Service Client Descriptor</h4></div></div></div>
+      <div class="section" title="3.6.2.1.&nbsp;Vinci Service Client Descriptor"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.application.vinci_service_client_descriptor">3.6.2.1.&nbsp;Vinci Service Client Descriptor</h4></div></div></div>
         
         
         <p>To call a Vinci service, a similar descriptor is used:
@@ -4915,7 +4741,7 @@ consumerParamSettings.setParameterValue(
         
       </div>
     </div>
-    <div class="section" title="3.6.4.&nbsp;Restrictions on remotely deployed services"><div class="titlepage"><div><div><h3 class="title" id="ugr.tug.application.restrictions_on_remotely_deployed_services">3.6.4.&nbsp;Restrictions on remotely deployed services</h3></div></div></div>
+    <div class="section" title="3.6.3.&nbsp;Restrictions on remotely deployed services"><div class="titlepage"><div><div><h3 class="title" id="ugr.tug.application.restrictions_on_remotely_deployed_services">3.6.3.&nbsp;Restrictions on remotely deployed services</h3></div></div></div>
       
       
       <p>Remotely deployed services are started on remote machines, using UIMA component descriptors on those
@@ -4935,7 +4761,7 @@ consumerParamSettings.setParameterValue(
       
     </div>
     
-    <div class="section" title="3.6.5.&nbsp;The Vinci Naming Services (VNS)"><div class="titlepage"><div><div><h3 class="title" id="ugr.tug.application.vns">3.6.5.&nbsp;The Vinci Naming Services (VNS)</h3></div></div></div>
+    <div class="section" title="3.6.4.&nbsp;The Vinci Naming Services (VNS)"><div class="titlepage"><div><div><h3 class="title" id="ugr.tug.application.vns">3.6.4.&nbsp;The Vinci Naming Services (VNS)</h3></div></div></div>
       
       
       <p>Vinci consists of components for building network-accessible services, clients for accessing those
@@ -4953,7 +4779,7 @@ consumerParamSettings.setParameterValue(
         provided that they are all running on different hosts. You should therefore use a unique service name if you
         don't want to conflict with other services listed in whatever VNS you have configured jVinci to use.</p>
       
-      <div class="section" title="3.6.5.1.&nbsp;Starting VNS"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.application.vns.starting">3.6.5.1.&nbsp;Starting VNS</h4></div></div></div>
+      <div class="section" title="3.6.4.1.&nbsp;Starting VNS"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.application.vns.starting">3.6.4.1.&nbsp;Starting VNS</h4></div></div></div>
         
         
         <p>To run the VNS use the <code class="literal">startVNS</code> script found in the
@@ -5011,12 +4837,12 @@ and .vns.services
           feature of the VNS that is not critical. The important information to note is <code class="literal">[10/6/04 3:44 PM |
           main] Serving on port : 9000</code> which states the actual port where VNS will listen for incoming
           requests. All Vinci services and all clients connecting to services must provide the VNS port on the
-          command line IF the port is not a default. Again the default port is 9000. Please see <a class="xref" href="#ugr.tug.application.launching_vinci_services" title="3.6.5.3.&nbsp;Launching Vinci Services">Section&nbsp;3.6.5.3, &#8220;Launching Vinci Services&#8221;</a> below for details about the command
+          command line IF the port is not a default. Again the default port is 9000. Please see <a class="xref" href="#ugr.tug.application.launching_vinci_services" title="3.6.4.3.&nbsp;Launching Vinci Services">Section&nbsp;3.6.4.3, &#8220;Launching Vinci Services&#8221;</a> below for details about the command
           line and parameters.</p> </div>
         
       </div>
       
-      <div class="section" title="3.6.5.2.&nbsp;VNS Files"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.application.vns_files">3.6.5.2.&nbsp;VNS Files</h4></div></div></div>
+      <div class="section" title="3.6.4.2.&nbsp;VNS Files"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.application.vns_files">3.6.4.2.&nbsp;VNS Files</h4></div></div></div>
         
         
         <p>The VNS maintains two external files:
@@ -5033,7 +4859,7 @@ and .vns.services
           shutdown.</p>
       </div>
       
-      <div class="section" title="3.6.5.3.&nbsp;Launching Vinci Services"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.application.launching_vinci_services">3.6.5.3.&nbsp;Launching Vinci Services</h4></div></div></div>
+      <div class="section" title="3.6.4.3.&nbsp;Launching Vinci Services"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.application.launching_vinci_services">3.6.4.3.&nbsp;Launching Vinci Services</h4></div></div></div>
         
         
         <p>When launching Vinci service, you must indicate which VNS the service will
@@ -5082,7 +4908,7 @@ Exception: Connection refused: connect</pre><p>
       </div>
     </div>
     
-    <div class="section" title="3.6.6.&nbsp;Configuring Timeout Settings"><div class="titlepage"><div><div><h3 class="title" id="ugr.tug.configuring_timeout_settings">3.6.6.&nbsp;Configuring Timeout Settings</h3></div></div></div>
+    <div class="section" title="3.6.5.&nbsp;Configuring Timeout Settings"><div class="titlepage"><div><div><h3 class="title" id="ugr.tug.configuring_timeout_settings">3.6.5.&nbsp;Configuring Timeout Settings</h3></div></div></div>
       
       
       <p>UIMA has several timeout specifications, summarized here.  The timeouts associated with remote 
@@ -5100,18 +4926,18 @@ Exception: Connection refused: connect</pre><p>
       <p>There are two types of timeout settings in UIMA, the <span class="emphasis"><em>client timeout</em></span> and the
         <span class="emphasis"><em>server socket timeout</em></span>. The client timeout is usually the most important, it
         specifies how long that client is willing to wait for the service to process each CAS. The client timeout can be
-        specified for both Vinci and SOAP. The server socket timeout (Vinci only) specifies how long the service
+        specified for Vinci. The server socket timeout (Vinci only) specifies how long the service
         holds the connection open between calls from the client. After this amount of time, the server will presume
         the client may have gone away - and it <span class="quote">&#8220;<span class="quote">cleans up</span>&#8221;</span>, releasing any resources it is holding. The
         next call to process on the service will cause the client to re-establish its connection with the service
         (some additional overhead).</p>
-      <div class="section" title="3.6.6.1.&nbsp;Setting the Client Timeout"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.setting_client_timeout">3.6.6.1.&nbsp;Setting the Client Timeout</h4></div></div></div>
+      <div class="section" title="3.6.5.1.&nbsp;Setting the Client Timeout"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.setting_client_timeout">3.6.5.1.&nbsp;Setting the Client Timeout</h4></div></div></div>
         
         <p>The way to set the client timeout is different depending on what deployment mode you use in your CPE (if
           any).</p>
         
         <p>If you are using the default <span class="quote">&#8220;<span class="quote">integrated</span>&#8221;</span> deployment mode in your CPE, or if you are not
-          using a CPE at all, then the client timeout is specified in your Service Client Descriptor (see <a class="xref" href="#ugr.tug.application.how_to_call_a_uima_service" title="3.6.3.&nbsp;How to Call a UIMA Service">Section&nbsp;3.6.3, &#8220;Calling a UIMA Service&#8221;</a>). For example:</p>
+          using a CPE at all, then the client timeout is specified in your Service Client Descriptor (see <a class="xref" href="#ugr.tug.application.how_to_call_a_uima_service" title="3.6.2.&nbsp;How to Call a UIMA Service">Section&nbsp;3.6.2, &#8220;Calling a UIMA Service&#8221;</a>). For example:</p>
         
         
         <pre class="programlisting">&lt;uriSpecifier xmlns="http://uima.apache.org/resourceSpecifier"&gt;
@@ -5165,10 +4991,10 @@ Exception: Connection refused: connect</pre><p>
           value.  See <a href="references.html#d5e1" class="olink">UIMA References</a> <a href="references.html#ugr.ref.xml.component_descriptor.service_client" class="olink">Section&nbsp;2.7, &#8220;Service Client Descriptors&#8221;</a></p>
       </div>
       
-      <div class="section" title="3.6.6.2.&nbsp;Setting the Server Socket Timeout"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.setting_server_socket_timeout">3.6.6.2.&nbsp;Setting the Server Socket Timeout</h4></div></div></div>
+      <div class="section" title="3.6.5.2.&nbsp;Setting the Server Socket Timeout"><div class="titlepage"><div><div><h4 class="title" id="ugr.tug.setting_server_socket_timeout">3.6.5.2.&nbsp;Setting the Server Socket Timeout</h4></div></div></div>
         
         <p>The Server Socket Timeout applies only to Vinci services, and is specified in the Vinci deployment
-          descriptor as discussed in section <a class="xref" href="#ugr.tug.application.how_to_deploy_a_vinci_service" title="3.6.2.&nbsp;Deploying a UIMA Component as a Vinci Service">Section&nbsp;3.6.2, &#8220;Deploying as a Vinci Service&#8221;</a>. For example:
+          descriptor as discussed in section <a class="xref" href="#ugr.tug.application.how_to_deploy_a_vinci_service" title="3.6.1.&nbsp;Deploying a UIMA Component as a Vinci Service">Section&nbsp;3.6.1, &#8220;Deploying as a Vinci Service&#8221;</a>. For example:
           
           </p><pre class="programlisting">&lt;deployment name="Vinci Person Title Annotator Service"&gt;
 
@@ -5248,7 +5074,7 @@ Exception: Connection refused: connect</pre><p>
       architectures).</p> <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
     <p>When using Vinci in <span class="quote">&#8220;<span class="quote">exclusive</span>&#8221;</span> mode (see service access under <a href="references.html#d5e1" class="olink">UIMA References</a> <a href="references.html#ugr.ref.xml.cpe_descriptor.descriptor.cas_processors.individual.deployment_parameters" class="olink">Section&nbsp;3.6.1.5, &#8220;&lt;deploymentParameters&gt; Element&#8221;</a>
       ), only one thread is used. To achieve multi-processing on a server in this case, use multiple instances of the
-      service, instead of multiple threads (see <a class="xref" href="#ugr.tug.application.how_to_deploy_a_vinci_service" title="3.6.2.&nbsp;Deploying a UIMA Component as a Vinci Service">Section&nbsp;3.6.2, &#8220;Deploying as a Vinci Service&#8221;</a>.</p> </div>
+      service, instead of multiple threads (see <a class="xref" href="#ugr.tug.application.how_to_deploy_a_vinci_service" title="3.6.1.&nbsp;Deploying a UIMA Component as a Vinci Service">Section&nbsp;3.6.1, &#8220;Deploying as a Vinci Service&#8221;</a>.</p> </div>
   </div>
   
   <div class="section" title="3.8.&nbsp;Monitoring AE Performance using JMX"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tug.application.jmx">3.8.&nbsp;Monitoring AE Performance using JMX</h2></div></div></div>
@@ -5383,7 +5209,7 @@ Exception: Connection refused: connect</pre><p>
   </div>
     
 <div class="footnotes"><br><hr width="100" align="left"><div class="footnote">
-        <p><sup>[<a id="ftn.d5e1793" href="#d5e1793" class="para">7</a>] </sup> Both the UIMA Collection Processing Manager framework and the remote deployment services framework
+        <p><sup>[<a id="ftn.d5e1790" href="#d5e1790" class="para">7</a>] </sup> Both the UIMA Collection Processing Manager framework and the remote deployment services framework
           have implementations which use CAS pools in this manner, and thereby relieve the annotator developer of
           the necessity to make their annotators thread-safe.</p> </div></div></div>
   <div class="chapter" title="Chapter&nbsp;4.&nbsp;Flow Controller Developer's Guide" id="ugr.tug.fc"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;4.&nbsp;Flow Controller Developer's Guide</h2></div></div></div>
@@ -7582,16 +7408,13 @@ if (sourceDocInfo.getLastSegment()) {
 	  different approaches to support this.</p> 
 	  
 	  <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
-    Base UIMA includes support for SOAP and VINCI
-    protocols (but these are both older, and do not support newer features of the CAS like
+    Base UIMA includes support for the VINCI
+    protocol (but this is older, and do not support newer features of the CAS like
     CAS Multipliers and multiple Views).   
     </p></div>
 	  
 	  
-	  <p>The SOAP remote service sends the entire
-	  CAS, along with the Client's type system.  At the remote, the Client's type 
-	  system is deserialized and used as the remote's type system.  For Vinci and UIMA-AS
-	  using XMI, the "reachable" Feature Structures (only) are sent.  A reachable 
+	  <p>For Vinci and UIMA-AS	using XMI, the "reachable" Feature Structures (only) are sent.  A reachable 
     Feature Structure is one that is indexed, or is reachable via a 
     reference from another reachable Feature Structure.  The receiving service's 
     type system is guaranteed to be a subset of the sender.  Special code in the 
