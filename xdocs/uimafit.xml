@@ -180,7 +180,7 @@ under the License.
 &lt;dependency>
   &lt;groupId>org.apache.uima&lt;/groupId>
   &lt;artifactId>uimafit-core&lt;/artifactId>
-  &lt;version>3.0.0&lt;/version>
+  &lt;version>3.3.0&lt;/version>
 &lt;/dependency>
   </pre>
   <subsubsection>

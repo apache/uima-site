@@ -81,14 +81,13 @@
   
   <downloads version="uimaj" title="Apache UIMA" withreleasedate="true">
     <download name="UIMA Java SDK 3.3.0" subdirectory="uimaj-3.3.0" releasedate="09-May-2022">
-      <releasenotes filename="uimaj-3.3.0/RELEASE_NOTES">      <f>md</f>                </releasenotes>
+      <releasenotes filename="uimaj-3.3.0/RELEASE_NOTES">      <f>md</f>                  </releasenotes>
       <binary       filename="uimaj-3.3.0-bin">                <f>zip</f>  <f>tar.gz</f>  </binary>
       <source       filename="uimaj-3.3.0-source-release">     <f>zip</f>                 </source>
     </download>
-    <download name="uimaFIT 3.2.0" subdirectory="uimafit-3.2.0" releasedate="06-May-2021">
-      <releasenotes filename="uimafit-3.2.0/README">           <f>txt</f>                </releasenotes>
-      <binary       filename="uimafit-3.2.0-bin">              <f>zip</f>  <f>tar.gz</f> </binary>
-      <source       filename="uimafit-3.2.0-source-release">   <f>zip</f>                </source>
+    <download name="uimaFIT 3.3.0" subdirectory="uimafit-3.3.0" releasedate="03-Jun-2022">
+      <releasenotes filename="uimafit-3.3.0/README">           <f>md</f>                 </releasenotes>
+      <source       filename="uimafit-3.3.0-source-release">   <f>zip</f>                </source>
     </download>
     <download name="UIMA Ruta 3.1.0" subdirectory="ruta-3.1.0" releasedate="15-May-2021">
       <releasenotes filename="ruta-3.1.0/RELEASE_NOTES">       <f>html</f>               </releasenotes>
