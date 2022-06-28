@@ -89,9 +89,9 @@
       <releasenotes filename="uimafit-3.3.0/README">           <f>md</f>                 </releasenotes>
       <source       filename="uimafit-3.3.0-source-release">   <f>zip</f>                </source>
     </download>
-    <download name="UIMA Ruta 3.1.0" subdirectory="ruta-3.1.0" releasedate="15-May-2021">
-      <releasenotes filename="ruta-3.1.0/RELEASE_NOTES">       <f>html</f>               </releasenotes>
-      <source       filename="ruta-3.1.0-source-release">      <f>zip</f>                </source>
+    <download name="UIMA Ruta 3.2.0" subdirectory="ruta-3.2.0" releasedate="28-Jun-2022">
+      <releasenotes filename="ruta-3.2.0/RELEASE_NOTES">       <f>md</f>                 </releasenotes>
+      <source       filename="ruta-3.2.0-source-release">      <f>zip</f>                </source>
     </download>
     <download name="UIMA DUCC 3.0.0" subdirectory="uima-ducc-3.0.0" releasedate="26-Apr-2019">
       <releasenotes filename="uima-ducc-3.0.0/RELEASE_NOTES">   <f>html</f>              </releasenotes>
