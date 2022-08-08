@@ -98,6 +98,10 @@
       <binary       filename="uima-ducc-3.0.0-bin">             <f>tar.gz</f>            </binary>
       <source       filename="uima-ducc-3.0.0-source-release">  <f>zip</f>               </source>
     </download>
+    <download name="UIMA Java CAS JSON I/O 0.4.0" subdirectory="uimaj-io-json-0.4.0" releasedate="06-Aug-2019">
+      <releasenotes filename="uimaj-io-json-0.4.0/RELEASE_NOTES">   <f>md</f>            </releasenotes>
+      <source       filename="uimaj-io-json-0.4.0-source-release">  <f>zip</f>           </source>
+    </download>
   </downloads>
 
   <downloads version="uimaj-v2" title="Apache UIMA Version (latest v2.x.x version)" withreleasedate="true">

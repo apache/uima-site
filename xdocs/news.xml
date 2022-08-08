@@ -30,6 +30,37 @@
     <section name="Apache UIMA News">
 
     <subsectionToc/>
+    
+    <subsection name="06 Aug 2022" date="06 Aug 2022" title="Apache UIMA Java JSON CAS I/O">
+      <p>
+        The JSON CAS I/O implementation for use with the UIMA Java SDK allows to serialize UIMA CAS 
+        data to JSON and to de-serialize the data back from JSON again, loading it into a CAS object. 
+        The aim of this library is to facilitate the data interoperability of UIMA data across 
+        different platform and programming languages. For example, the implementation contains 
+        functionality to deal with the different character offset counting strategies used by 
+        different languages such as Java and Python. A Python-based implementation of the UIMA 
+        JSON CAS format is available as part of the third-party 
+        <a target="_blank" rel="noopener"  href="https://github.com/dkpro/dkpro-cassis">DKPro Cassis</a> library.
+      </p>
+      <p>
+        This is the first public release based on the JSON serialization of the Apache UIMA CAS 
+        draft specification version 0.4.0. Please note that the implementation and the specification
+        are not yet final. For this reason, is not yet recommended to use this library in scenarios
+        where data needs to be stored or archived over an extended period of time as future versions
+        of the implementation and specification may introduce incompatibilities with the current
+        version. Good usage scenarios are for example short-term data exchange between different
+        UIMA implementations such as for example in network communication.
+      </p>
+      <p>
+        A full list of issues addressed in this release can be found on the 
+        <a target="_blank" rel="noopener" href="https://issues.apache.org/jira/issues/?jql=project%20%3D%20UIMA%20AND%20fixVersion%20%3D%200.4.0jsoncas">issue tracker.</a>
+      </p>
+      <p>
+        Please use the <a target="_blank" rel="noopener" href="https://uima.apache.org/mail-lists.html">
+        mailing lists</a> for feedback and the <a target="_blank" rel="noopener" href="https://github.com/apache/uima-uimaj-io-jsoncas/issues">issue 
+        tracker</a> to report bugs.
+      </p>
+    </subsection>
 
     <subsection name="28 Jun 2022" date="28 Jun 2022" title="Apache UIMA Ruta 3.2.0 released">
       <p>
