@@ -1,0 +1,29 @@
+## Description:
+Apache UIMA (*) software provides frameworks, tools and annotators, 
+facilitating the analysis of unstructured content such as text, audio and 
+video. (*) Unstructured Information Management Architecture.
+
+## Issues:
+There are no board-level issues at this time.
+
+## Membership Data:
+Apache UIMA was founded 2010-03-17 (12 years ago)
+There are currently 25 committers and 17 PMC members in this project.
+The Committer-to-PMC ratio is roughly 7:5.
+
+Community changes, past quarter:
+- No new PMC members. Last addition was Viorel Morari on 2019-11-19.
+- No new committers. Last addition was Viorel Morari on 2018-09-20.
+
+## Project Activity:
+- uima-ruta-3.2.0 was released on 2022-06-28
+- uima-uimaj-io-jsoncas-0.4.0 was released on 2022-08-06
+- focus is currently to improve compatibility of the UIMA Java SDK
+ and uimaFIT with multi-classloader such as OSGI
+
+## Community Health:
+The community remains moderately active. Little feedback from the user side,
+more activity on the developer side. There were attempts in bootstrapping 
+contributions to the non-Apache (but UIMA-based) ClearTK OSS project to update
+this project to UIMAv3 and thereby also contribute to unblocking the switch of 
+Apache cTAKES to UIMAv3 - a bit of progress has been made here...
