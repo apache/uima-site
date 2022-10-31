@@ -31,6 +31,33 @@
 
     <subsectionToc/>
     
+    <subsection name="31 Oct 2022" date="31 Oct 2022" title="Apache UIMA Java SDK 3.3.1 released">
+      <p>
+        The Apache UIMA team is happy to announce the release of the UIMA Java SDK 3.3.1.
+      </p>
+      
+      <p>Changes include:
+        <ul>
+          <li>Issue #255: File handle leak accessing performanceTuning.properties</li>
+          <li>Issue #240: Helper annotation created by SelectFS should not survive</li>
+          <li>Issue #238: Form 6 serializes non-reachable FSes but should not</li>
+          <li>Issue #235: Misleading error message when JCas type is not registered</li>
+          <li>[UIMA-6479] PearPackagingMavenPlugin has ancient JUnit dependency</li>
+          <li>[UIMA-6473] CasToComparableText is broken</li>
+          <li>Issue #222: Support comparing test files irrespective of line endings</li>
+          <li>[UIMA-6480] Add tests with empty arrays to CAS de/ser-suite</li>
+          <li>[UIMA-6454] Update dependencies</li>
+          <li>[UIMA-6463] Use toolchains to ensure compatibility with Java 1.8</li>
+          <li>[UIMA-6469] Cleaning up file handling code</li>
+        </ul>
+      </p>
+
+      <p>Please see the the complete list of issues fixed in the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.3.1/issuesFixed/github-report.html">
+         GitHub issue report</a> and the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.3.1/issuesFixed/jira-report.html">
+         Jira issue report</a> for more details of the changes.</p>
+    </subsection>
+    
+    
     <subsection name="06 Aug 2022" date="06 Aug 2022" title="Apache UIMA Java JSON CAS I/O">
       <p>
         The JSON CAS I/O implementation for use with the UIMA Java SDK allows to serialize UIMA CAS 
