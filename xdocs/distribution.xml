@@ -81,29 +81,6 @@ mvn package -Papache-release</pre>
   </p>       
 </section>
 
-<section name="Building the Apache UIMA-AS distribution">
-    <p>
-    The build process for UIMA-AS is similar:
-    <pre>mkdir /builduima
-cd /builduima
-svn export https://svn.apache.org/repos/asf/uima/uima-as/trunk uima-as
-</pre>
-  This checks out the trunk into the directory /builduima/uima-as.  
-  </p>
-  <p>The uima-as build is done on top of an existing release of the UIMA Java SDK.  The pom.xml file
-  in the uima-as-parent project has a property: 
-  <code>&lt;uimajDependencyVersion>2.3.1&lt;/uimajDependencyVersion></code>, which is used
-  to specify the corresponding base uima level, which must exist in some Maven repository, or in the user's
-  local .m2 repository.  During the build of the binary assembly for uima-as, the base uima Java SDK binary
-  assembly is unzipped and the uima-as components are added to it, and then the whole thing is re-packaged up.</p>
-  
-  <p>Build the source and binary distributions by doing:
-    <pre>cd uima-as/uima-as
-mvn package -Papache-release</pre>
-  This Maven command will also sign the release.
-  </p>
-  
-</section>
 <section name="Building Apache UIMA Addons distributions">
     <p>
     The build process for Addons is similar:

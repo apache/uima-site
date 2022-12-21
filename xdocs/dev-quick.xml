@@ -75,19 +75,6 @@ Then, look inside the unpacked result for a lib directory - it will have the Jar
 </p>
 </section>
 
-<section name="Checkout and Build UIMA-AS">
-<p>To build UIMA-AS
-(including the docbooks and the binary assembly) and install these artifacts 
-to your local maven repository, do the following:
-<ul>
-<li><code>cd \myWorkingCopy</code></li>
-<li><code>svn checkout https://svn.apache.org/repos/asf/uima/uima-as/trunk uima-as</code></li>
-<li><code>cd uima-as</code></li>
-<li><code>mvn install</code></li>
-</ul>
-</p>
-</section>
-
 <section name="Checkout and Build an Addons (Sandbox) project">
 <p>
 <ul>

@@ -59,22 +59,18 @@ under the License.
 <subsection name="Building UIMA - using the command line" id="building.command.line">
   <ol>
     <li><p><b>SVN Checkout:</b>
-      If the project is a module of a multi-module project (e.g., uimaj or uima-as), 
+      If the project is a module of a multi-module project (e.g., uimaj), 
       check out the SVN directory containing all of the modules for the multi-module project.
       </p>
       <p>For example, (Windows - UIMA-SDK):<br/>
         <code>  svn checkout https://svn.apache.org/repos/asf/uima/uimaj/trunk c:\myWorkingDirectoryForUimaj</code>
-      </p>
-      <p>For UIMA-AS:<br/>
-        <code>  svn checkout https://svn.apache.org/repos/asf/uima/uima-as/trunk c:\myWorkingDirectoryForUima-as</code>
       </p>
       <p>If you have <a class="external" rel="nofollow noopener" target="_blank" 
     href="https://tortoisesvn.tigris.org/">tortoiseSVN</a> windows shell extensions installed, 
     you can use the <code>repo-browser</code> right-click menu option to do this.</p>
     </li>
     <li><p>
-      <code>cd to c:\myWorkingDirectoryForUimaj\</code> or <br/>
-      <code>cd to c:\myWorkingDirectoryForUima-as\</code>.</p>
+      <code>cd to c:\myWorkingDirectoryForUimaj\</code>.</p>
     </li>
     <li><p><code>mvn install</code></p>
       <p>This will build the project and install it to your local Maven repository. 
@@ -85,9 +81,6 @@ under the License.
       <code>mvn install -Papache-release</code>
       </p>
     </li>
-    <p class="note">
-      Note: UIMA-AS depends on the UIMA SDK (called uimaj above), so before building UIMA-AS, please checkout and build uimaj first. 
-    </p>  
   </ol>
   
   <p>

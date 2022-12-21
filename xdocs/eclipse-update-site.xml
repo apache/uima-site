@@ -121,7 +121,6 @@ We currently have sub-sites for
 <ul>
 <li>uimaj - base Java UIMA SDK tools and runtime
 </li>
-<li>uima-as - addons for the base tooling to add the deployment descriptor editor, and uima-as runtime</li>
 <li>ruta - the features for ruta</li>
 </ul>
 </p>
@@ -136,11 +135,6 @@ We currently have sub-sites for
                                        /content.jar
                                        /features/.... all features
                                        /plugins/.... all plugins
-                                 /uima-as
-                                       /artifacts.jar
-                                       /content.jar
-                                       /features/.... all features
-                                       /plugins/.... all plugins                                      
                                  /ruta-2.0.1
                                        /artifacts.jar
                                        /content.jar

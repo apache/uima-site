@@ -44,11 +44,9 @@ A previous version of this page, with the methods we used while in the incubator
     <p>
     The UIMA project mainly releases:
     <ul><li>The UIMA SDK</li>
-      <li>UIMA-AS add-on</li>
       <li>UIMA-CPP</li>
       <li>uimaFIT</li>
       <li>RUTA</li>
-      <li>DUCC</li>
       <li>Individual Annotators, tooling, and other useful components (like the Simple Server)</li></ul>
     In addition, it releases some Maven build tooling components that 
     need to be in the Maven repositories to support our Maven processes.

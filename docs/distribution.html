@@ -126,19 +126,6 @@
                 </div>
             </div>
                       <br/>
-            <div class="navBarItem">      <div class="navPartHeading">Scaleout Frameworks</div>
-                </div>
-                <div class="navBar">
-                  <div class="navBarItem">      <a href="./doc-uimaas-what.html">UIMA-AS</a>
-                </div>
-                          <div class="navBarItem">      <a href="./doc-uimaducc-whatitam.html">UIMA-DUCC</a>
-                </div>
-                          <div class="navBarItem">      <a href="./doc-uimaducc-demo.html">..Demo Page</a>
-                </div>
-                          <div class="navBarItem">      <a href="http://uima-ducc-demo.apache.org:42133" target="_blank" rel="noopener">..Demo Live <img src="images/offsitelink.png"/></a>
-                </div>
-            </div>
-                      <br/>
             <div class="navBarItem">      <div class="navPartHeading">Components & Tools</div>
                 </div>
                 <div class="navBar">
@@ -280,36 +267,6 @@ mvn package -Papache-release</pre>
     individual Jar files are in the <code>target</code> directories of the individual projects they
     belong to.  The source assembly is in the <code>uimaj/target</code> directory and the binary assembly is
     in the <code>uimaj-distr/target</code> directory.
-  </p>
-                            </blockquote>
-        </p>
-      </td></tr>
-    </table>
-                                        <div class="sectionTable">
-      <table class="sectionTable">
-        <tr><td>
-        <a name="Building the Apache UIMA-AS distribution"><h1><img src="images/UIMA_4sq50tightCropSolid.png"/>&nbsp;Building the Apache UIMA-AS distribution</h1></a>
-      </td></tr>
-      <tr><td>
-        <blockquote class="sectionBody">
-                                    <p>
-    The build process for UIMA-AS is similar:
-    <pre>mkdir /builduima
-cd /builduima
-svn export https://svn.apache.org/repos/asf/uima/uima-as/trunk uima-as
-</pre>
-  This checks out the trunk into the directory /builduima/uima-as.  
-  </p>
-                                                <p>The uima-as build is done on top of an existing release of the UIMA Java SDK.  The pom.xml file
-  in the uima-as-parent project has a property: 
-  <code>&lt;uimajDependencyVersion&gt;2.3.1&lt;/uimajDependencyVersion&gt;</code>, which is used
-  to specify the corresponding base uima level, which must exist in some Maven repository, or in the user's
-  local .m2 repository.  During the build of the binary assembly for uima-as, the base uima Java SDK binary
-  assembly is unzipped and the uima-as components are added to it, and then the whole thing is re-packaged up.</p>
-                                                <p>Build the source and binary distributions by doing:
-    <pre>cd uima-as/uima-as
-mvn package -Papache-release</pre>
-  This Maven command will also sign the release.
   </p>
                             </blockquote>
         </p>

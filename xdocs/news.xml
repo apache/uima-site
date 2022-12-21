@@ -30,6 +30,19 @@
     <section name="Apache UIMA News">
 
     <subsectionToc/>
+
+    <subsection name="21 Dec 2022" date="21 Dec 2022" title="Retirement of several Apache UIMA sub-projects">
+      <p>
+        The Apache UIMA team announces the retirement of 
+      </p>
+      <ul>
+        <li>Apache UIMA Java SDK v2.x - please migrate to v3.x</li>
+        <li>Apache uimaFIT v2.x - please migrate to v3.x</li>
+        <li>Apache UIMA Ruta v2.x - please migrate to v3.x</li>
+        <li>Apache UIMA DUCC - there is currently no replacement</li>
+        <li>Apache UIMA AS v2.x - there is currently no replacement</li>
+      </ul>
+    </subsection>
     
     <subsection name="31 Oct 2022" date="31 Oct 2022" title="Apache UIMA Java SDK 3.3.1 released">
       <p>

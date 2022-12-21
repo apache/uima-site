@@ -29,13 +29,6 @@
         <item name="Project Guidelines"     href="/project-guidelines.html"/>o
       </item>
       
-      <item name="Scaleout Frameworks">
-        <item name="UIMA-AS"        href="/doc-uimaas-what.html"/>
-        <item name="UIMA-DUCC"      href="/doc-uimaducc-whatitam.html"/>
-        <item name="..Demo Page"   href="/doc-uimaducc-demo.html"/>
-        <item name="..Demo Live"   href="http://uima-ducc-demo.apache.org:42133" target="_blank"/>
-      </item>
-  
       <item name="Components &amp; Tools">
         <item name="Annotators"               href="/sandbox.html#uima-addons-annotators"/>
         <item name="Tools &amp; Servers"      href="/toolsServers.html"/>
@@ -93,83 +86,9 @@
       <releasenotes filename="ruta-3.2.0/RELEASE_NOTES">       <f>md</f>                 </releasenotes>
       <source       filename="ruta-3.2.0-source-release">      <f>zip</f>                </source>
     </download>
-    <download name="UIMA DUCC 3.0.0" subdirectory="uima-ducc-3.0.0" releasedate="26-Apr-2019">
-      <releasenotes filename="uima-ducc-3.0.0/RELEASE_NOTES">   <f>html</f>              </releasenotes>
-      <binary       filename="uima-ducc-3.0.0-bin">             <f>tar.gz</f>            </binary>
-      <source       filename="uima-ducc-3.0.0-source-release">  <f>zip</f>               </source>
-    </download>
     <download name="UIMA Java CAS JSON I/O 0.4.0" subdirectory="uimaj-io-json-0.4.0" releasedate="06-Aug-2022">
       <releasenotes filename="uimaj-io-json-0.4.0/RELEASE_NOTES">   <f>md</f>            </releasenotes>
       <source       filename="uimaj-io-json-0.4.0-source-release">  <f>zip</f>           </source>
-    </download>
-  </downloads>
-
-  <downloads version="uimaj-v2" title="Apache UIMA Version (latest v2.x.x version)" withreleasedate="true">
-    <download name="UIMA Java SDK 2.11.0" subdirectory="uimaj-2.11.0" releasedate="02-Jul-2021">
-      <releasenotes filename="uimaj-2.11.0/RELEASE_NOTES">           <f>html</f>                </releasenotes>
-      <binary       filename="uimaj-2.11.0-bin">                     <f>zip</f>  <f>tar.gz</f>  </binary>   
-      <source       filename="uimaj-2.11.0-source-release">          <f>zip</f>  </source>
-    </download>
-    <download name="uimaFIT 2.5.0" subdirectory="uimafit-2.5.0" releasedate="26-Apr-2020">
-      <releasenotes filename="uimafit-2.5.0/README">           <f>txt</f>  </releasenotes>
-      <binary       filename="uimafit-2.5.0-bin">              <f>zip</f>  <f>tar.gz</f>  </binary>   
-      <source       filename="uimafit-2.5.0-source-release">   <f>zip</f>  </source>
-    </download>
-    <download name="UIMA Ruta 2.8.1" subdirectory="ruta-2.8.1" releasedate="11-Apr-2020">
-      <releasenotes filename="ruta-2.8.1/RELEASE_NOTES">           <f>html</f>  </releasenotes>
-      <source       filename="ruta-2.8.1-source-release">          <f>zip</f>  </source>
-    </download>
-  </downloads>
-
-  <downloads version="2.10.3" title="Apache UIMA + UIMA-AS Version 2.10.3" withreleasedate="true">
-    <download name="UIMA Java SDK 2.10.3" subdirectory="uimaj-2.10.3" releasedate="29-Nov-2018" archived="true">
-      <releasenotes filename="uimaj-2.10.3/RELEASE_NOTES">    <f>html</f>              </releasenotes>
-      <binary       filename="uimaj-2.10.3-bin">              <f>zip</f> <f>tar.gz</f> </binary>   
-      <source       filename="uimaj-2.10.3-source-release">   <f>zip</f>               </source>
-    </download>
-    <download name="UIMA AS Asynchronous Scaleout 2.10.3" subdirectory="uima-as-2.10.3" releasedate="17-Apr-2018" archived="true">
-      <releasenotes filename="uima-as-2.10.3/RELEASE_NOTES">  <f>html</f>              </releasenotes> 
-      <binary       filename="uima-as-2.10.3-bin">            <f>zip</f> <f>tar.gz</f> </binary>
-      <source       filename="uima-as-2.10.3-source-release"> <f>zip</f>               </source>
-    </download>
-  </downloads>
-  
-  <downloads version="2.4.0" title="Apache UIMA Version 2.4.0" withreleasedate="true">
-    <download name="UIMA Java SDK 2.4.0" subdirectory="uimaj-2.4.0" releasedate="7-Dec-2011" archived="true">
-      <releasenotes filename="uimaj-2.4.0/RELEASE_NOTES">     <f>html</f>              </releasenotes>
-      <binary       filename="uimaj-2.4.0-bin">               <f>zip</f> <f>tar.gz</f> </binary>
-      <source       filename="uimaj-2.4.0-source-release">    <f>zip</f>               </source>
-    </download>
-    <download name="UIMA AS Asynchronous Scaleout 2.4.0" subdirectory="uima-as-2.4.0" releasedate="15-Nov-2012" archived="true">
-      <releasenotes filename="uima-as-2.4.0/RELEASE_NOTES">   <f>html</f>              </releasenotes> 
-      <binary       filename="uima-as-2.4.0-bin">             <f>zip</f> <f>tar.gz</f> </binary>
-      <source       filename="uima-as-2.4.0-source-release">  <f>zip</f>               </source>
-    </download>
-    <download name="UIMA C++ SDK 2.4.0" subdirectory="uimacpp-2.4.0" releasedate="15-Nov-2012" archived="true">
-      <releasenotes filename="uimacpp-2.4.0/RELEASE_NOTES">   <f>html</f>              </releasenotes> 
-      <binary       filename="uimacpp-2.4.0-bin">             <f>zip</f> <f>tgz</f>    </binary>
-      <source       filename="uimacpp-2.4.0-src">             <f>zip</f>               </source>
-    </download>
-    <download name="UIMA C++ SDK 2.4.0 (64bit)" subdirectory="uimacpp-2.4.0" releasedate="15-Nov-2012" archived="true">
-      <releasenotes filename="uimacpp-2.4.0/RELEASE_NOTES">   <f>html</f>              </releasenotes>
-      <binary       filename="uimacpp-2.4.0-bin64">           <f>tgz</f>               </binary>
-      <source       filename="uimacpp-2.4.0-src">             <f>zip</f>               </source>
-    </download>
-  </downloads>
-  
-  <downloads version="2.10.2" title="Apache UIMA Addon ConceptMapper 2.10.2" withreleasedate="true">
-    <download name="Addon ConceptMapper 2.10.2" subdirectory="uima-addons/ConceptMapper-2.10.2" releasedate="27-Apr-2018" archived="true">
-      <releasenotes filename="addons/ConceptMapper-2.10.2/RELEASE_NOTES"> <f>html</f>              </releasenotes>
-      <binary       filename="ConceptMapper-2.10.2-bin">                  <f>zip</f> <f>tar.gz</f> </binary>
-      <source       filename="ConceptMapper-2.10.2-source-release">       <f>zip</f>               </source> 
-    </download>
-  </downloads>
-  
-  <downloads version="2.3.1" title="Apache UIMA Addons Version 2.3.1" withreleasedate="true">
-    <download name="UIMA Annotator Addons &amp; Simple Server &amp; PEAR packaging tools 2.3.1" subdirectory="" releasedate="29-Aug-2011" archived="true">
-      <releasenotes filename="uima-addons-2.3.1/RELEASE_NOTES">  <f>html</f>              </releasenotes>
-      <binary       filename="uima-addons-2.3.1-bin">            <f>zip</f> <f>tar.gz</f> </binary>
-      <source       filename="uima-addons-2.3.1-source-release"> <f>zip</f>               </source>
     </download>
   </downloads>
 </project>

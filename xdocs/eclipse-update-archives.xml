@@ -34,10 +34,6 @@ in the Apache archive.  These are organized by subsites:
 <ul>
   <li>uimaj - for the core UIMA Java project</li>
   <li>others - to be added when the archive is created.</li>
-  <!--  
-  <li>ruta - for the Ruta project</li>
-  <li>uima-as - for the UIMA Asynchronous Scaleout project</li>
-   -->
 </ul>
 </p>
  

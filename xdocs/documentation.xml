@@ -37,7 +37,7 @@
     
     <table class="downloads">
       <tr>
-        <th colspan="3">Apache UIMA Java SDK v3</th>
+        <th colspan="3">Apache UIMA Java SDK</th>
       </tr>
       <tr>
         <td>Overview and Setup</td>
@@ -60,7 +60,7 @@
         <td>[<a href="d/uimaj-current/references.pdf">PDF</a>]</td>
       </tr>
       <tr>
-        <td><b><i>(New) </i></b>Version 3 User's Guide</td>
+        <td>User's Guide</td>
         <td>[<a href="d/uimaj-current/version_3_users_guide.html">HTML</a>]</td>
         <td>[<a href="d/uimaj-current/version_3_users_guide.pdf">PDF</a>]</td>
       </tr>
@@ -70,7 +70,7 @@
         <td></td>
       </tr>
       <tr>
-        <th colspan="3">Apache UIMA uimaFIT v3</th>
+        <th colspan="3">Apache UIMA uimaFIT</th>
       </tr>
       <tr>
         <td>Guide and Reference Manual</td>
@@ -83,140 +83,23 @@
         <td></td>
       </tr>
       <tr>
-        <th colspan="3">Apache UIMA Ruta v3</th>
+        <th colspan="3">Apache UIMA Ruta</th>
       </tr>
       <tr>
         <td>Guide and Reference Manual</td>
         <td>[<a href="d/ruta-current/tools.ruta.book.html">HTML</a>]</td>
         <td>[<a href="d/ruta-current/tools.ruta.book.pdf">PDF</a>]</td>
       </tr>
-      <tr>
-        <th colspan="3">Apache UIMA Distributed UIMA Cluster Computing v3</th>
-      </tr>
-      <tr>
-        <td>Installation</td>
-        <td>[<a href="d/ducc-current/installation.html">HTML</a>]</td>
-        <td>[<a href="d/ducc-current/installation.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>Manual</td>
-        <td>[<a href="d/ducc-current/duccbook.html">HTML</a>]</td>
-        <td>[<a href="d/ducc-current/duccbook.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>API Documentation</td>
-        <td>[<a href="d/ducc-current/api/index.html">HTML</a>]</td>
-        <td></td>
-      </tr>
     </table>
   </section>
   
   <section name="Older Releases">
-  
     <p>
       Archived versions may also be found at 
       <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/">
                https://svn.apache.org/repos/asf/uima/site/archive/docs/d/</a>.
     </p>  
   
-    <table class="downloads">
-      <tr>
-        <th colspan="3">Apache UIMA Java SDK v2</th>
-      </tr>
-      <tr>
-        <td>Overview and Setup</td>
-        <td>[<a href="d/uimaj-v2-current/overview_and_setup.html">HTML</a>]</td>
-        <td>[<a href="d/uimaj-v2-current/overview_and_setup.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>Tutorials and Users&apos; Guides</td>
-        <td>[<a href="d/uimaj-v2-current/tutorials_and_users_guides.html">HTML</a>]</td>
-        <td>[<a href="d/uimaj-v2-current/tutorials_and_users_guides.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>Tools</td>
-        <td>[<a href="d/uimaj-v2-current/tools.html">HTML</a>]</td>
-        <td>[<a href="d/uimaj-v2-current/tools.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>References</td>
-        <td>[<a href="d/uimaj-v2-current/references.html">HTML</a>]</td>
-        <td>[<a href="d/uimaj-v2-current/references.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>API Documentation</td>
-        <td>[<a href="d/uimaj-v2-current/apidocs/index.html">HTML</a>]</td>
-        <td></td>
-      </tr>
-      <tr>
-        <th colspan="3">Apache UIMA uimaFIT v2</th>
-      </tr>
-      <tr>
-        <td>Guide and Reference Manual</td>
-        <td>[<a href="d/uimafit-v2-current/tools.uimafit.book.html">HTML</a>]</td>
-        <td>[<a href="d/uimafit-v2-current/tools.uimafit.book.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>API Documentation</td>
-        <td>[<a href="d/uimafit-v2-current/api/index.html">HTML</a>]</td>
-        <td></td>
-      </tr>
-      <tr>
-        <th colspan="3">Apache UIMA Ruta v2</th>
-      </tr>
-      <tr>
-        <td>Guide and Reference Manual</td>
-        <td>[<a href="d/ruta-v2-current/tools.ruta.book.html">HTML</a>]</td>
-        <td>[<a href="d/ruta-v2-current/tools.ruta.book.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <th colspan="3">Apache UIMA Distributed UIMA Cluster Computing v2</th>
-      </tr>
-      <tr>
-        <td>Installation</td>
-        <td>[<a href="d/ducc-v2-current/installation.html">HTML</a>]</td>
-        <td>[<a href="d/ducc-v2-current/installation.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>Manual</td>
-        <td>[<a href="d/ducc-v2-current/duccbook.html">HTML</a>]</td>
-        <td>[<a href="d/ducc-v2-current/duccbook.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>API Documentation</td>
-        <td>[<a href="d/ducc-v2-current/api/index.html">HTML</a>]</td>
-        <td></td>
-      </tr>
-      <tr>
-        <th colspan="3">Apache UIMA Asynchronous Scaleout v2</th>
-      </tr>
-      <tr>
-        <td>Overview and Setup</td>
-        <td>[<a href="d/uima-as-v2-current/overview_and_setup.html">HTML</a>]</td>
-        <td>[<a href="d/uima-as-v2-current/overview_and_setup.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>Reference Manual</td>
-        <td>[<a href="d/uima-as-v2-current/uima_async_scaleout.html">HTML</a>]</td>
-        <td>[<a href="d/uima-as-v2-current/uima_async_scaleout.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>Tutorials and User's Guides</td>
-        <td>[<a href="d/uima-as-v2-current/tutorials_and_users_guides.html">HTML</a>]</td>
-        <td>[<a href="d/uima-as-v2-current/tutorials_and_users_guides.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>Tools</td>
-        <td>[<a href="d/uima-as-v2-current/tools.html">HTML</a>]</td>
-        <td>[<a href="d/uima-as-v2-current/tools.pdf">PDF</a>]</td>
-      </tr>
-      <tr>
-        <td>References</td>
-        <td>[<a href="d/uima-as-v2-current/references.html">HTML</a>]</td>
-        <td>[<a href="d/uima-as-v2-current/references.pdf">PDF</a>]</td>
-      </tr>
-    </table>
-            
   <subsection name="Annotators, Web Servers, Tooling, and more" id="sandbox">
     <p>Many of the additional components found in the Addons and Sandbox have individual documentation files, which 
       you can access from the <a href="sandbox.html">Addons and Sandbox</a> page</p>
@@ -251,26 +134,12 @@
 		For UIMA users who want to know what a UIMA PEAR package is, how to generate them 
 		and how to use them within UIMA applications.</li>
 	<br></br>
-	<li><a href="doc-uimaas-what.html">Getting Started: UIMA Asynchronous Scaleout</a><br></br>
-		For UIMA users who need to scale out their UIMA analytics to achieve higher throughput, get
-                faster response time, and to develop applications utilizing UIMA Flow Controllers,
-                CAS Multipliers and advanced error handling capability.</li>
-	<br></br>
 	<li><a href="https://github.com/apache/uima-uimacpp">Getting Started: UIMA C++ Framework</a><br></br>
 		For UIMA users who want to create UIMA compliant Analysis Engines from programs written in C++,
                 Perl, Python or Tcl.</li>
-
-	<br></br>
-	<li><a href="doc-uimaducc-whatitam.html">Getting Started: UIMA DUCC</a><br></br>
-		For UIMA users who need cluster management services to automate the scale-out of 
-		UIMA pipelines over computing clusters .</li>
 	</ul>
-	
-	
    </p>
   </subsection>
   </section>
  </body>
-
 </document>
-
