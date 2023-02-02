@@ -1,10 +1,10 @@
 <html><head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-   <title>UIMA Overview &amp; SDK Setup</title><link rel="stylesheet" type="text/css" href="css/stylesheet-html.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="UIMA Overview &amp; SDK Setup" id="d5e1"><div xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h1 class="title">UIMA Overview &amp; SDK Setup</h1></div><div><div class="authorgroup">
+   <title>UIMA Overview &amp; SDK Setup</title><link rel="stylesheet" type="text/css" href="css/stylesheet-html.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" id="d5e1"><div xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h1 class="title">UIMA Overview &amp; SDK Setup</h1></div><div><div class="authorgroup">
       <h3 class="corpauthor">Written and maintained by the Apache UIMA&#8482; Development Community</h3>
-    </div></div><div><p class="releaseinfo">Version 3.3.1</p></div><div><p class="copyright">Copyright &copy; 2006, 2022 The Apache Software Foundation</p></div><div><p class="copyright">Copyright &copy; 2004, 2006 International Business Machines Corporation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
+    </div></div><div><p class="releaseinfo">Version 3.4.0</p></div><div><p class="copyright">Copyright &copy; 2006, 2023 The Apache Software Foundation</p></div><div><p class="copyright">Copyright &copy; 2004, 2006 International Business Machines Corporation</p></div><div><div class="legalnotice" id="d5e8">
       <p> </p>
-      <p title="License and Disclaimer">
+      <p>
         <b>License and Disclaimer.&nbsp;</b>
 
         The ASF licenses this documentation
@@ -14,7 +14,7 @@
          
          </p><div class="blockquote"><blockquote class="blockquote">
            <a class="ulink" href="http://www.apache.org/licenses/LICENSE-2.0" target="_top">http://www.apache.org/licenses/LICENSE-2.0</a>
-         </blockquote></div><p title="License and Disclaimer">
+         </blockquote></div><p>
          
            Unless required by applicable law or agreed to in writing,
            this documentation and its contents are distributed under the License 
@@ -27,7 +27,7 @@
       </p>
       <p> </p>
       <p> </p>
-      <p title="Trademarks">
+      <p>
         <b>Trademarks.&nbsp;</b>
         All terms mentioned in the text that are known to be trademarks or 
         service marks have been appropriately capitalized.  Use of such terms
@@ -35,13 +35,13 @@
         the trademark or service mark.
         
       </p>
-    </div></div><div><p class="pubdate">October, 2022</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#ugr.project_overview">1. Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.project_overview_doc_overview">1.1. Apache UIMA Project Documentation Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.project_overview_overview">1.1.1. Overviews</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_setup">1.1.2. Eclipse Tooling Installation and Setup</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_tutorials_dev_guides">1.1.3. Tutorials and Developer's Guides</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_tool_guides">1.1.4. Tools Users' Guides</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_reference">1.1.5. References</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_v3">1.1.6. Version 3 User's guide</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.project_overview_doc_use">1.2. How to use the Documentation</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_changes_from_previous">1.3. Changes from UIMA Version 2</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_migrating_from_v2_to_v3">1.4. Migrating existing UIMA pipelines from Version 2 to Version 3</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_summary">1.5. Apache UIMA Summary</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.summary.general">1.5.1. General</a></span></dt><dt><span class="section"><a href="#ugr.ovv.summary.programming_language_support">1.5.2. Programming Language Support</a></span></dt><dt><span class="section"><a href="#ugr.ovv.general.summary.multi_modal_support">1.5.3. Multi-Modal Support</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.project_overview_summary_sdk_capabilities">1.6. Summary of Apache UIMA Capabilities</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.ovv.conceptual">2. UIMA Conceptual Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.conceptual.uima_introduction">2.1. UIMA Introduction</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.architecture_framework_sdk">2.2. The Architecture, the Framework and the SDK</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.analysis_basics">2.3. Analysis Basics</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.conceptual.aes_annotators_and_analysis_results">2.3.1. Analysis Engines, Annotators &amp; Results</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.representing_results_in_cas">2.3.2. Representing Analysis Results in the CAS</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.interacting_with_cas_and_external_resources">2.3.3. Using CASes and External Resources</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.component_descriptors">2.3.4. Component Descriptors</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.ovv.conceptual.aggregate_analysis_engines">2.4. Aggregate Analysis Engines</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.applicaiton_building_and_collection_processing">2.5. Application Building and Collection Processing</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.conceptual.using_framework_from_an_application">2.5.1. Using the framework from an Application</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.graduating_to_collection_processing">2.5.2. Graduating to Collection Processing</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.ovv.conceptual.exploiting_analysis_results">2.6. Exploiting Analysis Results</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.conceptual.semantic_search">2.6.1. Semantic Search</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.databases">2.6.2. Databases</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.ovv.conceptual.multimodal_processing">2.7. Multimodal Processing in UIMA</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.next_steps">2.8. Next Steps</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.ovv.eclipse_setup">3. Eclipse IDE setup for UIMA</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.installation">3.1. Installation</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.install_eclipse">3.1.1. Install Eclipse</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.install_uima_eclipse_plugins">3.1.2. Installing the UIMA Eclipse Plugins</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.install_uima_sdk">3.1.3. Install the UIMA SDK</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.install_uima_eclipse_plugins_manually">3.1.4. Installing the UIMA Eclipse Plugins, manually</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.start_eclipse">3.1.5. Start Eclipse</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.example_code">3.2. Setting up Eclipse to view Example Code</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.adding_source">3.3. Adding the UIMA source code to the jar files</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.linking_uima_javadocs">3.4. Attaching UIMA Javadocs</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.running_external_tools_from_eclipse">3.5. Running external tools from Eclipse</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.faqs">4. UIMA FAQ's</a></span></dt><dt><span class="chapter"><a href="#ugr.issues">5. Known Issues</a></span></dt><dt><span class="glossary"><a href="#ugr.glossary">Glossary</a></span></dt></dl></div>
+    </div></div><div><p class="pubdate">January, 2023</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="chapter"><a href="#ugr.project_overview">1. Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.project_overview_doc_overview">1.1. Apache UIMA Project Documentation Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.project_overview_overview">1.1.1. Overviews</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_setup">1.1.2. Eclipse Tooling Installation and Setup</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_tutorials_dev_guides">1.1.3. Tutorials and Developer's Guides</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_tool_guides">1.1.4. Tools Users' Guides</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_reference">1.1.5. References</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_v3">1.1.6. Version 3 User's guide</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.project_overview_doc_use">1.2. How to use the Documentation</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_changes_from_previous">1.3. Changes from UIMA Version 2</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_migrating_from_v2_to_v3">1.4. Migrating existing UIMA pipelines from Version 2 to Version 3</a></span></dt><dt><span class="section"><a href="#ugr.project_overview_summary">1.5. Apache UIMA Summary</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.summary.general">1.5.1. General</a></span></dt><dt><span class="section"><a href="#ugr.ovv.summary.programming_language_support">1.5.2. Programming Language Support</a></span></dt><dt><span class="section"><a href="#ugr.ovv.general.summary.multi_modal_support">1.5.3. Multi-Modal Support</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.project_overview_summary_sdk_capabilities">1.6. Summary of Apache UIMA Capabilities</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.ovv.conceptual">2. UIMA Conceptual Overview</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.conceptual.uima_introduction">2.1. UIMA Introduction</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.architecture_framework_sdk">2.2. The Architecture, the Framework and the SDK</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.analysis_basics">2.3. Analysis Basics</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.conceptual.aes_annotators_and_analysis_results">2.3.1. Analysis Engines, Annotators &amp; Results</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.representing_results_in_cas">2.3.2. Representing Analysis Results in the CAS</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.interacting_with_cas_and_external_resources">2.3.3. Using CASes and External Resources</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.component_descriptors">2.3.4. Component Descriptors</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.ovv.conceptual.aggregate_analysis_engines">2.4. Aggregate Analysis Engines</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.applicaiton_building_and_collection_processing">2.5. Application Building and Collection Processing</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.conceptual.using_framework_from_an_application">2.5.1. Using the framework from an Application</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.graduating_to_collection_processing">2.5.2. Graduating to Collection Processing</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.ovv.conceptual.exploiting_analysis_results">2.6. Exploiting Analysis Results</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.conceptual.semantic_search">2.6.1. Semantic Search</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.databases">2.6.2. Databases</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.ovv.conceptual.multimodal_processing">2.7. Multimodal Processing in UIMA</a></span></dt><dt><span class="section"><a href="#ugr.ovv.conceptual.next_steps">2.8. Next Steps</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.ovv.eclipse_setup">3. Eclipse IDE setup for UIMA</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.installation">3.1. Installation</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.install_eclipse">3.1.1. Install Eclipse</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.install_uima_eclipse_plugins">3.1.2. Installing the UIMA Eclipse Plugins</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.install_uima_sdk">3.1.3. Install the UIMA SDK</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.install_uima_eclipse_plugins_manually">3.1.4. Installing the UIMA Eclipse Plugins, manually</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.start_eclipse">3.1.5. Start Eclipse</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.example_code">3.2. Setting up Eclipse to view Example Code</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.adding_source">3.3. Adding the UIMA source code to the jar files</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.linking_uima_javadocs">3.4. Attaching UIMA Javadocs</a></span></dt><dt><span class="section"><a href="#ugr.ovv.eclipse_setup.running_external_tools_from_eclipse">3.5. Running external tools from Eclipse</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.faqs">4. UIMA FAQ's</a></span></dt><dt><span class="chapter"><a href="#ugr.issues">5. Known Issues</a></span></dt><dt><span class="glossary"><a href="#ugr.glossary">Glossary</a></span></dt></dl></div>
   
   
 
   
 
-  <div class="chapter" title="Chapter&nbsp;1.&nbsp;UIMA Overview" id="ugr.project_overview"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;1.&nbsp;UIMA Overview</h2></div></div></div>
+  <div class="chapter" id="ugr.project_overview"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;1.&nbsp;UIMA Overview</h1></div></div></div>
   
   
   
@@ -66,7 +66,7 @@
   
   <p>This chapter is the intended starting point for readers that are new to the Apache UIMA Project. It includes
     this introduction and the following sections:</p> 
-  <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
       <p> <a class="xref" href="#ugr.project_overview_doc_overview" title="1.1.&nbsp;Apache UIMA Project Documentation Overview">Section&nbsp;1.1, &#8220;Apache UIMA Project Documentation Overview&#8221;</a> provides a list of the books and topics included in
         the Apache UIMA documentation with a brief summary of each. </p>
     </li><li class="listitem">
@@ -76,14 +76,14 @@
     
     <p>The main website for Apache UIMA is <a class="ulink" href="http://uima.apache.org" target="_top">http://uima.apache.org</a>.  Here you 
     can find out many things, including:
-     </p><div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem"><p>how to download (both the binary and source distributions</p></li><li class="listitem"><p>how to participate in the development</p></li><li class="listitem"><p>mailing lists - including the user list used like a forum for questions and answers</p></li><li class="listitem"><p>a Wiki where you can find and contribute all kinds of information, including tips and best practices</p></li><li class="listitem"><p>a sandbox - a subproject for potential new additions to Apache UIMA or to subprojects of it.  Things here
+     </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>how to download (both the binary and source distributions</p></li><li class="listitem"><p>how to participate in the development</p></li><li class="listitem"><p>mailing lists - including the user list used like a forum for questions and answers</p></li><li class="listitem"><p>a Wiki where you can find and contribute all kinds of information, including tips and best practices</p></li><li class="listitem"><p>a sandbox - a subproject for potential new additions to Apache UIMA or to subprojects of it.  Things here
        are works in progress, and may (or may not) be included in releases.</p></li><li class="listitem"><p>links to conferences</p></li></ul></div><p>
       </p>
  
-  <div class="section" title="1.1.&nbsp;Apache UIMA Project Documentation Overview"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.project_overview_doc_overview">1.1.&nbsp;Apache UIMA Project Documentation Overview</h2></div></div></div>
+  <div class="section" id="ugr.project_overview_doc_overview"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.1.&nbsp;Apache UIMA Project Documentation Overview</h2></div></div></div>
     
     <p> The user documentation for UIMA is organized into several parts.
-      </p><div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem">
+      </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem">
           <p> Overviews - this documentation </p>
         </li><li class="listitem">
           <p> Eclipse Tooling Installation and Setup - also in this document </p>
@@ -112,69 +112,69 @@
     documentation.
     </p>
     
-    <div class="section" title="1.1.1.&nbsp;Overviews"><div class="titlepage"><div><div><h3 class="title" id="ugr.project_overview_overview">1.1.1.&nbsp;Overviews</h3></div></div></div>
+    <div class="section" id="ugr.project_overview_overview"><div class="titlepage"><div><div><h3 class="title">1.1.1.&nbsp;Overviews</h3></div></div></div>
       
       
       <div class="informaltable">
-        <table style="border-collapse: collapse;border-top: 0.5pt solid black; border-bottom: 0.5pt solid black; border-left: 0.5pt solid black; border-right: 0.5pt solid black; "><colgroup><col class="col1"><col class="col2"></colgroup><tbody><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><span class="emphasis"><em>Overview of the Documentation</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">
+        <table class="informaltable" style="border-collapse: collapse;border-top: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; "><colgroup><col class="col1"><col class="col2"></colgroup><tbody><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Overview of the Documentation</em></span>
+              </td><td style="border-bottom: 1px solid black; ">
                 <p>What you are currently reading.  Lists the documents provided in the Apache 
                 UIMA documentation set and provides
                  a recommended path through the documentation for getting started using
                   UIMA.  It includes release notes and provides a brief high-level description of 
                   the different software modules included in the
                   Apache UIMA Project.  See <a class="xref" href="#ugr.project_overview_doc_overview" title="1.1.&nbsp;Apache UIMA Project Documentation Overview">Section&nbsp;1.1, &#8220;Apache UIMA Project Documentation Overview&#8221;</a>.</p>
-              </td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><span class="emphasis"><em>Conceptual Overview</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Provides a broad conceptual overview of the UIMA component architecture; includes
+              </td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Conceptual Overview</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Provides a broad conceptual overview of the UIMA component architecture; includes
                 references to the other documents in the documentation set that provide more detail.
-                See <a class="xref" href="#ugr.ovv.conceptual" title="Chapter&nbsp;2.&nbsp;UIMA Conceptual Overview">Chapter&nbsp;2, <i>UIMA Conceptual Overview</i></a></td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><span class="emphasis"><em>UIMA FAQs</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Frequently Asked Questions about general UIMA concepts. (Not a programming
-                resource.)  See <a class="xref" href="#ugr.faqs" title="Chapter&nbsp;4.&nbsp;UIMA Frequently Asked Questions (FAQ's)">Chapter&nbsp;4, <i>UIMA Frequently Asked Questions (FAQ's)</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><span class="emphasis"><em>Known Issues</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Known issues and problems with the UIMA SDK.  See <a class="xref" href="#ugr.issues" title="Chapter&nbsp;5.&nbsp;Known Issues">Chapter&nbsp;5, <i>Known Issues</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; "><span class="emphasis"><em>Glossary</em></span>
+                See <a class="xref" href="#ugr.ovv.conceptual" title="Chapter&nbsp;2.&nbsp;UIMA Conceptual Overview">Chapter&nbsp;2, <i>UIMA Conceptual Overview</i></a></td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>UIMA FAQs</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Frequently Asked Questions about general UIMA concepts. (Not a programming
+                resource.)  See <a class="xref" href="#ugr.faqs" title="Chapter&nbsp;4.&nbsp;UIMA Frequently Asked Questions (FAQ's)">Chapter&nbsp;4, <i>UIMA FAQ's</i></a>.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Known Issues</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Known issues and problems with the UIMA SDK.  See <a class="xref" href="#ugr.issues" title="Chapter&nbsp;5.&nbsp;Known Issues">Chapter&nbsp;5, <i>Known Issues</i></a>.</td></tr><tr><td style="border-right: 1px solid black; "><span class="emphasis"><em>Glossary</em></span>
               </td><td style="">UIMA terms and concepts and their basic definitions.  See <a class="xref" href="#ugr.glossary" title="Glossary: Key Terms &amp; Concepts">Glossary</a>.</td></tr></tbody></table>
       </div>
     </div>
     
-    <div class="section" title="1.1.2.&nbsp;Eclipse Tooling Installation and Setup"><div class="titlepage"><div><div><h3 class="title" id="ugr.project_overview_setup">1.1.2.&nbsp;Eclipse Tooling Installation and Setup</h3></div></div></div>
+    <div class="section" id="ugr.project_overview_setup"><div class="titlepage"><div><div><h3 class="title">1.1.2.&nbsp;Eclipse Tooling Installation and Setup</h3></div></div></div>
       
       <p>Provides step-by-step instructions for installing Apache UIMA in the Eclipse Interactive
-        Development Environment.  See <a class="xref" href="#ugr.ovv.eclipse_setup" title="Chapter&nbsp;3.&nbsp;Setting up the Eclipse IDE to work with UIMA">Chapter&nbsp;3, <i>Setting up the Eclipse IDE to work with UIMA</i></a>.</p>
+        Development Environment.  See <a class="xref" href="#ugr.ovv.eclipse_setup" title="Chapter&nbsp;3.&nbsp;Setting up the Eclipse IDE to work with UIMA">Chapter&nbsp;3, <i>Eclipse IDE setup for UIMA</i></a>.</p>
     </div>
     
-    <div class="section" title="1.1.3.&nbsp;Tutorials and Developer's Guides"><div class="titlepage"><div><div><h3 class="title" id="ugr.project_overview_tutorials_dev_guides">1.1.3.&nbsp;Tutorials and Developer's Guides</h3></div></div></div>
+    <div class="section" id="ugr.project_overview_tutorials_dev_guides"><div class="titlepage"><div><div><h3 class="title">1.1.3.&nbsp;Tutorials and Developer's Guides</h3></div></div></div>
       
       <div class="informaltable">
-        <table style="border-collapse: collapse;border-top: 0.5pt solid black; border-bottom: 0.5pt solid black; border-left: 0.5pt solid black; border-right: 0.5pt solid black; "><colgroup><col class="col1"><col class="col2"></colgroup><tbody><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_tutorial_annotator"></a><span class="emphasis"><em>Annotators and Analysis Engines</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Tutorial-style guide for building UIMA annotators and analysis engines. This chapter
+        <table class="informaltable" style="border-collapse: collapse;border-top: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; "><colgroup><col class="col1"><col class="col2"></colgroup><tbody><tr id="ugr.project_overview_tutorial_annotator"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Annotators and Analysis Engines</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Tutorial-style guide for building UIMA annotators and analysis engines. This chapter
                 introduces the developer to creating type systems and using UIMA's common data structure,
                 the CAS or Common Analysis Structure. It demonstrates how to use built in tools to specify and create
                 basic UIMA analysis components.  See 
-                <a href="tutorials_and_users_guides.html#ugr.tug.aae" class="olink">Chapter&nbsp;1, <i>Annotator and Analysis Engine Developer's Guide</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_tutorial_cpe"></a><span class="emphasis"><em>Building UIMA Collection Processing Engines</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Tutorial-style guide for building UIMA collection processing engines. These
+                <a href="tutorials_and_users_guides.html#ugr.tug.aae" class="olink">Chapter&nbsp;1, <i>Annotator and Analysis Engine Developer's Guide</i></a>.</td></tr><tr id="ugr.project_overview_tutorial_cpe"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Building UIMA Collection Processing Engines</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Tutorial-style guide for building UIMA collection processing engines. These
                manage the
                 analysis of collections of documents from source to sink.  See 
-                <a href="tutorials_and_users_guides.html#ugr.tug.cpe" class="olink">Chapter&nbsp;2, <i>Collection Processing Engine Developer's Guide</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_tutorial_application_development"></a><span class="emphasis"><em>Developing Complete Applications</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Tutorial-style guide on using the UIMA APIs to create, run and manage UIMA components from
+                <a href="tutorials_and_users_guides.html#ugr.tug.cpe" class="olink">Chapter&nbsp;2, <i>Collection Processing Engine Developer's Guide</i></a>.</td></tr><tr id="ugr.project_overview_tutorial_application_development"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Developing Complete Applications</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Tutorial-style guide on using the UIMA APIs to create, run and manage UIMA components from
                 your application. Also describes APIs for saving and restoring the contents of a CAS using an XML
                 format called <span class="trademark"> XMI</span>&reg;.  See 
-                <a href="tutorials_and_users_guides.html#ugr.tug.application" class="olink">Chapter&nbsp;3, <i>Application Developer's Guide</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_guide_flow_controller"></a><span class="emphasis"><em>Flow Controller</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">When multiple components are combined in an Aggregate, each CAS flow among the various
+                <a href="tutorials_and_users_guides.html#ugr.tug.application" class="olink">Chapter&nbsp;3, <i>Application Developer's Guide</i></a>.</td></tr><tr id="ugr.project_overview_guide_flow_controller"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Flow Controller</em></span>
+              </td><td style="border-bottom: 1px solid black; ">When multiple components are combined in an Aggregate, each CAS flow among the various
                 components. UIMA provides two built-in flows, and also allows custom flows to be
-                implemented.  See <a href="tutorials_and_users_guides.html#ugr.tug.fc" class="olink">Chapter&nbsp;4, <i>Flow Controller Developer's Guide</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_guide_multiple_sofas"></a><span class="emphasis"><em>Developing Applications using Multiple Subjects of Analysis</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">A single CAS maybe associated with multiple subjects of analysis (Sofas). These are useful
+                implemented.  See <a href="tutorials_and_users_guides.html#ugr.tug.fc" class="olink">Chapter&nbsp;4, <i>Flow Controller Developer's Guide</i></a>.</td></tr><tr id="ugr.project_overview_guide_multiple_sofas"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Developing Applications using Multiple Subjects of Analysis</em></span>
+              </td><td style="border-bottom: 1px solid black; ">A single CAS maybe associated with multiple subjects of analysis (Sofas). These are useful
                 for representing and analyzing different formats or translations of the same document. For
                 multi-modal analysis, Sofas are good for different modal representations of the same stream
                 (e.g., audio and close-captions).This chapter provides the developer details on how to use
                 multiple Sofas in an application.  See 
-                <a href="tutorials_and_users_guides.html#ugr.tug.aas" class="olink">Chapter&nbsp;5, <i>Annotations, Artifacts, and Sofas</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_guide_multiple_views"></a><span class="emphasis"><em>Multiple CAS Views of an Artifact</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">UIMA provides an extension to the basic model of the CAS which supports 
+                <a href="tutorials_and_users_guides.html#ugr.tug.aas" class="olink">Chapter&nbsp;5, <i>Annotations, Artifacts, and Sofas</i></a>.</td></tr><tr id="ugr.project_overview_guide_multiple_views"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Multiple CAS Views of an Artifact</em></span>
+              </td><td style="border-bottom: 1px solid black; ">UIMA provides an extension to the basic model of the CAS which supports 
               analysis of multiple views of the same artifact, all contained with the CAS. This 
               chapter describes the concepts, terminology, and the API and XML extensions that 
               enable this.  See 
-                <a href="tutorials_and_users_guides.html#ugr.tug.mvs" class="olink">Chapter&nbsp;6, <i>Multiple CAS Views of an Artifact</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_guide_cas_multiplier"></a><span class="emphasis"><em>CAS Multiplier</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">A component may add additional CASes into the workflow. This may be useful to break up a large
+                <a href="tutorials_and_users_guides.html#ugr.tug.mvs" class="olink">Chapter&nbsp;6, <i>Multiple CAS Views of an Artifact</i></a>.</td></tr><tr id="ugr.project_overview_guide_cas_multiplier"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>CAS Multiplier</em></span>
+              </td><td style="border-bottom: 1px solid black; ">A component may add additional CASes into the workflow. This may be useful to break up a large
                 artifact into smaller units, or to create a new CAS that collects information from multiple other
-                CASes.  See <a href="tutorials_and_users_guides.html#ugr.tug.cm" class="olink">Chapter&nbsp;7, <i>CAS Multiplier Developer's Guide</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; "><a name="ugr.project_overview_xmi_emf"></a><span class="emphasis"><em>XMI and EMF Interoperability</em></span>
+                CASes.  See <a href="tutorials_and_users_guides.html#ugr.tug.cm" class="olink">Chapter&nbsp;7, <i>CAS Multiplier Developer's Guide</i></a>.</td></tr><tr id="ugr.project_overview_xmi_emf"><td style="border-right: 1px solid black; "><span class="emphasis"><em>XMI and EMF Interoperability</em></span>
               </td><td style="">The UIMA Type system and the contents of the CAS itself can be externalized using the XMI
                 standard for XML MetaData. Eclipse Modeling Framework (EMF) tooling can be used to develop
                 applications that use this information.  See 
@@ -182,70 +182,70 @@
       </div>
     </div>
     
-    <div class="section" title="1.1.4.&nbsp;Tools Users' Guides"><div class="titlepage"><div><div><h3 class="title" id="ugr.project_overview_tool_guides">1.1.4.&nbsp;Tools Users' Guides</h3></div></div></div>
+    <div class="section" id="ugr.project_overview_tool_guides"><div class="titlepage"><div><div><h3 class="title">1.1.4.&nbsp;Tools Users' Guides</h3></div></div></div>
       
       
       <div class="informaltable">
-        <table style="border-collapse: collapse;border-top: 0.5pt solid black; border-bottom: 0.5pt solid black; border-left: 0.5pt solid black; border-right: 0.5pt solid black; "><colgroup><col class="col1"><col class="col2"></colgroup><tbody><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_tools_component_descriptor_editor"></a><span class="emphasis"><em>Component Descriptor Editor</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Describes the features of the Component Descriptor Editor Tool. This tool provides a GUI for
+        <table class="informaltable" style="border-collapse: collapse;border-top: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; "><colgroup><col class="col1"><col class="col2"></colgroup><tbody><tr id="ugr.project_overview_tools_component_descriptor_editor"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Component Descriptor Editor</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Describes the features of the Component Descriptor Editor Tool. This tool provides a GUI for
                 specifying the details of UIMA component descriptors, including those for Analysis Engines
                 (primitive and aggregate), Collection Readers, CAS Consumers and Type Systems.  See 
-                <a href="tools.html#ugr.tools.cde" class="olink">Chapter&nbsp;1, <i>Component Descriptor Editor User's Guide</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_tools_cpe_configurator"></a><span class="emphasis"><em>Collection Processing Engine Configurator</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Describes the User Interfaces and features of the CPE Configurator tool. This tool allows the
+                <a href="tools.html#ugr.tools.cde" class="olink">Chapter&nbsp;1, <i>Component Descriptor Editor User's Guide</i></a>.</td></tr><tr id="ugr.project_overview_tools_cpe_configurator"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Collection Processing Engine Configurator</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Describes the User Interfaces and features of the CPE Configurator tool. This tool allows the
                 user to select and configure the components of a Collection Processing Engine and then to run the
                 engine.  See 
-                <a href="tools.html#ugr.tools.cpe" class="olink">Chapter&nbsp;2, <i>Collection Processing Engine Configurator User's Guide</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_tools_pear_packager"></a><span class="emphasis"><em>Pear Packager</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Describes how to use the PEAR Packager utility. This utility enables developers to produce an
+                <a href="tools.html#ugr.tools.cpe" class="olink">Chapter&nbsp;2, <i>Collection Processing Engine Configurator User's Guide</i></a>.</td></tr><tr id="ugr.project_overview_tools_pear_packager"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Pear Packager</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Describes how to use the PEAR Packager utility. This utility enables developers to produce an
                 archive file for an analysis engine that includes all required resources for installing that
                 analysis engine in another UIMA environment.  See 
-                <a href="tools.html#ugr.tools.pear.packager" class="olink">Chapter&nbsp;9, <i>PEAR Packager User's Guide</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_tools_pear_installer"></a><span class="emphasis"><em>Pear Installer</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Describes how to use the PEAR Installer utility. This utility installs and verifies an
+                <a href="tools.html#ugr.tools.pear.packager" class="olink">Chapter&nbsp;9, <i>PEAR Packager User's Guide</i></a>.</td></tr><tr id="ugr.project_overview_tools_pear_installer"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Pear Installer</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Describes how to use the PEAR Installer utility. This utility installs and verifies an
                 analysis engine from an archive file (PEAR) with all its resources in the right place so it is ready to
                 run.  See 
-                <a href="tools.html#ugr.tools.pear.installer" class="olink">Chapter&nbsp;11, <i>PEAR Installer User's Guide</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_tools_pear_merger"></a><span class="emphasis"><em>Pear Merger</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Describes how to use the Pear Merger utility, which does a simple merge of multiple PEAR
+                <a href="tools.html#ugr.tools.pear.installer" class="olink">Chapter&nbsp;11, <i>PEAR Installer User's Guide</i></a>.</td></tr><tr id="ugr.project_overview_tools_pear_merger"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Pear Merger</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Describes how to use the Pear Merger utility, which does a simple merge of multiple PEAR
                 packages into one.  See 
-                <a href="tools.html#ugr.tools.pear.merger" class="olink">Chapter&nbsp;12, <i>PEAR Merger User's Guide</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_tools_document_analyzer"></a><span class="emphasis"><em>Document Analyzer</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Describes the features of a tool for applying a UIMA analysis engine to a set of documents and
+                <a href="tools.html#ugr.tools.pear.merger" class="olink">Chapter&nbsp;12, <i>PEAR Merger User's Guide</i></a>.</td></tr><tr id="ugr.project_overview_tools_document_analyzer"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Document Analyzer</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Describes the features of a tool for applying a UIMA analysis engine to a set of documents and
                 viewing the results.  See 
-                <a href="tools.html#ugr.tools.doc_analyzer" class="olink">Chapter&nbsp;3, <i>Document Analyzer User's Guide</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_tools_cas_visual_debugger"></a><span class="emphasis"><em>CAS Visual Debugger</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Describes the features of a tool for viewing the detailed structure and contents of a CAS. Good
+                <a href="tools.html#ugr.tools.doc_analyzer" class="olink">Chapter&nbsp;3, <i>Document Analyzer User's Guide</i></a>.</td></tr><tr id="ugr.project_overview_tools_cas_visual_debugger"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>CAS Visual Debugger</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Describes the features of a tool for viewing the detailed structure and contents of a CAS. Good
                 for debugging.  See 
-                <a href="tools.html#ugr.tools.cvd" class="olink">Chapter&nbsp;5, <i>CAS Visual Debugger</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_tools_jcasgen"></a><span class="emphasis"><em>JCasGen</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Describes how to run the JCasGen utility, which automatically builds Java classes that
+                <a href="tools.html#ugr.tools.cvd" class="olink">Chapter&nbsp;5, <i>CAS Visual Debugger</i></a>.</td></tr><tr id="ugr.project_overview_tools_jcasgen"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>JCasGen</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Describes how to run the JCasGen utility, which automatically builds Java classes that
                 correspond to a particular CAS Type System.  See 
-                <a href="tools.html#ugr.tools.jcasgen" class="olink">Chapter&nbsp;8, <i>JCasGen User's Guide</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; "><a name="ugr.project_overview_tools_xml_cas_viewer"></a><span class="emphasis"><em>XML CAS Viewer</em></span>
+                <a href="tools.html#ugr.tools.jcasgen" class="olink">Chapter&nbsp;8, <i>JCasGen User's Guide</i></a>.</td></tr><tr id="ugr.project_overview_tools_xml_cas_viewer"><td style="border-right: 1px solid black; "><span class="emphasis"><em>XML CAS Viewer</em></span>
               </td><td style="">Describes how to run the supplied viewer to view externalized XML forms of CASes. This viewer
                 is used in the examples.  See 
                 <a href="tools.html#ugr.tools.annotation_viewer" class="olink">Chapter&nbsp;4, <i>Annotation Viewer</i></a>.</td></tr></tbody></table>
       </div>
     </div>
     
-    <div class="section" title="1.1.5.&nbsp;References"><div class="titlepage"><div><div><h3 class="title" id="ugr.project_overview_reference">1.1.5.&nbsp;References</h3></div></div></div>
+    <div class="section" id="ugr.project_overview_reference"><div class="titlepage"><div><div><h3 class="title">1.1.5.&nbsp;References</h3></div></div></div>
       
       <div class="informaltable">
-        <table style="border-collapse: collapse;border-top: 0.5pt solid black; border-bottom: 0.5pt solid black; border-left: 0.5pt solid black; border-right: 0.5pt solid black; "><colgroup><col class="col1"><col class="col2"></colgroup><tbody><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_javadocs"></a><span class="emphasis"><em>Introduction to the UIMA API Javadocs</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Javadocs detailing the UIMA programming interfaces  See 
-                <a href="references.html#ugr.ref.javadocs" class="olink">Chapter&nbsp;1, <i>Javadocs</i></a></td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_xml_ref_component_descriptor"></a><span class="emphasis"><em>XML: Component Descriptor</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Provides detailed XML format for all the UIMA component descriptors, except the CPE (see
+        <table class="informaltable" style="border-collapse: collapse;border-top: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; "><colgroup><col class="col1"><col class="col2"></colgroup><tbody><tr id="ugr.project_overview_javadocs"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>Introduction to the UIMA API Javadocs</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Javadocs detailing the UIMA programming interfaces  See 
+                <a href="references.html#ugr.ref.javadocs" class="olink">Chapter&nbsp;1, <i>Javadocs</i></a></td></tr><tr id="ugr.project_overview_xml_ref_component_descriptor"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>XML: Component Descriptor</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Provides detailed XML format for all the UIMA component descriptors, except the CPE (see
                 next).  See 
-                <a href="references.html#ugr.ref.xml.component_descriptor" class="olink">Chapter&nbsp;2, <i>Component Descriptor Reference</i></a>.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_xml_ref_collection_processing_engine_descriptor"></a><span class="emphasis"><em>XML: Collection Processing Engine Descriptor</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Provides detailed XML format for the Collection Processing Engine descriptor.  See 
-                <a href="references.html#ugr.ref.xml.cpe_descriptor" class="olink">Chapter&nbsp;3, <i>Collection Processing Engine Descriptor Reference</i></a></td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_cas"></a><span class="emphasis"><em>CAS</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Provides detailed description of the principal CAS interface.  See 
-                <a href="references.html#ugr.ref.cas" class="olink">Chapter&nbsp;4, <i>CAS Reference</i></a></td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_jcas"></a><span class="emphasis"><em>JCas</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Provides details on the JCas, a native Java interface to the CAS.  See 
-                <a href="references.html#ugr.ref.jcas" class="olink">Chapter&nbsp;5, <i>JCas Reference</i></a></td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; "><a name="ugr.project_overview_ref_pear"></a><span class="emphasis"><em>PEAR Reference</em></span>
-              </td><td style="border-bottom: 0.5pt solid black; ">Provides detailed description of the deployable archive format for UIMA
+                <a href="references.html#ugr.ref.xml.component_descriptor" class="olink">Chapter&nbsp;2, <i>Component Descriptor Reference</i></a>.</td></tr><tr id="ugr.project_overview_xml_ref_collection_processing_engine_descriptor"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>XML: Collection Processing Engine Descriptor</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Provides detailed XML format for the Collection Processing Engine descriptor.  See 
+                <a href="references.html#ugr.ref.xml.cpe_descriptor" class="olink">Chapter&nbsp;3, <i>Collection Processing Engine Descriptor Reference</i></a></td></tr><tr id="ugr.project_overview_cas"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>CAS</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Provides detailed description of the principal CAS interface.  See 
+                <a href="references.html#ugr.ref.cas" class="olink">Chapter&nbsp;4, <i>CAS Reference</i></a></td></tr><tr id="ugr.project_overview_jcas"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>JCas</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Provides details on the JCas, a native Java interface to the CAS.  See 
+                <a href="references.html#ugr.ref.jcas" class="olink">Chapter&nbsp;5, <i>JCas Reference</i></a></td></tr><tr id="ugr.project_overview_ref_pear"><td style="border-right: 1px solid black; border-bottom: 1px solid black; "><span class="emphasis"><em>PEAR Reference</em></span>
+              </td><td style="border-bottom: 1px solid black; ">Provides detailed description of the deployable archive format for UIMA
                 components.  See 
-                <a href="references.html#ugr.ref.pear" class="olink">Chapter&nbsp;6, <i>PEAR Reference</i></a></td></tr><tr><td style="border-right: 0.5pt solid black; "><a name="ugr.project_overview_xmi_cas_serialization"></a><span class="emphasis"><em>XMI CAS Serialization Reference</em></span>
+                <a href="references.html#ugr.ref.pear" class="olink">Chapter&nbsp;6, <i>PEAR Reference</i></a></td></tr><tr id="ugr.project_overview_xmi_cas_serialization"><td style="border-right: 1px solid black; "><span class="emphasis"><em>XMI CAS Serialization Reference</em></span>
               </td><td style="">Provides detailed description of the deployable archive format for UIMA
                 components.  See 
                 <a href="references.html#ugr.ref.xmi" class="olink">Chapter&nbsp;7, <i>XMI CAS Serialization Reference</i></a></td></tr></tbody></table>
       </div>
     </div>
     
-    <div class="section" title="1.1.6.&nbsp;Version 3 User's guide"><div class="titlepage"><div><div><h3 class="title" id="ugr.project_overview_v3">1.1.6.&nbsp;Version 3 User's guide</h3></div></div></div>
+    <div class="section" id="ugr.project_overview_v3"><div class="titlepage"><div><div><h3 class="title">1.1.6.&nbsp;Version 3 User's guide</h3></div></div></div>
       
       <p>This book describes Version 3's features, capabilities, and differences with version 2.
         </p>
@@ -253,7 +253,7 @@
     
   </div>
   
-  <div class="section" title="1.2.&nbsp;How to use the Documentation"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.project_overview_doc_use">1.2.&nbsp;How to use the Documentation</h2></div></div></div>
+  <div class="section" id="ugr.project_overview_doc_use"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.2.&nbsp;How to use the Documentation</h2></div></div></div>
     
     
     <div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
@@ -267,13 +267,13 @@
           Journal special issue on Unstructured Information Management, on-line at <a class="ulink" href="http://www.research.ibm.com/journal/sj43-3.html" target="_top">http://www.research.ibm.com/journal/sj43-3.html</a> or to the section of the UIMA project
           website on Apache website where other publications are listed. </p>
       </li><li class="listitem">
-        <p> Set up Apache UIMA in your Eclipse environment. To do this, follow the instructions in <a class="xref" href="#ugr.ovv.eclipse_setup" title="Chapter&nbsp;3.&nbsp;Setting up the Eclipse IDE to work with UIMA">Chapter&nbsp;3, <i>Setting up the Eclipse IDE to work with UIMA</i></a>. </p>
+        <p> Set up Apache UIMA in your Eclipse environment. To do this, follow the instructions in <a class="xref" href="#ugr.ovv.eclipse_setup" title="Chapter&nbsp;3.&nbsp;Setting up the Eclipse IDE to work with UIMA">Chapter&nbsp;3, <i>Eclipse IDE setup for UIMA</i></a>. </p>
       </li><li class="listitem">
         <p> Develop sample UIMA annotators, run them and explore the results. Read <a href="tutorials_and_users_guides.html#d5e1" class="olink">UIMA Tutorial and Developers' Guides</a> <a href="tutorials_and_users_guides.html#ugr.tug.aae" class="olink">Chapter&nbsp;1, <i>Annotator and Analysis Engine Developer's Guide</i></a> and follow it like a tutorial
           to learn how to develop your first UIMA annotator and set up and run your first UIMA analysis engines.
-          </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+          </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
               <p> As part of this you will use a few tools including
-                </p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+                </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem">
                     <p> The UIMA Component Descriptor Editor, described in more detail in <a href="tools.html#d5e1" class="olink">UIMA Tools Guide and Reference</a> <a href="tools.html#ugr.tools.cde" class="olink">Chapter&nbsp;1, <i>Component Descriptor Editor User's Guide</i></a> and </p>
                   </li><li class="listitem">
                     <p> The Document Analyzer, described in more detail in <a href="tools.html#d5e1" class="olink">UIMA Tools Guide and Reference</a> <a href="tools.html#ugr.tools.doc_analyzer" class="olink">Chapter&nbsp;3, <i>Document Analyzer User's Guide</i></a>. </p>
@@ -282,7 +282,7 @@
             </li><li class="listitem">
               <p>While following along in <a href="tutorials_and_users_guides.html#d5e1" class="olink">UIMA Tutorial and Developers' Guides</a>
                 <a href="tutorials_and_users_guides.html#ugr.tug.aae" class="olink">Chapter&nbsp;1, <i>Annotator and Analysis Engine Developer's Guide</i></a>, reference documents that may help are:
-                </p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem">
+                </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem">
                     <p> <a href="references.html#d5e1" class="olink">UIMA References</a> <a href="references.html#ugr.ref.xml.component_descriptor" class="olink">Chapter&nbsp;2, <i>Component Descriptor Reference</i></a> for understanding the analysis
                       engine descriptors </p>
                   </li><li class="listitem">
@@ -296,7 +296,7 @@
           Connect your analysis engine to the provided semantic search engine to learn how a
           complete analysis and search application may be built with Apache UIMA. <a href="tutorials_and_users_guides.html#d5e1" class="olink">UIMA Tutorial and Developers' Guides</a> <a href="tutorials_and_users_guides.html#ugr.tug.application" class="olink">Chapter&nbsp;3, <i>Application Developer's Guide</i></a> will guide you
           through this process.
-          </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+          </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
               <p> As part of this you will use the document analyzer (described in more detail in <a href="tools.html#d5e1" class="olink">UIMA Tools Guide and Reference</a> <a href="tools.html#ugr.tools.doc_analyzer" class="olink">Chapter&nbsp;3, <i>Document Analyzer User's Guide</i></a> and semantic search
                 GUI tools (see <a href="tutorials_and_users_guides.html#d5e1" class="olink">UIMA Tutorial and Developers' Guides</a>
                 <span class="olink">????</span>. </p>
@@ -311,7 +311,7 @@
         <p> Develop and run a Collection Processing Engine (CPE) to analyze and gather the results of an entire
           collection of documents. <a href="tutorials_and_users_guides.html#d5e1" class="olink">UIMA Tutorial and Developers' Guides</a>
           <a href="tutorials_and_users_guides.html#ugr.tug.cpe" class="olink">Chapter&nbsp;2, <i>Collection Processing Engine Developer's Guide</i></a> will guide you through this process.
-          </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+          </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
               <p> As part of this you will use the CPE Configurator tool. For details see <a href="tools.html#d5e1" class="olink">UIMA Tools Guide and Reference</a> <a href="tools.html#ugr.tools.cpe" class="olink">Chapter&nbsp;2, <i>Collection Processing Engine Configurator User's Guide</i></a>. </p>
             </li><li class="listitem">
               <p> You will also learn about CPE Descriptors. The detailed format for these may be found in <a href="references.html#d5e1" class="olink">UIMA References</a> <a href="references.html#ugr.ref.xml.cpe_descriptor" class="olink">Chapter&nbsp;3, <i>Collection Processing Engine Descriptor Reference</i></a>. </p>
@@ -325,12 +325,12 @@
       </li></ol></div>
   </div>
   
-  <div class="section" title="1.3.&nbsp;Changes from UIMA Version 2"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.project_overview_changes_from_previous">1.3.&nbsp;Changes from UIMA Version 2</h2></div></div></div>
+  <div class="section" id="ugr.project_overview_changes_from_previous"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.3.&nbsp;Changes from UIMA Version 2</h2></div></div></div>
       
       <p>See the separate document Version 3 User's Guide.s</p>
   </div> 
      
-  <div class="section" title="1.4.&nbsp;Migrating existing UIMA pipelines from Version 2 to Version 3"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.project_overview_migrating_from_v2_to_v3">1.4.&nbsp;Migrating existing UIMA pipelines from Version 2 to Version 3</h2></div></div></div>
+  <div class="section" id="ugr.project_overview_migrating_from_v2_to_v3"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.4.&nbsp;Migrating existing UIMA pipelines from Version 2 to Version 3</h2></div></div></div>
     
     <p>The format of JCas classes changed when going from version 2 to version 3. 
           If you had JCas classes for user types, these need to be regenerated using the 
@@ -342,9 +342,9 @@
       a description of the migration tool to aid in this process.</p>
   </div>
   
-  <div class="section" title="1.5.&nbsp;Apache UIMA Summary"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.project_overview_summary">1.5.&nbsp;Apache UIMA Summary</h2></div></div></div>
+  <div class="section" id="ugr.project_overview_summary"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.5.&nbsp;Apache UIMA Summary</h2></div></div></div>
     
-    <div class="section" title="1.5.1.&nbsp;General"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.summary.general">1.5.1.&nbsp;General</h3></div></div></div>
+    <div class="section" id="ugr.ovv.summary.general"><div class="titlepage"><div><div><h3 class="title">1.5.1.&nbsp;General</h3></div></div></div>
       
       <p>UIMA supports the development, discovery, composition and deployment of multi-modal
         analytics for the analysis of unstructured information and its integration with search
@@ -354,7 +354,7 @@
         tokenizers, summarizers, categorizers, parsers, named-entity detectors etc. Tutorial examples are
         provided with Apache UIMA; additional components are available from the community. </p>
     </div>
-    <div class="section" title="1.5.2.&nbsp;Programming Language Support"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.summary.programming_language_support">1.5.2.&nbsp;Programming Language Support</h3></div></div></div>
+    <div class="section" id="ugr.ovv.summary.programming_language_support"><div class="titlepage"><div><div><h3 class="title">1.5.2.&nbsp;Programming Language Support</h3></div></div></div>
       
       <p>UIMA supports the development and integration of analysis algorithms developed in different
         programming languages. </p>
@@ -366,7 +366,7 @@
         </p>
       
     </div>
-    <div class="section" title="1.5.3.&nbsp;Multi-Modal Support"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.general.summary.multi_modal_support">1.5.3.&nbsp;Multi-Modal Support</h3></div></div></div>
+    <div class="section" id="ugr.ovv.general.summary.multi_modal_support"><div class="titlepage"><div><div><h3 class="title">1.5.3.&nbsp;Multi-Modal Support</h3></div></div></div>
       
       <p>The UIMA architecture supports the development, discovery, composition and deployment of
         multi-modal analytics, including text, audio and video. <a href="tutorials_and_users_guides.html#d5e1" class="olink">UIMA Tutorial and Developers' Guides</a> <a href="tutorials_and_users_guides.html#ugr.tug.aas" class="olink">Chapter&nbsp;5, <i>Annotations, Artifacts, and Sofas</i></a> discuss this is more
@@ -374,10 +374,10 @@
     </div>
   </div>
       
-  <div class="section" title="1.6.&nbsp;Summary of Apache UIMA Capabilities"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.project_overview_summary_sdk_capabilities">1.6.&nbsp;Summary of Apache UIMA Capabilities</h2></div></div></div>
+  <div class="section" id="ugr.project_overview_summary_sdk_capabilities"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.6.&nbsp;Summary of Apache UIMA Capabilities</h2></div></div></div>
     
     <div class="informaltable">
-      <table style="border-collapse: collapse;border-top: 0.5pt solid black; border-bottom: 0.5pt solid black; border-left: 0.5pt solid black; border-right: 0.5pt solid black; "><colgroup><col class="col1"><col class="col2"></colgroup><tbody><tr><td class="tableSubhead" style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Module</td><td class="tableSubhead" style="border-bottom: 0.5pt solid black; ">Description</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">UIMA Framework Core</td><td style="border-bottom: 0.5pt solid black; ">
+      <table class="informaltable" style="border-collapse: collapse;border-top: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; "><colgroup><col class="col1"><col class="col2"></colgroup><tbody><tr><td class="tableSubhead" style="border-right: 1px solid black; border-bottom: 1px solid black; ">Module</td><td class="tableSubhead" style="border-bottom: 1px solid black; ">Description</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">UIMA Framework Core</td><td style="border-bottom: 1px solid black; ">
               <p>A framework integrating core functions for creating, deploying, running and managing UIMA
                 components, including analysis engines and Collection Processing Engines in collocated and/or
                 distributed configurations. </p>
@@ -385,46 +385,46 @@
               <p>The framework includes an implementation of core components for transport layer adaptation,
                 CAS management, workflow management based on declarative specifications, resource management,
                 configuration management, logging, and other functions.</p>
-            </td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">C++ and other programming language Interoperability</td><td style="border-bottom: 0.5pt solid black; ">
+            </td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">C++ and other programming language Interoperability</td><td style="border-bottom: 1px solid black; ">
               <p>Includes C++ CAS and supports the creation of UIMA compliant C++ components that can be
                 deployed in the UIMA run-time through a built-in JNI adapter. This includes high-speed binary
                 serialization.</p>
               
               <p>Includes support for creating service-based UIMA engines. This is ideal for
                 wrapping existing code written in different languages.</p>
-            </td></tr><tr><td class="tableSubhead" style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Framework Services and APIs</td><td class="tableSubhead" style="border-bottom: 0.5pt solid black; ">Note that interfaces of these components are available to the developer
+            </td></tr><tr><td class="tableSubhead" style="border-right: 1px solid black; border-bottom: 1px solid black; ">Framework Services and APIs</td><td class="tableSubhead" style="border-bottom: 1px solid black; ">Note that interfaces of these components are available to the developer
               but different implementations are possible in different implementations of the UIMA
-              framework.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">CAS</td><td style="border-bottom: 0.5pt solid black; ">These classes provide the developer with typed access to the Common Analysis Structure (CAS),
+              framework.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">CAS</td><td style="border-bottom: 1px solid black; ">These classes provide the developer with typed access to the Common Analysis Structure (CAS),
               including type system schema, elements, subjects of analysis and indices. Multiple subjects of
               analysis (Sofas) mechanism supports the independent or simultaneous analysis of multiple views of
-              the same artifacts (e.g. documents), supporting multi-lingual and multi-modal analysis.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">JCas</td><td style="border-bottom: 0.5pt solid black; ">An alternative interface to the CAS, providing Java-based UIMA Analysis components with
+              the same artifacts (e.g. documents), supporting multi-lingual and multi-modal analysis.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">JCas</td><td style="border-bottom: 1px solid black; ">An alternative interface to the CAS, providing Java-based UIMA Analysis components with
               native Java object access to CAS types and their attributes or features, using the
-              JavaBeans conventions of getters and setters.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Collection Processing Management (CPM)</td><td style="border-bottom: 0.5pt solid black; ">Core functions for running UIMA collection processing engines in collocated and/or
+              JavaBeans conventions of getters and setters.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Collection Processing Management (CPM)</td><td style="border-bottom: 1px solid black; ">Core functions for running UIMA collection processing engines in collocated and/or
               distributed configurations. The CPM provides scalability across parallel processing pipelines,
-              check-pointing, performance monitoring and recoverability.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Resource Manager</td><td style="border-bottom: 0.5pt solid black; ">Provides UIMA components with run-time access to external resources handling capabilities
-              such as resource naming, sharing, and caching. </td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Configuration Manager</td><td style="border-bottom: 0.5pt solid black; ">Provides UIMA components with run-time access to their configuration parameter settings.
-              </td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Logger</td><td style="border-bottom: 0.5pt solid black; ">Provides access to a common logging facility.</td></tr><tr><td class="tableSubhead" style="border-bottom: 0.5pt solid black; " colspan="2" align="center"> Tools and Utilities
-              </td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">JCasGen</td><td style="border-bottom: 0.5pt solid black; ">Utility for generating a Java object model for CAS types from a UIMA XML type system
-              definition.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Saving and Restoring CAS contents</td><td style="border-bottom: 0.5pt solid black; ">APIs in the core framework support saving and restoring the contents of a CAS to streams 
+              check-pointing, performance monitoring and recoverability.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Resource Manager</td><td style="border-bottom: 1px solid black; ">Provides UIMA components with run-time access to external resources handling capabilities
+              such as resource naming, sharing, and caching. </td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Configuration Manager</td><td style="border-bottom: 1px solid black; ">Provides UIMA components with run-time access to their configuration parameter settings.
+              </td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Logger</td><td style="border-bottom: 1px solid black; ">Provides access to a common logging facility.</td></tr><tr><td class="tableSubhead" style="border-bottom: 1px solid black; " colspan="2" align="center"> Tools and Utilities
+              </td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">JCasGen</td><td style="border-bottom: 1px solid black; ">Utility for generating a Java object model for CAS types from a UIMA XML type system
+              definition.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Saving and Restoring CAS contents</td><td style="border-bottom: 1px solid black; ">APIs in the core framework support saving and restoring the contents of a CAS to streams 
               in multiple formats, including XMI, binary, and compressed forms.  
-              These apis are collected into the CasIOUtils class.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">PEAR Packager for Eclipse</td><td style="border-bottom: 0.5pt solid black; ">Tool for building a UIMA component archive to facilitate porting, registering, installing and
-              testing components.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">PEAR Installer</td><td style="border-bottom: 0.5pt solid black; ">Tool for installing and verifying a UIMA component archive in a UIMA installation.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">PEAR Merger</td><td style="border-bottom: 0.5pt solid black; ">Utility that combines multiple PEARs into one.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Component Descriptor Editor</td><td style="border-bottom: 0.5pt solid black; ">Eclipse Plug-in for specifying and configuring component descriptors for UIMA analysis
+              These apis are collected into the CasIOUtils class.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">PEAR Packager for Eclipse</td><td style="border-bottom: 1px solid black; ">Tool for building a UIMA component archive to facilitate porting, registering, installing and
+              testing components.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">PEAR Installer</td><td style="border-bottom: 1px solid black; ">Tool for installing and verifying a UIMA component archive in a UIMA installation.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">PEAR Merger</td><td style="border-bottom: 1px solid black; ">Utility that combines multiple PEARs into one.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Component Descriptor Editor</td><td style="border-bottom: 1px solid black; ">Eclipse Plug-in for specifying and configuring component descriptors for UIMA analysis
               engines as well as other UIMA component types including Collection Readers and CAS
-              Consumers.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">CPE Configurator</td><td style="border-bottom: 0.5pt solid black; ">Graphical tool for configuring Collection Processing Engines and applying them to
-              collections of documents.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Java Annotation Viewer</td><td style="border-bottom: 0.5pt solid black; ">Viewer for exploring annotations and related CAS data.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">CAS Visual Debugger</td><td style="border-bottom: 0.5pt solid black; ">GUI Java application that provides developers with detailed visual view of the contents of a
-              CAS.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Document Analyzer</td><td style="border-bottom: 0.5pt solid black; ">GUI Java application that applies analysis engines to sets of documents and shows results in a
-              viewer.</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">CAS Editor</td><td style="border-bottom: 0.5pt solid black; ">Eclipse plug-in that lets you edit the contents of a CAS</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">UIMA Pipeline Eclipse Launcher</td><td style="border-bottom: 0.5pt solid black; ">Eclipse plug-in that lets you configure Eclipse launchers for UIMA pipelines</td></tr><tr><td class="tableSubhead" style="border-bottom: 0.5pt solid black; " colspan="2" align="center"> Example Analysis
-              Components </td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Database Writer</td><td style="border-bottom: 0.5pt solid black; ">CAS Consumer that writes the content of selected CAS types into a relational database, using
-              JDBC. This code is in cpe/PersonTitleDBWriterCasConsumer. </td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Annotators</td><td style="border-bottom: 0.5pt solid black; "> Set of simple annotators meant for pedagogical purposes. Includes: Date/time, Room-number,
+              Consumers.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">CPE Configurator</td><td style="border-bottom: 1px solid black; ">Graphical tool for configuring Collection Processing Engines and applying them to
+              collections of documents.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Java Annotation Viewer</td><td style="border-bottom: 1px solid black; ">Viewer for exploring annotations and related CAS data.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">CAS Visual Debugger</td><td style="border-bottom: 1px solid black; ">GUI Java application that provides developers with detailed visual view of the contents of a
+              CAS.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Document Analyzer</td><td style="border-bottom: 1px solid black; ">GUI Java application that applies analysis engines to sets of documents and shows results in a
+              viewer.</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">CAS Editor</td><td style="border-bottom: 1px solid black; ">Eclipse plug-in that lets you edit the contents of a CAS</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">UIMA Pipeline Eclipse Launcher</td><td style="border-bottom: 1px solid black; ">Eclipse plug-in that lets you configure Eclipse launchers for UIMA pipelines</td></tr><tr><td class="tableSubhead" style="border-bottom: 1px solid black; " colspan="2" align="center"> Example Analysis
+              Components </td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Database Writer</td><td style="border-bottom: 1px solid black; ">CAS Consumer that writes the content of selected CAS types into a relational database, using
+              JDBC. This code is in cpe/PersonTitleDBWriterCasConsumer. </td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Annotators</td><td style="border-bottom: 1px solid black; "> Set of simple annotators meant for pedagogical purposes. Includes: Date/time, Room-number,
               Regular expression, Tokenizer, and Meeting-finder annotator. There are sample CAS Multipliers
-              as well. </td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Flow Controllers</td><td style="border-bottom: 0.5pt solid black; "> There is a sample flow-controller based on the whiteboard concept of sending the CAS to whatever
-              annotator hasn't yet processed it, when that annotator's inputs are available in the CAS. </td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">XMI Collection Reader, CAS Consumer</td><td style="border-bottom: 0.5pt solid black; ">Reads and writes the CAS in the XMI format</td></tr><tr><td style="border-right: 0.5pt solid black; ">File System Collection Reader</td><td style=""> Simple Collection Reader for pulling documents from the file system and initializing CASes.
+              as well. </td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Flow Controllers</td><td style="border-bottom: 1px solid black; "> There is a sample flow-controller based on the whiteboard concept of sending the CAS to whatever
+              annotator hasn't yet processed it, when that annotator's inputs are available in the CAS. </td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">XMI Collection Reader, CAS Consumer</td><td style="border-bottom: 1px solid black; ">Reads and writes the CAS in the XMI format</td></tr><tr><td style="border-right: 1px solid black; ">File System Collection Reader</td><td style=""> Simple Collection Reader for pulling documents from the file system and initializing CASes.
               </td></tr></tbody></table>
     </div>
   </div>
   
 </div>
-  <div class="chapter" title="Chapter&nbsp;2.&nbsp;UIMA Conceptual Overview" id="ugr.ovv.conceptual"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;2.&nbsp;UIMA Conceptual Overview</h2></div></div></div>
+  <div class="chapter" id="ugr.ovv.conceptual"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;2.&nbsp;UIMA Conceptual Overview</h1></div></div></div>
   
   
   <p>UIMA is an open, industrial-strength, scaleable and extensible platform for
@@ -446,11 +446,11 @@
     treatments of key concepts and development practices. It may be useful to refer to <a href="overview_and_setup.html#ugr.glossary" class="olink">Glossary</a>, to become familiar
     with the terminology in this overview.</p>
   
-  <div class="section" title="2.1.&nbsp;UIMA Introduction"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.conceptual.uima_introduction">2.1.&nbsp;UIMA Introduction</h2></div></div></div>
+  <div class="section" id="ugr.ovv.conceptual.uima_introduction"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.1.&nbsp;UIMA Introduction</h2></div></div></div>
     
-    <div class="figure"><a name="ugr.ovv.conceptual.fig.bridge"></a><div class="figure-contents">
+    <div class="figure" id="ugr.ovv.conceptual.fig.bridge"><div class="figure-contents">
       
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="545"><tr><td><img src="images/overview-and-setup/conceptual_overview_files/image002.png" width="545" alt="Picture of a bridge between unstructured information artifacts and structured metadata about those artifacts"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="545"><tr><td><img src="images/overview-and-setup/conceptual_overview_files/image002.png" width="545" alt="Picture of a bridge between unstructured information artifacts and structured metadata about those artifacts"></td></tr></table></div>
     </div><p class="title"><b>Figure&nbsp;2.1.&nbsp;UIMA helps you build the bridge between the unstructured and structured
         worlds</b></p></div><br class="figure-break">
     
@@ -493,7 +493,7 @@
     <p>In analyzing unstructured content, UIM applications make use of a variety of
       analysis technologies including:</p>
     
-    <div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem"><p>Statistical and rule-based Natural Language Processing
+    <div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>Statistical and rule-based Natural Language Processing
         (NLP)</p>
       </li><li class="listitem"><p>Information Retrieval (IR)</p>
       </li><li class="listitem"><p>Machine learning</p>
@@ -524,7 +524,7 @@
     
   </div>
   
-  <div class="section" title="2.2.&nbsp;The Architecture, the Framework and the SDK"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.conceptual.architecture_framework_sdk">2.2.&nbsp;The Architecture, the Framework and the SDK</h2></div></div></div>
+  <div class="section" id="ugr.ovv.conceptual.architecture_framework_sdk"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.2.&nbsp;The Architecture, the Framework and the SDK</h2></div></div></div>
     
     <p>UIMA is a software architecture which specifies component interfaces, data
       representations, design patterns and development roles for creating, describing,
@@ -543,18 +543,18 @@
     
   </div>
   
-  <div class="section" title="2.3.&nbsp;Analysis Basics"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.conceptual.analysis_basics">2.3.&nbsp;Analysis Basics</h2></div></div></div>
+  <div class="section" id="ugr.ovv.conceptual.analysis_basics"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.3.&nbsp;Analysis Basics</h2></div></div></div>
     
-    <div class="note" title="Key UIMA Concepts Introduced in this Section:" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Key UIMA Concepts Introduced in this Section:</h3><p>Analysis Engine, Document, Annotator, Annotator
+    <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Key UIMA Concepts Introduced in this Section:</h3><p>Analysis Engine, Document, Annotator, Annotator
       Developer, Type, Type System, Feature, Annotation, CAS, Sofa, JCas, UIMA
       Context.</p>
     </div>
     
-    <div class="section" title="2.3.1.&nbsp;Analysis Engines, Annotators &amp; Results"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.conceptual.aes_annotators_and_analysis_results">2.3.1.&nbsp;Analysis Engines, Annotators &amp; Results</h3></div></div></div>
+    <div class="section" id="ugr.ovv.conceptual.aes_annotators_and_analysis_results"><div class="titlepage"><div><div><h3 class="title">2.3.1.&nbsp;Analysis Engines, Annotators &amp; Results</h3></div></div></div>
       
-      <div class="figure"><a name="ugr.ovv.conceptual.metadata_in_cas"></a><div class="figure-contents">
+      <div class="figure" id="ugr.ovv.conceptual.metadata_in_cas"><div class="figure-contents">
         
-        <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="594"><tr><td align="center"><img src="images/overview-and-setup/conceptual_overview_files/image004.png" align="middle" width="594" alt="Picture of some text, with a hierarchy of discovered metadata about words in the text, including some image of a person as metadata about that name."></td></tr></table></div>
+        <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="594"><tr><td align="center"><img src="images/overview-and-setup/conceptual_overview_files/image004.png" align="middle" width="594" alt="Picture of some text, with a hierarchy of discovered metadata about words in the text, including some image of a person as metadata about that name."></td></tr></table></div>
       </div><p class="title"><b>Figure&nbsp;2.2.&nbsp;Objects represented in the Common Analysis Structure (CAS)</b></p></div><br class="figure-break">
       
       <p>UIMA is an architecture in which basic building blocks called Analysis Engines
@@ -630,7 +630,7 @@
         AEs. </p>
     </div>
     
-    <div class="section" title="2.3.2.&nbsp;Representing Analysis Results in the CAS"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.conceptual.representing_results_in_cas">2.3.2.&nbsp;Representing Analysis Results in the CAS</h3></div></div></div>
+    <div class="section" id="ugr.ovv.conceptual.representing_results_in_cas"><div class="titlepage"><div><div><h3 class="title">2.3.2.&nbsp;Representing Analysis Results in the CAS</h3></div></div></div>
       
       
       <p>How annotators represent and share their results is an important part of the UIMA
@@ -641,7 +641,7 @@
         objects, properties and values. Object types may be related to each other in a
         single-inheritance hierarchy. The CAS logically (if not physically) contains the
         document being analyzed. Analysis developers share and record their analysis
-        results in terms of an object model within the CAS. <sup>[<a name="d5e551" href="#ftn.d5e551" class="footnote">1</a>]</sup> </p>
+        results in terms of an object model within the CAS. <a href="#ftn.d5e551" class="footnote"><sup class="footnote" id="d5e551">[1]</sup></a> </p>
       
       <p>The UIMA framework includes an implementation and interfaces to the CAS. For a
         more detailed description of the CAS and its interfaces see <a href="references.html#d5e1" class="olink">UIMA References</a> <a href="references.html#ugr.ref.cas" class="olink">Chapter&nbsp;4, <i>CAS Reference</i></a>.</p>
@@ -681,7 +681,7 @@
         <span class="emphasis"><em>Organization</em></span>. <span class="emphasis"><em>NounPhrase</em></span> may be a
         subtype of a <span class="emphasis"><em>ParseNode</em></span>.</p>
       
-      <div class="section" title="2.3.2.1.&nbsp;The Annotation Type"><div class="titlepage"><div><div><h4 class="title" id="ugr.ovv.conceptual.annotation_type">2.3.2.1.&nbsp;The Annotation Type</h4></div></div></div>
+      <div class="section" id="ugr.ovv.conceptual.annotation_type"><div class="titlepage"><div><div><h4 class="title">2.3.2.1.&nbsp;The Annotation Type</h4></div></div></div>
         
         
         <p>A general and common type used in artifact analysis and from which additional
@@ -705,7 +705,7 @@
           create another person annotation to record the detection of a mention of a person in
           the span between positions 101 and 112. </p>
       </div>
-      <div class="section" title="2.3.2.2.&nbsp;Not Just Annotations"><div class="titlepage"><div><div><h4 class="title" id="ugr.ovv.conceptual.not_just_annotations">2.3.2.2.&nbsp;Not Just Annotations</h4></div></div></div>
+      <div class="section" id="ugr.ovv.conceptual.not_just_annotations"><div class="titlepage"><div><div><h4 class="title">2.3.2.2.&nbsp;Not Just Annotations</h4></div></div></div>
         
         
         <p>While the annotation type is a useful type for annotating regions of a
@@ -749,7 +749,7 @@
           with the appropriate features to point to regions of an image.</p>
       </div>
       
-      <div class="section" title="2.3.2.3.&nbsp;Multiple Views within a CAS"><div class="titlepage"><div><div><h4 class="title" id="ugr.ovv.conceptual.multiple_views_within_a_cas">2.3.2.3.&nbsp;Multiple Views within a CAS</h4></div></div></div>
+      <div class="section" id="ugr.ovv.conceptual.multiple_views_within_a_cas"><div class="titlepage"><div><div><h4 class="title">2.3.2.3.&nbsp;Multiple Views within a CAS</h4></div></div></div>
         
         
         <p>UIMA supports the simultaneous analysis of multiple views of a document. This
@@ -770,7 +770,7 @@
       </div>
     </div>
     
-    <div class="section" title="2.3.3.&nbsp;Interacting with the CAS and External Resources"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.conceptual.interacting_with_cas_and_external_resources">2.3.3.&nbsp;Interacting with the CAS and External Resources</h3></div></div></div>
+    <div class="section" id="ugr.ovv.conceptual.interacting_with_cas_and_external_resources"><div class="titlepage"><div><div><h3 class="title">2.3.3.&nbsp;Interacting with the CAS and External Resources</h3></div></div></div>
       
       
       
@@ -801,7 +801,7 @@
         the UIMA Context see <a href="tutorials_and_users_guides.html#d5e1" class="olink">UIMA Tutorial and Developers' Guides</a> <a href="tutorials_and_users_guides.html#ugr.tug.aae" class="olink">Chapter&nbsp;1, <i>Annotator and Analysis Engine Developer's Guide</i></a>.</p>
       
     </div>
-    <div class="section" title="2.3.4.&nbsp;Component Descriptors"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.conceptual.component_descriptors">2.3.4.&nbsp;Component Descriptors</h3></div></div></div>
+    <div class="section" id="ugr.ovv.conceptual.component_descriptors"><div class="titlepage"><div><div><h3 class="title">2.3.4.&nbsp;Component Descriptors</h3></div></div></div>
       
       <p>UIMA defines interfaces for a small set of core components that users of the
         framework provide implmentations for. Annotators and Analysis Engines are two of
@@ -812,7 +812,7 @@
         later, but for every component specified in UIMA there are two parts required for its
         implementation:</p>
       
-      <div class="orderedlist"><ol class="orderedlist" type="1" compact><li class="listitem"><p>the declarative part and</p></li><li class="listitem"><p>the code part.</p></li></ol></div>
+      <div class="orderedlist"><ol class="orderedlist compact" type="1"><li class="listitem"><p>the declarative part and</p></li><li class="listitem"><p>the code part.</p></li></ol></div>
       
       <p>The declarative part contains metadata describing the component, its
         identity, structure and behavior and is called the <span class="bold"><strong>
@@ -853,16 +853,16 @@
       
     </div>
   </div>
-  <div class="section" title="2.4.&nbsp;Aggregate Analysis Engines"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.conceptual.aggregate_analysis_engines">2.4.&nbsp;Aggregate Analysis Engines</h2></div></div></div>
+  <div class="section" id="ugr.ovv.conceptual.aggregate_analysis_engines"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.4.&nbsp;Aggregate Analysis Engines</h2></div></div></div>
     
     
-    <div class="note" title="Key UIMA Concepts Introduced in this Section:" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Key UIMA Concepts Introduced in this Section:</h3><p>Aggregate Analysis Engine, Delegate Analysis Engine,
+    <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Key UIMA Concepts Introduced in this Section:</h3><p>Aggregate Analysis Engine, Delegate Analysis Engine,
       Tightly and Loosely Coupled, Flow Specification, Analysis Engine Assembler</p>
     </div>
     
-    <div class="figure"><a name="ugr.ovv.conceptual.sample_aggregate"></a><div class="figure-contents">
+    <div class="figure" id="ugr.ovv.conceptual.sample_aggregate"><div class="figure-contents">
       
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="588"><tr><td><img src="images/overview-and-setup/conceptual_overview_files/image006.png" width="588" alt="Picture of multiple parts (a language identifier, tokenizer, part of speech annotator, shallow parser, and named entity detector) strung together into a flow, and all of them wrapped as a single aggregate object, which produces as annotations the union of all the results of the individual annotator components ( tokens, parts of speech, names, organizations, places, persons, etc.)"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="588"><tr><td><img src="images/overview-and-setup/conceptual_overview_files/image006.png" width="588" alt="Picture of multiple parts (a language identifier, tokenizer, part of speech annotator, shallow parser, and named entity detector) strung together into a flow, and all of them wrapped as a single aggregate object, which produces as annotations the union of all the results of the individual annotator components ( tokens, parts of speech, names, organizations, places, persons, etc.)"></td></tr></table></div>
     </div><p class="title"><b>Figure&nbsp;2.3.&nbsp;Sample Aggregate Analysis Engine</b></p></div><br class="figure-break">
     
     <p>A simple or primitive UIMA Analysis Engine (AE) contains a single annotator. AEs,
@@ -942,19 +942,19 @@
     
   </div>
   
-  <div class="section" title="2.5.&nbsp;Application Building and Collection Processing"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.conceptual.applicaiton_building_and_collection_processing">2.5.&nbsp;Application Building and Collection Processing</h2></div></div></div>
+  <div class="section" id="ugr.ovv.conceptual.applicaiton_building_and_collection_processing"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.5.&nbsp;Application Building and Collection Processing</h2></div></div></div>
     
     
-    <div class="note" title="Key UIMA Concepts Introduced in this Section:" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Key UIMA Concepts Introduced in this Section:</h3><p>Process Method, Collection Processing Architecture,
+    <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Key UIMA Concepts Introduced in this Section:</h3><p>Process Method, Collection Processing Architecture,
       Collection Reader, CAS Consumer, CAS Initializer, Collection Processing Engine,
       Collection Processing Manager.</p></div>
     
-    <div class="section" title="2.5.1.&nbsp;Using the framework from an Application"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.conceptual.using_framework_from_an_application">2.5.1.&nbsp;Using the framework from an Application</h3></div></div></div>
+    <div class="section" id="ugr.ovv.conceptual.using_framework_from_an_application"><div class="titlepage"><div><div><h3 class="title">2.5.1.&nbsp;Using the framework from an Application</h3></div></div></div>
       
       
-      <div class="figure"><a name="ugr.ovv.conceptual.application_factory_ae"></a><div class="figure-contents">
+      <div class="figure" id="ugr.ovv.conceptual.application_factory_ae"><div class="figure-contents">
         
-        <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="618"><tr><td align="center"><img src="images/overview-and-setup/conceptual_overview_files/image008.png" align="middle" width="618" alt="Picture of application interacting with UIMA's factory to produce an analysis engine, which acts as a container for annotators, and interfaces with the application via the process and getMetaData methods among others."></td></tr></table></div>
+        <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="618"><tr><td align="center"><img src="images/overview-and-setup/conceptual_overview_files/image008.png" align="middle" width="618" alt="Picture of application interacting with UIMA's factory to produce an analysis engine, which acts as a container for annotators, and interfaces with the application via the process and getMetaData methods among others."></td></tr></table></div>
       </div><p class="title"><b>Figure&nbsp;2.4.&nbsp;Using UIMA Framework to create and interact with an Analysis Engine</b></p></div><br class="figure-break">
       
       <p>As mentioned above, the basic AE interface may be thought of as simply CAS in/CAS
@@ -983,18 +983,18 @@
         may be found in <a href="tutorials_and_users_guides.html#d5e1" class="olink">UIMA Tutorial and Developers' Guides</a> <a href="tutorials_and_users_guides.html#ugr.tug.application" class="olink">Chapter&nbsp;3, <i>Application Developer's Guide</i></a>.</p>
     </div>
     
-    <div class="section" title="2.5.2.&nbsp;Graduating to Collection Processing"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.conceptual.graduating_to_collection_processing">2.5.2.&nbsp;Graduating to Collection Processing</h3></div></div></div>
+    <div class="section" id="ugr.ovv.conceptual.graduating_to_collection_processing"><div class="titlepage"><div><div><h3 class="title">2.5.2.&nbsp;Graduating to Collection Processing</h3></div></div></div>
       
-      <div class="figure"><a name="ugr.ovv.conceptual.fig.cpe"></a><div class="figure-contents">
+      <div class="figure" id="ugr.ovv.conceptual.fig.cpe"><div class="figure-contents">
         
-        <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="578"><tr><td align="center"><img src="images/overview-and-setup/conceptual_overview_files/image010.png" align="middle" width="578" alt="High-Level UIMA Component Architecture from Source to Sink"></td></tr></table></div>
+        <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="578"><tr><td align="center"><img src="images/overview-and-setup/conceptual_overview_files/image010.png" align="middle" width="578" alt="High-Level UIMA Component Architecture from Source to Sink"></td></tr></table></div>
       </div><p class="title"><b>Figure&nbsp;2.5.&nbsp;High-Level UIMA Component Architecture from Source to Sink</b></p></div><br class="figure-break">
       
       <p>Many UIM applications analyze entire collections of documents. They connect to
         different document sources and do different things with the results. But in the
         typical case, the application must generally follow these logical steps:
         
-        </p><div class="orderedlist"><ol class="orderedlist" type="1" compact><li class="listitem"><p>Connect to a physical source</p></li><li class="listitem"><p>Acquire a document from the source</p></li><li class="listitem"><p>Initialize a CAS with the document to be analyzed</p>
+        </p><div class="orderedlist"><ol class="orderedlist compact" type="1"><li class="listitem"><p>Connect to a physical source</p></li><li class="listitem"><p>Acquire a document from the source</p></li><li class="listitem"><p>Initialize a CAS with the document to be analyzed</p>
             </li><li class="listitem"><p>Send the CAS to a selected analysis engine</p></li><li class="listitem"><p>Process the resulting CAS</p></li><li class="listitem"><p>Go back to 2 until the collection is processed</p>
             </li><li class="listitem"><p>Do any final processing required after all the documents in the
             collection have been analyzed</p></li></ol></div><p> </p>
@@ -1033,9 +1033,9 @@
           <a href="references.html#ugr.ref.xml.cpe_descriptor" class="olink">Chapter&nbsp;3, <i>Collection Processing Engine Descriptor Reference</i></a>.
         </p>
       
-      <div class="figure"><a name="ugr.ovv.conceptual.fig.cpm"></a><div class="figure-contents">
+      <div class="figure" id="ugr.ovv.conceptual.fig.cpm"><div class="figure-contents">
         
-        <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="576"><tr><td align="center"><img src="images/overview-and-setup/conceptual_overview_files/image012.png" align="middle" width="576" alt="box and arrows picture of application using CPE factory to instantiate a Collection Processing Engine, and that engine interacting with the application."></td></tr></table></div>
+        <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="576"><tr><td align="center"><img src="images/overview-and-setup/conceptual_overview_files/image012.png" align="middle" width="576" alt="box and arrows picture of application using CPE factory to instantiate a Collection Processing Engine, and that engine interacting with the application."></td></tr></table></div>
       </div><p class="title"><b>Figure&nbsp;2.6.&nbsp;Collection Processing Manager in UIMA Framework</b></p></div><br class="figure-break">
       
       <p>The UIMA framework includes a <span class="bold"><strong>Collection Processing
@@ -1071,13 +1071,13 @@
     
   </div>
   
-  <div class="section" title="2.6.&nbsp;Exploiting Analysis Results"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.conceptual.exploiting_analysis_results">2.6.&nbsp;Exploiting Analysis Results</h2></div></div></div>
+  <div class="section" id="ugr.ovv.conceptual.exploiting_analysis_results"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.6.&nbsp;Exploiting Analysis Results</h2></div></div></div>
     
     
-    <div class="note" title="Key UIMA Concepts Introduced in this Section:" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Key UIMA Concepts Introduced in this Section:</h3><p>Semantic Search, XML Fragment Queries.</p>
+    <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Key UIMA Concepts Introduced in this Section:</h3><p>Semantic Search, XML Fragment Queries.</p>
     </div>
     
-    <div class="section" title="2.6.1.&nbsp;Semantic Search"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.conceptual.semantic_search">2.6.1.&nbsp;Semantic Search</h3></div></div></div>
+    <div class="section" id="ugr.ovv.conceptual.semantic_search"><div class="titlepage"><div><div><h3 class="title">2.6.1.&nbsp;Semantic Search</h3></div></div></div>
       
       
       <p>In a simple UIMA Collection Processing Engine (CPE), a Collection Reader reads
@@ -1141,7 +1141,7 @@
         integrating text analysis and search in <a href="tutorials_and_users_guides.html#d5e1" class="olink">UIMA Tutorial and Developers' Guides</a> <a href="tutorials_and_users_guides.html#ugr.tug.application" class="olink">Chapter&nbsp;3, <i>Application Developer's Guide</i></a>.</p>
     </div>
     
-    <div class="section" title="2.6.2.&nbsp;Databases"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.conceptual.databases">2.6.2.&nbsp;Databases</h3></div></div></div>
+    <div class="section" id="ugr.ovv.conceptual.databases"><div class="titlepage"><div><div><h3 class="title">2.6.2.&nbsp;Databases</h3></div></div></div>
       
       
       <p>Search engine indices are not the only place to deposit analysis results for use
@@ -1154,7 +1154,7 @@
     </div>
   </div>
   
-  <div class="section" title="2.7.&nbsp;Multimodal Processing in UIMA"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.conceptual.multimodal_processing">2.7.&nbsp;Multimodal Processing in UIMA</h2></div></div></div>
+  <div class="section" id="ugr.ovv.conceptual.multimodal_processing"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.7.&nbsp;Multimodal Processing in UIMA</h2></div></div></div>
     
     <p>In previous sections we've seen how the CAS is initialized with an initial
       artifact that will be subsequently analyzed by Analysis engines and CAS Consumers. The
@@ -1162,9 +1162,9 @@
       form of annotations. Subsequent Analysis engines will make further assertions about
       both the artifact and previous analysis results, and finally one or more CAS Consumers
       will extract information from these CASs for structured information storage.</p>
-    <div class="figure"><a name="ugr.ovv.conceptual.fig.multiple_sofas"></a><div class="figure-contents">
+    <div class="figure" id="ugr.ovv.conceptual.fig.multiple_sofas"><div class="figure-contents">
       
-      <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="576"><tr><td align="center"><img src="images/overview-and-setup/conceptual_overview_files/image014.png" align="middle" width="576" alt="Picture showing audio on the left broken into segments by a segmentation component, then sent to multiple analysis pipelines in parallel, some processing the raw audio, others processing the recognized speech as text."></td></tr></table></div>
+      <div class="mediaobject" align="center"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="576"><tr><td align="center"><img src="images/overview-and-setup/conceptual_overview_files/image014.png" align="middle" width="576" alt="Picture showing audio on the left broken into segments by a segmentation component, then sent to multiple analysis pipelines in parallel, some processing the raw audio, others processing the recognized speech as text."></td></tr></table></div>
     </div><p class="title"><b>Figure&nbsp;2.7.&nbsp;Multiple Sofas in support of multi-modal analysis of an audio Stream. Some
         engines work on the audio <span class="quote">&#8220;<span class="quote">view</span>&#8221;</span>, some on the text
         <span class="quote">&#8220;<span class="quote">view</span>&#8221;</span> and some on both.</b></p></div><br class="figure-break">
@@ -1207,7 +1207,7 @@
       </p>
   </div>
   
-  <div class="section" title="2.8.&nbsp;Next Steps"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.conceptual.next_steps">2.8.&nbsp;Next Steps</h2></div></div></div>
+  <div class="section" id="ugr.ovv.conceptual.next_steps"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.8.&nbsp;Next Steps</h2></div></div></div>
     
     
     <p>This chapter presented a high-level overview of UIMA concepts. Along the way, it
@@ -1229,12 +1229,12 @@
     <p>This paper can be found on line at <a class="ulink" href="http://www.research.ibm.com/journal/sj43-3.html" target="_top">http://www.research.ibm.com/journal/sj43-3.html</a></p>
   </div>
   
-<div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.d5e551" href="#d5e551" class="para">1</a>] </sup> We have plans to
+<div class="footnotes"><br><hr style="width:100; text-align:left;margin-left: 0"><div id="ftn.d5e551" class="footnote"><p><a href="#d5e551" class="para"><sup class="para">[1] </sup></a> We have plans to
         extend the representational capabilities of the CAS and align its semantics with the
         semantics of the OMG's Essential Meta-Object Facility (EMOF) and with the
         semantics of the Eclipse Modeling Framework's ( <a class="ulink" href="http://www.eclipse.org/emf/" target="_top">http://www.eclipse.org/emf/</a>) Ecore semantics and XMI-based
         representation.</p> </div></div></div>
-  <div class="chapter" title="Chapter&nbsp;3.&nbsp;Setting up the Eclipse IDE to work with UIMA" id="ugr.ovv.eclipse_setup"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;3.&nbsp;Setting up the Eclipse IDE to work with UIMA</h2></div></div></div>
+  <div class="chapter" id="ugr.ovv.eclipse_setup"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;3.&nbsp;Setting up the Eclipse IDE to work with UIMA</h1></div></div></div>
   
   
   
@@ -1251,7 +1251,7 @@
   
   <p>This chapter provides instructions for
     
-    </p><div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem"><p>installing Eclipse, </p>
+    </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>installing Eclipse, </p>
       </li><li class="listitem"><p>installing the UIMA SDK's Eclipse plugins into your Eclipse
         environment, and </p></li><li class="listitem"><p>importing the example UIMA code into an Eclipse project. </p>
         </li></ul></div>
@@ -1260,15 +1260,15 @@
     later.
   </p>
   
-  <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>You will need to run Eclipse using a Java at the 1.8 or later level, in order
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>You will need to run Eclipse using a Java at the 1.8 or later level, in order
   to use the UIMA Eclipse plugins.</p></div>
   
-  <div class="section" title="3.1.&nbsp;Installation"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.eclipse_setup.installation">3.1.&nbsp;Installation</h2></div></div></div>
+  <div class="section" id="ugr.ovv.eclipse_setup.installation"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.1.&nbsp;Installation</h2></div></div></div>
     
-    <div class="section" title="3.1.1.&nbsp;Install Eclipse"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.eclipse_setup.install_eclipse">3.1.1.&nbsp;Install Eclipse</h3></div></div></div>
+    <div class="section" id="ugr.ovv.eclipse_setup.install_eclipse"><div class="titlepage"><div><div><h3 class="title">3.1.1.&nbsp;Install Eclipse</h3></div></div></div>
       
       
-      <div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem"><p>Go to <a class="ulink" href="http://www.eclipse.org" target="_top">http://www.eclipse.org</a> and follow the instructions there to download Eclipse.
+      <div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>Go to <a class="ulink" href="http://www.eclipse.org" target="_top">http://www.eclipse.org</a> and follow the instructions there to download Eclipse.
         </p></li><li class="listitem"><p>We recommend using the latest release level. 
           Navigate to the Eclipse Release version you
           want and download the archive for your platform.</p></li><li class="listitem"><p>Unzip the archive to install Eclipse somewhere, e.g., c:\</p>
@@ -1283,14 +1283,14 @@
         the main Eclipse screens.</p>
     </div>
     
-    <div class="section" title="3.1.2.&nbsp;Installing the UIMA Eclipse Plugins"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.eclipse_setup.install_uima_eclipse_plugins">3.1.2.&nbsp;Installing the UIMA Eclipse Plugins</h3></div></div></div>
+    <div class="section" id="ugr.ovv.eclipse_setup.install_uima_eclipse_plugins"><div class="titlepage"><div><div><h3 class="title">3.1.2.&nbsp;Installing the UIMA Eclipse Plugins</h3></div></div></div>
       
       
       <p>The best way to do this is to use the Eclipse Install New Software mechanism, because that will 
         insure that all needed prerequisites are also installed.  See below for an alternative,
         manual approach.</p>
       
-        <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If your computer is on an internet connection which uses a proxy server, you can
+        <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If your computer is on an internet connection which uses a proxy server, you can
         configure Eclipse to know about that. Put your proxy settings into Eclipse using the
         Eclipse preferences by accessing the menus: Window <span class="symbol">&#8594;</span> Preferences... <span class="symbol">&#8594;</span>
         Install/Update, and Enable HTTP proxy connection under the Proxy Settings with the
@@ -1300,7 +1300,7 @@
       <p>To use the Eclipse Install New Software mechanism, start Eclipse, and then pick the menu 
         <span class="command"><strong>Help <span class="symbol">&#8594;</span> Install new software...</strong></span>.  In the next page, enter
         the following URL in the "Work with" box and press enter:
-        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p></p><code class="code">https://www.apache.org/dist/uima/eclipse-update-site/</code> or</li><li class="listitem"><p></p><code class="code">https://www.apache.org/dist/uima/eclipse-update-site-v3/</code>.</li></ul></div><p>
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p></p><code class="code">https://www.apache.org/dist/uima/eclipse-update-site/</code> or</li><li class="listitem"><p></p><code class="code">https://www.apache.org/dist/uima/eclipse-update-site-v3/</code>.</li></ul></div><p>
         Choose the 2nd if you are working with core UIMA Java SDK at version 3 or later.
        .</p>
       
@@ -1310,7 +1310,7 @@
 
     
     
-    <div class="section" title="3.1.3.&nbsp;Install the UIMA SDK"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.eclipse_setup.install_uima_sdk">3.1.3.&nbsp;Install the UIMA SDK</h3></div></div></div>
+    <div class="section" id="ugr.ovv.eclipse_setup.install_uima_sdk"><div class="titlepage"><div><div><h3 class="title">3.1.3.&nbsp;Install the UIMA SDK</h3></div></div></div>
       
       <p>If you haven't already done so, please download and install the UIMA SDK from
           <a class="ulink" href="http://uima.apache.org" target="_top">http://uima.apache.org</a>.  Be sure to set the environmental variable
@@ -1324,7 +1324,7 @@
 
     </div>
     
-    <div class="section" title="3.1.4.&nbsp;Installing the UIMA Eclipse Plugins, manually"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.eclipse_setup.install_uima_eclipse_plugins_manually">3.1.4.&nbsp;Installing the UIMA Eclipse Plugins, manually</h3></div></div></div>
+    <div class="section" id="ugr.ovv.eclipse_setup.install_uima_eclipse_plugins_manually"><div class="titlepage"><div><div><h3 class="title">3.1.4.&nbsp;Installing the UIMA Eclipse Plugins, manually</h3></div></div></div>
       
       
       <p>If you installed the UIMA plugins using the update mechanism above, please skip this section.</p>
@@ -1337,7 +1337,7 @@
       
     </div>
     
-    <div class="section" title="3.1.5.&nbsp;Start Eclipse"><div class="titlepage"><div><div><h3 class="title" id="ugr.ovv.eclipse_setup.start_eclipse">3.1.5.&nbsp;Start Eclipse</h3></div></div></div>
+    <div class="section" id="ugr.ovv.eclipse_setup.start_eclipse"><div class="titlepage"><div><div><h3 class="title">3.1.5.&nbsp;Start Eclipse</h3></div></div></div>
       
       <p>If you have Eclipse running, restart it (shut it down, and start it again) using
         the
@@ -1346,7 +1346,7 @@
         directory where you installed Eclipse. You may want to set up a desktop shortcut at
         this point for Eclipse.</p>
       
-      <div class="section" title="3.1.5.1.&nbsp;Special startup parameter for Eclipse: -clean"><div class="titlepage"><div><div><h4 class="title" id="ugr.ovv.eclipse_setup.special_startup_parameter_clean">3.1.5.1.&nbsp;Special startup parameter for Eclipse: -clean</h4></div></div></div>
+      <div class="section" id="ugr.ovv.eclipse_setup.special_startup_parameter_clean"><div class="titlepage"><div><div><h4 class="title">3.1.5.1.&nbsp;Special startup parameter for Eclipse: -clean</h4></div></div></div>
         
         <p>If you have modified the plugin structure (by copying or files directly in the
           file system) after you started it for the first time, please include
@@ -1359,17 +1359,17 @@
       
     </div>
   </div>
-  <div class="section" title="3.2.&nbsp;Setting up Eclipse to view Example Code"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.eclipse_setup.example_code">3.2.&nbsp;Setting up Eclipse to view Example Code</h2></div></div></div>
+  <div class="section" id="ugr.ovv.eclipse_setup.example_code"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.2.&nbsp;Setting up Eclipse to view Example Code</h2></div></div></div>
     
     <p>Later chapters refer to example code. Here's how to create a special project in Eclipse to
       hold the examples.</p>
     
-    <div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem"><p>In Eclipse, if the Java
+    <div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>In Eclipse, if the Java
       perspective is not already open, switch to it by going to Window <span class="symbol">&#8594;</span> Open Perspective
       <span class="symbol">&#8594;</span> Java.</p></li><li class="listitem"><p>Set up a class path variable named UIMA_HOME, whose value is the
         directory where you installed the UIMA SDK. This is done as follows:
         
-        </p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p>Go to Window <span class="symbol">&#8594;</span> Preferences <span class="symbol">&#8594;</span> Java
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>Go to Window <span class="symbol">&#8594;</span> Preferences <span class="symbol">&#8594;</span> Java
           <span class="symbol">&#8594;</span> Build Path <span class="symbol">&#8594;</span> Classpath Variables.</p></li><li class="listitem"><p>Click <span class="quote">&#8220;<span class="quote">New</span>&#8221;</span></p></li><li class="listitem"><p>Enter UIMA_HOME (all capitals, exactly as written) in the
             <span class="quote">&#8220;<span class="quote">Name</span>&#8221;</span> field.</p></li><li class="listitem"><p>Enter your installation directory (e.g. <code class="literal">C:/Program
             Files/apache-uima</code>) in the <span class="quote">&#8220;<span class="quote">Path</span>&#8221;</span> field</p>
@@ -1388,10 +1388,10 @@
     
   </div>
    
-  <div class="section" title="3.3.&nbsp;Adding the UIMA source code to the jar files"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.eclipse_setup.adding_source">3.3.&nbsp;Adding the UIMA source code to the jar files</h2></div></div></div>
+  <div class="section" id="ugr.ovv.eclipse_setup.adding_source"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.3.&nbsp;Adding the UIMA source code to the jar files</h2></div></div></div>
     
     
-    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you are running a current version of Eclipse, and have the m2e (Maven extensions for Eclipse) 
+    <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you are running a current version of Eclipse, and have the m2e (Maven extensions for Eclipse) 
     plugin installed, Eclipse should be able to automatically download the source for the jars, so you may not need
     to do anything special (it does take a few seconds, and you need an internet connection).</p></div>
     <p>Otherwise, if you would like to be able to jump to the UIMA source code in Eclipse or to step
@@ -1400,7 +1400,7 @@
     to the jars, you need to:
     </p>
     
-    <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
     <p>
     Download and unpack the UIMA source distribution.
     </p>
@@ -1426,7 +1426,7 @@
   </div>
   
   
-  <div class="section" title="3.4.&nbsp;Attaching UIMA Javadocs"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.eclipse_setup.linking_uima_javadocs">3.4.&nbsp;Attaching UIMA Javadocs</h2></div></div></div>
+  <div class="section" id="ugr.ovv.eclipse_setup.linking_uima_javadocs"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.4.&nbsp;Attaching UIMA Javadocs</h2></div></div></div>
      
      
      <p>The binary distribution also includes the UIMA Javadocs.  They are
@@ -1434,7 +1434,7 @@
        above.  You can attach the Javadocs to your own project as well.  
      </p>
     
-     <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you attached the source as described in the previous section, you 
+     <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you attached the source as described in the previous section, you 
      don't need to attach the Javadocs because the source includes the Javadoc comments.</p></div>
      
      <p>Attaching the Javadocs enables Javadoc help for UIMA APIs.  After they are 
@@ -1468,12 +1468,12 @@
      </p>
 
        <div class="informalfigure">
-         <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/overview-and-setup/eclipse_setup_files/image004.jpg" width="564" alt="Screenshot of mouse-over for UIMA APIs"></td></tr></table></div>
+         <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/overview-and-setup/eclipse_setup_files/image004.jpg" width="564" alt="Screenshot of mouse-over for UIMA APIs"></td></tr></table></div>
        </div>
        
    </div>
    
-  <div class="section" title="3.5.&nbsp;Running external tools from Eclipse"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.ovv.eclipse_setup.running_external_tools_from_eclipse">3.5.&nbsp;Running external tools from Eclipse</h2></div></div></div>
+  <div class="section" id="ugr.ovv.eclipse_setup.running_external_tools_from_eclipse"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.5.&nbsp;Running external tools from Eclipse</h2></div></div></div>
     
     
     <p>You can run many tools without using Eclipse at all, by using the shell scripts in the
@@ -1484,7 +1484,7 @@
     
     <p>To run these tools from Eclipse:</p>
     
-    <div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem"><p>If the Java perspective is not
+    <div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>If the Java perspective is not
       already open, switch to it by going to Window <span class="symbol">&#8594;</span> Open Perspective <span class="symbol">&#8594;</span>
       Java.</p></li><li class="listitem"><p>Go to Run <span class="symbol">&#8594;</span> Run... </p></li><li class="listitem"><p>In the window that appears, select <span class="quote">&#8220;<span class="quote">UIMA CPE GUI</span>&#8221;</span>,
         <span class="quote">&#8220;<span class="quote">UIMA CAS Visual Debugger</span>&#8221;</span>, <span class="quote">&#8220;<span class="quote">UIMA JCasGen</span>&#8221;</span>, or 
@@ -1504,11 +1504,11 @@
   </div>
   
 </div>
-  <div class="chapter" title="Chapter&nbsp;4.&nbsp;UIMA Frequently Asked Questions (FAQ's)" id="ugr.faqs"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;4.&nbsp;UIMA Frequently Asked Questions (FAQ's)</h2></div></div></div>
+  <div class="chapter" id="ugr.faqs"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;4.&nbsp;UIMA Frequently Asked Questions (FAQ's)</h1></div></div></div>
   
   
 
-  <div class="variablelist"><dl><dt><a name="ugr.faqs.what_is_uima"></a><span class="term"><span class="bold"><strong>What is UIMA?</strong></span></span></dt><dd><p>UIMA stands for Unstructured Information Management
+  <div class="variablelist"><dl class="variablelist"><dt id="ugr.faqs.what_is_uima"><span class="term"><span class="bold"><strong>What is UIMA?</strong></span></span></dt><dd><p>UIMA stands for Unstructured Information Management
           Architecture. It is component software architecture for the development,
           discovery, composition and deployment of multi-modal analytics for the analysis
           of unstructured information.</p>
@@ -1527,8 +1527,8 @@
             integrating, and deploying components across platforms and among dispersed
             teams working to develop unstructured information management
             applications.</p>
-        </dd><dt><a name="ugr.faqs.pronounce"></a><span class="term"><span class="bold"><strong>How do you pronounce UIMA?</strong></span></span></dt><dd><p>You &#8211; eee &#8211; muh. 
-        </p></dd><dt><a name="ugr.faqs.difference_apache_uima"></a><span class="term"><span class="bold"><strong>What's the difference between UIMA and the Apache UIMA?</strong></span></span></dt><dd><p>UIMA is an architecture which specifies component interfaces,
+        </dd><dt id="ugr.faqs.pronounce"><span class="term"><span class="bold"><strong>How do you pronounce UIMA?</strong></span></span></dt><dd><p>You &#8211; eee &#8211; muh. 
+        </p></dd><dt id="ugr.faqs.difference_apache_uima"><span class="term"><span class="bold"><strong>What's the difference between UIMA and the Apache UIMA?</strong></span></span></dt><dd><p>UIMA is an architecture which specifies component interfaces,
           design patterns, data representations and development roles.</p>
           
           <p>Apache UIMA is an open source, Apache-licensed software project.  It includes run-time
@@ -1548,7 +1548,7 @@
           a runtime framework for development of rule-based
           Annotators), Addons (where you can find many extensions), and uimaFIT supplying a Java centric
           set of friendlier interfaces and avoiding XML.</p>
-        </dd><dt><a name="ugr.faqs.what_is_an_annotation"></a><span class="term"><span class="bold"><strong>What is an Annotation?</strong></span></span></dt><dd><p>An annotation is metadata that is associated with a region of a
+        </dd><dt id="ugr.faqs.what_is_an_annotation"><span class="term"><span class="bold"><strong>What is an Annotation?</strong></span></span></dt><dd><p>An annotation is metadata that is associated with a region of a
           document. It often is a label, typically represented as string of characters. The
           region may be the whole document. </p>
           
@@ -1563,14 +1563,14 @@
           
           <p>Annotations are not limited to regions of texts. An annotation may annotate
             a region of an image or a segment of audio. The same concepts apply.</p>
-        </dd><dt><a name="ugr.faqs.what_is_the_cas"></a><span class="term"><span class="bold"><strong>What is the CAS?</strong></span></span></dt><dd><p>The CAS stands for Common Analysis Structure. It provides
+        </dd><dt id="ugr.faqs.what_is_the_cas"><span class="term"><span class="bold"><strong>What is the CAS?</strong></span></span></dt><dd><p>The CAS stands for Common Analysis Structure. It provides
           cooperating UIMA components with a common representation and mechanism for
           shared access to the artifact being analyzed (e.g., a document, audio file, video
-          stream etc.) and the current analysis results.</p></dd><dt><a name="ugr.faqs.what_does_the_cas_contain"></a><span class="term"><span class="bold"><strong>What does the CAS contain?</strong></span></span></dt><dd><p>The CAS is a data structure for which UIMA provides multiple
+          stream etc.) and the current analysis results.</p></dd><dt id="ugr.faqs.what_does_the_cas_contain"><span class="term"><span class="bold"><strong>What does the CAS contain?</strong></span></span></dt><dd><p>The CAS is a data structure for which UIMA provides multiple
           interfaces. It contains and provides the analysis algorithm or application
           developer with access to</p>
           
-          <div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem"><p>the subject of analysis (the artifact being analyzed, like
+          <div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>the subject of analysis (the artifact being analyzed, like
               the document),</p></li><li class="listitem"><p>the analysis results or metadata(e.g., annotations, parse
               trees, relations, entities etc.),</p></li><li class="listitem"><p>indices to the analysis results, and</p></li><li class="listitem"><p>the type system (a schema for the analysis results).</p>
             </li></ul></div>
@@ -1579,7 +1579,7 @@
             instance, a raw html document, and a detagged version, or an English version and a
             corresponding German version, or an audio sample, and the text that
             corresponds, etc.). For each version there is a separate instance of the results
-            indices.</p></dd><dt><a name="ugr.faqs.only_annotations"></a><span class="term"><span class="bold"><strong>Does the CAS only contain Annotations?</strong></span></span></dt><dd><p>No. The CAS contains the artifact being analyzed plus the analysis
+            indices.</p></dd><dt id="ugr.faqs.only_annotations"><span class="term"><span class="bold"><strong>Does the CAS only contain Annotations?</strong></span></span></dt><dd><p>No. The CAS contains the artifact being analyzed plus the analysis
           results. Analysis results are those metadata recorded by <a class="link" href="#ugr.faqs.annotator_versus_ae">analysis engines</a> in the
           CAS. The most common form of analysis result is the addition of an annotation. But an
           analysis engine may write any structure that conforms to the CAS's type
@@ -1587,21 +1587,21 @@
           example links between annotations and properties of objects associated with
           annotations.</p>
           <p>The CAS may have multiple representations of the artifact being analyzed, each one
-            represented in the CAS as a particular Subject of Analysis. or <a class="link" href="#ugr.faqs.what_is_a_sofa">Sofa</a></p></dd><dt><a name="ugr.faqs.just_xml"></a><span class="term"><span class="bold"><strong>Is the CAS just XML?</strong></span></span></dt><dd><p>No, in fact there are many possible representations of the CAS. If all
+            represented in the CAS as a particular Subject of Analysis. or <a class="link" href="#ugr.faqs.what_is_a_sofa">Sofa</a></p></dd><dt id="ugr.faqs.just_xml"><span class="term"><span class="bold"><strong>Is the CAS just XML?</strong></span></span></dt><dd><p>No, in fact there are many possible representations of the CAS. If all
           of the <a class="link" href="#ugr.faqs.annotator_versus_ae">analysis engines</a> are running in the same process, an efficient, in-memory
           data object is used. If a CAS must be sent to an analysis engine on a remote machine, it
           can be done via an XML or a binary serialization of the CAS. </p>
           
           <p>The UIMA framework provides multiple serialization and de-serialization methods
             in various formats, including XML.  See the Javadocs for the CasIOUtils class.
-            </p></dd><dt><a name="ugr.faqs.what_is_a_type_system"></a><span class="term"><span class="bold"><strong>What is a Type System?</strong></span></span></dt><dd><p>Think of a type system as a schema or class model for the <a class="link" href="#ugr.faqs.what_is_the_cas">CAS</a>. It defines
+            </p></dd><dt id="ugr.faqs.what_is_a_type_system"><span class="term"><span class="bold"><strong>What is a Type System?</strong></span></span></dt><dd><p>Think of a type system as a schema or class model for the <a class="link" href="#ugr.faqs.what_is_the_cas">CAS</a>. It defines
           the types of objects and their properties (or features) that may be instantiated in
           a CAS. A specific CAS conforms to a particular type system. UIMA components declare
           their input and output with respect to a type system. </p>
           
           <p>Type Systems include the definitions of types, their properties, range
             types (these can restrict the value of properties to other types) and
-            single-inheritance hierarchy of types.</p></dd><dt><a name="ugr.faqs.what_is_a_sofa"></a><span class="term"><span class="bold"><strong>What is a Sofa?</strong></span></span></dt><dd><p>Sofa stands for &#8220;Subject of Analysis". A <a class="link" href="#ugr.faqs.what_is_the_cas">CAS</a> is
+            single-inheritance hierarchy of types.</p></dd><dt id="ugr.faqs.what_is_a_sofa"><span class="term"><span class="bold"><strong>What is a Sofa?</strong></span></span></dt><dd><p>Sofa stands for &#8220;Subject of Analysis". A <a class="link" href="#ugr.faqs.what_is_the_cas">CAS</a> is
           associated with a single artifact being analysed by a collection of UIMA analysis
           engines. But a single artifact may have multiple independent views, each of which
           may be analyzed separately by a different set of <a class="link" href="#ugr.faqs.annotator_versus_ae">analysis engines</a>. For example,
@@ -1610,7 +1610,7 @@
           CAS may have multiple Views, each containing a different Subject of Analysis
           corresponding to some version of the original artifact. This feature is ideal for
           multi-modal analysis, where for example, one view of a video stream may be the video
-          frames and the other the close-captions.</p></dd><dt><a name="ugr.faqs.annotator_versus_ae"></a><span class="term"><span class="bold"><strong>What's the difference between an Annotator and an Analysis
+          frames and the other the close-captions.</p></dd><dt id="ugr.faqs.annotator_versus_ae"><span class="term"><span class="bold"><strong>What's the difference between an Annotator and an Analysis
           Engine?</strong></span></span></dt><dd><p>In the terminology of UIMA, an annotator is simply some code that
           analyzes documents and outputs <a class="link" href="#ugr.faqs.what_is_an_annotation">annotations</a> on the content of the documents. The
           UIMA framework takes the annotator, together with metadata describing such
@@ -1624,9 +1624,9 @@
           
           <p>Analysis Engines are the framework-generated objects that an Application
             interacts with. An Annotator is a user-written class that implements the one of
-            the supported Annotator interfaces.</p></dd><dt><a name="ugr.faqs.web_services"></a><span class="term"><span class="bold"><strong>Are UIMA analysis engines web services?</strong></span></span></dt><dd><p>They can be deployed as such. Deploying an analysis engine as a web
+            the supported Annotator interfaces.</p></dd><dt id="ugr.faqs.web_services"><span class="term"><span class="bold"><strong>Are UIMA analysis engines web services?</strong></span></span></dt><dd><p>They can be deployed as such. Deploying an analysis engine as a web
           service is one of the deployment options supported by the UIMA framework.</p>
-        </dd><dt><a name="ugr.faqs.stateless_aes"></a><span class="term"><span class="bold"><strong>Do Analysis Engines have to be
+        </dd><dt id="ugr.faqs.stateless_aes"><span class="term"><span class="bold"><strong>Do Analysis Engines have to be
           "stateless"?</strong></span></span></dt><dd><p>This is a user-specifyable option. The XML metadata for the
           component includes an
           <code class="code">operationalProperties</code> element which can specify if multiple
@@ -1641,7 +1641,7 @@
           
           <p>Analysis Engines developers are encouraged not to maintain state between
             documents that would prevent their engine from working as advertised if
-            operated in a parallelized environment.</p></dd><dt><a name="ugr.faqs.uddi"></a><span class="term"><span class="bold"><strong>Is engine meta-data compatible with web services and
+            operated in a parallelized environment.</p></dd><dt id="ugr.faqs.uddi"><span class="term"><span class="bold"><strong>Is engine meta-data compatible with web services and
           UDDI?</strong></span></span></dt><dd><p>All UIMA component implementations are associated with Component
           Descriptors which represents metadata describing various properties about the
           component to support discovery, reuse, validation, automatic composition and
@@ -1649,7 +1649,7 @@
           with web services and UDDI. However, the UIMA framework currently uses its own XML
           representation for component metadata. It would not be difficult to convert
           between UIMA's XML representation and other standard representations.</p>
-        </dd><dt><a name="ugr.faqs.scaling"></a><span class="term"><span class="bold"><strong>How do you scale a UIMA application?</strong></span></span></dt><dd><p>The UIMA framework allows components such as 
+        </dd><dt id="ugr.faqs.scaling"><span class="term"><span class="bold"><strong>How do you scale a UIMA application?</strong></span></span></dt><dd><p>The UIMA framework allows components such as 
           <a class="link" href="#ugr.faqs.annotator_versus_ae">analysis engines</a> and
           CAS Consumers to be easily deployed as services or in other containers and managed
           by systems middleware designed to scale. UIMA applications tend to naturally
@@ -1663,13 +1663,13 @@
             Manager) which has features and configuration settings for scaling an
             application to increase its throughput and recoverability; 
             the CPM was the earlier version of scaleout technology, and has been 
-            superceded by the UIMA-AS effort (although it is still supported).</p></dd><dt><a name="ugr.faqs.embedding"></a><span class="term"><span class="bold"><strong>What does it mean to embed UIMA in systems middleware?</strong></span></span></dt><dd><p>An example of an embedding would be the deployment of a UIMA analysis
+            superceded by the UIMA-AS effort (although it is still supported).</p></dd><dt id="ugr.faqs.embedding"><span class="term"><span class="bold"><strong>What does it mean to embed UIMA in systems middleware?</strong></span></span></dt><dd><p>An example of an embedding would be the deployment of a UIMA analysis
           engine as an Enterprise Java Bean inside an application server such as IBM
           WebSphere. Such an embedding allows the deployer to take advantage of the features
           and tools provided by WebSphere for achieving scalability, service management,
           recoverability etc. UIMA is independent of any particular systems middleware, so
           <a class="link" href="#ugr.faqs.annotator_versus_ae">analysis engines</a> could be deployed on other application servers as well.</p>
-        </dd><dt><a name="ugr.faqs.cpm_versus_cpe"></a><span class="term"><span class="bold"><strong>How is the CPM different from a CPE?</strong></span></span></dt><dd><p>These name complimentary aspects of collection processing. The CPM
+        </dd><dt id="ugr.faqs.cpm_versus_cpe"><span class="term"><span class="bold"><strong>How is the CPM different from a CPE?</strong></span></span></dt><dd><p>These name complimentary aspects of collection processing. The CPM
           (Collection Processing <span class="bold"><strong>Manager</strong></span> is the part of 
           the UIMA framework that manages the execution of a workflow of UIMA
           components orchestrated to analyze a large collection of documents. The UIMA
@@ -1686,7 +1686,7 @@
             collection, initializes CASs with document content, performs document
             analysis and then produces collection level results (e.g., search engine
             index, database etc). The CPM is the execution engine for a CPE.</p>
-        </dd><dt><a name="ugr.faqs.modalities_other_than_text"></a><span class="term"><span class="bold"><strong>Does UIMA support modalities other than text?</strong></span></span></dt><dd><p>The UIMA architecture supports the development, discovery,
+        </dd><dt id="ugr.faqs.modalities_other_than_text"><span class="term"><span class="bold"><strong>Does UIMA support modalities other than text?</strong></span></span></dt><dd><p>The UIMA architecture supports the development, discovery,
           composition and deployment of multi-modal analytics including text, audio and
           video. Applications that process text, speech and video have been developed using
           UIMA. This release of the SDK, however, does not include examples of these
@@ -1698,7 +1698,7 @@
             artifact to be associated with a <a class="link" href="#ugr.faqs.what_is_the_cas">CAS</a>. For example, if an artifact is a video
             stream, one Sofa could be associated with the video frames and another with the
             closed-captions text. UIMA's multiple Sofa feature is included and
-            described in this release of the SDK.</p></dd><dt><a name="ugr.faqs.compare"></a><span class="term"><span class="bold"><strong>How does UIMA compare to other similar work?</strong></span></span></dt><dd><p>A number of different frameworks for NLP have preceded UIMA. Two of
+            described in this release of the SDK.</p></dd><dt id="ugr.faqs.compare"><span class="term"><span class="bold"><strong>How does UIMA compare to other similar work?</strong></span></span></dt><dd><p>A number of different frameworks for NLP have preceded UIMA. Two of
           them were developed at IBM Research and represent UIMA's early roots. For
           details please refer to the UIMA article that appears in the IBM Systems Journal
           Vol. 43, No. 3 (<a class="ulink" href="http://www.research.ibm.com/journal/sj/433/ferrucci.html" target="_top">http://www.research.ibm.com/journal/sj/433/ferrucci.html</a>
@@ -1714,36 +1714,36 @@
             different roles in the use of UIMA to develop applications, the extensive use of
             descriptive component metadata to support development tooling, component
             discovery and composition. (Please note that not all of these features are
-            available in this release of the SDK.)</p></dd><dt><a name="ugr.faqs.open_source"></a><span class="term"><span class="bold"><strong>Is UIMA Open Source?</strong></span></span></dt><dd><p>Yes. As of version 2, UIMA development has moved to Apache and is being
+            available in this release of the SDK.)</p></dd><dt id="ugr.faqs.open_source"><span class="term"><span class="bold"><strong>Is UIMA Open Source?</strong></span></span></dt><dd><p>Yes. As of version 2, UIMA development has moved to Apache and is being
           developed within the Apache open source processes. It is licensed under the Apache
           version 2 license. 
             </p>
-        </dd><dt><a name="ugr.faqs.levels_required"></a><span class="term"><span class="bold"><strong>What Java level and OS are required for the UIMA SDK?</strong></span></span></dt><dd><p>As of release 3.0.0, the UIMA SDK requires Java 1.8.
+        </dd><dt id="ugr.faqs.levels_required"><span class="term"><span class="bold"><strong>What Java level and OS are required for the UIMA SDK?</strong></span></span></dt><dd><p>As of release 3.0.0, the UIMA SDK requires Java 1.8.
           It has been tested on mainly on Windows and Linux platforms, with some
           testing on the MacOSX. Other
           platforms and JDK implementations will likely work, but have
-          not been as significantly tested.</p></dd><dt><a name="ugr.faqs.building_apps_on_top_of_uima"></a><span class="term"><span class="bold"><strong>Can I build my UIM application on top of UIMA?</strong></span></span></dt><dd><p>Yes. Apache UIMA is licensed under the Apache version 2 license,
+          not been as significantly tested.</p></dd><dt id="ugr.faqs.building_apps_on_top_of_uima"><span class="term"><span class="bold"><strong>Can I build my UIM application on top of UIMA?</strong></span></span></dt><dd><p>Yes. Apache UIMA is licensed under the Apache version 2 license,
           enabling you to build and distribute applications which include the framework.
           </p></dd></dl></div>
 </div>
-  <div class="chapter" title="Chapter&nbsp;5.&nbsp;Known Issues" id="ugr.issues"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;5.&nbsp;Known Issues</h2></div></div></div>
+  <div class="chapter" id="ugr.issues"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;5.&nbsp;Known Issues</h1></div></div></div>
   
   
 
-  <div class="variablelist"><dl><dt><a name="ugr.issues.cr_to_xml"></a><span class="term"><span class="bold"><strong>Sun Java 1.4.2_12 doesn't serialize CR characters to XML</strong></span></span></dt><dd>
+  <div class="variablelist"><dl class="variablelist"><dt id="ugr.issues.cr_to_xml"><span class="term"><span class="bold"><strong>Sun Java 1.4.2_12 doesn't serialize CR characters to XML</strong></span></span></dt><dd>
         <p>(Note: Apache UIMA now requires Java 1.5, so this issue is moot.) The XML serialization support in Sun Java 1.4.2_12 doesn't serialize CR characters to 
         XML. As a result, if the document text contains CR characters, XCAS or XMI serialization 
         will cause them to be lost, resulting in incorrect annotation offsets. This is exposed in 
         the DocumentAnalyzer, with the highlighting being incorrect if the input document contains 
         CR characters. </p>
-        </dd><dt><a name="ugr.issues.jcasgen_java_1.4"></a><span class="term"><span class="bold"><strong>JCasGen merge facility only supports Java levels 1.4 or earlier</strong></span></span></dt><dd>
+        </dd><dt id="ugr.issues.jcasgen_java_1.4"><span class="term"><span class="bold"><strong>JCasGen merge facility only supports Java levels 1.4 or earlier</strong></span></span></dt><dd>
         <p>JCasGen has a facility to merge in user (hand-coded) changes with the code generated
           by JCasGen.  This merging supports Java 1.4 constructs only.  JCasGen generates Java 1.4 
           compliant code, so as long as any code you change here also only uses Java 1.4 constructs, the 
       merge will work, even if you're using Java 5 or later.  
           If you use syntactic structures particular to Java 5 or later, the merge
         operation will likely fail to merge properly.</p>
-      </dd><dt><a name="ugr.issues.libgcj.4.1.2"></a><span class="term"><span class="bold"><strong>Descriptor editor in Eclipse tooling does not work with libgcj 4.1.2</strong></span></span></dt><dd>
+      </dd><dt id="ugr.issues.libgcj.4.1.2"><span class="term"><span class="bold"><strong>Descriptor editor in Eclipse tooling does not work with libgcj 4.1.2</strong></span></span></dt><dd>
         <p>The descriptor editor in the Eclipse tooling does not work with libgcj 4.1.2, and
         possibly other versions of libgcj.  This is apparently due to a bug in the implementation of
         their XML library, which results in a class cast error.  libgcj is used as the default
@@ -1751,42 +1751,42 @@
         different JVM to start Eclipse.</p>
       </dd></dl></div>
 </div>
-  <div class="glossary" title="Glossary: Key Terms &amp; Concepts" id="ugr.glossary"><div class="titlepage"><div><div><h2 class="title">Glossary: Key Terms &amp; Concepts</h2></div></div></div><dl><dt><a name="ugr.glossary.aggregate"></a>Aggregate Analysis Engine</dt><dd><p>An <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm">Analysis Engine</em></a>
+  <div class="glossary" id="ugr.glossary"><div class="titlepage"><div><div><h1 class="title">Glossary: Key Terms &amp; Concepts</h1></div></div></div><dl><dt id="ugr.glossary.aggregate"><span class="glossterm">Aggregate Analysis Engine</span></dt><dd class="glossdef"><p>An <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.analysis_engine" title="Analysis Engine">Analysis Engine</a></em></a>
  made up of multiple subcomponent
 Analysis Engines arranged in a flow.  The
-flow can be one of the two built-in flows, or a custom flow provided by the user.</p></dd><dt><a name="ugr.glossary.analysis_engine"></a>Analysis Engine</dt><dd><p>A program that analyzes artifacts (e.g. documents) and infers information about
+flow can be one of the two built-in flows, or a custom flow provided by the user.</p></dd><dt id="ugr.glossary.analysis_engine"><span class="glossterm">Analysis Engine</span></dt><dd class="glossdef"><p>A program that analyzes artifacts (e.g. documents) and infers information about
 them, and which implements the UIMA Analysis Engine interface Specification. It
 does not matter how the program is built, with what framework or whether or not
-it contains component (<span class="quote">&#8220;<span class="quote">sub</span>&#8221;</span>) Analysis Engines.</p></dd><dt><a name="ugr.glossary.annotation"></a>Annotation</dt><dd><p>The association of a metadata, such as a label, with a region of text (or other
+it contains component (<span class="quote">&#8220;<span class="quote">sub</span>&#8221;</span>) Analysis Engines.</p></dd><dt id="ugr.glossary.annotation"><span class="glossterm">Annotation</span></dt><dd class="glossdef"><p>The association of a metadata, such as a label, with a region of text (or other
 type of artifact). For example, the label <span class="quote">&#8220;<span class="quote">Person</span>&#8221;</span> associated with a
 region of text <span class="quote">&#8220;<span class="quote">John Doe</span>&#8221;</span> constitutes an annotation. We say
 <span class="quote">&#8220;<span class="quote">Person</span>&#8221;</span> annotates the span of text from X to Y containing exactly
 <span class="quote">&#8220;<span class="quote">John Doe</span>&#8221;</span>. An annotation is represented as a special
-          <a class="glossterm" href="#ugr.glossary.type"><em class="glossterm">type</em></a> 
+          <a class="glossterm" href="#ugr.glossary.type"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.type" title="Type">type</a></em></a> 
 
-in a UIMA <a class="glossterm" href="#ugr.glossary.type_system"><em class="glossterm">type system</em></a>.
+in a UIMA <a class="glossterm" href="#ugr.glossary.type_system"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.type_system" title="Type System">type system</a></em></a>.
            It is the type used to record
-the labeling of regions of a <a class="glossterm" href="#ugr.glossary.sofa"><em class="glossterm">Sofa</em></a>.
-          Annotations are <a class="glossterm" href="#ugr.glossary.feature_structure"><em class="glossterm">Feature Structures</em></a>
-          whose <a class="glossterm" href="#ugr.glossary.type"><em class="glossterm">Type</em></a> is Annotation or a subtype
-          of that.</p></dd><dt><a name="ugr.glossary.annotator"></a>Annotator</dt><dd><p>A software
+the labeling of regions of a <a class="glossterm" href="#ugr.glossary.sofa"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.sofa" title="Subject of Analysis (Sofa)">Sofa</a></em></a>.
+          Annotations are <a class="glossterm" href="#ugr.glossary.feature_structure"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.feature_structure" title="Feature Structure">Feature Structures</a></em></a>
+          whose <a class="glossterm" href="#ugr.glossary.type"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.type" title="Type">Type</a></em></a> is Annotation or a subtype
+          of that.</p></dd><dt id="ugr.glossary.annotator"><span class="glossterm">Annotator</span></dt><dd class="glossdef"><p>A software
 component that implements the UIMA annotator interface. Annotators are
 implemented to produce and record annotations over regions of an artifact
-(e.g., text document, audio, and video).</p></dd><dt><a name="ugr.glossary.application"></a>Application</dt><dd><p>An application is the outer containing code that invokes
+(e.g., text document, audio, and video).</p></dd><dt id="ugr.glossary.application"><span class="glossterm">Application</span></dt><dd class="glossdef"><p>An application is the outer containing code that invokes
         the UIMA framework functions to instantiate an 
-        <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm">Analysis Engine</em></a> or a
-        <a class="glossterm" href="#ugr.glossary.cpe"><em class="glossterm">Collection Processing Engine</em></a> from a particular 
-        descriptor, and run it.</p></dd><dt><a name="ugr.glossary.apache_uima_java_framework"></a>Apache UIMA Java Framework</dt><dd><p>A Java-based implementation of the <a class="glossterm" href="#ugr.glossary.uima"><em class="glossterm">UIMA</em></a>
+        <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.analysis_engine" title="Analysis Engine">Analysis Engine</a></em></a> or a
+        <a class="glossterm" href="#ugr.glossary.cpe"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.cpe" title="Collection Processing Engine (CPE)">Collection Processing Engine</a></em></a> from a particular 
+        descriptor, and run it.</p></dd><dt id="ugr.glossary.apache_uima_java_framework"><span class="glossterm">Apache UIMA Java Framework</span></dt><dd class="glossdef"><p>A Java-based implementation of the <a class="glossterm" href="#ugr.glossary.uima"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.uima" title="UIMA">UIMA</a></em></a>
          architecture.  It provides a run-time environment in which developers can plug in and run their UIMA component 
          implementations and with which they can build and deploy UIM applications.  The framework is the
-         core part of the <a class="glossterm" href="#ugr.glossary.apache_uima_sdk"><em class="glossterm">Apache UIMA SDK</em></a>.</p></dd><dt><a name="ugr.glossary.apache_uima_sdk"></a>Apache UIMA Software Development Kit (SDK)</dt><dd><p>The SDK for which you are now reading the documentation.  The SDK includes the framework
+         core part of the <a class="glossterm" href="#ugr.glossary.apache_uima_sdk"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.apache_uima_sdk" title="Apache UIMA Software Development Kit (SDK)">Apache UIMA SDK</a></em></a>.</p></dd><dt id="ugr.glossary.apache_uima_sdk"><span class="glossterm">Apache UIMA Software Development Kit (SDK)</span></dt><dd class="glossdef"><p>The SDK for which you are now reading the documentation.  The SDK includes the framework
           plus additional components such as tooling and examples.  Some of the tooling is Eclipse-based 
-          (<a class="ulink" href="http://www.eclipse.org/" target="_top">http://www.eclipse.org/</a>).</p></dd><dt><a name="ugr.glossary.cas"></a>CAS</dt><dd><p>The UIMA Common Analysis Structure is
+          (<a class="ulink" href="http://www.eclipse.org/" target="_top">http://www.eclipse.org/</a>).</p></dd><dt id="ugr.glossary.cas"><span class="glossterm">CAS</span></dt><dd class="glossdef"><p>The UIMA Common Analysis Structure is
 the primary data structure which UIMA analysis components use to represent and
-share analysis results.  It contains:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>The artifact. This is the object
+share analysis results.  It contains:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>The artifact. This is the object
 being analyzed such as a text document or audio or video stream. The CAS
 projects one or more views of the artifact. Each view is referred to as a 
-  <a class="glossterm" href="#ugr.glossary.sofa"><em class="glossterm">Sofa</em></a>.</p></li><li class="listitem"><p>A type system description &#8211;
+  <a class="glossterm" href="#ugr.glossary.sofa"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.sofa" title="Subject of Analysis (Sofa)">Sofa</a></em></a>.</p></li><li class="listitem"><p>A type system description &#8211;
 indicating the types, subtypes, and their features. </p></li><li class="listitem"><p>Analysis metadata &#8211; <span class="quote">&#8220;<span class="quote">standoff</span>&#8221;</span>
 annotations describing the artifact or a region of the artifact </p></li><li class="listitem"><p>An index repository to support
 efficient access to and iteration over the results of analysis.
@@ -1794,73 +1794,73 @@ efficient access to and iteration over the results of analysis.
 a class called the Common Analysis System. We use <span class="quote">&#8220;<span class="quote">CAS</span>&#8221;</span> to refer to
 both the structure and system. Where the common analysis structure is used
 through a different interface, the particular implementation of the structure
-is indicated, For example, the <a class="glossterm" href="#ugr.glossary.jcas"><em class="glossterm">JCas</em></a> is a native Java object
+is indicated, For example, the <a class="glossterm" href="#ugr.glossary.jcas"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.jcas" title="JCas">JCas</a></em></a> is a native Java object
 representation of the contents of the common analysis structure.</p><p>A CAS can have multiple views; each view has a unique
 representation of the artifact, and has its own index repository, representing
-results of analysis for that representation of the artifact.</p></dd><dt><a name="ugr.glossary.cas_consumer"></a>CAS Consumer</dt><dd><p>A component that
+results of analysis for that representation of the artifact.</p></dd><dt id="ugr.glossary.cas_consumer"><span class="glossterm">CAS Consumer</span></dt><dd class="glossdef"><p>A component that
 receives each CAS in the collection, usually after it has been processed by an 
-          <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm">Analysis Engine</em></a>. It is responsible for taking the results from
+          <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.analysis_engine" title="Analysis Engine">Analysis Engine</a></em></a>. It is responsible for taking the results from
 the CAS and using them for some purpose, perhaps storing selected results into
 a database, for instance.  The CAS
 Consumer may also perform collection-level analysis, saving these results in an
-application-specific, aggregate data structure.</p></dd><dt><a name="ugr.glossary.cas_initializer"></a>CAS Initializer (deprecated)</dt><dd><p>Prior to version 2, this was the component that took an 
-          undefined input form and produced a particular <a class="glossterm" href="#ugr.glossary.sofa"><em class="glossterm">Sofa</em></a>.
-          For version 2, this has been replaced with using any <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm">Analysis Engine</em></a>
-          which takes a particular <a class="glossterm" href="#ugr.glossary.cas_view"><em class="glossterm">CAS View</em></a> and creates a
+application-specific, aggregate data structure.</p></dd><dt id="ugr.glossary.cas_initializer"><span class="glossterm">CAS Initializer (deprecated)</span></dt><dd class="glossdef"><p>Prior to version 2, this was the component that took an 
+          undefined input form and produced a particular <a class="glossterm" href="#ugr.glossary.sofa"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.sofa" title="Subject of Analysis (Sofa)">Sofa</a></em></a>.
+          For version 2, this has been replaced with using any <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.analysis_engine" title="Analysis Engine">Analysis Engine</a></em></a>
+          which takes a particular <a class="glossterm" href="#ugr.glossary.cas_view"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.cas_view" title="CAS View">CAS View</a></em></a> and creates a
           new output Sofa.  For example, if the document is HTML, an Analysis Engine might 
           create a Sofa which is a detagged version of an input CAS View, perhaps also
 creating annotations derived from the tags. For example &lt;p&gt; tags
-might be translated into Paragraph annotations in the CAS.</p></dd><dt><a name="ugr.glossary.cas_multiplier"></a>CAS Multiplier</dt><dd><p>A component, implemented by a UIMA developer,
+might be translated into Paragraph annotations in the CAS.</p></dd><dt id="ugr.glossary.cas_multiplier"><span class="glossterm">CAS Multiplier</span></dt><dd class="glossdef"><p>A component, implemented by a UIMA developer,
 that takes a CAS as input and produces 0 or more new CASes as output.  Common use cases for a CAS Multiplier
-          include creating alternative versions of an input <a class="glossterm" href="#ugr.glossary.sofa"><em class="glossterm">Sofa</em></a> 
-          (see <a class="glossterm" href="#ugr.glossary.cas_initializer"><em class="glossterm">CAS Initializer</em></a>), and breaking 
+          include creating alternative versions of an input <a class="glossterm" href="#ugr.glossary.sofa"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.sofa" title="Subject of Analysis (Sofa)">Sofa</a></em></a> 
+          (see <a class="glossterm" href="#ugr.glossary.cas_initializer"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.cas_initializer" title="CAS Initializer (deprecated)">CAS Initializer</a></em></a>), and breaking 
           a large input CAS into smaller pieces, each of which is emitted as a
 separate output CAS.  There are other
-uses, however, such as aggregating input CASes into a single output CAS.</p></dd><dt><a name="ugr.glossary.cas_processor"></a>CAS Processor</dt><dd><p>A component of a Collection Processing Engine (CPE) that
+uses, however, such as aggregating input CASes into a single output CAS.</p></dd><dt id="ugr.glossary.cas_processor"><span class="glossterm">CAS Processor</span></dt><dd class="glossdef"><p>A component of a Collection Processing Engine (CPE) that
 takes a CAS as input and returns a CAS as output. There are two types of CAS
-Processors: <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm">Analysis Engine</em></a>s and 
-          <a class="glossterm" href="#ugr.glossary.cas_consumer"><em class="glossterm">CAS Consumer</em></a>s.</p></dd><dt><a name="ugr.glossary.cas_view"></a>CAS View</dt><dd><p>A CAS Object which shares the base CAS and type system
+Processors: <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.analysis_engine" title="Analysis Engine">Analysis Engine</a></em></a>s and 
+          <a class="glossterm" href="#ugr.glossary.cas_consumer"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.cas_consumer" title="CAS Consumer">CAS Consumer</a></em></a>s.</p></dd><dt id="ugr.glossary.cas_view"><span class="glossterm">CAS View</span></dt><dd class="glossdef"><p>A CAS Object which shares the base CAS and type system
 definition and index specifications, but has a unique index repository and a
-particular <a class="glossterm" href="#ugr.glossary.sofa"><em class="glossterm">Sofa</em></a>.   Views are named, and applications and
+particular <a class="glossterm" href="#ugr.glossary.sofa"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.sofa" title="Subject of Analysis (Sofa)">Sofa</a></em></a>.   Views are named, and applications and
 annotators can dynamically create additional views whenever they are needed.
 Annotations are made with respect to one view.  Feature structures can have references to feature structures 
-          indexed in other views, as needed.</p></dd><dt><a name="ugr.glossary.cde"></a>CDE</dt><dd><p>The Component Descriptor Editor. This
+          indexed in other views, as needed.</p></dd><dt id="ugr.glossary.cde"><span class="glossterm">CDE</span></dt><dd class="glossdef"><p>The Component Descriptor Editor. This
 is the Eclipse tool that lets you conveniently edit the UIMA descriptors; 
-          see <a href="tools.html#ugr.tools.cde" class="olink">Chapter&nbsp;1, <i>Component Descriptor Editor User's Guide</i></a>.</p></dd><dt><a name="ugr.glossary.cpe"></a>Collection Processing Engine (CPE)</dt><dd><p>Performs Collection Processing
+          see <a href="tools.html#ugr.tools.cde" class="olink">Chapter&nbsp;1, <i>Component Descriptor Editor User's Guide</i></a>.</p></dd><dt id="ugr.glossary.cpe"><span class="glossterm">Collection Processing Engine (CPE)</span></dt><dd class="glossdef"><p>Performs Collection Processing
 through the combination of a 
-          <a class="glossterm" href="#ugr.glossary.collection_reader"><em class="glossterm">Collection Reader</em></a>,
-          0 or more <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm">Analysis Engine</em></a>s,
- and zero or more <a class="glossterm" href="#ugr.glossary.cas_consumer"><em class="glossterm">CAS Consumer</em></a>s.
+          <a class="glossterm" href="#ugr.glossary.collection_reader"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.collection_reader" title="Collection Reader">Collection Reader</a></em></a>,
+          0 or more <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.analysis_engine" title="Analysis Engine">Analysis Engine</a></em></a>s,
+ and zero or more <a class="glossterm" href="#ugr.glossary.cas_consumer"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.cas_consumer" title="CAS Consumer">CAS Consumer</a></em></a>s.
 The Collection Processing Manager (CPM) manages the execution of the engine.</p><p>The CPE also refers to the XML specification of the Collection Processing
         engine.  The CPM reads a CPE specification and instantiates a CPE instance from it,
-        and runs it.</p></dd><dt><a name="ugr.glossary.cpm"></a>Collection Processing Manager (CPM)</dt><dd><p>The part of the framework that
+        and runs it.</p></dd><dt id="ugr.glossary.cpm"><span class="glossterm">Collection Processing Manager (CPM)</span></dt><dd class="glossdef"><p>The part of the framework that
 manages the execution of collection processing, routing CASs from the 
-          <a class="glossterm" href="#ugr.glossary.collection_reader"><em class="glossterm">Collection Reader</em></a>
+          <a class="glossterm" href="#ugr.glossary.collection_reader"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.collection_reader" title="Collection Reader">Collection Reader</a></em></a>
           
-to 0 or more <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm">Analysis Engine</em></a>s
-and then to the 0 or more <a class="glossterm" href="#ugr.glossary.cas_consumer"><em class="glossterm">CAS Consumer</em></a>s. The CPM
+to 0 or more <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.analysis_engine" title="Analysis Engine">Analysis Engine</a></em></a>s
+and then to the 0 or more <a class="glossterm" href="#ugr.glossary.cas_consumer"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.cas_consumer" title="CAS Consumer">CAS Consumer</a></em></a>s. The CPM
 provides feedback such as performance statistics and error reporting and supports
-other features such as parallelization and error handling.</p></dd><dt><a name="ugr.glossary.collection_reader"></a>Collection Reader</dt><dd><p>A component
+other features such as parallelization and error handling.</p></dd><dt id="ugr.glossary.collection_reader"><span class="glossterm">Collection Reader</span></dt><dd class="glossdef"><p>A component
 that reads documents from some source, for example a file system or database.
 The collection reader initializes a CAS with this document.  
           Each document is returned as a CAS that may then be processed by 
-          an <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm">Analysis Engine</em></a>s. If the task of populating a CAS
+          an <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.analysis_engine" title="Analysis Engine">Analysis Engine</a></em></a>s. If the task of populating a CAS
 from the document is complex, you may use an arbitrarily complex chain of 
-          <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm">Analysis Engine</em></a>s and have the last one
-          create and initialize a new <a class="glossterm" href="#ugr.glossary.sofa"><em class="glossterm">Sofa</em></a>.</p></dd><dt><a name="ugr.glossary.feature_structure"></a>Feature Structure</dt><dd><p>An instance of a <a class="glossterm" href="#ugr.glossary.type"><em class="glossterm">Type</em></a>.
-        Feature Structures are kept in the <a class="glossterm" href="#ugr.glossary.cas"><em class="glossterm">CAS, and may
-        (optionally) be added to the defined <a class="glossterm" href="#ugr.glossary.index"><em class="glossterm">indexes</em></a>.
+          <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.analysis_engine" title="Analysis Engine">Analysis Engine</a></em></a>s and have the last one
+          create and initialize a new <a class="glossterm" href="#ugr.glossary.sofa"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.sofa" title="Subject of Analysis (Sofa)">Sofa</a></em></a>.</p></dd><dt id="ugr.glossary.feature_structure"><span class="glossterm">Feature Structure</span></dt><dd class="glossdef"><p>An instance of a <a class="glossterm" href="#ugr.glossary.type"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.type" title="Type">Type</a></em></a>.
+        Feature Structures are kept in the <a class="glossterm" href="#ugr.glossary.cas"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.cas" title="CAS">CAS, and may
+        (optionally) be added to the defined </a><a class="glossterm" href="#ugr.glossary.index"><em class="glossterm"></em></a><a class="glossterm" href="#ugr.glossary.index" title="Index">indexes</a><a class="glossterm" href="#ugr.glossary.index"><em class="glossterm"></em></a><a class="glossterm" href="#ugr.glossary.cas" title="CAS">.
         Feature Structures may contain references to other Feature Structures.
         Feature Structures whose type is Annotation or a subtype of that, are referred to as 
-        <a class="glossterm" href="#ugr.glossary.annotation"><em class="glossterm">annotations</em></a>.</em></a></p></dd><dt><a name="ugr.glossary.feature"></a>Feature</dt><dd><p>A data member or attribute of a type.  Each feature itself has an
+        </a><a class="glossterm" href="#ugr.glossary.annotation"><em class="glossterm"></em></a><a class="glossterm" href="#ugr.glossary.annotation" title="Annotation">annotations</a><a class="glossterm" href="#ugr.glossary.annotation"><em class="glossterm"></em></a><a class="glossterm" href="#ugr.glossary.cas" title="CAS">.</a></em></a></p></dd><dt id="ugr.glossary.feature"><span class="glossterm">Feature</span></dt><dd class="glossdef"><p>A data member or attribute of a type.  Each feature itself has an
 associated range type, the type of the value that it can hold.  In the
 database analogy where types are tables, features are columns.
         In the world of structured data types, each feature is a <span class="quote">&#8220;<span class="quote">field</span>&#8221;</span>,
-        or data member.</p></dd><dt><a name="ugr.glossary.flow_controller"></a>Flow Controller</dt><dd><p>A component which implements the interfaces needed
-to specify a custom flow within an <a class="glossterm" href="#ugr.glossary.aggregate"><em class="glossterm">Aggregate Analysis Engine</em></a>.</p></dd><dt><a name="ugr.glossary.hybrid_analysis_engine"></a>Hybrid Analysis Engine</dt><dd><p>An <a class="glossterm" href="#ugr.glossary.aggregate"><em class="glossterm">Aggregate Analysis Engine</em></a> 
+        or data member.</p></dd><dt id="ugr.glossary.flow_controller"><span class="glossterm">Flow Controller</span></dt><dd class="glossdef"><p>A component which implements the interfaces needed
+to specify a custom flow within an <a class="glossterm" href="#ugr.glossary.aggregate"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.aggregate" title="Aggregate Analysis Engine">Aggregate Analysis Engine</a></em></a>.</p></dd><dt id="ugr.glossary.hybrid_analysis_engine"><span class="glossterm">Hybrid Analysis Engine</span></dt><dd class="glossdef"><p>An <a class="glossterm" href="#ugr.glossary.aggregate"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.aggregate" title="Aggregate Analysis Engine">Aggregate Analysis Engine</a></em></a> 
           where more than one of its component Analysis Engines are deployed
 the same address space and one or more are deployed remotely (part tightly and
-part loosely-coupled).</p></dd><dt><a name="ugr.glossary.index"></a>Index</dt><dd><p>Data in the CAS can only be retrieved using Indexes.  
+part loosely-coupled).</p></dd><dt id="ugr.glossary.index"><span class="glossterm">Index</span></dt><dd class="glossdef"><p>Data in the CAS can only be retrieved using Indexes.  
           Indexes are analogous to the indexes that are
 specified on tables of a database.  Indexes belong to Index Repositories;
 there is one Repository for each
@@ -1876,11 +1876,11 @@ feature (ascending) and then by the value of the end feature (descending).
 In this case, iterating over the annotations, one first obtains annotations that 
 come sequentially first in the text, while favoring longer annotations, in the case
 where two annotations start at the same offset.  Users can define their own indexes
-as well.</p></dd><dt><a name="ugr.glossary.jcas"></a>JCas</dt><dd><p>A Java object interface to the contents of the CAS.  
+as well.</p></dd><dt id="ugr.glossary.jcas"><span class="glossterm">JCas</span></dt><dd class="glossdef"><p>A Java object interface to the contents of the CAS.  
           This interface uses additional generated Java classes, where each type in the CAS
 is represented as a Java class with the same name, each feature is represented with
 a getter and setter method, and each instance of a type is represented as a
-Java object of the corresponding Java class.</p></dd><dt><a name="ugr.glossary.loosely_coupled_analysis_engine"></a>Loosely-Coupled Analysis Engine</dt><dd><p>An <a class="glossterm" href="#ugr.glossary.aggregate"><em class="glossterm">Aggregate Analysis Engine</em></a>
+Java object of the corresponding Java class.</p></dd><dt id="ugr.glossary.loosely_coupled_analysis_engine"><span class="glossterm">Loosely-Coupled Analysis Engine</span></dt><dd class="glossdef"><p>An <a class="glossterm" href="#ugr.glossary.aggregate"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.aggregate" title="Aggregate Analysis Engine">Aggregate Analysis Engine</a></em></a>
          where no two of its component Analysis Engines run in the
 same address space but where each is remote with respect to the others that
 make up the aggregate. Loosely coupled engines are ideal for using 
@@ -1888,64 +1888,64 @@ make up the aggregate. Loosely coupled engines are ideal for using
 not locally available, or for quickly assembling and testing functionality in
 cross-language, cross-platform distributed environments. They also better enable
 distributed scaleable implementations where quick recoverability may have a
-greater impact on overall throughput than analysis speed.</p></dd><dt><a name="ugr.glossary.ontology"></a></dt><dd><p>The part of a knowledge base that defines the semantics of the data
-axiomatically.</p></dd><dt><a name="ugr.glossary.pear"></a>PEAR</dt><dd><p>An archive file that packages up a UIMA component with its code,
+greater impact on overall throughput than analysis speed.</p></dd><dt id="ugr.glossary.ontology"><span class="glossterm"></span></dt><dd class="glossdef"><p>The part of a knowledge base that defines the semantics of the data
+axiomatically.</p></dd><dt id="ugr.glossary.pear"><span class="glossterm">PEAR</span></dt><dd class="glossdef"><p>An archive file that packages up a UIMA component with its code,
 descriptor files and other resources required to install and run it in another
 environment. You can generate PEAR files using utilities that come with the
-UIMA SDK.</p></dd><dt><a name="ugr.glossary.primitive_analysis_engine"></a>Primitive Analysis Engine</dt><dd><p>An <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm">Analysis Engine</em></a> 
+UIMA SDK.</p></dd><dt id="ugr.glossary.primitive_analysis_engine"><span class="glossterm">Primitive Analysis Engine</span></dt><dd class="glossdef"><p>An <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.analysis_engine" title="Analysis Engine">Analysis Engine</a></em></a> 
           that is composed of a single 
-          <a class="glossterm" href="#ugr.glossary.annotator"><em class="glossterm">Annotator</em></a>; one that has
+          <a class="glossterm" href="#ugr.glossary.annotator"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.annotator" title="Annotator">Annotator</a></em></a>; one that has
 no component (or <span class="quote">&#8220;<span class="quote">sub</span>&#8221;</span>) Analysis Engines inside of it; 
 contrast with
-          <a class="glossterm" href="#ugr.glossary.aggregate"><em class="glossterm">Aggregate Analysis Engine</em></a>.</p></dd><dt><a name="ugr.glossary.structured_information"></a>Structured Information</dt><dd><p>Items stored in structured resources such as
+          <a class="glossterm" href="#ugr.glossary.aggregate"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.aggregate" title="Aggregate Analysis Engine">Aggregate Analysis Engine</a></em></a>.</p></dd><dt id="ugr.glossary.structured_information"><span class="glossterm">Structured Information</span></dt><dd class="glossdef"><p>Items stored in structured resources such as
 search engine indices, databases or knowledge bases. The canonical example of
 structured information is the database table. Each element of information in
 the database is associated with a precisely defined schema where each table
 column heading indicates its precise semantics, defining exactly how the
-information should be interpreted by a computer program or end-user.</p></dd><dt><a name="ugr.glossary.sofa"></a>Subject of Analysis (Sofa)</dt><dd><p>A piece of
+information should be interpreted by a computer program or end-user.</p></dd><dt id="ugr.glossary.sofa"><span class="glossterm">Subject of Analysis (Sofa)</span></dt><dd class="glossdef"><p>A piece of
 data (e.g., text document, image, audio segment, or video segment), which is intended
 for analysis by UIMA analysis components.  It belongs to a 
-          <a class="glossterm" href="#ugr.glossary.cas_view"><em class="glossterm">CAS View</em></a> which has the same name; there
+          <a class="glossterm" href="#ugr.glossary.cas_view"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.cas_view" title="CAS View">CAS View</a></em></a> which has the same name; there
           is a one-to-one correspondence between these.  There can be multiple Sofas contained within
 one CAS, each one representing a different view of the original artifact &#8211; for example,
 an audio file could be the original artifact, and also be one Sofa, and another
 could be the output of a voice-recognition component, where the Sofa would be
 the corresponding text document. Sofas may be analyzed independently or
-simultaneously; they all co-exist within the CAS.  </p></dd><dt><a name="ugr.glossary.tightly_coupled_analysis_engine"></a>Tightly-Coupled Analysis Engine</dt><dd><p>An <a class="glossterm" href="#ugr.glossary.aggregate"><em class="glossterm">Aggregate Analysis Engine</em></a>
- where all of its component Analysis Engines run in the same address space.</p></dd><dt><a name="ugr.glossary.type"></a>Type</dt><dd><p>A specification of an object in the
-          <a class="glossterm" href="#ugr.glossary.cas"><em class="glossterm">CAS</em></a> used to store the results of
+simultaneously; they all co-exist within the CAS.  </p></dd><dt id="ugr.glossary.tightly_coupled_analysis_engine"><span class="glossterm">Tightly-Coupled Analysis Engine</span></dt><dd class="glossdef"><p>An <a class="glossterm" href="#ugr.glossary.aggregate"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.aggregate" title="Aggregate Analysis Engine">Aggregate Analysis Engine</a></em></a>
+ where all of its component Analysis Engines run in the same address space.</p></dd><dt id="ugr.glossary.type"><span class="glossterm">Type</span></dt><dd class="glossdef"><p>A specification of an object in the
+          <a class="glossterm" href="#ugr.glossary.cas"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.cas" title="CAS">CAS</a></em></a> used to store the results of
 analysis.  Types are defined using inheritance, so some types may be
 defined purely for the sake of defining other types, and are in this sense <span class="quote">&#8220;<span class="quote">abstract
 types.</span>&#8221;</span>  Types usually contain 
-          <a class="glossterm" href="#ugr.glossary.feature"><em class="glossterm">Feature</em></a>s, which are attributes, or
+          <a class="glossterm" href="#ugr.glossary.feature"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.feature" title="Feature">Feature</a></em></a>s, which are attributes, or
 properties of the type.  A type is roughly equivalent to a class in an
 object oriented programming language, or a table in a database.  Instances of types in the CAS
-          may be indexed for retrieval.</p></dd><dt><a name="ugr.glossary.type_system"></a>Type System</dt><dd><p>A collection of related <a class="glossterm" href="#ugr.glossary.type"><em class="glossterm">types</em></a>.
+          may be indexed for retrieval.</p></dd><dt id="ugr.glossary.type_system"><span class="glossterm">Type System</span></dt><dd class="glossdef"><p>A collection of related <a class="glossterm" href="#ugr.glossary.type"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.type" title="Type">types</a></em></a>.
           All components that can access the CAS,
-including <a class="glossterm" href="#ugr.glossary.application"><em class="glossterm">Applications</em></a>,
-          <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm">Analysis Engine</em></a>s,
-          <a class="glossterm" href="#ugr.glossary.collection_reader"><em class="glossterm">Collection Readers</em></a>,
-          <a class="glossterm" href="#ugr.glossary.flow_controller"><em class="glossterm">Flow Controllers</em></a>, or
-          <a class="glossterm" href="#ugr.glossary.cas_consumer"><em class="glossterm">CAS Consumers</em></a>
+including <a class="glossterm" href="#ugr.glossary.application"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.application" title="Application">Applications</a></em></a>,
+          <a class="glossterm" href="#ugr.glossary.analysis_engine"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.analysis_engine" title="Analysis Engine">Analysis Engine</a></em></a>s,
+          <a class="glossterm" href="#ugr.glossary.collection_reader"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.collection_reader" title="Collection Reader">Collection Readers</a></em></a>,
+          <a class="glossterm" href="#ugr.glossary.flow_controller"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.flow_controller" title="Flow Controller">Flow Controllers</a></em></a>, or
+          <a class="glossterm" href="#ugr.glossary.cas_consumer"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.cas_consumer" title="CAS Consumer">CAS Consumers</a></em></a>
 declare the type system that they use. Type systems are shared across Analysis Engines, allowing the outputs 
           of one Analysis Engine to be read as input by another Analysis Engine.
 A type system is roughly analogous to a set of related classes in object
 oriented programming, or a set of related tables in a database.  The type
-system / type / feature terminology comes from computational linguistics.</p></dd><dt><a name="ugr.glossary.unstructured_information"></a>Unstructured Information</dt><dd><p>The canonical example of unstructured
+system / type / feature terminology comes from computational linguistics.</p></dd><dt id="ugr.glossary.unstructured_information"><span class="glossterm">Unstructured Information</span></dt><dd class="glossdef"><p>The canonical example of unstructured
 information is the natural language text document. The intended meaning of a
 document's content is only implicit and its precise interpretation by a
 computer program requires some degree of analysis to explicate the document's
 semantics. Other examples include audio, video and images. Contrast with
-<a class="glossterm" href="#ugr.glossary.structured_information"><em class="glossterm">Structured Information</em></a>.
-        </p></dd><dt><a name="ugr.glossary.uima"></a>UIMA</dt><dd><p>UIMA is an acronym that stands for Unstructured Information Management Architecture; 
+<a class="glossterm" href="#ugr.glossary.structured_information"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.structured_information" title="Structured Information">Structured Information</a></em></a>.
+        </p></dd><dt id="ugr.glossary.uima"><span class="glossterm">UIMA</span></dt><dd class="glossdef"><p>UIMA is an acronym that stands for Unstructured Information Management Architecture; 
           it is a software architecture which specifies component interfaces, design patterns
 and development roles for creating, describing, discovering, composing and
 deploying multi-modal analysis capabilities.  The UIMA specification is being developed by a 
-        technical committee at <a class="ulink" href="http://www.oasis-open.org/committees/uima" target="_top">OASIS</a>.</p></dd><dt><a name="ugr.glossary.uima_java_framework"></a>UIMA Java Framework</dt><dd><p>See <a class="glossterm" href="#ugr.glossary.apache_uima_java_framework"><em class="glossterm">Apache UIMA Java Framework</em></a>.</p><p></p></dd><dt><a name="ugr.glossary.uima_sdk"></a>UIMA SDK</dt><dd><p>See <a class="glossterm" href="#ugr.glossary.apache_uima_sdk"><em class="glossterm">Apache UIMA SDK</em></a>.</p><p></p></dd><dt><a name="ugr.glossary.xcas"></a>XCAS</dt><dd><p>An XML representation of the CAS. The XCAS can be used for saving
+        technical committee at <a class="ulink" href="http://www.oasis-open.org/committees/uima" target="_top">OASIS</a>.</p></dd><dt id="ugr.glossary.uima_java_framework"><span class="glossterm">UIMA Java Framework</span></dt><dd class="glossdef"><p>See <a class="glossterm" href="#ugr.glossary.apache_uima_java_framework"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.apache_uima_java_framework" title="Apache UIMA Java Framework">Apache UIMA Java Framework</a></em></a>.</p><p></p></dd><dt id="ugr.glossary.uima_sdk"><span class="glossterm">UIMA SDK</span></dt><dd class="glossdef"><p>See <a class="glossterm" href="#ugr.glossary.apache_uima_sdk"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.apache_uima_sdk" title="Apache UIMA Software Development Kit (SDK)">Apache UIMA SDK</a></em></a>.</p><p></p></dd><dt id="ugr.glossary.xcas"><span class="glossterm">XCAS</span></dt><dd class="glossdef"><p>An XML representation of the CAS. The XCAS can be used for saving
 and restoring CASs to and from streams. The UIMA SDK provides XCAS serialization and
 de-serialization methods for CASes.  This is an older serialization format and
-new UIMA code should use the standard <a class="glossterm" href="#ugr.glossary.xmi"><em class="glossterm">XMI</em></a>
-format instead.</p></dd><dt><a name="ugr.glossary.xmi"></a>XML Metadata Interchange (XMI)</dt><dd><p>An OMG standard for representing
+new UIMA code should use the standard <a class="glossterm" href="#ugr.glossary.xmi"><em class="glossterm"><a class="glossterm" href="#ugr.glossary.xmi" title="XML Metadata Interchange (XMI)">XMI</a></em></a>
+format instead.</p></dd><dt id="ugr.glossary.xmi"><span class="glossterm">XML Metadata Interchange (XMI)</span></dt><dd class="glossdef"><p>An OMG standard for representing
 object graphs in XML, which UIMA uses to serialize analysis results from the
 CAS to an XML representation.  The UIMA SDK provides XMI serialization and
 de-serialization methods for CASes</p></dd></dl></div>

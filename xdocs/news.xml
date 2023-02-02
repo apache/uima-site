@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
   Licensed to the Apache Software Foundation (ASF) under one
@@ -30,6 +30,45 @@
     <section name="Apache UIMA News">
 
     <subsectionToc/>
+
+    <subsection name="02 Feb 2023" date="02 Feb 2023" title="Apache UIMA Java SDK 3.4.0 released">
+      <p>
+        The Apache UIMA team is happy to announce the release of the UIMA Java SDK 3.4.0.
+      </p>
+      
+      <p>Changes include:
+        <ul>
+          <li>[UIMA-6474] Switch to getDataPathElements() in UIMA context</li>
+          <li>Issue #226: Provide SPI interfaces to locate descriptors</li>
+          <li>Issue #225: Improve deployment in OSGi environments</li>
+          <li>Issue #245: Utility method for loading type systems in SPI providers</li>
+          <li>Issue #247: RelativePathResolver should consider TCCL</li>
+          <li>Issue #268: UIMA components log and then re-throw exceptions which usually leads to errors being logged twice</li>
+          <li>Issue #252: Potential failure to look up FsGenerator3 in OSGI-like contexts</li>
+          <li>Issue #265: Unable to release without auto-staging</li>
+          <li>Issue #266: Unable to install UIMA 3.3.1 Eclipse Plugins in Eclipse 2022-09</li>
+          <li>Issue #267: UIMA Log4jLogger_impl not compatible with log4j 2.18.0+</li>
+          <li>Issue #272: select on FSArray seems broken</li>
+          <li>Issue #275: Improved error message made it even more misleading</li>
+          <li>Issue #285: NPE while deserializing an XMI in a PEAR context</li>
+          <li>[UIMA-6440] Stage release artifacts as part of the build</li>
+          <li>[UIMA-6443] Fresh Eclipse update site for every release</li>
+          <li>[UIMA-6462] Avoid deploy broken checksum files for p2content.xml and artifacts.xml in feature modules</li>
+          <li>[UIMA-6463] Use toolchains to ensure compatibility with Java 1.8</li>
+          <li>[UIMA-6436] Move maintainer documentation from website into maintainer guide</li>
+          <li>Issue #230: Remove version overrides in Maven plugin modules</li>
+          <li>Issue #228: Move the UimaDecompiler class</li>
+          <li>Issue #283: Update issue report generation</li>
+          <li>Issue #292: Make CAS serialization tests more robust</li>
+          <li>[UIMA-6459] Upgrade dependencies</li>
+          <li>Issue #270: Update dependencies</li>
+        </ul>
+      </p>
+
+      <p>Please see the the complete list of issues fixed in the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.4.0/issuesFixed/github-report.html">
+         GitHub issue report</a> and the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.4.0/issuesFixed/jira-report.html">
+         Jira issue report</a> for more details of the changes.</p>
+    </subsection>
 
     <subsection name="21 Dec 2022" date="21 Dec 2022" title="Retirement of several Apache UIMA sub-projects">
       <p>
@@ -2116,7 +2155,7 @@ provides cluster management services to automate the scale-out of UIMA pipelines
       
       <subsection name='20 December 2006' date='20 December 2006' title='GLDV conference workshop (Germany)'>
         <p>We are pleased announce a UIMA workshop at the <a href="https://www.sfb441.uni-tuebingen.de/gldv2007/index.en.html">GLDV 2007 spring conference</a>
-        in beautiful <a href="https://www.tuebingen.de/en/1559.html">T�bingen</a>, Germany.  
+        in beautiful <a href="https://www.tuebingen.de/en/1559.html">Tï¿½bingen</a>, Germany.  
         Please see the <a href="gldv07.html">full announcement</a>
         for further details.
         </p>

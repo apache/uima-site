@@ -37,6 +37,7 @@ org.apache.uima.resource.metadata.impl
 org.apache.uima.resource.service.impl
 org.apache.uima.search
 org.apache.uima.search.impl
+org.apache.uima.spi
 org.apache.uima.uimacpp
 org.apache.uima.util
 org.apache.uima.util.impl

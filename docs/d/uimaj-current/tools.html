@@ -1,10 +1,10 @@
 <html><head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-   <title>UIMA Tools Guide and Reference</title><link rel="stylesheet" type="text/css" href="css/stylesheet-html.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="UIMA Tools Guide and Reference" id="d5e1"><div xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h1 class="title">UIMA Tools Guide and Reference</h1></div><div><div class="authorgroup">
+   <title>UIMA Tools Guide and Reference</title><link rel="stylesheet" type="text/css" href="css/stylesheet-html.css"><meta name="generator" content="DocBook XSL Stylesheets V1.79.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" id="d5e1"><div xmlns:d="http://docbook.org/ns/docbook" class="titlepage"><div><div><h1 class="title">UIMA Tools Guide and Reference</h1></div><div><div class="authorgroup">
       <h3 class="corpauthor">Written and maintained by the Apache UIMA&#8482; Development Community</h3>
-    </div></div><div><p class="releaseinfo">Version 3.3.1</p></div><div><p class="copyright">Copyright &copy; 2006, 2022 The Apache Software Foundation</p></div><div><div class="legalnotice" title="Legal Notice"><a name="d5e8"></a>
+    </div></div><div><p class="releaseinfo">Version 3.4.0</p></div><div><p class="copyright">Copyright &copy; 2006, 2023 The Apache Software Foundation</p></div><div><div class="legalnotice" id="d5e8">
       <p> </p>
-      <p title="License and Disclaimer">
+      <p>
         <b>License and Disclaimer.&nbsp;</b>
 
         The ASF licenses this documentation
@@ -14,7 +14,7 @@
          
          </p><div class="blockquote"><blockquote class="blockquote">
            <a class="ulink" href="http://www.apache.org/licenses/LICENSE-2.0" target="_top">http://www.apache.org/licenses/LICENSE-2.0</a>
-         </blockquote></div><p title="License and Disclaimer">
+         </blockquote></div><p>
          
            Unless required by applicable law or agreed to in writing,
            this documentation and its contents are distributed under the License 
@@ -27,7 +27,7 @@
       </p>
       <p> </p>
       <p> </p>
-      <p title="Trademarks">
+      <p>
         <b>Trademarks.&nbsp;</b>
         All terms mentioned in the text that are known to be trademarks or 
         service marks have been appropriately capitalized.  Use of such terms
@@ -35,11 +35,11 @@
         the trademark or service mark.
         
       </p>
-    </div></div><div><p class="pubdate">October, 2022</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#ugr.tools.cde">1. CDE User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.launching">1.1. Launching the Component Descriptor Editor</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.creating_new_ae_descriptor">1.2. Creating a New AE Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.pages_within_the_editor">1.3. Pages within the Editor</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.adjusting_display_of_pages">1.3.1. Adjusting the display of pages</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.overview_page">1.4. Overview Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.overview_page.implementation_details">1.4.1. Implementation Details</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.overview_page.runtime_info">1.4.2. Runtime Information</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.overview_page.overall_id_info">1.4.3. Overall Identification Information</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page">1.5. Aggregate Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page.adding_components_more_than_once">1.5.1. Adding components more than once</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page.adding_removing_components_from_flow">1.5.2. Adding or Removing components in a flow</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page.adding_remote_aes">1.5.3. Adding remote Analysis Engines</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page.connecting_to_remote_services">1.5.4. Connecting to Remote Services</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page.finding_aes_by_searching">1.5.5. Finding Analysis Engines by searching</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page.component_engine_flow">1.5.6. Component Engine Flow</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.parm_definition">1.6. Parameters Definition Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.parm_definition.using_groups">1.6.1. Using groups</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.parm_definition.adding">1.6.2. Adding or Editing a Parameter</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.parm_definition.aggregates">1.6.3. Parameter declarations for Aggregates</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.parameter_settings">1.7. Parameter Settings Page</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.type_system">1.8. Type System Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.type_system.exporting">1.8.1. Exporting</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.capabilities">1.9. Capabilities Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.capabilities.sofa_name_mapping">1.9.1. Sofa (and view) name mappings</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.indexes">1.10. Indexes Page</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.resources">1.11. Resources Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.resources.binding">1.11.1. Binding</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.resources.aggregates">1.11.2. Resources with Aggregates</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.resources.imports_exports">1.11.3. Imports and Exports</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.source">1.12. Source Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.source.formatting">1.12.1. Source formatting &#8211; indentation</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.creating_self_contained_type_system">1.13. Creating a Self-Contained Type System</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.creating_other_descriptor_components">1.14. Creating Other Descriptor Components</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.cpe">2. CPE Configurator User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cpe.limitations">2.1. Limitations of the CPE Configurator</a></span></dt><dt><span class="section"><a href="#ugr.tools.cpe.starting">2.2. Starting the CPE Configurator</a></span></dt><dt><span class="section"><a href="#ugr.tools.cpe.selecting_component_descriptors">2.3. Selecting Component Descriptors</a></span></dt><dt><span class="section"><a href="#ugr.tools.cpe.running">2.4. Running a Collection Processing Engine</a></span></dt><dt><span class="section"><a href="#ugr.tools.cpe.file_menu">2.5. The File Menu</a></span></dt><dt><span class="section"><a href="#ugr.tools.cpe.help_menu">2.6. The Help Menu</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.doc_analyzer">3. Document Analyzer User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.doc_analyzer.starting">3.1. Starting the Document Analyzer</a></span></dt><dt><span class="section"><a href="#ugr.tools.doc_analyzer.running_an_ae">3.2. Running an AE</a></span></dt><dt><span class="section"><a href="#ugr.tools.doc_analyzer.viewing_results">3.3. Viewing the Analysis Results</a></span></dt><dt><span class="section"><a href="#ugr.tools.doc_analyzer.configuring">3.4. Configuring the Annotation Viewer</a></span></dt><dt><span class="section"><a href="#ugr.tools.doc_analyzer.interactive_mode">3.5. Interactive Mode</a></span></dt><dt><span class="section"><a href="#ugr.tools.doc_analyzer.view_mode">3.6. View Mode</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.annotation_viewer">4. Annotation Viewer</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.cvd">5. CAS Visual Debugger</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cvd.introduction">5.1. Introduction</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.cvd.introduction.running">5.1.1. Running CVD</a></span></dt><dt><span class="section"><a href="#cvd.introduction.commandline">5.1.2. Command line parameters</a></span></dt></dl></dd><dt><span class="section"><a href="#cvd.errorHandling">5.2. Error Handling</a></span></dt><dt><span class="section"><a href="#cvd.preferencesFile">5.3. Preferences File</a></span></dt><dt><span class="section"><a href="#cvd.theMenus">5.4. The Menus</a></span></dt><dd><dl><dt><span class="section"><a href="#cvd.fileMenu">5.4.1. The File Menu</a></span></dt><dt><span class="section"><a href="#cvd.editMenu">5.4.2. The Edit Menu</a></span></dt><dt><span class="section"><a href="#cvd.runMenu">5.4.3. The Run Menu</a></span></dt><dt><span class="section"><a href="#cvd.toolsMenu">5.4.4. The tools menu</a></span></dt></dl></dd><dt><span class="section"><a href="#cvd.mainDisplayArea">5.5. The Main Display Area</a></span></dt><dd><dl><dt><span class="section"><a href="#cvd.statusBar">5.5.1. The Status Bar</a></span></dt><dt><span class="section"><a href="#cvd.keyboardNavigation">5.5.2. Keyboard Navigation and Shortcuts</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.eclipse_launcher">6. Eclipse Analysis Engine Launcher's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.eclipse_launcher.create_configuration">6.1. Creating an Analysis Engine launch configuration</a></span></dt><dt><span class="section"><a href="#ugr.tools.eclipse_launcher.launching">6.2. Launching an Analysis Engine</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ce">7. Cas Editor User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#sandbox.caseditor.Introduction">7.1. Introduction</a></span></dt><dt><span class="section"><a href="#sandbox.caseditor.Launching">7.2. Launching the Cas Editor</a></span></dt><dd><dl><dt><span class="section"><a href="#sandbox.caseditor.typeSystemSpec">7.2.1. Specifying a type system</a></span></dt></dl></dd><dt><span class="section"><a href="#sandbox.caseditor.annotation_editor">7.3. Annotation editor</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cas_editor.annotation_editor.editor">7.3.1. Editor</a></span></dt><dt><span class="section"><a href="#sandbox.caseditor.annotation_editor.styling">7.3.2. Configure annotation styling</a></span></dt><dt><span class="section"><a href="#ugr.tools.cas_editor.annotation_editor.cas_views">7.3.3. CAS view support</a></span></dt><dt><span class="section"><a href="#ugr.tools.cas_editor.annotation_editor.outline">7.3.4. Outline view</a></span></dt><dt><span class="section"><a href="#ugr.tools.cas_editor.annotation_editor.properties_view">7.3.5. Edit Views</a></span></dt><dt><span class="section"><a href="#ugr.tools.cas_editor.annotation_editor.fs_view">7.3.6. FeatureStructure View</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cas_editor.custom_view">7.4. Implementing a custom Cas Editor View</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cas_editor.custom_view.sample">7.4.1. Annotation Status View Sample</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.jcasgen">8. JCasGen User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.jcasgen.running_without_eclipse">8.1. Running stand-alone without Eclipse</a></span></dt><dt><span class="section"><a href="#ugr.tools.jcasgen.running_standalone_with_eclipse">8.2. Running stand-alone with Eclipse</a></span></dt><dt><span class="section"><a href="#ugr.tools.jcasgen.running_within_eclipse">8.3. Running within Eclipse</a></span></dt><dt><span class="section"><a href="#ugr.tools.jcasgen.maven_plugin">8.4. Using the jcasgen-maven-plugin</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.pear.packager">9. PEAR Packager User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.pear.packager.using_eclipse_plugin">9.1. Using the PEAR Eclipse Plugin</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.pear.packager.add_uima_nature">9.1.1. Add UIMA Nature to your project</a></span></dt><dt><span class="section"><a href="#ugr.tools.pear.packager.using_pear_generation_wizard">9.1.2. Using the PEAR Generation Wizard</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.pear.packager.using_command_line">9.2. Using the PEAR command line packager</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.pear.packager.maven.plugin.usage">10. The PEAR Packaging Maven Plugin</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.pear.packager.maven.plugin.usage.configure">10.1. Specifying the PEAR Packaging Maven Plugin</a></span></dt><dt><span class="section"><a href="#ugr.tools.pear.packager.maven.plugin.usage.dependencies">10.2. Automatically including dependencies</a></span></dt><dt><span class="section"><a href="#ugr.tools.pear.packager.maven.plugin.commandline">10.3. Running from the command line</a></span></dt><dt><span class="section"><a href="#ugr.tools.pear.packager.maven.plugin.install.src">10.4. Building the PEAR Packaging Plugin From Source</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.pear.installer">11. PEAR Installer User's Guide</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.pear.merger">12. PEAR Merger User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.pear.merger.merge_details">12.1. Details of the merging process</a></span></dt><dt><span class="section"><a href="#ugr.tools.pear.merger.testing_modifying_resulting_pear">12.2. Testing and Modifying the resulting PEAR</a></span></dt><dt><span class="section"><a href="#ugr.tools.pear.merger.restrictions_limitations">12.3. Restrictions and Limitations</a></span></dt></dl></dd></dl></div>
+    </div></div><div><p class="pubdate">January, 2023</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="chapter"><a href="#ugr.tools.cde">1. CDE User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.launching">1.1. Launching the Component Descriptor Editor</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.creating_new_ae_descriptor">1.2. Creating a New AE Descriptor</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.pages_within_the_editor">1.3. Pages within the Editor</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.adjusting_display_of_pages">1.3.1. Adjusting the display of pages</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.overview_page">1.4. Overview Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.overview_page.implementation_details">1.4.1. Implementation Details</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.overview_page.runtime_info">1.4.2. Runtime Information</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.overview_page.overall_id_info">1.4.3. Overall Identification Information</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page">1.5. Aggregate Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page.adding_components_more_than_once">1.5.1. Adding components more than once</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page.adding_removing_components_from_flow">1.5.2. Adding or Removing components in a flow</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page.adding_remote_aes">1.5.3. Adding remote Analysis Engines</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page.connecting_to_remote_services">1.5.4. Connecting to Remote Services</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page.finding_aes_by_searching">1.5.5. Finding Analysis Engines by searching</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.aggregate_page.component_engine_flow">1.5.6. Component Engine Flow</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.parm_definition">1.6. Parameters Definition Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.parm_definition.using_groups">1.6.1. Using groups</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.parm_definition.adding">1.6.2. Adding or Editing a Parameter</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.parm_definition.aggregates">1.6.3. Parameter declarations for Aggregates</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.parameter_settings">1.7. Parameter Settings Page</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.type_system">1.8. Type System Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.type_system.exporting">1.8.1. Exporting</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.capabilities">1.9. Capabilities Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.capabilities.sofa_name_mapping">1.9.1. Sofa (and view) name mappings</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.indexes">1.10. Indexes Page</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.resources">1.11. Resources Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.resources.binding">1.11.1. Binding</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.resources.aggregates">1.11.2. Resources with Aggregates</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.resources.imports_exports">1.11.3. Imports and Exports</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.source">1.12. Source Page</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cde.source.formatting">1.12.1. Source formatting &#8211; indentation</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cde.creating_self_contained_type_system">1.13. Creating a Self-Contained Type System</a></span></dt><dt><span class="section"><a href="#ugr.tools.cde.creating_other_descriptor_components">1.14. Creating Other Descriptor Components</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.cpe">2. CPE Configurator User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cpe.limitations">2.1. Limitations of the CPE Configurator</a></span></dt><dt><span class="section"><a href="#ugr.tools.cpe.starting">2.2. Starting the CPE Configurator</a></span></dt><dt><span class="section"><a href="#ugr.tools.cpe.selecting_component_descriptors">2.3. Selecting Component Descriptors</a></span></dt><dt><span class="section"><a href="#ugr.tools.cpe.running">2.4. Running a Collection Processing Engine</a></span></dt><dt><span class="section"><a href="#ugr.tools.cpe.file_menu">2.5. The File Menu</a></span></dt><dt><span class="section"><a href="#ugr.tools.cpe.help_menu">2.6. The Help Menu</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.doc_analyzer">3. Document Analyzer User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.doc_analyzer.starting">3.1. Starting the Document Analyzer</a></span></dt><dt><span class="section"><a href="#ugr.tools.doc_analyzer.running_an_ae">3.2. Running an AE</a></span></dt><dt><span class="section"><a href="#ugr.tools.doc_analyzer.viewing_results">3.3. Viewing the Analysis Results</a></span></dt><dt><span class="section"><a href="#ugr.tools.doc_analyzer.configuring">3.4. Configuring the Annotation Viewer</a></span></dt><dt><span class="section"><a href="#ugr.tools.doc_analyzer.interactive_mode">3.5. Interactive Mode</a></span></dt><dt><span class="section"><a href="#ugr.tools.doc_analyzer.view_mode">3.6. View Mode</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.annotation_viewer">4. Annotation Viewer</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.cvd">5. CAS Visual Debugger</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cvd.introduction">5.1. Introduction</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.cvd.introduction.running">5.1.1. Running CVD</a></span></dt><dt><span class="section"><a href="#cvd.introduction.commandline">5.1.2. Command line parameters</a></span></dt></dl></dd><dt><span class="section"><a href="#cvd.errorHandling">5.2. Error Handling</a></span></dt><dt><span class="section"><a href="#cvd.preferencesFile">5.3. Preferences File</a></span></dt><dt><span class="section"><a href="#cvd.theMenus">5.4. The Menus</a></span></dt><dd><dl><dt><span class="section"><a href="#cvd.fileMenu">5.4.1. The File Menu</a></span></dt><dt><span class="section"><a href="#cvd.editMenu">5.4.2. The Edit Menu</a></span></dt><dt><span class="section"><a href="#cvd.runMenu">5.4.3. The Run Menu</a></span></dt><dt><span class="section"><a href="#cvd.toolsMenu">5.4.4. The tools menu</a></span></dt></dl></dd><dt><span class="section"><a href="#cvd.mainDisplayArea">5.5. The Main Display Area</a></span></dt><dd><dl><dt><span class="section"><a href="#cvd.statusBar">5.5.1. The Status Bar</a></span></dt><dt><span class="section"><a href="#cvd.keyboardNavigation">5.5.2. Keyboard Navigation and Shortcuts</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.eclipse_launcher">6. Eclipse Analysis Engine Launcher's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.eclipse_launcher.create_configuration">6.1. Creating an Analysis Engine launch configuration</a></span></dt><dt><span class="section"><a href="#ugr.tools.eclipse_launcher.launching">6.2. Launching an Analysis Engine</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.ce">7. Cas Editor User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#sandbox.caseditor.Introduction">7.1. Introduction</a></span></dt><dt><span class="section"><a href="#sandbox.caseditor.Launching">7.2. Launching the Cas Editor</a></span></dt><dd><dl><dt><span class="section"><a href="#sandbox.caseditor.typeSystemSpec">7.2.1. Specifying a type system</a></span></dt></dl></dd><dt><span class="section"><a href="#sandbox.caseditor.annotation_editor">7.3. Annotation editor</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cas_editor.annotation_editor.editor">7.3.1. Editor</a></span></dt><dt><span class="section"><a href="#sandbox.caseditor.annotation_editor.styling">7.3.2. Configure annotation styling</a></span></dt><dt><span class="section"><a href="#ugr.tools.cas_editor.annotation_editor.cas_views">7.3.3. CAS view support</a></span></dt><dt><span class="section"><a href="#ugr.tools.cas_editor.annotation_editor.outline">7.3.4. Outline view</a></span></dt><dt><span class="section"><a href="#ugr.tools.cas_editor.annotation_editor.properties_view">7.3.5. Edit Views</a></span></dt><dt><span class="section"><a href="#ugr.tools.cas_editor.annotation_editor.fs_view">7.3.6. FeatureStructure View</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.cas_editor.custom_view">7.4. Implementing a custom Cas Editor View</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.cas_editor.custom_view.sample">7.4.1. Annotation Status View Sample</a></span></dt></dl></dd></dl></dd><dt><span class="chapter"><a href="#ugr.tools.jcasgen">8. JCasGen User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.jcasgen.running_without_eclipse">8.1. Running stand-alone without Eclipse</a></span></dt><dt><span class="section"><a href="#ugr.tools.jcasgen.running_standalone_with_eclipse">8.2. Running stand-alone with Eclipse</a></span></dt><dt><span class="section"><a href="#ugr.tools.jcasgen.running_within_eclipse">8.3. Running within Eclipse</a></span></dt><dt><span class="section"><a href="#ugr.tools.jcasgen.maven_plugin">8.4. Using the jcasgen-maven-plugin</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.pear.packager">9. PEAR Packager User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.pear.packager.using_eclipse_plugin">9.1. Using the PEAR Eclipse Plugin</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.pear.packager.add_uima_nature">9.1.1. Add UIMA Nature to your project</a></span></dt><dt><span class="section"><a href="#ugr.tools.pear.packager.using_pear_generation_wizard">9.1.2. Using the PEAR Generation Wizard</a></span></dt></dl></dd><dt><span class="section"><a href="#ugr.tools.pear.packager.using_command_line">9.2. Using the PEAR command line packager</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.pear.packager.maven.plugin.usage">10. The PEAR Packaging Maven Plugin</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.pear.packager.maven.plugin.usage.configure">10.1. Specifying the PEAR Packaging Maven Plugin</a></span></dt><dt><span class="section"><a href="#ugr.tools.pear.packager.maven.plugin.usage.dependencies">10.2. Automatically including dependencies</a></span></dt><dt><span class="section"><a href="#ugr.tools.pear.packager.maven.plugin.commandline">10.3. Running from the command line</a></span></dt><dt><span class="section"><a href="#ugr.tools.pear.packager.maven.plugin.install.src">10.4. Building the PEAR Packaging Plugin From Source</a></span></dt></dl></dd><dt><span class="chapter"><a href="#ugr.tools.pear.installer">11. PEAR Installer User's Guide</a></span></dt><dt><span class="chapter"><a href="#ugr.tools.pear.merger">12. PEAR Merger User's Guide</a></span></dt><dd><dl><dt><span class="section"><a href="#ugr.tools.pear.merger.merge_details">12.1. Details of the merging process</a></span></dt><dt><span class="section"><a href="#ugr.tools.pear.merger.testing_modifying_resulting_pear">12.2. Testing and Modifying the resulting PEAR</a></span></dt><dt><span class="section"><a href="#ugr.tools.pear.merger.restrictions_limitations">12.3. Restrictions and Limitations</a></span></dt></dl></dd></dl></div>
   
   
   
-  <div class="chapter" title="Chapter&nbsp;1.&nbsp;Component Descriptor Editor User's Guide" id="ugr.tools.cde"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;1.&nbsp;Component Descriptor Editor User's Guide</h2></div></div></div>
+  <div class="chapter" id="ugr.tools.cde"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;1.&nbsp;Component Descriptor Editor User's Guide</h1></div></div></div>
   
   
   
@@ -48,14 +48,14 @@
     descriptor formats, except the Collection Processing Engine descriptor, the PEAR
     package descriptor and some remote deployment descriptors.</p>
   
-  <div class="section" title="1.1.&nbsp;Launching the Component Descriptor Editor"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.launching">1.1.&nbsp;Launching the Component Descriptor Editor</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.launching"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.1.&nbsp;Launching the Component Descriptor Editor</h2></div></div></div>
     
     
     <p>Here's how to launch this tool on a descriptor contained in the examples. This
       presumes you have installed the examples as described in the SDK Installation and Setup
       chapter.</p>
     
-    <div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem"><p>Expand the uimaj-examples
+    <div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>Expand the uimaj-examples
       project in the Eclipse Navigator or Package Explorer view</p></li><li class="listitem"><p>Within this project, browse to the file
         descriptors/tutorial/ex1/RoomNumberAnnotator.xml.</p></li><li class="listitem"><p>Right-click on this file and select Open With <span class="symbol">&#8594;</span> Component
         Descriptor Editor. (If this option is not present, check to make sure you installed
@@ -66,7 +66,7 @@
     
   </div>
   
-  <div class="section" title="1.2.&nbsp;Creating a New AE Descriptor"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.creating_new_ae_descriptor">1.2.&nbsp;Creating a New AE Descriptor</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.creating_new_ae_descriptor"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.2.&nbsp;Creating a New AE Descriptor</h2></div></div></div>
     
     
     <p>A new AE descriptor file may be created by selecting the File <span class="symbol">&#8594;</span> New <span class="symbol">&#8594;</span>
@@ -74,7 +74,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.cde/image002.jpg" width="574" alt="Screenshot of selecting new UIMA component in Eclipse"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.cde/image002.jpg" width="574" alt="Screenshot of selecting new UIMA component in Eclipse"></td></tr></table></div>
     </div>
     
     <p>If the user then selects UIMA and Analysis Engine Descriptor File, and clicks the
@@ -83,7 +83,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="317"><tr><td><img src="images/tools/tools.cde/image004.jpg" width="317" alt="Screenshot of selecting new UIMA component in Eclipse after pushing Next"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="317"><tr><td><img src="images/tools/tools.cde/image004.jpg" width="317" alt="Screenshot of selecting new UIMA component in Eclipse after pushing Next"></td></tr></table></div>
     </div>
     
     <p>After entering the appropriate parent folder and file name, and clicking Finish,
@@ -97,7 +97,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/tools/tools.cde/image006.jpg" width="564" alt="Screenshot of CDE showing overview page"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/tools/tools.cde/image006.jpg" width="564" alt="Screenshot of CDE showing overview page"></td></tr></table></div>
     </div>
     
     <p>To see all the information shown in the main editor pane with less scrolling, double
@@ -117,7 +117,7 @@
     
   </div>
   
-  <div class="section" title="1.3.&nbsp;Pages within the Editor"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.pages_within_the_editor">1.3.&nbsp;Pages within the Editor</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.pages_within_the_editor"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.3.&nbsp;Pages within the Editor</h2></div></div></div>
     
     
     <p>The Component Descriptor Editor follows a standard Eclipse paradigm for these
@@ -134,7 +134,7 @@
       Aggregate, Parameters, Parameter Settings, Type System, Capabilities, Indexes,
       Resources, and Source. We discuss each of these pages in turn.</p>
     
-    <div class="section" title="1.3.1.&nbsp;Adjusting the display of pages"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.adjusting_display_of_pages">1.3.1.&nbsp;Adjusting the display of pages</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.adjusting_display_of_pages"><div class="titlepage"><div><div><h3 class="title">1.3.1.&nbsp;Adjusting the display of pages</h3></div></div></div>
       
       
       <p>Most pages in the editor have a <span class="quote">&#8220;<span class="quote">sash</span>&#8221;</span> bar. This is a light gray bar
@@ -144,7 +144,7 @@
         clicking on the small icons at the top right of the page that look like this:
         
         </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="69"><tr><td><img src="images/tools/tools.cde/image008.jpg" width="69" alt="Changing orientation of two window split"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="69"><tr><td><img src="images/tools/tools.cde/image008.jpg" width="69" alt="Changing orientation of two window split"></td></tr></table></div>
     </div>
       
       <p>All of the sections on a page have subtitles, with an indicator to the left which
@@ -154,7 +154,7 @@
     </div>
   </div>
   
-  <div class="section" title="1.4.&nbsp;Overview Page"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.overview_page">1.4.&nbsp;Overview Page</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.overview_page"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.4.&nbsp;Overview Page</h2></div></div></div>
     
     
     <p>Normally, the first page displayed in the Component Descriptor Editor is the
@@ -164,7 +164,7 @@
       three sections: Implementation Details, Runtime Information and overall
       Identification Information.</p>
     
-    <div class="section" title="1.4.1.&nbsp;Implementation Details"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.overview_page.implementation_details">1.4.1.&nbsp;Implementation Details</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.overview_page.implementation_details"><div class="titlepage"><div><div><h3 class="title">1.4.1.&nbsp;Implementation Details</h3></div></div></div>
       
       
       <p>In the Implementation Details section you specify the Implementation Language
@@ -174,7 +174,7 @@
         Descriptor Editor have different formats, depending on the engine type.</p>
       
     </div>
-    <div class="section" title="1.4.2.&nbsp;Runtime Information"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.overview_page.runtime_info">1.4.2.&nbsp;Runtime Information</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.overview_page.runtime_info"><div class="titlepage"><div><div><h3 class="title">1.4.2.&nbsp;Runtime Information</h3></div></div></div>
       
       
       <p>Runtime information is only applicable for primitive engines and is disabled
@@ -196,7 +196,7 @@
       
     </div>
     
-    <div class="section" title="1.4.3.&nbsp;Overall Identification Information"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.overview_page.overall_id_info">1.4.3.&nbsp;Overall Identification Information</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.overview_page.overall_id_info"><div class="titlepage"><div><div><h3 class="title">1.4.3.&nbsp;Overall Identification Information</h3></div></div></div>
       
       
       <p>The Name should be a human-readable name that describes this component. The
@@ -206,7 +206,7 @@
     </div>
   </div>
   
-  <div class="section" title="1.5.&nbsp;Aggregate Page"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.aggregate_page">1.5.&nbsp;Aggregate Page</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.aggregate_page"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.5.&nbsp;Aggregate Page</h2></div></div></div>
     
     
     <p>For primitive Analysis Engines, Flow Controllers or Collection Processing
@@ -215,7 +215,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/tools/tools.cde/image010.jpg" width="564" alt="CDE Aggregate page"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/tools/tools.cde/image010.jpg" width="564" alt="CDE Aggregate page"></td></tr></table></div>
     </div>
     
     <p>On the left we see a list of component engines, and on the right information about the
@@ -230,7 +230,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="384"><tr><td><img src="images/tools/tools.cde/import-by-location.jpg" width="384" alt="Adding an Analysis Engine to an Aggregate, by location"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="384"><tr><td><img src="images/tools/tools.cde/import-by-location.jpg" width="384" alt="Adding an Analysis Engine to an Aggregate, by location"></td></tr></table></div>
     </div>
     
     <p>This dialog lets you select
@@ -239,7 +239,7 @@
     
     <p>Or, if you have selected to import by name, this dialog is shown:
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="524"><tr><td><img src="images/tools/tools.cde/import-by-name.jpg" width="524" alt="Adding an Analysis Engine to an Aggregate, by name"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="524"><tr><td><img src="images/tools/tools.cde/import-by-name.jpg" width="524" alt="Adding an Analysis Engine to an Aggregate, by name"></td></tr></table></div>
     </div>
         
     <p>You can specify that the import should be by Name (the name is looked up using both the
@@ -268,7 +268,7 @@
       list you will be warned that deletion will also delete the specified engine from this
       list.</p>
     
-    <div class="section" title="1.5.1.&nbsp;Adding components more than once"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.aggregate_page.adding_components_more_than_once">1.5.1.&nbsp;Adding components more than once</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.aggregate_page.adding_components_more_than_once"><div class="titlepage"><div><div><h3 class="title">1.5.1.&nbsp;Adding components more than once</h3></div></div></div>
       
       
       <p>Components may be added to the left panel more than once. Each of these components
@@ -278,7 +278,7 @@
         with each instance).</p>
     </div>
     
-    <div class="section" title="1.5.2.&nbsp;Adding or Removing components in a flow"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.aggregate_page.adding_removing_components_from_flow">1.5.2.&nbsp;Adding or Removing components in a flow</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.aggregate_page.adding_removing_components_from_flow"><div class="titlepage"><div><div><h3 class="title">1.5.2.&nbsp;Adding or Removing components in a flow</h3></div></div></div>
       
       
       <p>The button in-between the Component Engines and the Flow List, labeled
@@ -290,7 +290,7 @@
         right hand list and press the <code class="literal">&lt;&lt;</code> button.</p>
     </div>
     
-    <div class="section" title="1.5.3.&nbsp;Adding remote Analysis Engines"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.aggregate_page.adding_remote_aes">1.5.3.&nbsp;Adding remote Analysis Engines</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.aggregate_page.adding_remote_aes"><div class="titlepage"><div><div><h3 class="title">1.5.3.&nbsp;Adding remote Analysis Engines</h3></div></div></div>
       
       
       <p>There are two ways to add remote engines: add an existing descriptor, which
@@ -314,7 +314,7 @@
         
         
         </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="485"><tr><td><img src="images/tools/tools.cde/image014v2.jpg" width="485" alt="Adding a remote client to an aggregate"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="485"><tr><td><img src="images/tools/tools.cde/image014v2.jpg" width="485" alt="Adding a remote client to an aggregate"></td></tr></table></div>
     </div>
       
       <p>To define a remote service you specify the Service Kind, Protocol Service Type,
@@ -334,7 +334,7 @@
         in the dialog box.</p>
     </div>
     
-    <div class="section" title="1.5.4.&nbsp;Connecting to Remote Services"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.aggregate_page.connecting_to_remote_services">1.5.4.&nbsp;Connecting to Remote Services</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.aggregate_page.connecting_to_remote_services"><div class="titlepage"><div><div><h3 class="title">1.5.4.&nbsp;Connecting to Remote Services</h3></div></div></div>
       
       
       <p>If you are using the Vinci protocol, it requires that you specify the location of
@@ -349,7 +349,7 @@
         metadata from the remote service.</p>
     </div>
     
-    <div class="section" title="1.5.5.&nbsp;Finding Analysis Engines by searching"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.aggregate_page.finding_aes_by_searching">1.5.5.&nbsp;Finding Analysis Engines by searching</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.aggregate_page.finding_aes_by_searching"><div class="titlepage"><div><div><h3 class="title">1.5.5.&nbsp;Finding Analysis Engines by searching</h3></div></div></div>
       
       
       <p>The next button that appears between the component engine list and the flow list
@@ -360,7 +360,7 @@
         
         
         </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="525"><tr><td><img src="images/tools/tools.cde/image016.jpg" width="525" alt="Searching for an AE to add to an aggregate"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="525"><tr><td><img src="images/tools/tools.cde/image016.jpg" width="525" alt="Searching for an AE to add to an aggregate"></td></tr></table></div>
     </div>
       
       <p>The search automatically adds a <span class="quote">&#8220;<span class="quote">match any characters</span>&#8221;</span> - style
@@ -372,7 +372,7 @@
         fields which are left non-blank.</p>
     </div>
     
-    <div class="section" title="1.5.6.&nbsp;Component Engine Flow"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.aggregate_page.component_engine_flow">1.5.6.&nbsp;Component Engine Flow</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.aggregate_page.component_engine_flow"><div class="titlepage"><div><div><h3 class="title">1.5.6.&nbsp;Component Engine Flow</h3></div></div></div>
       
       
       <p>The UIMA SDK currently supports three kinds of sequencing flows: Fixed,
@@ -389,7 +389,7 @@
         
         
         </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="376"><tr><td><img src="images/tools/tools.cde/image018.jpg" width="376" alt="Specifying flow control"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="376"><tr><td><img src="images/tools/tools.cde/image018.jpg" width="376" alt="Specifying flow control"></td></tr></table></div>
     </div>
       
       <p>The key name value is set automatically from the XML descriptor being imported,
@@ -405,7 +405,7 @@
     </div>
   </div>
   
-  <div class="section" title="1.6.&nbsp;Parameters Definition Page"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.parm_definition">1.6.&nbsp;Parameters Definition Page</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.parm_definition"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.6.&nbsp;Parameters Definition Page</h2></div></div></div>
     
     
     <p>There are two pages for parameters: the first one is where parameters are defined,
@@ -417,7 +417,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="515"><tr><td><img src="images/tools/tools.cde/image020.jpg" width="515" alt="Parameter Definitions - not Aggregate"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="515"><tr><td><img src="images/tools/tools.cde/image020.jpg" width="515" alt="Parameter Definitions - not Aggregate"></td></tr></table></div>
     </div>
     
     <p>The first checkbox at the top simplifies things if you are not using Parameter
@@ -442,10 +442,10 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="545"><tr><td><img src="images/tools/tools.cde/image022.jpg" width="545" alt="Parameter description shown in a hover message"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="545"><tr><td><img src="images/tools/tools.cde/image022.jpg" width="545" alt="Parameter description shown in a hover message"></td></tr></table></div>
     </div>
     
-    <div class="section" title="1.6.1.&nbsp;Using groups"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.parm_definition.using_groups">1.6.1.&nbsp;Using groups</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.parm_definition.using_groups"><div class="titlepage"><div><div><h3 class="title">1.6.1.&nbsp;Using groups</h3></div></div></div>
       
       
       <p>The group concept for parameters arose from the observation that sets of
@@ -461,7 +461,7 @@
         
         
         </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="515"><tr><td><img src="images/tools/tools.cde/image024.jpg" width="515" alt="Using parameter groups"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="515"><tr><td><img src="images/tools/tools.cde/image024.jpg" width="515" alt="Using parameter groups"></td></tr></table></div>
     </div>
       
       <p>You can see the <span class="quote">&#8220;<span class="quote">&lt;Common&gt;</span>&#8221;</span> parameters as well as two
@@ -490,19 +490,19 @@
       
     </div>
     
-    <div class="section" title="1.6.2.&nbsp;Adding or Editing a Parameter"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.parm_definition.adding">1.6.2.&nbsp;Adding or Editing a Parameter</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.parm_definition.adding"><div class="titlepage"><div><div><h3 class="title">1.6.2.&nbsp;Adding or Editing a Parameter</h3></div></div></div>
       
 
       <p>When creating or modifying a parameter both a unique name and a valid type must be
        specified. The Description and External Override fields are optional.  The defaults for the two
        checkboxs indicate a single-valued optional parameter in the example below:
         </p><div class="screenshot">
-          <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="465"><tr><td><img src="images/tools/tools.cde/image025.jpg" width="465" alt="Aggregate parameters"></td></tr></table></div>
+          <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="465"><tr><td><img src="images/tools/tools.cde/image025.jpg" width="465" alt="Aggregate parameters"></td></tr></table></div>
         </div>
 
     </div>
 
-    <div class="section" title="1.6.3.&nbsp;Parameter declarations for Aggregates"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.parm_definition.aggregates">1.6.3.&nbsp;Parameter declarations for Aggregates</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.parm_definition.aggregates"><div class="titlepage"><div><div><h3 class="title">1.6.3.&nbsp;Parameter declarations for Aggregates</h3></div></div></div>
       
       
       <p>Aggregates declare parameters which always must override a parameter setting
@@ -511,7 +511,7 @@
         
         
         </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/tools/tools.cde/image026.jpg" width="564" alt="Aggregate parameters"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/tools/tools.cde/image026.jpg" width="564" alt="Aggregate parameters"></td></tr></table></div>
     </div>
       
       <p>There is an additional panel shown (on the right) which lists all of the
@@ -523,7 +523,7 @@
         the aggregate, putting it into the same group(s) (if groups are being used in the
         component &#8211; this is required), and setting the properties of the parameter to
         match those of the component (this is required).</p>
-      <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If the name of the parameter being added already is in use in the aggregate,
+      <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If the name of the parameter being added already is in use in the aggregate,
       and the parameters are not compatible, a new parameter name is generated by suffixing
       the name with a number. If the parameters are compatible, the selected component
       parameter is added to the existing aggregate parameter, as an additional override. If
@@ -543,7 +543,7 @@
       
       <p>Once you have added a parameter definition to the aggregate, you can use the
         buttons on the right side of the left panel to add additional overrides or remove
-        parameters or their overrides. <span><a name="ugr.tools.cde.parm_definition.removing_groups"></a> You can also remove
+        parameters or their overrides. <span id="ugr.tools.cde.parm_definition.removing_groups" class="phrase"> You can also remove
         groups; removing a group is like removing all the parameter definitions in the
         group.</span></p>
       
@@ -565,7 +565,7 @@
     </div>
   </div>
   
-  <div class="section" title="1.7.&nbsp;Parameter Settings Page"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.parameter_settings">1.7.&nbsp;Parameter Settings Page</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.parameter_settings"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.7.&nbsp;Parameter Settings Page</h2></div></div></div>
     
     
     <p>The Parameter Settings page is rather straightforward; it is where the user
@@ -573,7 +573,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/tools/tools.cde/image028.jpg" width="564" alt="Parameter settings page"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/tools/tools.cde/image028.jpg" width="564" alt="Parameter settings page"></td></tr></table></div>
     </div>
     
     <p>For single valued attributes, the user simply types the default value into the
@@ -585,7 +585,7 @@
     
     <p>Values are checked for validity. For Boolean values in a list, use the words
       <code class="literal">true</code> or <code class="literal">false</code>.</p>
-    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you specify a value in a single-valued parameter, and then delete all the
+    <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you specify a value in a single-valued parameter, and then delete all the
     characters in the value, the CDE will treat this as if you wanted to not specify any setting
     for this parameter. In order to specify a 0 length string setting for a String-valued
     parameter, you will have to manually edit the XML using the <span class="quote">&#8220;<span class="quote">Source</span>&#8221;</span> tab.
@@ -597,7 +597,7 @@
     
   </div>
   
-  <div class="section" title="1.8.&nbsp;Type System Page"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.type_system">1.8.&nbsp;Type System Page</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.type_system"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.8.&nbsp;Type System Page</h2></div></div></div>
     
     
     <p>This page declares the type system used by the annotator. For aggregates it is
@@ -607,7 +607,7 @@
       System page looks like the following:
             
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="634"><tr><td><img src="images/tools/tools.cde/limitJCasGenType.jpg" width="634" alt="Type System declaration page"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="634"><tr><td><img src="images/tools/tools.cde/limitJCasGenType.jpg" width="634" alt="Type System declaration page"></td></tr></table></div>
     </div>
     
     <p>Before discussing this page in detail, it is important to note that there are 3
@@ -619,7 +619,7 @@
       and <span class="quote">&#8220;<span class="quote">Display fully qualified type
       names.</span>&#8221;</span></p>
     
-    <p><a name="ugr.tools.cde.auto_jcasgen"></a>When the Auto generate option is checked and the development language for the AE is
+    <p id="ugr.tools.cde.auto_jcasgen">When the Auto generate option is checked and the development language for the AE is
       Java, any time a change is made to a type and the change is saved, the corresponding .java
       files are generated using the JCasGen tool. The results are stored in the primary source
       directory defined for the project. The primary source directory is that listed first
@@ -635,7 +635,7 @@
       plus any imported type system, plus (for aggregates) the merged type systems of all the
       components in an aggregate.</p>
     
-  <div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>If the components of the aggregate have different definitions for the same 
+  <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>If the components of the aggregate have different definitions for the same 
     type name, the CDE will show a warning.  It is possible to continue past this warning, 
     in which case the CDE will produce the correct 
     Java source files representing the merged types (that is, the
@@ -646,13 +646,13 @@
     <a href="references.html#ugr.ref.jcas.merging_types_from_other_specs" class="olink">Section&nbsp;5.5, &#8220;Merging Types&#8221;</a> for more information.
   </p></div>    
     
-    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>In addition to running automatically, you can manually run JCasGen on the
+    <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>In addition to running automatically, you can manually run JCasGen on the
     fully merged type system by clicking the JCasGen button, or by selecting Run JCasGen from
     the UIMA pulldown menu: </p></div>
     
     
     <div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="515"><tr><td><img src="images/tools/tools.cde/image032.jpg" width="515" alt="Setting JCasGen options"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="515"><tr><td><img src="images/tools/tools.cde/image032.jpg" width="515" alt="Setting JCasGen options"></td></tr></table></div>
     </div>
     
     <p>When <span class="quote">&#8220;<span class="quote">Generate JCasGen classes only for types defined within the local project scope</span>&#8221;</span>
@@ -666,10 +666,10 @@
     unchecking the box shown on the type system page:</p>
     
     <div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="72"><tr><td><img src="images/tools/tools.cde/limitJCasGen.jpg" width="72" alt="Setting JCasGen options"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="72"><tr><td><img src="images/tools/tools.cde/limitJCasGen.jpg" width="72" alt="Setting JCasGen options"></td></tr></table></div>
     </div>
     
-    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If this is checked, and one of the types that would be excluded has merged type features, an error message
+    <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If this is checked, and one of the types that would be excluded has merged type features, an error message
     is issued - because JCasGen will need to be run for the combined (merged) type in order to get a class definition
     that will work for this configuration (have access to all the features).  If this happens, you have to run without
     limiting JCasGen, and manually delete any duplicated/unwanted source results.</p></div>
@@ -692,7 +692,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="416"><tr><td><img src="images/tools/tools.cde/image034.jpg" width="416" alt="Adding a type"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="416"><tr><td><img src="images/tools/tools.cde/image034.jpg" width="416" alt="Adding a type"></td></tr></table></div>
     </div>
     
     <p>Type names should be specified using a namespace. The namespace is like a Java
@@ -735,7 +735,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="416"><tr><td><img src="images/tools/tools.cde/image036.jpg" width="416" alt="Specifying a Feature Structure"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="416"><tr><td><img src="images/tools/tools.cde/image036.jpg" width="416" alt="Specifying a Feature Structure"></td></tr></table></div>
     </div>
     
     <p>It is also possible to import type systems for inclusion in your descriptor. To do
@@ -754,7 +754,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="347"><tr><td><img src="images/tools/tools.cde/import-chooser.jpg" width="347" alt="Picking files for importing"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="347"><tr><td><img src="images/tools/tools.cde/import-chooser.jpg" width="347" alt="Picking files for importing"></td></tr></table></div>
     </div>
     
     <p>This is essentially the same dialog as was used to add component engines to an
@@ -779,7 +779,7 @@
       type system is computed from the component AEs. The Type System information is shown in a
       grayed-out font.</p>
     
-    <div class="section" title="1.8.1.&nbsp;Exporting"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.type_system.exporting">1.8.1.&nbsp;Exporting</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.type_system.exporting"><div class="titlepage"><div><div><h3 class="title">1.8.1.&nbsp;Exporting</h3></div></div></div>
       
       
       <p>In addition to importing type specifications, you can export as well. When you
@@ -789,7 +789,7 @@
         
         
         </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="371"><tr><td><img src="images/tools/tools.cde/image040.jpg" width="371" alt="Exporting a type system"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="371"><tr><td><img src="images/tools/tools.cde/image040.jpg" width="371" alt="Exporting a type system"></td></tr></table></div>
     </div>
       
       <p>The base file name you type is inserted into the path in the line below
@@ -800,7 +800,7 @@
     </div>
   </div>
   
-  <div class="section" title="1.9.&nbsp;Capabilities Page"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.capabilities">1.9.&nbsp;Capabilities Page</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.capabilities"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.9.&nbsp;Capabilities Page</h2></div></div></div>
     
     
     <p>Capabilities come in <span class="quote">&#8220;<span class="quote">sets</span>&#8221;</span>. You can have multiple sets of
@@ -811,7 +811,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="515"><tr><td><img src="images/tools/tools.cde/image042.jpg" width="515" alt="Capabilities page"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="515"><tr><td><img src="images/tools/tools.cde/image042.jpg" width="515" alt="Capabilities page"></td></tr></table></div>
     </div>
     
     <p>When defining the capabilities of a primitive analysis engine, input and output
@@ -826,7 +826,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="436"><tr><td><img src="images/tools/tools.cde/image044.jpg" width="436" alt="Adding a type to the capabilities page"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="436"><tr><td><img src="images/tools/tools.cde/image044.jpg" width="436" alt="Adding a type to the capabilities page"></td></tr></table></div>
     </div>
     
     <p>Follow the instructions to mark the types as input and / or output (a type can be
@@ -844,7 +844,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="396"><tr><td><img src="images/tools/tools.cde/image046.jpg" width="396" alt="Specifying features as input or output"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="396"><tr><td><img src="images/tools/tools.cde/image046.jpg" width="396" alt="Specifying features as input or output"></td></tr></table></div>
     </div>
     
     <p>To mark a feature as being input and / or output, click the mouse in the input and / or
@@ -860,7 +860,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="396"><tr><td><img src="images/tools/tools.cde/image048.jpg" width="396" alt="Specifying a language"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="396"><tr><td><img src="images/tools/tools.cde/image048.jpg" width="396" alt="Specifying a language"></td></tr></table></div>
     </div>
     
     <p>The Sofa part of the capability is optional; it allows defining Sofa names that this
@@ -874,10 +874,10 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="416"><tr><td><img src="images/tools/tools.cde/image050.jpg" width="416" alt="Specifying a Sofa name"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="416"><tr><td><img src="images/tools/tools.cde/image050.jpg" width="416" alt="Specifying a Sofa name"></td></tr></table></div>
     </div>
     
-    <div class="section" title="1.9.1.&nbsp;Sofa (and view) name mappings"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.capabilities.sofa_name_mapping">1.9.1.&nbsp;Sofa (and view) name mappings</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.capabilities.sofa_name_mapping"><div class="titlepage"><div><div><h3 class="title">1.9.1.&nbsp;Sofa (and view) name mappings</h3></div></div></div>
       
       
       <p>Sofa names, once created, are used in Sofa Mappings. These are optional
@@ -888,7 +888,7 @@
         
         
         </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="535"><tr><td><img src="images/tools/tools.cde/image052.jpg" width="535" alt="Sofa mappings"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="535"><tr><td><img src="images/tools/tools.cde/image052.jpg" width="535" alt="Sofa mappings"></td></tr></table></div>
     </div>
       
       <p>Here the aggregate has defined two input Sofas, named
@@ -913,7 +913,7 @@
         
         
         </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/tools/tools.cde/image054.jpg" width="564" alt="Adding a Sofa mapping"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/tools/tools.cde/image054.jpg" width="564" alt="Adding a Sofa mapping"></td></tr></table></div>
     </div>
       
       <p>To edit an existing mapping, select the mapping and press Edit. This will show the
@@ -924,7 +924,7 @@
     </div>
   </div>
   
-  <div class="section" title="1.10.&nbsp;Indexes Page"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.indexes">1.10.&nbsp;Indexes Page</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.indexes"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.10.&nbsp;Indexes Page</h2></div></div></div>
     
     
     <p>The Indexes page is where the user declares what indexes and type priority lists are
@@ -934,7 +934,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="545"><tr><td><img src="images/tools/tools.cde/image056.jpg" width="545" alt="Index page"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="545"><tr><td><img src="images/tools/tools.cde/image056.jpg" width="545" alt="Index page"></td></tr></table></div>
     </div>
     
     <p>Both indexes and type priority lists can have imports. These imports work just like
@@ -963,7 +963,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="396"><tr><td><img src="images/tools/tools.cde/image058.jpg" width="396" alt="Adding a new index"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="396"><tr><td><img src="images/tools/tools.cde/image058.jpg" width="396" alt="Adding a new index"></td></tr></table></div>
     </div>
     
     <p>Each index needs a globally unique index name. Every index indexes one CAS type (including
@@ -979,7 +979,7 @@
       adjusted using the up and down buttons, if necessary.</p>
     
     
-       <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>There is usually no need to explicitly declare a Bag index in your descriptor.  
+       <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>There is usually no need to explicitly declare a Bag index in your descriptor.  
               As of UIMA v2.1, if you do not declare any index for a type (or any of its 
               supertypes), a Bag index will be automatically created.  This index is 
        accessed using the <code class="literal">getAllIndexedFS(...)</code> method defined on the index repository.</p></div>
@@ -1009,7 +1009,7 @@
     
   </div>
   
-  <div class="section" title="1.11.&nbsp;Resources Page"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.resources">1.11.&nbsp;Resources Page</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.resources"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.11.&nbsp;Resources Page</h2></div></div></div>
     
     
     <p>The resources page describes resource dependencies (for primitive Analysis
@@ -1036,7 +1036,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="495"><tr><td><img src="images/tools/tools.cde/image060.jpg" width="495" alt="Resources page for a primitive"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="495"><tr><td><img src="images/tools/tools.cde/image060.jpg" width="495" alt="Resources page for a primitive"></td></tr></table></div>
     </div>
     
     <p>To declare a resource dependency, click the Add button in the right hand panel. This
@@ -1044,7 +1044,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="396"><tr><td><img src="images/tools/tools.cde/image062.jpg" width="396" alt="Specifying a resource dependency"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="396"><tr><td><img src="images/tools/tools.cde/image062.jpg" width="396" alt="Specifying a resource dependency"></td></tr></table></div>
     </div>
     
     <p>The Key must be unique within the descriptor declaring it. The Interface, if
@@ -1056,7 +1056,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="416"><tr><td><img src="images/tools/tools.cde/image064.jpg" width="416" alt="Specifying an External Resource"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="416"><tr><td><img src="images/tools/tools.cde/image064.jpg" width="416" alt="Specifying an External Resource"></td></tr></table></div>
     </div>
     
     <p>The Name must be unique within this Analysis Engine. The URL identifies a file
@@ -1074,7 +1074,7 @@
       the interface specified in any Resource Dependencies this resource is bound
       to.</p>
     
-    <div class="section" title="1.11.1.&nbsp;Binding"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.resources.binding">1.11.1.&nbsp;Binding</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.resources.binding"><div class="titlepage"><div><div><h3 class="title">1.11.1.&nbsp;Binding</h3></div></div></div>
       
       
       <p>Once you have an external resource definition, and a Resource Dependency, you
@@ -1084,7 +1084,7 @@
       
     </div>
     
-    <div class="section" title="1.11.2.&nbsp;Resources with Aggregates"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.resources.aggregates">1.11.2.&nbsp;Resources with Aggregates</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.resources.aggregates"><div class="titlepage"><div><div><h3 class="title">1.11.2.&nbsp;Resources with Aggregates</h3></div></div></div>
       
       
       
@@ -1095,7 +1095,7 @@
       
     </div>
     
-    <div class="section" title="1.11.3.&nbsp;Imports and Exports"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.resources.imports_exports">1.11.3.&nbsp;Imports and Exports</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.resources.imports_exports"><div class="titlepage"><div><div><h3 class="title">1.11.3.&nbsp;Imports and Exports</h3></div></div></div>
       
       
       <p>Resource definitions and their bindings can be imported, just like other
@@ -1107,7 +1107,7 @@
     </div>
   </div>
   
-  <div class="section" title="1.12.&nbsp;Source Page"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.source">1.12.&nbsp;Source Page</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.source"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.12.&nbsp;Source Page</h2></div></div></div>
     
     
     <p>The Source page is a text view of the xml content of the Analysis Engine or Type System
@@ -1115,7 +1115,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/tools/tools.cde/image066.jpg" width="564" alt="Source page"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/tools/tools.cde/image066.jpg" width="564" alt="Source page"></td></tr></table></div>
     </div>
     
     <p>Changes made in the GUI are immediately reflected in the xml source, and changes
@@ -1129,7 +1129,7 @@
       the error will be detected and reported. In the case of saving, the file will be saved,
       even if it is in an error state.</p>
     
-    <div class="section" title="1.12.1.&nbsp;Source formatting &#8211; indentation"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cde.source.formatting">1.12.1.&nbsp;Source formatting &#8211; indentation</h3></div></div></div>
+    <div class="section" id="ugr.tools.cde.source.formatting"><div class="titlepage"><div><div><h3 class="title">1.12.1.&nbsp;Source formatting &#8211; indentation</h3></div></div></div>
       
       
       <p>The XML is indented using an indentation amount saved as a global UIMA
@@ -1139,7 +1139,7 @@
     </div>
   </div>
   
-  <div class="section" title="1.13.&nbsp;Creating a Self-Contained Type System"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.creating_self_contained_type_system">1.13.&nbsp;Creating a Self-Contained Type System</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.creating_self_contained_type_system"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.13.&nbsp;Creating a Self-Contained Type System</h2></div></div></div>
     
     
     <p>It is also possible to use the Component Descriptor Editor to create or edit
@@ -1149,12 +1149,12 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="347"><tr><td><img src="images/tools/tools.cde/image068.jpg" width="347" alt="Working with a self-contained type system"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="347"><tr><td><img src="images/tools/tools.cde/image068.jpg" width="347" alt="Working with a self-contained type system"></td></tr></table></div>
     </div><p>
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="347"><tr><td><img src="images/tools/tools.cde/image070.jpg" width="347"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="347"><tr><td><img src="images/tools/tools.cde/image070.jpg" width="347"></td></tr></table></div>
     </div>
     
     <p>This will take you to a version of the Component Descriptor Editor for editing a type
@@ -1164,7 +1164,7 @@
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="366"><tr><td><img src="images/tools/tools.cde/image072.jpg" width="366" alt="Editing a type system object"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="366"><tr><td><img src="images/tools/tools.cde/image072.jpg" width="366" alt="Editing a type system object"></td></tr></table></div>
     </div>
     
     <p>Just like an AE has an associated name, version, vendor and description, the same is
@@ -1178,7 +1178,7 @@
     
   </div>
   
-  <div class="section" title="1.14.&nbsp;Creating Other Descriptor Components"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cde.creating_other_descriptor_components">1.14.&nbsp;Creating Other Descriptor Components</h2></div></div></div>
+  <div class="section" id="ugr.tools.cde.creating_other_descriptor_components"><div class="titlepage"><div><div><h2 class="title" style="clear: both">1.14.&nbsp;Creating Other Descriptor Components</h2></div></div></div>
     
     
     <p>The new wizard can create several other kinds of components: Collection
@@ -1212,14 +1212,14 @@
       be suggested as the context file to use at the next edit session</p>
   </div>
 </div>
-  <div class="chapter" title="Chapter&nbsp;2.&nbsp;Collection Processing Engine Configurator User's Guide" id="ugr.tools.cpe"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;2.&nbsp;Collection Processing Engine Configurator User's Guide</h2></div></div></div>
+  <div class="chapter" id="ugr.tools.cpe"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;2.&nbsp;Collection Processing Engine Configurator User's Guide</h1></div></div></div>
   
   
   
   <p>A <span class="emphasis"><em>Collection Processing Engine (CPE)</em></span> processes
     collections of artifacts (documents) through the combination of the following
     components: a Collection Reader, Analysis Engines, and CAS Consumers.
-    <sup>[<a name="d5e597" href="#ftn.d5e597" class="footnote">1</a>]</sup>
+    <a href="#ftn.d5e597" class="footnote"><sup class="footnote" id="d5e597">[1]</sup></a>
     </p>
   
   <p>The <span class="emphasis"><em>Collection Processing Engine Configurator(CPE
@@ -1232,7 +1232,7 @@
     chapter is a user's guide for using the CPE Configurator tool, and does not describe
     UIMA's Collection Processing Architecture itself.</p>
   
-  <div class="section" title="2.1.&nbsp;Limitations of the CPE Configurator"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cpe.limitations">2.1.&nbsp;Limitations of the CPE Configurator</h2></div></div></div>
+  <div class="section" id="ugr.tools.cpe.limitations"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.1.&nbsp;Limitations of the CPE Configurator</h2></div></div></div>
     
     
     <p>The CPE Configurator only supports basic CPE configurations.</p>
@@ -1253,7 +1253,7 @@
     </p>   
   </div>
   
-  <div class="section" title="2.2.&nbsp;Starting the CPE Configurator"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cpe.starting">2.2.&nbsp;Starting the CPE Configurator</h2></div></div></div>
+  <div class="section" id="ugr.tools.cpe.starting"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.2.&nbsp;Starting the CPE Configurator</h2></div></div></div>
     
     
     <p>The CPE Configurator tool can be run using the <code class="literal">cpeGui</code> shell
@@ -1261,7 +1261,7 @@
       you've installed the example Eclipse project (see <a href="overview_and_setup.html#d4e1" class="olink">UIMA Overview &amp; SDK Setup</a>
       <a href="overview_and_setup.html#ugr.ovv.eclipse_setup.example_code" class="olink">Section&nbsp;3.2, &#8220;Setting up Eclipse to view Example Code&#8221;</a>, you can also run it using the
       <span class="quote">&#8220;<span class="quote">UIMA CPE GUI</span>&#8221;</span> run configuration provided in that project.</p>
-    <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you are planning to build a CPE using components other than the examples
+    <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you are planning to build a CPE using components other than the examples
     included in the UIMA SDK, you will first need to update your CLASSPATH environment
     variable to include the classes needed by these components.</p></div>
     
@@ -1269,15 +1269,15 @@
       
       
       </p><div class="screenshot">
-    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.cpe/image002.jpg" width="574" alt="CPE Configurator main GUI window"></td></tr></table></div>
+    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.cpe/image002.jpg" width="574" alt="CPE Configurator main GUI window"></td></tr></table></div>
   </div>
   </div>
   
-  <div class="section" title="2.3.&nbsp;Selecting Component Descriptors"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cpe.selecting_component_descriptors">2.3.&nbsp;Selecting Component Descriptors</h2></div></div></div>
+  <div class="section" id="ugr.tools.cpe.selecting_component_descriptors"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.3.&nbsp;Selecting Component Descriptors</h2></div></div></div>
     
     
     <p>The CPE Configurator's main window is divided into three sections, one each for the Collection
-      Reader, Analysis Engines, and CAS Consumers.<sup>[<a name="d5e633" href="#ftn.d5e633" class="footnote">2</a>]</sup></p>
+      Reader, Analysis Engines, and CAS Consumers.<a href="#ftn.d5e633" class="footnote"><sup class="footnote" id="d5e633">[2]</sup></a></p>
     
     <p>In each section of the CPE Configurator, you can select the component(s) you want to use by browsing to (or
       typing the location of) their XML descriptors. You must select a Collection Reader, and at least one Analysis
@@ -1296,12 +1296,12 @@ examples/descriptors/cas_consumer/XmiWriterCasConsumer.xml</pre>
     
     
     <div class="screenshot">
-    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.cpe/image004.jpg" width="574" alt="CPE Configurator after components chosen"></td></tr></table></div>
+    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.cpe/image004.jpg" width="574" alt="CPE Configurator after components chosen"></td></tr></table></div>
   </div>
     
   </div>
   
-  <div class="section" title="2.4.&nbsp;Running a Collection Processing Engine"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cpe.running">2.4.&nbsp;Running a Collection Processing Engine</h2></div></div></div>
+  <div class="section" id="ugr.tools.cpe.running"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.4.&nbsp;Running a Collection Processing Engine</h2></div></div></div>
     
     
     <p>After selecting each of the components and providing configuration settings,
@@ -1316,12 +1316,12 @@ examples/descriptors/cas_consumer/XmiWriterCasConsumer.xml</pre>
     
   </div>
   
-  <div class="section" title="2.5.&nbsp;The File Menu"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cpe.file_menu">2.5.&nbsp;The File Menu</h2></div></div></div>
+  <div class="section" id="ugr.tools.cpe.file_menu"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.5.&nbsp;The File Menu</h2></div></div></div>
     
     
     <p>The CPE Configurator's File Menu has the following options:</p>
     
-    <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Open CPE Descriptor</p></li><li class="listitem"><p>Save CPE Descriptor</p></li><li class="listitem"><p>Save Options (submenu)</p></li><li class="listitem"><p>Refresh Descriptors from File System</p></li><li class="listitem"><p>Clear All</p></li><li class="listitem"><p>Exit </p></li></ul></div>
+    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Open CPE Descriptor</p></li><li class="listitem"><p>Save CPE Descriptor</p></li><li class="listitem"><p>Save Options (submenu)</p></li><li class="listitem"><p>Refresh Descriptors from File System</p></li><li class="listitem"><p>Clear All</p></li><li class="listitem"><p>Exit </p></li></ul></div>
     
     <p><span class="bold"><strong>Open CPE Descriptor</strong></span> will allow you to select a
       CPE Descriptor file from disk, and will read in that CPE Descriptor and configure the GUI
@@ -1367,19 +1367,19 @@ examples/descriptors/cas_consumer/XmiWriterCasConsumer.xml</pre>
     
   </div>
   
-  <div class="section" title="2.6.&nbsp;The Help Menu"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cpe.help_menu">2.6.&nbsp;The Help Menu</h2></div></div></div>
+  <div class="section" id="ugr.tools.cpe.help_menu"><div class="titlepage"><div><div><h2 class="title" style="clear: both">2.6.&nbsp;The Help Menu</h2></div></div></div>
     
     
     <p>The CPE Configurator's Help menu provides <span class="quote">&#8220;<span class="quote">About</span>&#8221;</span>
       information and some very simple instructions on how to use the tool.</p>
     
   </div>
-<div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.d5e597" href="#d5e597" class="para">1</a>] </sup>Earlier versions of UIMA supported another component, the CAS
-    Initializer, but this component is now deprecated in UIMA Version 2.</p></div><div class="footnote">
-      <p><sup>[<a id="ftn.d5e633" href="#d5e633" class="para">2</a>] </sup>There is also a fourth pane, for the CAS Initializer, but it is hidden by default. To enable it click the
+<div class="footnotes"><br><hr style="width:100; text-align:left;margin-left: 0"><div id="ftn.d5e597" class="footnote"><p><a href="#d5e597" class="para"><sup class="para">[1] </sup></a>Earlier versions of UIMA supported another component, the CAS
+    Initializer, but this component is now deprecated in UIMA Version 2.</p></div><div id="ftn.d5e633" class="footnote">
+      <p><a href="#d5e633" class="para"><sup class="para">[2] </sup></a>There is also a fourth pane, for the CAS Initializer, but it is hidden by default. To enable it click the
         <code class="literal">View <span class="symbol">&#8594;</span> CAS Initializer Panel</code> menu item.</p></div></div></div>
   
-  <div class="chapter" title="Chapter&nbsp;3.&nbsp;Document Analyzer User's Guide" id="ugr.tools.doc_analyzer"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;3.&nbsp;Document Analyzer User's Guide</h2></div></div></div>
+  <div class="chapter" id="ugr.tools.doc_analyzer"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;3.&nbsp;Document Analyzer User's Guide</h1></div></div></div>
   
  
 
@@ -1395,7 +1395,7 @@ Engines, read <a href="tutorials_and_users_guides.html#d5e1" class="olink">UIMA 
   This chapter is a user's guide for using the Document Analyzer tool, and
 does not describe the process of developing annotators and Analysis Engines.</p>
 
-<div class="section" title="3.1.&nbsp;Starting the Document Analyzer"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.doc_analyzer.starting">3.1.&nbsp;Starting the Document Analyzer</h2></div></div></div>
+<div class="section" id="ugr.tools.doc_analyzer.starting"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.1.&nbsp;Starting the Document Analyzer</h2></div></div></div>
   
   
 <p>To run the Document Analyzer, execute the <code class="literal">documentAnalyzer</code> script that is in the <code class="literal">bin</code> directory of your UIMA SDK installation, or, if you
@@ -1411,13 +1411,13 @@ that Analysis Engine.</p>
 screen that looks like this:
   
   </p><div class="screenshot">
-    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.doc_analyzer/DocAnalyzerScr1.png" width="574" alt="Document Analyzer GUI"></td></tr></table></div>
+    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.doc_analyzer/DocAnalyzerScr1.png" width="574" alt="Document Analyzer GUI"></td></tr></table></div>
   </div>
 
 
   </div>
   
-  <div class="section" title="3.2.&nbsp;Running an AE"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.doc_analyzer.running_an_ae">3.2.&nbsp;Running an AE</h2></div></div></div>
+  <div class="section" id="ugr.tools.doc_analyzer.running_an_ae"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.2.&nbsp;Running an AE</h2></div></div></div>
     
 
 
@@ -1486,14 +1486,14 @@ own annotator code.)  Otherwise, an
 
 </div>
   
-  <div class="section" title="3.3.&nbsp;Viewing the Analysis Results"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.doc_analyzer.viewing_results">3.3.&nbsp;Viewing the Analysis Results</h2></div></div></div>
+  <div class="section" id="ugr.tools.doc_analyzer.viewing_results"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.3.&nbsp;Viewing the Analysis Results</h2></div></div></div>
     
 
 <p>After a successful analysis, the <span class="quote">&#8220;<span class="quote">Analysis
 Results</span>&#8221;</span> window will appear.
   
   </p><div class="screenshot">
-    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="416"><tr><td><img src="images/tools/tools.doc_analyzer/image004.jpg" width="416" alt="Analysis Results Window"></td></tr></table></div>
+    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="416"><tr><td><img src="images/tools/tools.doc_analyzer/image004.jpg" width="416" alt="Analysis Results Window"></td></tr></table></div>
   </div>
 
 
@@ -1516,7 +1516,7 @@ or the Deselet All button. The results display looks like this (for the AE descr
 <code class="literal">examples/descriptors/tutorial/ex4/MeetingDetectorTAE.xml</code>):
 
   </p><div class="screenshot">
-    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.doc_analyzer/image006v2.png" width="574" alt="Analysis Results Window showing results from tutorial example 4 in Annotations view mode"></td></tr></table></div>
+    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.doc_analyzer/image006v2.png" width="574" alt="Analysis Results Window showing results from tutorial example 4 in Annotations view mode"></td></tr></table></div>
   </div>
 
 <p>You can click the mouse on one of the highlighted
@@ -1529,21 +1529,21 @@ The annotations whose feature values match will be highlighted.  Step by step, y
 a radio button in the first tab of the legend.
 
   </p><div class="screenshot">
-    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.doc_analyzer/image007-1v2.png" width="574" alt="Analysis Results Window showing results from tutorial example 4 in Features view mode by selecting the DateAnnotation type."></td></tr></table></div>
+    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.doc_analyzer/image007-1v2.png" width="574" alt="Analysis Results Window showing results from tutorial example 4 in Features view mode by selecting the DateAnnotation type."></td></tr></table></div>
   </div>
 
 <p>Selecting this automatically transitions to the second tab, where you then select a specific feature 
 of the annotation type.
 
   </p><div class="screenshot">
-    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.doc_analyzer/image007-2v2.png" width="574" alt="Analysis Results Window showing results from tutorial example 4 in Features view mode by selecting the shortDateString feature."></td></tr></table></div>
+    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.doc_analyzer/image007-2v2.png" width="574" alt="Analysis Results Window showing results from tutorial example 4 in Features view mode by selecting the shortDateString feature."></td></tr></table></div>
   </div>
 
 <p>Selecting this again automatically transitions you to the thrid tab, where you select some specific feature 
 values in the third tab of the legend.
 
   </p><div class="screenshot">
-    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.doc_analyzer/image007-3v2.png" width="574" alt="Analysis Results Window showing results from tutorial example 4 in Features view mode by selecting individual shortDateString feature values."></td></tr></table></div>
+    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.doc_analyzer/image007-3v2.png" width="574" alt="Analysis Results Window showing results from tutorial example 4 in Features view mode by selecting individual shortDateString feature values."></td></tr></table></div>
   </div>
 
 <p>In each of the above two view modes, you can click the mouse on one of the highlighted 
@@ -1557,7 +1557,7 @@ for viewing.</p>
 
 </div>
   
-  <div class="section" title="3.4.&nbsp;Configuring the Annotation Viewer"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.doc_analyzer.configuring">3.4.&nbsp;Configuring the Annotation Viewer</h2></div></div></div>
+  <div class="section" id="ugr.tools.doc_analyzer.configuring"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.4.&nbsp;Configuring the Annotation Viewer</h2></div></div></div>
     
 
 <p>The <span class="quote">&#8220;<span class="quote">JV User Colors</span>&#8221;</span> and the HTML viewer allow
@@ -1572,7 +1572,7 @@ Map</span>&#8221;</span> button on the <span class="quote">&#8220;<span class="q
 
   
   </p><div class="screenshot">
-    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.doc_analyzer/image008.jpg" width="574" alt="Configuring the Analysis Results Viewer"></td></tr></table></div>
+    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.doc_analyzer/image008.jpg" width="574" alt="Configuring the Analysis Results Viewer"></td></tr></table></div>
   </div>
 
 <p>To change the color assigned to a type, simply click on
@@ -1596,7 +1596,7 @@ options, the viewer will be configured as you have specified.</p>
 
 </div>
 
-<div class="section" title="3.5.&nbsp;Interactive Mode"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.doc_analyzer.interactive_mode">3.5.&nbsp;Interactive Mode</h2></div></div></div>
+<div class="section" id="ugr.tools.doc_analyzer.interactive_mode"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.5.&nbsp;Interactive Mode</h2></div></div></div>
   
   
 
@@ -1611,7 +1611,7 @@ display a dialog that looks like this:
   
    
   </p><div class="screenshot">
-    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="545"><tr><td><img src="images/tools/tools.doc_analyzer/image010.jpg" width="545" alt="Invoking Interactive Mode"></td></tr></table></div>
+    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="545"><tr><td><img src="images/tools/tools.doc_analyzer/image010.jpg" width="545" alt="Invoking Interactive Mode"></td></tr></table></div>
   </div> 
 
 <p>You can type or cut-and-paste your text into this window,
@@ -1622,7 +1622,7 @@ that you supplied and the results will be displayed as usual.</p>
 
 </div>
   
-  <div class="section" title="3.6.&nbsp;View Mode"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.doc_analyzer.view_mode">3.6.&nbsp;View Mode</h2></div></div></div>
+  <div class="section" id="ugr.tools.doc_analyzer.view_mode"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.6.&nbsp;View Mode</h2></div></div></div>
     
     
 <p>If you have previously run a AE and saved its analysis
@@ -1636,7 +1636,7 @@ view your analysis results as described in Section
 
 </div>
   </div>
-  <div class="chapter" title="Chapter&nbsp;4.&nbsp;Annotation Viewer" id="ugr.tools.annotation_viewer"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;4.&nbsp;Annotation Viewer</h2></div></div></div>
+  <div class="chapter" id="ugr.tools.annotation_viewer"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;4.&nbsp;Annotation Viewer</h1></div></div></div>
   
   
   <p>The <span class="emphasis"><em>Annotation Viewer</em></span> is a tool for viewing analysis results
@@ -1644,7 +1644,7 @@ view your analysis results as described in Section
     CAS</em></span>. These are saved in a particular format called XMI. In the UIMA SDK, XML
     versions of CASes can be generated by:</p>
   
-  <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Running the Document Analyzer (see <a href="tools.html#ugr.tools.doc_analyzer" class="olink">Chapter&nbsp;3, <i>Document Analyzer User's Guide</i></a>, which
+  <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>Running the Document Analyzer (see <a href="tools.html#ugr.tools.doc_analyzer" class="olink">Chapter&nbsp;3, <i>Document Analyzer User's Guide</i></a>, which
     saves an XML representations of the CAS to the specified output directory.</p>
     </li><li class="listitem"><p>Running a Collection Processing Engine that includes the
       <span class="emphasis"><em>XMI Writer </em></span>CAS Consumer
@@ -1654,8 +1654,8 @@ view your analysis results as described in Section
       to learn how to do this is to look at the example code for the XMI Writer CAS Consumer,
       located in
       <code class="literal">examples/src/org/apache/uima/examples/xmi/XmiWriterCasConsumer.java</code>.
-      <sup>[<a name="d5e844" href="#ftn.d5e844" class="footnote">3</a>]</sup> </p></li></ul></div>
-  <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The Annotation Viewer only shows CAS views where the Sofa data type is a String.
+      <a href="#ftn.d5e844" class="footnote"><sup class="footnote" id="d5e844">[3]</sup></a> </p></li></ul></div>
+  <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The Annotation Viewer only shows CAS views where the Sofa data type is a String.
   </p></div>
   
   <p>You can run the Annotation Viewer by executing the
@@ -1664,7 +1664,7 @@ view your analysis results as described in Section
     <code class="literal">uimaj-examples</code> project. This will open the following window:   
     
     </p><div class="screenshot">
-  <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.annotation_viewer/image002.jpg" width="574" alt="Screenshot of annotationViewer"></td></tr></table></div>
+  <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.annotation_viewer/image002.jpg" width="574" alt="Screenshot of annotationViewer"></td></tr></table></div>
 </div>
   
   <p>Select an input directory (which must contain XMI files), and the descriptor for the
@@ -1673,14 +1673,14 @@ view your analysis results as described in Section
   
   <p>This will bring up a dialog where you can select a viewing format and double-click on a
     document to view it. This dialog is the same as the one that is described in <a href="tools.html#ugr.tools.doc_analyzer.viewing_results" class="olink">Section&nbsp;3.3, &#8220;Viewing the Analysis Results&#8221;</a>.</p>
-<div class="footnotes"><br><hr width="100" align="left"><div class="footnote"><p><sup>[<a id="ftn.d5e844" href="#d5e844" class="para">3</a>] </sup>An older form of a different XML format for the CAS is also provided
+<div class="footnotes"><br><hr style="width:100; text-align:left;margin-left: 0"><div id="ftn.d5e844" class="footnote"><p><a href="#d5e844" class="para"><sup class="para">[3] </sup></a>An older form of a different XML format for the CAS is also provided
       mainly for backwards compatibility. This form is called XCAS, and you can see examples
       of its use in
       <code class="literal">examples/src/org/apache/uima/examples/cpe/XCasWriterCasConsumer.java</code>.
       </p></div></div></div>
-  <div class="chapter" title="Chapter&nbsp;5.&nbsp;CAS Visual Debugger" id="ugr.tools.cvd"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;5.&nbsp;CAS Visual Debugger</h2></div></div></div>
+  <div class="chapter" id="ugr.tools.cvd"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;5.&nbsp;CAS Visual Debugger</h1></div></div></div>
  
- <div class="section" title="5.1.&nbsp;Introduction"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cvd.introduction">5.1.&nbsp;Introduction</h2></div></div></div>
+ <div class="section" id="ugr.tools.cvd.introduction"><div class="titlepage"><div><div><h2 class="title" style="clear: both">5.1.&nbsp;Introduction</h2></div></div></div>
  
  <p>
   The CAS Visual Debugger is a tool to run text analysis engines in UIMA
@@ -1714,7 +1714,7 @@ view your analysis results as described in Section
   This depends on your operating system, your version of Java, and a
   variety of other factors.
  </p>
- <div class="section" title="5.1.1.&nbsp;Running CVD"><div class="titlepage"><div><div><h3 class="title" id="ugr.cvd.introduction.running">5.1.1.&nbsp;Running CVD</h3></div></div></div>
+ <div class="section" id="ugr.cvd.introduction.running"><div class="titlepage"><div><div><h3 class="title">5.1.1.&nbsp;Running CVD</h3></div></div></div>
  
  <p>
   You will usually want to start CVD from the command line, or from Eclipse.  To start CVD from the
@@ -1736,7 +1736,7 @@ view your analysis results as described in Section
  </p>
  </div>
  
- <div class="section" title="5.1.2.&nbsp;Command line parameters"><div class="titlepage"><div><div><h3 class="title" id="cvd.introduction.commandline">5.1.2.&nbsp;Command line parameters</h3></div></div></div>
+ <div class="section" id="cvd.introduction.commandline"><div class="titlepage"><div><div><h3 class="title">5.1.2.&nbsp;Command line parameters</h3></div></div></div>
  
  <p>
  You can provide some command line parameters to influence the startup behavior of CVD.  For
@@ -1745,19 +1745,19 @@ view your analysis results as described in Section
  the annotator.  Here's a list of the supported command line options.
  </p>
  
-    <div class="table"><a name="cvd.table.commandline"></a><p class="title"><b>Table&nbsp;5.1.&nbsp;Command line options</b></p><div class="table-contents">
+    <div class="table" id="cvd.table.commandline"><p class="title"><b>Table&nbsp;5.1.&nbsp;Command line options</b></p><div class="table-contents">
     
-    <table summary="Command line options" style="border: none;"><colgroup><col><col></colgroup><thead><tr><th style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Option</th><th style="border-bottom: 0.5pt solid black; ">Description</th></tr></thead><tbody><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+    <table class="table" summary="Command line options" style="border: none;"><colgroup><col><col></colgroup><thead><tr><th style="border-right: 1px solid black; border-bottom: 1px solid black; ">Option</th><th style="border-bottom: 1px solid black; ">Description</th></tr></thead><tbody><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">-text &lt;textFile&gt;</code>
-       </td><td style="border-bottom: 0.5pt solid black; ">Loads the text file <code class="computeroutput">&lt;textFile&gt;</code></td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-bottom: 1px solid black; ">Loads the text file <code class="computeroutput">&lt;textFile&gt;</code></td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">-desc &lt;descriptorFile&gt;</code>
-       </td><td style="border-bottom: 0.5pt solid black; ">Loads the descriptor <code class="computeroutput">&lt;descriptorFile&gt;</code></td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-bottom: 1px solid black; ">Loads the descriptor <code class="computeroutput">&lt;descriptorFile&gt;</code></td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">-exec</code>
-       </td><td style="border-bottom: 0.5pt solid black; ">Runs the pre-loaded annotator; only allowed in conjunction with <code class="computeroutput">-desc</code> </td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-bottom: 1px solid black; ">Runs the pre-loaded annotator; only allowed in conjunction with <code class="computeroutput">-desc</code> </td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">-datapath &lt;datapath&gt;</code>
-       </td><td style="border-bottom: 0.5pt solid black; ">Sets the data path to <code class="computeroutput">&lt;datapath&gt;</code></td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-bottom: 1px solid black; ">Sets the data path to <code class="computeroutput">&lt;datapath&gt;</code></td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">-ini &lt;iniFile&gt;</code>
-       </td><td style="border-bottom: 0.5pt solid black; ">Makes CVD use alternative ini file <code class="computeroutput">&lt;textFile&gt;</code> (default is ~/annotViewer.pref)</td></tr><tr><td style="border-right: 0.5pt solid black; ">
+       </td><td style="border-bottom: 1px solid black; ">Makes CVD use alternative ini file <code class="computeroutput">&lt;textFile&gt;</code> (default is ~/annotViewer.pref)</td></tr><tr><td style="border-right: 1px solid black; ">
         <code class="computeroutput">-lookandfeel &lt;lnfClass&gt;</code>
        </td><td style="">Uses alternative look-and-feel <code class="computeroutput">&lt;lnfClass&gt;</code></td></tr></tbody></table>
       </div></div><br class="table-break">
@@ -1765,7 +1765,7 @@ view your analysis results as described in Section
  </div>
  
  </div>
- <div class="section" title="5.2.&nbsp;Error Handling"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="cvd.errorHandling">5.2.&nbsp;Error Handling</h2></div></div></div>
+ <div class="section" id="cvd.errorHandling"><div class="titlepage"><div><div><h2 class="title" style="clear: both">5.2.&nbsp;Error Handling</h2></div></div></div>
   
   <p>
    On encountering
@@ -1783,7 +1783,7 @@ view your analysis results as described in Section
   </p>
  </div>
 
- <div class="section" title="5.3.&nbsp;Preferences File"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="cvd.preferencesFile">5.3.&nbsp;Preferences File</h2></div></div></div>
+ <div class="section" id="cvd.preferencesFile"><div class="titlepage"><div><div><h2 class="title" style="clear: both">5.3.&nbsp;Preferences File</h2></div></div></div>
   
   <p>
    The program will attempt to read on startup and save on exit a file
@@ -1805,7 +1805,7 @@ view your analysis results as described in Section
   </p>
  </div>
 
- <div class="section" title="5.4.&nbsp;The Menus"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="cvd.theMenus">5.4.&nbsp;The Menus</h2></div></div></div>
+ <div class="section" id="cvd.theMenus"><div class="titlepage"><div><div><h2 class="title" style="clear: both">5.4.&nbsp;The Menus</h2></div></div></div>
   
   <p>
    We give a brief description of the various menus. All menu items come
@@ -1814,7 +1814,7 @@ view your analysis results as described in Section
    anywhere in the program. For example, Ctrl-S will save the text
    you've been editing.
   </p>
-  <div class="section" title="5.4.1.&nbsp;The File Menu"><div class="titlepage"><div><div><h3 class="title" id="cvd.fileMenu">5.4.1.&nbsp;The File Menu</h3></div></div></div>
+  <div class="section" id="cvd.fileMenu"><div class="titlepage"><div><div><h3 class="title">5.4.1.&nbsp;The File Menu</h3></div></div></div>
    
    <p>
     The File menu lets you load, create and save text, load and save
@@ -1828,8 +1828,8 @@ view your analysis results as described in Section
 
    <div class="itemizedlist"><p>
      Below is a list of the menu items, together with an explanation.
-    </p><ul class="itemizedlist" type="disc"><li class="listitem">
-     <p title="New Text...">
+    </p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+     <p>
       <b>New Text...&nbsp;</b>
       
        Clears the text area. Text you type is written to an anonymous
@@ -1842,7 +1842,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Open Text File">
+     <p>
       <b>Open Text File.&nbsp;</b>
       
        Loads a new text file into the viewer.&nbsp; The next time you run an
@@ -1852,7 +1852,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Save Text File">
+     <p>
       <b>Save Text File.&nbsp;</b>
       
        Saves the currently open text file. If no file is currently
@@ -1862,7 +1862,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Save Text As...">
+     <p>
       <b>Save Text As...&nbsp;</b>
       
        Save the text to a file of your choosing. This can be an existing
@@ -1871,7 +1871,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Change Code Page">
+     <p>
       <b>Change Code Page.&nbsp;</b>
       
        Allows you to change the code page that is used to load and save
@@ -1903,7 +1903,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Load Color Settings">
+     <p>
       <b>Load Color Settings.&nbsp;</b>
       
        Load previously saved color settings from a file (see
@@ -1918,7 +1918,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Save Color Settings">
+     <p>
       <b>Save Color Settings.&nbsp;</b>
       
        Save your customized color settings (see Tools/Customize
@@ -1929,7 +1929,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Read Type System File">
+     <p>
       <b>Read Type System File.&nbsp;</b>
       
        Load a type system file. This allows you to load an XCAS file
@@ -1937,7 +1937,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Write Type System File">
+     <p>
       <b>Write Type System File.&nbsp;</b>
       
        Create a type system file from the currently loaded type
@@ -1947,7 +1947,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Read XMI CAS File">
+     <p>
       <b>Read XMI CAS File.&nbsp;</b>
       
        Read an XMI CAS file. Important: XMI CAS is a serialization format that
@@ -1959,14 +1959,14 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Write XMI CAS File">
+     <p>
       <b>Write XMI CAS File.&nbsp;</b>
       
        Writes the current analysis out as an XMI CAS file.
       
      </p>
     </li><li class="listitem">
-     <p title="Read XCAS File">
+     <p>
       <b>Read XCAS File.&nbsp;</b>
       
        Read an XCAS file. Important: XCAS is a serialization format that
@@ -1981,14 +1981,14 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Write XCAS File">
+     <p>
       <b>Write XCAS File.&nbsp;</b>
       
        Writes the current analysis out as an XCAS file.
       
      </p>
     </li><li class="listitem">
-     <p title="Exit">
+     <p>
       <b>Exit.&nbsp;</b>
       Exits the program. Your preferences will be saved.
      </p>
@@ -1996,7 +1996,7 @@ view your analysis results as described in Section
 
   </div>
 
-  <div class="section" title="5.4.2.&nbsp;The Edit Menu"><div class="titlepage"><div><div><h3 class="title" id="cvd.editMenu">5.4.2.&nbsp;The Edit Menu</h3></div></div></div>
+  <div class="section" id="cvd.editMenu"><div class="titlepage"><div><div><h3 class="title">5.4.2.&nbsp;The Edit Menu</h3></div></div></div>
    
    <p>
 
@@ -2016,7 +2016,7 @@ view your analysis results as described in Section
    </p>
   </div>
 
-  <div class="section" title="5.4.3.&nbsp;The Run Menu"><div class="titlepage"><div><div><h3 class="title" id="cvd.runMenu">5.4.3.&nbsp;The Run Menu</h3></div></div></div>
+  <div class="section" id="cvd.runMenu"><div class="titlepage"><div><div><h3 class="title">5.4.3.&nbsp;The Run Menu</h3></div></div></div>
    
    <p>
 
@@ -2027,8 +2027,8 @@ view your analysis results as described in Section
      In the Run menu, you can load and run text analysis engines.
    </p>
 
-   <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-     <p title="Load AE">
+   <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+     <p>
       <b>Load AE.&nbsp;</b>
       
        Loads and initializes a text analysis engine. Choosing this menu
@@ -2046,7 +2046,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Run AE">
+     <p>
       <b>Run AE.&nbsp;</b>
       
        Before you have (successfully) loaded a TAE, this menu item will
@@ -2064,7 +2064,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Run AE on CAS">
+     <p>
       <b>Run AE on CAS.&nbsp;</b>
       
        This allows you to run an analysis engine on the current CAS.
@@ -2073,7 +2073,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Run collectionProcessComplete">
+     <p>
       <b>Run collectionProcessComplete.&nbsp;</b>
       
        When you select this item, the analysis engine's 
@@ -2081,7 +2081,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Performance Report">
+     <p>
       <b>Performance Report.&nbsp;</b>
       
        After you've run your analysis, you can view a performance report.  It will show
@@ -2089,7 +2089,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Recently used">
+     <p>
       <b>Recently used.&nbsp;</b>
       
        Collects a list of recently used analysis engines as a short-cut
@@ -2097,7 +2097,7 @@ view your analysis results as described in Section
       
      </p>
     </li><li class="listitem">
-     <p title="Language">
+     <p>
       <b>Language.&nbsp;</b>
       
        Some annotators do language specific processing. For example, if
@@ -2113,7 +2113,7 @@ view your analysis results as described in Section
     </li></ul></div>
   </div>
 
-  <div class="section" title="5.4.4.&nbsp;The tools menu"><div class="titlepage"><div><div><h3 class="title" id="cvd.toolsMenu">5.4.4.&nbsp;The tools menu</h3></div></div></div>
+  <div class="section" id="cvd.toolsMenu"><div class="titlepage"><div><div><h3 class="title">5.4.4.&nbsp;The tools menu</h3></div></div></div>
    
    <p>
     The tools menu contains some assorted utilities, such as the log
@@ -2121,7 +2121,7 @@ view your analysis results as described in Section
     A more detailed description of some of the menu items
     follows below.
    </p>
-   <div class="section" title="5.4.4.1.&nbsp;View Type System"><div class="titlepage"><div><div><h4 class="title" id="cvd.viewTypeSystem">5.4.4.1.&nbsp;View Type System</h4></div></div></div>
+   <div class="section" id="cvd.viewTypeSystem"><div class="titlepage"><div><div><h4 class="title">5.4.4.1.&nbsp;View Type System</h4></div></div></div>
     
     <p>
 
@@ -2150,10 +2150,10 @@ view your analysis results as described in Section
     </p>
    </div>
 
-   <div class="section" title="5.4.4.2.&nbsp;Show Selected Annotations"><div class="titlepage"><div><div><h4 class="title" id="cvd.showSelectedAnnotations">5.4.4.2.&nbsp;Show Selected Annotations</h4></div></div></div>
+   <div class="section" id="cvd.showSelectedAnnotations"><div class="titlepage"><div><div><h4 class="title">5.4.4.2.&nbsp;Show Selected Annotations</h4></div></div></div>
     
     <p>
-     </p><div class="figure"><a name="AnnotationViewerFigure"></a><div class="figure-contents">
+     </p><div class="figure" id="AnnotationViewerFigure"><div class="figure-contents">
       
       <div class="mediaobject"><img src="images/tools/tools.cvd/AnnotationViewer.jpg"></div>
      </div><p class="title"><b>Figure&nbsp;5.1.&nbsp;
@@ -2197,7 +2197,7 @@ view your analysis results as described in Section
 
  </div>
 
- <div class="section" title="5.5.&nbsp;The Main Display Area"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="cvd.mainDisplayArea">5.5.&nbsp;The Main Display Area</h2></div></div></div>
+ <div class="section" id="cvd.mainDisplayArea"><div class="titlepage"><div><div><h2 class="title" style="clear: both">5.5.&nbsp;The Main Display Area</h2></div></div></div>
   
   <p>
    The main display area has three sub-areas.&nbsp; In the upper left-hand
@@ -2215,7 +2215,7 @@ view your analysis results as described in Section
    <span class="bold"><strong>text display</strong></span>.
   </p>
   <p>
-   </p><div class="figure"><a name="Main1Figure"></a><div class="figure-contents">
+   </p><div class="figure" id="Main1Figure"><div class="figure-contents">
     
     <div class="mediaobject"><img src="images/tools/tools.cvd/Main1.jpg"></div>
    </div><p class="title"><b>Figure&nbsp;5.2.&nbsp;State of GUI after running an analysis engine</b></p></div><p><br class="figure-break">
@@ -2245,7 +2245,7 @@ view your analysis results as described in Section
    name recognizer for an example.
   </p>
   <p>
-   </p><div class="figure"><a name="Main2Figure"></a><div class="figure-contents">
+   </p><div class="figure" id="Main2Figure"><div class="figure-contents">
     
     <div class="mediaobject"><img src="images/tools/tools.cvd/Main2.jpg"></div>
    </div><p class="title"><b>Figure&nbsp;5.3.&nbsp;
@@ -2263,7 +2263,7 @@ view your analysis results as described in Section
     &#8221;</a>.
   </p>
   <p>
-   </p><div class="figure"><a name="Main3Figure"></a><div class="figure-contents">
+   </p><div class="figure" id="Main3Figure"><div class="figure-contents">
     
     <div class="mediaobject"><img src="images/tools/tools.cvd/Main3.jpg"></div>
    </div><p class="title"><b>Figure&nbsp;5.4.&nbsp;
@@ -2300,7 +2300,7 @@ view your analysis results as described in Section
    can be displayed and the popup menu will be empty.
   </p>
 
-  <div class="section" title="5.5.1.&nbsp;The Status Bar"><div class="titlepage"><div><div><h3 class="title" id="cvd.statusBar">5.5.1.&nbsp;The Status Bar</h3></div></div></div>
+  <div class="section" id="cvd.statusBar"><div class="titlepage"><div><div><h3 class="title">5.5.1.&nbsp;The Status Bar</h3></div></div></div>
    
    <p>
     At the bottom of the screen, some useful information is displayed in
@@ -2316,7 +2316,7 @@ view your analysis results as described in Section
    </p>
   </div>
 
-  <div class="section" title="5.5.2.&nbsp;Keyboard Navigation and Shortcuts"><div class="titlepage"><div><div><h3 class="title" id="cvd.keyboardNavigation">5.5.2.&nbsp;Keyboard Navigation and Shortcuts</h3></div></div></div>
+  <div class="section" id="cvd.keyboardNavigation"><div class="titlepage"><div><div><h3 class="title">5.5.2.&nbsp;Keyboard Navigation and Shortcuts</h3></div></div></div>
    
    <p>
     The GUI can be completely navigated and operated through the
@@ -2364,39 +2364,39 @@ view your analysis results as described in Section
    <p>
     The following table shows the supported keyboard shortcuts.
    </p>
-   <div class="table"><a name="cvd.table.keyboardShortcuts"></a><p class="title"><b>Table&nbsp;5.2.&nbsp;Keyboard shortcuts</b></p><div class="table-contents">
+   <div class="table" id="cvd.table.keyboardShortcuts"><p class="title"><b>Table&nbsp;5.2.&nbsp;Keyboard shortcuts</b></p><div class="table-contents">
     
-    <table summary="Keyboard shortcuts" style="border: none;"><colgroup><col><col><col></colgroup><thead><tr><th style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Shortcut</th><th style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Action</th><th style="border-bottom: 0.5pt solid black; ">Scope</th></tr></thead><tbody><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+    <table class="table" summary="Keyboard shortcuts" style="border: none;"><colgroup><col><col><col></colgroup><thead><tr><th style="border-right: 1px solid black; border-bottom: 1px solid black; ">Shortcut</th><th style="border-right: 1px solid black; border-bottom: 1px solid black; ">Action</th><th style="border-bottom: 1px solid black; ">Scope</th></tr></thead><tbody><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">Ctrl-O</code>
-       </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Open text file</td><td style="border-bottom: 0.5pt solid black; ">Global</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Open text file</td><td style="border-bottom: 1px solid black; ">Global</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">Ctrl-S</code>
-       </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Save text file</td><td style="border-bottom: 0.5pt solid black; ">Global</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Save text file</td><td style="border-bottom: 1px solid black; ">Global</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">Ctrl-L</code>
-       </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Load AE descriptor</td><td style="border-bottom: 0.5pt solid black; ">Global</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Load AE descriptor</td><td style="border-bottom: 1px solid black; ">Global</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">Ctrl-R</code>
-       </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Run current AE</td><td style="border-bottom: 0.5pt solid black; ">Global</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Run current AE</td><td style="border-bottom: 1px solid black; ">Global</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">Ctrl-I</code>
-       </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Switch focus to index repository</td><td style="border-bottom: 0.5pt solid black; ">Global</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Switch focus to index repository</td><td style="border-bottom: 1px solid black; ">Global</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">Ctrl-T</code>
-       </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Switch focus to text area</td><td style="border-bottom: 0.5pt solid black; ">Global</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Switch focus to text area</td><td style="border-bottom: 1px solid black; ">Global</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">Ctrl-F</code>
-       </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Switch focus to FS area</td><td style="border-bottom: 0.5pt solid black; ">Global</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Switch focus to FS area</td><td style="border-bottom: 1px solid black; ">Global</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">Ctrl-X</code>
-       </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Cut selection</td><td style="border-bottom: 0.5pt solid black; ">Text</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Cut selection</td><td style="border-bottom: 1px solid black; ">Text</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">Ctrl-C</code>
-       </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Copy selection</td><td style="border-bottom: 0.5pt solid black; ">Text</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Copy selection</td><td style="border-bottom: 1px solid black; ">Text</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">Ctrl-V</code>
-       </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Paste selection</td><td style="border-bottom: 0.5pt solid black; ">Text</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">
+       </td><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Paste selection</td><td style="border-bottom: 1px solid black; ">Text</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">
         <code class="computeroutput">Ctrl-Z</code>
-       </td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; ">Undo</td><td style="border-bottom: 0.5pt solid black; ">Text</td></tr><tr><td style="border-right: 0.5pt solid black; ">
+       </td><td style="border-right: 1px solid black; border-bottom: 1px solid black; ">Undo</td><td style="border-bottom: 1px solid black; ">Text</td></tr><tr><td style="border-right: 1px solid black; ">
         <code class="computeroutput">Alt-Enter</code>
-       </td><td style="border-right: 0.5pt solid black; ">Show context menu</td><td style="">Text</td></tr></tbody></table>
+       </td><td style="border-right: 1px solid black; ">Show context menu</td><td style="">Text</td></tr></tbody></table>
    </div></div><br class="table-break">
   </div>
 
  </div>
 </div>
-  <div class="chapter" title="Chapter&nbsp;6.&nbsp;Eclipse Analysis Engine Launcher's Guide" id="ugr.tools.eclipse_launcher"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;6.&nbsp;Eclipse Analysis Engine Launcher's Guide</h2></div></div></div>
+  <div class="chapter" id="ugr.tools.eclipse_launcher"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;6.&nbsp;Eclipse Analysis Engine Launcher's Guide</h1></div></div></div>
 
 	
 	
@@ -2409,10 +2409,10 @@ view your analysis results as described in Section
 	</p>
 	
 	<div class="screenshot">
-		<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="495"><tr><td><img src="images/tools/tools.eclipse_launcher/image01.png" width="495"></td></tr></table></div>
+		<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="495"><tr><td><img src="images/tools/tools.eclipse_launcher/image01.png" width="495"></td></tr></table></div>
 	</div>
 		
-	<div class="section" title="6.1.&nbsp;Creating an Analysis Engine launch configuration"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.eclipse_launcher.create_configuration">6.1.&nbsp;Creating an Analysis Engine launch configuration</h2></div></div></div>
+	<div class="section" id="ugr.tools.eclipse_launcher.create_configuration"><div class="titlepage"><div><div><h2 class="title" style="clear: both">6.1.&nbsp;Creating an Analysis Engine launch configuration</h2></div></div></div>
 	    
 	    <p>
 	    To debug or run an Analysis Engine a launch configuration must be created. To do this
@@ -2450,7 +2450,7 @@ view your analysis results as described in Section
 	    </p>
     </div>
  	
- 	<div class="section" title="6.2.&nbsp;Launching an Analysis Engine"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.eclipse_launcher.launching">6.2.&nbsp;Launching an Analysis Engine</h2></div></div></div>
+ 	<div class="section" id="ugr.tools.eclipse_launcher.launching"><div class="titlepage"><div><div><h2 class="title" style="clear: both">6.2.&nbsp;Launching an Analysis Engine</h2></div></div></div>
 	    
 	    <p>
 		To launch an Analysis Engine go to the previously created launch configuration and
@@ -2461,12 +2461,12 @@ view your analysis results as described in Section
 	    </p>
  	</div>
  </div>
-  <div class="chapter" title="Chapter&nbsp;7.&nbsp;Cas Editor User's Guide" id="ugr.tools.ce"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;7.&nbsp;Cas Editor User's Guide</h2></div></div></div>
+  <div class="chapter" id="ugr.tools.ce"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;7.&nbsp;Cas Editor User's Guide</h1></div></div></div>
 
 	
 	
 
-	<div class="section" title="7.1.&nbsp;Introduction"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="sandbox.caseditor.Introduction">7.1.&nbsp;Introduction</h2></div></div></div>
+	<div class="section" id="sandbox.caseditor.Introduction"><div class="titlepage"><div><div><h2 class="title" style="clear: both">7.1.&nbsp;Introduction</h2></div></div></div>
 		
 
 		<p>
@@ -2481,11 +2481,11 @@ view your analysis results as described in Section
 		
     
 		<div class="screenshot">
-			<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/tools/tools.caseditor/CasEditor.png" width="564"></td></tr></table></div>
+			<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/tools/tools.caseditor/CasEditor.png" width="564"></td></tr></table></div>
 		</div>
 	</div>
 
-	<div class="section" title="7.2.&nbsp;Launching the Cas Editor"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="sandbox.caseditor.Launching">7.2.&nbsp;Launching the Cas Editor</h2></div></div></div>
+	<div class="section" id="sandbox.caseditor.Launching"><div class="titlepage"><div><div><h2 class="title" style="clear: both">7.2.&nbsp;Launching the Cas Editor</h2></div></div></div>
 		
 		<p>
 			To open a CAS in the Cas Editor it needs a compatible type system
@@ -2497,7 +2497,7 @@ view your analysis results as described in Section
     <p>A CAS in the xmi or xcas format can simply be opened by clicking
       on it, like a text file is opened with the Eclipse text editor.</p>
     
-    <div class="section" title="7.2.1.&nbsp;Specifying a type system"><div class="titlepage"><div><div><h3 class="title" id="sandbox.caseditor.typeSystemSpec">7.2.1.&nbsp;Specifying a type system</h3></div></div></div>
+    <div class="section" id="sandbox.caseditor.typeSystemSpec"><div class="titlepage"><div><div><h3 class="title">7.2.1.&nbsp;Specifying a type system</h3></div></div></div>
       
       <p>    
       The Cas Editor expects a type system file at the root of the project
@@ -2525,7 +2525,7 @@ view your analysis results as described in Section
 		</p>
 	</div>
 
-	<div class="section" title="7.3.&nbsp;Annotation editor"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="sandbox.caseditor.annotation_editor">7.3.&nbsp;Annotation editor</h2></div></div></div>
+	<div class="section" id="sandbox.caseditor.annotation_editor"><div class="titlepage"><div><div><h2 class="title" style="clear: both">7.3.&nbsp;Annotation editor</h2></div></div></div>
 
 		
 		<p>
@@ -2534,7 +2534,7 @@ view your analysis results as described in Section
 			
 		</p>
 
-		<div class="section" title="7.3.1.&nbsp;Editor"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cas_editor.annotation_editor.editor">7.3.1.&nbsp;Editor</h3></div></div></div>
+		<div class="section" id="ugr.tools.cas_editor.annotation_editor.editor"><div class="titlepage"><div><div><h3 class="title">7.3.1.&nbsp;Editor</h3></div></div></div>
 			
 			<p>
 			    After the editor is open it shows the default sofa of the CAS.  
@@ -2544,14 +2544,14 @@ view your analysis results as described in Section
 				sensitive to this mode.  The next screen shows the display, where the mode is set to "Person":
 				
 				</p><div class="screenshot">
-					<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/tools/tools.caseditor/EditorOneType.png" width="564"></td></tr></table></div>
+					<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/tools/tools.caseditor/EditorOneType.png" width="564"></td></tr></table></div>
 				</div><p>
 				
 				To change the mode for the editor, use the "Mode" menu in the editor context menu.
 				To open the context menu right click somewhere on the text.
 				
 				</p><div class="screenshot">
-					<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/tools/tools.caseditor/ModeMenu.png" width="564"></td></tr></table></div>
+					<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/tools/tools.caseditor/ModeMenu.png" width="564"></td></tr></table></div>
 				</div><p>
 				        	
 				The current mode is displayed in the status line at the bottom and in the Style View.
@@ -2575,7 +2575,7 @@ view your analysis results as described in Section
 				The editor will show the additional selected types.
 				
 				</p><div class="screenshot">
-					<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/tools/tools.caseditor/EditorAllTypes.png" width="564"></td></tr></table></div>
+					<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/tools/tools.caseditor/EditorAllTypes.png" width="564"></td></tr></table></div>
 				</div><p>				
 				The annotation renderer and rendering layer can be changed in the Properties dialog. After the
 				change all editors which share the same type system will be updated.
@@ -2615,7 +2615,7 @@ view your analysis results as described in Section
 			</p>
 		</div>
 
-		<div class="section" title="7.3.2.&nbsp;Configure annotation styling"><div class="titlepage"><div><div><h3 class="title" id="sandbox.caseditor.annotation_editor.styling">7.3.2.&nbsp;Configure annotation styling</h3></div></div></div>
+		<div class="section" id="sandbox.caseditor.annotation_editor.styling"><div class="titlepage"><div><div><h3 class="title">7.3.2.&nbsp;Configure annotation styling</h3></div></div></div>
 			
 			<p>
 				The Cas Editor can visualize the annotations in multiple
@@ -2649,7 +2649,7 @@ view your analysis results as described in Section
 			</p>
 			
 			<div class="screenshot">
-				<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/tools/tools.caseditor/StyleProperties.png" width="564"></td></tr></table></div>
+				<div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/tools/tools.caseditor/StyleProperties.png" width="564"></td></tr></table></div>
 			</div>
 			
 			<p>
@@ -2657,24 +2657,24 @@ view your analysis results as described in Section
 				annotation stlyes:
 			
 			
-				</p><div class="table"><a name="d5e1306"></a><p class="title"><b>Table&nbsp;7.1.&nbsp;Style Table</b></p><div class="table-contents">
-					<table summary="Style Table" style="border-collapse: collapse;border-top: 0.5pt solid black; border-bottom: 0.5pt solid black; border-left: 0.5pt solid black; border-right: 0.5pt solid black; "><colgroup><col><col><col></colgroup><thead><tr><th style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">Style</th><th style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">Sample</th><th style="border-bottom: 0.5pt solid black; " align="left">Description</th></tr></thead><tbody><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">BACKGROUND</td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">							
+				</p><div class="table" id="d5e1306"><p class="title"><b>Table&nbsp;7.1.&nbsp;Style Table</b></p><div class="table-contents">
+					<table class="table" summary="Style Table" style="border-collapse: collapse;border-top: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; "><colgroup><col><col><col></colgroup><thead><tr><th style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">Style</th><th style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">Sample</th><th style="border-bottom: 1px solid black; " align="left">Description</th></tr></thead><tbody><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">BACKGROUND</td><td style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">							
 							<div class="screenshot">
 								<div class="mediaobject"><img src="images/tools/tools.caseditor/Style-Background.png"></div>
 							</div>
-						</td><td style="border-bottom: 0.5pt solid black; " align="left">
+						</td><td style="border-bottom: 1px solid black; " align="left">
 							<p>The background is drawn in the annotation color.</p>
-						</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">TEXT_COLOR</td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">							
+						</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">TEXT_COLOR</td><td style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">							
 							<div class="screenshot">
 								<div class="mediaobject"><img src="images/tools/tools.caseditor/Style-TextColor.png"></div>
 							</div>
-						</td><td style="border-bottom: 0.5pt solid black; " align="left">
+						</td><td style="border-bottom: 1px solid black; " align="left">
 							<p>The text is drawn in the annotation color.</p>
-						</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">TOKEN</td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">							
+						</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">TOKEN</td><td style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">							
 							<div class="screenshot">
 								<div class="mediaobject"><img src="images/tools/tools.caseditor/Style-Token.png"></div>
 							</div>
-						</td><td style="border-bottom: 0.5pt solid black; " align="left">
+						</td><td style="border-bottom: 1px solid black; " align="left">
 							<p>
 								The token type assumes that token annotation are always separated
 								by a whitespace. Only if they are not separated by a whitespace
@@ -2682,27 +2682,27 @@ view your analysis results as described in Section
 								The image on the left actually contains three annotations, one for "Mr", "."
 								and "Obama".
 							</p>
-						</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">SQUIGGLES</td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">							
+						</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">SQUIGGLES</td><td style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">							
 							<div class="screenshot">
 								<div class="mediaobject"><img src="images/tools/tools.caseditor/Style-Squiggles.png"></div>
 							</div>
-						</td><td style="border-bottom: 0.5pt solid black; " align="left">
+						</td><td style="border-bottom: 1px solid black; " align="left">
 							<p>Squiggles are drawen under the annotation in the annotation color.</p>
-						</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">BOX</td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">							
+						</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">BOX</td><td style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">							
 							<div class="screenshot">
 								<div class="mediaobject"><img src="images/tools/tools.caseditor/Style-Box.png"></div>
 							</div>
-						</td><td style="border-bottom: 0.5pt solid black; " align="left">
+						</td><td style="border-bottom: 1px solid black; " align="left">
 							<p>A box in the annotation color is drawn around
 							the annotation.</p>
-						</td></tr><tr><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">UNDERLINE</td><td style="border-right: 0.5pt solid black; border-bottom: 0.5pt solid black; " align="left">							
+						</td></tr><tr><td style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">UNDERLINE</td><td style="border-right: 1px solid black; border-bottom: 1px solid black; " align="left">							
 							<div class="screenshot">
 								<div class="mediaobject"><img src="images/tools/tools.caseditor/Style-Underline.png"></div>
 							</div>
-						</td><td style="border-bottom: 0.5pt solid black; " align="left">
+						</td><td style="border-bottom: 1px solid black; " align="left">
 							<p>A line in the annotation color is drawen below
 							the annotation.</p>
-						</td></tr><tr><td style="border-right: 0.5pt solid black; " align="left">BRACKET</td><td style="border-right: 0.5pt solid black; " align="left">							
+						</td></tr><tr><td style="border-right: 1px solid black; " align="left">BRACKET</td><td style="border-right: 1px solid black; " align="left">							
 							<div class="screenshot">
 								<div class="mediaobject"><img src="images/tools/tools.caseditor/Style-Bracket.png"></div>
 							</div>
@@ -2728,7 +2728,7 @@ view your analysis results as described in Section
 		
 		</div>
 		
-		<div class="section" title="7.3.3.&nbsp;CAS view support"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cas_editor.annotation_editor.cas_views">7.3.3.&nbsp;CAS view support</h3></div></div></div>
+		<div class="section" id="ugr.tools.cas_editor.annotation_editor.cas_views"><div class="titlepage"><div><div><h3 class="title">7.3.3.&nbsp;CAS view support</h3></div></div></div>
 			
 			<p>
 			The Annotation Editor can only display text Sofa CAS views. Displaying
@@ -2743,7 +2743,7 @@ view your analysis results as described in Section
 			</p>
 		</div>
 		
-		<div class="section" title="7.3.4.&nbsp;Outline view"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cas_editor.annotation_editor.outline">7.3.4.&nbsp;Outline view</h3></div></div></div>
+		<div class="section" id="ugr.tools.cas_editor.annotation_editor.outline"><div class="titlepage"><div><div><h3 class="title">7.3.4.&nbsp;Outline view</h3></div></div></div>
 			
 			
 			<p>
@@ -2765,7 +2765,7 @@ view your analysis results as described in Section
 			</p>
 		</div>
 
-		<div class="section" title="7.3.5.&nbsp;Edit Views"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cas_editor.annotation_editor.properties_view">7.3.5.&nbsp;Edit Views</h3></div></div></div>
+		<div class="section" id="ugr.tools.cas_editor.annotation_editor.properties_view"><div class="titlepage"><div><div><h3 class="title">7.3.5.&nbsp;Edit Views</h3></div></div></div>
 			
 			<p>
 				The Edit Views show details about the currently
@@ -2782,7 +2782,7 @@ view your analysis results as described in Section
 			</div>
 		</div>
 
-		<div class="section" title="7.3.6.&nbsp;FeatureStructure View"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cas_editor.annotation_editor.fs_view">7.3.6.&nbsp;FeatureStructure View</h3></div></div></div>
+		<div class="section" id="ugr.tools.cas_editor.annotation_editor.fs_view"><div class="titlepage"><div><div><h3 class="title">7.3.6.&nbsp;FeatureStructure View</h3></div></div></div>
 			
 			<p>
 				The FeatureStructure View lists all feature structures of
@@ -2800,7 +2800,7 @@ view your analysis results as described in Section
 			</div>
 		</div>
 	</div>
-	<div class="section" title="7.4.&nbsp;Implementing a custom Cas Editor View"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.cas_editor.custom_view">7.4.&nbsp;Implementing a custom Cas Editor View</h2></div></div></div>
+	<div class="section" id="ugr.tools.cas_editor.custom_view"><div class="titlepage"><div><div><h2 class="title" style="clear: both">7.4.&nbsp;Implementing a custom Cas Editor View</h2></div></div></div>
 	
 	<p>
 	Custom Cas Editor views can be added, 
@@ -2824,7 +2824,7 @@ view your analysis results as described in Section
 	is usually difficult with the standard views. A custom view which can make assumptions about the
 	type system is usually needed to do this efficiently.
 	</p>
-	<div class="section" title="7.4.1.&nbsp;Annotation Status View Sample"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.cas_editor.custom_view.sample">7.4.1.&nbsp;Annotation Status View Sample</h3></div></div></div>
+	<div class="section" id="ugr.tools.cas_editor.custom_view.sample"><div class="titlepage"><div><div><h3 class="title">7.4.1.&nbsp;Annotation Status View Sample</h3></div></div></div>
 	
 	<p>
 	The Cas Editor provides the CasEditorView class as a base class for views which need to access
@@ -2911,7 +2911,7 @@ public class AnnotationStatusViewPage extends Page {
 	</div>
 	</div>
 </div>
-  <div class="chapter" title="Chapter&nbsp;8.&nbsp;JCasGen User's Guide" id="ugr.tools.jcasgen"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;8.&nbsp;JCasGen User's Guide</h2></div></div></div>
+  <div class="chapter" id="ugr.tools.jcasgen"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;8.&nbsp;JCasGen User's Guide</h1></div></div></div>
   
   
   <p>JCasGen reads a descriptor for an application (either an Analysis Engine Descriptor, 
@@ -2922,7 +2922,7 @@ public class AnnotationStatusViewPage extends Page {
     built-in types, since these classes are already provided by the UIMA SDK.  (An exception is
     the built-in type <code class="literal">uima.tcas.DocumentAnnotation</code>, see the warning below.) </p>
   
-  <div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>If the components comprising the input to the type merging process 
+  <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>If the components comprising the input to the type merging process 
     have different definitions for the same type name,
     JCasGen will show a warning, and in some environments may offer to abort the operation.
     If you continue past this warning, 
@@ -2977,7 +2977,7 @@ public class AnnotationStatusViewPage extends Page {
     
     
     </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.jcasgen/image002.jpg" width="574" alt="JCasGen tool showing fields for input arguments"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.jcasgen/image002.jpg" width="574" alt="JCasGen tool showing fields for input arguments"></td></tr></table></div>
     </div>
   
   <p>When running with automatic merging of the generated Java source with previously
@@ -2994,7 +2994,7 @@ public class AnnotationStatusViewPage extends Page {
     contain only the Java Class Models for the CAS types, it can be reused by any users of these
     types.</p>
   
-  <div class="section" title="8.1.&nbsp;Running stand-alone without Eclipse"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.jcasgen.running_without_eclipse">8.1.&nbsp;Running stand-alone without Eclipse</h2></div></div></div>
+  <div class="section" id="ugr.tools.jcasgen.running_without_eclipse"><div class="titlepage"><div><div><h2 class="title" style="clear: both">8.1.&nbsp;Running stand-alone without Eclipse</h2></div></div></div>
     
     
     <p>There is no capability to automatically merge the generated Java source with
@@ -3008,7 +3008,7 @@ public class AnnotationStatusViewPage extends Page {
     
   </div>
   
-  <div class="section" title="8.2.&nbsp;Running stand-alone with Eclipse"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.jcasgen.running_standalone_with_eclipse">8.2.&nbsp;Running stand-alone with Eclipse</h2></div></div></div>
+  <div class="section" id="ugr.tools.jcasgen.running_standalone_with_eclipse"><div class="titlepage"><div><div><h2 class="title" style="clear: both">8.2.&nbsp;Running stand-alone with Eclipse</h2></div></div></div>
     
     
     <p>If you have Eclipse and EMF (EMF = Eclipse Modeling Framework; both of these are
@@ -3034,7 +3034,7 @@ public class AnnotationStatusViewPage extends Page {
     
   </div>
   
-  <div class="section" title="8.3.&nbsp;Running within Eclipse"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.jcasgen.running_within_eclipse">8.3.&nbsp;Running within Eclipse</h2></div></div></div>
+  <div class="section" id="ugr.tools.jcasgen.running_within_eclipse"><div class="titlepage"><div><div><h2 class="title" style="clear: both">8.3.&nbsp;Running within Eclipse</h2></div></div></div>
     
     
     <p>There are two ways to run JCasGen within Eclipse. The first way is to configure an
@@ -3045,7 +3045,7 @@ public class AnnotationStatusViewPage extends Page {
       
       
       </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.jcasgen/image004.jpg" width="574" alt="Running JCasGen within Eclipse using the external tool launcher"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.jcasgen/image004.jpg" width="574" alt="Running JCasGen within Eclipse using the external tool launcher"></td></tr></table></div>
     </div>
     
     <p>The second way (which is the normal way it's done) to run within Eclipse is to use the
@@ -3056,7 +3056,7 @@ public class AnnotationStatusViewPage extends Page {
       configurator tool has an option to enable/disable this function.</p>
   </div>
   
-  <div class="section" title="8.4.&nbsp;Using the jcasgen-maven-plugin"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.jcasgen.maven_plugin">8.4.&nbsp;Using the jcasgen-maven-plugin</h2></div></div></div>
+  <div class="section" id="ugr.tools.jcasgen.maven_plugin"><div class="titlepage"><div><div><h2 class="title" style="clear: both">8.4.&nbsp;Using the jcasgen-maven-plugin</h2></div></div></div>
     
     
     <p>For Maven builds, you can use the jcasgen-maven-plugin to take one or more
@@ -3118,7 +3118,7 @@ public class AnnotationStatusViewPage extends Page {
   </div>
   
 </div>
-  <div class="chapter" title="Chapter&nbsp;9.&nbsp;PEAR Packager User's Guide" id="ugr.tools.pear.packager"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;9.&nbsp;PEAR Packager User's Guide</h2></div></div></div>
+  <div class="chapter" id="ugr.tools.pear.packager"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;9.&nbsp;PEAR Packager User's Guide</h1></div></div></div>
   
   
   <p>A PEAR (Processing Engine ARchive) file is a standard package for UIMA (Unstructured
@@ -3132,7 +3132,7 @@ public class AnnotationStatusViewPage extends Page {
   <p>This chapter describes how to use the PEAR Eclipse plugin or the PEAR command line packager 
   to create PEAR files for standard UIMA components.</p>
   
-  <div class="section" title="9.1.&nbsp;Using the PEAR Eclipse Plugin"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.pear.packager.using_eclipse_plugin">9.1.&nbsp;Using the PEAR Eclipse Plugin</h2></div></div></div>
+  <div class="section" id="ugr.tools.pear.packager.using_eclipse_plugin"><div class="titlepage"><div><div><h2 class="title" style="clear: both">9.1.&nbsp;Using the PEAR Eclipse Plugin</h2></div></div></div>
     
     
     <p>The PEAR Eclipse plugin is automatically installed if you followed the directions in
@@ -3140,16 +3140,16 @@ public class AnnotationStatusViewPage extends Page {
       <a href="overview_and_setup.html#ugr.ovv.eclipse_setup" class="olink">Chapter&nbsp;3, <i>Setting up the Eclipse IDE to work with UIMA</i></a>. The use of the 
       plugin involves the following two steps:</p>
     
-    <div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem"><p>Add the UIMA nature to your project
+    <div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>Add the UIMA nature to your project
       </p></li><li class="listitem"><p>Create a PEAR file using the PEAR generation wizard </p>
         </li></ul></div>
     
-    <div class="section" title="9.1.1.&nbsp;Add UIMA Nature to your project"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.pear.packager.add_uima_nature">9.1.1.&nbsp;Add UIMA Nature to your project</h3></div></div></div>
+    <div class="section" id="ugr.tools.pear.packager.add_uima_nature"><div class="titlepage"><div><div><h3 class="title">9.1.1.&nbsp;Add UIMA Nature to your project</h3></div></div></div>
       
       
       <p>First, create a project for your UIMA component:</p>
       
-      <div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem"><p>Create a Java project, which
+      <div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>Create a Java project, which
         would contain all the files and folders needed for your UIMA component.</p>
         </li><li class="listitem"><p>Create a source folder called <span class="quote">&#8220;<span class="quote">src</span>&#8221;</span> in your
           project, and make it the only source folder, by clicking on
@@ -3169,23 +3169,23 @@ public class AnnotationStatusViewPage extends Page {
         
         
         </p><div class="screenshot">
-      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.pear.packager/image002.jpg" width="574" alt="Screenshot of Adding the UIMA Nature to your project"></td></tr></table></div>
+      <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.pear.packager/image002.jpg" width="574" alt="Screenshot of Adding the UIMA Nature to your project"></td></tr></table></div>
     </div>
       
       <p>Adding the UIMA nature to your project creates the PEAR structure in your
         project. The PEAR structure is a structured tree of folders and files, including the
         following elements:
         
-        </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="bold"><strong>Required
+        </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="bold"><strong>Required
           Elements:</strong></span>
           
-          </p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p>The <span class="bold"><strong>
+          </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>The <span class="bold"><strong>
             metadata</strong></span> folder which contains the PEAR installation descriptor
             and properties files.</p></li><li class="listitem"><p>The installation descriptor (<span class="bold"><strong>
               metadata/install.xml</strong></span>)
               </p></li></ul></div></li><li class="listitem"><p><span class="bold"><strong>Optional Elements:</strong></span>
             
-            </p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p>The <span class="bold"><strong>
+            </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>The <span class="bold"><strong>
               desc</strong></span> folder to contain descriptor files of analysis engines,
               component analysis engines (all levels), and other component (Collection
               Readers, CAS Consumers, etc).</p></li><li class="listitem"><p>The <span class="bold"><strong>src </strong></span>folder to
@@ -3203,13 +3203,13 @@ public class AnnotationStatusViewPage extends Page {
       <p>For more information about the PEAR structure, please refer to the
         <span class="quote">&#8220;<span class="quote">Processing Engine Archive</span>&#8221;</span> section.
         
-        </p><div class="figure"><a name="ugr.tools.pear.packager.fig.pear_structure"></a><div class="figure-contents">
+        </p><div class="figure" id="ugr.tools.pear.packager.fig.pear_structure"><div class="figure-contents">
           
-          <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="297"><tr><td><img src="images/tools/tools.pear.packager/image004.jpg" width="297" alt="Pear structure"></td></tr></table></div>
+          <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="297"><tr><td><img src="images/tools/tools.pear.packager/image004.jpg" width="297" alt="Pear structure"></td></tr></table></div>
         </div><p class="title"><b>Figure&nbsp;9.1.&nbsp;The Pear Structure</b></p></div><p><br class="figure-break"></p>
       
     </div>
-    <div class="section" title="9.1.2.&nbsp;Using the PEAR Generation Wizard"><div class="titlepage"><div><div><h3 class="title" id="ugr.tools.pear.packager.using_pear_generation_wizard">9.1.2.&nbsp;Using the PEAR Generation Wizard</h3></div></div></div>
+    <div class="section" id="ugr.tools.pear.packager.using_pear_generation_wizard"><div class="titlepage"><div><div><h3 class="title">9.1.2.&nbsp;Using the PEAR Generation Wizard</h3></div></div></div>
       
       
       <p>Before using the PEAR Generation Wizard, add all the files needed to
@@ -3226,7 +3226,7 @@ public class AnnotationStatusViewPage extends Page {
         (right-click) of your project, to open the PEAR Generation wizard, and follow the
         instructions on the wizard to generate the PEAR file.</p>
       
-      <div class="section" title="9.1.2.1.&nbsp;The Component Information page"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.pear.packager.wizard.component_information">9.1.2.1.&nbsp;The Component Information page</h4></div></div></div>
+      <div class="section" id="ugr.tools.pear.packager.wizard.component_information"><div class="titlepage"><div><div><h4 class="title">9.1.2.1.&nbsp;The Component Information page</h4></div></div></div>
         
         
         <p>The first page of the PEAR generation wizard is the component information
@@ -3241,19 +3241,19 @@ public class AnnotationStatusViewPage extends Page {
           or CAS Consumers. In this case, specify the corresponding descriptors in this
           page.
           
-          </p><div class="figure"><a name="ugr.tools.pear.packager.fig.wizard.component_information"></a><div class="figure-contents">
+          </p><div class="figure" id="ugr.tools.pear.packager.fig.wizard.component_information"><div class="figure-contents">
             
-            <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.pear.packager/image006.jpg" width="574" alt="Pear Wizard - component information page"></td></tr></table></div>
+            <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.pear.packager/image006.jpg" width="574" alt="Pear Wizard - component information page"></td></tr></table></div>
           </div><p class="title"><b>Figure&nbsp;9.2.&nbsp;The Component Information Page</b></p></div><p><br class="figure-break"></p>
         
       </div>
       
-      <div class="section" title="9.1.2.2.&nbsp;The Installation Environment page"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.pear.packager.wizard.install_environment">9.1.2.2.&nbsp;The Installation Environment page</h4></div></div></div>
+      <div class="section" id="ugr.tools.pear.packager.wizard.install_environment"><div class="titlepage"><div><div><h4 class="title">9.1.2.2.&nbsp;The Installation Environment page</h4></div></div></div>
         
         
         <p>The installation environment page is used to specify the following:
           
-          </p><div class="itemizedlist"><ul class="itemizedlist" type="disc" compact><li class="listitem"><p>Preferred operating
+          </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem"><p>Preferred operating
             system</p></li><li class="listitem"><p>Required JDK version, if applicable.</p></li><li class="listitem"><p>Required Environment variable settings.  This is where
               you specify special CLASSPATH paths.  You do not need to specify this for
               any Jar that is listed in the your eclipse project classpath settings; those are automatically
@@ -3286,20 +3286,20 @@ public class AnnotationStatusViewPage extends Page {
         
         <p>Currently, there are two types of macros:</p>
         
-        <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>$main_root, which represents the local absolute
+        <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>$main_root, which represents the local absolute
           path of the main component root directory after deployment.</p></li><li class="listitem"><p><span class="emphasis"><em>$component_id$root</em></span>, which
             represents the local absolute path to the root directory of the component which
             has <span class="emphasis"><em>component_id</em></span> as component ID. This component could
             be, for instance, a delegate component. </p></li></ul></div>
         
-        <div class="figure"><a name="ugr.tools.pear.packager.fig.wizard.install_environment"></a><div class="figure-contents">
+        <div class="figure" id="ugr.tools.pear.packager.fig.wizard.install_environment"><div class="figure-contents">
           
-          <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.pear.packager/image008.jpg" width="574" alt="Pear Wizard - install environment page"></td></tr></table></div>
+          <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.pear.packager/image008.jpg" width="574" alt="Pear Wizard - install environment page"></td></tr></table></div>
         </div><p class="title"><b>Figure&nbsp;9.3.&nbsp;The Installation Environment Page</b></p></div><br class="figure-break">
         
       </div>
       
-      <div class="section" title="9.1.2.3.&nbsp;The PEAR file content page"><div class="titlepage"><div><div><h4 class="title" id="ugr.tools.pear.packager.wizard.file_content">9.1.2.3.&nbsp;The PEAR file content page</h4></div></div></div>
+      <div class="section" id="ugr.tools.pear.packager.wizard.file_content"><div class="titlepage"><div><div><h4 class="title">9.1.2.3.&nbsp;The PEAR file content page</h4></div></div></div>
         
         
         <p>The last page of the wizard is the <span class="quote">&#8220;<span class="quote">PEAR file Export</span>&#8221;</span> page, which
@@ -3316,7 +3316,7 @@ public class AnnotationStatusViewPage extends Page {
         take all these files and put them into a Jar file, perhaps using the Eclipse Export 
         wizard.  You would place that Jar file into the PEAR <code class="literal">lib</code> directory.</p>
         
-        <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you are relying on the class files generated in the output folder
+        <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>If you are relying on the class files generated in the output folder
           (usually called bin) to run your code, then make sure the project is built properly,
           and all the required class files are generated without errors, and then put the
           output folder (e.g. $main_root/bin) in the classpath using the option to set
@@ -3327,9 +3327,9 @@ public class AnnotationStatusViewPage extends Page {
           tools will presume this folder contains binary executable files, and will adds this folder to 
           the PATH environment variable.
           </p>  </div>        
-          <div class="figure"><a name="ugr.tools.pear.packager.fig.wizard.export"></a><div class="figure-contents">
+          <div class="figure" id="ugr.tools.pear.packager.fig.wizard.export"><div class="figure-contents">
             
-            <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="564"><tr><td><img src="images/tools/tools.pear.packager/image010.jpg" width="564" alt="Pear Wizard - File Export Page"></td></tr></table></div>
+            <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="564"><tr><td><img src="images/tools/tools.pear.packager/image010.jpg" width="564" alt="Pear Wizard - File Export Page"></td></tr></table></div>
           </div><p class="title"><b>Figure&nbsp;9.4.&nbsp;The PEAR File Export Page</b></p></div><br class="figure-break">
           
           
@@ -3338,14 +3338,14 @@ public class AnnotationStatusViewPage extends Page {
     </div>
   </div>
   
-  <div class="section" title="9.2.&nbsp;Using the PEAR command line packager"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.pear.packager.using_command_line">9.2.&nbsp;Using the PEAR command line packager</h2></div></div></div>
+  <div class="section" id="ugr.tools.pear.packager.using_command_line"><div class="titlepage"><div><div><h2 class="title" style="clear: both">9.2.&nbsp;Using the PEAR command line packager</h2></div></div></div>
     
      <p>The PEAR command line packager takes some PEAR package parameter settings on the command line to create an 
      UIMA PEAR file.</p>
      
      <p>To run the PEAR command line packager you can use the provided runPearPackager (.bat for Windows, and .sh for Unix) 
      scripts. The packager can be used in three different modes.</p>
-     <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"> 
+     <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"> 
      	<p>Mode 1: creates a complete PEAR package with the provided information (default mode)</p>
      	<pre class="programlisting">runPearPackager -compID &lt;componentID&gt; 
   -mainCompDesc &lt;mainComponentDesc&gt; [-classpath &lt;classpath&gt;] 
@@ -3370,7 +3370,7 @@ public class AnnotationStatusViewPage extends Page {
      the PEAR file. </p>
      
      <p>Some more details about the PearPackager parameters is provided in the list below:</p>
-     <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"> 
+     <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"> 
      	<code class="literal">&lt;componentID&gt;</code>: PEAR package component ID.
      </li><li class="listitem"> 
      	<code class="literal">&lt;mainComponentDesc&gt;</code>: Main component descriptor of the PEAR package.
@@ -3393,7 +3393,7 @@ public class AnnotationStatusViewPage extends Page {
    </div>
   
 </div>
-  <div class="chapter" title="Chapter&nbsp;10.&nbsp;The PEAR Packaging Maven Plugin" id="ugr.tools.pear.packager.maven.plugin.usage"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;10.&nbsp;The PEAR Packaging Maven Plugin</h2></div></div></div>
+  <div class="chapter" id="ugr.tools.pear.packager.maven.plugin.usage"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;10.&nbsp;The PEAR Packaging Maven Plugin</h1></div></div></div>
     
     <p>
       UIMA includes a Maven plugin that supports creating PEAR packages using Maven. 
@@ -3410,7 +3410,7 @@ public class AnnotationStatusViewPage extends Page {
       found in the lib/ directory (in some arbitrary order).
     </p>
     
-    <div class="section" title="10.1.&nbsp;Specifying the PEAR Packaging Maven Plugin"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.pear.packager.maven.plugin.usage.configure">10.1.&nbsp;Specifying the PEAR Packaging Maven Plugin</h2></div></div></div>
+    <div class="section" id="ugr.tools.pear.packager.maven.plugin.usage.configure"><div class="titlepage"><div><div><h2 class="title" style="clear: both">10.1.&nbsp;Specifying the PEAR Packaging Maven Plugin</h2></div></div></div>
       
       
     <p>
@@ -3479,7 +3479,7 @@ public class AnnotationStatusViewPage extends Page {
       The details about each parameter and how it is used is shown below:
     </p>
     <p>
-      </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
           <p>
             <code class="code">&lt;classpath&gt;</code>
               - This element specifies the classpath settings for the 
@@ -3488,7 +3488,7 @@ public class AnnotationStatusViewPage extends Page {
               In addition, all Jars in the lib directory and its subdirectories will be added to the
               generated classpath when the PEAR is installed.  
           </p>
-          <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+          <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
             <p>Use $main_root variables to refer to libraries inside 
               the PEAR package. For more details about PEAR packaging please refer to the 
               Apache UIMA PEAR documentation.</p>
@@ -3512,7 +3512,7 @@ public class AnnotationStatusViewPage extends Page {
               - This element specifies the PEAR package UIMA datapath settings.
               If no datapath settings are necessary, this element can be omitted. 
           </p>
-          <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+          <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
             <p>Use $main_root variables to refer libraries inside 
               the PEAR package. For more details about PEAR packaging please refer to the 
               Apache UIMA PEAR documentation.</p>
@@ -3526,7 +3526,7 @@ public class AnnotationStatusViewPage extends Page {
       added to the configuration section shown above.
     </p>
     <p>
-      </p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+      </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
           <p>
             <code class="code">&lt;mainComponentDir&gt;</code>
               - This element specifies the main component directory where the UIMA
@@ -3544,7 +3544,7 @@ public class AnnotationStatusViewPage extends Page {
     </p>
     </div>
     
-    <div class="section" title="10.2.&nbsp;Automatically including dependencies"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.pear.packager.maven.plugin.usage.dependencies">10.2.&nbsp;Automatically including dependencies</h2></div></div></div>
+    <div class="section" id="ugr.tools.pear.packager.maven.plugin.usage.dependencies"><div class="titlepage"><div><div><h2 class="title" style="clear: both">10.2.&nbsp;Automatically including dependencies</h2></div></div></div>
       
 
       <p>
@@ -3610,7 +3610,7 @@ public class AnnotationStatusViewPage extends Page {
         <code class="code">lib</code> folder.
       </p>
 
-      <div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
+      <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3>
         <p>
           With this approach, the <code class="code">lib</code> folder is 
           automatically created, populated, and removed
@@ -3651,7 +3651,7 @@ public class AnnotationStatusViewPage extends Page {
 
     </div>
 
-  <div class="section" title="10.3.&nbsp;Running from the command line"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.pear.packager.maven.plugin.commandline">10.3.&nbsp;Running from the command line</h2></div></div></div>
+  <div class="section" id="ugr.tools.pear.packager.maven.plugin.commandline"><div class="titlepage"><div><div><h2 class="title" style="clear: both">10.3.&nbsp;Running from the command line</h2></div></div></div>
     
     <p>
       The pear packager can be run as a maven command.  To enable this, you have to add the following to your
@@ -3671,7 +3671,7 @@ public class AnnotationStatusViewPage extends Page {
     </p>
   </div>
   
-  <div class="section" title="10.4.&nbsp;Building the PEAR Packaging Plugin From Source"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.pear.packager.maven.plugin.install.src">10.4.&nbsp;Building the PEAR Packaging Plugin From Source</h2></div></div></div>
+  <div class="section" id="ugr.tools.pear.packager.maven.plugin.install.src"><div class="titlepage"><div><div><h2 class="title" style="clear: both">10.4.&nbsp;Building the PEAR Packaging Plugin From Source</h2></div></div></div>
     
     <p>
       The plugin code is available in the Apache
@@ -3707,7 +3707,7 @@ PearPackagingMavenPlugin-2.3.0-incubating.jar
     </p>
   </div>
 </div>
-  <div class="chapter" title="Chapter&nbsp;11.&nbsp;PEAR Installer User's Guide" id="ugr.tools.pear.installer"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;11.&nbsp;PEAR Installer User's Guide</h2></div></div></div>
+  <div class="chapter" id="ugr.tools.pear.installer"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;11.&nbsp;PEAR Installer User's Guide</h1></div></div></div>
   
   
   <p>PEAR (Processing Engine ARchive) is a new standard for packaging UIMA compliant
@@ -3727,7 +3727,7 @@ PearPackagingMavenPlugin-2.3.0-incubating.jar
     
     
     </p><div class="screenshot">
-    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="574"><tr><td><img src="images/tools/tools.pear.installer/image002.jpg" width="574" alt="PEAR Installer GUI"></td></tr></table></div>
+    <div class="mediaobject"><table border="0" summary="manufactured viewport for HTML img" style="cellpadding: 0; cellspacing: 0;" width="574"><tr><td><img src="images/tools/tools.pear.installer/image002.jpg" width="574" alt="PEAR Installer GUI"></td></tr></table></div>
   </div>
   
   <p>There are two versions of the PEAR Installer.  One is an interactive, GUI-based
@@ -3794,7 +3794,7 @@ PearPackagingMavenPlugin-2.3.0-incubating.jar
   after installation, as described above.</p>  
   
 </div>
-  <div class="chapter" title="Chapter&nbsp;12.&nbsp;PEAR Merger User's Guide" id="ugr.tools.pear.merger"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;12.&nbsp;PEAR Merger User's Guide</h2></div></div></div>
+  <div class="chapter" id="ugr.tools.pear.merger"><div class="titlepage"><div><div><h1 class="title">Chapter&nbsp;12.&nbsp;PEAR Merger User's Guide</h1></div></div></div>
   
   
   <p>The PEAR Merger utility takes two or more PEAR files and merges their contents,
@@ -3824,7 +3824,7 @@ PearPackagingMavenPlugin-2.3.0-incubating.jar
   <p>During the running of this tool, work files are written to a temporary directory
     created in the user's home directory.</p>
   
-  <div class="section" title="12.1.&nbsp;Details of the merging process"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.pear.merger.merge_details">12.1.&nbsp;Details of the merging process</h2></div></div></div>
+  <div class="section" id="ugr.tools.pear.merger.merge_details"><div class="titlepage"><div><div><h2 class="title" style="clear: both">12.1.&nbsp;Details of the merging process</h2></div></div></div>
     
     
     <p>The PEARs are merged using the following steps:</p>
@@ -3854,7 +3854,7 @@ PearPackagingMavenPlugin-2.3.0-incubating.jar
     
   </div>
   
-  <div class="section" title="12.2.&nbsp;Testing and Modifying the resulting PEAR"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.pear.merger.testing_modifying_resulting_pear">12.2.&nbsp;Testing and Modifying the resulting PEAR</h2></div></div></div>
+  <div class="section" id="ugr.tools.pear.merger.testing_modifying_resulting_pear"><div class="titlepage"><div><div><h2 class="title" style="clear: both">12.2.&nbsp;Testing and Modifying the resulting PEAR</h2></div></div></div>
     
     
     <p>The output PEAR file can be installed and tested using the PEAR Installer. The
@@ -3868,7 +3868,7 @@ PearPackagingMavenPlugin-2.3.0-incubating.jar
       output aggregate descriptor and re-package the component.</p>
     
   </div>
-  <div class="section" title="12.3.&nbsp;Restrictions and Limitations"><div class="titlepage"><div><div><h2 class="title" style="clear: both" id="ugr.tools.pear.merger.restrictions_limitations">12.3.&nbsp;Restrictions and Limitations</h2></div></div></div>
+  <div class="section" id="ugr.tools.pear.merger.restrictions_limitations"><div class="titlepage"><div><div><h2 class="title" style="clear: both">12.3.&nbsp;Restrictions and Limitations</h2></div></div></div>
     
     
     <p>The PEAR Merger utility only does basic merging operations, and is limited as

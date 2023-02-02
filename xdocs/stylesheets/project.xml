@@ -73,10 +73,10 @@
   </menus>
   
   <downloads version="uimaj" title="Apache UIMA" withreleasedate="true">
-    <download name="UIMA Java SDK 3.3.1" subdirectory="uimaj-3.3.1" releasedate="31-Oct-2022">
-      <releasenotes filename="uimaj-3.3.1/RELEASE_NOTES">      <f>md</f>                  </releasenotes>
-      <binary       filename="uimaj-3.3.1-bin">                <f>zip</f>  <f>tar.gz</f>  </binary>
-      <source       filename="uimaj-3.3.1-source-release">     <f>zip</f>                 </source>
+    <download name="UIMA Java SDK 3.4.0" subdirectory="uimaj-3.4.0" releasedate="02-Feb-2023">
+      <releasenotes filename="uimaj-3.4.0/RELEASE_NOTES">      <f>md</f>                  </releasenotes>
+      <binary       filename="uimaj-3.4.0-bin">                <f>zip</f>  <f>tar.gz</f>  </binary>
+      <source       filename="uimaj-3.4.0-source-release">     <f>zip</f>                 </source>
     </download>
     <download name="uimaFIT 3.3.0" subdirectory="uimafit-3.3.0" releasedate="03-Jun-2022">
       <releasenotes filename="uimafit-3.3.0/README">           <f>md</f>                 </releasenotes>
