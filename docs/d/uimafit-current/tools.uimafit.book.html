@@ -437,7 +437,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Apache uimaFIT™</h1>
 <div class="details">
 <span id="author" class="author">Apache UIMA™ Development Community</span><br>
-<span id="revnumber">version 3.3.0</span>
+<span id="revnumber">version 3.4.0</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">User Guide</div>
@@ -505,7 +505,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_ugr.tools.uimafit.typesystem">Type System Detection</a>
 <ul class="sectlevel2">
-<li><a href="#_making_types_auto_detectable">Making types auto-detectable</a></li>
+<li><a href="#_making_types_auto_detectable">Making types auto-detectable</a>
+<ul class="sectlevel3">
+<li><a href="#_using_the_java_service_provide_interface">Using the Java Service Provide Interface</a></li>
+<li><a href="#_legacy_approach">Legacy approach</a></li>
+</ul>
+</li>
 <li><a href="#_making_index_definitions_and_type_priorities_auto_detectable">Making index definitions and type priorities auto-detectable</a></li>
 <li><a href="#_using_type_auto_detection">Using type auto-detection</a></li>
 <li><a href="#_multiple_meta_inforg_apache_uima_fittypes_txt_files">Multiple META-INF/org.apache.uima.fit/types.txt files</a></li>
@@ -732,7 +737,7 @@ The complete code for this example can be found in the <em>uimaFIT-examples</em>
 <pre class="highlight"><code class="language-xml" data-lang="xml">&lt;dependency&gt;
   &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
   &lt;artifactId&gt;uimafit-core&lt;/artifactId&gt;
-  &lt;version&gt;3.3.0&lt;/version&gt;
+  &lt;version&gt;3.4.0&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
 </div>
@@ -1832,6 +1837,112 @@ Thus is becomes possible for a UIMA component provider to have component&#8217;s
 </div>
 <div class="sect2">
 <h3 id="_making_types_auto_detectable"><a class="anchor" href="#_making_types_auto_detectable"></a>Making types auto-detectable</h3>
+<div class="sect3">
+<h4 id="_using_the_java_service_provide_interface"><a class="anchor" href="#_using_the_java_service_provide_interface"></a>Using the Java Service Provide Interface</h4>
+<div class="paragraph">
+<p>The Java Service Provide Interface (SPI) mechanism is a standard approach in Java for building
+extensible software. In our case, we want to make uimaFIT aware of type system descriptions, index
+definitions or type priority lists so that when we create a new CAS or analysis component, they are
+automatically pre-configured with these.</p>
+</div>
+<div class="paragraph">
+<p>To enable this auto-detection, the UIMA Core Java SDK provides defines interfaces:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>org.apache.uima.spi.FsIndexCollectionProvider</code></p>
+</li>
+<li>
+<p><code>org.apache.uima.spi.TypePrioritiesProvider</code></p>
+</li>
+<li>
+<p><code>org.apache.uima.spi.TypeSystemDescriptionProvider</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Java code that wants to announce types, indexes or type priorities must implement one or more of
+these interfaces in a provider class. We will make an example for type system descriptions. It works
+in the same way for indexes and type priorities.</p>
+</div>
+<div class="paragraph">
+<p>The following provider class publishes types from a type system description XML file located it can
+access via the classpath at <code>/org/apache/uima/examples/types/TypeSystem.xml</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">import static java.util.Arrays.asList;
+import static org.apache.uima.fit.factory.TypeSystemDescriptionFactory.createTypeSystemDescription;
+
+import java.util.List;
+
+import org.apache.uima.resource.metadata.TypeSystemDescription;
+import org.apache.uima.spi.TypeSystemDescriptionProvider;
+
+public class MyTypeSystemProvider implements TypeSystemDescriptionProvider {
+
+  @Override
+  public List&lt;TypeSystemDescription&gt; listTypeSystemDescriptions() {
+    return asList(createTypeSystemDescription("org.apache.uima.examples.types.TypeSystem"));
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You may also consider a slightly more advanced implementation that pre-resolves any imports that
+may be contained in the loaded descriptors. This is important if you are in an environment with
+multiple classloaders such as an OSGI environment.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">import static java.util.Arrays.asList;
+import static org.apache.uima.fit.factory.TypeSystemDescriptionFactory.createTypeSystemDescription;
+
+import java.util.Collections;
+import java.util.List;
+
+import org.apache.uima.UIMAFramework;
+import org.apache.uima.resource.ResourceManager;
+import org.apache.uima.resource.impl.ResourceManager_impl;
+import org.apache.uima.resource.metadata.TypeSystemDescription;
+import org.apache.uima.spi.TypeSystemDescriptionProvider;
+import org.apache.uima.util.InvalidXMLException;
+
+public class MyAdvancedTypeSystemProvider implements TypeSystemDescriptionProvider {
+
+  @Override
+  public List&lt;TypeSystemDescription&gt; listTypeSystemDescriptions() {
+    ResourceManager resMgr = new ResourceManager_impl(getClass().getClassLoader());
+    try {
+      TypeSystemDescription tsd = createTypeSystemDescription(
+              "org.apache.uima.examples.types.TypeSystem");
+      tsd.resolveImports(resMgr);
+      return asList(tsd);
+    } catch (InvalidXMLException e) {
+      UIMAFramework.getLogger().error("Unable to load type system", e);
+      return Collections.emptyList();
+    } finally {
+      resMgr.destroy();
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In a proper implementation, you might care to use a better error handling, use your own loggers
+instead of the framework logger, maybe load additional type system descriptions, etc.</p>
+</div>
+<div class="paragraph">
+<p>Once the provider class has been implemented, it needs to be registered with the SPI mechanism.
+To do that, create a text file with the name of the implemented interface in <code>META-INF/services</code>, e.g.
+<code>META-INF/services/org.apache.uima.spi.TypeSystemDescriptionProvider</code>. Into that file, add the name of
+the provider class implementation, e.g. <code>foo.bar.MyTypeSystemProvider</code>. If you have multiple provider
+classes for the given interface, add them all, one class per line.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_legacy_approach"><a class="anchor" href="#_legacy_approach"></a>Legacy approach</h4>
 <div class="paragraph">
 <p>The provider of a type system should create a file <em class="path">META-INF/org.apache.uima.fit/types.txt</em> in the classpath.
 This file should define the locations of the type system descriptions.
@@ -1894,6 +2005,7 @@ It and all spaces following it should be ommitted.</p>
 </td>
 </tr>
 </table>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -2589,8 +2701,8 @@ The new methods in <code>CasIOUtil</code> can be used instead.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 3.3.0<br>
-Last updated 2022-05-30 13:26:27 +0200
+Version 3.4.0<br>
+Last updated 2023-02-03 09:17:57 +0100
 </div>
 </div>
 </body>

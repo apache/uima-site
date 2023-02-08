@@ -31,6 +31,31 @@
 
     <subsectionToc/>
 
+    <subsection name="08 Feb 2023" date="08 Feb 2024" title="Apache UIMA uimaFIT 3.4.0 released">
+      <p>
+        The Apache UIMA team is happy to announce the release of uimaFIT 3.4.0.
+      </p>
+      
+      <p>Changes include:
+        <ul>
+          <li>Issue #195: Detect descriptors via SPI</li>
+          <li>Issue #196: Provide OSGI metadata in JARs</li>
+          <li>Issue #205: Managed CASes in tests should consider validators</li>
+          <li>Issue #209: Ability to override validator for a test</li>
+          <li>Issue #211: Conveniently skip validation</li>
+          <li>Issue #215: Improve descriptor scanning performance when there are many classloaders</li>
+          <li>Issue #220: Add getType signature accepting a type system</li>
+          <li>Issue #207: Cannot override CAS content set in a BeforeEach method</li>
+          <li>Issue #213: Avoid broken typesystem when using ManagedCas</li>
+          <li>Issue #198: Remove version overrides in Maven plugin modules</li>
+          <li>Issue #218: Update dependencies</li>
+        </ul>
+      </p>
+
+      <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-3.4.0/issuesFixed/github-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>
+    </subsection>
+
     <subsection name="02 Feb 2023" date="02 Feb 2023" title="Apache UIMA Java SDK 3.4.0 released">
       <p>
         The Apache UIMA team is happy to announce the release of the UIMA Java SDK 3.4.0.
