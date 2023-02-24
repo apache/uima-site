@@ -54,9 +54,9 @@ under the License.
         <a href="https://downloads.apache.org/uima/eclipse-update-site-v3/">https://downloads.apache.org/uima/eclipse-update-site-v3/</a>
       </p> 
       <p>
-        The UIMA Ruta Workbench 3.1.0/2.8.0 is tested with Eclipse 2019-9 (older versions but Mars may still supported). The UIMA Ruta Workbench 2.3.0 - 2.4.0 is tested with Eclipse 4.3 (Kepler) and Eclipse 4.4 (Luna). The UIMA Ruta Workbench 2.2.1 requires Eclipse 4.3.2
-      </p> 
-    </li>     
+        The UIMA Ruta Workbench 3.3.0 is tested with Eclipse 2022-6 (older versions may still work). 
+      </p>
+    </li>
   </ul>
 </subsection>
 
@@ -143,22 +143,15 @@ under the License.
 
 <subsection name='Documentation' id="uima.ruta.documentation">
   <p>
-    Here, you can find the documentation for the most recent UIMA Ruta release compatible with the UIMA Java 
-    SDK v3 and v2 respectively.
+    Here, you can find the documentation for the most recent UIMA Ruta release.
   </p>
 
-  <p><b>Latest UIMA Ruta v3.x documentation</b></p>
+  <p><b>Latest UIMA Ruta documentation</b></p>
   <ul>
     <li><a href="d/ruta-current/tools.ruta.book.html">Apache UIMA Ruta Guide and Reference (v3.x)</a></li>
     <li><a href="d/ruta-current/RELEASE_NOTES.html">Latest release notes (v3.x)</a></li>
   </ul>
 
-  <p><b>Latest UIMA Ruta v2.x documentation</b></p>
-  <ul>
-    <li><a href="d/ruta-v2-current/tools.ruta.book.html">Apache UIMA Ruta Guide and Reference (v2.x)</a></li>
-    <li><a href="d/ruta-v2-current/RELEASE_NOTES.html">Latest release notes (v2.x)</a></li>
-  </ul>
-  
   <p>Should you require documentation for a specific version of uimaFIT, please check our <a href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d">archive</a>.</p>
 </subsection>
 
@@ -166,20 +159,11 @@ under the License.
   <p>The latest version of UIMA Ruta is available via <a href="https://search.maven.org/#search%7Cga%7C1%7Cruta">Maven Central</a>. 
   If you use Maven as your build tool, then you can add the basic UIMA Ruta functionality as a dependency 
   in your pom.xml file (additionally to other UIMA dependencies)</p>
-  <p>For UIMA v3 compatibility:</p>
   <pre>
 &lt;dependency>
   &lt;groupId>org.apache.uima&lt;/groupId>
   &lt;artifactId>ruta-core&lt;/artifactId>
-  &lt;version>3.1.0&lt;/version>
-&lt;/dependency>
-  </pre>
-  <p>For UIMA v2 compatibility:</p>
-  <pre>
-&lt;dependency>
-  &lt;groupId>org.apache.uima&lt;/groupId>
-  &lt;artifactId>ruta-core&lt;/artifactId>
-  &lt;version>2.8.1&lt;/version>
+  &lt;version>3.3.0&lt;/version>
 &lt;/dependency>
   </pre>
   <subsubsection>
