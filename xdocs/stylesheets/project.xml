@@ -86,9 +86,9 @@
       <releasenotes filename="ruta-3.3.0/RELEASE_NOTES">       <f>md</f>                 </releasenotes>
       <source       filename="ruta-3.3.0-source-release">      <f>zip</f>                </source>
     </download>
-    <download name="UIMA Java CAS JSON I/O 0.4.0" subdirectory="uimaj-io-json-0.4.0" releasedate="06-Aug-2022">
-      <releasenotes filename="uimaj-io-json-0.4.0/RELEASE_NOTES">   <f>md</f>            </releasenotes>
-      <source       filename="uimaj-io-json-0.4.0-source-release">  <f>zip</f>           </source>
+    <download name="UIMA Java CAS JSON I/O 0.5.0" subdirectory="uimaj-io-json-0.5.0" releasedate="06-Mar-2023">
+      <releasenotes filename="uimaj-io-json-0.5.0/RELEASE_NOTES">   <f>md</f>            </releasenotes>
+      <source       filename="uimaj-io-json-0.5.0-source-release">  <f>zip</f>           </source>
     </download>
   </downloads>
 </project>

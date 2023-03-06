@@ -31,6 +31,23 @@
 
     <subsectionToc/>
 
+    <subsection name="uimaj-io-json-0.5.0" date="03 Mar 2023" title="Apache UIMA Ruta 3.3.0 released">
+      <p>
+        The Apache UIMA team is happy to announce the release of the JSON CAS I/O 0.5.0.
+      </p>
+      
+      <p>Changes include:
+        <ul>
+          <li>Issue #13: Implement TypeSystemMode.MINIMAL</li>
+          <li>Issue #18: Fix Zip Slip Vulnerability in test code</li>
+          <li>Issue #14: Upgrade dependencies</li>
+        </ul>
+      </p>
+
+      <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-io-json-0.5.0/issuesFixed/github-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>
+    </subsection>
+
     <subsection name="ruta-3.3.0" date="24 Feb 2023" title="Apache UIMA Ruta 3.3.0 released">
       <p>
         The Apache UIMA team is happy to announce the release of Ruta 3.3.0.
