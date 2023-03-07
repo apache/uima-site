@@ -1,0 +1,38 @@
+## Description:
+Apache UIMA (*) software provides frameworks, tools and annotators, 
+facilitating the analysis of unstructured content such as text, audio and 
+video. (*) Unstructured Information Management Architecture.
+
+## Issues:
+There are no board-level issues at this time.
+
+## Membership Data:
+Apache UIMA was founded 2010-03-17 (13 years ago)
+There are currently 26 committers and 18 PMC members in this project.
+The Committer-to-PMC ratio is roughly 7:5.
+
+Community changes, past quarter:
+- Pablo Duboue was added as PMC member on 2023-03-07
+- Pablo Duboue was added as committer on 2023-03-06
+
+## Project Activity:
+- uima-uimaj-io-jsoncas-0.5.0 was released on 2023-03-06
+- uima-ruta-3.3.0 was released on 2023-02-24
+- uima-uimaj-3.4.1 was released on 2023-02-24
+- uima-uimafit-3.4.0 was released on 2023-02-08
+- uima-uimaj-3.4.0 was released on 2023-02-02
+- vote to retire of the UIMA DUCC subproject has passed
+  - retirement in progress
+- vote to retire of all v2.x versions of UIMA subprojects has passed
+  - retirement in progress
+- vote to retire of the UIMA C++ SDK has been canceled after a community
+  member Pablo Duboue has stepped up volunteering to take over the
+  maintainer role. Pablo has been onboarded as a PMC member to be able
+  to take on the new role.
+
+## Community Health:
+The community remains moderately active. ClearTK 3.0.0 has also been 
+released now. Apache cTAKES has been informed and hopefully that now
+enables them (as well as some other UIMA users out there) to upgrade
+to UIMAv3. Anybody with a committer role on the UIMA project and an 
+account on the ASF Slack has been invited into the Slack UIMA channel.
