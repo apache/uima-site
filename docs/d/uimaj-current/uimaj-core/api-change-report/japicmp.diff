@@ -1,29 +1,11 @@
-Comparing source compatibility of /Users/bluefire/git/uima-uimaj-release/target/checkout/uimaj-core/target/uimaj-core-3.4.0.jar against /Users/bluefire/.m2/repository/org/apache/uima/uimaj-core/3.3.1/uimaj-core-3.3.1.jar
+Comparing source compatibility of /Users/bluefire/git/uima-uimaj-release/target/checkout/uimaj-core/target/uimaj-core-3.5.0.jar against /Users/bluefire/.m2/repository-ukp/org/apache/uima/uimaj-core/3.4.1/uimaj-core-3.4.1.jar
 WARNING: You have ignored certain classes, i.e. superclasses and interfaces that could not be found on the classpath are ignored. Hence changes caused by these superclasses and interfaces are not reflected in the output.
-***! MODIFIED CLASS: PUBLIC org.apache.uima.cas.CASRuntimeException  (field removed)
-	===  CLASS FILE FORMAT VERSION: 52.0 <- 52.0
-	---! REMOVED FIELD: PUBLIC(-) STATIC(-) FINAL(-) java.lang.String JCAS_TYPE_NOT_IN_CAS_REGISTRY
-+++  NEW INTERFACE: PUBLIC(+) ABSTRACT(+) org.apache.uima.spi.FsIndexCollectionProvider  (not serializable)
-	+++  CLASS FILE FORMAT VERSION: 52.0 <- n.a.
-	+++  NEW SUPERCLASS: java.lang.Object
-	+++  NEW METHOD: PUBLIC(+) ABSTRACT(+) java.util.List<org.apache.uima.resource.metadata.FsIndexCollection> listFsIndexCollections()
-+++  NEW INTERFACE: PUBLIC(+) ABSTRACT(+) org.apache.uima.spi.JCasClassProvider  (not serializable)
-	+++  CLASS FILE FORMAT VERSION: 52.0 <- n.a.
-	+++  NEW SUPERCLASS: java.lang.Object
-	+++  NEW METHOD: PUBLIC(+) ABSTRACT(+) java.util.List<java.lang.Class<org.apache.uima.jcas.cas.TOP>> listJCasClasses()
-+++  NEW INTERFACE: PUBLIC(+) ABSTRACT(+) org.apache.uima.spi.TypePrioritiesProvider  (not serializable)
-	+++  CLASS FILE FORMAT VERSION: 52.0 <- n.a.
-	+++  NEW SUPERCLASS: java.lang.Object
-	+++  NEW METHOD: PUBLIC(+) ABSTRACT(+) java.util.List<org.apache.uima.resource.metadata.TypePriorities> listTypePriorities()
-+++  NEW INTERFACE: PUBLIC(+) ABSTRACT(+) org.apache.uima.spi.TypeSystemDescriptionProvider  (not serializable)
-	+++  CLASS FILE FORMAT VERSION: 52.0 <- n.a.
-	+++  NEW SUPERCLASS: java.lang.Object
-	+++  NEW METHOD: PUBLIC(+) ABSTRACT(+) java.util.List<org.apache.uima.resource.metadata.TypeSystemDescription> listTypeSystemDescriptions()
-**** MODIFIED INTERFACE: PUBLIC ABSTRACT org.apache.uima.UimaContext  (not serializable)
-	===  CLASS FILE FORMAT VERSION: 52.0 <- 52.0
-	===  UNCHANGED METHOD: PUBLIC ABSTRACT java.lang.String getDataPath()
-		+++  NEW ANNOTATION: java.lang.Deprecated
-	+++* NEW METHOD: PUBLIC(+) ABSTRACT(+) java.util.List<java.lang.String> getDataPathElements()
-***  MODIFIED CLASS: PUBLIC org.apache.uima.util.TypeSystemUtil  (not serializable)
-	===  CLASS FILE FORMAT VERSION: 52.0 <- 52.0
-	+++  NEW METHOD: PUBLIC(+) STATIC(+) java.util.List<org.apache.uima.resource.metadata.TypeSystemDescription> loadTypeSystemDescriptionsFromClasspath(java.lang.Class<?>, java.lang.String[])
+***  MODIFIED CLASS: PUBLIC org.apache.uima.jcas.cas.AnnotationBase  (not serializable)
+	***! CLASS FILE FORMAT VERSION: 61.0 <- 52.0
+	+++  NEW CONSTRUCTOR: PROTECTED(+) AnnotationBase(org.apache.uima.jcas.JCas, int)
+***  MODIFIED CLASS: PUBLIC org.apache.uima.jcas.tcas.Annotation  (not serializable)
+	***! CLASS FILE FORMAT VERSION: 61.0 <- 52.0
+	+++  NEW METHOD: PUBLIC(+) STATIC(+) org.apache.uima.jcas.tcas.Annotation _createMarkerAnnotation(org.apache.uima.jcas.JCas, int, int)
+***  MODIFIED CLASS: PUBLIC org.apache.uima.util.XMLInputSource  (not serializable)
+	***! CLASS FILE FORMAT VERSION: 61.0 <- 52.0
+	+++  NEW CONSTRUCTOR: PUBLIC(+) XMLInputSource(java.io.InputStream)

@@ -1,7 +1,7 @@
 <html>
     <head>
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Comparing source compatibility of /Users/bluefire/git/uima-uimaj-release/target/checkout/uimaj-core/target/uimaj-core-3.4.0.jar against /Users/bluefire/.m2/repository/org/apache/uima/uimaj-core/3.3.1/uimaj-core-3.3.1.jar</title>
+        <title>Comparing source compatibility of /Users/bluefire/git/uima-uimaj-release/target/checkout/uimaj-core/target/uimaj-core-3.5.0.jar against /Users/bluefire/.m2/repository-ukp/org/apache/uima/uimaj-core/3.4.1/uimaj-core-3.4.1.jar</title>
         <style type="text/css">
 body {
     font-family: Verdana;
@@ -173,18 +173,18 @@ ul {
 </style>
     </head>
     <body>
-        <span class="title">Comparing source compatibility of /Users/bluefire/git/uima-uimaj-release/target/checkout/uimaj-core/target/uimaj-core-3.4.0.jar against /Users/bluefire/.m2/repository/org/apache/uima/uimaj-core/3.3.1/uimaj-core-3.3.1.jar</span>
+        <span class="title">Comparing source compatibility of /Users/bluefire/git/uima-uimaj-release/target/checkout/uimaj-core/target/uimaj-core-3.5.0.jar against /Users/bluefire/.m2/repository-ukp/org/apache/uima/uimaj-core/3.4.1/uimaj-core-3.4.1.jar</span>
         <br>
         <div class="meta-information">
             <table>
                 <tr>
-                    <td>Old:</td><td>/Users/bluefire/.m2/repository/org/apache/uima/uimaj-core/3.3.1/uimaj-core-3.3.1.jar</td>
+                    <td>Old:</td><td>/Users/bluefire/.m2/repository-ukp/org/apache/uima/uimaj-core/3.4.1/uimaj-core-3.4.1.jar</td>
                 </tr>
                 <tr>
-                    <td>New:</td><td>/Users/bluefire/git/uima-uimaj-release/target/checkout/uimaj-core/target/uimaj-core-3.4.0.jar</td>
+                    <td>New:</td><td>/Users/bluefire/git/uima-uimaj-release/target/checkout/uimaj-core/target/uimaj-core-3.5.0.jar</td>
                 </tr>
                 <tr>
-                    <td>Created:</td><td>2023-01-26T11:00:07.455+0100</td>
+                    <td>Created:</td><td>2023-11-01T17:38:49.802+0100</td>
                 </tr>
                 <tr>
                     <td>Access modifier filter:</td><td>PROTECTED</td>
@@ -205,7 +205,7 @@ ul {
                     <td>Excludes:</td><td>n.a.</td>
                 </tr>
                 <tr>
-                    <td id="semver-label">Semantic Versioning:</td><td id="semver-version">1.0.0</td>
+                    <td id="semver-label">Semantic Versioning:</td><td id="semver-version">0.0.1</td>
                 </tr>
             </table>
         </div>
@@ -225,25 +225,13 @@ ul {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><span class="modified">MODIFIED&nbsp;(!)</span></td><td><a href="#org.apache.uima.cas.CASRuntimeException">org.apache.uima.cas.CASRuntimeException</a></td>
+                        <td><span class="modified">MODIFIED</span></td><td><a href="#org.apache.uima.jcas.cas.AnnotationBase">org.apache.uima.jcas.cas.AnnotationBase</a></td>
                     </tr>
                     <tr>
-                        <td><span class="new">NEW</span></td><td><a href="#org.apache.uima.spi.FsIndexCollectionProvider">org.apache.uima.spi.FsIndexCollectionProvider</a></td>
+                        <td><span class="modified">MODIFIED</span></td><td><a href="#org.apache.uima.jcas.tcas.Annotation">org.apache.uima.jcas.tcas.Annotation</a></td>
                     </tr>
                     <tr>
-                        <td><span class="new">NEW</span></td><td><a href="#org.apache.uima.spi.JCasClassProvider">org.apache.uima.spi.JCasClassProvider</a></td>
-                    </tr>
-                    <tr>
-                        <td><span class="new">NEW</span></td><td><a href="#org.apache.uima.spi.TypePrioritiesProvider">org.apache.uima.spi.TypePrioritiesProvider</a></td>
-                    </tr>
-                    <tr>
-                        <td><span class="new">NEW</span></td><td><a href="#org.apache.uima.spi.TypeSystemDescriptionProvider">org.apache.uima.spi.TypeSystemDescriptionProvider</a></td>
-                    </tr>
-                    <tr>
-                        <td><span class="modified">MODIFIED&nbsp;(*)</span></td><td><a href="#org.apache.uima.UimaContext">org.apache.uima.UimaContext</a></td>
-                    </tr>
-                    <tr>
-                        <td><span class="modified">MODIFIED</span></td><td><a href="#org.apache.uima.util.TypeSystemUtil">org.apache.uima.util.TypeSystemUtil</a></td>
+                        <td><span class="modified">MODIFIED</span></td><td><a href="#org.apache.uima.util.XMLInputSource">org.apache.uima.util.XMLInputSource</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -253,52 +241,53 @@ ul {
         </div>
         <div>
             <div>
-                <div class="class" id="org.apache.uima.cas.CASRuntimeException">
+                <div class="class" id="org.apache.uima.jcas.cas.AnnotationBase">
                     <div class="class_header">
-                        <span class="label"><a name="org.apache.uima.cas.CASRuntimeException"></a><span class="modified">MODIFIED&nbsp;(!)</span><span class="removed">&nbsp;(Serializable incompatible(!): field removed)&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged modifier"></span><span class="unchanged modifier">public&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged modifier"></span><span class="unchanged">class</span>&nbsp;org.apache.uima.cas.CASRuntimeException</span><a href="#toc" class="toc_link">top</a>
+                        <span class="label"><a name="org.apache.uima.jcas.cas.AnnotationBase"></a><span class="modified">MODIFIED</span><span class="">&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged modifier"></span><span class="unchanged modifier">public&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged modifier"></span><span class="unchanged">class</span>&nbsp;org.apache.uima.jcas.cas.AnnotationBase</span><a href="#toc" class="toc_link">top</a>
                     </div>
-                    <div class="class_generictemplates"></div>
-                    <div class="class_superclass"></div>
-                    <div class="class_interfaces"></div>
-                    <div class="class_serialVersionUid">
+                    <div class="class_fileFormatVersion">
+                        <span class="label_class_member">class File Format Version:</span>
                         <table>
                             <thead>
                                 <tr>
-                                    <td></td><td>Serializable</td><td>default serialVersionUID</td><td>serialVersionUID in class</td>
+                                    <td>Status</td><td>Old Version</td><td>New Version</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="matrix_layout">Old</td><td>true</td><td class="modified">-6833145696661037305</td><td>1</td>
-                                </tr>
-                                <tr>
-                                    <td class="matrix_layout">New</td><td>true</td><td class="modified">7887970651149922746</td><td>1</td>
+                                    <td><span class="modified">MODIFIED</span></td><td>52.0</td><td>61.0</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="class_fields">
-                        <span class="label_class_member">Fields:</span>
+                    <div class="class_generictemplates"></div>
+                    <div class="class_superclass"></div>
+                    <div class="class_interfaces"></div>
+                    <div class="class_fields"></div>
+                    <div class="class_constructors">
+                        <span class="label_class_member">Constructors:</span>
                         <table>
                             <thead>
                                 <tr>
-                                    <td>Status</td><td>Modifier</td><td>Type</td><td>Field</td><td>Compatibility Changes:</td>
+                                    <td>Status</td><td>Modifier</td><td>Generic Templates</td><td>Constructor</td><td>Exceptions</td><td>Compatibility Changes:</td><td>Line Number</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><span class="removed">REMOVED&nbsp;(!)</span></td><td><span class="removed modifier">public&nbsp;</span><span class="removed modifier">static&nbsp;</span><span class="removed modifier">final&nbsp;</span><span class="removed modifier"></span></td><td><span class="removed modifier">java.lang.String
-				(!)
-			</span></td><td>JCAS_TYPE_NOT_IN_CAS_REGISTRY</td><td>
+                                    <td><span class="new">NEW</span></td><td><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier">protected&nbsp;</span><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier"></span></td><td>
+			n.a.
+		</td><td>AnnotationBase(<span class="unchanged method_parameter">org.apache.uima.jcas.JCas</span>,
+                                        <wbr></wbr>
+                                        <span class="unchanged method_parameter">int</span>)</td><td>n.a.</td><td>n.a.</td><td>
                                         <table>
                                             <thead>
                                                 <tr>
-                                                    <td>Change</td>
+                                                    <td>Old file</td><td>New file</td>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>FIELD_REMOVED</td>
+                                                    <td>n.a.</td><td>99</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -307,353 +296,28 @@ ul {
                             </tbody>
                         </table>
                     </div>
-                    <div class="class_constructors"></div>
                     <div class="class_methods"></div>
                 </div>
             </div>
             <div>
-                <div class="class" id="org.apache.uima.spi.FsIndexCollectionProvider">
+                <div class="class" id="org.apache.uima.jcas.tcas.Annotation">
                     <div class="class_header">
-                        <span class="label"><a name="org.apache.uima.spi.FsIndexCollectionProvider"></a><span class="new">NEW</span><span class="">&nbsp;</span><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier">public&nbsp;</span><span class="new modifier">abstract&nbsp;</span><span class="new modifier"></span><span class="new">interface</span>&nbsp;org.apache.uima.spi.FsIndexCollectionProvider</span><a href="#toc" class="toc_link">top</a>
+                        <span class="label"><a name="org.apache.uima.jcas.tcas.Annotation"></a><span class="modified">MODIFIED</span><span class="">&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged modifier"></span><span class="unchanged modifier">public&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged modifier"></span><span class="unchanged">class</span>&nbsp;org.apache.uima.jcas.tcas.Annotation</span><a href="#toc" class="toc_link">top</a>
                     </div>
-                    <div class="class_generictemplates"></div>
-                    <div class="class_superclass"></div>
-                    <div class="class_interfaces"></div>
-                    <div class="class_fields"></div>
-                    <div class="class_constructors"></div>
-                    <div class="class_methods">
-                        <span class="label_class_member">Methods:</span>
+                    <div class="class_fileFormatVersion">
+                        <span class="label_class_member">class File Format Version:</span>
                         <table>
                             <thead>
                                 <tr>
-                                    <td>Status</td><td>Modifier</td><td>Generic Templates</td><td>Type</td><td>Method</td><td>Exceptions</td><td>Compatibility Changes:</td><td>Line Number</td>
+                                    <td>Status</td><td>Old Version</td><td>New Version</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><span class="new">NEW</span></td><td><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier">public&nbsp;</span><span class="new modifier">abstract&nbsp;</span><span class="new modifier"></span><span class="new modifier"></span></td><td>
-			n.a.
-		</td><td><span class="new method_return_type">java.util.List
-                                            <div class="tooltip">
-                                                <span class="unchanged method_parameter">
-					&lt;..&gt;
-				</span>
-                                                <div class="tooltiptext">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="table_head_td">New: </td><td>org.apache.uima.resource.metadata.FsIndexCollection</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </span></td><td>listFsIndexCollections()</td><td>n.a.</td><td>n.a.</td><td>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <td>Old file</td><td>New file</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>n.a.</td><td>n.a.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
+                                    <td><span class="modified">MODIFIED</span></td><td>52.0</td><td>61.0</td>
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="class" id="org.apache.uima.spi.JCasClassProvider">
-                    <div class="class_header">
-                        <span class="label"><a name="org.apache.uima.spi.JCasClassProvider"></a><span class="new">NEW</span><span class="">&nbsp;</span><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier">public&nbsp;</span><span class="new modifier">abstract&nbsp;</span><span class="new modifier"></span><span class="new">interface</span>&nbsp;org.apache.uima.spi.JCasClassProvider</span><a href="#toc" class="toc_link">top</a>
-                    </div>
-                    <div class="class_generictemplates"></div>
-                    <div class="class_superclass"></div>
-                    <div class="class_interfaces"></div>
-                    <div class="class_fields"></div>
-                    <div class="class_constructors"></div>
-                    <div class="class_methods">
-                        <span class="label_class_member">Methods:</span>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>Status</td><td>Modifier</td><td>Generic Templates</td><td>Type</td><td>Method</td><td>Exceptions</td><td>Compatibility Changes:</td><td>Line Number</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><span class="new">NEW</span></td><td><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier">public&nbsp;</span><span class="new modifier">abstract&nbsp;</span><span class="new modifier"></span><span class="new modifier"></span></td><td>
-			n.a.
-		</td><td><span class="new method_return_type">java.util.List
-                                            <div class="tooltip">
-                                                <span class="unchanged method_parameter">
-					&lt;..&gt;
-				</span>
-                                                <div class="tooltiptext">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="table_head_td">New: </td><td>java.lang.Class
-			&lt;
-			org.apache.uima.jcas.cas.TOP
-			&gt;
-		</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </span></td><td>listJCasClasses()</td><td>n.a.</td><td>n.a.</td><td>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <td>Old file</td><td>New file</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>n.a.</td><td>n.a.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="class" id="org.apache.uima.spi.TypePrioritiesProvider">
-                    <div class="class_header">
-                        <span class="label"><a name="org.apache.uima.spi.TypePrioritiesProvider"></a><span class="new">NEW</span><span class="">&nbsp;</span><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier">public&nbsp;</span><span class="new modifier">abstract&nbsp;</span><span class="new modifier"></span><span class="new">interface</span>&nbsp;org.apache.uima.spi.TypePrioritiesProvider</span><a href="#toc" class="toc_link">top</a>
-                    </div>
-                    <div class="class_generictemplates"></div>
-                    <div class="class_superclass"></div>
-                    <div class="class_interfaces"></div>
-                    <div class="class_fields"></div>
-                    <div class="class_constructors"></div>
-                    <div class="class_methods">
-                        <span class="label_class_member">Methods:</span>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>Status</td><td>Modifier</td><td>Generic Templates</td><td>Type</td><td>Method</td><td>Exceptions</td><td>Compatibility Changes:</td><td>Line Number</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><span class="new">NEW</span></td><td><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier">public&nbsp;</span><span class="new modifier">abstract&nbsp;</span><span class="new modifier"></span><span class="new modifier"></span></td><td>
-			n.a.
-		</td><td><span class="new method_return_type">java.util.List
-                                            <div class="tooltip">
-                                                <span class="unchanged method_parameter">
-					&lt;..&gt;
-				</span>
-                                                <div class="tooltiptext">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="table_head_td">New: </td><td>org.apache.uima.resource.metadata.TypePriorities</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </span></td><td>listTypePriorities()</td><td>n.a.</td><td>n.a.</td><td>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <td>Old file</td><td>New file</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>n.a.</td><td>n.a.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="class" id="org.apache.uima.spi.TypeSystemDescriptionProvider">
-                    <div class="class_header">
-                        <span class="label"><a name="org.apache.uima.spi.TypeSystemDescriptionProvider"></a><span class="new">NEW</span><span class="">&nbsp;</span><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier">public&nbsp;</span><span class="new modifier">abstract&nbsp;</span><span class="new modifier"></span><span class="new">interface</span>&nbsp;org.apache.uima.spi.TypeSystemDescriptionProvider</span><a href="#toc" class="toc_link">top</a>
-                    </div>
-                    <div class="class_generictemplates"></div>
-                    <div class="class_superclass"></div>
-                    <div class="class_interfaces"></div>
-                    <div class="class_fields"></div>
-                    <div class="class_constructors"></div>
-                    <div class="class_methods">
-                        <span class="label_class_member">Methods:</span>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>Status</td><td>Modifier</td><td>Generic Templates</td><td>Type</td><td>Method</td><td>Exceptions</td><td>Compatibility Changes:</td><td>Line Number</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><span class="new">NEW</span></td><td><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier">public&nbsp;</span><span class="new modifier">abstract&nbsp;</span><span class="new modifier"></span><span class="new modifier"></span></td><td>
-			n.a.
-		</td><td><span class="new method_return_type">java.util.List
-                                            <div class="tooltip">
-                                                <span class="unchanged method_parameter">
-					&lt;..&gt;
-				</span>
-                                                <div class="tooltiptext">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="table_head_td">New: </td><td>org.apache.uima.resource.metadata.TypeSystemDescription</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </span></td><td>listTypeSystemDescriptions()</td><td>n.a.</td><td>n.a.</td><td>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <td>Old file</td><td>New file</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>n.a.</td><td>n.a.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="class" id="org.apache.uima.UimaContext">
-                    <div class="class_header">
-                        <span class="label"><a name="org.apache.uima.UimaContext"></a><span class="modified">MODIFIED&nbsp;(*)</span><span class="">&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged modifier"></span><span class="unchanged modifier">public&nbsp;</span><span class="unchanged modifier">abstract&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged">interface</span>&nbsp;org.apache.uima.UimaContext</span><a href="#toc" class="toc_link">top</a>
-                    </div>
-                    <div class="class_generictemplates"></div>
-                    <div class="class_superclass"></div>
-                    <div class="class_interfaces"></div>
-                    <div class="class_fields"></div>
-                    <div class="class_constructors"></div>
-                    <div class="class_methods">
-                        <span class="label_class_member">Methods:</span>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td>Status</td><td>Modifier</td><td>Generic Templates</td><td>Type</td><td>Method</td><td>Exceptions</td><td>Compatibility Changes:</td><td>Line Number</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><span class="unchanged">UNCHANGED</span></td><td><span class="unchanged modifier"></span><span class="unchanged modifier"></span><span class="unchanged modifier">public&nbsp;</span><span class="unchanged modifier">abstract&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged modifier"></span></td><td>
-			n.a.
-		</td><td><span class="unchanged method_return_type">java.lang.String</span></td><td>getDataPath()
-                                        <div class="class_annotations">
-                                            <span class="label_class_member">Annotations:</span>
-                                            <table>
-                                                <thead>
-                                                    <tr>
-                                                        <td>Status:</td><td>Fully Qualified Name:</td><td>Elements:</td>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><span class="new">NEW</span></td><td>java.lang.Deprecated</td><td>n.a.</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td><td>n.a.</td><td>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <td>Change</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>ANNOTATION_DEPRECATED_ADDED</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td><td>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <td>Old file</td><td>New file</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>n.a.</td><td>n.a.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><span class="new">NEW&nbsp;(*)</span></td><td><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier">public&nbsp;</span><span class="new modifier">abstract&nbsp;</span><span class="new modifier"></span><span class="new modifier"></span></td><td>
-			n.a.
-		</td><td><span class="new method_return_type">java.util.List
-                                            <div class="tooltip">
-                                                <span class="unchanged method_parameter">
-					&lt;..&gt;
-				</span>
-                                                <div class="tooltiptext">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="table_head_td">New: </td><td>java.lang.String</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </span></td><td>getDataPathElements()</td><td>n.a.</td><td>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <td>Change</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>METHOD_ADDED_TO_INTERFACE</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td><td>
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <td>Old file</td><td>New file</td>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>n.a.</td><td>n.a.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="class" id="org.apache.uima.util.TypeSystemUtil">
-                    <div class="class_header">
-                        <span class="label"><a name="org.apache.uima.util.TypeSystemUtil"></a><span class="modified">MODIFIED</span><span class="">&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged modifier"></span><span class="unchanged modifier">public&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged modifier"></span><span class="unchanged">class</span>&nbsp;org.apache.uima.util.TypeSystemUtil</span><a href="#toc" class="toc_link">top</a>
                     </div>
                     <div class="class_generictemplates"></div>
                     <div class="class_superclass"></div>
@@ -672,37 +336,11 @@ ul {
                                 <tr>
                                     <td><span class="new">NEW</span></td><td><span class="new modifier"></span><span class="new modifier">static&nbsp;</span><span class="new modifier">public&nbsp;</span><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier"></span></td><td>
 			n.a.
-		</td><td><span class="new method_return_type">java.util.List
-                                            <div class="tooltip">
-                                                <span class="unchanged method_parameter">
-					&lt;..&gt;
-				</span>
-                                                <div class="tooltiptext">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="table_head_td">New: </td><td>org.apache.uima.resource.metadata.TypeSystemDescription</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </span></td><td>loadTypeSystemDescriptionsFromClasspath(<span class="unchanged method_parameter">java.lang.Class
-                                            <div class="tooltip">
-                                                <span class="unchanged method_parameter">
-					&lt;..&gt;
-				</span>
-                                                <div class="tooltiptext">
-                                                    <table>
-                                                        <tr>
-                                                            <td class="table_head_td">New: </td><td>
-				?
-			</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </span>,
+		</td><td><span class="new method_return_type">org.apache.uima.jcas.tcas.Annotation</span></td><td>_createMarkerAnnotation(<span class="unchanged method_parameter">org.apache.uima.jcas.JCas</span>,
                                         <wbr></wbr>
-                                        <span class="unchanged method_parameter">java.lang.String[]</span>)</td><td>n.a.</td><td>
+                                        <span class="unchanged method_parameter">int</span>,
+                                        <wbr></wbr>
+                                        <span class="unchanged method_parameter">int</span>)</td><td>n.a.</td><td>
                                         <table>
                                             <thead>
                                                 <tr>
@@ -724,7 +362,7 @@ ul {
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>n.a.</td><td>72</td>
+                                                    <td>n.a.</td><td>331</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -733,6 +371,63 @@ ul {
                             </tbody>
                         </table>
                     </div>
+                </div>
+            </div>
+            <div>
+                <div class="class" id="org.apache.uima.util.XMLInputSource">
+                    <div class="class_header">
+                        <span class="label"><a name="org.apache.uima.util.XMLInputSource"></a><span class="modified">MODIFIED</span><span class="">&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged modifier"></span><span class="unchanged modifier">public&nbsp;</span><span class="unchanged modifier"></span><span class="unchanged modifier"></span><span class="unchanged">class</span>&nbsp;org.apache.uima.util.XMLInputSource</span><a href="#toc" class="toc_link">top</a>
+                    </div>
+                    <div class="class_fileFormatVersion">
+                        <span class="label_class_member">class File Format Version:</span>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Status</td><td>Old Version</td><td>New Version</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="modified">MODIFIED</span></td><td>52.0</td><td>61.0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="class_generictemplates"></div>
+                    <div class="class_superclass"></div>
+                    <div class="class_interfaces"></div>
+                    <div class="class_fields"></div>
+                    <div class="class_constructors">
+                        <span class="label_class_member">Constructors:</span>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Status</td><td>Modifier</td><td>Generic Templates</td><td>Constructor</td><td>Exceptions</td><td>Compatibility Changes:</td><td>Line Number</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="new">NEW</span></td><td><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier">public&nbsp;</span><span class="new modifier"></span><span class="new modifier"></span><span class="new modifier"></span></td><td>
+			n.a.
+		</td><td>XMLInputSource(<span class="unchanged method_parameter">java.io.InputStream</span>)</td><td>n.a.</td><td>n.a.</td><td>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <td>Old file</td><td>New file</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>n.a.</td><td>92</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="class_methods"></div>
                 </div>
             </div>
         </div>

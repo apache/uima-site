@@ -1,0 +1,2784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<meta name="author" content="Apache UIMA™ Development Community">
+<title>Apache UIMA™ - UIMA Overview and SDK Setup</title>
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="book toc2 toc-left">
+<div id="header">
+<h1>Apache UIMA™ - UIMA Overview and SDK Setup</h1>
+<div class="details">
+<span id="author" class="author">Apache UIMA™ Development Community</span><br>
+<span id="revnumber">version 3.5.0</span>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">UIMA Overview and SDK Setup</div>
+<ul class="sectlevel1">
+<li><a href="#ugr.project_overview">1. UIMA Overview</a>
+<ul class="sectlevel2">
+<li><a href="#ugr.project_overview_doc_overview">1.1. Apache UIMA Project Documentation Overview</a>
+<ul class="sectlevel3">
+<li><a href="#ugr.project_overview_overview">1.1.1. Overviews</a></li>
+<li><a href="#ugr.project_overview_setup">1.1.2. Eclipse Tooling Installation and Setup</a></li>
+<li><a href="#ugr.project_overview_tutorials_dev_guides">1.1.3. Tutorials and Developer&#8217;s Guides</a></li>
+<li><a href="#ugr.project_overview_tool_guides">1.1.4. Tools Users' Guides</a></li>
+<li><a href="#ugr.project_overview_reference">1.1.5. References</a></li>
+<li><a href="#ugr.project_overview_v3">1.1.6. Version 3 User&#8217;s guide</a></li>
+</ul>
+</li>
+<li><a href="#ugr.project_overview_doc_use">1.2. How to use the Documentation</a></li>
+<li><a href="#ugr.project_overview_changes_from_previous">1.3. Changes from UIMA Version 2</a></li>
+<li><a href="#ugr.project_overview_migrating_from_v2_to_v3">1.4. Migrating existing UIMA pipelines from Version 2 to Version 3</a></li>
+<li><a href="#ugr.project_overview_summary">1.5. Apache UIMA Summary</a>
+<ul class="sectlevel3">
+<li><a href="#ugr.ovv.summary.general">1.5.1. General</a></li>
+<li><a href="#ugr.ovv.summary.programming_language_support">1.5.2. Programming Language Support</a></li>
+<li><a href="#ugr.ovv.general.summary.multi_modal_support">1.5.3. Multi-Modal Support</a></li>
+</ul>
+</li>
+<li><a href="#ugr.project_overview_summary_sdk_capabilities">1.6. Summary of Apache UIMA Capabilities</a></li>
+</ul>
+</li>
+<li><a href="#ugr.ovv.conceptual">2. UIMA Conceptual Overview</a>
+<ul class="sectlevel2">
+<li><a href="#ugr.ovv.conceptual.uima_introduction">2.1. UIMA Introduction</a></li>
+<li><a href="#ugr.ovv.conceptual.architecture_framework_sdk">2.2. The Architecture, the Framework and the SDK</a></li>
+<li><a href="#ugr.ovv.conceptual.analysis_basics">2.3. Analysis Basics</a>
+<ul class="sectlevel3">
+<li><a href="#ugr.ovv.conceptual.aes_annotators_and_analysis_results">2.3.1. Analysis Engines, Annotators &amp; Results</a></li>
+<li><a href="#ugr.ovv.conceptual.representing_results_in_cas">2.3.2. Representing Analysis Results in the CAS</a>
+<ul class="sectlevel4">
+<li><a href="#ugr.ovv.conceptual.annotation_type">The Annotation Type</a></li>
+<li><a href="#ugr.ovv.conceptual.not_just_annotations">Not Just Annotations</a></li>
+<li><a href="#ugr.ovv.conceptual.multiple_views_within_a_cas">Multiple Views within a CAS</a></li>
+</ul>
+</li>
+<li><a href="#ugr.ovv.conceptual.interacting_with_cas_and_external_resources">2.3.3. Using CASes and External Resources</a></li>
+<li><a href="#ugr.ovv.conceptual.component_descriptors">2.3.4. Component Descriptors</a></li>
+</ul>
+</li>
+<li><a href="#ugr.ovv.conceptual.aggregate_analysis_engines">2.4. Aggregate Analysis Engines</a></li>
+<li><a href="#ugr.ovv.conceptual.applicaiton_building_and_collection_processing">2.5. Application Building and Collection Processing</a>
+<ul class="sectlevel3">
+<li><a href="#ugr.ovv.conceptual.using_framework_from_an_application">2.5.1. Using the framework from an Application</a></li>
+<li><a href="#ugr.ovv.conceptual.graduating_to_collection_processing">2.5.2. Graduating to Collection Processing</a></li>
+</ul>
+</li>
+<li><a href="#ugr.ovv.conceptual.exploiting_analysis_results">2.6. Exploiting Analysis Results</a>
+<ul class="sectlevel3">
+<li><a href="#ugr.ovv.conceptual.semantic_search">2.6.1. Semantic Search</a></li>
+<li><a href="#ugr.ovv.conceptual.databases">2.6.2. Databases</a></li>
+</ul>
+</li>
+<li><a href="#ugr.ovv.conceptual.multimodal_processing">2.7. Multimodal Processing in UIMA</a></li>
+<li><a href="#ugr.ovv.conceptual.next_steps">2.8. Next Steps</a></li>
+</ul>
+</li>
+<li><a href="#ugr.ovv.eclipse_setup">3. Setting up the Eclipse IDE to work with UIMA</a>
+<ul class="sectlevel2">
+<li><a href="#ugr.ovv.eclipse_setup.installation">3.1. Installation</a>
+<ul class="sectlevel3">
+<li><a href="#ugr.ovv.eclipse_setup.install_eclipse">3.1.1. Install Eclipse</a></li>
+<li><a href="#ugr.ovv.eclipse_setup.install_uima_eclipse_plugins">3.1.2. Installing the UIMA Eclipse Plugins</a></li>
+<li><a href="#ugr.ovv.eclipse_setup.install_uima_sdk">3.1.3. Install the UIMA SDK</a></li>
+<li><a href="#ugr.ovv.eclipse_setup.install_uima_eclipse_plugins_manually">3.1.4. Installing the UIMA Eclipse Plugins, manually</a></li>
+<li><a href="#ugr.ovv.eclipse_setup.start_eclipse">3.1.5. Start Eclipse</a>
+<ul class="sectlevel4">
+<li><a href="#ugr.ovv.eclipse_setup.special_startup_parameter_clean">Special startup parameter for Eclipse: -clean</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#ugr.ovv.eclipse_setup.example_code">3.2. Setting up Eclipse to view Example Code</a></li>
+<li><a href="#ugr.ovv.eclipse_setup.adding_source">3.3. Adding the UIMA source code to the jar files</a></li>
+<li><a href="#ugr.ovv.eclipse_setup.linking_uima_javadocs">3.4. Attaching UIMA Javadocs</a></li>
+<li><a href="#ugr.ovv.eclipse_setup.running_external_tools_from_eclipse">3.5. Running external tools from Eclipse</a></li>
+</ul>
+</li>
+<li><a href="#ugr.faqs">4. UIMA Frequently Asked Questions (FAQ&#8217;s)</a></li>
+<li><a href="#ugr.issues">5. Known Issues</a></li>
+<li><a href="#ugr.glossary">Glossary: Key Terms &amp; Concepts</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Copyright © 2006, 2021 The Apache Software Foundation</p>
+</div>
+<div class="paragraph">
+<p>Copyright © 2004, 2006 International Business Machines Corporation</p>
+</div>
+<h4 id="_license_and_disclaimer" class="discrete">License and Disclaimer</h4>
+<div class="paragraph">
+<p>The ASF licenses this documentation to you under the Apache License, Version 2.0 (the "License");
+you may not use this documentation except in compliance with the License.  You may obtain a copy of
+the License at</p>
+</div>
+<div class="paragraph text-center">
+<p><a href="http://www.apache.org/licenses/LICENSE-2.0" class="bare">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+</div>
+<div class="paragraph">
+<p>Unless required by applicable law or agreed to in writing, this documentation and its contents are
+distributed under the License on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied.  See the License for the specific language governing permissions and
+limitations under the License.</p>
+</div>
+<h4 id="_trademarks" class="discrete">Trademarks</h4>
+<div class="paragraph">
+<p>All terms mentioned in the text that are known to be trademarks or service marks have been
+appropriately capitalized.  Use of such terms in this book should not be regarded as affecting the
+validity of the the trademark or service mark.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ugr.project_overview"><a class="anchor" href="#ugr.project_overview"></a>1. UIMA Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Unstructured Information Management Architecture (UIMA) is an architecture and software framework for creating, discovering, composing and deploying a broad range of multi-modal analysis capabilities and integrating them with search technologies.
+The architecture is undergoing a standardization effort,  referred to as the <em>UIMA specification</em> by a technical committee within <a href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=uima">OASIS</a>.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Apache UIMA</em> framework is an Apache licensed, open source implementation of the UIMA Architecture, and provides a run-time environment in which developers can plug in and run their UIMA component implementations and with which they can build and deploy UIM applications.
+The framework itself is not specific to any IDE or platform.</p>
+</div>
+<div class="paragraph">
+<p>It includes an all-Java implementation of the UIMA framework for the development, description, composition and deployment of UIMA components and applications.
+It also provides the developer with an Eclipse-based (<a href="http://www.eclipse.org/" class="bare">http://www.eclipse.org/</a> ) development environment that includes a set of tools and utilities for using UIMA.
+It also includes  a C++ version of the framework, and enablements for Annotators built in Perl, Python, and TCL.</p>
+</div>
+<div class="paragraph">
+<p>This chapter is the intended starting point for readers that are new to the Apache UIMA Project.
+It includes this introduction and the following sections:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#ugr.project_overview_doc_overview">Section 1.1</a> provides a list of the books and topics included in the Apache UIMA documentation with a brief summary of each.</p>
+</li>
+<li>
+<p><a href="#ugr.project_overview_doc_use">Section 1.2</a> describes a recommended path through the documentation to help get the reader up and running with UIMA</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The main website for Apache UIMA is <a href="http://uima.apache.org" class="bare">http://uima.apache.org</a>.
+Here you  can find out many things, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>how to download (both the binary and source distributions</p>
+</li>
+<li>
+<p>how to participate in the development</p>
+</li>
+<li>
+<p>mailing lists - including the user list used like a forum for questions and answers</p>
+</li>
+<li>
+<p>a Wiki where you can find and contribute all kinds of information, including tips and best practices</p>
+</li>
+<li>
+<p>a sandbox - a subproject for potential new additions to Apache UIMA or to subprojects of it. Things here are works in progress, and may (or may not) be included in releases.</p>
+</li>
+<li>
+<p>links to conferences</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="ugr.project_overview_doc_overview"><a class="anchor" href="#ugr.project_overview_doc_overview"></a>1.1. Apache UIMA Project Documentation Overview</h3>
+<div class="paragraph">
+<p>The user documentation for UIMA is organized into several parts.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Overviews - this documentation</p>
+</li>
+<li>
+<p>Eclipse Tooling Installation and Setup - also in this document</p>
+</li>
+<li>
+<p>Tutorials and Developer&#8217;s Guides</p>
+</li>
+<li>
+<p>Tools Users' Guides</p>
+</li>
+<li>
+<p>References</p>
+</li>
+<li>
+<p>Version 3 users-guide</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The first 2 parts make up this book; the last 4 have individual  books.
+The books are provided both as (somewhat large) html files, viewable in browsers, and also as PDF files.
+The documentation is fully hyperlinked, with tables of contents.
+The PDF versions are set up to  print nicely - they have page numbers included on the cross references within a book.</p>
+</div>
+<div class="paragraph">
+<p>If you view the PDF files inside a browser that supports imbedded viewing of PDF, the hyperlinks between different PDF books may work (not  all browsers have been tested&#8230;&#8203;).</p>
+</div>
+<div class="paragraph">
+<p>The following set of tables gives a more detailed overview of the various parts of the documentation.</p>
+</div>
+<div class="sect3">
+<h4 id="ugr.project_overview_overview"><a class="anchor" href="#ugr.project_overview_overview"></a>1.1.1. Overviews</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="#ugr.project_overview_doc_overview">Overview of the Documentation</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">What you are currently reading.
+Lists the documents provided in the Apache  UIMA documentation set and provides a recommended path through the documentation for getting started using UIMA.
+It includes release notes and provides a brief high-level description of  the different software modules included in the Apache UIMA Project.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="#ugr.ovv.conceptual">Conceptual Overview</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides a broad conceptual overview of the UIMA component architecture; includes references to the other documents in the documentation set that provide more detail.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="#ugr.faqs">UIMA FAQs</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frequently Asked Questions about general UIMA concepts. (Not a programming resource.)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="#ugr.issues">Known Issues</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Known issues and problems with the UIMA SDK.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="#ugr.glossary">Glossary</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UIMA terms and concepts and their basic definitions.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="ugr.project_overview_setup"><a class="anchor" href="#ugr.project_overview_setup"></a>1.1.2. Eclipse Tooling Installation and Setup</h4>
+<div class="paragraph">
+<p>Provides step-by-step instructions for installing Apache UIMA in the Eclipse Interactive Development Environment.
+See <a href="#ugr.ovv.eclipse_setup">Chapter 3</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ugr.project_overview_tutorials_dev_guides"><a class="anchor" href="#ugr.project_overview_tutorials_dev_guides"></a>1.1.3. Tutorials and Developer&#8217;s Guides</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tug.html#ugr.tug.aae">Annotators and Analysis Engines</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tutorial-style guide for building UIMA annotators and analysis engines. This chapter
+                introduces the developer to creating type systems and using UIMA&#8217;s common data structure,
+                the CAS or Common Analysis Structure. It demonstrates how to use built in tools to specify and create
+                basic UIMA analysis components.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tug.html#ugr.tug.cpe">Building UIMA Collection Processing Engines</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tutorial-style guide for building UIMA collection processing engines. These
+               manage the analysis of collections of documents from source to sink.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tug.html#ugr.tug.application">Developing Complete Applications</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tutorial-style guide on using the UIMA APIs to create, run and manage UIMA components from
+                your application. Also describes APIs for saving and restoring the contents of a CAS using an XML
+                format called XMI&#8482;.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tug.html#ugr.tug.fc">Flow Controller</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">When multiple components are combined in an Aggregate, each CAS flow among the various
+                components. UIMA provides two built-in flows, and also allows custom flows to be
+                implemented.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tug.html#ugr.tug.aas">Developing Applications using Multiple Subjects of Analysis</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A single CAS maybe associated with multiple subjects of analysis (Sofas). These are useful
+                for representing and analyzing different formats or translations of the same document. For
+                multi-modal analysis, Sofas are good for different modal representations of the same stream
+                (e.g., audio and close-captions).This chapter provides the developer details on how to use
+                multiple Sofas in an application.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tug.html#ugr.tug.mvs">Multiple CAS Views of an Artifact</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UIMA provides an extension to the basic model of the CAS which supports
+              analysis of multiple views of the same artifact, all contained with the CAS. This
+              chapter describes the concepts, terminology, and the API and XML extensions that
+              enable this</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tug.html#ugr.tug.cm">CAS Multiplier</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A component may add additional CASes into the workflow. This may be useful to break up a large
+                artifact into smaller units, or to create a new CAS that collects information from multiple other
+                CASes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tug.html#ugr.tug.xmi_emf">XMI and EMF Interoperability</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The UIMA Type system and the contents of the CAS itself can be externalized using the XMI
+                standard for XML MetaData. Eclipse Modeling Framework (EMF) tooling can be used to develop
+                applications that use this information.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="ugr.project_overview_tool_guides"><a class="anchor" href="#ugr.project_overview_tool_guides"></a>1.1.4. Tools Users' Guides</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tools.html#ugr.tools.cde">Component Descriptor Editor</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes the features of the Component Descriptor Editor Tool. This tool provides a GUI for
+                specifying the details of UIMA component descriptors, including those for Analysis Engines
+                (primitive and aggregate), Collection Readers, CAS Consumers and Type Systems.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tools.html#ugr.tools.cpe">Collection Processing Engine Configurator</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes the User Interfaces and features of the CPE Configurator tool. This tool allows the
+                user to select and configure the components of a Collection Processing Engine and then to run the
+                engine.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tools.html#ugr.tools.pear.packager">PEAR Packager</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes how to use the PEAR Packager utility. This utility enables developers to produce an
+                archive file for an analysis engine that includes all required resources for installing that
+                analysis engine in another UIMA environment.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tools.html#ugr.tools.pear.installer">PEAR Installer</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes how to use the PEAR Installer utility. This utility installs and verifies an
+                analysis engine from an archive file (PEAR) with all its resources in the right place so it is ready to
+                run.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tools.html#ugr.tools.pear.merger">PEAR Merger</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes how to use the PEAR Merger utility, which does a simple merge of multiple PEAR
+                packages into one.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tools.html#ugr.tools.doc_analyzer">Document Analyzer</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes the features of a tool for applying a UIMA analysis engine to a set of documents and
+                viewing the results.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tools.html#ugr.tools.cvd">CAS Visual Debugger</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes the features of a tool for viewing the detailed structure and contents of a CAS. Good
+                for debugging.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tools.html#ugr.tools.jcasgen">JCasGen</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes how to run the JCasGen utility, which automatically builds Java classes that
+                correspond to a particular CAS Type System.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="tools.html#ugr.tools.annotation_viewer">XML CAS Viewer</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes how to run the supplied viewer to view externalized XML forms of CASes. This viewer
+                is used in the examples.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="ugr.project_overview_reference"><a class="anchor" href="#ugr.project_overview_reference"></a>1.1.5. References</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="ref.html#ugr.ref.javadocs">Introduction to the UIMA API Javadocs</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Javadocs detailing the UIMA programming interfaces.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="ref.html#ugr.ref.xml.component_descriptor">XML: Component Descriptor</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides detailed XML format for all the UIMA component descriptors, except the CPE (see next).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="ref.html#ugr.ref.xml.cpe_descriptor">XML: Collection Processing Engine Descriptor</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides detailed XML format for the Collection Processing Engine descriptor.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="ref.html#ugr.ref.cas">CAS</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides detailed description of the principal CAS interface.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="ref.html#ugr.ref.jcas">JCas</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides details on the JCas, a native Java interface to the CAS.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="ref.html#ugr.ref.pear">PEAR Reference</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides detailed description of the deployable archive format for UIMA components.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em><a href="ref.html#ugr.ref.xmi">XMI CAS Serialization Reference</a></em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides detailed description of the deployable archive format for UIMA components.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="ugr.project_overview_v3"><a class="anchor" href="#ugr.project_overview_v3"></a>1.1.6. Version 3 User&#8217;s guide</h4>
+<div class="paragraph">
+<p>This book describes Version 3&#8217;s features, capabilities, and differences with version 2.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.project_overview_doc_use"><a class="anchor" href="#ugr.project_overview_doc_use"></a>1.2. How to use the Documentation</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Explore this chapter to get an overview of the different documents that are included with Apache UIMA.</p>
+</li>
+<li>
+<p>Read <a href="#ugr.ovv.conceptual">Chapter 2, <em>UIMA Conceptual Overview</em></a> to get a broad view of the basic UIMA concepts and philosophy with reference to the other documents included in the documentation set which provide greater detail.</p>
+</li>
+<li>
+<p>For more general information on the UIMA architecture and how it has been used, refer to the IBM Systems Journal special issue on Unstructured Information Management, on-line at <a href="http://www.research.ibm.com/journal/sj43-3.html" class="bare">http://www.research.ibm.com/journal/sj43-3.html</a> or to the section of the UIMA project website on Apache website where other publications are listed.</p>
+</li>
+<li>
+<p>Set up Apache UIMA in your Eclipse environment. To do this, follow the instructions in <a href="#ugr.ovv.eclipse_setup">Chapter 3, <em>Setting up the Eclipse IDE to work with UIMA</em></a>.</p>
+</li>
+<li>
+<p>Develop sample UIMA annotators, run them and explore the results. Read the <a href="tug.html#ugr.tug.aae">Annotator and Analysis Engine Developer&#8217;s Guide</a> and follow it like a tutorial to learn how to develop your first UIMA annotator and set up and run your first UIMA analysis engines.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>As part of this you will use a few tools including</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The UIMA Component Descriptor Editor, described in more detail in the <a href="tools.html#ugr.tools.cde">Component Descriptor Editor User&#8217;s Guide</a> and</p>
+</li>
+<li>
+<p>The Document Analyzer, described in more detail in <a href="tools.html#ugr.tools.doc_analyzer">Document Analyzer User&#8217;s Guide</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>While following along in <a href="tug.html#ugr.tug.aae">Tutorials and User&#8217;s Guides</a>, reference documents that may help are:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="ref.html#ugr.ref.xml.component_descriptor">Component Descriptor Reference</a> for understanding the analysis engine descriptors</p>
+</li>
+<li>
+<p><a href="ref.html#ugr.ref.jcas">JCas Reference</a> for understanding the JCas.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Learn how to create, run and manage a UIMA analysis engine as part of an application. Connect your analysis engine to the provided semantic search engine to learn how a complete analysis and search application may be built with Apache UIMA. The <a href="tug.html#ugr.tug.application">Application Developer&#8217;s Guide</a> will guide you through this process.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>As part of this you will use the document analyzer (described in more detail in <a href="tools.html#ugr.tools.doc_analyzer">Document Analyzer User&#8217;s Guide</a> and semantic search GUI tools.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Pat yourself on the back. Congratulations! If you reached this step successfully, then you have an appreciation for the UIMA analysis engine architecture. You would have built a few sample annotators, deployed UIMA analysis engines to analyze a few documents, searched over the results using the built-in semantic search engine and viewed the results through a built-in viewer&#8201;&#8212;&#8201;all as part of a simple but complete application.</p>
+</li>
+<li>
+<p>Develop and run a Collection Processing Engine (CPE) to analyze and gather the results of an entire collection of documents. <a href="tug.html#ugr.tug.cpe">Collection Processing Engine Developer&#8217;s Guide</a> will guide you through this process.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>As part of this you will use the CPE Configurator tool. For details see <a href="tools.html#ugr.tools.cpe">Collection Processing Engine Configurator User&#8217;s Guide</a></p>
+</li>
+<li>
+<p>You will also learn about CPE Descriptors. The detailed format for these may be found in the <a href="ref.html#ugr.ref.xml.cpe_descriptor">Collection Processing Engine Descriptor Reference</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Learn how to package up an analysis engine for easy installation into another UIMA environment. <a href="tools.html#ugr.tools.pear.packager">PEAR Packager User&#8217;s Guide</a> and <a href="tools.html#ugr.tools.pear.installer">PEAR Installer User&#8217;s Guide</a> will teach you how to create UIMA analysis engine archives so that you can easily share your components with a broader community.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.project_overview_changes_from_previous"><a class="anchor" href="#ugr.project_overview_changes_from_previous"></a>1.3. Changes from UIMA Version 2</h3>
+<div class="paragraph">
+<p>See the separate document Version 3 User&#8217;s Guide.s</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.project_overview_migrating_from_v2_to_v3"><a class="anchor" href="#ugr.project_overview_migrating_from_v2_to_v3"></a>1.4. Migrating existing UIMA pipelines from Version 2 to Version 3</h3>
+<div class="paragraph">
+<p>The format of JCas classes changed when going from version 2 to version 3.
+If you had JCas classes for user types, these need to be regenerated using the  version 3 JCasGen tooling or Maven plugin.
+Alternatively, these can be  migrated without regenerating; the migration preserves any customization  users may have added to the JCas classes.</p>
+</div>
+<div class="paragraph">
+<p>The Version 3 User&#8217;s Guide has a chapter detailing the migration, including a description of the migration tool to aid in this process.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.project_overview_summary"><a class="anchor" href="#ugr.project_overview_summary"></a>1.5. Apache UIMA Summary</h3>
+<div class="sect3">
+<h4 id="ugr.ovv.summary.general"><a class="anchor" href="#ugr.ovv.summary.general"></a>1.5.1. General</h4>
+<div class="paragraph">
+<p>UIMA supports the development, discovery, composition and deployment of multi-modal analytics for the analysis of unstructured information and its integration with search technologies.</p>
+</div>
+<div class="paragraph">
+<p>Apache UIMA includes APIs and tools for creating analysis components.
+Examples of analysis components include tokenizers, summarizers, categorizers, parsers, named-entity detectors etc.
+Tutorial examples are provided with Apache UIMA; additional components are available from the community.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.summary.programming_language_support"><a class="anchor" href="#ugr.ovv.summary.programming_language_support"></a>1.5.2. Programming Language Support</h4>
+<div class="paragraph">
+<p>UIMA supports the development and integration of analysis algorithms developed in different programming languages.</p>
+</div>
+<div class="paragraph">
+<p>The Apache UIMA project is both a Java framework and a matching C enablement layer, which allows annotators to be written in C and have access to a C version of the CAS.
+The C enablement layer also enables annotators to be written in Perl, Python, and TCL, and to interoperate with those written in other languages.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.general.summary.multi_modal_support"><a class="anchor" href="#ugr.ovv.general.summary.multi_modal_support"></a>1.5.3. Multi-Modal Support</h4>
+<div class="paragraph">
+<p>The UIMA architecture supports the development, discovery, composition and deployment of multi-modal analytics, including text, audio and video. <a href="tug.html#ugr.tug.aas">Annotations, Artifacts, and Sofas</a> discuss this is more detail.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.project_overview_summary_sdk_capabilities"><a class="anchor" href="#ugr.project_overview_summary_sdk_capabilities"></a>1.6. Summary of Apache UIMA Capabilities</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Module</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UIMA Framework Core</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A framework integrating core functions for creating, deploying, running and managing UIMA components, including analysis engines and Collection Processing Engines in collocated and/or distributed configurations.</p>
+<p class="tableblock">The framework includes an implementation of core components for transport layer adaptation, CAS management, workflow management based on declarative specifications, resource management, configuration management, logging, and other functions.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C++ and other programming language Interoperability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Includes C CAS and supports the creation of UIMA compliant C components that can be deployed in the UIMA run-time through a built-in JNI adapter.
+This includes high-speed binary serialization.</p>
+<p class="tableblock">Includes support for creating service-based UIMA engines.
+This is ideal for wrapping existing code written in different languages.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Framework Services and APIs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Note that interfaces of these components are available to the developer
+              but different implementations are possible in different implementations of the UIMA
+              framework.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CAS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">These classes provide the developer with typed access to the Common Analysis Structure (CAS),
+              including type system schema, elements, subjects of analysis and indices. Multiple subjects of
+              analysis (Sofas) mechanism supports the independent or simultaneous analysis of multiple views of
+              the same artifacts (e.g. documents), supporting multi-lingual and multi-modal analysis.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JCas</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An alternative interface to the CAS, providing Java-based UIMA Analysis components with
+              native Java object access to CAS types and their attributes or features, using the
+              JavaBeans conventions of getters and setters.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Collection Processing Management (CPM)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Core functions for running UIMA collection processing engines in collocated and/or
+              distributed configurations. The CPM provides scalability across parallel processing pipelines,
+              check-pointing, performance monitoring and recoverability.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Resource Manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides UIMA components with run-time access to external resources handling capabilities
+              such as resource naming, sharing, and caching.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Configuration Manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides UIMA components with run-time access to their configuration parameter settings.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides access to a common logging facility.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tools and Utilities</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JCasGen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utility for generating a Java object model for CAS types from a UIMA XML type system
+              definition.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Saving and Restoring CAS contents</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">APIs in the core framework support saving and restoring the contents of a CAS to streams
+              in multiple formats, including XMI, binary, and compressed forms.
+              These apis are collected into the CasIOUtils class.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PEAR Packager for Eclipse</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool for building a UIMA component archive to facilitate porting, registering, installing and
+              testing components.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PEAR Installer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tool for installing and verifying a UIMA component archive in a UIMA installation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PEAR Merger</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utility that combines multiple PEARs into one.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component Descriptor Editor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eclipse Plug-in for specifying and configuring component descriptors for UIMA analysis
+              engines as well as other UIMA component types including Collection Readers and CAS
+              Consumers.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CPE Configurator</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Graphical tool for configuring Collection Processing Engines and applying them to
+              collections of documents.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Java Annotation Viewer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Viewer for exploring annotations and related CAS data.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CAS Visual Debugger</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GUI Java application that provides developers with detailed visual view of the contents of a
+              CAS.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Document Analyzer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GUI Java application that applies analysis engines to sets of documents and shows results in a
+              viewer.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CAS Editor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eclipse plug-in that lets you edit the contents of a CAS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UIMA Pipeline Eclipse Launcher</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eclipse plug-in that lets you configure Eclipse launchers for UIMA pipelines</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Example Analysis Components</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Database Writer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CAS Consumer that writes the content of selected CAS types into a relational database, using
+              JDBC. This code is in cpe/PersonTitleDBWriterCasConsumer.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Annotators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set of simple annotators meant for pedagogical purposes. Includes: Date/time, Room-number,
+              Regular expression, Tokenizer, and Meeting-finder annotator. There are sample CAS Multipliers
+              as well.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Flow Controllers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">There is a sample flow-controller based on the whiteboard concept of sending the CAS to whatever
+              annotator hasn&#8217;t yet processed it, when that annotator&#8217;s inputs are available in the CAS.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XMI Collection Reader, CAS Consumer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reads and writes the CAS in the XMI format</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">File System Collection Reader</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple Collection Reader for pulling documents from the file system and initializing CASes.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ugr.ovv.conceptual"><a class="anchor" href="#ugr.ovv.conceptual"></a>2. UIMA Conceptual Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>UIMA is an open, industrial-strength, scaleable and extensible platform for creating, integrating and deploying unstructured information management solutions from powerful text or multi-modal analysis and search components.</p>
+</div>
+<div class="paragraph">
+<p>The Apache UIMA project is an implementation of the Java UIMA framework available under the Apache License, providing a common foundation for industry and academia to collaborate and accelerate the world-wide development of technologies critical for discovering vital knowledge present in the fastest growing sources of information today.</p>
+</div>
+<div class="paragraph">
+<p>This chapter presents an introduction to many essential UIMA concepts.
+It is meant to provide a broad overview to give the reader a quick sense of UIMA&#8217;s basic architectural philosophy and the UIMA SDK&#8217;s capabilities.</p>
+</div>
+<div class="paragraph">
+<p>This chapter provides a general orientation to UIMA and makes liberal reference to the other chapters in the UIMA SDK documentation set, where the reader may find detailed treatments of key concepts and development practices.
+It may be useful to refer to <a href="#ugr.glossary">Glossary: Key Terms &amp; Concepts</a>, to become familiar with the terminology in this overview.</p>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.conceptual.uima_introduction"><a class="anchor" href="#ugr.ovv.conceptual.uima_introduction"></a>2.1. UIMA Introduction</h3>
+<div class="imageblock">
+<div class="content">
+<img src="./oas/images/overview-and-setup/conceptual_overview_files/image002.png" alt="Picture of a bridge between unstructured information artifacts and structured metadata about those artifacts">
+</div>
+<div class="title">Figure 1. UIMA helps you build the bridge between the unstructured and structuredworlds</div>
+</div>
+<div class="paragraph">
+<p>Unstructured information represents the largest, most current and fastest growing source of information available to businesses and governments.
+The web is just the tip of the iceberg.
+Consider the mounds of information hosted in the enterprise and around the world and across different media including text, voice and video.
+The high-value content in these vast collections of unstructured information is, unfortunately, buried in lots of noise.
+Searching for what you need or doing sophisticated data mining over unstructured information sources presents new challenges.</p>
+</div>
+<div class="paragraph">
+<p>An unstructured information management (UIM) application may be generally characterized as a software system that analyzes large volumes of unstructured information (text, audio, video, images, etc.) to discover, organize and deliver relevant knowledge to the client or application end-user.
+An example is an application that processes millions of medical abstracts to discover critical drug interactions.
+Another example is an application that processes tens of millions of documents to discover key evidence indicating probable competitive threats.</p>
+</div>
+<div class="paragraph">
+<p>First and foremost, the unstructured data must be analyzed to interpret, detect and locate concepts of interest, for example, named entities like persons, organizations, locations, facilities, products etc., that are not explicitly tagged or annotated in the original artifact.
+More challenging analytics may detect things like opinions, complaints, threats or facts.
+And then there are relations, for example, located in, finances, supports, purchases, repairs etc.
+The list of concepts  important for applications to discover in unstructured content is large, varied and  often domain specific.
+Many different component analytics may solve different parts of the overall analysis task.
+These component analytics must interoperate and must be easily combined to facilitate  the development of UIM applications.</p>
+</div>
+<div class="paragraph">
+<p>The result of analysis are used to populate structured forms so that conventional  data processing and search technologies  like search engines, database engines or OLAP (On-Line Analytical Processing, or Data Mining) engines  can efficiently deliver the newly discovered content in response to the client requests  or queries.</p>
+</div>
+<div class="paragraph">
+<p>In analyzing unstructured content, UIM applications make use of a variety of analysis technologies including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Statistical and rule-based Natural Language Processing (NLP)</p>
+</li>
+<li>
+<p>Information Retrieval (IR)</p>
+</li>
+<li>
+<p>Machine learning</p>
+</li>
+<li>
+<p>Ontologies</p>
+</li>
+<li>
+<p>Automated reasoning and</p>
+</li>
+<li>
+<p>Knowledge Sources (e.g., CYC, WordNet, FrameNet, etc.)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Specific analysis capabilities using these technologies are developed  independently using different techniques, interfaces and platforms.</p>
+</div>
+<div class="paragraph">
+<p>The bridge from the unstructured world to the structured world is built through the composition and deployment of these analysis capabilities.
+This integration is often a costly challenge.</p>
+</div>
+<div class="paragraph">
+<p>The Unstructured Information Management Architecture (UIMA) is an architecture and software framework that helps you build that bridge.
+It supports creating, discovering, composing and deploying a broad range of analysis capabilities and linking them to structured information services.</p>
+</div>
+<div class="paragraph">
+<p>UIMA allows development teams to match the right skills with the right parts of a solution and helps enable rapid integration across technologies and platforms using a variety of different deployment options.
+These ranging from tightly-coupled deployments for high-performance, single-machine, embedded solutions to parallel and fully distributed deployments for highly flexible and scaleable solutions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.conceptual.architecture_framework_sdk"><a class="anchor" href="#ugr.ovv.conceptual.architecture_framework_sdk"></a>2.2. The Architecture, the Framework and the SDK</h3>
+<div class="paragraph">
+<p>UIMA is a software architecture which specifies component interfaces, data representations, design patterns and development roles for creating, describing, discovering, composing and deploying multi-modal analysis capabilities.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>UIMA framework</strong> provides a run-time environment in which developers can plug in their UIMA component implementations and with which they can build and deploy UIM applications.
+The framework is not specific to any IDE or platform.
+Apache hosts a Java and (soon) a C++ implementation of the UIMA Framework.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>UIMA Software Development Kit (SDK)</strong> includes the UIMA framework, plus tools and utilities for using UIMA.
+Some of the tooling supports an Eclipse-based ( <a href="http://www.eclipse.org/" class="bare">http://www.eclipse.org/</a>) development environment.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.conceptual.analysis_basics"><a class="anchor" href="#ugr.ovv.conceptual.analysis_basics"></a>2.3. Analysis Basics</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Analysis Engine, Document, Annotator, Annotator Developer, Type, Type System, Feature, Annotation, CAS, Sofa, JCas, UIMA Context.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.conceptual.aes_annotators_and_analysis_results"><a class="anchor" href="#ugr.ovv.conceptual.aes_annotators_and_analysis_results"></a>2.3.1. Analysis Engines, Annotators &amp; Results</h4>
+<div id="ugr.ovv.conceptual.metadata_in_cas" class="imageblock">
+<div class="content">
+<img src="./oas/images/overview-and-setup/conceptual_overview_files/image004.png" alt="Picture of some text, with a hierarchy of discovered metadata about words in the text, including some image of a person as metadata about that name.">
+</div>
+<div class="title">Figure 2. Objects represented in the Common Analysis Structure (CAS)</div>
+</div>
+<div class="paragraph">
+<p>UIMA is an architecture in which basic building blocks called Analysis Engines (AEs) are composed to analyze a document and infer and record descriptive attributes about the document as a whole, and/or about regions therein.
+This descriptive information, produced by AEs is referred to generally as <strong>analysis results</strong>.
+Analysis results typically represent meta-data about the document content.
+One way to think about AEs is as software agents that automatically discover and record meta-data about original content.</p>
+</div>
+<div class="paragraph">
+<p>UIMA supports the analysis of different modalities including text, audio and video.
+The majority of examples we provide are for text.
+We use the term <strong>document, </strong>therefore, to generally refer to any unit of content that an AE may process, whether it is a text document or a segment of audio, for example.
+See the <a href="tug.html#ugr.tug.mvs">Multiple CAS Views of an Artifact</a> for more information on multimodal processing in UIMA.</p>
+</div>
+<div class="paragraph">
+<p>Analysis results include different statements about the content of a document.
+For example, the following is an assertion about the topic of a document:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>(1) The Topic of document D102 is "CEOs and Golf".</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Analysis results may include statements describing regions more granular than the entire document.
+We use the term <strong>span</strong> to refer to a sequence of characters in a text document.
+Consider that a document with the identifier D102 contains a span, &#8220;Fred Centers&#8221; starting at character position 101.
+An AE that can detect persons in text may represent the following statement as an analysis result:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>(2) The span from position 101 to 112 in document D102 denotes a Person</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In both statements 1 and 2 above there is a special pre-defined term or what we call in UIMA a <strong>Type</strong>.
+They are <em>Topic</em> and <em>Person</em> respectively.
+UIMA types characterize the kinds of results that an AE may create&#8201;&#8212;&#8201;more on types later.</p>
+</div>
+<div class="paragraph">
+<p>Other analysis results may relate two statements.
+For example, an AE might record in its results that two spans are both referring to the same person:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>(3) The Person denoted by span 101 to 112 and
+  the Person denoted by span 141 to 143 in document D102
+  refer to the same Entity.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above statements are some examples of the kinds of results that AEs may record to describe the content of the documents they analyze.
+These are not meant to indicate the form or syntax with which these results are captured in UIMA&#8201;&#8212;&#8201;more on that later in this overview.</p>
+</div>
+<div class="paragraph">
+<p>The UIMA framework treats Analysis engines as pluggable, composible, discoverable, managed objects.
+At the heart of AEs are the analysis algorithms that do all the work to analyze documents and record analysis results.</p>
+</div>
+<div class="paragraph">
+<p>UIMA provides a basic component type intended to house the core analysis algorithms running inside AEs.
+Instances of this component are called <strong>Annotators</strong>.
+The analysis algorithm developer&#8217;s primary concern therefore is the development of annotators.
+The UIMA framework provides the necessary methods for taking annotators and creating analysis engines.</p>
+</div>
+<div class="paragraph">
+<p>In UIMA the person who codes analysis algorithms takes on the role of the <strong>Annotator Developer</strong>.
+The <a href="tug.html#ugr.tug.aae">Annotator and Analysis Engine Developer’s Guide</a> will take the reader through the details involved in creating UIMA annotators and analysis engines.</p>
+</div>
+<div class="paragraph">
+<p>At the most primitive level an AE wraps an annotator adding the necessary APIs and infrastructure for the composition and deployment of annotators within the UIMA framework.
+The simplest AE contains exactly one annotator at its core.
+Complex AEs may contain a collection of other AEs each potentially containing within them other AEs.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.conceptual.representing_results_in_cas"><a class="anchor" href="#ugr.ovv.conceptual.representing_results_in_cas"></a>2.3.2. Representing Analysis Results in the CAS</h4>
+<div class="paragraph">
+<p>How annotators represent and share their results is an important part of the UIMA architecture.
+UIMA defines a <strong>Common Analysis Structure (CAS)</strong> precisely for these purposes.</p>
+</div>
+<div class="paragraph">
+<p>The CAS is an object-based data structure that allows the representation of objects, properties and values.
+Object types may be related to each other in a single-inheritance hierarchy.
+The CAS logically (if not physically) contains the document being analyzed.
+Analysis developers share and record their analysis results in terms of an object model within the CAS. <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p>
+</div>
+<div class="paragraph">
+<p>The UIMA framework includes an implementation and interfaces to the CAS.
+For a more detailed description of the CAS and its interfaces see <a href="ref.html#ugr.ref.cas">CAS Reference</a>.</p>
+</div>
+<div class="paragraph">
+<p>A CAS that logically contains statement 2 (repeated here for your convenience)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>(2) The span from position 101 to 112 in document D102 denotes a Person</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>would include objects of the Person type.
+For each person found in the body of a document, the AE would create a Person object in the CAS and link it to the span of text where the person was mentioned in the document.</p>
+</div>
+<div class="paragraph">
+<p>While the CAS is a general purpose data structure, UIMA defines a few basic types and affords the developer the ability to extend these to define an arbitrarily rich <strong>Type System</strong>.
+You can think of a type system as an object schema for the CAS.</p>
+</div>
+<div class="paragraph">
+<p>A type system defines the various types of objects that may be discovered in  documents by AE&#8217;s that subscribe to that type system.</p>
+</div>
+<div class="paragraph">
+<p>As suggested above, Person may be defined as a type.
+Types have properties or <strong>features</strong>.
+So for example, <em>Age</em> and <em>Occupation</em> may be defined as features of the Person type.</p>
+</div>
+<div class="paragraph">
+<p>Other types might be <em>Organization, Company, Bank, Facility, Money, Size, Price, Phone Number, Phone Call, Relation, Network Packet, Product, Noun, Phrase, Verb, Color, Parse Node, Feature Weight Array</em> etc.</p>
+</div>
+<div class="paragraph">
+<p>There are no limits to the different types that may be defined in a type system.
+A type system is domain and application specific.</p>
+</div>
+<div class="paragraph">
+<p>Types in a UIMA type system may be organized into a taxonomy.
+For example, <em>Company</em> may be defined as a subtype of <em>Organization</em>. <em>NounPhrase</em> may be a subtype of a <em>ParseNode</em>.</p>
+</div>
+<div class="sect4">
+<h5 id="ugr.ovv.conceptual.annotation_type"><a class="anchor" href="#ugr.ovv.conceptual.annotation_type"></a>The Annotation Type</h5>
+<div class="paragraph">
+<p>A general and common type used in artifact analysis and from which additional types are often derived is the <strong>annotation</strong> type.</p>
+</div>
+<div class="paragraph">
+<p>The annotation type is used to annotate or label regions of an artifact.
+Common artifacts are text documents, but they can be other things, such as audio streams.
+The annotation type for text includes two features, namely <code>begin</code> and <code>end</code>.
+Values of these features represent integer offsets in the artifact and delimit a span.
+Any particular annotation object identifies the span it annotates with the <code>begin</code> and <code>end</code> features.</p>
+</div>
+<div class="paragraph">
+<p>The key idea here is that the annotation type is used to identify and label or <em>annotate</em> a specific region of an artifact.</p>
+</div>
+<div class="paragraph">
+<p>Consider that the Person type is defined as a subtype of annotation.
+An annotator, for example, can create a Person annotation to record the discovery of a mention of a person between position 141 and 143 in document D102.
+The annotator can create another person annotation to record the detection of a mention of a person in the span between positions 101 and 112.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ugr.ovv.conceptual.not_just_annotations"><a class="anchor" href="#ugr.ovv.conceptual.not_just_annotations"></a>Not Just Annotations</h5>
+<div class="paragraph">
+<p>While the annotation type is a useful type for annotating regions of a document, annotations are not the only kind of types in a CAS.
+A CAS is a general representation scheme and may store arbitrary data structures to represent the analysis of documents.</p>
+</div>
+<div class="paragraph">
+<p>As an example, consider statement 3 above (repeated here for your convenience).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>(3) The Person denoted by span 101 to 112 and
+  the Person denoted by span 141 to 143 in document D102
+  refer to the same Entity.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This statement mentions two person annotations in the CAS; the first, call it P1 delimiting the span from 101 to 112 and the other, call it P2, delimiting the span from 141 to 143.
+Statement 3 asserts explicitly that these two spans refer to the same entity.
+This means that while there are two expressions in the text represented by the annotations P1 and P2, each refers to one and the same person.</p>
+</div>
+<div class="paragraph">
+<p>The Entity type may be introduced into a type system to capture this kind of information.
+The Entity type is not an annotation.
+It is intended to represent an object in the domain which may be referred to by different expressions (or mentions) occurring multiple times within a document (or across documents within a collection of documents). The Entity type has a feature named <em>occurrences. </em>This feature is used to point to all the annotations believed to label mentions of the same entity.</p>
+</div>
+<div class="paragraph">
+<p>Consider that the spans annotated by P1 and P2 were &#8220;Fred Center&#8221; and &#8220;He&#8221; respectively.
+The annotator might create a new Entity object called <code>FredCenter</code>.
+To represent the relationship in statement 3 above, the annotator may link FredCenter to both P1 and P2 by making them values of its <em>occurrences</em> feature.</p>
+</div>
+<div class="paragraph">
+<p><a href="#ugr.ovv.conceptual.metadata_in_cas">Figure 2</a> also illustrates that an entity may be linked to annotations referring to regions of image documents as well.
+To do this the annotation type would have to be extended with the appropriate features to point to regions of an image.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="ugr.ovv.conceptual.multiple_views_within_a_cas"><a class="anchor" href="#ugr.ovv.conceptual.multiple_views_within_a_cas"></a>Multiple Views within a CAS</h5>
+<div class="paragraph">
+<p>UIMA supports the simultaneous analysis of multiple views of a document.
+This support comes in handy for processing multiple forms of the artifact, for example, the audio and the closed captioned views of a single speech stream, or the tagged and detagged  views of an HTML document.</p>
+</div>
+<div class="paragraph">
+<p>AEs analyze one or more views of a document.
+Each view contains a specific <strong>subject of analysis(Sofa)</strong>, plus a set of indexes holding metadata indexed by that view.
+The CAS, overall, holds one or more CAS Views, plus the descriptive objects that represent the analysis results for each.</p>
+</div>
+<div class="paragraph">
+<p>Another common example of using CAS Views is for different translations of a document.
+Each translation may be represented with a different CAS View.
+Each translation may be described by a different set of analysis results.
+For more details on CAS Views and Sofas, see <a href="tug.html#ugr.tug.mvs">Multiple CAS Views of an Artifact</a> and <a href="tug.html#ugr.tug.aas">Annotations, Artifacts, and Sofas</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.conceptual.interacting_with_cas_and_external_resources"><a class="anchor" href="#ugr.ovv.conceptual.interacting_with_cas_and_external_resources"></a>2.3.3. Using CASes and External Resources</h4>
+<div class="paragraph">
+<p>The two main interfaces that a UIMA component developer interacts with are the CAS and the UIMA Context.</p>
+</div>
+<div class="paragraph">
+<p>UIMA provides an efficient implementation of the CAS with multiple programming interfaces.
+Through these interfaces, the annotator developer interacts with the document and reads and writes analysis results.
+The CAS interfaces provide a suite of access methods that allow the developer to obtain indexed iterators to the different objects in the CAS.
+See <a href="ref.html#ugr.ref.cas">CAS Reference</a>.
+While many objects may exist in a CAS, the annotator developer can obtain a specialized iterator to all Person objects associated with a particular view, for example.</p>
+</div>
+<div class="paragraph">
+<p>For Java annotator developers, UIMA provides the JCas.
+This interface provides the Java developer with a natural interface to CAS objects.
+Each type declared in the type system appears as a Java Class; the UIMA framework renders the Person type as a Person class in Java.
+As the analysis algorithm detects mentions of persons in the documents, it can create Person objects in the CAS.
+For more details on how to interact with the CAS using this interface, refer to the <a href="ref.html#ugr.ref.jcas">JCas Reference</a>.</p>
+</div>
+<div class="paragraph">
+<p>The component developer, in addition to interacting with the CAS, can access external resources through the framework&#8217;s resource manager interface called the <strong>UIMA Context</strong>.
+This interface, among other things, can ensure that different annotators working together in an aggregate flow may share the same instance of an external file or remote resource accessed via its URL, for example.
+For details on using the UIMA Context see <a href="tug.html#ugr.tug.aae">Annotator and Analysis Engine Developer&#8217;s Guide</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.conceptual.component_descriptors"><a class="anchor" href="#ugr.ovv.conceptual.component_descriptors"></a>2.3.4. Component Descriptors</h4>
+<div class="paragraph">
+<p>UIMA defines interfaces for a small set of core components that users of the framework provide implmentations for.
+Annotators and Analysis Engines are two of the basic building blocks specified by the architecture.
+Developers implement them to build and compose analysis capabilities and ultimately applications.</p>
+</div>
+<div class="paragraph">
+<p>There are others components in addition to these, which we will learn about later, but for every component specified in UIMA there are two parts required for its implementation:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>the declarative part and</p>
+</li>
+<li>
+<p>the code part.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The declarative part contains metadata describing the component, its identity, structure and behavior and is called the <strong>Component Descriptor</strong>.
+Component descriptors are represented in XML.
+The code part implements the algorithm.
+The code part may be a program in Java.</p>
+</div>
+<div class="paragraph">
+<p>As a developer using the UIMA SDK, to implement a UIMA component it is always the case that you will provide two things: the code part and the Component Descriptor.
+Note that when you are composing an engine, the code may be already provided in reusable subcomponents.
+In these cases you may not be developing new code but rather composing an aggregate engine by pointing to other components where the code has been included.</p>
+</div>
+<div class="paragraph">
+<p>Component descriptors are represented in XML and aid in component discovery, reuse, composition and development tooling.
+The UIMA SDK provides tools for easily creating and maintaining the component descriptors that relieve the developer from editing XML directly.
+This tool is described briefly in <a href="tug.html#ugr.tug.aae">Annotator and Analysis Engine Developer&#8217;s Guide</a>, and more thoroughly in <a href="tools.html#ugr.tools.cde">Component Descriptor Editor User’s Guide</a>.</p>
+</div>
+<div class="paragraph">
+<p>Component descriptors contain standard metadata including the component&#8217;s name, author, version, and a reference to the class that implements the component.</p>
+</div>
+<div class="paragraph">
+<p>In addition to these standard fields, a component descriptor identifies the type system the component uses and the types it requires in an input CAS and the types it plans to produce in an output CAS.</p>
+</div>
+<div class="paragraph">
+<p>For example, an AE that detects person types may require as input a CAS that includes a tokenization and deep parse of the document.
+The descriptor refers to a type system to make the component&#8217;s input requirements and output types explicit.
+In effect, the descriptor includes a declarative description of the component&#8217;s behavior and can be used to aid in component discovery and composition based on desired results.
+UIMA analysis engines provide an interface for accessing the component metadata represented in their descriptors.
+For more details on the structure of UIMA component descriptors refer to <a href="ref.html#ugr.ref.xml.component_descriptor">Component Descriptor Reference</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.conceptual.aggregate_analysis_engines"><a class="anchor" href="#ugr.ovv.conceptual.aggregate_analysis_engines"></a>2.4. Aggregate Analysis Engines</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Aggregate Analysis Engine, Delegate Analysis Engine, Tightly and Loosely Coupled, Flow Specification, Analysis Engine Assembler</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="ugr.ovv.conceptual.sample_aggregate" class="imageblock">
+<div class="content">
+<img src="./oas/images/overview-and-setup/conceptual_overview_files/image006.png" alt="Picture of multiple parts (a language identifier, tokenizer, part of speech annotator, shallow parser, and named entity detector) strung together into a flow, and all of them wrapped as a single aggregate object, which produces as annotations the union of all the results of the individual annotator components ( tokens, parts of speech, names, organizations, places, persons, etc.)">
+</div>
+<div class="title">Figure 3. Sample Aggregate Analysis Engine</div>
+</div>
+<div class="paragraph">
+<p>A simple or primitive UIMA Analysis Engine (AE) contains a single annotator.
+AEs, however, may be defined to contain other AEs organized in a workflow.
+These more complex analysis engines are called <strong>Aggregate Analysis Engines.</strong></p>
+</div>
+<div class="paragraph">
+<p>Annotators tend to perform fairly granular functions, for example language detection, tokenization or part of speech detection.
+These functions typically address just part of an overall analysis task.
+A workflow  of component engines may be orchestrated to perform more complex tasks.</p>
+</div>
+<div class="paragraph">
+<p>An AE that performs named entity detection, for example, may include a pipeline of annotators starting with language detection feeding tokenization, then part-of-speech detection, then deep grammatical parsing and then finally named-entity detection.
+Each step in the pipeline is required by the subsequent analysis.
+For example, the final named-entity annotator can only do its analysis if the previous deep grammatical parse was recorded in the CAS.</p>
+</div>
+<div class="paragraph">
+<p>Aggregate AEs are built to encapsulate potentially complex internal structure and insulate it from users of the AE.
+In our example, the aggregate analysis engine developer acquires the internal components, defines the necessary flow between them and publishes the resulting AE.
+Consider the simple example illustrated in <a href="#ugr.ovv.conceptual.sample_aggregate">Figure 3</a> where &#8220;MyNamed-EntityDetector&#8221; is composed of a linear flow of more primitive analysis engines.</p>
+</div>
+<div class="paragraph">
+<p>Users of this AE need not know how it is constructed internally but only need its name and its published input requirements and output types.
+These must be declared in the aggregate AE&#8217;s descriptor.
+Aggregate AE&#8217;s descriptors declare the components they contain and a <strong>flow specification</strong>.
+The flow specification defines the order in which the internal component AEs should be run.
+The internal AEs specified in an aggregate are also called the <strong>delegate analysis engines</strong>.
+The term "delegate" is used because aggregate AE&#8217;s are thought to "delegate" functions to their internal AEs.</p>
+</div>
+<div class="paragraph">
+<p>The developer can implement a "Flow Controller" and include it as part  of an aggregate AE by referring to it in the aggregate AE&#8217;s descriptor.
+The flow controller is responsible for computing the "flow", that is,  for determining the order in which of delegate AE&#8217;s that will process the CAS.
+The Flow Contoller has access to the CAS and any external resources it may require  for determining the flow.
+It can do this dynamically at run-time, it can  make multi-step decisions and it can consider any sort of flow specification  included in the aggregate AE&#8217;s descriptor.
+See <a href="tug.html#ugr.tug.fc">Flow Controller Developer&#8217;s Guide</a>  for details on the UIMA Flow Controller interface.</p>
+</div>
+<div class="paragraph">
+<p>We refer to the development role associated with building an aggregate from delegate AEs as the <strong>Analysis Engine Assembler</strong> .</p>
+</div>
+<div class="paragraph">
+<p>The UIMA framework, given an aggregate analysis engine descriptor, will run all delegate AEs, ensuring that each one gets access to the CAS in the sequence produced by the flow controller.
+The UIMA framework is equipped to handle different deployments where the delegate engines, for example, are <strong>tightly-coupled</strong> (running in the same process) or <strong>loosely-coupled</strong> (running in separate processes or even on different machines). The framework supports a number of remote protocols for loose coupling deployments of aggregate analysis engines.</p>
+</div>
+<div class="paragraph">
+<p>The UIMA framework facilitates the deployment of AEs as remote services by using an adapter layer that automatically creates the necessary infrastructure in response to a declaration in the component&#8217;s descriptor.
+For more details on creating aggregate analysis engines refer to <a href="ref.html#ugr.ref.xml.component_descriptor">Component Descriptor Reference</a>.
+The component descriptor editor tool assists in the specification of aggregate AEs from a repository of available engines.
+For more details on this tool refer to <a href="tools.html#ugr.tools.cde">Component Descriptor Editor User’s Guide</a>.</p>
+</div>
+<div class="paragraph">
+<p>The UIMA framework implementation has two built-in flow implementations: one that support a linear flow between components, and one with conditional branching based on the language of the document.
+It also supports user-provided flow controllers, as described in <a href="tug.html#ugr.tug.fc">Flow Controller Developer&#8217;s Guide</a>.
+Furthermore, the application developer is free to create multiple AEs and provide their own logic to combine the AEs in arbitrarily complex flows.
+For more details on this the reader may refer to <a href="tug.html#ugr.tug.application.using_aes">Using Analysis Engines</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.conceptual.applicaiton_building_and_collection_processing"><a class="anchor" href="#ugr.ovv.conceptual.applicaiton_building_and_collection_processing"></a>2.5. Application Building and Collection Processing</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Process Method, Collection Processing Architecture, Collection Reader, CAS Consumer, CAS Initializer, Collection Processing Engine, Collection Processing Manager.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.conceptual.using_framework_from_an_application"><a class="anchor" href="#ugr.ovv.conceptual.using_framework_from_an_application"></a>2.5.1. Using the framework from an Application</h4>
+<div id="ugr.ovv.conceptual.application_factory_ae" class="paragraph">
+<div class="title">Using UIMA Framework to create and interact with an Analysis Engine</div>
+<p>image::images/overview-and-setup/conceptual_overview_files/image008.png["Picture of application interacting with UIMA&#8217;s factory to produce an analysis engine, which acts as a container for annotators, and interfaces with the application via the process and getMetaData methods
+among others."]</p>
+</div>
+<div class="paragraph">
+<p>As mentioned above, the basic AE interface may be thought of as simply CAS in/CAS out.</p>
+</div>
+<div class="paragraph">
+<p>The application is responsible for interacting with the UIMA framework to instantiate an AE, create or acquire an input CAS, initialize the input CAS with a document and then pass it to the AE through the <strong>process method</strong>.
+This interaction with the framework is illustrated in <a href="#ugr.ovv.conceptual.application_factory_ae">Using UIMA Framework to create and interact with an Analysis Engine</a>.</p>
+</div>
+<div class="paragraph">
+<p>The UIMA AE Factory takes the declarative information from the Component Descriptor and the class files implementing the annotator, and instantiates the AE instance, setting up the CAS and the UIMA Context.</p>
+</div>
+<div class="paragraph">
+<p>The AE, possibly calling many delegate AEs internally, performs the overall analysis and its process method returns the CAS containing new analysis results.</p>
+</div>
+<div class="paragraph">
+<p>The application then decides what to do with the returned CAS.
+There are many possibilities.
+For instance the application could: display the results, store the CAS to disk for post processing, extract and index analysis results as part of a search or database application etc.</p>
+</div>
+<div class="paragraph">
+<p>The UIMA framework provides methods to support the application developer in creating and managing CASes and instantiating, running and managing AEs.
+Details may be found in <a href="tug.html#ugr.tug.application">Application Developer’s Guide</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.conceptual.graduating_to_collection_processing"><a class="anchor" href="#ugr.ovv.conceptual.graduating_to_collection_processing"></a>2.5.2. Graduating to Collection Processing</h4>
+<div class="imageblock">
+<div class="content">
+<img src="./oas/images/overview-and-setup/conceptual_overview_files/image010.png" alt="image010">
+</div>
+<div class="title">Figure 4. High-Level UIMA Component Architecture from Source to Sink</div>
+</div>
+<div class="paragraph">
+<p>Many UIM applications analyze entire collections of documents.
+They connect to different document sources and do different things with the results.
+But in the typical case, the application must generally follow these logical steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Connect to a physical source</p>
+</li>
+<li>
+<p>Acquire a document from the source</p>
+</li>
+<li>
+<p>Initialize a CAS with the document to be analyzed</p>
+</li>
+<li>
+<p>Send the CAS to a selected analysis engine</p>
+</li>
+<li>
+<p>Process the resulting CAS</p>
+</li>
+<li>
+<p>Go back to 2 until the collection is processed</p>
+</li>
+<li>
+<p>Do any final processing required after all the documents in the collection have been analyzed</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>UIMA supports UIM application development for this general type of processing through its <strong>Collection Processing Architecture</strong>.</p>
+</div>
+<div class="paragraph">
+<p>As part of the collection processing architecture UIMA introduces two primary components in addition to the annotator and analysis engine.
+These are the <strong>Collection Reader</strong> and the <strong>CAS Consumer</strong>.
+The complete flow from source, through document analysis, and to CAS Consumers supported by UIMA is illustrated in <a href="#ugr.ovv.conceptual.fig.cpe">Figure 5</a>.</p>
+</div>
+<div class="paragraph">
+<p>The Collection Reader&#8217;s job is to connect to and iterate through a source collection, acquiring documents and initializing CASes for analysis.</p>
+</div>
+<div class="paragraph">
+<p>CAS Consumers, as the name suggests, function at the end of the flow.
+Their job is to do the final CAS processing.
+A CAS Consumer may be implemented, for example, to index CAS contents in a search engine, extract elements of interest and populate a relational database or serialize and store analysis results to disk for subsequent and further analysis.</p>
+</div>
+<div class="paragraph">
+<p>A UIMA <strong>Collection Processing Engine</strong> (CPE) is an aggregate component that specifies a &#8220;source to sink&#8221; flow from a Collection Reader though a set of analysis engines and then to a set of CAS Consumers.</p>
+</div>
+<div class="paragraph">
+<p>CPEs are specified by XML files called CPE Descriptors.
+These are declarative specifications that point to their contained components (Collection Readers, analysis engines and CAS Consumers) and indicate a flow among them.
+The flow specification allows for filtering capabilities to, for example, skip over AEs based on CAS contents.
+Details about the format of CPE Descriptors may be found in <a href="ref.html#ugr.ref.xml.cpe_descriptor">Collection Processing Engine Descriptor Reference</a>.</p>
+</div>
+<div id="ugr.ovv.conceptual.fig.cpe" class="imageblock">
+<div class="content">
+<img src="./oas/images/overview-and-setup/conceptual_overview_files/image012.png" alt="box and arrows picture of application using CPE factory to instantiate a Collection Processing Engine, and that engine interacting with the application.">
+</div>
+<div class="title">Figure 5. Collection Processing Manager in UIMA Framework</div>
+</div>
+<div class="paragraph">
+<p>The UIMA framework includes a <strong>Collection Processing Manager</strong> (CPM). The CPM is capable of reading a CPE descriptor, and deploying and running the specified CPE. <a href="#ugr.ovv.conceptual.fig.cpe">Figure 5</a> illustrates the role of the CPM in the UIMA Framework.</p>
+</div>
+<div class="paragraph">
+<p>Key features of the CPM are failure recovery, CAS management and scale-out.</p>
+</div>
+<div class="paragraph">
+<p>Collections may be large and take considerable time to analyze.
+A configurable behavior of the CPM is to log faults on single document failures while continuing to process the collection.
+This behavior is commonly used because analysis components often tend to be the weakest link&#8201;&#8212;&#8201;in practice they may choke on strangely formatted content.</p>
+</div>
+<div class="paragraph">
+<p>This deployment option requires that the CPM run in a separate process or a machine distinct from the CPE components.
+A CPE may be configured to run with a variety of deployment options that control the features provided by the CPM.
+For details see <a href="ref.html#ugr.ref.xml.cpe_descriptor">Collection Processing Engine Descriptor Reference</a>.</p>
+</div>
+<div class="paragraph">
+<p>The UIMA SDK also provides a tool called the CPE Configurator.
+This tool provides the developer with a user interface that simplifies the process of connecting up all the components in a CPE and running the result.
+For details on using the CPE Configurator see <a href="tools.html#ugr.tools.cpe">Collection Processing Engine Configurator User’s Guide</a>.
+This tool currently does not provide access to the full set of CPE deployment options supported by the CPM; however, you can configure other parts of the CPE descriptor by editing it directly.
+For details on how to create and run CPEs refer to <a href="tug.html#ugr.tools.cpe">Collection Processing Engine Developer&#8217;s Guide</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.conceptual.exploiting_analysis_results"><a class="anchor" href="#ugr.ovv.conceptual.exploiting_analysis_results"></a>2.6. Exploiting Analysis Results</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Semantic Search, XML Fragment Queries.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.conceptual.semantic_search"><a class="anchor" href="#ugr.ovv.conceptual.semantic_search"></a>2.6.1. Semantic Search</h4>
+<div class="paragraph">
+<p>In a simple UIMA Collection Processing Engine (CPE), a Collection Reader reads documents from the file system and initializes CASs with their content.
+These are then fed to an AE that annotates tokens and sentences, the CASs, now enriched with token and sentence information, are passed to a CAS Consumer that populates a search engine index.</p>
+</div>
+<div class="paragraph">
+<p>The search engine query processor can then use the token index to provide basic key-word search.
+For example, given a query &#8220;center&#8221; the search engine would return all the documents that contained the word &#8220;center&#8221;.</p>
+</div>
+<div class="paragraph">
+<p><strong>Semantic Search</strong> is a search paradigm that can exploit the additional metadata generated by analytics like a UIMA CPE.</p>
+</div>
+<div class="paragraph">
+<p>Consider that we plugged a named-entity recognizer into the CPE described above.
+Assume this analysis engine is capable of detecting in documents and annotating in the CAS mentions of persons and organizations.</p>
+</div>
+<div class="paragraph">
+<p>Complementing the name-entity recognizer we add a CAS Consumer that extracts in addition to token and sentence annotations, the person and organizations added to the CASs by the name-entity detector.
+It then feeds these into the semantic search engine&#8217;s index.</p>
+</div>
+<div class="paragraph">
+<p>A semantic search engine can exploit this addition information from the CAS to support more powerful queries.
+For example, imagine a user is looking for documents that mention an organization with &#8220;center&#8221; it is name but is not sure of the full or precise name of the organization.
+A key-word search on &#8220;center&#8221; would likely produce way too many documents because &#8220;center&#8221; is a common and ambiguous term.
+A semantic search engine might support a query language called <strong>XML Fragments</strong>.
+This query language is designed to exploit the CAS annotations entered in its index.
+The XML Fragment query, for example,</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;organization&gt; center &lt;/organization&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>will produce first only documents that contain &#8220;center&#8221; where it appears as part of a mention annotated as an organization by the name-entity recognizer.
+This will likely be a much shorter list of documents more precisely matching the user&#8217;s interest.</p>
+</div>
+<div class="paragraph">
+<p>Consider taking this one step further.
+We add a relationship recognizer that annotates mentions of the CEO-of relationship.
+We configure the CAS Consumer so that it sends these new relationship annotations to the semantic search index as well.
+With these additional analysis results in the index we can submit queries like</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;ceo_of&gt;
+    &lt;person&gt; center &lt;/person&gt;
+    &lt;organization&gt; center &lt;/organization&gt;
+&lt;ceo_of&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This query will precisely target documents that contain a mention of an organization with &#8220;center&#8221; as part of its name where that organization is mentioned as part of a <code>CEO-of</code> relationship annotated by the relationship recognizer.</p>
+</div>
+<div class="paragraph">
+<p>For more details about using UIMA and Semantic Search see the section on integrating text analysis and search in <a href="tug.html#ugr.tug.application">Application Developer’s Guide</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.conceptual.databases"><a class="anchor" href="#ugr.ovv.conceptual.databases"></a>2.6.2. Databases</h4>
+<div class="paragraph">
+<p>Search engine indices are not the only place to deposit analysis results for use by applications.
+Another classic example is populating databases.
+While many approaches are possible with varying degrees of flexibly and performance all are highly dependent on application specifics.
+We included a simple sample CAS Consumer that provides the basics for getting your analysis result into a relational database.
+It extracts annotations from a CAS and writes them to a relational database, using the open source Apache Derby database.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.conceptual.multimodal_processing"><a class="anchor" href="#ugr.ovv.conceptual.multimodal_processing"></a>2.7. Multimodal Processing in UIMA</h3>
+<div class="paragraph">
+<p>In previous sections we&#8217;ve seen how the CAS is initialized with an initial artifact that will be subsequently analyzed by Analysis engines and CAS Consumers.
+The first Analysis engine may make some assertions about the artifact, for example, in the form of annotations.
+Subsequent Analysis engines will make further assertions about both the artifact and previous analysis results, and finally one or more CAS Consumers will extract information from these CASs for structured information storage.</p>
+</div>
+<div id="ugr.ovv.conceptual.fig.multiple_sofas" class="imageblock">
+<div class="content">
+<img src="./oas/images/overview-and-setup/conceptual_overview_files/image014.png" alt="Picture showing audio on the left broken into segments by a segmentation component, then sent to multiple analysis pipelines in parallel, some processing the raw audio, others processing the recognized speech as text.">
+</div>
+<div class="title">Figure 6. Multiple Sofas in support of multi-modal analysis of an audio Stream. Someengines work on the audio &#8220;view&#8221;, some on the text &#8220;view&#8221; and some on both.</div>
+</div>
+<div class="paragraph">
+<p>Consider a processing pipeline, illustrated in <a href="#ugr.ovv.conceptual.fig.multiple_sofas">Figure 6</a>, that starts with an audio recording of a conversation, transcribes the audio into text, and then extracts information from the text transcript.
+Analysis Engines at the start of the pipeline are analyzing an audio subject of analysis, and later analysis engines are analyzing a text subject of analysis.
+The CAS Consumer will likely want to build a search index from concepts found in the text to the original audio segment covered by the concept.</p>
+</div>
+<div class="paragraph">
+<p>What becomes clear from this relatively simple scenario is that the CAS must be capable of simultaneously holding multiple subjects of analysis.
+Some analysis engine will analyze only one subject of analysis, some will analyze one and create another, and some will need to access multiple subjects of analysis at the same time.</p>
+</div>
+<div class="paragraph">
+<p>The support in UIMA for multiple subjects of analysis is called <strong>Sofa</strong> support;
+Sofa is an acronym which is derived from <em>S</em>ubject <em>of</em> <em>A</em>nalysis, which is a physical  representation of an artifact (e.g., the detagged text of a web-page, the HTML  text of the same web-page, the audio segment of a video, the close-caption text  of the same audio segment).
+A Sofa may be associated with CAS Views.
+A particular CAS will have one or more views, each view corresponding to a particular subject of analysis, together with a set of the defined indexes that index the metadata (that is, Feature Structures) created in that view.</p>
+</div>
+<div class="paragraph">
+<p>Analysis results can be indexed in, or &#8220;belong&#8221; to, a specific view.
+UIMA components may be written in &#8220;Multi-View&#8221; mode - able to create and access multiple Sofas at the same time, or in &#8220;Single-View&#8221; mode, simply receiving a particular view of the CAS corresponding to a particular single Sofa.
+For single-view mode components, it is up to the person assembling the component to supply the needed information to insure a particular view is passed to the component at run time.
+This is done using XML descriptors for Sofa mapping (see <a href="tug.html#ugr.tug.mvs.sofa_name_mapping">Sofa Name Mapping</a>).</p>
+</div>
+<div class="paragraph">
+<p>Multi-View capability brings benefits to text-only processing as well.
+An input document can be transformed from one format to another.
+Examples of this include transforming text from HTML to plain text or from one natural language to another.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.conceptual.next_steps"><a class="anchor" href="#ugr.ovv.conceptual.next_steps"></a>2.8. Next Steps</h3>
+<div class="paragraph">
+<p>This chapter presented a high-level overview of UIMA concepts.
+Along the way, it pointed to other documents in the UIMA SDK documentation set where the reader can find details on how to apply the related concepts in building applications with the UIMA SDK.</p>
+</div>
+<div class="paragraph">
+<p>At this point the reader may return to the <a href="#ugr.project_overview_doc_use">documentation guide</a> to learn how they might proceed in getting started using UIMA.</p>
+</div>
+<div class="paragraph">
+<p>For a more detailed overview of the UIMA architecture, framework and development roles we refer the reader to the following paper:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>D. Ferrucci and A. Lally, <em>"Building an example application using the Unstructured Information Management Architecture",</em> <em>IBM Systems Journal</em> <strong>43</strong>, No. 3, 455-475 (2004).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This paper can be found on line at <a href="http://www.research.ibm.com/journal/sj43-3.html" class="bare">http://www.research.ibm.com/journal/sj43-3.html</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ugr.ovv.eclipse_setup"><a class="anchor" href="#ugr.ovv.eclipse_setup"></a>3. Setting up the Eclipse IDE to work with UIMA</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter describes how to set up the UIMA SDK to work with Eclipse.
+Eclipse (&amp;url_eclipse;link:) is a popular open-source Integrated Development Environment for many things, including Java.
+The UIMA SDK does not require that you use Eclipse.
+However, we recommend that you do use Eclipse because some useful UIMA SDK tools run as plug-ins to the Eclipse platform and because the UIMA SDK examples are provided in a form that&#8217;s easy to import into your Eclipse environment.</p>
+</div>
+<div class="paragraph">
+<p>If you are not planning on using the UIMA SDK with Eclipse, you may skip this chapter and read <a href="tug.html#ugr.tug.aae">Annotator and Analysis Engine Developer&#8217;s Guide</a>next.</p>
+</div>
+<div class="paragraph">
+<p>This chapter provides instructions for</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>installing Eclipse,</p>
+</li>
+<li>
+<p>installing the UIMA SDK&#8217;s Eclipse plugins into your Eclipse environment, and</p>
+</li>
+<li>
+<p>importing the example UIMA code into an Eclipse project.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The UIMA Eclipse plugins are designed to be used with Eclipse version 4.25 (2022-09) or later.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You will need to run Eclipse using a Java 17 or later, in order to use the UIMA Eclipse plugins.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.eclipse_setup.installation"><a class="anchor" href="#ugr.ovv.eclipse_setup.installation"></a>3.1. Installation</h3>
+<div class="sect3">
+<h4 id="ugr.ovv.eclipse_setup.install_eclipse"><a class="anchor" href="#ugr.ovv.eclipse_setup.install_eclipse"></a>3.1.1. Install Eclipse</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to <a href="https://www.eclipse.org/downloads/" class="bare">https://www.eclipse.org/downloads/</a> and follow the instructions there to download Eclipse.</p>
+</li>
+<li>
+<p>We recommend using the latest release level. Navigate to the Eclipse Release version you want and download the archive for your platform.</p>
+</li>
+<li>
+<p>Unzip the archive to install Eclipse somewhere, e.g., <code>c:\</code></p>
+</li>
+<li>
+<p>Eclipse has a bit of a learning curve. If you plan to make significant use of Eclipse, check out the tutorial under the help menu. It is well worth the effort. There are also books you can get that describe Eclipse and its use.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The first time Eclipse starts up it will take a bit longer as it completes its installation.
+A &#8220;welcome&#8221; page will come up.
+After you are through reading the welcome information, click on the arrow to exit the welcome page and get to the main Eclipse screens.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.eclipse_setup.install_uima_eclipse_plugins"><a class="anchor" href="#ugr.ovv.eclipse_setup.install_uima_eclipse_plugins"></a>3.1.2. Installing the UIMA Eclipse Plugins</h4>
+<div class="paragraph">
+<p>The best way to do this is to use the Eclipse Install New Software mechanism, because that will  insure that all needed prerequisites are also installed.
+See below for an alternative, manual approach.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If your computer is on an internet connection which uses a proxy server, you can configure Eclipse to know about that.
+Put your proxy settings into Eclipse using the Eclipse preferences by accessing the menus: Window → Preferences&#8230;&#8203; → Install/Update, and Enable HTTP proxy connection under the Proxy Settings with the information about your proxy.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To use the Eclipse Install New Software mechanism, start Eclipse, and then pick the menu <code>Help → Install new software&#8230;&#8203;</code>.
+In the next page, enter the following URL in the "Work with" box and press enter:</p>
+</div>
+<div class="paragraph">
+<p>*<code><a href="https://www.apache.org/dist/uima/eclipse-update-site/" class="bare">https://www.apache.org/dist/uima/eclipse-update-site/</a></code></p>
+</div>
+<div class="paragraph">
+<p>+
+*<code><a href="https://www.apache.org/dist/uima/eclipse-update-site-v3/" class="bare">https://www.apache.org/dist/uima/eclipse-update-site-v3/</a></code></p>
+</div>
+<div class="paragraph">
+<p>+</p>
+</div>
+<div class="paragraph">
+<p>Choose the 2nd if you are working with core UIMA Java SDK at version 3 or later.
+.</p>
+</div>
+<div class="paragraph">
+<p>Now select the plugin tools you wish to install, and click Next, and follow the  remaining panels to install the UIMA plugins.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.eclipse_setup.install_uima_sdk"><a class="anchor" href="#ugr.ovv.eclipse_setup.install_uima_sdk"></a>3.1.3. Install the UIMA SDK</h4>
+<div class="paragraph">
+<p>If you haven&#8217;t already done so, please download and install the UIMA SDK from &amp;url_apache_uima_download;link:.
+Be sure to set the environmental variable UIMA_HOME pointing to the root of the installed UIMA SDK and run the <code>adjustExamplePaths.bat</code> or <code>adjustExamplePaths.sh</code> script, as explained in the README.</p>
+</div>
+<div class="paragraph">
+<p>The environmental parameter UIMA_HOME is used by the command-line scripts in the %UIMA_HOME%/bin directory as well as by eclipse run configurations in the uimaj-examples sample project.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.eclipse_setup.install_uima_eclipse_plugins_manually"><a class="anchor" href="#ugr.ovv.eclipse_setup.install_uima_eclipse_plugins_manually"></a>3.1.4. Installing the UIMA Eclipse Plugins, manually</h4>
+<div class="paragraph">
+<p>If you installed the UIMA plugins using the update mechanism above, please skip this section.</p>
+</div>
+<div class="paragraph">
+<p>If you are unable to use the Eclipse Update mechanism to install the UIMA plugins, you  can do this manually.
+In the directory %UIMA_HOME%/eclipsePlugins (The environment variable %UIMA_HOME% is where you installed the UIMA SDK), you will see a set of folders.
+Copy these to your %ECLIPSE_HOME%/dropins directory (%ECLIPSE_HOME% is where you installed Eclipse).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ugr.ovv.eclipse_setup.start_eclipse"><a class="anchor" href="#ugr.ovv.eclipse_setup.start_eclipse"></a>3.1.5. Start Eclipse</h4>
+<div class="paragraph">
+<p>If you have Eclipse running, restart it (shut it down, and start it again) using the <code>-clean</code> option; you can do this by running the command <code>eclipse -clean</code> (see explanation in the next section) in the directory where you installed Eclipse.
+You may want to set up a desktop shortcut at this point for Eclipse.</p>
+</div>
+<div class="sect4">
+<h5 id="ugr.ovv.eclipse_setup.special_startup_parameter_clean"><a class="anchor" href="#ugr.ovv.eclipse_setup.special_startup_parameter_clean"></a>Special startup parameter for Eclipse: -clean</h5>
+<div class="paragraph">
+<p>If you have modified the plugin structure (by copying or files directly in the file system) after you started it for the first time, please include the &#8220;-clean&#8221; parameter in the startup arguments to Eclipse, <em>one time</em> (after any plugin modifications were done). This is needed because Eclipse may not notice the changes you made, otherwise.
+This parameter forces Eclipse to reexamine all of its plugins at startup and recompute any cached information about them.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.eclipse_setup.example_code"><a class="anchor" href="#ugr.ovv.eclipse_setup.example_code"></a>3.2. Setting up Eclipse to view Example Code</h3>
+<div class="paragraph">
+<p>Later chapters refer to example code.
+Here&#8217;s how to create a special project in Eclipse to hold the examples.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In Eclipse, if the Java perspective is not already open, switch to it by going to Window →Open Perspective →Java.</p>
+</li>
+<li>
+<p>Set up a class path variable named UIMA_HOME, whose value is the directory where you installed the UIMA SDK. This is done as follows:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to Window → Preferences → Java → Build Path → Classpath Variables.</p>
+</li>
+<li>
+<p>Click &#8220;New&#8221;</p>
+</li>
+<li>
+<p>Enter UIMA_HOME (all capitals, exactly as written) in the &#8220;Name&#8221; field.</p>
+</li>
+<li>
+<p>Enter your installation directory (e.g. <code>C:/Program Files/apache-uima</code>) in the &#8220;Path&#8221; field</p>
+</li>
+<li>
+<p>Click &#8220;OK&#8221; in the &#8220;New Variable Entry&#8221; dialog</p>
+</li>
+<li>
+<p>Click &#8220;OK&#8221; in the &#8220;Preferences&#8221; dialog</p>
+</li>
+<li>
+<p>If it asks you if you want to do a full build, click &#8220;Yes&#8221;</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Select the File →Import menu option</p>
+</li>
+<li>
+<p>Select &#8220;General/Existing Project into Workspace&#8221; and click the &#8220;Next&#8221; button.</p>
+</li>
+<li>
+<p>Click &#8220;Browse&#8221; and browse to the %UIMA_HOME%/examples directory</p>
+</li>
+<li>
+<p>Click &#8220;Finish.&#8221; This will create a new project called &#8220;uimaj-examples&#8221; in your Eclipse workspace. There should be no compilation errors.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To verify that you have set up the project correctly, check that there are no error messages in the &#8220;Problems&#8221; view.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.eclipse_setup.adding_source"><a class="anchor" href="#ugr.ovv.eclipse_setup.adding_source"></a>3.3. Adding the UIMA source code to the jar files</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you are running a current version of Eclipse, and have the m2e (Maven extensions for Eclipse)  plugin installed, Eclipse should be able to automatically download the source for the jars, so you may not need to do anything special (it does take a few seconds, and you need an internet connection).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Otherwise, if you would like to be able to jump to the UIMA source code in Eclipse or to step through it with the debugger, you can add the UIMA source code directly to the jar files.
+This is done via a shell script that comes with the source distribution.
+To add the source code to the jars, you need to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Download and unpack the UIMA source distribution.</p>
+</li>
+<li>
+<p>Download and install the UIMA binary distribution (the UIMA_HOME environment variable needs to be set to point to where you installed the UIMA binary distribution).</p>
+</li>
+<li>
+<p><code>cd</code> to the root directory of the source distribution</p>
+</li>
+<li>
+<p>Execute the <code>src\main\readme_src\addSourceToJars</code> script in the root directory of the  source distribution.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This adds the source code to the jar files, and it will then be automatically available from Eclipse.
+There is no further Eclipse setup required.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.eclipse_setup.linking_uima_javadocs"><a class="anchor" href="#ugr.ovv.eclipse_setup.linking_uima_javadocs"></a>3.4. Attaching UIMA Javadocs</h3>
+<div class="paragraph">
+<p>The binary distribution also includes the UIMA Javadocs.
+They are attached to the UIMA library Jar files in the uima-examples project described above.
+You can attach the Javadocs to your own project as well.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you attached the source as described in the previous section, you  don&#8217;t need to attach the Javadocs because the source includes the Javadoc comments.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Attaching the Javadocs enables Javadoc help for UIMA APIs.
+After they are  attached, if you hover your mouse over a certain UIMA api element, the corresponding Javadoc will appear.
+You can then press &#8220;F2&#8221; to make the hover "stick", or &#8220;Shift-F2&#8221; to open the default  web-browser on your system to let you browse the entire Javadoc information  for that element.</p>
+</div>
+<div class="paragraph">
+<p>If this pop-up behavior is something you don&#8217;t want, you can turn it off in the Eclipse preferences, in the menu <em>Window → Preferences → Java → Editors → hovers</em>.</p>
+</div>
+<div class="paragraph">
+<p>Eclipse also has a Javadoc "view" which you can show, using the <em>Window → Show View → Javadoc</em>.</p>
+</div>
+<div class="paragraph">
+<p>See <a href="ref.html#ugr.ref.javadocs.libraries">Using named Eclipse User Libraries</a> for information on how to set up a UIMA "library" with the Javadocs attached, which can be reused for other projects in your Eclipse workspace.</p>
+</div>
+<div class="paragraph">
+<p>You can attach the Javadocs to each UIMA library jar you think you might be  interested in.
+It makes most sense for the uima-core.jar, you&#8217;ll probably use the core APIs most of all.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s a screenshot of what you should see when you hover your mouse pointer over the class name &#8220;CAS&#8221; in the source code.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./oas/images/overview-and-setup/eclipse_setup_files/image004.jpg" alt="Screenshot of mouse-over for UIMA APIs">
+</div>
+<div class="title">Figure 7. Screenshot of mouse-over for UIMA APIs</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ugr.ovv.eclipse_setup.running_external_tools_from_eclipse"><a class="anchor" href="#ugr.ovv.eclipse_setup.running_external_tools_from_eclipse"></a>3.5. Running external tools from Eclipse</h3>
+<div class="paragraph">
+<p>You can run many tools without using Eclipse at all, by using the shell scripts in the UIMA SDK&#8217;s bin directory.
+In addition, many tools can be run from inside Eclipse; examples are the Document Analyzer, CPE Configurator, CAS Visual Debugger,  and JCasGen.
+The uimaj-examples project provides Eclipse launch configurations that make this easy to do.</p>
+</div>
+<div class="paragraph">
+<p>To run these tools from Eclipse:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the Java perspective is not already open, switch to it by going to Window →Open Perspective →Java.</p>
+</li>
+<li>
+<p>Go to <em>Run → Run&#8230;&#8203;</em></p>
+</li>
+<li>
+<p>In the window that appears, select &#8220;UIMA CPE GUI&#8221;, &#8220;UIMA CAS Visual Debugger&#8221;, &#8220;UIMA JCasGen&#8221;, or &#8220;UIMA Document Analyzer&#8221; from the list of run configurations on the left. (If you don&#8217;t see, these, please select the uimaj-examples project and do a <em>Menu → File → Refresh</em>).</p>
+</li>
+<li>
+<p>Press the &#8220;Run&#8221; button. The tools should start. Close the tools by clicking the &#8220;X&#8221; in the upper right corner on the GUI.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For instructions on using the Document Analyzer and CPE Configurator, in the <a href="tools.html#ugr.tools.doc_analyzer">Docuemnt Analyzer</a>, and <a href="tools.html#ugr.tools.cpe">Collection Processing Engine Configurator User&#8217;s Guide</a>.
+For instructions on using the CAS Visual Debugger and JCasGen, see <a href="tools.html#ugr.tools.cvd">CAS Visual Debugger</a> and <a href="tools.html#ugr.tools.jcasgen">JCasGen</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ugr.faqs"><a class="anchor" href="#ugr.faqs"></a>4. UIMA Frequently Asked Questions (FAQ&#8217;s)</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>What is UIMA?</strong></dt>
+<dd>
+<p>UIMA stands for Unstructured Information Management Architecture.
+It is component software architecture for the development, discovery, composition and deployment of multi-modal analytics for the analysis of unstructured information.</p>
+<div class="paragraph">
+<p>UIMA processing occurs through a series of modules called <a href="#ugr.faqs.annotator_versus_ae">analysis engines</a>.
+The result of analysis is an assignment of semantics to the elements of unstructured data, for example, the indication that the phrase &#8220;Washington&#8221; refers to a person&#8217;s name or that it refers to a place.</p>
+</div>
+<div class="paragraph">
+<p>Analysis Engine&#8217;s output can be saved in conventional structures, for example, relational databases or search engine indices, where the content of the original unstructured information may be efficiently accessed according to its inferred semantics.</p>
+</div>
+<div class="paragraph">
+<p>UIMA supports developers in creating, integrating, and deploying components across platforms and among dispersed teams working to develop unstructured information management applications.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>How do you pronounce UIMA?</strong></dt>
+<dd>
+<p>You –eee –muh.</p>
+</dd>
+<dt class="hdlist1"><strong>What&#8217;s the difference between UIMA and the Apache UIMA?</strong></dt>
+<dd>
+<p>UIMA is an architecture which specifies component interfaces, design patterns, data representations and development roles.</p>
+<div class="paragraph">
+<p>Apache UIMA is an open source, Apache-licensed software project.
+It includes run-time frameworks in Java and C++, APIs and tools for implementing, composing, packaging and deploying UIMA components.</p>
+</div>
+<div class="paragraph">
+<p>The UIMA run-time framework allows developers to plug-in their components and applications and run them on different platforms and according to different deployment options that range from tightly-coupled (running in the same process space) to loosely-coupled (distributed across different processes or machines for greater scale, flexibility and recoverability).</p>
+</div>
+<div class="paragraph">
+<p>The UIMA project has several significant subprojects, including UIMA-AS (for flexibly scaling out UIMA pipelines over clusters of machines), uimaFIT (for a way of using UIMA without the xml descriptors; also provides  many convenience methods), UIMA-DUCC (for managing clusters of  machines running scaled-out UIMA "jobs" in a "fair" way), RUTA (Eclipse-based tooling and \ a runtime framework for development of rule-based Annotators), Addons (where you can find many extensions), and uimaFIT supplying a Java centric set of friendlier interfaces and avoiding XML.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div id="ugr.faqs.what_is_an_annotation" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>What is an Annotation?</strong></dt>
+<dd>
+<p>An annotation is metadata that is associated with a region of a document.
+It often is a label, typically represented as string of characters.
+The region may be the whole document.</p>
+<div class="paragraph">
+<p>An example is the label &#8220;Person&#8221; associated with the span of text &#8220;George Washington&#8221;.
+We say that &#8220;Person&#8221; annotates &#8220;George Washington&#8221; in the sentence &#8220;George
+Washington was the first president of the United States&#8221;.
+The association of the label &#8220;Person&#8221; with a particular span of text is an annotation.
+Another example may have an annotation represent a topic, like &#8220;American
+Presidents&#8221; and be used to label an entire document.</p>
+</div>
+<div class="paragraph">
+<p>Annotations are not limited to regions of texts.
+An annotation may annotate a region of an image or a segment of audio.
+The same concepts apply.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div id="ugr.faqs.what_is_the_cas" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>What is the CAS?</strong></dt>
+<dd>
+<p>The CAS stands for Common Analysis Structure.
+It provides cooperating UIMA components with a common representation and mechanism for shared access to the artifact being analyzed (e.g., a document, audio file, video stream etc.) and the current analysis results.</p>
+</dd>
+<dt class="hdlist1"><strong>What does the CAS contain?</strong></dt>
+<dd>
+<p>The CAS is a data structure for which UIMA provides multiple interfaces.
+It contains and provides the analysis algorithm or application developer with access to</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the subject of analysis (the artifact being analyzed, like the document),</p>
+</li>
+<li>
+<p>the analysis results or metadata(e.g., annotations, parse trees, relations, entities etc.),</p>
+</li>
+<li>
+<p>indices to the analysis results, and</p>
+</li>
+<li>
+<p>the type system (a schema for the analysis results).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A CAS can hold multiple versions of the artifact being analyzed (for instance, a raw html document, and a detagged version, or an English version and a corresponding German version, or an audio sample, and the text that corresponds, etc.). For each version there is a separate instance of the results indices.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Does the CAS only contain Annotations?</strong></dt>
+<dd>
+<p>No.
+The CAS contains the artifact being analyzed plus the analysis results.
+Analysis results are those metadata recorded by <a href="#ugr.faqs.annotator_versus_ae">analysis engines</a> in the CAS.
+The most common form of analysis result is the addition of an annotation.
+But an analysis engine may write any structure that conforms to the CAS&#8217;s type system into the CAS.
+These may not be annotations but may be other things, for example links between annotations and properties of objects associated with annotations.</p>
+<div class="paragraph">
+<p>The CAS may have multiple representations of the artifact being analyzed, each one represented in the CAS as a particular Subject of Analysis.
+or <a href="#ugr.faqs.what_is_a_sofa">Sofa</a></p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Is the CAS just XML?</strong></dt>
+<dd>
+<p>No, in fact there are many possible representations of the CAS.
+If all of the <a href="#ugr.faqs.annotator_versus_ae">analysis engines</a> are running in the same process, an efficient, in-memory data object is used.
+If a CAS must be sent to an analysis engine on a remote machine, it can be done via an XML or a binary serialization of the CAS.</p>
+<div class="paragraph">
+<p>The UIMA framework provides multiple serialization and de-serialization methods in various formats, including XML.
+See the Javadocs for the CasIOUtils class.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>What is a Type System?</strong></dt>
+<dd>
+<p>Think of a type system as a schema or class model for the <a href="#ugr.faqs.what_is_the_cas">CAS</a>.
+It defines the types of objects and their properties (or features) that may be instantiated in a CAS.
+A specific CAS conforms to a particular type system.
+UIMA components declare their input and output with respect to a type system.</p>
+<div class="paragraph">
+<p>Type Systems include the definitions of types, their properties, range types (these can restrict the value of properties to other types) and single-inheritance hierarchy of types.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div id="ugr.faqs.what_is_a_sofa" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>What is a Sofa?</strong></dt>
+<dd>
+<p>Sofa stands for <strong>Subject of Analysis</strong>. A <a href="#ugr.faqs.what_is_the_cas">CAS</a> is associated with a single artifact being analysed by a collection of UIMA analysis engines.
+But a single artifact may have multiple independent views, each of which may be analyzed separately by a different set of <a href="#ugr.faqs.annotator_versus_ae">analysis engines</a>.
+For example, given a document it may have different translations, each of which are associated with the original document but each potentially analyzed by different engines.
+A CAS may have multiple Views, each containing a different Subject of Analysis corresponding to some version of the original artifact.
+This feature is ideal for multi-modal analysis, where for example, one view of a video stream may be the video frames and the other the close-captions.</p>
+</dd>
+</dl>
+</div>
+<div id="ugr.faqs.annotator_versus_ae" class="dlist">
+<dl>
+<dt class="hdlist1"><strong>What&#8217;s the difference between an Annotator and an Analysis Engine?</strong></dt>
+<dd>
+<p>In the terminology of UIMA, an annotator is simply some code that analyzes documents and outputs <a href="#ugr.faqs.what_is_an_annotation">annotations</a> on the content of the documents.
+The UIMA framework takes the annotator, together with metadata describing such things as the input requirements and outputs types of the annotator, and produces an analysis engine.</p>
+<div class="paragraph">
+<p>Analysis Engines contain the framework-provided infrastructure that allows them to be easily combined with other analysis engines in different flows and according to different deployment options (collocated or as web services, for example).</p>
+</div>
+<div class="paragraph">
+<p>Analysis Engines are the framework-generated objects that an Application interacts with.
+An Annotator is a user-written class that implements the one of the supported Annotator interfaces.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Are UIMA analysis engines web services?</strong></dt>
+<dd>
+<p>They can be deployed as such.
+Deploying an analysis engine as a web service is one of the deployment options supported by the UIMA framework.</p>
+</dd>
+<dt class="hdlist1"><strong>Do Analysis Engines have to be "stateless"?</strong></dt>
+<dd>
+<p>This is a user-specifyable option.
+The XML metadata for the component includes an <code>operationalProperties</code> element which can specify if multiple deployment is allowed.
+If true, then a particular instance of an Engine might not see all the CASes being processed.
+If false, then that component will see all of the CASes being processed.
+In this case, it can accumulate state information among all the CASes.
+Typically, Analysis Engines in the main analysis pipeline are marked multipleDeploymentAllowed = true.
+The CAS Consumer component, on the other hand, defaults to having this property set to false, and is typically associated with some resource like a database or search engine that aggregates analysis results across an entire collection.</p>
+<div class="paragraph">
+<p>Analysis Engines developers are encouraged not to maintain state between documents that would prevent their engine from working as advertised if operated in a parallelized environment.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Is engine meta-data compatible with web services and UDDI?</strong></dt>
+<dd>
+<p>All UIMA component implementations are associated with Component Descriptors which represents metadata describing various properties about the component to support discovery, reuse, validation, automatic composition and development tooling.
+In principle, UIMA component descriptors are compatible with web services and UDDI.
+However, the UIMA framework currently uses its own XML representation for component metadata.
+It would not be difficult to convert between UIMA&#8217;s XML representation and other standard representations.</p>
+</dd>
+<dt class="hdlist1"><strong>How do you scale a UIMA application?</strong></dt>
+<dd>
+<p>The UIMA framework allows components such as <a href="#ugr.faqs.annotator_versus_ae">analysis engines</a> and CAS Consumers to be easily deployed as services or in other containers and managed by systems middleware designed to scale.
+UIMA applications tend to naturally scale-out across documents allowing many documents to be analyzed in parallel.</p>
+<div class="paragraph">
+<p>The UIMA-AS project has extensive capabilities to flexibly scale a UIMA pipeline across multiple machines.
+The UIMA-DUCC project supports a  unified management of large clusters of machines running multiple "jobs"  each consisting of a pipeline with data sources and sinks.</p>
+</div>
+<div class="paragraph">
+<p>Within the core UIMA framework, there is a component called the CPM (Collection Processing Manager) which has features and configuration settings for scaling an application to increase its throughput and recoverability;  the CPM was the earlier version of scaleout technology, and has been  superceded by the UIMA-AS effort (although it is still supported).</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>What does it mean to embed UIMA in systems middleware?</strong></dt>
+<dd>
+<p>An example of an embedding would be the deployment of a UIMA analysis engine as an Enterprise Java Bean inside an application server such as IBM WebSphere.
+Such an embedding allows the deployer to take advantage of the features and tools provided by WebSphere for achieving scalability, service management, recoverability etc.
+UIMA is independent of any particular systems middleware, so <a href="#ugr.faqs.annotator_versus_ae">analysis engines</a> could be deployed on other application servers as well.</p>
+</dd>
+<dt class="hdlist1"><strong>How is the CPM different from a CPE?</strong></dt>
+<dd>
+<p>These name complimentary aspects of collection processing.
+The CPM (Collection Processing <strong>Manager</strong> is the part of  the UIMA framework that manages the execution of a workflow of UIMA components orchestrated to analyze a large collection of documents.
+The UIMA developer does not implement or describe a CPM.
+It is a piece of infrastructure code that handles CAS transport, instance management, batching, check-pointing, statistics collection and failure recovery in the execution of a collection processing workflow.</p>
+<div class="paragraph">
+<p>A Collection Processing Engine (CPE) is component created by the framework from a specific CPE descriptor.
+A CPE descriptor refers to a series of UIMA components including a Collection Reader, CAS Initializer, Analysis Engine(s) and CAS Consumers.
+These components are organized in a work flow and define a collection analysis job or CPE.
+A CPE acquires documents from a source collection, initializes CASs with document content, performs document analysis and then produces collection level results (e.g., search engine index, database etc). The CPM is the execution engine for a CPE.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Does UIMA support modalities other than text?</strong></dt>
+<dd>
+<p>The UIMA architecture supports the development, discovery, composition and deployment of multi-modal analytics including text, audio and video.
+Applications that process text, speech and video have been developed using UIMA.
+This release of the SDK, however, does not include examples of these multi-modal applications.</p>
+<div class="paragraph">
+<p>It does however include documentation and programming examples for using the key feature required for building multi-modal applications.
+UIMA supports multiple subjects of analysis or <a href="#ugr.faqs.what_is_a_sofa">Sofas</a>.
+These allow multiple views of a single artifact to be associated with a <a href="#ugr.faqs.what_is_the_cas">CAS</a>.
+For example, if an artifact is a video stream, one Sofa could be associated with the video frames and another with the closed-captions text.
+UIMA&#8217;s multiple Sofa feature is included and described in this release of the SDK.</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>How does UIMA compare to other similar work?</strong></dt>
+<dd>
+<p>A number of different frameworks for NLP have preceded UIMA.
+Two of them were developed at IBM Research and represent UIMA&#8217;s early roots.
+For details please refer to the UIMA article that appears in the IBM Systems Journal Vol.
+43, No.
+3 (<a href="http://www.research.ibm.com/journal/sj/433/ferrucci.html" class="bare">http://www.research.ibm.com/journal/sj/433/ferrucci.html</a> ).</p>
+<div class="paragraph">
+<p>UIMA has advanced that state of the art along a number of dimensions including: support for distributed deployments in different middleware environments, easy framework embedding in different software product platforms (key for commercial applications), broader architectural converge with its collection processing architecture, support for multiple-modalities, support for efficient integration across programming languages, support for a modern software engineering discipline calling out different roles in the use of UIMA to develop applications, the extensive use of descriptive component metadata to support development tooling, component discovery and composition.
+(Please note that not all of these features are available in this release of the SDK.)</p>
+</div>
+</dd>
+<dt class="hdlist1"><strong>Is UIMA Open Source?</strong></dt>
+<dd>
+<p>Yes.
+As of version 2, UIMA development has moved to Apache and is being developed within the Apache open source processes.
+It is licensed under the Apache version 2 license.</p>
+</dd>
+<dt class="hdlist1"><strong>What Java level and OS are required for the UIMA SDK?</strong></dt>
+<dd>
+<p>As of release 3.5.0, the UIMA SDK requires Java 17.
+It has been tested on mainly on Windows, Linux and macOS platforms.
+Other platforms and JDK implementations will likely work, but have not been as significantly tested.</p>
+</dd>
+<dt class="hdlist1"><strong>Can I build my UIM application on top of UIMA?</strong></dt>
+<dd>
+<p>Yes.
+Apache UIMA is licensed under the Apache version 2 license, enabling you to build and distribute applications which include the framework.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ugr.issues"><a class="anchor" href="#ugr.issues"></a>5. Known Issues</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>JCasGen merge facility only supports Java levels 1.4 or earlier</strong></dt>
+<dd>
+<p>JCasGen has a facility to merge in user (hand-coded) changes with the code generated by JCasGen.
+This merging supports Java 1.4 constructs only.
+JCasGen generates Java 1.4  compliant code, so as long as any code you change here also only uses Java 1.4 constructs, the  merge will work, even if you&#8217;re using Java 5 or later.
+If you use syntactic structures particular to Java 5 or later, the merge operation will likely fail to merge properly.</p>
+</dd>
+<dt class="hdlist1"><strong>Descriptor editor in Eclipse tooling does not work with libgcj 4.1.2</strong></dt>
+<dd>
+<p>The descriptor editor in the Eclipse tooling does not work with libgcj 4.1.2, and possibly other versions of libgcj.
+This is apparently due to a bug in the implementation of their XML library, which results in a class cast error.
+libgcj is used as the default JVM for Eclipse in Ubuntu (and other Linux distributions?).  The workaround is to use a different JVM to start Eclipse.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ugr.glossary"><a class="anchor" href="#ugr.glossary"></a>Glossary: Key Terms &amp; Concepts</h2>
+<div class="sectionbody">
+<div id="ugr.glossary.aggregate" class="dlist">
+<dl>
+<dt class="hdlist1">Aggregate Analysis Engine</dt>
+<dd>
+<p>An Analysis Engine made up of multiple subcomponents arranged in a flow.
+The flow can be one of the two built-in flows, or a custom flow provided by the user.</p>
+</dd>
+<dt class="hdlist1">Analysis Engine</dt>
+<dd>
+<p>A program that analyzes artifacts (e.g. documents) and infers information about them, and which implements the UIMA interface Specification.
+It does not matter how the program is built, with what framework or whether or not it contains (sub)components.</p>
+</dd>
+<dt class="hdlist1">Annotation</dt>
+<dd>
+<p>The association of a metadata, such as a label, with a region of text (or other type of artifact).
+For example, the label Person associated with a region of text John Doe constitutes an annotation.
+We say Person annotates the span of text from X to Y containing exactly John Doe.
+An annotation is represented as a special type in a UIMA type system.
+It is the type used to record the labeling of regions of a Sofa.
+Annotations are Feature Structures whose Type is Annotation or a subtype of that.</p>
+</dd>
+<dt class="hdlist1">Annotator</dt>
+<dd>
+<p>A software component that implements the UIMA annotator interface.
+Annotators are implemented to produce and record annotations over regions of an artifact (e.g., text document, audio, and video).</p>
+</dd>
+<dt class="hdlist1">Application</dt>
+<dd>
+<p>An application is the outer containing code that invokes the UIMA framework functions to instantiate an Analysis Engine or a Collection Processing Engine from a particular descriptor, and run it.</p>
+</dd>
+<dt class="hdlist1">Apache UIMA Java Framework</dt>
+<dd>
+<p>A Java-based implementation of the UIMA architecture.
+It provides a run-time environment in which developers can plug in and run their UIMA component implementations and with which they can build and deploy UIM applications.
+The framework is the core part of the Apache UIMA SDK.</p>
+</dd>
+<dt class="hdlist1">Apache UIMA Software Development Kit (SDK)</dt>
+<dd>
+<p>The SDK for which you are now reading the documentation.
+The SDK includes the framework plus additional components such as tooling and examples.
+Some of the tooling is Eclipse-based.</p>
+</dd>
+<dt class="hdlist1">CAS</dt>
+<dd>
+<p>The UIMA Common Analysis Structure is the primary data structure which UIMA analysis components use to represent and share analysis results.  It contains:</p>
+<div class="openblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>The artifact. This is the object being analyzed such as a text document or audio or video stream. The CAS projects one or more views of the artifact. Each view is referred to as a <em>Sofa</em>.</p>
+</li>
+<li>
+<p>A type system description&#8201;&#8212;&#8201;indicating the types, subtypes, and their features.</p>
+</li>
+<li>
+<p>Analysis metadata&#8201;&#8212;&#8201;<em>standoff</em> annotations describing the artifact or a region of the artifact</p>
+</li>
+<li>
+<p>An index repository to support efficient access to and iteration over the results of analysis.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>UIMA&#8217;s primary interface to this structure is provided by a class called the Common Analysis System. We use <em>CAS</em> to refer to both the structure and system. Where the common analysis structure is used through a different interface, the particular implementation of the structure is indicated, For example, the JCas is a native Java object representation of the contents of the common analysis structure.
+A CAS can have multiple views; each view has a unique representation of the artifact, and has its own index repository, representing results of analysis for that representation of the artifact.</p>
+</div>
+</dd>
+<dt class="hdlist1">CAS Consumer</dt>
+<dd>
+<p>A component that receives each CAS in the collection, usually after it has been processed by an Analysis Engine.
+It is responsible for taking the results from the CAS and using them for some purpose, perhaps storing selected results into a database, for instance.
+The CAS Consumer may also perform collection-level analysis, saving these results in an application-specific, aggregate data structure.</p>
+</dd>
+<dt class="hdlist1">CAS Multiplier</dt>
+<dd>
+<p>A component, implemented by a UIMA developer, that takes a CAS as input and produces 0 or more new CASes as output.
+Common use cases for a CAS Multiplier include creating alternative versions of an input Sofa (see CAS Initializer), and breaking a large input CAS into smaller pieces, each of which is emitted as a separate output CAS.
+There are other uses, however, such as aggregating input CASes into a single output CAS.</p>
+</dd>
+<dt class="hdlist1">CAS Processor</dt>
+<dd>
+<p>A component of a Collection Processing Engine (CPE) that takes a CAS as input and returns a CAS as output.
+There are two types of CAS Processors: Analysis Engines and CAS Consumers.</p>
+</dd>
+<dt class="hdlist1">CAS View</dt>
+<dd>
+<p>A CAS Object which shares the base CAS and type system definition and index specifications, but has a unique index repository and aparticular Sofa.
+Views are named, and applications and annotators can dynamically create additional views whenever they are needed.
+Annotations are made with respect to one view.
+Feature structures can have references to feature structures indexed in other views, as needed.</p>
+</dd>
+<dt class="hdlist1">CDE</dt>
+<dd>
+<p>The Component Descriptor Editor.
+This is the Eclipse tool that lets you conveniently edit the UIMA descriptors; see <a href="tools.html#ugr.tools.cde">Component Descriptor Editor User&#8217;s Guide</a>.</p>
+</dd>
+<dt class="hdlist1">Collection Processing Engine (CPE)</dt>
+<dd>
+<p>Performs Collection Processing through the combination of a Collection Reader, zero or more Analysis Engines, and zero or more CAS Consumers.
+The Collection Processing Manager (CPM) manages the execution of the engine.</p>
+</dd>
+<dt class="hdlist1">Collection Processing Manager (CPM)</dt>
+<dd>
+<p>The part of the framework that manages the execution of collection processing, routing CASs from the Collection Reader to zero or more Analysis Engines and then to the zero or more CAS Consumers.
+The CPM provides feedback such as performance statistics and error reporting and supports other features such as parallelization and error handling.</p>
+</dd>
+<dt class="hdlist1">Collection Reader</dt>
+<dd>
+<p>A component that reads documents from some source, for example a file system or database.
+The collection reader initializes a CAS with this document.
+Each document is returned as a CAS that may then be processed by an Analysis Engines.
+If the task of populating a CAS from the document is complex, you may use an arbitrarily complex chain of Analysis Engines and have the last one create and initialize a new Sofa.</p>
+</dd>
+<dt class="hdlist1">Feature Structure</dt>
+<dd>
+<p>An instance of a Type.
+Feature Structures are kept in the CAS, and may (optionally) be added to the defined indexes.
+Feature Structures may contain references to other Feature Structures.
+Feature Structures whose type is Annotation or a subtype of that, are referred to as annotations.</p>
+</dd>
+<dt class="hdlist1">Feature</dt>
+<dd>
+<p>A data member or attribute of a type.
+Each feature itself has an associated range type, the type of the value that it can hold.
+In the database analogy where types are tables, features are columns.
+In the world of structured data types, each feature is a field, or data member.</p>
+</dd>
+<dt class="hdlist1">Flow Controller</dt>
+<dd>
+<p>A component which implements the interfaces needed to specify a custom flow within an <a href="#ugr.glossary.aggregate">Aggregate Analysis Engine</a>.</p>
+</dd>
+<dt class="hdlist1">Hybrid Analysis Engine</dt>
+<dd>
+<p>An where more than one of its component s are deployed the same address space and one or more are deployed remotely (part tightly and part loosely-coupled).</p>
+</dd>
+<dt class="hdlist1">Index</dt>
+<dd>
+<p>Data in the CAS can only be retrieved using Indexes.
+Indexes are analogous to the indexes that are specified on tables of a database.
+Indexes belong to Index Repositories; there is one Repository for each view of the CAS.
+Indexes are specified to retrieve instances of some CAS Type (including its subtypes), and can be optionally sorted in a user-definable way.
+For example, all types derived from the UIMA built-in type <code>uima.tcas.Annotation`</code> contain <code>begin</code> and <code>end</code> features, which mark the begin and end offsets in the text where this annotation occurs.
+There is a built-in index of <code>Annotation`s that specifies that annotations are retrieved sequentially by sorting first on the value of the `begin</code> feature (ascending) and then by the value of the <code>end</code> feature (descending).
+In this case, iterating over the annotations, one first obtains annotations that come sequentially first in the text, while favoring longer annotations, in the case where two annotations start at the same offset.
+Users can define their own indexes as well.</p>
+</dd>
+<dt class="hdlist1">JCas</dt>
+<dd>
+<p>A Java object interface to the contents of the CAS.
+This interface uses additional generated Java classes, where each type in the CAS is represented as a Java class with the same name, each feature is represented with a getter and setter method, and each instance of a type is represented as a Java object of the corresponding Java class.</p>
+</dd>
+<dt class="hdlist1">Loosely-Coupled Analysis Engine</dt>
+<dd>
+<p>An <a href="#ugr.glossary.aggregate">Aggregate Analysis Engine</a> where no two of its subcomponents run in the same address space but where each is remote with respect to the others that make up the aggregate.
+Loosely coupled engines are ideal for using remote services that are not locally available, or for quickly assembling and testing functionality in cross-language, cross-platform distributed environments.
+They also better enable distributed scaleable implementations where quick recoverability may have a greater impact on overall throughput than analysis speed.</p>
+</dd>
+<dt class="hdlist1">PEAR</dt>
+<dd>
+<p>  An archive file that packages up a UIMA component with its code, descriptor files and other resources required to install and run it in another
+environment.
+  You can generate PEAR files using utilities that come with the UIMA SDK.</p>
+</dd>
+<dt class="hdlist1">Primitive Analysis Engine</dt>
+<dd>
+<p>An Analysis Engine that is composed of a single Annotator; one that has no subcomponent inside of it; contrast with <a href="#ugr.glossary.aggregate">Aggregate Analysis Engine</a>.</p>
+</dd>
+</dl>
+</div>
+<div id="ugr.glossary.structuredinformation" class="dlist">
+<dl>
+<dt class="hdlist1">Structured Information</dt>
+<dd>
+<p>Items stored in structured resources such as search engine indices, databases or knowledge bases.
+The canonical example of structured information is the database table.
+Each element of information in the database is associated with a precisely defined schema where each table column heading indicates its precise semantics, defining exactly how the information should be interpreted by a computer program or end-user.</p>
+</dd>
+<dt class="hdlist1">Subject of Analysis (Sofa)</dt>
+<dd>
+<p>A piece of data (e.g., text document, image, audio segment, or video segment), which is intended for analysis by UIMA analysis components.
+It belongs to a CAS View which has the same name; there is a one-to-one correspondence between these.
+There can be multiple Sofas contained within one CAS, each one representing a different view of the original artifact for example, an audio file could be the original artifact, and also be one Sofa, and another could be the output of a voice-recognition component, where the Sofa would be the corresponding text document. Sofas may be analyzed independently or simultaneously; they all co-exist within the CAS.</p>
+</dd>
+<dt class="hdlist1">Tightly-Coupled Analysis Engine</dt>
+<dd>
+<p>An <a href="#ugr.glossary.aggregate">Aggregate Analysis Engine</a> where all of its component s run in the same address space.</p>
+</dd>
+<dt class="hdlist1">Type</dt>
+<dd>
+<p>A specification of an object in the CAS used to store the results of analysis.
+Types are defined using inheritance, so some types may be defined purely for the sake of defining other types, and are in this sense abstract types.
+Types usually contain Features, which are attributes, or properties of the type.
+A type is roughly equivalent to a class in an object oriented programming language, or a table in a database.
+Instances of types in the CAS may be indexed for retrieval.</p>
+</dd>
+<dt class="hdlist1">Type System</dt>
+<dd>
+<p>A collection of related types.
+All components that can access the CAS, including Applications, Analysis Engines, Collection Readers, Flow Controllers, or CAS Consumers declare the type system that they use. Type systems are shared across Analysins Engines, allowing the outputs of one Analysis Engine to be read as input by another.
+A type system is roughly analogous to a set of related classes in object oriented programming, or a set of related tables in a database.
+The type system / type / feature terminology comes from computational linguistics.</p>
+</dd>
+<dt class="hdlist1">Unstructured Information</dt>
+<dd>
+<p>The canonical example of unstructured information is the natural language text document.
+The intended meaning of a document&#8217;s content is only implicit and its precise interpretation by a computer program requires some degree of analysis to explicate the document&#8217;s semantics.
+Other examples include audio, video and images. Contrast with <a href="#ugr.glossary.structuredinformation">Structured Information</a>.</p>
+</dd>
+<dt class="hdlist1">UIMA</dt>
+<dd>
+<p>UIMA is an acronym that stands for Unstructured Information Management Architecture; it is a software architecture which specifies component interfaces, design patterns and development roles for creating, describing, discovering, composing and deploying multi-modal analysis capabilities.
+The UIMA specification is being developed by a technical committee at OASIS.</p>
+</dd>
+<dt class="hdlist1">UIMA Java Framework</dt>
+<dd>
+<p>See Apache UIMA Java Framework.</p>
+</dd>
+<dt class="hdlist1">UIMA SDK</dt>
+<dd>
+<p>See Apache UIMA SDK.</p>
+</dd>
+<dt class="hdlist1">XCAS</dt>
+<dd>
+<p>An XML representation of the CAS. The XCAS can be used for saving and restoring CASs to and from streams.
+The UIMA SDK provides XCAS serialization and de-serialization methods for CASes.
+This is an older serialization format and new UIMA code should use the standard XMI format instead.</p>
+</dd>
+<dt class="hdlist1">XML Metadata Interchange (XMI)</dt>
+<dd>
+<p>An OMG standard for representing object graphs in XML, which UIMA uses to serialize analysis results from the CAS to an XML representation.  The UIMA SDK provides XMI serialization and de-serialization methods for CASes</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. We have plans to extend the representational capabilities of the CAS and align its semantics with the semantics of the OMG&#8217;s Essential Meta-Object Facility (EMOF) and with the semantics of the Eclipse Modeling Framework&#8217;s ( ) Ecore semantics and XMI-based representation.
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 3.5.0<br>
+Last updated 2023-11-01 17:37:27 +0100
+</div>
+</div>
+</body>
+</html>
