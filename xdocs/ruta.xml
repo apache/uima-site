@@ -54,7 +54,7 @@ under the License.
         <a href="https://downloads.apache.org/uima/eclipse-update-site-v3/">https://downloads.apache.org/uima/eclipse-update-site-v3/</a>
       </p> 
       <p>
-        The UIMA Ruta Workbench 3.3.0 is tested with Eclipse 2022-6 (older versions may still work). 
+        The UIMA Ruta Workbench 3.4.0 is tested with Eclipse 2023-09 (older versions may still work). 
       </p>
     </li>
   </ul>
@@ -163,7 +163,7 @@ under the License.
 &lt;dependency>
   &lt;groupId>org.apache.uima&lt;/groupId>
   &lt;artifactId>ruta-core&lt;/artifactId>
-  &lt;version>3.3.0&lt;/version>
+  &lt;version>3.4.0&lt;/version>
 &lt;/dependency>
   </pre>
   <subsubsection>
