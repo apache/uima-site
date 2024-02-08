@@ -136,7 +136,7 @@ Useful links
 ------------
 
 * [Apache UIMA](https://uima.apache.org)
-* [Apache UIMA Ruta Documentation](https://uima.apache.org/d/ruta-current/ruta.html)
+* [Apache UIMA Ruta Documentation](https://uima.apache.org/d/ruta-current/tools.ruta.book.html)
 * [Averbis Ruta Training material](https://github.com/averbis/ruta-training) (external)
 
 
