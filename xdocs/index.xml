@@ -31,16 +31,11 @@
         <div style="float: right; width: 220px; margin-left: 10px; border: 1px solid grey; background: white;" >
         <div style="text-align: center; border-bottom: 1px solid grey; margin:0.2em; padding-bottom: 0.2em;">
           <a  href="https://www.apache.org/events/current-event.html">
-          <img style="width: 210px" src="https://www.apachecon.com/images/landingpage/events/acna19.png"/>
-            <!-- img src="https://www.apache.org/events/current-event-234x60.png"/ -->
+          <img style="width: 210px" src="images/coc-logo-color.svg"/>
           </a>
         </div>
-        <div style="text-align: center; border-bottom: 1px solid grey; margin:0.2em; padding-bottom: 0.2em;"><a href="https://donate.apache.org"></a><img style="width:100px" src="https://blogs.apache.org/foundation/mediaresource/d67ca611-a57c-462d-ac23-95063f81d175" title="Donate to ASF"/><a/></div>
-        <!-- Commented out because Twitter set an awful amount of cookies / potential GDPR problems -->
-        <!--  
-        <a width="220" class="twitter-timeline" data-dnt="true" href="https://twitter.com/ApacheUIMA" data-widget-id="711227112531894273">Tweets by @ApacheUIMA</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^https:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        -->
-        <div><a href="https://twitter.com/ApacheUIMA" target="_blank" rel="noopener" title="Twitter: @ApacheUIMA">Follow us on Twitter</a></div>
+        <div style="height:105px; text-align: center; margin:0.2em; padding-bottom: 0.2em;"><a href="https://donate.apache.org"><img style="display: none" src="./images/supportapache-whspc-main_1490600386.png" title="Donate to ASF"/>
+        <span style="display: block; padding-bottom: 50%; height: 0; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url(./images/supportapache-whspc-main_1490600386.png);"></span></a></div>
         </div>
 
       <p>
