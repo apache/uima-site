@@ -31,11 +31,11 @@
         <div style="float: right; width: 220px; margin-left: 10px; border: 1px solid grey; background: white;" >
         <div style="text-align: center; border-bottom: 1px solid grey; margin:0.2em; padding-bottom: 0.2em;">
           <a  href="https://www.apache.org/events/current-event.html">
-          <img style="width: 210px" src="https://eu.communityovercode.org/images/coc-logo-color.svg"/>
+          <img style="width: 210px" src="images/coc-logo-color.svg"/>
           </a>
         </div>
-        <div style="height:105px; text-align: center; margin:0.2em; padding-bottom: 0.2em;"><a href="https://donate.apache.org" /><img style="display: none" src="https://s3.amazonaws.com/hopsie-admin-pro/assets/1010/original/supportapache-whspc-main_1490600386.png?1490600383" title="Donate to ASF"/>
-        <span style="display: block; padding-bottom: 50%; height: 0; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url(https://s3.amazonaws.com/hopsie-admin-pro/assets/1010/original/supportapache-whspc-main_1490600386.png?1490600383);"></span></div>
+        <div style="height:105px; text-align: center; margin:0.2em; padding-bottom: 0.2em;"><a href="https://donate.apache.org"><img style="display: none" src="./images/supportapache-whspc-main_1490600386.png" title="Donate to ASF"/>
+        <span style="display: block; padding-bottom: 50%; height: 0; background-position: center; background-size: cover; background-repeat: no-repeat; background-image: url(./images/supportapache-whspc-main_1490600386.png);"></span></a></div>
         </div>
 
       <p>
