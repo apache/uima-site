@@ -1,0 +1,123 @@
+---
+title: "Apache UIMA Ruta™"
+legacy_source: ruta.xml
+render_with_liquid: false
+---
+<h2 id="apache-uima-ruta-rule-based-text-annotation">Apache UIMA Ruta (Rule-based Text Annotation)</h2>
+
+<ul class="section-toc">
+<li><a href="#overview">Overview</a></li>
+<li><a href="#rule-language">Rule Language</a></li>
+<li><a href="#workbench">Workbench</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#developer-information">Developer Information</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+
+<h3 id="overview">Overview</h3>
+
+  <p>
+    This Apache UIMA™ component consists of two major parts: An Analysis Engine, which interprets 
+    and executes the rule-based scripting language, and the Eclipse-based tooling (Workbench), 
+    which provides various support for developing rules.
+  </p>
+  <ul>
+    <li>
+      <p>
+        This page only contains a short overview. A more detailed introduction can be found in the 
+        <a href="#uima.ruta.documentation">documentation</a> or in the 
+        <a href="downloads/gscl2013/2013-GSCL-Ruta.pdf">slides of the tutorial</a> in conjunction
+        with GSCL 2013.
+      </p>
+    </li>
+    <li>
+      <p>
+        The UIMA Ruta Workbench can be installed via our Eclipse update site:
+        <a href="https://downloads.apache.org/uima/eclipse-update-site-v3/">https://downloads.apache.org/uima/eclipse-update-site-v3/</a>
+      </p> 
+      <p>
+        The UIMA Ruta Workbench 3.5.1 is tested with Eclipse 2023-09 (older versions may still work). 
+      </p>
+    </li>
+  </ul>
+
+<h3 id="rule-language">Rule Language</h3>
+
+  <p>
+    The UIMA Ruta language is an imperative rule language extended with scripting elements. A rule defines a
+    pattern of annotations with additional conditions. If this pattern applies, then the actions of the rule are performed 
+    on the matched annotations. A rule is composed of a sequence of rule elements and a rule element essentially consists of four parts: 
+    A matching condition, an optional quantifier, a list of conditions and a list of actions.
+    The matching condition is typically a type of an annotation by which the rule element matches on the covered text of one of those annotations.
+    The quantifier specifies, whether it is necessary that the rule element successfully matches and how often the rule element may match.
+    The list of conditions specifies additional constraints that the matched text or annotations need to fulfill. The list of actions defines
+    the consequences of the rule and often creates new annotations or modifies existing annotations.
+  </p>
+  <p>
+    The following example rule consists of three rule elements. The first one (<code>ANY...</code>) matches on every token, which has a covered text that occurs in a word lists, named <code>MonthsList</code>.
+    The second rule element (<code>PERIOD?</code>) is optional and does not need to be fulfilled, which is indicated by the quantifier <code>?</code>. The last rule element (<code>NUM...</code>) matches
+    on numbers that fulfill the regular expression <code>REGEXP(".{2,4}"</code> and are therefore at least two characters to a maximum of four characters long.
+    If this rule successfully matches on a text passage, then its three actions are executed: An annotation of the type <code>Month</code> is created for the first rule element,
+    an annotation of the type <code>Year</code> is created for the last rule element and an annotation of the type <code>Date</code> 
+    is created for the span of all three rule elements. If the word list contains the correct entries, then this rule matches on strings like 
+    <code>Dec. 2004</code>, <code>July 85</code> or <code>11.2008</code> and creates the corresponding annotations.
+  
+    <pre>ANY{INLIST(MonthsList) -&gt; MARK(Month), MARK(Date,1,3)} 
+    PERIOD? NUM{REGEXP(".{2,4}") -&gt; MARK(Year)};</pre>
+  </p>
+  
+   <p>
+     Here is a short overview of additional features of the rule language: 
+  </p>
+  <ul>
+    <li>Expressions and variables</li>
+    <li>Import and execution of external components</li> 
+    <li>Flexible matching with filtering</li> 
+    <li>Modularization in different files or blocks</li>
+    <li>Control structures, e.g., for windowing</li>
+    <li>Score-based extraction</li>
+    <li>Modification</li>
+    <li>Html support</li> 
+    <li>Dictionaries</li>
+    <li>Extensible language definition</li>  
+  </ul>
+
+<h3 id="workbench">Workbench</h3>
+
+  <p>
+   The UIMA Ruta Workbench was created to facilitate all steps in creating Analysis Engines based on the UIMA Ruta language.
+   Here is a short overview of included features: 
+  </p>
+  <ul>
+    <li>
+      <p>
+        <b>Editing support:</b> The full-featured editor for the UIMA Ruta language provides syntax and semantic highlighting, 
+        syntax checking, context-sensitive auto-completion, template-based completion, open declaration and more.
+      </p>    
+    </li> 
+    <li>
+      <p>
+        <b>Rule Explanation:</b> Each step in the matching process can be explained: This includes how often a rule was applied, 
+        which condition was not fulfilled, or by which rule a specific annotation was created. Additionally, profile information 
+        about the runtime performance can be accessed.
+      </p>    
+    </li> 
+    <li>
+      <p>
+        <b>Automatic Validation:</b> UIMA Ruta scripts can automatically validated against a set of annotated documents (F1 score, test-driven development) 
+        and even against unlabeled documents (constraint-driven evaluation). 
+      </p>    
+    </li>
+    <li>
+      <p>
+        <b>Rule learning:</b> The supervised learning algorithms of the included TextRuler framework are able to induce rules 
+        and, therefore, enable semi-automatic development of rule-based components.
+      </p>    
+    </li>
+    <li>
+      <p>
+        <b>Query:</b> Rules can be used as query statements in order to investigate annotated documents.
+      </p>    
+    </li>     
+  </ul>
+  <img style="width: 75%; height: 75%" src="./images/ruta/ruta_workbench.png" alt="UIMA Ruta Workbench">

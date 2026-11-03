@@ -1,0 +1,121 @@
+# Projects outside Apache UIMA that build on it, shown on /ecosystem.html.
+# Keep descriptions to one or two sentences about what the project does with UIMA.
+# `links` are shown in order; the first one is also the link of the card title.
+# `lang` lists the programming languages the project is implemented in.
+# `paper` is the publication the project asks to be cited, if it names one.
+# `mark` names the owner of a trademarked project name (asf, eclipse): the card then shows
+# the name with ™, and the page lists it in the trademark notice. `short` is an extra
+# trademarked short form of the name to list there.
+
+- category: Component collections
+  id: components
+  projects:
+    - name: Apache OpenNLP
+      lang: [Java]
+      mark: asf
+      text: >-
+        The official UIMA integration of OpenNLP's sentence detector, tokenizer, part-of-speech
+        tagger, name finder, document categorizer, chunker and parser; the <code>opennlp-uima</code>
+        extension since OpenNLP 3.
+      links:
+        - { label: Website, url: "https://opennlp.apache.org/" }
+        - { label: UIMA module, url: "https://github.com/apache/opennlp/tree/main/opennlp-extensions/opennlp-uima" }
+    - name: DKPro Core
+      lang: [Java]
+      by: UKP Lab, TU Darmstadt
+      text: >-
+        A large collection of components wrapping third-party NLP tools behind a shared type
+        system, plus readers and writers for many corpus formats. Built with uimaFIT.
+      paper: { authors: "Eckart de Castilho & Gurevych", year: 2014, venue: "OIAF4HLT at COLING", title: "A broad-coverage collection of portable NLP components for building shareable analysis pipelines", url: "https://aclanthology.org/W14-5201/" }
+      links:
+        - { label: Website, url: "https://dkpro.github.io/dkpro-core/" }
+        - { label: Maven Central, url: "https://central.sonatype.com/namespace/org.dkpro.core" }
+    - name: ClearTK
+      lang: [Java]
+      by: CLEAR, University of Colorado Boulder
+      text: A framework for building machine-learning and NLP components with UIMA.
+      paper: { authors: "Bethard, Ogren & Becker", year: 2014, venue: "LREC", title: "ClearTK 2.0: Design Patterns for Machine Learning in UIMA", url: "http://www.lrec-conf.org/proceedings/lrec2014/pdf/218_Paper.pdf" }
+      links:
+        - { label: Website, url: "https://cleartk.github.io/cleartk/" }
+        - { label: Source, url: "https://github.com/ClearTK/cleartk" }
+    - name: JCoRe
+      lang: [Java]
+      by: JULIE Lab, University of Jena
+      text: >-
+        UIMA components for NLP, particularly for biomedical text, with a type system to base
+        your own applications on.
+      paper: { authors: "Hahn, Matthies, Faessler & Hellrich", year: 2016, venue: "LREC", title: "UIMA-Based JCoRe 2.0 Goes GitHub and Maven Central: State-of-the-Art Software Resource Engineering and Distribution of NLP Pipelines", url: "http://www.lrec-conf.org/proceedings/lrec2016/pdf/774_Paper.pdf" }
+      links:
+        - { label: Components, url: "https://github.com/JULIELab/jcore-base" }
+        - { label: Configurations, url: "https://github.com/JULIELab/jcore-projects" }
+    - name: TextImager
+      lang: [Java]
+      by: Text Technology Lab, Goethe University Frankfurt
+      text: NLP components based on UIMA and DKPro Core.
+      paper: { authors: "Hemati, Uslu & Mehler", year: 2016, venue: "COLING Demos", title: "TextImager: a Distributed UIMA-based System for NLP", url: "https://aclanthology.org/C16-2013/" }
+      links:
+        - { label: Source, url: "https://github.com/texttechnologylab/textimager-uima" }
+
+- category: Clinical NLP
+  id: clinical
+  projects:
+    - name: Apache cTAKES
+      lang: [Java]
+      mark: asf
+      text: >-
+        Extracts information from the free text of electronic medical records, with components
+        trained for English clinical text.
+      paper: { authors: "Savova et al.", year: 2010, venue: "JAMIA", title: "Mayo clinical Text Analysis and Knowledge Extraction System (cTAKES): architecture, component evaluation and applications", url: "https://doi.org/10.1136/jamia.2009.001560" }
+      links:
+        - { label: Website, url: "https://ctakes.apache.org/" }
+        - { label: Source, url: "https://github.com/apache/ctakes" }
+    - name: MedTagger
+      lang: [Java]
+      by: Open Health NLP (OHNLP)
+      text: A lightweight clinical NLP system built on UIMA.
+      links:
+        - { label: Source, url: "https://github.com/OHNLP/MedTagger" }
+
+- category: Tools, platforms and libraries
+  id: tools
+  projects:
+    - name: Eclipse INCEpTION
+      lang: [Java]
+      mark: eclipse
+      short: INCEpTION
+      by: Eclipse Foundation
+      text: >-
+        A web-based platform for semantic annotation with annotation assistance and knowledge
+        management. Stores its data as UIMA CASes and imports and exports UIMA formats.
+        Succeeds WebAnno.
+      paper: { authors: "Klie et al.", year: 2018, venue: "COLING Demos", title: "The INCEpTION Platform: Machine-Assisted and Knowledge-Oriented Interactive Annotation", url: "https://aclanthology.org/C18-2002/" }
+      links:
+        - { label: Website, url: "https://eclipse-inception.github.io/" }
+        - { label: Source, url: "https://github.com/eclipse-inception/inception" }
+    - name: DUUI
+      lang: [Java]
+      by: Text Technology Lab, Goethe University Frankfurt
+      text: >-
+        The Docker Unified UIMA Interface runs UIMA components in containers, so pipelines can be
+        scaled out and distributed regardless of how a component was built.
+      paper: { authors: "Leonhardt, Abrami, Baumartz & Mehler", year: 2023, venue: "Findings of EMNLP", title: "Unlocking the Heterogeneous Landscape of Big Data NLP with DUUI", url: "https://aclanthology.org/2023.findings-emnlp.29/" }
+      links:
+        - { label: Website, url: "https://texttechnologylab.github.io/DockerUnifiedUIMAInterface/" }
+        - { label: Source, url: "https://github.com/texttechnologylab/DockerUnifiedUIMAInterface" }
+    - name: UCE
+      lang: [Java]
+      by: Text Technology Lab, Goethe University Frankfurt
+      text: The Unified Corpus Explorer makes UIMA-annotated corpora searchable and browsable.
+      paper: { authors: "Bönisch, Abrami & Mehler", year: 2025, venue: "NAACL Demos", title: "Towards Unified, Dynamic and Annotation-based Visualisations and Exploration of Annotated Big Data Corpora with the Help of Unified Corpus Explorer", url: "https://aclanthology.org/2025.naacl-demo.42/" }
+      links:
+        - { label: Website, url: "https://texttechnologylab.github.io/UCE/" }
+        - { label: Source, url: "https://github.com/texttechnologylab/UCE" }
+    - name: DKPro Cassis
+      lang: [Python]
+      by: UKP Lab, TU Darmstadt
+      text: >-
+        Reads, creates and writes UIMA CASes in the XMI and JSON formats, so Python code can
+        exchange data with UIMA pipelines.
+      links:
+        - { label: PyPI, url: "https://pypi.org/project/dkpro-cassis/" }
+        - { label: Source, url: "https://github.com/dkpro/dkpro-cassis" }

@@ -1,0 +1,29 @@
+---
+title: "Apache uimaFIT 3.2.0 released"
+render_with_liquid: false
+---
+<p>
+        uimaFIT 3.2.0 is a feature and bugfix release. On supported platforms, it serves mostly as 
+        a drop-in replacement for previous uimaFIT 3.x versions. However, the behavior of the various
+        select methods was slightly adapted in edge cases to align with the update behavior of the
+        UIMA Java SDK SelectFS API.  For details, please refer to the migration section in the
+        documentation in the Apache UIMA Java SDK 3.2.0.
+      </p>
+      
+      <p>Changes include:
+        <ul>
+          <li>Added pluggable CAS validation support</li>
+          <li>Added selectOverlapping to (J)CasUtil</li>
+          <li>Added ability to Maven plugin to add generated resource folder as Maven resource folder</li>
+          <li>Added typed PEAR parameter support</li>
+          <li>Improved overhead of createTypeSystemDescription() and friends</li>
+          <li>Improved compatibiltiy of the uimaFIT select-methods with the UIMA Java SDK SelectFS API</li>
+          <li>Improved performance of selectCovering</li>
+          <li>Fixed Maven plugin failing to import type systems from dependencies</li>
+          <li>Fixed detection and usage of proper classloader e.g. for resolving imports</li>
+          <li>Several additional bug fixes</li>
+        </ul>
+      </p>
+
+      <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-3.2.0/issuesFixed/jira-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>

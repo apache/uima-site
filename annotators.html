@@ -1,0 +1,42 @@
+---
+title: "UIMA Annotators"
+legacy_source: annotators.xml
+render_with_liquid: false
+---
+<p class="note">As of August 2011, this page is out of date and nothing links to it; it will be deleted in the future.</p>
+<p>
+UIMA™ Annotators do the real work of extracting structured information from unstructured data.  You can write your
+own annotators, use the annotators available here, or find UIMA annotators on the web, often
+at various repositories.
+</p>
+
+<p>Several annotators are available as part of Apache UIMA; they are packaged up into one 
+  <a href="downloads.cgi">downloadable package</a>.
+  You can access the source for the annotators in the SVN repository at 
+  <a class="external" href="https://svn.apache.org/repos/asf/uima/sandbox/trunk/">
+     https://svn.apache.org/repos/asf/uima/sandbox/trunk/</a>. 
+</p>
+
+<p>The annotators available here are:</p>
+
+      <ul>
+		<li>
+<a href="sandbox.html#whitespace.tokenizer">Whitespace Tokenizer Annotator</a>
+      </li>
+		<li><a href="sandbox.html#snowball.annotator">Snowball Annotator</a></li>
+		<li><a href="sandbox.html#regex.annotator">Regular Expression Annotator</a></li>
+        <li><a href="sandbox.html#tagger.annotator">Hidden Markov Model Tagger Annotator</a></li>
+        <li>
+<a href="sandbox.html#bsf.annotator">BSF Annotator</a>.  BSF stands for
+          the Java Bean Scripting Framework; this annotator allows you to write
+          annotators using scripting languages supported by that framework.</li>
+        <li><a href="sandbox.html#dict.annotator">Dictionary Annotator</a></li>
+        <li>
+<a href="sandbox.html#opencalais.annotator">OpenCalais Annotator</a> - an 
+          experimental annotator that uses the 
+          <a href="https://www.opencalais.com/">OpenCalais service</a> to 
+          do the annotations.</li>
+        <li><a href="sandbox.html#lucas.consumer">Lucene CAS indexer (Lucas)</a></li>
+        <li><a href="sandbox.html#concept.mapper.annotator">Concept Mapper Annotator</a></li>
+        <li><a href="sandbox.html#configurable.feature.extractor.annotator">Configurable Feature Extractor (CFE)</a></li>
+      </ul>

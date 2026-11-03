@@ -1,0 +1,21 @@
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    {% for column in site.data.navigation.footer %}
+      <section>
+        <h2>{{ column.title }}</h2>
+        <ul>
+          {% for link in column.links %}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+  </div>
+  <div class="wrap legal">
+    <p>
+      Copyright © {{ site.time | date: "%Y" }} <a href="https://www.apache.org/">The Apache Software Foundation</a>,
+      licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.
+      Apache UIMA, UIMA, Apache, the Apache feather logo and the Apache UIMA project logo are trademarks
+      of The Apache Software Foundation. All other marks mentioned may be trademarks or registered
+      trademarks of their respective owners.
+    </p>
+  </div>
+</footer>

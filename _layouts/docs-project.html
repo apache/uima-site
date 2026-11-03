@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="wrap page" data-pagefind-body>
+  <p class="eyebrow"><a href="/docs/">Documentation</a>{% if page.only_version %} · <a href="{{ page.project.url }}">{{ page.project.name }}</a>{% endif %}</p>
+  <h1>{{ page.title }}</h1>
+  <p class="lead">{{ page.project.summary }}</p>
+  {% if page.only_version %}
+    {% include version-block.html v=page.only_version %}
+  {% else %}
+    {% for v in page.project.versions %}{% include version-block.html v=v %}{% endfor %}
+  {% endif %}
+</article>

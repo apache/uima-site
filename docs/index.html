@@ -1,0 +1,49 @@
+---
+title: Documentation
+active: docs
+layout: default
+---
+<article class="wrap page" data-pagefind-body>
+  <h1>Documentation</h1>
+  <p class="lead">
+    The manuals below are built by this website from the AsciiDoc sources at each release tag,
+    so they read the same as the copies shipped with the release.
+  </p>
+
+  {% if site.data.docs_index.size == 0 %}
+    <p class="notice">The manuals were skipped in this build (<code>UIMA_DOCS=off</code>).</p>
+  {% endif %}
+
+  <div class="docs-grid">
+  {% for project in site.data.docs_index %}
+    <section class="card static">
+      <h2><a href="{{ project.url }}">{{ project.name }}</a> <span class="badge">{{ project.current.version }}</span></h2>
+      <p>{{ project.summary }}</p>
+      <ul class="book-list">
+        {% for b in project.current.books %}<li><a href="{{ b.url }}">{{ b.title }}</a></li>{% endfor %}
+      </ul>
+      {% if project.versions.size > 1 %}
+        <p class="page-meta">Older versions:
+          {% for v in project.versions offset:1 %}<a href="{{ v.url }}">{{ v.version }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
+        </p>
+      {% endif %}
+    </section>
+  {% endfor %}
+  </div>
+
+  <h2>Getting started</h2>
+  <ul>
+    <li><a href="/doc-uima-why.html">Why UIMA?</a></li>
+    <li><a href="/doc-uima-annotator.html">Writing your first annotator</a></li>
+    <li><a href="/doc-uima-examples.html">Running the examples</a></li>
+    <li><a href="/doc-uimaj-cookbook.html">UIMA Java cookbook</a></li>
+    <li><a href="/doc-uima-pears.html">PEAR packages</a></li>
+    <li><a href="/faq.html">FAQ</a></li>
+  </ul>
+
+  <h2>Other documentation</h2>
+  <p>
+    Javadoc, PDF editions and the manuals of components not listed above (UIMA-AS, DUCC, UIMACPP,
+    the addons) are still served from <a href="/documentation.html">the previous documentation page</a>.
+  </p>
+</article>

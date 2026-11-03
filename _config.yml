@@ -1,0 +1,47 @@
+title: Apache UIMA
+url: https://uima.apache.org
+description: >-
+  Apache UIMA provides frameworks, tools and components for analysing unstructured
+  information such as text, using pipelines of reusable analysis components.
+
+destination: ./content
+markdown: kramdown
+highlighter: rouge
+permalink: /news/:year/:month/:day/:title.html
+excerpt_separator: <!--more-->
+
+exclude:
+  - README.md
+  - DESIGN.md
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - _tools
+  - .cache
+  - content
+  - vendor
+
+include:
+  - .htaccess
+
+keep_files:
+  - pagefind
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: page }
+  - scope: { type: posts }
+    values: { layout: post, active: news }
+
+feed:
+  path: atom.xml
+
+# Documentation pulled from release tags at build time, see _data/docs.yml and
+# _plugins/uima_docs.rb. Set UIMA_DOCS=off to skip it for fast layout work.
+uima_docs:
+  cache_dir: .cache/docs
+  url_base: /docs

@@ -1,0 +1,46 @@
+---
+layout: default
+body_class: is-book
+---
+<div class="book-layout">
+  <aside class="book-nav" aria-label="Contents">
+    <div class="book-nav-head">
+      <a class="eyebrow" href="/docs/{{ page.project_id }}/">{{ page.project_name }}</a>
+      <label class="version-switch">
+        <span class="visually-hidden">Version</span>
+        <select data-navigate>
+          {% for v in page.versions %}
+            <option value="{{ v.url }}"{% if v.version == page.version %} selected{% endif %}>{{ v.version }}{% if v.current %} (current){% endif %}</option>
+          {% endfor %}
+        </select>
+      </label>
+    </div>
+    <nav class="toc">
+      <ol>
+        {% for s in page.toc %}
+          <li>
+            <a href="#{{ s.id }}">{% if s.number %}<span class="num">{{ s.number }}</span> {% endif %}{{ s.title }}</a>
+            {% if s.children %}
+              <ol>
+                {% for c in s.children %}<li><a href="#{{ c.id }}">{{ c.title }}</a></li>{% endfor %}
+              </ol>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ol>
+    </nav>
+  </aside>
+  <article class="book prose"{% if page.current_version %} data-pagefind-body{% endif %}>
+    {% unless page.current_version %}
+      <p class="notice">You are reading the documentation of {{ page.project_name }} {{ page.version }}.
+        <a href="{{ page.versions.first.url }}">Read it for the current version, {{ page.versions.first.version }}</a>.</p>
+    {% endunless %}
+    <h1>{{ page.title }}</h1>
+    <p class="book-meta" data-pagefind-ignore>
+      {{ page.project_name }} {{ page.version }} ·
+      built from <a href="{{ page.source_url }}"><code>{{ page.tag }}</code></a>
+      (<code>{{ page.sha | slice: 0, 10 }}</code>)
+    </p>
+    {{ content }}
+  </article>
+</div>

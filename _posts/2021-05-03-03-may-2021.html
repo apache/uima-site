@@ -1,0 +1,25 @@
+---
+title: "Apache UIMA Java SDK 3.2.0 released"
+render_with_liquid: false
+---
+<p>UIMA Java SDK 3.2.0 is in the 3.x.x series of core Java UIMA SDK; see the news for 3.0.0 for important
+         information about migrating from 2.x.x versions of UIMA.
+      </p>
+      
+      <p>Changes include:
+        <ul>
+          <li>Added AnnotationPredicates utility class providing various predicates testing how annotations
+              relate to each other (e.g. covering, being covered by, following, preceding, etc.)</li>
+          <li>Added single-int arg version of select.startAt()</li>
+          <li>Added trim method to AnnotationFS</li>
+          <li>Added ability to serialize as XMIs as XML 1.1</li>
+          <li>Added ability to serialize as XMIs pretty-printed using CasIOUtils</li>
+          <li>Added typed parameter support to PEARs</li>
+          <li>Improve performance of setting up JCas classes by reducing sync lock contention</li>
+          <li>Improved speed of constructing aggregate engines</li>
+          <li>Many additional bug fixes</li>
+        </ul>
+      </p>
+
+      <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.2.0/issuesFixed/jira-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>

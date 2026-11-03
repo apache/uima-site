@@ -1,0 +1,66 @@
+---
+title: Ecosystem
+layout: default
+---
+<article class="wrap page" data-pagefind-body>
+  <h1>Ecosystem</h1>
+  <p class="lead">
+    Projects outside Apache UIMA that build on it: component collections, applications and
+    libraries for working with UIMA data. Apache UIMA provides the infrastructure for analysis
+    pipelines; the component collections below provide ready-made analysis components to run in them.
+  </p>
+
+  <nav class="chips" aria-label="Categories">
+    {% for group in site.data.ecosystem %}<a href="#{{ group.id }}">{{ group.category }}</a>{% endfor %}
+  </nav>
+
+  {% for group in site.data.ecosystem %}
+    <section class="eco-group">
+      <h2 id="{{ group.id }}">{{ group.category }}</h2>
+      <div class="eco-grid">
+        {% for p in group.projects %}
+          <section class="card static eco-card">
+            <h3><a href="{{ p.links.first.url }}">{{ p.name }}{% if p.mark %}™{% endif %}</a></h3>
+            <p class="eco-tags">
+              {% for l in p.lang %}<span class="badge lang" title="Implemented in {{ l }}">{{ l }}</span>{% endfor %}
+              {% if p.mark == "asf" %}<span class="badge">Apache project</span>{% endif %}
+            </p>
+            {% if p.by %}<p class="eco-by">{{ p.by }}</p>{% endif %}
+            <p>{{ p.text }}</p>
+            {% if p.paper %}
+              <p class="eco-paper">Paper: <a href="{{ p.paper.url }}" title="{{ p.paper.title }}">{{ p.paper.authors }}, {{ p.paper.year }}</a>, {{ p.paper.venue }}</p>
+            {% endif %}
+            <p class="eco-links">
+              {% for l in p.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+            </p>
+          </section>
+        {% endfor %}
+      </div>
+    </section>
+  {% endfor %}
+
+  <section class="prose eco-footer">
+    <h2 id="add">Get your project listed</h2>
+    <p>
+      If you maintain a project that builds on Apache UIMA, or know of one missing here, write to the
+      <a href="/get-involved.html#mailing-lists">dev mailing list</a> or open a pull request against
+      <code>_data/ecosystem.yml</code>. The same applies if an entry is out of date.
+    </p>
+    <p class="page-meta">
+      The projects listed here are maintained by their own communities. They are not part of Apache UIMA,
+      and the Apache UIMA project does not endorse or support them.
+    </p>
+    {% assign asf = "" %}{% assign eclipse = "" %}
+    {% for group in site.data.ecosystem %}{% for p in group.projects %}
+      {% if p.mark == "asf" %}{% assign asf = asf | append: p.name | append: "|" %}{% endif %}
+      {% if p.mark == "eclipse" %}{% assign eclipse = eclipse | append: p.name | append: "|" %}{% if p.short %}{% assign eclipse = eclipse | append: p.short | append: "|" %}{% endif %}{% endif %}
+    {% endfor %}{% endfor %}
+    {% assign asf = "Apache|Apache UIMA|" | append: asf | split: "|" %}
+    {% assign eclipse = eclipse | append: "Eclipse" | split: "|" %}
+    <p class="page-meta">
+      {{ asf | array_to_sentence_string }} are trademarks of The Apache Software Foundation.
+      {{ eclipse | array_to_sentence_string }} are trademarks of Eclipse Foundation AISBL.
+      All other marks mentioned may be trademarks or registered trademarks of their respective owners.
+    </p>
+  </section>
+</article>

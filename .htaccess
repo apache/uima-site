@@ -1,0 +1,15 @@
+---
+layout: null
+---
+{%- assign uimaj = site.data.docs_index | where: "id", "uimaj" | first -%}
+{%- assign maint = uimaj.current.books | where: "id", "maint" | first -%}
+RewriteEngine On
+
+# Generated from _data/docs.yml: the manuals used to live in /d/<project>-current/.
+# Only the books are redirected; Javadoc and PDFs are still served from /d/.
+{% for project in site.data.docs_index %}{% for b in project.current.books %}RewriteRule ^d/{{ project.id }}-current/{{ b.id }}\.html$ {{ b.url }} [R=301,L]
+{% endfor %}{% endfor %}
+# Generated from _data/redirects.yml: removed and renamed pages.
+# NE keeps the # of section links from being escaped.
+{% for r in site.data.redirects %}{% if r.to contains "maint:" %}{% assign to = r.to | replace: "maint:", "#" | prepend: maint.url %}{% else %}{% assign to = r.to %}{% endif %}RewriteRule ^{{ r.from | replace: ".", "\." }}$ {{ to }} [R=301,NE,L]
+{% endfor %}

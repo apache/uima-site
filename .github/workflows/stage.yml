@@ -1,0 +1,70 @@
+# Builds the site and commits the output to the asf-staging branch, which ASF
+# infra serves at https://uima.staged.apache.org. The build cannot run on the
+# ASF Jekyll builder because the manuals need git and custom plugins.
+name: Stage website
+
+on:
+  push:
+    branches: [new-site-v1]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: asf-staging
+  cancel-in-progress: false
+
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    env:
+      BUNDLE_WITHOUT: tools
+      JEKYLL_ENV: production
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      # Fetched sources and rendered manuals; the plugin re-renders only what changed.
+      - uses: actions/cache@v6
+        with:
+          path: .cache/docs
+          key: uima-docs-${{ github.run_id }}
+          restore-keys: uima-docs-
+
+      - name: Build site and search index
+        run: bundle exec rake all
+
+      - name: Commit to asf-staging
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          staging="$RUNNER_TEMP/staging"
+          if git fetch --depth 1 origin asf-staging; then
+            git worktree add -B asf-staging "$staging" FETCH_HEAD
+          else
+            git worktree add --orphan -b asf-staging "$staging"
+          fi
+          cd "$staging"
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -a "$GITHUB_WORKSPACE/content/." .
+          cat > .asf.yaml <<'EOF'
+          staging:
+            profile: ~
+            whoami: asf-staging
+          EOF
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Staged site is unchanged"
+            exit 0
+          fi
+          git commit -q -m "Stage ${GITHUB_SHA::8}"
+          git push origin asf-staging

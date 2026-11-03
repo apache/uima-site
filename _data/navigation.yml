@@ -1,0 +1,33 @@
+main:
+  - { id: docs,      title: Docs,      url: /docs/ }
+  - { id: downloads, title: Downloads, url: /downloads.html }
+  - { id: news,      title: News,      url: /news/ }
+  - { id: community, title: Community, url: /get-involved.html }
+
+# Footer columns. The ASF links are required on every project site.
+footer:
+  - title: Project
+    links:
+      - { title: Documentation,        url: /docs/ }
+      - { title: Downloads,            url: /downloads.html }
+      - { title: News,                 url: /news/ }
+      - { title: Ruta,                 url: /ruta.html }
+      - { title: uimaFIT,              url: /uimafit.html }
+      - { title: Ecosystem,            url: /ecosystem.html }
+      - { title: About the new website, url: /migration.html }
+  - title: Community
+    links:
+      - { title: Get involved,         url: /get-involved.html }
+      - { title: Mailing lists,        url: /get-involved.html#mailing-lists }
+      - { title: Project team,         url: "https://projects.apache.org/committee.html?uima" }
+      - { title: Developer pages,      url: /develop.html }
+      - { title: GitHub,               url: "https://github.com/search?q=org%3Aapache+uima+in%3Aname+archived%3Afalse&type=repositories" }
+  - title: Apache Software Foundation
+    links:
+      - { title: Foundation,           url: "https://www.apache.org/" }
+      - { title: License,              url: "https://www.apache.org/licenses/" }
+      - { title: Sponsorship,          url: "https://www.apache.org/foundation/sponsorship.html" }
+      - { title: Thanks,               url: "https://www.apache.org/foundation/thanks.html" }
+      - { title: Security,             url: "https://www.apache.org/security/" }
+      - { title: Privacy,              url: "https://privacy.apache.org/policies/privacy-policy-public.html" }
+      - { title: Events,               url: "https://www.apache.org/events/current-event" }

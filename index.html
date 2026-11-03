@@ -1,0 +1,91 @@
+---
+layout: default
+title: Apache UIMA
+body_class: is-home
+---
+{% assign uimaj = site.data.downloads | where: "dir", "uimaj-3.7.0" | first %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Unstructured Information Management Architecture</p>
+      <h1>Build and run analysis pipelines for text and other unstructured content.</h1>
+      <p class="lead">
+        Apache UIMA is the infrastructure for analysis applications: a common data structure,
+        the CAS, a type system describing what goes into it, and a framework that combines,
+        configures and runs analysis components. The components themselves you write, or take
+        from the <a href="/ecosystem.html#components">collections built on UIMA</a>.
+      </p>
+      <p class="actions">
+        <a class="button primary" href="/docs/">Read the documentation</a>
+        <a class="button" href="/downloads.html">Get UIMA {{ uimaj.version }}</a>
+      </p>
+    </div>
+    <figure class="hero-figure">
+<pre class="maven"><code><span class="t">&lt;dependency&gt;</span>
+  <span class="t">&lt;groupId&gt;</span>org.apache.uima<span class="t">&lt;/groupId&gt;</span>
+  <span class="t">&lt;artifactId&gt;</span>uimafit-core<span class="t">&lt;/artifactId&gt;</span>
+  <span class="t">&lt;version&gt;</span>{{ uimaj.version }}<span class="t">&lt;/version&gt;</span>
+<span class="t">&lt;/dependency&gt;</span></code></pre>
+      <figcaption>uimaFIT, the convenient Java API, is part of the UIMA Java SDK since 3.7.0 and brings in the core framework. Using several modules? <a href="/downloads.html#maven">Import the BOM</a>.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="wrap cards">
+  <a class="card" href="/docs/uimaj/">
+    <h2>UIMA Java SDK</h2>
+    <p>The framework: type systems, the CAS, analysis engines, aggregates, collection processing and the uimaFIT API for writing your own components in plain Java.</p>
+  </a>
+  <a class="card" href="/ruta.html">
+    <h2>UIMA Ruta</h2>
+    <p>A rule language for writing your own annotators quickly, with an Eclipse workbench to develop, explain and test rules.</p>
+  </a>
+  <a class="card" href="/ecosystem.html">
+    <h2>Components and tools</h2>
+    <p>Ready-made analysis components come from collections such as Apache OpenNLP, DKPro Core and Apache cTAKES; GitHub lists over 900 repositories depending on the Java SDK.</p>
+  </a>
+</section>
+
+<section class="wrap split">
+  <div class="prose">
+    <h2>How UIMA works</h2>
+    <p>
+      An application is split into components, for example sentence detection, tokenization
+      and named entity recognition. Each component implements a framework interface and
+      describes its inputs, outputs and parameters in metadata. The framework runs the components
+      and moves the data, a CAS holding the document and all annotations made on it, between them.
+    </p>
+    <p>
+      The UIMA SDK provides this infrastructure, not the analysis itself: apart from examples, it
+      ships no tokenizers, taggers or entity recognizers. You bring those, either by writing your
+      own, as Java classes with uimaFIT or as <a href="/ruta.html">Ruta</a> rules, or by using
+      components from the <a href="/ecosystem.html#components">ecosystem</a>, for example the
+      UIMA integration of Apache OpenNLP or the wrappers for many NLP tools in DKPro Core.
+      Components from different sources work together as long as they agree on a type system.
+    </p>
+    <p>
+      Since version 3 the Java framework integrates tightly with modern Java, for example with
+      <a href="/docs/uimaj/{{ uimaj.version }}/user.html#_uv3.select">Java streams over annotations</a> through the select API,
+      and is designed for performance on current hardware.
+    </p>
+    <p>
+      Apache UIMA implements the <a href="/uima-specification.html">OASIS UIMA specification</a>.
+    </p>
+  </div>
+  <figure class="diagram">
+    {% include svg/uima-diagram.svg %}
+    <figcaption>Analysis engines, your own or from a component collection, run in a pipeline and share
+      one CAS. Each adds its own kind of annotation; the type system defines which kinds exist and
+      what features they have.</figcaption>
+  </figure>
+</section>
+
+<section class="wrap news-teaser">
+  <h2>News</h2>
+  <ul class="news-list">
+    {% for post in site.posts limit:4 %}
+      <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time> <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <p><a href="/news/">All news</a> · <a href="/atom.xml">Atom feed</a></p>
+</section>

@@ -1,0 +1,18 @@
+---
+title: News
+active: news
+layout: default
+---
+<article class="wrap page">
+  <h1>News</h1>
+  <p class="lead">Releases and other news from the Apache UIMA project. Also as an <a href="/atom.xml">Atom feed</a>.</p>
+  {% assign years = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+  {% for year in years %}
+    <h2>{{ year.name }}</h2>
+    <ul class="news-list">
+      {% for post in year.items %}
+        <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b" }}</time> <a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+</article>

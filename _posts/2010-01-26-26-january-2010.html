@@ -1,0 +1,24 @@
+---
+title: "UIMA 2.3.0-incubating Released"
+render_with_liquid: false
+---
+<p>
+          This release includes all 4 major components: 
+          the UIMA Java SDK, UIMACPP, UIMA-AS (Asynchronous Scalout capability), 
+          and a growing set of UIMA Addons.  It is backwards compatable with previous releases, except
+          that Java 5 is now the minimum Java level required.</p>
+          
+          <p>
+          The add-ons package contains many new components and annotators.  
+          The UIMA-AS (Asynchronous Scaleout)
+          framework is extensively enhanced with much more support for error/failure recovery, driven by feedback
+          from actual use in several large scale deployments.  The base framework now supports Java 5 generics, and
+          is enhanced to make it even more
+          light-weight and efficient; for example, it now supports a new network serialization format  
+          for communicating with remote
+          annotators using a "delta-CAS" - limiting the response sent to just those items which have changed.
+          </p>
+          <p>
+          Please see the release notes on the <a href="/downloads.html">downloads</a> page, for a more complete summary
+          and a complete list of changes.
+        </p>

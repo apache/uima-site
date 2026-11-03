@@ -1,0 +1,36 @@
+# Documentation that the site builds from the AsciiDoc sources at a release tag.
+#
+# Every top-level *.adoc file in `path` is treated as one book and rendered to
+# /docs/<id>/<version>/<book>.html. Images and other non-AsciiDoc files below
+# `path` are copied alongside. The first version listed is the current one.
+#
+# Adding a release is one entry: the version and its git tag.
+
+- id: uimaj
+  name: UIMA Java SDK
+  summary: The core Java framework, including uimaFIT since 3.7.0.
+  repo: https://github.com/apache/uima-uimaj.git
+  path: uimaj-documentation/src/docs/asciidoc
+  # Javadoc is not rebuilt by the site; `link:api/...` points at the published copy.
+  api: https://uima.apache.org/d/uimaj-current/api/
+  books:
+    tug:   { title: Tutorials and User's Guides, order: 10 }
+    user:  { title: User guide, order: 15 }
+    fit:   { title: uimaFIT guide and reference, order: 20 }
+    ref:   { title: References, order: 30 }
+    tools: { title: Tools, order: 40 }
+    oas:   { title: Overview and Setup, order: 5 }
+    maint: { title: Maintainer guide, order: 90 }
+  versions:
+    - { version: 3.7.0, tag: rel/uimaj-3.7.0 }
+    - { version: 3.6.1, tag: rel/uimaj-3.6.1 }
+
+- id: ruta
+  name: UIMA Ruta
+  summary: Rule-based text annotation language and its Eclipse workbench.
+  repo: https://github.com/apache/uima-ruta.git
+  path: ruta-documentation/src/docs/asciidoc
+  books:
+    ruta: { title: Ruta guide and reference, order: 10 }
+  versions:
+    - { version: 3.5.1, tag: rel/ruta-3.5.1 }

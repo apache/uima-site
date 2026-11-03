@@ -1,0 +1,41 @@
+---
+title: Developing Apache UIMA
+active: community
+---
+{% assign uimaj = site.data.docs_index | where: "id", "uimaj" | first %}
+{% assign maint = uimaj.current.books | where: "id", "maint" | first %}
+<p class="lead">For people who build, release and maintain Apache UIMA. Users of UIMA want the <a href="/docs/">documentation</a> instead.</p>
+
+<h2>Building and releasing</h2>
+<p>
+  The <a href="{{ maint.url }}">maintainer guide</a> describes setting up a development environment,
+  the project structure, the Maven build and the complete release process, including the Eclipse
+  update site. It is part of the UIMA Java SDK documentation and versioned with it; the copy linked
+  here is the one of the current release, {{ uimaj.current.version }}.
+</p>
+<ul>
+  <li><a href="{{ maint.url }}#_maintainer_setup">Maintainer setup</a></li>
+  <li><a href="{{ maint.url }}#_maven_build">Maven build</a></li>
+  <li><a href="{{ maint.url }}#_release_process">Release process</a></li>
+</ul>
+
+<h2>Contributing code</h2>
+<ul>
+  <li><a href="/get-involved.html#contributing">Contributing</a>: pull requests and the ASF rules that apply</li>
+  <li><a href="/codeConventions.html">Code conventions</a></li>
+  <li>Each repository's <code>CONTRIBUTING.md</code>, for example the one of
+    <a href="https://github.com/apache/uima-uimaj/blob/main/CONTRIBUTING.md">the UIMA Java SDK</a></li>
+</ul>
+
+<h2>Project</h2>
+<ul>
+  <li><a href="https://projects.apache.org/committee.html?uima">Project team</a>: the PMC members and committers</li>
+  <li><a href="https://www.apache.org/foundation/how-it-works/">How the ASF works</a>: roles, the PMC, decision making and communication in Apache projects</li>
+</ul>
+
+<h2>Past events</h2>
+<ul>
+  <li><a href="/coling14.html">COLING 2014</a>, <a href="/gscl13.html">GSCL 2013</a>, <a href="/iks09.html">IKS 2009</a>,
+      <a href="/gscl09.html">GSCL 2009</a>, <a href="/lsm09.html">LSM 2009</a>, <a href="/lrec08.html">LREC 2008</a>,
+      <a href="/gldv07.html">GLDV 2007</a></li>
+</ul>

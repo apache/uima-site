@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<article class="wrap prose page" data-pagefind-body>
+  {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+  {{ content }}
+  {% if page.legacy_source %}
+    <p class="page-meta">Migrated from <code>xdocs/{{ page.legacy_source }}</code> of the previous site.</p>
+  {% endif %}
+</article>

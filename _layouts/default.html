@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  {% seo title=false %}
+  <title>{% if page.title and page.url != "/" %}{{ page.title | strip_html }} · {% endif %}Apache UIMA</title>
+  <script>
+    // Apply a saved theme choice before the first paint. Stored in this browser only.
+    try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="icon" href="/assets/img/UIMA_4sq.png" type="image/png">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | fingerprint }}">
+  {% feed_meta %}
+  <script src="{{ '/assets/js/site.js' | fingerprint }}" defer></script>
+</head>
+<body class="{{ page.body_class }}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include header.html %}
+  <main id="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

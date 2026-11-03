@@ -1,0 +1,7 @@
+<section class="version-block">
+  <h2><a href="{{ include.v.url }}">{{ include.v.version }}</a>{% if include.v.current %} <span class="badge">current</span>{% endif %}</h2>
+  <ul class="book-list">
+    {% for b in include.v.books %}<li><a href="{{ b.url }}">{{ b.title }}</a></li>{% endfor %}
+  </ul>
+  <p class="page-meta">Built from <code>{{ include.v.tag }}</code> at <code>{{ include.v.sha | slice: 0, 10 }}</code>.</p>
+</section>

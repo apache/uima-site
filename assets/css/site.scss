@@ -1,0 +1,456 @@
+---
+---
+// Apache UIMA site styles. See DESIGN.md for the intent behind the tokens.
+// No web fonts and no external resources: everything is served from this site.
+
+@use "rouge";
+
+:root {
+  --paper: #fbfaf7;
+  --paper-2: #f2efe8;
+  --ink: #1d2433;
+  --ink-soft: #536079;
+  --rule: #dcd7cc;
+  --accent: #1f5fa8;        // UIMA blue: links, current page
+  --accent-ink: #ffffff;
+  --mark: #e0a526;          // annotation highlight: the one warm colour
+  --mark-soft: #f7e7c0;
+  --code-bg: #f1eee6;
+  --note: #e8f0fa;
+  --warn: #fbefd7;
+  // Annotation layers in the home page diagram
+  --ann-sent: #c9dbf2;
+  --ann-tok: #dcd7cc;
+  --ann-per: #f2cf7e;
+  --ann-loc: #a9d8b8;
+  // Neutral greys for the GitHub mark, which may only be black, white or grey
+  --mark-grey: #6e7176;
+  --mark-grey-strong: #24262a;
+
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  --wrap: 72rem;
+  --radius: 6px;
+  color-scheme: light;
+}
+
+// Dark theme: chosen explicitly (data-theme="dark", set by the theme switch), or
+// following the system while the switch is on Auto (no data-theme).
+@mixin dark {
+  --paper: #12161f;
+  --paper-2: #1a2030;
+  --ink: #e4e7ee;
+  --ink-soft: #9aa5bb;
+  --rule: #2c3446;
+  --accent: #7fb0ec;
+  --accent-ink: #0d1424;
+  --mark: #e8b44a;
+  --mark-soft: #3a3020;
+  --code-bg: #1b2131;
+  --note: #182640;
+  --warn: #33291a;
+  --ann-sent: #2a4670;
+  --ann-tok: #3a4357;
+  --ann-per: #8a6420;
+  --ann-loc: #2f6b47;
+  --mark-grey: #9ea1a6;
+  --mark-grey-strong: #eceef0;
+  color-scheme: dark;
+  @include rouge.dark;
+}
+
+:root[data-theme="dark"] { @include dark; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { @include dark; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-padding-top: 5rem; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1.0625rem/1.6 var(--sans);
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+img { max-width: 100%; height: auto; }
+code, pre, kbd { font-family: var(--mono); font-size: 0.9em; }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 1.25rem; }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute; left: 1rem; top: -3rem; z-index: 10;
+  background: var(--accent); color: var(--accent-ink); padding: 0.5rem 1rem;
+  &:focus { top: 1rem; }
+}
+
+// ---------------------------------------------------------------- header
+
+.site-header {
+  position: sticky; top: 0; z-index: 5;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.header-row { display: flex; align-items: center; gap: 1.5rem; min-height: 3.75rem; }
+
+.brand {
+  display: flex; align-items: center; gap: 0.6rem;
+  color: var(--ink); text-decoration: none; font-weight: 700; font-size: 1.2rem;
+  small { font-weight: 400; color: var(--ink-soft); font-size: 0.85em; }
+  sup { font-weight: 400; color: var(--ink-soft); font-size: 0.5em; margin-left: 0.1em; }
+}
+
+// One-colour logo: tiles in the text colour, letters cut out in the background colour.
+.uima-logo-mono {
+  color: var(--ink);
+  .letter { fill: var(--paper); }
+}
+// Colour logo: original colours; only the tile outlines follow the theme.
+.uima-logo .tile { stroke: #3a3a3a; stroke-opacity: 0.85; }
+:root[data-theme="dark"] .uima-logo .tile { stroke: var(--paper); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .uima-logo .tile { stroke: var(--paper); }
+}
+
+.site-nav {
+  display: flex; align-items: center; gap: 0.25rem; margin-left: auto;
+  > a {
+    color: var(--ink); text-decoration: none; padding: 0.4rem 0.7rem; border-radius: var(--radius);
+    &:hover { background: var(--paper-2); }
+    &[aria-current] { box-shadow: inset 0 -3px 0 var(--mark); }
+  }
+  .asf-link {
+    display: flex; align-items: center; gap: 0.4rem; color: var(--ink-soft); font-size: 0.9rem;
+    .asf-leaf { flex: none; }
+  }
+  // GitHub's logo guidelines allow it only in black, white or grey: no accent colour on hover.
+  > a.github-link {
+    display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem; color: var(--mark-grey);
+    &:hover { color: var(--mark-grey-strong); background: none; }
+    .label { display: none; color: var(--ink); }
+  }
+}
+
+.theme-switch {
+  display: inline-flex; border: 1px solid var(--rule); border-radius: var(--radius); padding: 2px;
+  &[hidden] { display: none; }
+  button {
+    display: grid; place-items: center; width: 1.9rem; height: 1.7rem; padding: 0;
+    border: 0; border-radius: 4px; background: none; color: var(--ink-soft); cursor: pointer;
+    &:hover { color: var(--ink); }
+    &[aria-pressed="true"] { background: var(--mark-soft); color: var(--ink); }
+  }
+  svg { width: 1rem; height: 1rem; }
+}
+
+.search { margin-left: 1rem; }
+.search input {
+  font: inherit; font-size: 0.95rem; width: 13rem;
+  padding: 0.35rem 0.7rem; border: 1px solid var(--rule); border-radius: var(--radius);
+  background: var(--paper); color: var(--ink);
+}
+
+.nav-toggle {
+  display: none; margin-left: auto; font: inherit; background: none; color: var(--ink);
+  border: 1px solid var(--rule); border-radius: var(--radius); padding: 0.3rem 0.8rem;
+}
+
+@media (max-width: 52rem) {
+  .nav-toggle { display: block; }
+  .site-nav {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    flex-direction: column; align-items: stretch; padding: 0.75rem 1.25rem 1rem;
+    background: var(--paper); border-bottom: 1px solid var(--rule);
+    &.open { display: flex; }
+    .theme-switch, > a.github-link { align-self: flex-start; }
+    .search { margin: 0.5rem 0 0; }
+    > a.github-link .label { display: inline; }
+  }
+  .search input { width: 100%; }
+}
+
+// ---------------------------------------------------------------- type
+
+h1, h2, h3, h4 { line-height: 1.2; text-wrap: balance; }
+h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); margin: 0.4em 0 0.5em; letter-spacing: -0.01em; }
+h2 { font-family: var(--serif); font-size: 1.6rem; margin: 1.8em 0 0.5em; }
+h3 { font-size: 1.2rem; margin: 1.6em 0 0.4em; }
+h4 { font-size: 1.05rem; margin: 1.4em 0 0.3em; }
+
+.lead { font-size: 1.2rem; color: var(--ink-soft); max-width: 44rem; }
+.eyebrow {
+  font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft);
+  margin: 0; text-decoration: none;
+  a { color: inherit; }
+}
+.page-meta { color: var(--ink-soft); font-size: 0.9rem; }
+.badge {
+  display: inline-block; vertical-align: middle; font: 600 0.75rem/1 var(--sans);
+  padding: 0.25rem 0.5rem; border-radius: 99px; background: var(--mark-soft); color: var(--ink);
+}
+.badge.lang { background: none; border: 1px solid var(--rule); color: var(--ink-soft); font-family: var(--mono); font-weight: 500; }
+.notice {
+  background: var(--warn); border-left: 4px solid var(--mark); padding: 0.75rem 1rem; border-radius: var(--radius);
+}
+
+.page { padding-top: 1.5rem; padding-bottom: 4rem; }
+
+.prose {
+  // A comfortable reading measure inside the manuals; on ordinary pages text runs
+  // as wide as the code blocks and tables around it.
+  &.book p, &.book li { max-width: 46rem; }
+  pre {
+    background: var(--code-bg); padding: 0.9rem 1.1rem; border-radius: var(--radius);
+    overflow-x: auto; line-height: 1.45;
+  }
+  :not(pre) > code { background: var(--code-bg); padding: 0.1em 0.3em; border-radius: 3px; }
+  table { border-collapse: collapse; margin: 1rem 0; }
+  th, td { border-bottom: 1px solid var(--rule); padding: 0.45rem 0.7rem; text-align: left; vertical-align: top; }
+  blockquote { margin-left: 0; padding-left: 1rem; border-left: 3px solid var(--rule); color: var(--ink-soft); }
+}
+
+// ---------------------------------------------------------------- home
+
+.hero {
+  background:
+    linear-gradient(180deg, transparent 0 70%, var(--paper) 100%),
+    var(--paper-2);
+  border-bottom: 1px solid var(--rule);
+  padding: 3rem 0 3.5rem;
+  h1 { font-size: clamp(2rem, 4.2vw, 3.1rem); max-width: 20ch; }
+}
+.hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: center; }
+.hero-figure {
+  margin: 0;
+  pre { margin: 0; font-size: 0.95rem; }
+  figcaption { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.5rem; }
+}
+pre.maven {
+  background: var(--code-bg); border: 1px solid var(--rule); border-radius: var(--radius);
+  padding: 1rem 1.2rem; overflow-x: auto;
+  .t { color: var(--ink-soft); }
+}
+
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
+.button {
+  display: inline-block; padding: 0.65rem 1.2rem; border-radius: var(--radius);
+  border: 1px solid var(--accent); color: var(--accent); text-decoration: none; font-weight: 600;
+  &.primary { background: var(--accent); color: var(--accent-ink); }
+}
+
+// An annotation span: the visual signature of the site, used sparingly.
+.mark { background: linear-gradient(transparent 60%, var(--mark-soft) 60%); }
+
+.cards {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem;
+  margin-top: 2.5rem;
+}
+.card {
+  display: block; padding: 1.25rem 1.35rem; border: 1px solid var(--rule); border-radius: var(--radius);
+  background: var(--paper); color: var(--ink); text-decoration: none;
+  border-top: 3px solid var(--mark);
+  h2 { font-size: 1.25rem; margin: 0 0 0.4rem; }
+  p { margin: 0; color: var(--ink-soft); font-size: 0.97rem; }
+  &:not(.static):hover { border-color: var(--accent); h2 { color: var(--accent); } }
+}
+
+.split {
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 3rem; align-items: center; margin-top: 2rem;
+}
+
+.news-teaser { padding-bottom: 3rem; }
+.news-list {
+  list-style: none; padding: 0;
+  li { display: flex; gap: 1rem; padding: 0.4rem 0; border-bottom: 1px solid var(--rule); }
+  time { flex: 0 0 6.5rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+}
+
+@media (max-width: 52rem) {
+  .hero-grid, .split { grid-template-columns: 1fr; }
+}
+
+// The pipeline / CAS diagram (_includes/uima-diagram.svg, made by _tools/make-diagram.py)
+.uima-diagram {
+  width: 100%; height: auto; display: block;
+  font-family: var(--sans);
+  .frame { fill: none; stroke: var(--ink-soft); stroke-dasharray: 4 4; }
+  .node { fill: var(--paper); stroke: var(--rule); stroke-width: 1.5; }
+  .node.io { fill: var(--paper-2); }
+  .panel { fill: var(--paper-2); stroke: var(--rule); }
+  .flow { stroke: var(--ink-soft); stroke-width: 1.5; }
+  .arrowhead { fill: var(--ink-soft); }
+  .label { fill: var(--ink); font-size: 12px; font-weight: 600; }
+  .title { fill: var(--ink); font-family: var(--serif); font-size: 17px; font-weight: 700; }
+  .caption { fill: var(--ink-soft); font-size: 10.5px; }
+  .layer { fill: var(--ink-soft); font-size: 11px; }
+  .doc { fill: var(--ink); font-family: var(--mono); font-size: 13px; }
+  .ann.sent { fill: var(--ann-sent); }
+  .ann.tok { fill: var(--ann-tok); }
+  .ann.per { fill: var(--ann-per); }
+  .ann.loc { fill: var(--ann-loc); }
+}
+.diagram {
+  margin: 0;
+  figcaption { font-size: 0.88rem; color: var(--ink-soft); margin-top: 0.6rem; }
+}
+
+// ---------------------------------------------------------------- docs landing
+
+.docs-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1rem; margin: 1.5rem 0 1rem;
+  .card h2 { margin-bottom: 0.5rem; a { text-decoration: none; } }
+}
+.book-list { padding-left: 1.1rem; li { margin: 0.2rem 0; } }
+.version-block h2 a { color: inherit; text-decoration: none; }
+
+// ---------------------------------------------------------------- ecosystem
+
+.chips {
+  display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0 0.5rem;
+  a {
+    padding: 0.3rem 0.8rem; border: 1px solid var(--rule); border-radius: 99px;
+    color: var(--ink); text-decoration: none; font-size: 0.92rem;
+    &:hover { border-color: var(--accent); color: var(--accent); }
+  }
+}
+.eco-group h2 { margin-top: 2.25rem; }
+.eco-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); gap: 1rem; }
+.eco-card {
+  display: flex; flex-direction: column;
+  h3 { font-size: 1.15rem; margin: 0 0 0.2rem; a { color: var(--ink); text-decoration: none; } a:hover { color: var(--accent); } }
+  .eco-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.15rem 0 0.4rem; }
+  .eco-by { font-size: 0.85rem; color: var(--ink-soft); margin: 0 0 0.6rem; }
+  > p { margin-bottom: 0.75rem; }
+  .eco-paper { font-size: 0.85rem; color: var(--ink-soft); margin-top: -0.25rem; a { color: inherit; } }
+  .eco-links {
+    margin: auto 0 0; padding-top: 0.6rem; border-top: 1px solid var(--rule);
+    display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-size: 0.9rem;
+    a { color: var(--accent); }
+  }
+}
+.eco-footer { margin-top: 3rem; }
+
+table.downloads {
+  width: 100%;
+  .verify { font-size: 0.85rem; color: var(--ink-soft); }
+  td > div { margin: 0.15rem 0; }
+}
+
+// ---------------------------------------------------------------- books
+
+.book-layout {
+  display: grid; grid-template-columns: 19rem minmax(0, 1fr);
+  max-width: 90rem; margin: 0 auto;
+}
+
+.book-nav {
+  position: sticky; top: 3.75rem; align-self: start;
+  height: calc(100vh - 3.75rem); overflow-y: auto;
+  padding: 1.25rem 1rem 3rem 1.25rem; border-right: 1px solid var(--rule);
+  font-size: 0.9rem;
+}
+.book-nav-head { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.75rem; }
+.version-switch select {
+  font: inherit; padding: 0.2rem 0.4rem; border: 1px solid var(--rule); border-radius: var(--radius);
+  background: var(--paper); color: var(--ink);
+}
+.toc {
+  ol { list-style: none; margin: 0; padding: 0; }
+  ol ol { padding-left: 1.6rem; margin: 0.15rem 0 0.5rem; font-size: 0.85rem; display: none; }
+  li.open > ol { display: block; }
+  a {
+    display: block; padding: 0.22rem 0.5rem; border-radius: 4px; color: var(--ink); text-decoration: none;
+    &:hover { background: var(--paper-2); }
+    &.active { background: var(--mark-soft); }
+  }
+  .num { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+}
+
+.book { padding: 1.5rem 2.5rem 5rem; min-width: 0; }
+.book-meta { color: var(--ink-soft); font-size: 0.9rem; margin-top: -0.5rem; }
+
+@media (max-width: 60rem) {
+  .book-layout { grid-template-columns: 1fr; }
+  .book-nav { position: static; height: auto; max-height: 50vh; border-right: 0; border-bottom: 1px solid var(--rule); }
+  .book { padding: 1.25rem; }
+}
+
+// Asciidoctor's embedded HTML.
+.book {
+  h2 { border-top: 1px solid var(--rule); padding-top: 1.5rem; margin-top: 3rem; }
+  .sect1 > h2 { font-size: 1.9rem; }
+  a.anchor {
+    float: left; margin-left: -1.2em; width: 1.2em; text-decoration: none; color: var(--ink-soft);
+    visibility: hidden; &::before { content: "§"; }
+  }
+  h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor { visibility: visible; }
+
+  .title { font-weight: 600; font-size: 0.92rem; color: var(--ink-soft); margin: 1rem 0 0.35rem; }
+  .imageblock {
+    margin: 1.25rem 0;
+    .content { display: inline-block; background: #fff; padding: 0.5rem; border-radius: var(--radius); border: 1px solid var(--rule); }
+  }
+  .listingblock, .literalblock { margin: 1rem 0; pre { margin: 0; } }
+
+  .admonitionblock {
+    margin: 1.25rem 0;
+    > table { width: 100%; margin: 0; background: var(--note); border-radius: var(--radius); }
+    td { border: 0; padding: 0.75rem 1rem; }
+    td.icon { width: 5.5rem; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); }
+    td.content > :first-child, td.content > :first-child > p:first-child { margin-top: 0; }
+    td.content > :last-child, td.content > :last-child > p:last-child { margin-bottom: 0; }
+    &.warning, &.caution, &.important { > table { background: var(--warn); } td.icon { color: var(--ink); } }
+  }
+  .exampleblock > .content, .sidebarblock > .content {
+    border: 1px solid var(--rule); border-radius: var(--radius); padding: 0.75rem 1.1rem;
+  }
+  .sidebarblock > .content { background: var(--paper-2); }
+  table.tableblock { width: auto; max-width: 100%; display: block; overflow-x: auto; }
+  table.tableblock th { background: var(--paper-2); }
+  .tableblock p { margin: 0.2rem 0; }
+  .dlist dt { font-weight: 600; margin-top: 0.75rem; }
+  .dlist dd { margin-left: 1.25rem; }
+  .colist td { border: 0; padding: 0.15rem 0.5rem; }
+  #footnotes { border-top: 1px solid var(--rule); margin-top: 3rem; font-size: 0.9rem; }
+}
+
+
+// ---------------------------------------------------------------- search
+
+#search {
+  --pagefind-ui-primary: var(--accent);
+  --pagefind-ui-text: var(--ink);
+  --pagefind-ui-background: var(--paper);
+  --pagefind-ui-border: var(--rule);
+  --pagefind-ui-tag: var(--paper-2);
+  --pagefind-ui-font: var(--sans);
+  max-width: 50rem;
+}
+
+// ---------------------------------------------------------------- footer
+
+.site-footer {
+  border-top: 1px solid var(--rule); background: var(--paper-2);
+  padding: 2.5rem 0 1.5rem; font-size: 0.92rem;
+  h2 { font: 600 0.8rem var(--sans); text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); margin: 0 0 0.6rem; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { margin: 0.25rem 0; }
+  a { color: var(--ink); }
+}
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 2rem; }
+.legal { margin-top: 2rem; color: var(--ink-soft); font-size: 0.82rem; a { color: inherit; } }

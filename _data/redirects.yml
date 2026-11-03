@@ -1,0 +1,52 @@
+# Pages of the old site that were removed or renamed, and where their URLs now lead.
+# `to` may start with `maint:` for a section of the current UIMA Java SDK maintainer guide
+# (resolved at build time, so it follows new releases). Used by .htaccess.
+
+# Renamed or merged
+- { from: external-resources.html,   to: /ecosystem.html }
+- { from: mail-lists.html,           to: /get-involved.html#mailing-lists }
+- { from: contribution-policy.html,  to: /get-involved.html#contributing }
+- { from: security_report.html,      to: "https://www.apache.org/security/" }
+
+# Superseded by the maintainer guide
+- { from: one-time-setup.html,               to: "maint:_maintainer_setup" }
+- { from: one-time-release-setup.html,       to: "maint:_maintainer_setup" }
+- { from: dev-quick.html,                    to: "maint:_maven_build" }
+- { from: building-uima.html,                to: "maint:_maven_build" }
+- { from: maven-design.html,                 to: "maint:_maven_build" }
+- { from: release.html,                      to: "maint:_release_process" }
+- { from: checklist-release.html,            to: "maint:_release_process" }
+- { from: testing-builds.html,               to: "maint:_release_process" }
+- { from: distribution.html,                 to: "maint:_release_process" }
+- { from: eclipse-update-site.html,          to: "maint:_release_process" }
+- { from: eclipse-update-archives.html,      to: "maint:_release_process" }
+- { from: dev-eclipse-plugin-signing.html,   to: "maint:_release_process" }
+- { from: dev-eclipse-plugin-archiving.html, to: "maint:_release_process" }
+
+# Obsolete: SVN era, generic Git notes, IP checks now covered by ASF policy pages
+- { from: svn.html,                          to: /get-involved.html#contributing }
+- { from: git.html,                          to: /get-involved.html#contributing }
+- { from: git-notes.html,                    to: /get-involved.html#contributing }
+- { from: git-work-process.html,             to: /get-involved.html#contributing }
+- { from: git-conventions.html,              to: /get-involved.html#contributing }
+- { from: git-release-notes.html,            to: /get-involved.html#contributing }
+- { from: git-svn-notes.html,                to: /get-involved.html#contributing }
+- { from: convert-to-git.html,               to: /get-involved.html#contributing }
+- { from: saving-svn-resources.html,         to: /get-involved.html#contributing }
+- { from: code-scan-tools.html,              to: /get-involved.html#contributing }
+- { from: bulk-contribution-checklist.html,  to: /get-involved.html#contributing }
+- { from: dependencies.html,                 to: /get-involved.html#contributing }
+- { from: dev-docbook.html,                  to: /develop.html }
+- { from: updating-website.html,             to: /develop.html }
+- { from: how-to.html,                       to: /develop.html }
+- { from: apache-board-status.html,          to: /develop.html }
+
+# Empty "working draft" project guideline stubs; the ASF describes roles and decision making
+- { from: project-guidelines.html,           to: "https://www.apache.org/foundation/how-it-works/" }
+- { from: roles.html,                        to: "https://www.apache.org/foundation/how-it-works/#roles" }
+- { from: decisions.html,                    to: "https://www.apache.org/foundation/how-it-works/#decision-making" }
+- { from: communication.html,                to: "https://www.apache.org/foundation/how-it-works/#communication" }
+
+# Replaced by the authoritative ASF sources
+- { from: team-list.html,                    to: "https://projects.apache.org/committee.html?uima" }
+- { from: management.html,                   to: "https://www.apache.org/foundation/how-it-works/#pmc" }

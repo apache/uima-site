@@ -1,0 +1,107 @@
+---
+title: About the new website
+---
+{% assign uimaj = site.data.docs_index | where: "id", "uimaj" | first %}
+{% assign maint = uimaj.current.books | where: "id", "maint" | first %}
+<p class="lead">
+  This is a proposal for a new Apache UIMA website. It replaces the Anakia-based site that has been
+  maintained in Subversion. This page explains what changed compared to the current site and lists
+  the points that need a decision by the project. Please comment on the
+  <a href="/get-involved.html#mailing-lists">dev mailing list</a>.
+</p>
+
+<ul class="section-toc">
+  <li><a href="#open-points">Open points for discussion</a></li>
+  <li><a href="#how-it-works">How the site is built</a></li>
+  <li><a href="#content">What changed in the content</a></li>
+  <li><a href="#urls">Removed and renamed pages</a></li>
+</ul>
+
+<h2 id="open-points">Open points for discussion</h2>
+<ol>
+  <li>
+    <strong>PMC bylaws.</strong> The current site has a <a href="https://uima.apache.org/management.html">"Project Management Committee Bylaws"</a> page from 2010.
+    It required, among other things, a 3/4 majority of the votes cast (with at least three +1) to elect
+    or remove PMC members and to create subprojects, and voting periods of 10 days (minimum 7). The
+    project has in practice followed the common ASF conventions instead: votes are open for at least
+    72 hours and pass with at least three binding +1 votes and no −1. The new site drops the bylaws page
+    and links to the ASF's <a href="https://www.apache.org/foundation/how-it-works/">How the ASF works</a>
+    and <a href="https://www.apache.org/foundation/voting.html">voting</a> pages instead. Should the
+    project record its actual practice somewhere, or rely on the ASF defaults?
+  </li>
+  <li>
+    <strong>Project team.</strong> The <a href="https://uima.apache.org/team-list.html">current team list</a> is outdated (it still names the incubator mentors).
+    The new site links to the authoritative roster at
+    <a href="https://projects.apache.org/committee.html?uima">projects.apache.org</a> instead.
+  </li>
+  <li>
+    <strong>Logo in the header.</strong> The header uses a one-colour version of the UIMA blocks that
+    follows the light and dark theme, made from the official artwork in the ASF logo collection. The
+    colour version is still available. This changes how the project mark appears and should be agreed on.
+  </li>
+  <li>
+    <strong>Addons and sandbox.</strong> These are no longer featured on the home page or in the
+    navigation, since most of the code is unmaintained. Their pages, such as <a href="/sandbox.html">Addons and Sandbox</a> (<a href="https://uima.apache.org/sandbox.html">current site</a>), still exist at their old URLs.
+    Should they be marked as retired, or removed?
+  </li>
+  <li>
+    <strong>UIMA C++.</strong> Unchanged and still listed, pending a decision on its status.
+  </li>
+  <li>
+    <strong>Publishing.</strong> The site would be built locally or by a GitHub Action and the result
+    committed to an <code>asf-site</code> branch, as Apache Wicket does. The ASF's Jekyll builder is an
+    alternative but cannot cache the manuals between builds and probably cannot build the search index.
+    Where the new site's repository should live is also open.
+  </li>
+  <li>
+    <strong>Which manual versions to keep.</strong> The site can build any number of versions per project;
+    currently the latest two of the UIMA Java SDK and the latest of Ruta.
+  </li>
+</ol>
+
+<h2 id="how-it-works">How the site is built</h2>
+<ul>
+  <li>
+    <strong>Jekyll instead of Anakia.</strong> Pages are HTML or Markdown with a little front matter.
+    The site builds in a few seconds and can be previewed locally with <code>rake serve</code>.
+  </li>
+  <li>
+    <strong>Manuals from the release tags.</strong> Instead of copying built HTML into the site, the build
+    fetches the AsciiDoc sources of each configured release tag and renders them in the site's design.
+    Adding a release is one line in <code>_data/docs.yml</code>. Javadoc and the PDF editions remain
+    release artifacts and stay where they are under <code>/d/</code>.
+  </li>
+  <li>
+    <strong>Search, light and dark mode.</strong> A self-hosted search index (Pagefind) covers the site and
+    the current manuals. A switch in the header selects a light, dark or automatic theme.
+  </li>
+  <li>
+    <strong>ASF requirements.</strong> No external resources or trackers; the required ASF links and the
+    trademark notices are in the footer.
+  </li>
+</ul>
+
+<h2 id="content">What changed in the content</h2>
+<ul>
+  <li><strong>Home page:</strong> new introduction, a diagram of a pipeline and the CAS instead of the old picture, recent news (<a href="https://uima.apache.org/index.html">current site</a>).</li>
+  <li><strong>Documentation:</strong> <a href="/docs/">one landing page</a> for all manuals, with the version they were built from (<a href="https://uima.apache.org/documentation.html">current site</a>).</li>
+  <li><strong>Downloads:</strong> <a href="/downloads.html">packages</a> through the ASF mirror redirector; the Maven section now explains the <code>uimaj-bom</code> (<a href="https://uima.apache.org/downloads.html">current site</a>).</li>
+  <li><strong>Community:</strong> mailing lists, GitHub issue trackers and contributing in <a href="/get-involved.html">one page</a> (current site: <a href="https://uima.apache.org/get-involved.html">get involved</a>, <a href="https://uima.apache.org/mail-lists.html">mailing lists</a>). Jira, the wiki and SVN are no longer described; the CLA and contribution rules point to the ASF's own pages.</li>
+  <li><strong><a href="/ecosystem.html">Ecosystem</a>:</strong> the former <a href="https://uima.apache.org/external-resources.html">"UIMA Resources on the Web"</a>, checked link by link. Dead projects were removed, active ones added.</li>
+  <li><strong>Developer pages:</strong> replaced by the <a href="{{ maint.url }}">maintainer guide</a>, which is part of the UIMA Java SDK documentation. Most old pages described the SVN era, for example <a href="https://uima.apache.org/release.html">doing a release</a> and <a href="https://uima.apache.org/one-time-setup.html">one-time setup</a> on the current site.</li>
+  <li><strong>Security:</strong> the footer links to the ASF security team; the project no longer keeps its own CVE list (<a href="https://uima.apache.org/security_report.html">current site</a>).</li>
+  <li><strong>News:</strong> all news items of the old site are kept as <a href="/news/">individual posts</a> with an Atom feed (<a href="https://uima.apache.org/news.html">current site</a>).</li>
+  <li><strong>Other pages</strong> were converted automatically and keep their URLs; their text is unchanged. To compare one, open the same path on <a href="https://uima.apache.org/">uima.apache.org</a>.</li>
+</ul>
+
+<h2 id="urls">Removed and renamed pages</h2>
+<p>Old links keep working: each of these URLs redirects to the page listed. The links in the first column open the page on the current site.</p>
+<table>
+  <thead><tr><th>Current site</th><th>New site</th></tr></thead>
+  <tbody>
+  {% for r in site.data.redirects %}
+    {% if r.to contains "maint:" %}{% assign to = r.to | replace: "maint:", "#" | prepend: maint.url %}{% assign label = "Maintainer guide" %}{% else %}{% assign to = r.to %}{% assign label = r.to %}{% endif %}
+    <tr><td><a href="https://uima.apache.org/{{ r.from }}"><code>/{{ r.from }}</code></a></td><td><a href="{{ to }}">{{ label }}</a></td></tr>
+  {% endfor %}
+  </tbody>
+</table>

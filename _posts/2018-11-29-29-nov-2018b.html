@@ -1,0 +1,22 @@
+---
+title: "Apache UIMA Java SDK 2.10.3 released"
+render_with_liquid: false
+---
+<p>This is a minor bug fix release.
+      The major changes in this release include:</p>
+
+      <ul>
+<li>The minimum Java version was changed from 7 to 8.  The code and the build
+              was adjusted to compile using both Java 8 and Java 11.</li>
+          <li>The class loading when using the UIMA Class Loader now will first try loading
+              from that class loader's URL list, and if not found will try using the
+              Context Class Loader (if set), and if not found, then will delegate to the parent.
+              Previously the Context Class Loader was never consulted.</li>
+          <li>Fixed some edge case performance issues.</li>
+          <li>Fixed PEAR installation to no longer lock files.</li>
+          <li>Pear Specifier parameters now passed to the wrapped Analysis Engine</li>
+          <li>Implemented a destroy() method for ResourceManager which closes its UIMAClassLoader</li>
+      </ul>                                                                                        
+      
+      <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-2.10.3/issuesFixed/jira-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>

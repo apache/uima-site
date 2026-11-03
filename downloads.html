@@ -1,0 +1,86 @@
+---
+title: Downloads
+active: downloads
+layout: default
+---
+{% assign uimaj = site.data.downloads | first %}
+<article class="wrap page prose">
+  <h1>Downloads</h1>
+
+  <h2 id="maven">Maven</h2>
+  <p>Most people use UIMA through the artifacts on Maven Central. For the core framework alone:</p>
+<pre class="maven"><code>&lt;dependency&gt;
+  &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
+  &lt;artifactId&gt;uimaj-core&lt;/artifactId&gt;
+  &lt;version&gt;{{ uimaj.version }}&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+
+  <p>
+    When you use more than one module of the UIMA Java SDK, for example uimaFIT or the JSON support,
+    import the <strong>BOM</strong> (bill of materials) once and leave the versions out of the individual
+    dependencies. The BOM keeps all UIMA modules on the same release:
+  </p>
+<pre class="maven"><code>&lt;dependencyManagement&gt;
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
+      &lt;artifactId&gt;uimaj-bom&lt;/artifactId&gt;
+      &lt;version&gt;{{ uimaj.version }}&lt;/version&gt;
+      &lt;type&gt;pom&lt;/type&gt;
+      &lt;scope&gt;import&lt;/scope&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+&lt;/dependencyManagement&gt;
+
+&lt;dependencies&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
+    &lt;artifactId&gt;uimaj-core&lt;/artifactId&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.apache.uima&lt;/groupId&gt;
+    &lt;artifactId&gt;uimafit-core&lt;/artifactId&gt;
+  &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+  <p>
+    The BOM covers the UIMA Java SDK modules (<code>uimaj-*</code>, <code>uimafit-*</code>, <code>jVinci</code>)
+    and is available since 3.5.0. With Gradle, use it as a platform:
+  </p>
+<pre class="maven"><code>dependencies {
+  implementation(platform("org.apache.uima:uimaj-bom:{{ uimaj.version }}"))
+  implementation("org.apache.uima:uimaj-core")
+  implementation("org.apache.uima:uimafit-core")
+}</code></pre>
+  <p>See <a href="https://central.sonatype.com/namespace/org.apache.uima">all UIMA artifacts on Maven Central</a>.</p>
+
+  <h2>Eclipse tooling</h2>
+  <p>Update site: <a href="https://downloads.apache.org/uima/eclipse-update-site-v3/"><code>https://downloads.apache.org/uima/eclipse-update-site-v3/</code></a>
+    (see <a href="/docs/uimaj/{{ uimaj.version }}/oas.html#ugr.ovv.eclipse_setup">how to set up Eclipse</a>).</p>
+
+  <h2>Release packages</h2>
+  <p>
+    Packages are served by the Apache mirror network. Please
+    <a href="https://www.apache.org/info/verification.html">verify</a> what you download using the
+    signature (<a href="https://downloads.apache.org/uima/KEYS">KEYS</a>) or checksum.
+  </p>
+  <table class="downloads">
+    <thead><tr><th>Release</th><th>Date</th><th>Packages</th><th>Notes</th></tr></thead>
+    <tbody>
+    {% for r in site.data.downloads %}
+      <tr>
+        <td><strong>{{ r.name }} {{ r.version }}</strong>{% if r.docs %}<br><a href="{{ r.docs }}">documentation</a>{% endif %}</td>
+        <td><time datetime="{{ r.date }}">{{ r.date | date: "%-d %b %Y" }}</time></td>
+        <td>
+          {% for f in r.files %}
+            <div>{{ f.label }}: <a href="https://www.apache.org/dyn/closer.lua/uima/{{ r.dir }}/{{ f.file }}">{{ f.file }}</a>
+              <span class="verify">[<a href="https://downloads.apache.org/uima/{{ r.dir }}/{{ f.file }}.asc">asc</a>]
+              [<a href="https://downloads.apache.org/uima/{{ r.dir }}/{{ f.file }}.sha512">sha512</a>]</span></div>
+          {% endfor %}
+        </td>
+        <td><a href="https://downloads.apache.org/uima/{{ r.notes }}">Release notes</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p>Older releases are in the <a href="https://archive.apache.org/dist/uima/">archive</a>.</p>
+</article>

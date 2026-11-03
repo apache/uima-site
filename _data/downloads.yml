@@ -1,0 +1,28 @@
+# Current releases. Packages are served through the ASF mirror redirector;
+# signatures and checksums always come from downloads.apache.org.
+- name: UIMA Java SDK (incl. uimaFIT)
+  version: 3.7.0
+  date: 2026-11-02
+  dir: uimaj-3.7.0
+  notes: uimaj-3.7.0/RELEASE_NOTES.md
+  docs: /docs/uimaj/3.7.0/
+  files:
+    - { label: Binary,  file: uimaj-3.7.0-bin.zip }
+    - { label: Source,  file: uimaj-3.7.0-source-release.zip }
+
+- name: UIMA Ruta
+  version: 3.5.1
+  date: 2025-10-13
+  dir: ruta-3.5.1
+  notes: ruta-3.5.1/RELEASE_NOTES.md
+  docs: /docs/ruta/3.5.1/
+  files:
+    - { label: Source,  file: ruta-3.5.1-source-release.zip }
+
+- name: UIMA Java CAS JSON I/O
+  version: 0.5.0
+  date: 2023-03-06
+  dir: uimaj-io-json-0.5.0
+  notes: uimaj-io-json-0.5.0/RELEASE_NOTES.md
+  files:
+    - { label: Source,  file: uimaj-io-json-0.5.0-source-release.zip }
