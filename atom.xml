@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://uima.apache.org/atom.xml" rel="self" type="application/atom+xml" /><link href="https://uima.apache.org/" rel="alternate" type="text/html" /><updated>2026-11-03T06:12:26+00:00</updated><id>https://uima.apache.org/atom.xml</id><title type="html">Apache UIMA</title><subtitle>Apache UIMA provides frameworks, tools and components for analysing unstructured information such as text, using pipelines of reusable analysis components.</subtitle><entry><title type="html">Apache UIMA Java SDK (incl. uimaFIT) 3.7.0 released</title><link href="https://uima.apache.org/news/2026/11/02/uimaj-3-7-0.html" rel="alternate" type="text/html" title="Apache UIMA Java SDK (incl. uimaFIT) 3.7.0 released" /><published>2026-11-02T00:00:00+00:00</published><updated>2026-11-02T00:00:00+00:00</updated><id>https://uima.apache.org/news/2026/11/02/uimaj-3-7-0</id><content type="html" xml:base="https://uima.apache.org/news/2026/11/02/uimaj-3-7-0.html"><![CDATA[<p>
+        The Apache UIMA team is happy to announce the release of the Apache UIMA Java SDK 3.7.0.
+      </p>
+      
+      <p>Please see the 
+         <a target="_blank" rel="noopener" href="https://github.com/apache/uima-uimaj/issues?q=milestone%3A3.7.0">the complete list of issues fixed</a>
+         (<a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.7.0/issuesFixed/github-report.md">alternative</a>)
+         for more details of the changes.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[The Apache UIMA team is happy to announce the release of the Apache UIMA Java SDK 3.7.0. Please see the the complete list of issues fixed (alternative) for more details of the changes.]]></summary></entry><entry><title type="html">Apache UIMA Ruta 3.5.1 released</title><link href="https://uima.apache.org/news/2025/10/13/ruta-3-5-1.html" rel="alternate" type="text/html" title="Apache UIMA Ruta 3.5.1 released" /><published>2025-10-13T00:00:00+00:00</published><updated>2025-10-13T00:00:00+00:00</updated><id>https://uima.apache.org/news/2025/10/13/ruta-3-5-1</id><content type="html" xml:base="https://uima.apache.org/news/2025/10/13/ruta-3-5-1.html"><![CDATA[<p>
+        The Apache UIMA team is happy to announce the release of Ruta 3.5.1.
+      </p>
+      
+      <p>Please see the 
+         <a target="_blank" rel="noopener" href="https://github.com/apache/uima-ruta/issues?q=milestone%3A3.5.1">the complete list of issues fixed</a>
+         (<a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-3.5.1/issuesFixed/github-report.md">alternative</a>)
+         for more details of the changes.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[The Apache UIMA team is happy to announce the release of Ruta 3.5.1. Please see the the complete list of issues fixed (alternative) for more details of the changes.]]></summary></entry><entry><title type="html">Apache UIMA Java SDK (incl. uimaFIT) 3.6.1 released</title><link href="https://uima.apache.org/news/2025/10/01/uimaj-3-6-1.html" rel="alternate" type="text/html" title="Apache UIMA Java SDK (incl. uimaFIT) 3.6.1 released" /><published>2025-10-01T00:00:00+00:00</published><updated>2025-10-01T00:00:00+00:00</updated><id>https://uima.apache.org/news/2025/10/01/uimaj-3-6-1</id><content type="html" xml:base="https://uima.apache.org/news/2025/10/01/uimaj-3-6-1.html"><![CDATA[<p>
+        The Apache UIMA team is happy to announce the release of the Apache UIMA Java SDK 3.6.1.
+      </p>
+      
+      <p>Please see the 
+         <a target="_blank" rel="noopener" href="https://github.com/apache/uima-uimaj/issues?q=milestone%3A3.6.1">the complete list of issues fixed</a>
+         (<a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.6.1/issuesFixed/github-report.md">alternative</a>)
+         for more details of the changes.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[The Apache UIMA team is happy to announce the release of the Apache UIMA Java SDK 3.6.1. Please see the the complete list of issues fixed (alternative) for more details of the changes.]]></summary></entry><entry><title type="html">Apache UIMA Ruta 3.5.0 released</title><link href="https://uima.apache.org/news/2024/12/04/ruta-3-5-0.html" rel="alternate" type="text/html" title="Apache UIMA Ruta 3.5.0 released" /><published>2024-12-04T00:00:00+00:00</published><updated>2024-12-04T00:00:00+00:00</updated><id>https://uima.apache.org/news/2024/12/04/ruta-3-5-0</id><content type="html" xml:base="https://uima.apache.org/news/2024/12/04/ruta-3-5-0.html"><![CDATA[<p>
+        The Apache UIMA team is happy to announce the release of Ruta 3.5.0.
+      </p>
+      
+      <p>Please see the 
+         <a target="_blank" rel="noopener" href="https://github.com/apache/uima-ruta/issues?q=milestone%3A3.5.0">the complete list of issues fixed</a>
+         (<a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-3.5.0/issuesFixed/github-report.md">alternative</a>)
+         for more details of the changes.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[The Apache UIMA team is happy to announce the release of Ruta 3.5.0. Please see the the complete list of issues fixed (alternative) for more details of the changes.]]></summary></entry><entry><title type="html">Apache UIMA Java SDK (incl. uimaFIT) 3.6.0 released</title><link href="https://uima.apache.org/news/2024/11/27/uimaj-3-6-0.html" rel="alternate" type="text/html" title="Apache UIMA Java SDK (incl. uimaFIT) 3.6.0 released" /><published>2024-11-27T00:00:00+00:00</published><updated>2024-11-27T00:00:00+00:00</updated><id>https://uima.apache.org/news/2024/11/27/uimaj-3-6-0</id><content type="html" xml:base="https://uima.apache.org/news/2024/11/27/uimaj-3-6-0.html"><![CDATA[<p>
+        The Apache UIMA team is happy to announce the release of the Apache UIMA Java SDK 3.6.0.
+        Since this version, uimaFIT is part of the UIMA Java SDK release.
+        The code repositories have also been merged.
+        This marks the end of Apache uimaFIT as a separate release.
+        For the time being, the uimaFIT Maven artifacts continue to be released under the usual coordinates.
+      </p>
+      
+      <p>Please see the 
+         <a target="_blank" rel="noopener" href="https://github.com/apache/uima-uimaj/issues?q=milestone%3A3.6.0">the complete list of issues fixed</a>
+         (<a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.6.0/issuesFixed/github-report.md">alternative</a>)
+         for more details of the changes.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[The Apache UIMA team is happy to announce the release of the Apache UIMA Java SDK 3.6.0. Since this version, uimaFIT is part of the UIMA Java SDK release. The code repositories have also been merged. This marks the end of Apache uimaFIT as a separate release. For the time being, the uimaFIT Maven artifacts continue to be released under the usual coordinates. Please see the the complete list of issues fixed (alternative) for more details of the changes.]]></summary></entry><entry><title type="html">Apache UIMA Ruta 3.4.1 released</title><link href="https://uima.apache.org/news/2024/02/08/ruta-3-4-1.html" rel="alternate" type="text/html" title="Apache UIMA Ruta 3.4.1 released" /><published>2024-02-08T00:00:00+00:00</published><updated>2024-02-08T00:00:00+00:00</updated><id>https://uima.apache.org/news/2024/02/08/ruta-3-4-1</id><content type="html" xml:base="https://uima.apache.org/news/2024/02/08/ruta-3-4-1.html"><![CDATA[<p>
+        The Apache UIMA team is happy to announce the release of Ruta 3.4.1.
+      </p>
+      
+      <p>Please see the 
+         <a target="_blank" rel="noopener" href="https://github.com/apache/uima-ruta/issues?q=milestone%3A3.4.1">the complete list of issues fixed</a>
+         (<a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-3.4.1/issuesFixed/github-report.md">alternative</a>)
+         for more details of the changes.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[The Apache UIMA team is happy to announce the release of Ruta 3.4.1. Please see the the complete list of issues fixed (alternative) for more details of the changes.]]></summary></entry><entry><title type="html">Apache UIMA Ruta 3.4.0 released</title><link href="https://uima.apache.org/news/2024/01/19/ruta-3-4-0.html" rel="alternate" type="text/html" title="Apache UIMA Ruta 3.4.0 released" /><published>2024-01-19T00:00:00+00:00</published><updated>2024-01-19T00:00:00+00:00</updated><id>https://uima.apache.org/news/2024/01/19/ruta-3-4-0</id><content type="html" xml:base="https://uima.apache.org/news/2024/01/19/ruta-3-4-0.html"><![CDATA[<p>
+        The Apache UIMA team is happy to announce the release of Ruta 3.4.0.
+      </p>
+      
+      <p>Please see the 
+         <a target="_blank" rel="noopener" href="https://github.com/apache/uima-ruta/issues?q=milestone%3A3.4.0">the complete list of issues fixed</a>
+         (<a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/ruta-3.4.0/issuesFixed/github-report.md">alternative</a>)
+         for more details of the changes.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[The Apache UIMA team is happy to announce the release of Ruta 3.4.0. Please see the the complete list of issues fixed (alternative) for more details of the changes.]]></summary></entry><entry><title type="html">Apache UIMA uimaFIT 3.5.0 released</title><link href="https://uima.apache.org/news/2023/11/13/uimafit-3-5-0.html" rel="alternate" type="text/html" title="Apache UIMA uimaFIT 3.5.0 released" /><published>2023-11-13T00:00:00+00:00</published><updated>2023-11-13T00:00:00+00:00</updated><id>https://uima.apache.org/news/2023/11/13/uimafit-3-5-0</id><content type="html" xml:base="https://uima.apache.org/news/2023/11/13/uimafit-3-5-0.html"><![CDATA[<p>
+        The Apache UIMA team is happy to announce the release of Apache uimaFIT 3.5.0.
+      </p>
+      
+      <p>Please see the 
+         <a target="_blank" rel="noopener" href="https://github.com/apache/uima-uimafit/issues?q=milestone%3A3.5.0">the complete list of issues fixed</a>
+         (<a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimafit-3.5.0/issuesFixed/github-report.md">alternative</a>)
+         for more details of the changes.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[The Apache UIMA team is happy to announce the release of Apache uimaFIT 3.5.0. Please see the the complete list of issues fixed (alternative) for more details of the changes.]]></summary></entry><entry><title type="html">Apache UIMA Java SDK 3.5.0 released</title><link href="https://uima.apache.org/news/2023/11/06/uimaj-3-5-0.html" rel="alternate" type="text/html" title="Apache UIMA Java SDK 3.5.0 released" /><published>2023-11-06T00:00:00+00:00</published><updated>2023-11-06T00:00:00+00:00</updated><id>https://uima.apache.org/news/2023/11/06/uimaj-3-5-0</id><content type="html" xml:base="https://uima.apache.org/news/2023/11/06/uimaj-3-5-0.html"><![CDATA[<p>
+        The Apache UIMA team is happy to announce the release of the Apache UIMA Java SDK 3.5.0.
+      </p>
+      
+      <p>Please see the 
+         <a target="_blank" rel="noopener" href="https://github.com/apache/uima-uimaj/issues?q=milestone%3A3.5.0">the complete list of issues fixed</a>
+         (<a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-3.5.0/issuesFixed/github-report.md">alternative</a>)
+         for more details of the changes.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[The Apache UIMA team is happy to announce the release of the Apache UIMA Java SDK 3.5.0. Please see the the complete list of issues fixed (alternative) for more details of the changes.]]></summary></entry><entry><title type="html">Apache UIMA Ruta 3.3.0 released</title><link href="https://uima.apache.org/news/2023/03/03/uimaj-io-json-0-5-0.html" rel="alternate" type="text/html" title="Apache UIMA Ruta 3.3.0 released" /><published>2023-03-03T00:00:00+00:00</published><updated>2023-03-03T00:00:00+00:00</updated><id>https://uima.apache.org/news/2023/03/03/uimaj-io-json-0-5-0</id><content type="html" xml:base="https://uima.apache.org/news/2023/03/03/uimaj-io-json-0-5-0.html"><![CDATA[<p>
+        The Apache UIMA team is happy to announce the release of the JSON CAS I/O 0.5.0.
+      </p>
+      
+      <p>Changes include:
+        <ul>
+          <li>Issue #13: Implement TypeSystemMode.MINIMAL</li>
+          <li>Issue #18: Fix Zip Slip Vulnerability in test code</li>
+          <li>Issue #14: Upgrade dependencies</li>
+        </ul>
+      </p>
+
+      <p>Please see the <a target="_blank" rel="noopener" href="https://svn.apache.org/repos/asf/uima/site/archive/docs/d/uimaj-io-json-0.5.0/issuesFixed/github-report.html">
+         the complete list of issues fixed</a> for more details of the changes.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[The Apache UIMA team is happy to announce the release of the JSON CAS I/O 0.5.0. Changes include: Issue #13: Implement TypeSystemMode.MINIMAL Issue #18: Fix Zip Slip Vulnerability in test code Issue #14: Upgrade dependencies Please see the the complete list of issues fixed for more details of the changes.]]></summary></entry></feed>
